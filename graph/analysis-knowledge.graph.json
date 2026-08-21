@@ -1,0 +1,62 @@
+{
+  "graph_version": "1.0.0",
+  "name": "Babak Analysis Knowledge Graph",
+  "purpose": "Persistent, time-aware graph memory for Babi Hoosh and Tasmim.",
+  "principles": ["event-time", "evidence-first", "causal-links", "decision-history", "backtestable", "no hindsight"],
+  "node_types": {
+    "actor": "Government, advisor, institution, company, trader or other strategic player",
+    "decision": "Policy, public statement, action or inferred strategic choice",
+    "economic_variable": "FX, inflation, liquidity, rates, money base, budget, energy, trade, etc.",
+    "market_variable": "Index, sector flow, liquidity, sentiment, regime",
+    "commodity": "Copper and other relevant global commodities",
+    "company": "Listed company or economic entity",
+    "symbol": "Stock or option symbol",
+    "option_contract": "Option contract with strike, expiry, Greeks, IV, OI and premium",
+    "event": "News, filing, macro release, geopolitical or market event",
+    "scenario": "Explicit future state with probability and assumptions",
+    "prediction": "Timestamped model forecast",
+    "outcome": "Observed result used for validation/calibration",
+    "decision_record": "Final model action/rating with rationale"
+  },
+  "edge_types": {
+    "influences": "Strategic influence between actors or institutions",
+    "decides": "Actor to decision",
+    "implements": "Institution to decision",
+    "changes": "Decision/event to variable",
+    "drives": "Variable/commodity to market or company",
+    "belongs_to": "Company/symbol to sector/industry",
+    "underlies": "Option to underlying symbol",
+    "hedges": "Position/actor relationship",
+    "reacts_to": "Market actor or variable reaction",
+    "precedes": "Temporal sequence",
+    "causes": "Evidence-backed causal relation",
+    "feeds_back": "Dynamic-system feedback",
+    "supports": "Evidence supporting a hypothesis/prediction",
+    "contradicts": "Evidence against a hypothesis/prediction",
+    "predicts": "Model prediction to scenario/outcome",
+    "validated_by": "Prediction to observed outcome",
+    "calibrates": "Outcome to model/version"
+  },
+  "core_flow": [
+    "actor",
+    "decision",
+    "economic_variable",
+    "market_variable",
+    "commodity",
+    "company",
+    "symbol",
+    "option_contract",
+    "prediction",
+    "outcome",
+    "decision_record"
+  ],
+  "required_event_fields": ["event_id", "event_time", "source", "evidence_level", "confidence"],
+  "required_prediction_fields": ["prediction_id", "created_at", "model_version", "horizon", "probabilities", "assumptions"],
+  "required_outcome_fields": ["outcome_id", "observed_at", "actual_value", "error", "validation_status"],
+  "anti_hindsight_rules": [
+    "Predictions are immutable after publication.",
+    "Observed outcomes must have a later timestamp than the prediction.",
+    "Source timestamps are preserved separately from ingestion timestamps.",
+    "Historical records cannot be overwritten; corrections create new versions."
+  ]
+}
