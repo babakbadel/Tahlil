@@ -1,0 +1,24 @@
+flowchart TD
+    A[Fresh Market Data / Timestamp] --> B{Expiry > Now?}
+    B -- No --> X[EXPIRED: History Only]
+    B -- Yes --> C[Active Option Universe]
+    C --> D[Spot / Strike / Moneyness / T]
+    D --> E[Intrinsic / Time Value / Break-even]
+    E --> F[Black-Scholes / Pricing Model]
+    F --> G[IV / HV]
+    G --> H[Delta / Gamma / Theta / Vega / Rho]
+    H --> I[OI / Volume / Bid-Ask / Spread / Liquidity]
+    I --> J[ITM Probability / Leverage / Convexity / EV]
+    J --> K[Macro & Economic Variables]
+    K --> L[Decision History / Government / Advisors]
+    L --> M[Game Theory]
+    M --> N[Dynamic Systems / Feedback / Lags]
+    N --> O[Codal / Fundamentals / Price Action / Technical]
+    O --> P[Backtest / Calibration]
+    P --> Q[Option Score + Confidence + Scenario]
+    Q --> R[Rank All Active Options]
+    R --> S[Decision History]
+    S --> T[Knowledge Graph / Memory]
+
+    U[Data unavailable] --> Q
+    V[Anti-hindsight: immutable timestamp] --> P
