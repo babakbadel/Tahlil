@@ -20,6 +20,7 @@ jobs:
       BRS_API_KEY: ${{ secrets.BRS_API_KEY }}
       BRS_POLL_SECONDS: '5'
       PYTHONUNBUFFERED: '1'
+      PYTHONPATH: ${{ github.workspace }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,6 +29,7 @@ jobs:
         run: |
           python3 --version
           python3 -m pip --version
+          echo "PYTHONPATH=$PYTHONPATH"
 
       - name: Install dependencies
         run: |
@@ -41,6 +43,7 @@ jobs:
       - name: Collect realtime ZMLI snapshot
         run: |
           mkdir -p artifacts
+          python3 -c "import app; print('app import OK')"
           python3 scripts/fetch_zmli_realtime.py --output artifacts/zmli_realtime.json
 
       - name: Validate JSON
