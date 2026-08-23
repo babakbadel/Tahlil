@@ -1,10 +1,4 @@
-"""Collect and write a normalized JSON snapshot for Iranian option contracts.
-
-Usage:
-    BRS_API_KEY=... python scripts/fetch_zmli_realtime.py --output artifacts/zmli_realtime.json
-
-No credential is printed or persisted by this script.
-"""
+"""Collect and write a normalized JSON snapshot for Iranian option contracts."""
 from __future__ import annotations
 
 import argparse
@@ -49,10 +43,9 @@ def main() -> None:
         json.dumps(payload, ensure_ascii=False, indent=2, default=str),
         encoding="utf-8",
     )
-    print(
-        f"Wrote {args.output} with "
-        f"{payload['data_quality']['record_count']} option records"
-    )
+    count = payload["data_quality"]["record_count"]
+    print(f"BRS returned {count} ZMLI option records")
+    print(f"Wrote {args.output} with {count} option records")
 
 
 if __name__ == "__main__":
