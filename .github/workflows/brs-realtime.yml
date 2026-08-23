@@ -30,16 +30,19 @@ jobs:
         with:
           python-version: '3.13'
           cache: pip
+          cache-dependency-path: requirements-realtime.txt
 
       - name: Install dependencies
-        run: pip install -r requirements-realtime.txt
+        run: python -m pip install -r requirements-realtime.txt
 
       - name: Validate secret
         run: |
           test -n "$BRS_API_KEY" || { echo 'BRS_API_KEY repository secret is missing'; exit 1; }
 
       - name: Collect realtime ZMLI snapshot
-        run: python scripts/fetch_zmli_realtime.py --output artifacts/zmli_realtime.json
+        run: |
+          mkdir -p artifacts
+          python scripts/fetch_zmli_realtime.py --output artifacts/zmli_realtime.json
 
       - name: Validate JSON
         run: python -m json.tool artifacts/zmli_realtime.json >/dev/null
