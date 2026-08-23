@@ -1,16 +1,20 @@
-"""FastAPI JSON service for the live equity/options snapshot collector."""
+"""FastAPI JSON + WebSocket + SSE service for Iran equity/options snapshots."""
 from __future__ import annotations
 
 import asyncio
+import json
 import os
 from contextlib import asynccontextmanager
-from typing import Any
+from typing import Any, AsyncIterator
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi.responses import StreamingResponse
 
 from app.data.brsapi.realtime import RealtimeCollector
+from app.data.brsapi.stream import RealtimeHub
 
-collector = RealtimeCollector(interval=float(os.getenv("BRS_POLL_SECONDS", "5")))
+hub = RealtimeHub(max_queue=int(os.getenv("BRS_STREAM_QUEUE", "2")))
+collector = RealtimeCollector(interval=float(os.getenv("BRS_POLL_SECONDS", "5")), hub=hub)
 _task: asyncio.Task[Any] | None = None
 
 
@@ -30,7 +34,7 @@ async def lifespan(app: FastAPI):
                 pass
 
 
-app = FastAPI(title="Tahlil Iran Market Realtime API", version="1.0.0", lifespan=lifespan)
+app = FastAPI(title="Tahlil Iran Market Realtime API", version="1.1.0", lifespan=lifespan)
 
 
 def snapshot() -> dict[str, Any]:
@@ -48,6 +52,7 @@ def health() -> dict[str, Any]:
         "status": "ok" if collector.latest else "starting",
         "source": "BRS_API",
         "last_error": collector.last_error,
+        "stream_subscribers": hub.subscriber_count,
     }
 
 
@@ -87,3 +92,48 @@ def option_chain(underlying: str) -> dict[str, Any]:
 @app.get("/api/v1/market/realtime")
 def realtime() -> dict[str, Any]:
     return snapshot()
+
+
+@app.websocket("/ws/market")
+async def websocket_market(websocket: WebSocket) -> None:
+    await websocket.accept()
+    queue = await hub.subscribe()
+    try:
+        if collector.latest is not None:
+            await websocket.send_json(collector.latest)
+        while True:
+            event = await queue.get()
+            await websocket.send_json(event)
+    except WebSocketDisconnect:
+        pass
+    finally:
+        await hub.unsubscribe(queue)
+
+
+async def _sse_events() -> AsyncIterator[bytes]:
+    queue = await hub.subscribe()
+    try:
+        if collector.latest is not None:
+            yield f"data: {json.dumps(collector.latest, ensure_ascii=False)}\n\n".encode()
+        while True:
+            try:
+                event = await asyncio.wait_for(queue.get(), timeout=20.0)
+                payload = json.dumps(event, ensure_ascii=False, separators=(",", ":"))
+                yield f"event: market\ndata: {payload}\n\n".encode()
+            except asyncio.TimeoutError:
+                yield b": heartbeat\n\n"
+    finally:
+        await hub.unsubscribe(queue)
+
+
+@app.get("/api/v1/stream/market")
+async def sse_market() -> StreamingResponse:
+    return StreamingResponse(
+        _sse_events(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no",
+        },
+    )
