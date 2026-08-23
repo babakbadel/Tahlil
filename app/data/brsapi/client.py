@@ -34,12 +34,28 @@ class BrsApiClient:
             {"User-Agent": USER_AGENT, "Accept": "application/json, text/plain, */*"}
         )
 
-    def get_all_symbols(self, security_type: int = 1) -> Any:
+    def _get_json(self, endpoint: str, **params: Any) -> Any:
         response = self.session.get(
-            f"{BASE_URL}/AllSymbols.php",
-            params={"key": self.api_key, "type": security_type},
+            f"{BASE_URL}/{endpoint}",
+            params={"key": self.api_key, **params},
             timeout=self.timeout,
         )
         if response.status_code != 200:
             raise BrsApiError(f"BRS API HTTP {response.status_code}")
-        return response.json()
+        try:
+            return response.json()
+        except ValueError as exc:
+            raise BrsApiError("BRS API returned invalid JSON") from exc
+
+    def get_all_symbols(self, security_type: int = 1) -> Any:
+        return self._get_json("AllSymbols.php", type=security_type)
+
+    def get_options(self) -> Any:
+        """Fetch the dedicated live TSETMC options dataset.
+
+        BRS documents Option.php as the endpoint for live option-board data.
+        It already returns option-specific fields such as l18, base_l18,
+        price_strike, interest_open and date_end, so options must not be
+        discovered by filtering the generic AllSymbols endpoint.
+        """
+        return self._get_json("Option.php")
