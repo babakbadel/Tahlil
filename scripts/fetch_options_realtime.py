@@ -20,8 +20,13 @@ def build_payload() -> dict:
         for row in normalized
         if isinstance(row.get("base_l18"), str) and row.get("base_l18")
     })
+    symbols = sorted({
+        row.get("l18")
+        for row in normalized
+        if isinstance(row.get("l18"), str) and row.get("l18")
+    })
     return {
-        "schema_version": "2.0",
+        "schema_version": "2.1",
         "market": "IR",
         "asset_class": "option",
         "source": "BRS",
@@ -31,8 +36,10 @@ def build_payload() -> dict:
             "status": "live" if rows else "partial",
             "age_ms": 0,
             "record_count": len(rows),
+            "symbol_count": len(symbols),
             "underlying_count": len(underlyings),
             "underlyings": underlyings,
+            "symbols": symbols,
             "truth_policy": "missing_fields_are_null",
         },
         "data": normalized,
@@ -50,10 +57,23 @@ def main() -> None:
         json.dumps(payload, ensure_ascii=False, indent=2, default=str),
         encoding="utf-8",
     )
-    count = payload["data_quality"]["record_count"]
-    underlying_count = payload["data_quality"]["underlying_count"]
-    print(f"BRS returned {count} option records across {underlying_count} underlyings")
+    quality = payload["data_quality"]
+    count = quality["record_count"]
+    symbol_count = quality["symbol_count"]
+    underlying_count = quality["underlying_count"]
+    print(f"BRS returned {count} option records, {symbol_count} contracts, across {underlying_count} underlyings")
+    print("Underlyings:", ", ".join(quality["underlyings"]))
     print(f"Wrote {args.output} with {count} option records")
+
+    if not rows_have_multiple_underlyings(quality):
+        raise RuntimeError(
+            "Options feed appears incomplete: fewer than 2 distinct underlyings were returned. "
+            "Refusing to publish a ZMLI-only/single-underlying snapshot."
+        )
+
+
+def rows_have_multiple_underlyings(quality: dict) -> bool:
+    return quality.get("underlying_count", 0) >= 2
 
 
 if __name__ == "__main__":
