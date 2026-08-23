@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from .client import BrsApiClient, BrsApiError
+from .stream import RealtimeHub
 
 
 def _now() -> str:
@@ -50,11 +51,12 @@ def normalize(rows: list[dict[str, Any]], source: str = "BRS_API") -> dict[str, 
 
 
 class RealtimeCollector:
-    """Poll the upstream snapshot endpoint and retain the latest event."""
+    """Poll the upstream snapshot endpoint and publish normalized events."""
 
-    def __init__(self, client: BrsApiClient | None = None, interval: float = 5.0) -> None:
+    def __init__(self, client: BrsApiClient | None = None, interval: float = 5.0, hub: RealtimeHub | None = None) -> None:
         self.client = client or BrsApiClient()
         self.interval = max(1.0, interval)
+        self.hub = hub
         self.latest: dict[str, Any] | None = None
         self.last_error: str | None = None
         self._running = False
@@ -65,6 +67,8 @@ class RealtimeCollector:
             snapshot = normalize(_rows(raw))
             self.latest = snapshot
             self.last_error = None
+            if self.hub is not None:
+                self.hub.publish(snapshot)
             return snapshot
         except Exception as exc:
             self.last_error = type(exc).__name__
