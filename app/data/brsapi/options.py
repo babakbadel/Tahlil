@@ -25,20 +25,14 @@ def _name(row: dict[str, Any]) -> str | None:
     return None
 
 
-def _is_option(row: dict[str, Any]) -> bool:
-    """Identify an option row without assuming a specific underlying symbol."""
-    option_markers = (
-        "base_l18",
-        "price_strike",
-        "interest_open",
-        "date_end",
-    )
-    return any(row.get(key) not in (None, "", []) for key in option_markers)
-
-
 def find_options(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Return all option contracts from the dedicated BRS options feed."""
-    return [row for row in rows if _is_option(row)]
+    """Return every row from the dedicated BRS Option.php feed.
+
+    Option.php is already an option-specific endpoint, so filtering rows by
+    a handful of optional fields can silently drop valid contracts. The
+    complete feed must therefore be preserved as-is.
+    """
+    return [row for row in rows if isinstance(row, dict)]
 
 
 def find_zmli(rows: Iterable[dict[str, Any]], targets: set[str] | None = None) -> list[dict[str, Any]]:
