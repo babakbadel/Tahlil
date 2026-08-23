@@ -1,191 +1,145 @@
-import os
-import csv
-import json
-import requests
-from datetime import datetime, timezone
-from pathlib import Path
+name: BRS Market Scan
 
+on:
+  workflow_dispatch:
 
-API_URL = "https://api.brsapi.ir/Tsetmc/AllSymbols.php"
+  schedule:
+    # 08:45 Tehran تقریبا برابر با 05:15 UTC در تابستان
+    - cron: "15 5 * * 6-6"
 
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/131.0.0.0 Safari/537.36"
-    ),
-    "Accept": "application/json, text/plain, */*",
-}
+    # هر 15 دقیقه از 09:00 تا 12:00 تهران
+    - cron: "0,15,30,45 6-8 * * 6-6"
 
+    # 12:15 و 12:30 تهران
+    - cron: "15,30 9 * * 6-6"
 
-def fetch_all_symbols():
-    api_key = os.getenv("BRS_API_KEY")
+permissions:
+  contents: read
 
-    if not api_key:
-        raise RuntimeError(
-            "BRS_API_KEY تنظیم نشده است."
-        )
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
 
-    response = requests.get(
-        API_URL,
-        params={
-            "key": api_key,
-            "type": 1,
-        },
-        headers=HEADERS,
-        timeout=60,
-    )
+    steps:
 
-    response.raise_for_status()
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    data = response.json()
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-    if isinstance(data, dict):
-        rows = data.get("data", data.get("result", data))
-    else:
-        rows = data
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
-    if not isinstance(rows, list):
-        raise RuntimeError(
-            f"ساختار پاسخ ناشناخته است: {type(rows)}"
-        )
+      - name: Fetch all BRS symbols
+        env:
+          BRS_API_KEY: ${{ secrets.BRS_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          import json
+          import requests
+          from pathlib import Path
+          from datetime import datetime, timezone
 
-    return rows
+          api_key = os.environ.get("BRS_API_KEY")
 
+          if not api_key:
+              raise SystemExit(
+                  "ERROR: BRS_API_KEY GitHub Secret is missing."
+              )
 
-def save_json(rows):
-    timestamp = datetime.now(timezone.utc).isoformat()
+          url = "https://api.brsapi.ir/Tsetmc/AllSymbols.php"
 
-    output = {
-        "source": "BRS API",
-        "endpoint": "Tsetmc/AllSymbols.php",
-        "type": 1,
-        "fetched_at_utc": timestamp,
-        "count": len(rows),
-        "symbols": rows,
-    }
+          headers = {
+              "User-Agent": (
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/131.0.0.0 Safari/537.36"
+              ),
+              "Accept": "application/json, text/plain, */*",
+          }
 
-    Path("data").mkdir(exist_ok=True)
+          print("Requesting BRS API...")
 
-    Path("data/all_symbols.json").write_text(
-        json.dumps(
-            output,
-            ensure_ascii=False,
-            indent=2,
-        ),
-        encoding="utf-8",
-    )
+          response = requests.get(
+              url,
+              params={
+                  "key": api_key,
+                  "type": 1,
+              },
+              headers=headers,
+              timeout=60,
+          )
 
+          print("HTTP status:", response.status_code)
 
-def save_csv(rows):
-    if not rows:
-        return
+          response.raise_for_status()
 
-    Path("data").mkdir(exist_ok=True)
+          payload = response.json()
 
-    # تمام فیلدهای موجود در کل نمادها
-    fields = sorted({
-        key
-        for row in rows
-        if isinstance(row, dict)
-        for key in row.keys()
-    })
+          if isinstance(payload, dict):
+              rows = payload.get("data")
 
-    with open(
-        "data/all_symbols.csv",
-        "w",
-        encoding="utf-8-sig",
-        newline="",
-    ) as f:
+              if rows is None:
+                  rows = payload.get("result")
 
-        writer = csv.DictWriter(
-            f,
-            fieldnames=fields,
-            extrasaction="ignore",
-        )
+              if rows is None:
+                  rows = payload
+          else:
+              rows = payload
 
-        writer.writeheader()
+          if not isinstance(rows, list):
+              raise SystemExit(
+                  "ERROR: Unexpected BRS response structure."
+              )
 
-        for row in rows:
-            writer.writerow(row)
+          print(
+              f"SUCCESS: received {len(rows):,} market records."
+          )
 
+          timestamp = datetime.now(
+              timezone.utc
+          ).isoformat()
 
-def print_market_summary(rows):
-    print("\n" + "=" * 70)
-    print("BRS MARKET SCAN")
-    print("=" * 70)
+          output = {
+              "source": "BRS API",
+              "endpoint": "Tsetmc/AllSymbols.php",
+              "type": 1,
+              "fetched_at_utc": timestamp,
+              "count": len(rows),
+              "symbols": rows,
+          }
 
-    print(f"تعداد کل رکوردها: {len(rows):,}")
+          Path("data").mkdir(
+              parents=True,
+              exist_ok=True
+          )
 
-    # نمادها
-    symbols = [
-        r for r in rows
-        if isinstance(r, dict) and r.get("l18")
-    ]
+          Path(
+              "data/all_symbols.json"
+          ).write_text(
+              json.dumps(
+                  output,
+                  ensure_ascii=False,
+                  indent=2
+              ),
+              encoding="utf-8"
+          )
 
-    print(f"تعداد دارای نماد: {len(symbols):,}")
+          print(
+              "Saved: data/all_symbols.json"
+          )
+          PY
 
-    # بیشترین حجم معاملات
-    volume_rows = [
-        r for r in symbols
-        if isinstance(r.get("tvol"), (int, float))
-    ]
-
-    volume_rows.sort(
-        key=lambda x: x.get("tvol", 0),
-        reverse=True,
-    )
-
-    print("\n10 نماد با بیشترین حجم:")
-
-    for i, row in enumerate(volume_rows[:10], 1):
-        print(
-            f"{i:2}. "
-            f"{row.get('l18', ''):<15} "
-            f"حجم={row.get('tvol', 0):,} "
-            f"قیمت={row.get('pl', '')} "
-            f"درصد={row.get('plp', '')}"
-        )
-
-    # بیشترین ارزش معاملات
-    value_rows = [
-        r for r in symbols
-        if isinstance(r.get("tval"), (int, float))
-    ]
-
-    value_rows.sort(
-        key=lambda x: x.get("tval", 0),
-        reverse=True,
-    )
-
-    print("\n10 نماد با بیشترین ارزش معاملات:")
-
-    for i, row in enumerate(value_rows[:10], 1):
-        print(
-            f"{i:2}. "
-            f"{row.get('l18', ''):<15} "
-            f"ارزش={row.get('tval', 0):,} "
-            f"قیمت={row.get('pl', '')} "
-            f"درصد={row.get('plp', '')}"
-        )
-
-
-def main():
-    print("در حال دریافت کل بازار از BRS...")
-
-    rows = fetch_all_symbols()
-
-    print(f"دریافت شد: {len(rows):,} رکورد")
-
-    save_json(rows)
-    save_csv(rows)
-
-    print_market_summary(rows)
-
-    print("\nفایل‌ها:")
-    print("data/all_symbols.json")
-    print("data/all_symbols.csv")
-
-
-if __name__ == "__main__":
-    main()
+      - name: Upload market snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: brs-market-snapshot-${{ github.run_number }}
+          path: data/all_symbols.json
+          retention-days: 7
