@@ -2,10 +2,11 @@ name: BRS Realtime Options
 
 on:
   # Automatic collection during the Iranian market session.
-  # No manual workflow execution is required.
+  # Iran is UTC+03:30; using UTC here avoids workflow parser/preview issues.
+  # 08:00..12:30 Tehran = 04:30..09:00 UTC.
   schedule:
-    - cron: '0,30 8-12 * * *'
-      timezone: 'Asia/Tehran'
+    - cron: '30 4-8 * * 0-4'
+    - cron: '0 5-9 * * 0-4'
   workflow_dispatch:
 
 permissions:
@@ -52,8 +53,7 @@ jobs:
         run: python3 -m json.tool artifacts/options_realtime.json >/dev/null
 
       - name: Publish persistent latest snapshot
-        run: |
-          cp artifacts/options_realtime.json data/latest/options_realtime.json
+        run: cp artifacts/options_realtime.json data/latest/options_realtime.json
 
       - name: Freeze final snapshot at 12:30
         run: |
