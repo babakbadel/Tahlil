@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: read
-  actions: write
 
 concurrency:
   group: brs-realtime
@@ -25,15 +24,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
+      - name: Show runner Python
+        run: |
+          python3 --version
+          python3 -m pip --version
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install -r requirements-realtime.txt
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements-realtime.txt
 
       - name: Validate secret
         run: |
@@ -42,10 +41,10 @@ jobs:
       - name: Collect realtime ZMLI snapshot
         run: |
           mkdir -p artifacts
-          python scripts/fetch_zmli_realtime.py --output artifacts/zmli_realtime.json
+          python3 scripts/fetch_zmli_realtime.py --output artifacts/zmli_realtime.json
 
       - name: Validate JSON
-        run: python -m json.tool artifacts/zmli_realtime.json >/dev/null
+        run: python3 -m json.tool artifacts/zmli_realtime.json >/dev/null
 
       - name: Publish artifact
         uses: actions/upload-artifact@v4
