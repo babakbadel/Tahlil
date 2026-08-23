@@ -1,25 +1,27 @@
-"""Print a normalized JSON snapshot for ZMLI option contracts.
+"""Collect and write a normalized JSON snapshot for Iranian option contracts.
 
 Usage:
-    BRS_API_KEY=... python scripts/fetch_zmli_realtime.py
+    BRS_API_KEY=... python scripts/fetch_zmli_realtime.py --output artifacts/zmli_realtime.json
 
 No credential is printed or persisted by this script.
 """
 from __future__ import annotations
 
+import argparse
 import json
 from datetime import datetime, timezone
+from pathlib import Path
 
 from app.data.brsapi.client import BrsApiClient
 from app.data.brsapi.option_fields import normalize_option_row
 from app.data.brsapi.options import snapshot
 
 
-def main() -> None:
+def build_payload() -> dict:
     received_at = datetime.now(timezone.utc).isoformat()
     rows = snapshot(BrsApiClient(), targets=None)
     normalized = [normalize_option_row(row) | {"raw": row} for row in rows]
-    payload = {
+    return {
         "schema_version": "1.2",
         "market": "IR",
         "asset_class": "option",
@@ -34,7 +36,23 @@ def main() -> None:
         },
         "data": normalized,
     }
-    print(json.dumps(payload, ensure_ascii=False, indent=2, default=str))
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, required=True)
+    args = parser.parse_args()
+
+    payload = build_payload()
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2, default=str),
+        encoding="utf-8",
+    )
+    print(
+        f"Wrote {args.output} with "
+        f"{payload['data_quality']['record_count']} option records"
+    )
 
 
 if __name__ == "__main__":
