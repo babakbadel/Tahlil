@@ -42,18 +42,18 @@ jobs:
         run: |
           test -n "$BRS_API_KEY" || { echo 'BRS_API_KEY repository secret is missing'; exit 1; }
 
-      - name: Collect realtime ZMLI snapshot
+      - name: Collect realtime all-options snapshot
         run: |
           mkdir -p artifacts
           python3 -c "import app; print('app import OK')"
-          python3 scripts/fetch_zmli_realtime.py --output artifacts/zmli_realtime.json
+          python3 scripts/fetch_options_realtime.py --output artifacts/options_realtime.json
 
       - name: Validate JSON
-        run: python3 -m json.tool artifacts/zmli_realtime.json >/dev/null
+        run: python3 -m json.tool artifacts/options_realtime.json >/dev/null
 
       - name: Publish artifact
         uses: actions/upload-artifact@v4
         with:
-          name: zmli-realtime-${{ github.run_id }}
-          path: artifacts/zmli_realtime.json
+          name: options-realtime-${{ github.run_id }}
+          path: artifacts/options_realtime.json
           retention-days: 7
