@@ -15,18 +15,24 @@ def build_payload() -> dict:
     received_at = datetime.now(timezone.utc).isoformat()
     rows = snapshot_all(BrsApiClient())
     normalized = [normalize_option_row(row) | {"raw": row} for row in rows]
+
+    # Use canonical normalized field names here. The previous version
+    # incorrectly looked for raw BRS keys (base_l18/l18) inside the normalized
+    # records, which produced 0 contracts and 0 underlyings despite receiving
+    # 1,144 valid option rows.
     underlyings = sorted({
-        row.get("base_l18")
+        row.get("underlying")
         for row in normalized
-        if isinstance(row.get("base_l18"), str) and row.get("base_l18")
+        if isinstance(row.get("underlying"), str) and row.get("underlying")
     })
     symbols = sorted({
-        row.get("l18")
+        row.get("symbol")
         for row in normalized
-        if isinstance(row.get("l18"), str) and row.get("l18")
+        if isinstance(row.get("symbol"), str) and row.get("symbol")
     })
+
     return {
-        "schema_version": "2.1",
+        "schema_version": "2.2",
         "market": "IR",
         "asset_class": "option",
         "source": "BRS",
@@ -57,23 +63,24 @@ def main() -> None:
         json.dumps(payload, ensure_ascii=False, indent=2, default=str),
         encoding="utf-8",
     )
+
     quality = payload["data_quality"]
     count = quality["record_count"]
     symbol_count = quality["symbol_count"]
     underlying_count = quality["underlying_count"]
-    print(f"BRS returned {count} option records, {symbol_count} contracts, across {underlying_count} underlyings")
+
+    print(
+        f"BRS returned {count} option records, "
+        f"{symbol_count} contracts, across {underlying_count} underlyings"
+    )
     print("Underlyings:", ", ".join(quality["underlyings"]))
     print(f"Wrote {args.output} with {count} option records")
 
-    if not rows_have_multiple_underlyings(quality):
+    if underlying_count < 2:
         raise RuntimeError(
-            "Options feed appears incomplete: fewer than 2 distinct underlyings were returned. "
-            "Refusing to publish a ZMLI-only/single-underlying snapshot."
+            "Options feed appears incomplete: fewer than 2 distinct underlyings "
+            "were returned. Refusing to publish a ZMLI-only/single-underlying snapshot."
         )
-
-
-def rows_have_multiple_underlyings(quality: dict) -> bool:
-    return quality.get("underlying_count", 0) >= 2
 
 
 if __name__ == "__main__":
