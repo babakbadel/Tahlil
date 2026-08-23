@@ -5,8 +5,8 @@ on:
   # Iran is UTC+03:30; using UTC here avoids workflow parser/preview issues.
   # 08:00..12:30 Tehran = 04:30..09:00 UTC.
   schedule:
-    - cron: '30 4-8 * * 0-4'
-    - cron: '0 5-9 * * 0-4'
+    - cron: '30 4-8 * * 0-3,6'
+    - cron: '0 5-9 * * 0-3,6'
   workflow_dispatch:
 
 permissions:
