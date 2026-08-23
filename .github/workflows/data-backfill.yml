@@ -1,0 +1,63 @@
+name: Tahlil Data Backfill
+
+on:
+  # External analysis systems can request a self-healing refresh without
+  # requiring the user to open GitHub Actions.
+  repository_dispatch:
+    types: [analysis_request, data_backfill]
+  # Safety net after the normal market session.
+  schedule:
+    - cron: '35 9 * * 0-4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tahlil-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      BRS_API_KEY: ${{ secrets.BRS_API_KEY }}
+      PYTHONPATH: ${{ github.workspace }}
+      PYTHONUNBUFFERED: '1'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements-realtime.txt
+          python3 -m pip install requests
+
+      - name: Validate secret
+        run: test -n "$BRS_API_KEY"
+
+      - name: Run self-healing backfill
+        run: python3 scripts/backfill.py
+
+      - name: Validate latest options snapshot
+        run: python3 -m json.tool data/latest/options_realtime.json >/dev/null
+
+      - name: Commit repaired snapshots
+        run: |
+          git config user.name 'tahlil-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/latest data/final
+          git diff --cached --quiet || git commit -m "data: self-heal snapshots [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 2
+          done
+          exit 1
