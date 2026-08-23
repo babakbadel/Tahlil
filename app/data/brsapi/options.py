@@ -1,9 +1,4 @@
-"""BRS option scanner for live/near-realtime option snapshots.
-
-BRS is the primary upstream. This module deliberately does not fabricate
-missing fields; unavailable fields remain None and can be enriched by a
-provider-specific adapter later.
-"""
+"""BRS option scanner for live/near-realtime option snapshots."""
 
 from __future__ import annotations
 
@@ -30,8 +25,24 @@ def _name(row: dict[str, Any]) -> str | None:
     return None
 
 
+def _is_option(row: dict[str, Any]) -> bool:
+    """Identify an option row without assuming a specific underlying symbol."""
+    option_markers = (
+        "base_l18",
+        "price_strike",
+        "interest_open",
+        "date_end",
+    )
+    return any(row.get(key) not in (None, "", []) for key in option_markers)
+
+
+def find_options(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Return all option contracts from the dedicated BRS options feed."""
+    return [row for row in rows if _is_option(row)]
+
+
 def find_zmli(rows: Iterable[dict[str, Any]], targets: set[str] | None = None) -> list[dict[str, Any]]:
-    """Return all active ZMLI rows, optionally narrowed to exact contracts."""
+    """Return all ZMLI rows, optionally narrowed to exact contracts."""
     target_set = targets
     result: list[dict[str, Any]] = []
     for row in rows:
@@ -49,5 +60,10 @@ def find_targets(rows: list[dict[str, Any]], names: set[str] = DEFAULT_TARGETS) 
 
 
 def snapshot(client: BrsApiClient, targets: set[str] | None = None) -> list[dict[str, Any]]:
-    """Fetch the dedicated BRS live option feed and return ZMLI contracts."""
+    """Backward-compatible ZMLI snapshot."""
     return find_zmli(_rows(client.get_options()), targets)
+
+
+def snapshot_all(client: BrsApiClient) -> list[dict[str, Any]]:
+    """Fetch and return every option contract exposed by BRS."""
+    return find_options(_rows(client.get_options()))
