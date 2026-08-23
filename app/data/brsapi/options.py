@@ -49,5 +49,5 @@ def find_targets(rows: list[dict[str, Any]], names: set[str] = DEFAULT_TARGETS) 
 
 
 def snapshot(client: BrsApiClient, targets: set[str] | None = None) -> list[dict[str, Any]]:
-    """Fetch the latest BRS snapshot and return ZMLI option contracts."""
-    return find_zmli(_rows(client.get_all_symbols(security_type=1)), targets)
+    """Fetch the dedicated BRS live option feed and return ZMLI contracts."""
+    return find_zmli(_rows(client.get_options()), targets)
