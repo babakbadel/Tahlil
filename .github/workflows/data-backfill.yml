@@ -5,9 +5,10 @@ on:
   # requiring the user to open GitHub Actions.
   repository_dispatch:
     types: [analysis_request, data_backfill]
-  # Safety net after the normal market session.
+  # Safety net shortly after the 12:30 Tehran market close.
+  # 12:35 Tehran = 09:05 UTC.
   schedule:
-    - cron: '35 9 * * 0-4'
+    - cron: '5 9 * * 0-3,6'
   workflow_dispatch:
 
 permissions:
