@@ -1,14 +1,15 @@
 name: BRS Realtime Options
 
 on:
-  # The data pipeline runs automatically; no manual workflow execution is required.
+  # Automatic collection during the Iranian market session.
+  # No manual workflow execution is required.
   schedule:
-    # GitHub Actions supports a minimum scheduled interval of 5 minutes.
-    - cron: '3-58/5 * * * *'
+    - cron: '0,30 8-12 * * *'
+      timezone: 'Asia/Tehran'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: brs-realtime
@@ -27,11 +28,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Show runner Python
-        run: |
-          python3 --version
-          python3 -m pip --version
-          echo "PYTHONPATH=$PYTHONPATH"
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -44,12 +44,35 @@ jobs:
 
       - name: Collect realtime all-options snapshot
         run: |
-          mkdir -p artifacts
+          mkdir -p artifacts data/latest data/final
           python3 -c "import app; print('app import OK')"
           python3 scripts/fetch_options_realtime.py --output artifacts/options_realtime.json
 
       - name: Validate JSON
         run: python3 -m json.tool artifacts/options_realtime.json >/dev/null
+
+      - name: Publish persistent latest snapshot
+        run: |
+          cp artifacts/options_realtime.json data/latest/options_realtime.json
+          cp artifacts/options_realtime.json data/latest/options_realtime_${GITHUB_RUN_ID}.json
+
+      - name: Freeze final snapshot at 12:30
+        run: |
+          HOUR=$(TZ=Asia/Tehran date +%H)
+          MINUTE=$(TZ=Asia/Tehran date +%M)
+          DATE=$(TZ=Asia/Tehran date +%F)
+          if [ "$HOUR" = "12" ] && [ "$MINUTE" = "30" ]; then
+            mkdir -p "data/final/$DATE"
+            cp artifacts/options_realtime.json "data/final/$DATE/options_realtime.json"
+          fi
+
+      - name: Commit latest and final snapshots
+        run: |
+          git config user.name 'tahlil-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/latest data/final
+          git diff --cached --quiet || git commit -m "data: update options snapshot [skip ci]"
+          git push
 
       - name: Publish artifact
         uses: actions/upload-artifact@v4
