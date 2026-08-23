@@ -1,11 +1,11 @@
 name: BRS Realtime Options
 
 on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+  # The data pipeline runs automatically; no manual workflow execution is required.
   schedule:
-    - cron: '*/5 * * * *'
+    # GitHub Actions supports a minimum scheduled interval of 5 minutes.
+    - cron: '3-58/5 * * * *'
+  workflow_dispatch:
 
 permissions:
   contents: read
