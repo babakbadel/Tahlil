@@ -54,7 +54,6 @@ jobs:
       - name: Publish persistent latest snapshot
         run: |
           cp artifacts/options_realtime.json data/latest/options_realtime.json
-          cp artifacts/options_realtime.json data/latest/options_realtime_${GITHUB_RUN_ID}.json
 
       - name: Freeze final snapshot at 12:30
         run: |
