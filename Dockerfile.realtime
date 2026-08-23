@@ -1,7 +1,9 @@
 FROM python:3.13-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
+    PYTHONUNBUFFERED=1 \
+    HOST=0.0.0.0 \
+    PORT=8000
 
 WORKDIR /app
 
@@ -10,7 +12,8 @@ RUN pip install --no-cache-dir -r requirements-realtime.txt
 
 COPY app ./app
 COPY scripts ./scripts
+COPY realtime_api.py ./realtime_api.py
 
 EXPOSE 8000
 
-CMD ["python", "scripts/run_realtime_api.py"]
+CMD ["sh", "scripts/docker-entrypoint-realtime.sh"]
