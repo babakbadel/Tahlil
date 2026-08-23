@@ -2,10 +2,10 @@ name: BRS Market Scan
 
 on:
   # Automatic market snapshots during the Iranian market session.
-  # No manual workflow execution is required.
+  # Iran is UTC+03:30; 08:00..12:30 Tehran = 04:30..09:00 UTC.
   schedule:
-    - cron: '0,30 8-12 * * *'
-      timezone: 'Asia/Tehran'
+    - cron: '30 4-8 * * 0-4'
+    - cron: '0 5-9 * * 0-4'
   workflow_dispatch:
 
 permissions:
@@ -37,8 +37,7 @@ jobs:
       - name: Run market scanner
         env:
           BRS_API_KEY: ${{ secrets.BRS_API_KEY }}
-        run: |
-          python scan_market.py
+        run: python scan_market.py
 
       - name: Validate JSON
         run: python -m json.tool data/all_symbols.json >/dev/null
