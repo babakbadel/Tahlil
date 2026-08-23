@@ -87,7 +87,7 @@ Useful calculations include:
 Never treat model-derived Greeks or IV as exchange-provided facts unless the source explicitly supplies them.
 
 ## API contract
-Recommended service endpoints:
+Recommended endpoints:
 - `GET /api/v1/equity/market`
 - `GET /api/v1/equity/symbol/{symbol}`
 - `GET /api/v1/equity/trades/{symbol}`
@@ -100,14 +100,20 @@ Recommended service endpoints:
 - `GET /api/v1/options/greeks/{contract}`
 - `GET /api/v1/derivatives/underlying/{symbol}`
 
-For streaming, prefer WebSocket or SSE over client-side polling when the upstream source permits it.
+Streaming endpoints implemented by the current service:
+- `WS /ws/market`
+- `GET /api/v1/stream/market` (SSE)
+
+The WebSocket/SSE layer streams newly collected normalized snapshots. It does **not** turn a polling upstream into an exchange-native tick feed. The current BRS `AllSymbols` adapter remains snapshot/poll based.
 
 ## Collector architecture
-`Source Adapter -> Collector -> Normalizer -> Quality Gate -> Cache/Stream -> JSON API -> Bobby Hosh`
+`Source Adapter -> Collector -> Normalizer -> Quality Gate -> RealtimeHub -> REST/WebSocket/SSE -> Bobby Hosh`
 
 The collector should support reconnect/backoff, rate-limit handling, stale-data detection, duplicate-event suppression, and structured logging.
 
-Redis/cache is recommended for the latest snapshot and short-lived stream state. Persistent storage should be used for historical snapshots required by backtests.
+The current RealtimeHub is an in-process bounded fan-out queue. For multi-process or multi-instance deployment, use Redis Pub/Sub or Redis Streams without changing the external stream contract.
+
+Persistent storage should be used for historical snapshots required by backtests.
 
 ## Integration with Bobby Hosh
 The skill feeds, but does not replace, the existing analysis engines:
@@ -153,10 +159,12 @@ At minimum test:
 - missing fields
 - option/underlying mapping
 - IV/Greeks calculation against known fixtures
+- WebSocket/SSE fan-out behavior
+- slow-client queue behavior
 - no-look-ahead behavior in historical replay
 
 ## Implementation roadmap
-Phase 1: schema + adapters + normalized REST JSON.
-Phase 2: live collector + cache + streaming.
-Phase 3: historical recorder + replay/backtest.
+Phase 1: schema + adapters + normalized REST JSON. **Complete.**
+Phase 2: live collector + bounded streaming. **Current.**
+Phase 3: Redis-backed stream + historical recorder + replay/backtest.
 Phase 4: anomaly detection and Decision Engine integration.
