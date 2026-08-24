@@ -1,7 +1,7 @@
 """Backfill TSETMC daily history for BabiMind forecasting.
 
-Phase 1 focuses on the total/equal-weighted indices. Symbol backfill is sharded so
-GitHub Actions can safely build the multi-year panel without one oversized job.
+Phase 1 focuses on the total/equal-weighted indices. Symbol backfill is sharded
+so GitHub Actions can safely build the multi-year panel without one oversized job.
 """
 from __future__ import annotations
 
@@ -10,34 +10,73 @@ import gzip
 import io
 import json
 import os
+import random
 import time
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 BASE = "https://cdn.tsetmc.com/api"
-HEADERS = {"User-Agent": "Mozilla/5.0 Tahlil-BabiMind/1.0"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36 Tahlil-BabiMind/1.0",
+    "Accept": "application/json,text/plain,*/*",
+    "Referer": "https://www.tsetmc.com/",
+    "Connection": "keep-alive",
+}
 INDEX_CODES = {
     "tedpix": "32097828820363860",
     "equal_weighted": "67130298613737946",
 }
 
 
-def get_json(url: str, attempts: int = 5) -> dict[str, Any]:
+def make_session() -> requests.Session:
+    session = requests.Session()
+    retry = Retry(
+        total=3,
+        connect=3,
+        read=3,
+        status=3,
+        backoff_factor=1.5,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset({"GET"}),
+        respect_retry_after_header=True,
+    )
+    adapter = HTTPAdapter(max_retries=retry, pool_connections=4, pool_maxsize=4)
+    session.mount("https://", adapter)
+    session.headers.update(HEADERS)
+    return session
+
+
+SESSION = make_session()
+
+
+def get_json(url: str, attempts: int = 6) -> dict[str, Any]:
     last: Exception | None = None
     for n in range(attempts):
         try:
-            r = requests.get(url, headers=HEADERS, timeout=30)
+            # A long read timeout is intentional: TSETMC's CDN can be slow from
+            # GitHub-hosted runners even when the endpoint itself is healthy.
+            r = SESSION.get(url, timeout=(20, 90))
             r.raise_for_status()
-            if not r.text.strip().startswith("{"):
+            text = r.text.lstrip("\ufeff \t\r\n")
+            if not text.startswith("{"):
                 raise RuntimeError("non-JSON response from TSETMC")
             return r.json()
         except Exception as exc:
             last = exc
-            time.sleep(1.5 * (n + 1))
-    raise RuntimeError(f"TSETMC request failed: {url}: {last}")
+            if n + 1 < attempts:
+                delay = min(30.0, 2.0 ** n) + random.uniform(0.2, 1.2)
+                print(
+                    f"RETRY {n + 1}/{attempts - 1} after {type(exc).__name__}: "
+                    f"sleep={delay:.1f}s url={url}",
+                    flush=True,
+                )
+                time.sleep(delay)
+    raise RuntimeError(f"TSETMC request failed after {attempts} attempts: {url}: {last}")
 
 
 def index_history(code: str) -> pd.DataFrame:
@@ -60,7 +99,7 @@ def market_symbols() -> pd.DataFrame:
     df = pd.DataFrame(rows)
     if df.empty:
         raise RuntimeError("marketwatch returned no rows")
-    code = next((c for c in ("insCode", "insCode") if c in df.columns), None)
+    code = "insCode" if "insCode" in df.columns else None
     symbol = next((c for c in ("lVal18AFC", "lVal18") if c in df.columns), None)
     if not code:
         raise RuntimeError(f"marketwatch schema missing insCode: {df.columns.tolist()}")
