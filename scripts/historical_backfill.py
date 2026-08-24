@@ -21,6 +21,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 BASE = "https://cdn.tsetmc.com/api"
+OLD_BASE = "http://old.tsetmc.com/tsev2/chart/data"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36 Tahlil-BabiMind/1.0",
     "Accept": "application/json,text/plain,*/*",
@@ -36,10 +37,10 @@ INDEX_CODES = {
 def make_session() -> requests.Session:
     session = requests.Session()
     retry = Retry(
-        total=3,
-        connect=3,
-        read=3,
-        status=3,
+        total=2,
+        connect=2,
+        read=2,
+        status=2,
         backoff_factor=1.5,
         status_forcelist=(429, 500, 502, 503, 504),
         allowed_methods=frozenset({"GET"}),
@@ -47,6 +48,7 @@ def make_session() -> requests.Session:
     )
     adapter = HTTPAdapter(max_retries=retry, pool_connections=4, pool_maxsize=4)
     session.mount("https://", adapter)
+    session.mount("http://", adapter)
     session.headers.update(HEADERS)
     return session
 
@@ -54,13 +56,11 @@ def make_session() -> requests.Session:
 SESSION = make_session()
 
 
-def get_json(url: str, attempts: int = 6) -> dict[str, Any]:
+def get_json(url: str, attempts: int = 4) -> dict[str, Any]:
     last: Exception | None = None
     for n in range(attempts):
         try:
-            # A long read timeout is intentional: TSETMC's CDN can be slow from
-            # GitHub-hosted runners even when the endpoint itself is healthy.
-            r = SESSION.get(url, timeout=(20, 90))
+            r = SESSION.get(url, timeout=(12, 45))
             r.raise_for_status()
             text = r.text.lstrip("\ufeff \t\r\n")
             if not text.startswith("{"):
@@ -69,28 +69,54 @@ def get_json(url: str, attempts: int = 6) -> dict[str, Any]:
         except Exception as exc:
             last = exc
             if n + 1 < attempts:
-                delay = min(30.0, 2.0 ** n) + random.uniform(0.2, 1.2)
-                print(
-                    f"RETRY {n + 1}/{attempts - 1} after {type(exc).__name__}: "
-                    f"sleep={delay:.1f}s url={url}",
-                    flush=True,
-                )
+                delay = min(20.0, 2.0 ** n) + random.uniform(0.2, 1.0)
+                print(f"RETRY {n + 1}/{attempts - 1} after {type(exc).__name__}: sleep={delay:.1f}s url={url}", flush=True)
                 time.sleep(delay)
     raise RuntimeError(f"TSETMC request failed after {attempts} attempts: {url}: {last}")
 
 
-def index_history(code: str) -> pd.DataFrame:
-    payload = get_json(f"{BASE}/Index/GetIndexB2History/{code}")
-    rows = payload.get("indexB2", [])
+def index_history_old(code: str) -> pd.DataFrame:
+    """Fallback index history via the older CSV chart endpoint.
+
+    The CDN JSON endpoint can be unreachable from GitHub-hosted runners. The
+    older IndexFinancial endpoint is a documented TSETMC fallback and returns
+    semicolon-separated rows: date,pmax,pmin,pf,pl,tvol,pc.
+    """
+    url = f"{OLD_BASE}/IndexFinancial.aspx?i={code}&t=ph"
+    r = SESSION.get(url, timeout=(12, 60), headers={**HEADERS, "Accept": "text/csv,text/plain,*/*"})
+    r.raise_for_status()
+    text = r.text.lstrip("\ufeff \t\r\n")
+    rows = []
+    for raw in text.replace("\r", "").replace("\n", "").split(";"):
+        parts = raw.strip().split(",")
+        if len(parts) < 7:
+            continue
+        rows.append((parts[0], parts[6]))
     if not rows:
-        raise RuntimeError(f"no index history returned for {code}")
-    df = pd.DataFrame(rows)
-    date_col = next((c for c in ("dEven", "date") if c in df.columns), None)
-    value_col = next((c for c in ("xValue", "indexLast", "last") if c in df.columns), None)
-    if not date_col or not value_col:
-        raise RuntimeError(f"unexpected index schema: {df.columns.tolist()}")
-    out = pd.DataFrame({"date": pd.to_datetime(df[date_col].astype(str), format="%Y%m%d", errors="coerce"), "close": pd.to_numeric(df[value_col], errors="coerce")})
+        raise RuntimeError(f"old TSETMC index endpoint returned no rows for {code}")
+    out = pd.DataFrame(rows, columns=["date", "close"])
+    out["date"] = pd.to_datetime(out["date"].astype(str), format="%Y%m%d", errors="coerce")
+    out["close"] = pd.to_numeric(out["close"], errors="coerce")
     return out.dropna().drop_duplicates("date").sort_values("date").reset_index(drop=True)
+
+
+def index_history(code: str) -> pd.DataFrame:
+    try:
+        payload = get_json(f"{BASE}/Index/GetIndexB2History/{code}", attempts=2)
+        rows = payload.get("indexB2", [])
+        if rows:
+            df = pd.DataFrame(rows)
+            date_col = next((c for c in ("dEven", "date") if c in df.columns), None)
+            value_col = next((c for c in ("xValue", "indexLast", "last") if c in df.columns), None)
+            if date_col and value_col:
+                out = pd.DataFrame({"date": pd.to_datetime(df[date_col].astype(str), format="%Y%m%d", errors="coerce"), "close": pd.to_numeric(df[value_col], errors="coerce")})
+                out = out.dropna().drop_duplicates("date").sort_values("date").reset_index(drop=True)
+                if not out.empty:
+                    return out
+        print(f"CDN index history empty for {code}; switching to old TSETMC endpoint", flush=True)
+    except Exception as exc:
+        print(f"CDN index history failed for {code}: {exc}; switching to old TSETMC endpoint", flush=True)
+    return index_history_old(code)
 
 
 def market_symbols() -> pd.DataFrame:
@@ -138,6 +164,7 @@ def main() -> None:
     if args.kind == "indices":
         for name, code in INDEX_CODES.items():
             df = index_history(code)
+            print(f"{name}: rows={len(df)} from={df.date.min().date()} to={df.date.max().date()}", flush=True)
             write_gz(df, out / f"index_{name}.csv.gz")
         return
 
