@@ -14,6 +14,7 @@ on:
   push:
     paths:
       - '.github/workflows/historical-forecast-backfill.yml'
+      - 'scripts/historical_backfill.py'
 
 permissions:
   contents: write
@@ -26,7 +27,7 @@ jobs:
   indices:
     if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[backfill]')
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,7 +36,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install --upgrade pip pandas requests
-      - run: python scripts/historical_backfill.py --kind indices
+      - name: Backfill indices with resilient TSETMC client
+        run: python scripts/historical_backfill.py --kind indices
       - uses: actions/upload-artifact@v4
         with:
           name: babimind-index-history
@@ -46,7 +48,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[backfill]')
     needs: indices
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     strategy:
       fail-fast: false
       matrix:
