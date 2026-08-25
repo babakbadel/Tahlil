@@ -1,0 +1,153 @@
+{
+  "persons": [
+    {
+      "person_id": "pezeshkian",
+      "name": "مسعود پزشکیان",
+      "aliases": ["پزشکیان", "Masoud Pezeshkian"]
+    },
+    {
+      "person_id": "tayebnia",
+      "name": "علی طیب‌نیا",
+      "aliases": ["طیب نیا", "Ali Tayebnia"]
+    },
+    {
+      "person_id": "aghapour",
+      "name": "معصومه آقاپور",
+      "aliases": ["آقاپور علیشاهی", "Masoumeh Aghapour"]
+    },
+    {
+      "person_id": "aref",
+      "name": "محمدرضا عارف",
+      "aliases": ["عارف", "Mohammad Reza Aref"]
+    },
+    {
+      "person_id": "ghaempanaah",
+      "name": "محمدجعفر قائم‌پناه",
+      "aliases": ["قائم پناه", "Mohammad Jafar Ghaempanah"]
+    }
+  ],
+  "roles": [
+    {
+      "person_id": "pezeshkian",
+      "role": "رئیس‌جمهور",
+      "organization": "دولت چهاردهم",
+      "role_type": "president",
+      "start_at": "2024-07-28",
+      "end_at": null,
+      "status": "active",
+      "source_url": null,
+      "source_published_at": null,
+      "observed_at": "2026-08-21",
+      "confidence": 0.95,
+      "influence_domain": ["policy", "economy", "foreign"],
+      "influence_score": 1.0
+    },
+    {
+      "person_id": "tayebnia",
+      "role": "مشاور عالی رئیس‌جمهور",
+      "organization": "نهاد ریاست‌جمهوری",
+      "role_type": "advisor",
+      "start_at": "2024-08-01",
+      "end_at": null,
+      "status": "active",
+      "source_url": null,
+      "source_published_at": null,
+      "observed_at": "2026-08-21",
+      "confidence": 0.7,
+      "influence_domain": ["economy", "policy"],
+      "influence_score": 0.85
+    },
+    {
+      "person_id": "aghapour",
+      "role": "مشاور امور اقتصادی و همکاری‌های اقتصادی",
+      "organization": "نهاد ریاست‌جمهوری",
+      "role_type": "advisor",
+      "start_at": "2024-08-01",
+      "end_at": null,
+      "status": "active",
+      "source_url": null,
+      "source_published_at": null,
+      "observed_at": "2026-08-21",
+      "confidence": 0.65,
+      "influence_domain": ["economy"],
+      "influence_score": 0.6
+    },
+    {
+      "person_id": "aref",
+      "role": "معاون اول رئیس‌جمهور",
+      "organization": "نهاد ریاست‌جمهوری",
+      "role_type": "deputy",
+      "start_at": "2024-07-30",
+      "end_at": null,
+      "status": "active",
+      "source_url": null,
+      "source_published_at": null,
+      "observed_at": "2026-08-21",
+      "confidence": 0.9,
+      "influence_domain": ["policy", "economy"],
+      "influence_score": 0.9
+    },
+    {
+      "person_id": "ghaempanaah",
+      "role": "فرد مؤثر / شبکه اثرگذاری دولت",
+      "organization": "دولت چهاردهم",
+      "role_type": "other",
+      "start_at": "2024-08-01",
+      "end_at": null,
+      "status": "uncertain",
+      "source_url": null,
+      "source_published_at": null,
+      "observed_at": "2026-08-21",
+      "confidence": 0.4,
+      "influence_domain": ["policy"],
+      "influence_score": 0.4
+    }
+  ],
+  "edges": [
+    {
+      "from_person_id": "tayebnia",
+      "to_person_id": "pezeshkian",
+      "relation_type": "advisor_to",
+      "domain": "economy",
+      "weight": 0.85,
+      "valid_from": "2024-08-01",
+      "valid_to": null,
+      "evidence_ids": [],
+      "confidence": 0.7
+    },
+    {
+      "from_person_id": "aghapour",
+      "to_person_id": "pezeshkian",
+      "relation_type": "advisor_to",
+      "domain": "economy",
+      "weight": 0.6,
+      "valid_from": "2024-08-01",
+      "valid_to": null,
+      "evidence_ids": [],
+      "confidence": 0.65
+    },
+    {
+      "from_person_id": "aref",
+      "to_person_id": "pezeshkian",
+      "relation_type": "deputy_of",
+      "domain": "policy",
+      "weight": 0.9,
+      "valid_from": "2024-07-30",
+      "valid_to": null,
+      "evidence_ids": [],
+      "confidence": 0.9
+    },
+    {
+      "from_person_id": "ghaempanaah",
+      "to_person_id": "pezeshkian",
+      "relation_type": "influence_network",
+      "domain": "policy",
+      "weight": 0.4,
+      "valid_from": "2024-08-01",
+      "valid_to": null,
+      "evidence_ids": [],
+      "confidence": 0.4
+    }
+  ],
+  "evidence": []
+}
