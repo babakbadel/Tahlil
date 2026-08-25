@@ -39,23 +39,37 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install -r requirements-realtime.txt
 
-      - name: Validate secret
-        run: |
-          test -n "$BRS_API_KEY" || { echo 'BRS_API_KEY repository secret is missing'; exit 1; }
-
-      - name: Collect realtime all-options snapshot
+      - name: Collect realtime all-options snapshot (skip if API unavailable)
+        id: collect
+        continue-on-error: true
         run: |
           mkdir -p artifacts data/latest data/final
+          if [ -z "$BRS_API_KEY" ]; then
+            echo 'BRS API unavailable: secret is missing. SKIP.'
+            echo 'available=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           python3 -c "import app; print('app import OK')"
-          python3 scripts/fetch_options_realtime.py --output artifacts/options_realtime.json
+          if python3 scripts/fetch_options_realtime.py --output artifacts/options_realtime.json; then
+            echo 'available=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'BRS API unavailable/failed. SKIP and continue pipeline.'
+            rm -f artifacts/options_realtime.json
+            echo 'available=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
 
       - name: Validate JSON
+        if: steps.collect.outputs.available == 'true'
         run: python3 -m json.tool artifacts/options_realtime.json >/dev/null
 
       - name: Publish persistent latest snapshot
+        if: steps.collect.outputs.available == 'true'
         run: cp artifacts/options_realtime.json data/latest/options_realtime.json
 
       - name: Freeze final snapshot at 12:30
+        if: steps.collect.outputs.available == 'true'
         run: |
           HOUR=$(TZ=Asia/Tehran date +%H)
           MINUTE=$(TZ=Asia/Tehran date +%M)
@@ -66,6 +80,7 @@ jobs:
           fi
 
       - name: Commit latest and final snapshots
+        if: steps.collect.outputs.available == 'true'
         run: |
           git config user.name 'tahlil-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -78,6 +93,7 @@ jobs:
           exit 1
 
       - name: Publish artifact
+        if: steps.collect.outputs.available == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: options-realtime-${{ github.run_id }}
