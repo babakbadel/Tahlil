@@ -24,6 +24,11 @@
       "person_id": "ghaempanaah",
       "name": "محمدجعفر قائم‌پناه",
       "aliases": ["قائم پناه", "Mohammad Jafar Ghaempanah"]
+    },
+    {
+      "person_id": "abdeh_tabrizi",
+      "name": "حسین عبده تبریزی",
+      "aliases": ["عبده تبریزی", "Hossein Abdoh Tabrizi", "عبده‌تبریزی"]
     }
   ],
   "roles": [
@@ -37,7 +42,7 @@
       "status": "active",
       "source_url": null,
       "source_published_at": null,
-      "observed_at": "2026-08-21",
+      "observed_at": "2026-08-25",
       "confidence": 0.95,
       "influence_domain": ["policy", "economy", "foreign"],
       "influence_score": 1.0
@@ -47,28 +52,28 @@
       "role": "مشاور عالی رئیس‌جمهور",
       "organization": "نهاد ریاست‌جمهوری",
       "role_type": "advisor",
-      "start_at": "2024-08-01",
+      "start_at": "2024-08-04",
       "end_at": null,
       "status": "active",
-      "source_url": null,
-      "source_published_at": null,
-      "observed_at": "2026-08-21",
-      "confidence": 0.7,
-      "influence_domain": ["economy", "policy"],
+      "source_url": "https://www.irna.ir/news/85557641/",
+      "source_published_at": "2024-08-04",
+      "observed_at": "2026-08-25",
+      "confidence": 0.85,
+      "influence_domain": ["economy", "policy", "inflation"],
       "influence_score": 0.85
     },
     {
       "person_id": "aghapour",
-      "role": "مشاور امور اقتصادی و همکاری‌های اقتصادی",
+      "role": "مشاور رئیس‌جمهور در امور همکاری‌های اقتصادی",
       "organization": "نهاد ریاست‌جمهوری",
       "role_type": "advisor",
-      "start_at": "2024-08-01",
+      "start_at": "2024-12-02",
       "end_at": null,
       "status": "active",
-      "source_url": null,
-      "source_published_at": null,
-      "observed_at": "2026-08-21",
-      "confidence": 0.65,
+      "source_url": "https://www.mehrnews.com/news/6305445/",
+      "source_published_at": "2024-12-02",
+      "observed_at": "2026-08-25",
+      "confidence": 0.8,
       "influence_domain": ["economy"],
       "influence_score": 0.6
     },
@@ -82,25 +87,40 @@
       "status": "active",
       "source_url": null,
       "source_published_at": null,
-      "observed_at": "2026-08-21",
+      "observed_at": "2026-08-25",
       "confidence": 0.9,
       "influence_domain": ["policy", "economy"],
       "influence_score": 0.9
     },
     {
       "person_id": "ghaempanaah",
-      "role": "فرد مؤثر / شبکه اثرگذاری دولت",
-      "organization": "دولت چهاردهم",
-      "role_type": "other",
+      "role": "معاون امور اجرایی رئیس‌جمهور / سرپرست نهاد ریاست‌جمهوری",
+      "organization": "نهاد ریاست‌جمهوری",
+      "role_type": "deputy",
       "start_at": "2024-08-01",
       "end_at": null,
-      "status": "uncertain",
-      "source_url": null,
+      "status": "active",
+      "source_url": "https://fa.wikipedia.org/wiki/محمدجعفر_قائم‌پناه",
       "source_published_at": null,
-      "observed_at": "2026-08-21",
-      "confidence": 0.4,
-      "influence_domain": ["policy"],
-      "influence_score": 0.4
+      "observed_at": "2026-08-25",
+      "confidence": 0.85,
+      "influence_domain": ["policy", "executive"],
+      "influence_score": 0.65
+    },
+    {
+      "person_id": "abdeh_tabrizi",
+      "role": "مشاور اقتصادی کمپین / عضو شورای راهبری انتقال؛ پیشکسوت بازار سرمایه",
+      "organization": "خارج از ساختار اجرایی رسمی — گفتمان بازار و مشاوره",
+      "role_type": "advisor",
+      "start_at": "2024-06-01",
+      "end_at": null,
+      "status": "active",
+      "source_url": "https://fa.wikipedia.org/wiki/حسین_عبده_تبریزی",
+      "source_published_at": null,
+      "observed_at": "2026-08-25",
+      "confidence": 0.75,
+      "influence_domain": ["capital_market", "finance", "inflation", "policy"],
+      "influence_score": 0.5
     }
   ],
   "edges": [
@@ -110,10 +130,10 @@
       "relation_type": "advisor_to",
       "domain": "economy",
       "weight": 0.85,
-      "valid_from": "2024-08-01",
+      "valid_from": "2024-08-04",
       "valid_to": null,
-      "evidence_ids": [],
-      "confidence": 0.7
+      "evidence_ids": ["ev-tayebnia-appointment", "ev-tayebnia-inflation-view"],
+      "confidence": 0.85
     },
     {
       "from_person_id": "aghapour",
@@ -121,10 +141,10 @@
       "relation_type": "advisor_to",
       "domain": "economy",
       "weight": 0.6,
-      "valid_from": "2024-08-01",
+      "valid_from": "2024-12-02",
       "valid_to": null,
-      "evidence_ids": [],
-      "confidence": 0.65
+      "evidence_ids": ["ev-aghapour-appointment"],
+      "confidence": 0.8
     },
     {
       "from_person_id": "aref",
@@ -140,14 +160,81 @@
     {
       "from_person_id": "ghaempanaah",
       "to_person_id": "pezeshkian",
-      "relation_type": "influence_network",
+      "relation_type": "deputy_of",
       "domain": "policy",
-      "weight": 0.4,
+      "weight": 0.65,
       "valid_from": "2024-08-01",
       "valid_to": null,
       "evidence_ids": [],
-      "confidence": 0.4
+      "confidence": 0.85
+    },
+    {
+      "from_person_id": "abdeh_tabrizi",
+      "to_person_id": "pezeshkian",
+      "relation_type": "campaign_advisor",
+      "domain": "capital_market",
+      "weight": 0.5,
+      "valid_from": "2024-06-01",
+      "valid_to": null,
+      "evidence_ids": ["ev-abdeh-inflation-view"],
+      "confidence": 0.7
     }
   ],
-  "evidence": []
+  "evidence": [
+    {
+      "evidence_id": "ev-tayebnia-appointment",
+      "source_url": "https://www.irna.ir/news/85557641/",
+      "source_published_at": "2024-08-04",
+      "observed_at": "2026-08-25",
+      "summary": "انتصاب علی طیب‌نیا به مشاور عالی رئیس‌جمهور با حکم پزشکیان",
+      "confidence": 0.95,
+      "tags": ["appointment", "tayebnia", "official"]
+    },
+    {
+      "evidence_id": "ev-tayebnia-inflation-view",
+      "source_url": null,
+      "source_published_at": null,
+      "observed_at": "2026-08-25",
+      "summary": "دیدگاه طیب‌نیا: تورم ساختاری از سلطه مالی/بودجه؛ نسخه انضباط مالی و پولی؛ رژیم anti-shock / fiscal discipline.",
+      "confidence": 0.8,
+      "tags": ["inflation", "tayebnia", "policy_view", "babimind"]
+    },
+    {
+      "evidence_id": "ev-aghapour-appointment",
+      "source_url": "https://www.mehrnews.com/news/6305445/",
+      "source_published_at": "2024-12-02",
+      "observed_at": "2026-08-25",
+      "summary": "انتصاب معصومه آقاپور به مشاور رئیس‌جمهور در امور همکاری‌های اقتصادی",
+      "confidence": 0.95,
+      "tags": ["appointment", "aghapour", "official"]
+    },
+    {
+      "evidence_id": "ev-abdeh-inflation-view",
+      "source_url": null,
+      "source_published_at": null,
+      "observed_at": "2026-08-25",
+      "summary": "دیدگاه عبده تبریزی: تورم مسئله اعتماد به ریال؛ کسری بودجه؛ نقطه شکست رفتاری؛ هشدار آستانه ~۶۰٪ و دلاریزه‌شدن.",
+      "confidence": 0.8,
+      "tags": ["inflation", "abdeh_tabrizi", "policy_view", "capital_market", "babimind"]
+    }
+  ],
+  "policy_views": {
+    "inflation": {
+      "as_of": "2026-08-25",
+      "regime_label": "anti_shock_discipline_with_tail_risk",
+      "tayebnia": {
+        "core": "structural_fiscal_dominance",
+        "prescription": "fiscal_and_monetary_discipline",
+        "rejects": ["cash_subsidy_as_poverty_cure", "unanchored_energy_shock"],
+        "influence_on_market": "supports_stability_not_short_call_rally"
+      },
+      "abdeh_tabrizi": {
+        "core": "currency_credibility_and_budget",
+        "prescription": "real_deficit_control_stop_bank_financing_of_gov_signal_control",
+        "tail_risk": "nonlinear_break_if_rial_trust_collapses",
+        "influence_on_market": "opinion_channel_elevates_discount_rate_risk"
+      },
+      "combined_babimind": "Both nodes reinforce anti-easy-expansion regime. Does not by itself cover option theta."
+    }
+  }
 }
