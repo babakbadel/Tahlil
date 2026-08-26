@@ -1,0 +1,38 @@
+{
+  "version": "2026-08-26-v2",
+  "target": 300,
+  "policy": "Expand BabiMind source coverage; do not treat source count as factor coverage. Map multiple independent sources to important factors and keep official/primary sources above secondary news.",
+  "groups": {
+    "iran_official_and_market": [
+      "Central Bank of Iran","Statistical Center of Iran","TSETMC","Codal","Tehran Stock Exchange","Iran Fara Bourse","Iran Mercantile Exchange","Iran Energy Exchange","Iran Customs Administration","Ministry of Economic Affairs and Finance","Ministry of Industry Mine and Trade","Ministry of Petroleum","Shana","National Iranian Oil Company","National Iranian Gas Company","Iran Power Generation Transmission and Distribution Management Company","Ministry of Energy","Iran Competition Council","Iran Privatization Organization","Iran Tax Administration","Iran Ports and Maritime Organization","Iran Railway","Civil Aviation Organization of Iran","Iran Chamber of Commerce","Iran Chamber Research Center","Iran Insurance Research Center","Iran Statistics Portal","Iran Open Data","Sena","Donya-e-Eqtesad Data"
+    ],
+    "global_macro": [
+      "IMF","World Bank","BIS","OECD","UNCTAD","UN Comtrade","UNData","ILO","FAO","UNDP","WTO","World Economic Forum","FRED","Federal Reserve","US Treasury","BEA","BLS","Census Bureau","ECB","Eurostat","Bank of England","ONS UK","Bank of Japan","Japan Statistics Bureau","PBOC","China National Bureau of Statistics","China Customs","India RBI","India MOSPI","Statistics Canada","Australian Bureau of Statistics","Swiss National Bank","Deutsche Bundesbank","Banque de France","SAMA","UAE Central Bank","CBUAE statistics","Turkish Statistical Institute","Central Bank of Turkey","Central Bank of Russia","Rosstat"
+    ],
+    "energy_commodities": [
+      "OPEC","JODI","EIA","IEA","Energy Institute","Argus Media","S&P Global Commodity Insights","Platts","Kpler","Vortexa","LSEG Commodities","ICE","CME Group","LME","SHFE","COMEX","NYMEX","Genscape","OPIS","EEX","ACER","WGC","LBMA","World Platinum Investment Council","USGS","FAO Food Price Index"
+    ],
+    "global_finance": [
+      "Reuters Markets","Bloomberg Markets","Financial Times","Wall Street Journal","CNBC","MarketWatch","Barron's","The Economist","Nikkei Asia","S&P Global","Moody's","Fitch Ratings","Morningstar","MSCI","Nasdaq","NYSE","Cboe","DTCC","SEC EDGAR","CFTC","FINRA","ICE Benchmark Administration","Refinitiv/LSEG","FactSet"
+    ],
+    "geopolitics_and_policy": [
+      "Council on Foreign Relations","International Crisis Group","CSIS","Chatham House","RUSI","Carnegie Endowment","Atlantic Council","Foreign Affairs","Foreign Policy","IISS","Brookings Institution","RAND","Wilson Center","ECFR","Bruegel","Peterson Institute","Stimson Center","MEI","Washington Institute","ISW","ACLED","UN Security Council","US State Department","US Treasury OFAC","European Commission","UK FCDO","NATO","IAEA","OPCW"
+    ],
+    "news_iran": [
+      "IRNA","ISNA","Mehr","Tasnim","Fars","YJC","SNN","Pana","IMNA","Shabestan","Donya-e-Eqtesad","Eghtesad Online","EcoIran","Tejarat News","Eghtesad News","Bourse News","Bourse24","Sena","Iran Economist","Khabar Online","Tabnak","Entekhab","Fararu","Asr Iran","Alef","Mashregh","Rajanews","Aftab News","Hamshahri Online","Iran International"
+    ],
+    "news_global": [
+      "Reuters","Associated Press","AFP","BBC","CNN","Al Jazeera","France 24","Euronews","DW","Sky News","Bloomberg","Financial Times","Wall Street Journal","CNBC","MarketWatch","Barron's","The Economist","Forbes","Fortune","Business Insider","New York Times","Washington Post","NBC News","ABC News","CBS News","NPR","PBS NewsHour","Politico","Axios","The Hill","The Guardian","The Telegraph","The Times","Der Spiegel","Die Zeit","Le Monde","Les Echos","El Pais","TASS","RIA Novosti","Interfax","Moscow Times","Arab News","The National","Al Arabiya","Middle East Eye","Middle East Monitor","Asharq Al-Awsat","Al Monitor","Defense News","Jerusalem Post","South China Morning Post","China Daily","Global Times","Xinhua","Nikkei Asia","Japan Times","NHK World","Times of India","Hindustan Times","Indian Express","Economic Times","Channel NewsAsia","Straits Times","Korea Herald","Yonhap","Africa News","News24","Daily Maverick","The EastAfrican","Folha de S.Paulo","Clarín","La Nación","El Comercio","El Universal","OilPrice","Rigzone","Offshore Energy","Mining.com","Kitco","CoinDesk","The Block","Foreign Affairs","Foreign Policy","War on the Rocks","CFR","Carnegie","Chatham House","Atlantic Council","ICG","CSIS","RUSI"
+    ]
+  },
+  "runtime_rules": {
+    "minimum_independent_sources_for_high_impact_factor": 3,
+    "preferred_primary_sources": true,
+    "news_is_not_ground_truth": true,
+    "fallback_required": true,
+    "health_check_required": true,
+    "factor_mapping_required": true,
+    "stale_sources_excluded_from_live_signal": true,
+    "unavailable_sources_weight": 0
+  }
+}
