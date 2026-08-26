@@ -1,81 +1,129 @@
 # منابع داده موتور Global Intelligence / Clustered Rotation
 
-این سند فهرست منابع پیشنهادی برای تغذیه مدل ۱۰۰۰+ عامل، خوشه‌ها، Lead/Lag، Velocity، Acceleration، Supply/Demand، Capital Flow و Future Demand است.
+این سند منابع تغذیه مدل ۱۰۰۰+ عامل، خوشه‌ها، Lead/Lag، Velocity، Acceleration، Supply/Demand، Capital Flow و Future Demand را در **۱۰ دسته استاندارد** سازمان‌دهی می‌کند.
 
-## 1. اقتصاد کلان و نقدینگی
+## ۱. اقتصاد کلان، پول و اعتبار
 
-- IMF Data / WEO: رشد، تورم، بدهی، تجارت و پیش‌بینی‌های اقتصاد کلان.
-- BIS Statistics: اعتبار، بانکداری، نرخ‌ها و جریان‌های مالی بین‌المللی.
-- World Bank Data / Commodity Markets: شاخص‌های اقتصاد جهانی و قیمت کالاها.
-- OECD Data: فعالیت اقتصادی، تجارت، تورم و شاخص‌های ساختاری.
-- FRED: نرخ بهره، پول، اعتبار، بازار کار و سری‌های مالی آمریکا.
-- بانک‌های مرکزی: Fed، ECB، BoE، BoJ، PBoC و سایر بانک‌های مرکزی برای نرخ‌ها، ترازنامه و سیاست پولی.
+- IMF Data / WEO / IFS / BOP / COFER
+- BIS Statistics
+- World Bank Data
+- OECD Data
+- FRED
+- Fed، ECB، BoE، BoJ، PBoC و سایر بانک‌های مرکزی
+- آمار رسمی کشورها
 
-## 2. کالاها و مواد اولیه
+**متغیرها:** GDP، CPI/PPI، نرخ بهره، نقدینگی، اعتبار، بدهی، ترازنامه بانک مرکزی، ارز، کسری بودجه و جریان سرمایه.
 
-- USGS: تولید، ذخایر و زنجیره عرضه مواد معدنی.
-- IEA: نفت، گاز، برق، انرژی پاک، تقاضای انرژی و سرمایه‌گذاری.
-- EIA: تولید/مصرف/ذخایر انرژی آمریکا.
-- World Bank Commodity Markets: قیمت‌های جهانی کالاها.
-- LME/COMEX/CME: قیمت و معاملات فلزات و قراردادهای آتی.
-- FAO: غذا، کشاورزی و شاخص‌های مواد غذایی.
+## ۲. انرژی و مواد اولیه
 
-## 3. طلا و فلزات گرانبها
+- IEA
+- EIA
+- USGS
+- World Bank Commodity Markets
+- LME / CME / COMEX
+- گزارش تولیدکنندگان و آمار رسمی
 
-- World Gold Council: تقاضای طلا، ETFها، بانک‌های مرکزی، عرضه و بخش فناوری.
-- LBMA: قیمت‌های مرجع فلزات گرانبها.
-- CME/COMEX: futures/options و positioning قابل دسترس.
-- IMF/بانک‌های مرکزی: ذخایر رسمی طلا در صورت انتشار.
+**متغیرها:** تولید، مصرف، ذخایر، موجودی، ظرفیت، قیمت، منحنی آتی، CAPEX و محدودیت عرضه.
 
-## 4. AI، دیتاسنتر و زیرساخت دیجیتال
+## ۳. طلا، نقره و ذخایر ارزش
 
-- IEA: مصرف برق دیتاسنترها و اثر AI بر تقاضای انرژی.
-- U.S. DOE/EIA: شبکه برق، ظرفیت تولید و مصرف.
-- شرکت‌های فناوری و گزارش‌های مالی رسمی: CAPEX، GPU/CPU، دیتاسنتر و سفارش‌ها.
-- SEC filings / annual & quarterly reports: سرمایه‌گذاری، درآمد، حاشیه سود و backlog.
-- داده‌های شبکه برق و اپراتورهای منطقه‌ای: ظرفیت، load، transmission constraints و interconnection queues.
+- World Gold Council
+- LBMA
+- CME/COMEX
+- IMF
+- بانک‌های مرکزی
+- ETF/fund reports
 
-## 5. بازار سرمایه و جریان پول
+**متغیرها:** خرید بانک‌های مرکزی، ETF flows، موجودی، futures/options، positioning، real rates و تقاضای سرمایه‌گذاری.
 
-- بورس‌ها و اپراتورهای رسمی: قیمت، حجم، ارزش معاملات و market breadth.
-- SEC/EDGAR: گزارش‌های شرکت‌ها و مالکیت‌های افشاشده.
-- CFTC COT: positioning در قراردادهای آتی.
-- ETF issuers / fund reports: ورود و خروج سرمایه.
-- گزینه‌ها و futures: open interest، volume، implied volatility و skew در صورت دسترسی معتبر.
+## ۴. فناوری، AI، تراشه و دیتاسنتر
 
-## 6. مس و زنجیره مواد حیاتی
+- IEA
+- DOE/EIA
+- SEC/EDGAR
+- گزارش‌های رسمی شرکت‌های فناوری
+- اپراتورهای شبکه برق
+- داده‌های صنعت نیمه‌رسانا و تجهیزات
 
-برای سناریوهایی مثل AI → برق → شبکه → مس، حداقل این متغیرها باید جمع‌آوری شوند:
+**زنجیره کلیدی:**
 
-`price + inventory + mine_supply + refined_supply + demand + imports + exports + smelter_activity + treatment_charges + capex + futures_curve + positioning`
+`AI → Chips → Data Centers → Electricity → Cooling → Grid → Copper/Aluminum → CAPEX → Corporate Profit`
 
-منابع اصلی: USGS، IEA، World Bank، LME/CME، گمرکات رسمی، گزارش شرکت‌های معدنی و تولیدکنندگان.
+**متغیرها:** CAPEX، سفارش، backlog، مصرف برق، ظرفیت دیتاسنتر، GPU/CPU، semiconductor capacity و lead time.
 
-## 7. ملک و ساخت‌وساز
+## ۵. بازار سرمایه، مشتقات و جریان سرمایه
 
-- BIS/بانک‌های مرکزی: نرخ وام و شرایط اعتباری.
-- World Bank/OECD: ساخت‌وساز و اقتصاد کلان.
-- آمار رسمی کشورها: قیمت مسکن، معاملات، مجوز ساخت، starts/completions، اجاره و زمین.
-- گزارش شرکت‌های ساختمانی و مصالح: backlog، CAPEX و هزینه نهاده‌ها.
+- بورس‌ها و اپراتورهای رسمی
+- SEC/EDGAR
+- CFTC COT
+- ETF issuers / fund reports
+- Futures / Options venues
+- داده‌های معتبر market microstructure
 
-## 8. تجارت، حمل‌ونقل و زنجیره تأمین
+**متغیرها:** Price، Volume، Value، Breadth، OI، IV، Skew، Put/Call، positioning، fund flow، insider/ownership disclosures و market breadth.
 
-- UN Comtrade: تجارت کالا.
-- WTO: تجارت جهانی و سیاست تجاری.
-- UNCTAD: کشتیرانی و تجارت دریایی.
-- Baltic Exchange و داده‌های حمل‌ونقل در صورت دسترسی.
-- گمرکات رسمی کشورها: واردات/صادرات و حجم کالا.
+## ۶. تجارت، کالا و زنجیره تأمین جهانی
 
-## 9. ژئوپلیتیک و ریسک
+- UN Comtrade
+- WTO
+- UNCTAD
+- گمرکات رسمی کشورها
+- Eurostat
+- FAO
+- داده‌های حمل‌ونقل و کشتیرانی
 
-- IMF/World Bank/OECD برای اثرات اقتصادی.
-- IEA برای انرژی و شوک عرضه.
-- داده‌های رسمی دولت‌ها و سازمان‌های بین‌المللی.
-- Reuters و منابع خبری معتبر برای event detection؛ خبر باید به‌عنوان سیگنال ورودی استفاده شود، نه حقیقت بدون تأیید.
+UN Comtrade داده تجارت را مستقیماً از نهادهای آماری رسمی کشورها دریافت می‌کند. citeturn0search1
 
-## 10. روش اتصال به مدل
+**متغیرها:** Import، Export، volume، value، trade balance، مسیر تجارت، freight، bottleneck و تغییر سهم تأمین‌کنندگان.
 
-برای هر عامل `i`، داده‌ها به این متغیرها تبدیل شوند:
+## ۷. ملک، ساخت‌وساز و زیرساخت فیزیکی
+
+- بانک‌های مرکزی و BIS
+- World Bank / OECD
+- آمار رسمی مسکن کشورها
+- مجوز ساخت و starts/completions
+- داده اجاره و قیمت زمین
+- گزارش شرکت‌های ساختمانی و تولیدکنندگان مصالح
+
+**متغیرها:** قیمت مسکن، اجاره، معاملات، mortgage rates، permits، starts، completions، vacancy، land prices و construction costs.
+
+## ۸. غذا، کشاورزی، آب و اقلیم
+
+- FAO / FAOSTAT
+- USDA
+- World Bank
+- IEA
+- داده‌های هواشناسی و اقلیمی رسمی
+- IPCC و منابع پژوهشی معتبر
+
+**متغیرها:** تولید، سطح زیرکشت، موجودی، قیمت غذا، کود، آب، خشکسالی، دما، بارش و ریسک اقلیمی.
+
+## ۹. صنعت، سلامت، نیروی کار و تقاضای مصرف‌کننده
+
+- ILO / ILOSTAT
+- WHO و منابع رسمی سلامت
+- OECD
+- آمار رسمی کشورها
+- SEC/گزارش شرکت‌ها
+- PMI و نظرسنجی‌های معتبر
+
+**متغیرها:** اشتغال، دستمزد، بهره‌وری، مصرف، درآمد، PMI، ظرفیت صنعتی، سفارش‌ها، حاشیه سود، تقاضای مصرف‌کننده و کمبود نیروی متخصص.
+
+## ۱۰. ژئوپلیتیک، سیاست، خبر و رویدادهای شوک‌آور
+
+- دولت‌ها و سازمان‌های بین‌المللی
+- IMF / World Bank / OECD
+- IEA برای شوک‌های انرژی
+- Reuters و سایر منابع خبری معتبر برای Event Detection
+- گزارش‌های رسمی تحریم، جنگ، تعرفه، انتخابات و سیاست‌گذاری
+
+**قاعده:** خبر ابتدا `event signal` است؛ برای تبدیل شدن به داده قطعی باید با منبع اولیه یا داده مستقل تأیید شود.
+
+---
+
+# لایه استانداردسازی برای BabiMind
+
+هر منبع باید پس از دریافت به متغیرهای استاندارد تبدیل شود:
 
 `current_price`
 `demand_growth`
@@ -93,19 +141,20 @@
 `macro_sensitivity`
 `geopolitical_sensitivity`
 
-امتیاز فرصت نباید صرفاً از قیمت ساخته شود:
+امتیاز فرصت:
 
 `Opportunity = f(FutureDemand, DemandGrowth, SupplyConstraint, AttentionGap, Flow, Velocity, Acceleration, LeadLag, NetworkImpact, RelativeValue)`
 
 ## اولویت منابع
 
-1. داده رسمی/اولیه
-2. داده بازار با timestamp و methodology مشخص
-3. گزارش مالی شرکت‌ها و filing رسمی
-4. مؤسسات بین‌المللی معتبر
-5. منابع خبری معتبر برای تشخیص رویداد
-6. منابع ثانویه فقط برای cross-check
+`Official/Primary → Market Data → Corporate Filings → International Institutions → Verified News → Secondary Cross-check`
 
-### نکته مهم
+IMF نیز منابعی مانند BIS، ECB، Eurostat، ILO، OECD، UN و World Bank را در مجموعه منابع داده بین‌المللی خود معرفی می‌کند. citeturn0search0turn0search2
 
-وجود هم‌زمان رشد قیمت، حجم یا معاملات بزرگ به‌تنهایی اثبات «انباشت توسط پولدارها» نیست. مدل باید آن را به‌عنوان `accumulation-compatible signal` ثبت کند و با جریان پول، موجودی، عرضه، معاملات و داده بنیادی مستقل تأیید کند.
+برای تجارت، UN Comtrade داده را از نهادهای آماری رسمی کشورها دریافت می‌کند. citeturn0search1
+
+برای کالاها، داده‌های مورد استفاده در پژوهش‌های IMF/World Bank نیز ترکیبی از منابعی مانند FAO، IEA، USGS، UN Comtrade و منابع بازار کالا هستند. citeturn0search12turn0search13
+
+### نکته مهم درباره «انباشت»
+
+رشد هم‌زمان قیمت، حجم یا معاملات بزرگ به‌تنهایی اثبات نمی‌کند که «افراد پولدار در حال جمع‌آوری» هستند. مدل فقط باید آن را به‌عنوان `accumulation-compatible signal` ثبت کند و با جریان پول، موجودی، عرضه، معاملات و داده بنیادی مستقل تأیید کند.
