@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-08-26",
+  "purpose": "Prioritize Iran macroeconomic drivers for BabiMind factor weighting and scenario analysis.",
+  "regime": "stagflation_currency_depreciation_geopolitical_shock",
+  "priority_factors": [
+    {"factor": "fx_regime", "priority": 1, "weight_multiplier": 1.5, "reason": "Exchange-rate regime transmits to inflation, imports, fiscal conditions, corporate nominal earnings and asset allocation."},
+    {"factor": "sanctions_china_oil_flow", "priority": 2, "weight_multiplier": 1.5, "reason": "Iranian oil export volumes and China's willingness/ability to purchase oil are critical hard-currency and fiscal channels."},
+    {"factor": "hormuz_deescalation_probability", "priority": 3, "weight_multiplier": 1.4, "reason": "Hormuz shipping conditions affect oil exports, trade, insurance, global oil prices and geopolitical risk."},
+    {"factor": "inflation_expectations", "priority": 4, "weight_multiplier": 1.35, "reason": "Expectations influence FX demand, real rates, consumption and asset substitution."},
+    {"factor": "liquidity_growth", "priority": 5, "weight_multiplier": 1.3, "reason": "Liquidity and monetary conditions are key medium-term inflation and asset-price drivers."},
+    {"factor": "real_interest_rate", "priority": 6, "weight_multiplier": 1.25, "reason": "Real rates affect savings, credit, FX demand and valuation multiples."},
+    {"factor": "energy_availability", "priority": 7, "weight_multiplier": 1.25, "reason": "Power and gas constraints can reduce industrial output while increasing production costs."},
+    {"factor": "fiscal_stress", "priority": 8, "weight_multiplier": 1.2, "reason": "Fiscal financing needs interact with liquidity, inflation, FX and sovereign risk."}
+  ],
+  "scenario_rules": {
+    "base": "persistent_currency_pressure_and_stagflation",
+    "deescalation": "lower_geopolitical_risk_can_trigger_fx_stabilization_and_rotation_toward_domestic_sectors",
+    "escalation": "higher_sanctions_or_shipping_disruption_can_amplify_fx_inflation_and_real_growth_shocks"
+  },
+  "evidence_snapshot": [
+    "Reuters reported on 2026-08-26 that oil prices fell on hopes of progress around Hormuz talks while Iran maintained conditions for reopening.",
+    "Reuters reported on 2026-08-24 that provisional August Iranian oil shipments to China were materially below July levels.",
+    "AP reported on 2026-08-26 that China remains Iran's largest trading partner and oil buyer, creating a major constraint on the effectiveness of additional US pressure.",
+    "Recent reporting placed the informal rial near 2.02 million rials per US dollar on 2026-08-24."
+  ],
+  "model_policy": "Use these priorities as dynamic multipliers, not hard-coded conclusions. Recompute with fresh source health, factor values, freshness and confidence on each run. News sources are evidence for events/narratives, not economic ground truth."
+}
