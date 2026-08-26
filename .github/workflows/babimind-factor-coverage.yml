@@ -1,0 +1,40 @@
+name: BabiMind 500 Factor Coverage
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 5 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  factor-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Calculate 500 factor coverage
+        run: python scripts/babimind_factor_coverage.py
+
+      - name: Commit coverage report safely
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/babimind_factor_coverage.json reports/babimind_factor_coverage.md
+          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind 500 factor coverage'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; git reset --hard origin/main; git add reports/babimind_factor_coverage.json reports/babimind_factor_coverage.md; git diff --cached --quiet || git commit -m 'chore: refresh BabiMind 500 factor coverage'; }
+            if git push origin main; then exit 0; fi
+            sleep $((attempt * 5))
+          done
+          exit 1
