@@ -14,22 +14,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
       - name: Rank realtime options
         run: python scripts/rank_options_babimind.py
-
       - name: Scenario scoring
         run: python scripts/score_options_babimind_scenarios.py
-
+      - name: Risk-adjusted scoring
+        run: python scripts/risk_adjusted_options_babimind.py
       - name: Commit BabiMind rankings
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/options_babimind_ranked.json reports/options_babimind_ranked.md reports/options_babimind_scenario_ranked.json reports/options_babimind_scenario_ranked.md
-          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind option scenario ranking'
+          git add reports/options_babimind_ranked.json reports/options_babimind_ranked.md reports/options_babimind_scenario_ranked.json reports/options_babimind_scenario_ranked.md reports/options_babimind_risk_adjusted.json reports/options_babimind_risk_adjusted.md
+          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind risk-adjusted option ranking'
           git push
