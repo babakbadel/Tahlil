@@ -23,10 +23,13 @@ jobs:
       - name: Rank realtime options
         run: python scripts/rank_options_babimind.py
 
-      - name: Commit compact ranking
+      - name: Scenario scoring
+        run: python scripts/score_options_babimind_scenarios.py
+
+      - name: Commit BabiMind rankings
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/options_babimind_ranked.json reports/options_babimind_ranked.md
-          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind option ranking'
+          git add reports/options_babimind_ranked.json reports/options_babimind_ranked.md reports/options_babimind_scenario_ranked.json reports/options_babimind_scenario_ranked.md
+          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind option scenario ranking'
           git push
