@@ -361,3 +361,11 @@ IMF مجموعه‌ای از منابع رسمی و بین‌المللی مان
 IMF Data API دسترسی برنامه‌ای به داده‌ها را از طریق SDMX 2.1 و SDMX 3.0 فراهم می‌کند. citeturn0search5
 
 منابع بین‌المللی همچنین از داده‌های شریک/ملی، آمار بانکی BIS، داده‌های IMF، OECD و World Bank و داده‌های تجاری/بازاری برای cross-check استفاده می‌کنند. citeturn0search1turn0search6
+
+
+---
+
+## Automated refresh metadata
+Last catalog refresh: 2026-08-26T05:00:41Z
+
+Refresh cadence: every 4 days
