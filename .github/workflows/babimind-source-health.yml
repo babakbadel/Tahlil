@@ -6,6 +6,10 @@ on:
     - cron: '30 6 */4 * *'
   workflow_dispatch:
 
+concurrency:
+  group: babimind-source-health-main
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -15,19 +19,35 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
 
-      - name: Check source endpoints
+      - name: Check data and news source endpoints
         run: python scripts/babimind_source_health.py
 
-      - name: Commit health report
+      - name: Commit health report safely
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add reports/babimind_source_health.json reports/babimind_source_health.md
           git diff --cached --quiet || git commit -m 'chore: refresh BabiMind source health'
-          git push
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main || {
+              git rebase --abort
+              git reset --hard origin/main
+              git add reports/babimind_source_health.json reports/babimind_source_health.md
+              git diff --cached --quiet || git commit -m 'chore: refresh BabiMind source health'
+            }
+            if git push origin main; then
+              exit 0
+            fi
+            sleep $((attempt * 5))
+          done
+          exit 1
