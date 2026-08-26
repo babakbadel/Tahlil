@@ -1,0 +1,31 @@
+name: BabiMind Signal Weights
+
+on:
+  schedule:
+    - cron: '0 7 */4 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  weight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Generate source health
+        run: python scripts/babimind_source_health.py
+      - name: Generate confidence and fallback routing
+        run: python scripts/babimind_source_confidence.py
+      - name: Apply confidence to signal weights
+        run: python scripts/babimind_signal_weight.py
+      - name: Commit reports
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/babimind_source_health.json reports/babimind_source_health.md reports/babimind_source_confidence.json reports/babimind_source_confidence.md reports/babimind_signal_weights.json
+          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind signal weights'
+          git push
