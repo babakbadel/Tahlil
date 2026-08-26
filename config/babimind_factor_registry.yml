@@ -1,4 +1,4 @@
-version: 1
+version: 2
 name: BabiMind Iran Market Factor Registry
 purpose: Daily multi-factor scan for Iran equities, options, FX, gold and macro regime detection.
 
@@ -219,9 +219,20 @@ scoring:
     - surprise
     - market_sensitivity
     - transmission_strength
+  states:
+    available: "normal dynamic weighting"
+    stale: "reduced weight or exclusion according to freshness threshold"
+    partial: "excluded from current aggregation; retry next run"
+    error: "excluded from current aggregation; retry next run"
+    unavailable: "excluded from current aggregation; retry next run"
   rules:
     - Each factor must retain source, timestamp, raw_value and normalized_score.
-    - Missing data is SKIP and must not be replaced by fabricated values.
+    - Missing/unavailable data is SKIP and must not be replaced by fabricated values.
+    - unavailable, error and partial factors receive signal_weight=0 in the current run.
+    - unavailable is not a negative economic signal and must never be interpreted as factor value zero.
+    - Every excluded factor must retain retry_next_run=true.
+    - On a later successful observation, the factor becomes eligible and its weight is recalculated.
+    - Active-factor weights must be renormalized after excluded factors are removed.
     - Stale data receives reduced weight or exclusion from fresh-signal aggregation.
     - Factor weights are dynamic and must be conditioned on market regime.
     - Correlated factors must be de-duplicated or grouped before final aggregation.
