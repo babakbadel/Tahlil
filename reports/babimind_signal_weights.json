@@ -1,0 +1,166 @@
+{
+  "model": "BabiMind",
+  "weights": [
+    {
+      "source": "IMF Data API",
+      "topic": "official/api",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "IMF SDMX Central",
+      "topic": "official/api",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "World Bank API",
+      "topic": "official/api",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "ECB Data API",
+      "topic": "official/api",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "FRED",
+      "topic": "official/site",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "BIS",
+      "topic": "official/site",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "OECD",
+      "topic": "official/site",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "IEA",
+      "topic": "official/site",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "EIA",
+      "topic": "official/api",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "USGS Minerals",
+      "topic": "official/site",
+      "confidence": 0.045,
+      "signal_weight": 0.2838,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "World Gold Council",
+      "topic": "industry/report",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "LBMA",
+      "topic": "market/site",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "SEC EDGAR",
+      "topic": "official/api",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "CFTC",
+      "topic": "official/site",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "UN Comtrade",
+      "topic": "official/api",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "UNCTAD",
+      "topic": "official/site",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "FAOSTAT",
+      "topic": "official/api",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "ILO",
+      "topic": "official/site",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "WHO",
+      "topic": "official/site",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Reuters",
+      "topic": "trusted-news",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    }
+  ],
+  "formula": "0.25 + 0.75*confidence"
+}

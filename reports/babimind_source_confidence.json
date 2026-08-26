@@ -1,0 +1,301 @@
+{
+  "model": "BabiMind",
+  "source_count": 20,
+  "sources": [
+    {
+      "name": "IMF Data API",
+      "type": "official/api",
+      "url": "https://api.imf.org/external/sdmx/2.1/dataflow/IMF",
+      "status": "ok",
+      "http_status": 204,
+      "latency_ms": 329.0,
+      "bytes_sampled": 0,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.6,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "IMF SDMX Central",
+      "type": "official/api",
+      "url": "https://sdmxcentral.imf.org/sdmx/v2/dataflow",
+      "status": "error",
+      "http_status": 400,
+      "error": "HTTP Error 400: ",
+      "latency_ms": 996.9,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.06,
+      "tier": "D",
+      "eligible_primary": false
+    },
+    {
+      "name": "World Bank API",
+      "type": "official/api",
+      "url": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD?format=json&per_page=1",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 61.6,
+      "bytes_sampled": 302,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.6,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "ECB Data API",
+      "type": "official/api",
+      "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=jsondata&startPeriod=2026-01-01&endPeriod=2026-01-02",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 962.8,
+      "bytes_sampled": 512,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.6,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "FRED",
+      "type": "official/site",
+      "url": "https://fred.stlouisfed.org/",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 31.6,
+      "bytes_sampled": 512,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.6,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "BIS",
+      "type": "official/site",
+      "url": "https://www.bis.org/statistics/",
+      "status": "error",
+      "http_status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "latency_ms": 490.8,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.06,
+      "tier": "D",
+      "eligible_primary": false
+    },
+    {
+      "name": "OECD",
+      "type": "official/site",
+      "url": "https://www.oecd.org/en/data.html",
+      "status": "error",
+      "http_status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "latency_ms": 77.9,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.06,
+      "tier": "D",
+      "eligible_primary": false
+    },
+    {
+      "name": "IEA",
+      "type": "official/site",
+      "url": "https://www.iea.org/data-and-statistics",
+      "status": "error",
+      "http_status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "latency_ms": 168.9,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.06,
+      "tier": "D",
+      "eligible_primary": false
+    },
+    {
+      "name": "EIA",
+      "type": "official/api",
+      "url": "https://www.eia.gov/",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 128.0,
+      "bytes_sampled": 512,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.6,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "USGS Minerals",
+      "type": "official/site",
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center",
+      "status": "error",
+      "http_status": 504,
+      "error": "HTTP Error 504: Gateway Time-out",
+      "latency_ms": 10054.3,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.045,
+      "tier": "D",
+      "eligible_primary": false
+    },
+    {
+      "name": "World Gold Council",
+      "type": "industry/report",
+      "url": "https://www.gold.org/goldhub/data",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 55.9,
+      "bytes_sampled": 512,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.6,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "LBMA",
+      "type": "market/site",
+      "url": "https://www.lbma.org.uk/prices-and-data",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 1665.3,
+      "bytes_sampled": 512,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.54,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "SEC EDGAR",
+      "type": "official/api",
+      "url": "https://www.sec.gov/edgar/sec-api-documentation",
+      "status": "error",
+      "http_status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "latency_ms": 87.4,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.06,
+      "tier": "D",
+      "eligible_primary": false
+    },
+    {
+      "name": "CFTC",
+      "type": "official/site",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 39.8,
+      "bytes_sampled": 512,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.6,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "UN Comtrade",
+      "type": "official/api",
+      "url": "https://comtradeapi.un.org/",
+      "status": "error",
+      "http_status": 404,
+      "error": "HTTP Error 404: Resource Not Found",
+      "latency_ms": 817.5,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.06,
+      "tier": "D",
+      "eligible_primary": false
+    },
+    {
+      "name": "UNCTAD",
+      "type": "official/site",
+      "url": "https://unctadstat.unctad.org/",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 1213.8,
+      "bytes_sampled": 512,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.54,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "FAOSTAT",
+      "type": "official/api",
+      "url": "https://www.fao.org/faostat/en/",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 231.8,
+      "bytes_sampled": 512,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.6,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "ILO",
+      "type": "official/site",
+      "url": "https://ilostat.ilo.org/data/",
+      "status": "error",
+      "http_status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "latency_ms": 179.2,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.06,
+      "tier": "D",
+      "eligible_primary": false
+    },
+    {
+      "name": "WHO",
+      "type": "official/site",
+      "url": "https://www.who.int/data",
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 200.8,
+      "bytes_sampled": 512,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.6,
+      "tier": "C",
+      "eligible_primary": false
+    },
+    {
+      "name": "Reuters",
+      "type": "trusted-news",
+      "url": "https://www.reuters.com/",
+      "status": "error",
+      "http_status": 401,
+      "error": "HTTP Error 401: HTTP Forbidden",
+      "latency_ms": 40.6,
+      "checked_at": "2026-08-26T04:57:00.163698+00:00",
+      "confidence": 0.06,
+      "tier": "D",
+      "eligible_primary": false
+    }
+  ],
+  "routing": [
+    {
+      "group": "official/api",
+      "primary": "IMF Data API",
+      "fallbacks": [
+        "World Bank API",
+        "ECB Data API",
+        "EIA"
+      ]
+    },
+    {
+      "group": "official/site",
+      "primary": "FRED",
+      "fallbacks": [
+        "CFTC",
+        "WHO",
+        "UNCTAD"
+      ]
+    },
+    {
+      "group": "industry/report",
+      "primary": "World Gold Council",
+      "fallbacks": []
+    },
+    {
+      "group": "market/site",
+      "primary": "LBMA",
+      "fallbacks": []
+    },
+    {
+      "group": "trusted-news",
+      "primary": "Reuters",
+      "fallbacks": []
+    }
+  ]
+}
