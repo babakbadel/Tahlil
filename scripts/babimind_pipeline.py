@@ -5,8 +5,8 @@ Stages:
 source health -> schema/content checks -> freshness -> confidence -> fallback
 -> signal weight -> optional cluster scoring.
 
-This pipeline intentionally treats source confidence as operational trust,
-not truth probability.
+Unavailable data is explicitly excluded from the current run. It is not a
+negative signal and it is retried on the next scheduled/manual run.
 """
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ OUT = ROOT / "reports" / "babimind_pipeline.json"
 def endpoint_check(url: str, timeout: int = 15) -> dict:
     started = time.monotonic()
     try:
-        req = Request(url, headers={"User-Agent": "BabiMind-Pipeline/1.0"})
+        req = Request(url, headers={"User-Agent": "BabiMind-Pipeline/1.1"})
         with urlopen(req, timeout=timeout) as response:
             body = response.read(8192)
             status = getattr(response, "status", 200)
@@ -41,9 +41,6 @@ def endpoint_check(url: str, timeout: int = 15) -> dict:
 
 
 def freshness(source: dict, now: datetime) -> float:
-    """Freshness based on declared release/observation timestamp when present.
-    If absent, return neutral rather than pretending latency means freshness.
-    """
     stamp = source.get("release_timestamp") or source.get("observation_timestamp")
     if not stamp:
         return 0.75
@@ -63,10 +60,22 @@ def confidence(source: dict, availability: float, fresh: float) -> float:
     reproducibility = float(source.get("reproducibility_score", 0.75))
     reliability = float(source.get("api_reliability_score", 0.75))
     revision = 1.0 - float(source.get("revision_risk", 0.10))
-    # Weights sum to 1.0 before availability/freshness adjustments.
     structural = (0.20*authority + 0.15*independence + 0.15*coverage +
                   0.15*reproducibility + 0.15*reliability + 0.20*revision)
     return round(max(0.0, min(1.0, structural * availability * fresh)), 4)
+
+
+def operational_state(result: dict, fresh: float) -> str:
+    status = result.get("status")
+    if status == "unavailable":
+        return "unavailable"
+    if status == "error":
+        return "error"
+    if result.get("content_check") != "nonempty":
+        return "partial"
+    if fresh < 0.25:
+        return "stale"
+    return "available"
 
 
 def main() -> None:
@@ -75,12 +84,16 @@ def main() -> None:
     rows = []
     for src in catalog.get("sources", []):
         result = endpoint_check(src["url"], int(src.get("timeout_seconds", 15)))
-        availability = 1.0 if result.get("status") == "ok" and result.get("content_check") == "nonempty" else 0.25 if result.get("status") == "unavailable" else 0.10
         fresh = freshness(src, now)
+        state = operational_state(result, fresh)
+        availability = 1.0 if state == "available" else 0.0
         conf = confidence(src, availability, fresh)
-        weight = round(0.25 + 0.75*conf, 4)
-        rows.append({**src, **result, "freshness":fresh, "confidence":conf,
-                     "signal_weight":weight, "primary_eligible":conf >= 0.70,
+        # Missing/unavailable data is SKIP, never a negative signal.
+        weight = 0.0 if state in {"unavailable", "error", "partial"} else round(0.25 + 0.75*conf, 4)
+        rows.append({**src, **result, "state":state, "freshness":fresh,
+                     "confidence":conf, "signal_weight":weight,
+                     "eligible_for_aggregation":weight > 0.0,
+                     "retry_next_run":state != "available",
                      "checked_at":now.isoformat()})
 
     groups = {}
@@ -89,16 +102,21 @@ def main() -> None:
         groups.setdefault(key, []).append(r)
     routing=[]
     for key, items in groups.items():
-        ranked=sorted(items, key=lambda x:x["confidence"], reverse=True)
-        primary=next((x for x in ranked if x["primary_eligible"]), ranked[0] if ranked else None)
-        routing.append({"group":key, "primary":primary["name"] if primary else None,
-                        "fallbacks":[x["name"] for x in ranked if primary and x["name"] != primary["name"]][:3]})
+        ranked=sorted(items, key=lambda x:(x["signal_weight"], x["confidence"]), reverse=True)
+        primary=next((x for x in ranked if x["eligible_for_aggregation"]), None)
+        routing.append({"group":key,
+                        "primary":primary["name"] if primary else None,
+                        "fallbacks":[x["name"] for x in ranked if not primary or x["name"] != primary["name"]][:3]})
 
-    payload={"model":"BabiMind", "pipeline_version":"1.0", "generated_at":now.isoformat(),
+    active = sum(r["eligible_for_aggregation"] for r in rows)
+    unavailable = sum(r["state"] == "unavailable" for r in rows)
+    payload={"model":"BabiMind", "pipeline_version":"1.1", "generated_at":now.isoformat(),
              "stages":["health","content","freshness","confidence","fallback","signal_weight"],
+             "missing_data_policy":"SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN",
+             "summary":{"total_sources":len(rows),"active_sources":active,"unavailable_sources":unavailable},
              "sources":rows, "routing":routing}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"BabiMind pipeline: {len(rows)} sources, {len(routing)} routing groups")
+    print(f"BabiMind pipeline: {len(rows)} sources, {active} active, {unavailable} unavailable")
 
 if __name__ == "__main__": main()
