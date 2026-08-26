@@ -1,0 +1,81 @@
+version: 1
+name: BabiMind Global-to-Iran Market Map
+purpose: Daily transmission of global macro/commodity signals into Iranian equities and sectors.
+
+variables:
+  global:
+    - us_growth
+    - us_inflation
+    - fed_policy
+    - us10y_yield
+    - dxy
+    - china_growth
+    - china_industrial_demand
+    - copper
+    - iron_ore
+    - brent
+    - gold
+    - ai_capex
+    - geopolitical_risk
+  domestic:
+    - usd_irr
+    - inflation_expectations
+    - policy_rate
+    - liquidity_growth
+    - sanctions_risk
+    - domestic_money_flow
+    - market_breadth
+    - valuation
+
+sector_transmission:
+  metals:
+    weight_global_commodity: 0.35
+    weight_fx: 0.30
+    weight_china: 0.15
+    weight_money_flow: 0.20
+  copper:
+    weight_copper: 0.40
+    weight_fx: 0.30
+    weight_money_flow: 0.20
+    weight_fundamental: 0.10
+  petrochemicals:
+    weight_product_prices: 0.30
+    weight_fx: 0.30
+    weight_feedstock: 0.15
+    weight_money_flow: 0.15
+    weight_fundamental: 0.10
+  refineries:
+    weight_crack_spread: 0.35
+    weight_fx: 0.25
+    weight_oil: 0.10
+    weight_fundamental: 0.15
+    weight_money_flow: 0.15
+  banks:
+    weight_domestic_rates: 0.25
+    weight_fx_repricing: 0.20
+    weight_policy: 0.20
+    weight_money_flow: 0.20
+    weight_fundamental: 0.15
+  domestic:
+    weight_inflation: 0.30
+    weight_fx: 0.20
+    weight_domestic_demand: 0.20
+    weight_money_flow: 0.20
+    weight_fundamental: 0.10
+
+required_daily_outputs:
+  - global_regime
+  - sector_scores
+  - symbol_scores
+  - rotation_signal
+  - risk_flags
+  - scenario_probabilities
+  - evidence_sources
+
+rules:
+  - API failure or unavailable data must be SKIP, never fail the pipeline.
+  - Every signal must retain source, timestamp/as_of and confidence.
+  - Global variables must be separated from domestic variables before aggregation.
+  - No buy/sell conclusion may rely on a single variable.
+  - Technical, price-action, money-flow, fundamental/Codal, options, macro, Game Theory and Decision Engine signals must be independently scored before fusion.
+  - Stale data must be flagged and excluded from fresh-signal weighting.
