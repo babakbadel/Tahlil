@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "factors": [
+    {"id":"ai","name":"AI demand","cluster":"technology_ai","sources":["IMF","IEA"]},
+    {"id":"copper","name":"Copper","cluster":"metals_mining","sources":["USGS","World Bank"]},
+    {"id":"electricity","name":"Electricity demand","cluster":"energy_power","sources":["IEA","EIA"]},
+    {"id":"gold","name":"Gold","cluster":"precious_metals","sources":["World Gold Council","LBMA"]},
+    {"id":"liquidity","name":"Global liquidity","cluster":"macro_money","sources":["IMF","BIS"]},
+    {"id":"construction","name":"Construction activity","cluster":"real_estate_infrastructure","sources":["World Bank"]},
+    {"id":"trade","name":"Global trade","cluster":"trade_supply_chain","sources":["UN Comtrade","UNCTAD"]},
+    {"id":"food","name":"Food supply","cluster":"food_agriculture","sources":["FAO"]},
+    {"id":"labor","name":"Labor market","cluster":"labor_consumption","sources":["ILO"]},
+    {"id":"health","name":"Health demand","cluster":"health","sources":["WHO"]}
+  ]
+}
