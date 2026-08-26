@@ -1,0 +1,31 @@
+name: BabiMind Source Confidence
+
+on:
+  schedule:
+    - cron: '45 6 */4 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  confidence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Refresh health first
+        run: python scripts/babimind_source_health.py
+      - name: Calculate confidence and fallback routing
+        run: python scripts/babimind_source_confidence.py
+      - name: Commit reports
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/babimind_source_health.json reports/babimind_source_health.md reports/babimind_source_confidence.json reports/babimind_source_confidence.md
+          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind source confidence'
+          git push
