@@ -1,0 +1,33 @@
+name: BabiMind Source Health
+
+on:
+  schedule:
+    # Every 4 days at 06:30 UTC. GitHub schedules use POSIX cron/UTC by default.
+    - cron: '30 6 */4 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  source-health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Check source endpoints
+        run: python scripts/babimind_source_health.py
+
+      - name: Commit health report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/babimind_source_health.json reports/babimind_source_health.md
+          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind source health'
+          git push
