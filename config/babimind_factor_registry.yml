@@ -1,0 +1,228 @@
+version: 1
+name: BabiMind Iran Market Factor Registry
+purpose: Daily multi-factor scan for Iran equities, options, FX, gold and macro regime detection.
+
+factor_groups:
+  macro:
+    - inflation_cpi
+    - inflation_ppi
+    - core_inflation
+    - inflation_expectations
+    - gdp_growth
+    - industrial_growth
+    - services_growth
+    - investment_growth
+    - consumption_growth
+    - unemployment
+    - pmi
+    - output_gap
+    - consumer_confidence
+    - real_income
+    - fiscal_deficit
+    - government_debt
+    - debt_service
+    - tax_revenue
+    - government_spending
+    - oil_budget_assumption
+  monetary:
+    - policy_rate
+    - interbank_rate
+    - deposit_rate
+    - lending_rate
+    - government_bond_yield
+    - risk_free_rate
+    - yield_curve
+    - open_market_operations
+    - central_bank_balance_sheet
+    - monetary_base_growth
+    - money_supply_m1
+    - liquidity_growth
+    - money_multiplier
+    - bank_credit_growth
+    - deposit_growth
+    - loan_to_deposit_ratio
+    - bank_npl_risk
+    - bank_imbalance_risk
+    - real_interest_rate
+    - monetary_policy_regime
+  fx:
+    - usd_free_market
+    - usd_commercial_market
+    - usd_official_rate
+    - fx_spread
+    - eur_irr
+    - aed_irr
+    - cny_irr
+    - real_effective_exchange_rate
+    - fx_volatility
+    - fx_forward_expectation
+    - fx_supply
+    - fx_demand
+    - central_bank_fx_intervention
+    - export_fx_repatriation
+    - currency_hoarding_pressure
+  commodities:
+    - brent
+    - wti
+    - iran_oil_price
+    - oil_export_volume
+    - opec_production
+    - natural_gas
+    - copper
+    - aluminum
+    - zinc
+    - lead
+    - iron_ore
+    - steel
+    - gold_global
+    - silver
+    - urea
+    - methanol
+    - petrochemical_product_prices
+    - crack_spread
+    - commodity_volatility
+    - china_commodity_demand
+  politics_geopolitics:
+    - us_iran_relations
+    - sanctions_intensity
+    - secondary_sanctions_risk
+    - nuclear_negotiation_probability
+    - regional_conflict_risk
+    - war_risk
+    - strait_of_hormuz_risk
+    - political_stability
+    - election_policy_risk
+    - parliament_policy_risk
+    - government_policy_shift
+    - foreign_policy_shift
+    - china_iran_relations
+    - russia_iran_relations
+    - europe_iran_relations
+    - global_geopolitical_risk
+    - shipping_risk
+    - banking_access_risk
+    - trade_restriction_risk
+    - political_event_shock
+  market_microstructure:
+    - market_value_traded
+    - retail_money_flow
+    - institutional_money_flow
+    - real_buy_sell_power
+    - volume
+    - turnover
+    - market_breadth
+    - advance_decline
+    - sector_rotation
+    - concentration_risk
+    - liquidity_risk
+    - volatility_regime
+    - index_futures_proxy
+    - block_trade_activity
+    - market_maker_activity
+    - insider_activity
+    - sentiment
+    - news_flow
+    - event_shock
+    - foreign_flow
+  valuation_fundamental:
+    - pe
+    - forward_pe
+    - ps
+    - pb
+    - ev_ebitda
+    - eps_growth
+    - revenue_growth
+    - gross_margin
+    - operating_margin
+    - net_margin
+    - free_cash_flow
+    - roe
+    - roic
+    - net_debt_ebitda
+    - dividend_yield
+    - nav_discount_premium
+    - intrinsic_value_gap
+    - earnings_revision
+    - codal_event_score
+    - fundamental_quality
+  technical_price_action:
+    - trend_regime
+    - momentum
+    - rsi
+    - macd
+    - moving_average_structure
+    - atr
+    - realized_volatility
+    - support_resistance
+    - breakout_score
+    - volume_confirmation
+    - price_structure
+    - liquidity_sweep
+    - market_structure_shift
+    - relative_strength
+    - gap_behavior
+    - volatility_compression
+    - volatility_expansion
+    - volume_profile
+    - mean_reversion_score
+    - trend_following_score
+  options:
+    - option_open_interest
+    - option_volume
+    - implied_volatility
+    - iv_skew
+    - iv_term_structure
+    - call_put_ratio
+    - delta_exposure
+    - gamma_exposure
+    - theta_exposure
+    - vega_exposure
+    - intrinsic_value
+    - time_value
+    - break_even
+    - option_mispricing
+    - max_pain
+    - expiry_pressure
+    - basis
+    - options_flow
+    - options_sentiment
+    - option_position_risk
+  behavioral_game_decision:
+    - government_strategy
+    - central_bank_strategy
+    - institutional_strategy
+    - retail_strategy
+    - market_maker_strategy
+    - major_player_positioning
+    - strategic_interaction_score
+    - policy_reaction_function
+    - expectation_management
+    - credibility_score
+    - decision_probability
+    - decision_impact
+    - scenario_probability
+    - regime_transition_probability
+    - feedback_loop_strength
+    - reflexivity
+    - second_order_effect
+    - policy_game_equilibrium
+    - adverse_selection_risk
+    - behavioral_bias_score
+
+scoring:
+  dimensions:
+    - direction
+    - magnitude
+    - confidence
+    - freshness
+    - persistence
+    - surprise
+    - market_sensitivity
+    - transmission_strength
+  rules:
+    - Each factor must retain source, timestamp, raw_value and normalized_score.
+    - Missing data is SKIP and must not be replaced by fabricated values.
+    - Stale data receives reduced weight or exclusion from fresh-signal aggregation.
+    - Factor weights are dynamic and must be conditioned on market regime.
+    - Correlated factors must be de-duplicated or grouped before final aggregation.
+    - Final market decisions require cross-layer confirmation.
