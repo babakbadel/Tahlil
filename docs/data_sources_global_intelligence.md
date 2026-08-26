@@ -1,10 +1,19 @@
-# منابع داده موتور Global Intelligence / Clustered Rotation
+# منابع داده Global Intelligence / BabiMind
 
-این سند منابع تغذیه مدل ۱۰۰۰+ عامل، خوشه‌ها، Lead/Lag، Velocity، Acceleration، Supply/Demand، Capital Flow و Future Demand را در ۱۰ دسته موضوعی و ۲۰ دسته از نظر نوع منبع سازمان‌دهی می‌کند.
+این سند **یکپارچه نهایی** منابع تغذیه مدل ۱۰۰۰+ عامل، خوشه‌های هم‌حرکت، Lead/Lag، Direction، Velocity، Acceleration، Supply/Demand، Capital Flow، Future Demand و Accumulation-compatible Signal است.
 
-## ۱۰ دسته موضوعی
+ساختار دو بعدی است:
 
-### ۱. اقتصاد کلان، پول و اعتبار
+1. **۱۰ دسته موضوعی** — «چه چیزی را اندازه می‌گیریم؟»
+2. **۲۰ دسته نوع منبع** — «اطلاعات را از چه نوع منبعی می‌گیریم؟»
+
+یک منبع می‌تواند هم‌زمان در چند دسته قرار بگیرد.
+
+---
+
+# بخش A — ۱۰ دسته موضوعی
+
+## ۱. اقتصاد کلان، پول و اعتبار
 - IMF Data / WEO / IFS / BOP / COFER
 - BIS Statistics
 - World Bank Data
@@ -13,15 +22,19 @@
 - Fed، ECB، BoE، BoJ، PBoC و سایر بانک‌های مرکزی
 - آمار رسمی کشورها
 
-### ۲. انرژی و مواد اولیه
+متغیرها: GDP، CPI/PPI، نرخ بهره، نقدینگی، اعتبار، بدهی، ترازنامه بانک مرکزی، ارز، کسری بودجه، جریان سرمایه و شرایط مالی.
+
+## ۲. انرژی و مواد اولیه
 - IEA
 - EIA
 - USGS
 - World Bank Commodity Markets
 - LME / CME / COMEX
-- گزارش تولیدکنندگان و آمار رسمی
+- آمار رسمی و گزارش تولیدکنندگان
 
-### ۳. طلا، نقره و ذخایر ارزش
+متغیرها: تولید، مصرف، ذخایر، موجودی، ظرفیت، قیمت، futures curve، CAPEX، lead time و supply constraint.
+
+## ۳. طلا، نقره و ذخایر ارزش
 - World Gold Council
 - LBMA
 - CME/COMEX
@@ -29,119 +42,130 @@
 - بانک‌های مرکزی
 - ETF/fund reports
 
-### ۴. فناوری، AI، تراشه و دیتاسنتر
+متغیرها: خرید بانک مرکزی، ETF flows، موجودی، futures/options، positioning، real rates و تقاضای سرمایه‌گذاری.
+
+## ۴. فناوری، AI، تراشه و دیتاسنتر
 - IEA
 - DOE/EIA
 - SEC/EDGAR
 - گزارش‌های رسمی شرکت‌های فناوری
 - اپراتورهای شبکه برق
-- داده‌های صنعت نیمه‌رسانا و تجهیزات
+- داده صنعت نیمه‌رسانا و تجهیزات
 
 زنجیره کلیدی:
 `AI → Chips → Data Centers → Electricity → Cooling → Grid → Copper/Aluminum → CAPEX → Corporate Profit`
 
-### ۵. بازار سرمایه، مشتقات و جریان سرمایه
+متغیرها: CAPEX، سفارش، backlog، مصرف برق، ظرفیت دیتاسنتر، GPU/CPU، semiconductor capacity و lead time.
+
+## ۵. بازار سرمایه، مشتقات و جریان سرمایه
 - بورس‌ها و اپراتورهای رسمی
 - SEC/EDGAR
 - CFTC COT
 - ETF issuers / fund reports
 - Futures / Options venues
-- داده‌های معتبر market microstructure
+- market microstructure
 
-### ۶. تجارت، کالا و زنجیره تأمین جهانی
+متغیرها: Price، Volume، Value، Breadth، OI، IV، Skew، Put/Call، positioning، fund flow، ownership disclosures و liquidity.
+
+## ۶. تجارت، کالا و زنجیره تأمین جهانی
 - UN Comtrade
 - WTO
 - UNCTAD
-- گمرکات رسمی کشورها
+- گمرکات رسمی
 - Eurostat
 - FAO
-- داده‌های حمل‌ونقل و کشتیرانی
+- داده حمل‌ونقل و کشتیرانی
 
-### ۷. ملک، ساخت‌وساز و زیرساخت فیزیکی
+متغیرها: Import، Export، volume، value، trade balance، freight، bottleneck و تغییر سهم تأمین‌کنندگان.
+
+## ۷. ملک، ساخت‌وساز و زیرساخت فیزیکی
 - بانک‌های مرکزی و BIS
 - World Bank / OECD
-- آمار رسمی مسکن کشورها
-- مجوز ساخت و starts/completions
-- داده اجاره و قیمت زمین
+- آمار رسمی مسکن
+- permits / starts / completions
+- اجاره و قیمت زمین
 - گزارش شرکت‌های ساختمانی و تولیدکنندگان مصالح
 
-### ۸. غذا، کشاورزی، آب و اقلیم
+متغیرها: قیمت، اجاره، معاملات، mortgage rates، permits، starts، completions، vacancy، land prices و construction costs.
+
+## ۸. غذا، کشاورزی، آب و اقلیم
 - FAO / FAOSTAT
 - USDA
 - World Bank
 - IEA
-- داده‌های هواشناسی و اقلیمی رسمی
-- IPCC و منابع پژوهشی معتبر
+- داده‌های رسمی هواشناسی و اقلیمی
+- IPCC و پژوهش‌های معتبر
 
-### ۹. صنعت، سلامت، نیروی کار و تقاضای مصرف‌کننده
+متغیرها: تولید، سطح زیرکشت، موجودی، قیمت غذا، کود، آب، خشکسالی، دما، بارش و ریسک اقلیمی.
+
+## ۹. صنعت، سلامت، نیروی کار و تقاضای مصرف‌کننده
 - ILO / ILOSTAT
-- WHO و منابع رسمی سلامت
+- WHO
 - OECD
-- آمار رسمی کشورها
+- آمار رسمی
 - SEC/گزارش شرکت‌ها
 - PMI و نظرسنجی‌های معتبر
 
-### ۱۰. ژئوپلیتیک، سیاست، خبر و رویدادهای شوک‌آور
+متغیرها: اشتغال، دستمزد، بهره‌وری، مصرف، درآمد، PMI، ظرفیت صنعتی، سفارش‌ها، حاشیه سود، تقاضای مصرف‌کننده و کمبود نیروی متخصص.
+
+## ۱۰. ژئوپلیتیک، سیاست، خبر و شوک
 - دولت‌ها و سازمان‌های بین‌المللی
 - IMF / World Bank / OECD
 - IEA برای شوک‌های انرژی
 - Reuters و سایر منابع خبری معتبر برای Event Detection
 - گزارش‌های رسمی تحریم، جنگ، تعرفه، انتخابات و سیاست‌گذاری
 
+قاعده: خبر ابتدا `event signal` است؛ برای تبدیل به داده قطعی باید با منبع اولیه یا داده مستقل تأیید شود.
+
 ---
 
-# ۲۰ دسته‌بندی منابع بر اساس نوع و کیفیت اطلاعات
+# بخش B — ۲۰ دسته نوع منبع
 
-این لایه مستقل از دسته‌بندی موضوعی است. یک منبع می‌تواند هم‌زمان در چند موضوع و چند نوع قرار بگیرد.
+## ۱. رسمی / Official
+دولت، بانک مرکزی، بورس، نهاد آماری، رگولاتور و سازمان بین‌المللی.
 
-## ۱. منابع رسمی / Official
-منابعی که مستقیماً توسط دولت، بانک مرکزی، بورس، نهاد آماری یا سازمان بین‌المللی منتشر می‌شوند.
+نمونه: IMF، BIS، World Bank، OECD، Fed، ECB، SEC، CFTC، UN، Eurostat و بانک‌های مرکزی.
 
-نمونه‌ها: IMF، BIS، World Bank، OECD، Fed، ECB، آمار ملی، SEC، CFTC، UN، Eurostat، بانک‌های مرکزی.
+کاربرد: Ground Truth، سیاست، اقتصاد کلان، تجارت و بازار سرمایه.
 
-**کاربرد:** Ground Truth، اقتصاد کلان، سیاست، مقررات، تجارت، بازار سرمایه.
+## ۲. غیررسمی / Unofficial
+شرکت‌ها، انجمن‌ها، پژوهشگران مستقل، فعالان بازار و پایگاه‌های تخصصی.
 
-## ۲. منابع غیررسمی / Unofficial
-داده‌ها و تحلیل‌های منتشرشده توسط شرکت‌ها، انجمن‌ها، پژوهشگران مستقل، فعالان بازار و پایگاه‌های تخصصی خارج از نهادهای رسمی.
+کاربرد: Discovery و Signal؛ ادعاهای مهم باید Cross-check شوند.
 
-**قاعده:** برای کشف سیگنال مفیدند، اما برای ادعای مهم باید Cross-check شوند.
+## ۳. مقاله / Article
+مقالات تحلیلی، خبری و تخصصی.
 
-## ۳. مقالات / Articles
-مقاله‌های تحلیلی و خبری درباره روندها، صنایع، کالاها و بازارها.
+خروجی: Event، Narrative، Hypothesis و Attention.
 
-**خروجی مدل:** Event، Narrative، Hypothesis و تغییر Attention.
+## ۴. تحقیق / Research & Academic
+ژورنال علمی، Working Paper، اقتصادسنجی، مالی، مهندسی و علوم داده.
 
-## ۴. تحقیقات / Research & Academic
-مقالات دانشگاهی، Working Paper، پژوهش‌های اقتصادسنجی، مالی، مهندسی و علوم داده.
+نمونه: NBER، SSRN، arXiv، دانشگاه‌ها و پژوهش‌های بانک‌های مرکزی.
 
-نمونه‌ها: NBER، SSRN، arXiv، بانک‌های مرکزی، دانشگاه‌ها و ژورنال‌های علمی.
+کاربرد: علیت، Lead/Lag، کشش تقاضا، پیش‌بینی و آزمون فرضیه.
 
-**کاربرد:** کشف روابط Lead/Lag، علیت، کشش تقاضا، پیش‌بینی و آزمون فرضیه.
+## ۵. گزارش / Reports
+Annual/Quarterly Report، Industry Report، Commodity Outlook و Economic Outlook.
 
-## ۵. گزارش‌ها / Reports
-گزارش‌های دوره‌ای شرکت‌ها، مؤسسات مالی، نهادهای صنعتی و سازمان‌های بین‌المللی.
-
-نمونه‌ها: Annual Report، Quarterly Report، Industry Report، Commodity Outlook، Outlookهای اقتصاد کلان.
-
-**کاربرد:** CAPEX، backlog، supply/demand، guidance، سودآوری و سناریوها.
+کاربرد: CAPEX، backlog، supply/demand، guidance، سودآوری و سناریوها.
 
 ## ۶. مصاحبه / Interviews & Speeches
-مصاحبه مدیران، سخنرانی سیاست‌گذاران، مدیران شرکت‌ها، متخصصان، اقتصاددانان و فعالان زنجیره تأمین.
+مدیران، سیاست‌گذاران، اقتصاددانان، متخصصان و فعالان زنجیره تأمین.
 
-**کاربرد:** Forward Guidance، انتظارات، اطلاعات کیفی و تغییر Narrative.
+کاربرد: Forward Guidance، انتظارات و تغییر Narrative.
 
-**امتیاز اعتبار:** پایین‌تر از داده سخت مگر اینکه بعداً با داده واقعی تأیید شود.
+وزن آن پایین‌تر از داده سخت است مگر اینکه با داده واقعی تأیید شود.
 
 ## ۷. آرشیو / Archives & Historical Data
-داده‌های تاریخی، نسخه‌های قبلی گزارش‌ها، قیمت‌های تاریخی، خبرهای قدیمی، snapshotها و داده‌های اصلاح‌نشده/نسخه‌گذاری‌شده.
+قیمت تاریخی، گزارش‌های قبلی، خبرهای قدیمی، snapshot و vintage data.
 
-نمونه مهم: ALFRED برای vintageهای تاریخی داده‌های اقتصادی.
+نمونه: ALFRED.
 
-**کاربرد:** جلوگیری از Look-ahead Bias و Backtest صحیح.
+کاربرد: Backtest و جلوگیری از Look-ahead Bias.
 
 ## ۸. ترید / Trading & Market Microstructure
-داده مستقیم یا نزدیک به بازار:
-- معاملات
+- Trades
 - Order Book
 - Bid/Ask
 - Volume
@@ -153,193 +177,124 @@
 - Positioning
 - ETF Flows
 
-**کاربرد:** تشخیص Flow، Liquidity، Momentum، Accumulation-compatible و تغییر رژیم.
+کاربرد: Flow، Liquidity، Momentum، Accumulation-compatible و Regime Detection.
 
 ## ۹. APIهای رایگان / Free & Freemium APIs
-منابع قابل اتصال خودکار با API رایگان یا سهمیه رایگان.
-
-نمونه‌ها:
-- FRED API / ALFRED API
+- FRED / ALFRED API
 - ECB Data API
-- IMF Data/API
+- IMF Data API
 - World Bank API
 - UN/Comtrade APIs
 - Alpha Vantage free tier
-- APIهای رسمی بعضی بورس‌ها و نهادهای آماری
+- APIهای رسمی بورس‌ها و نهادهای آماری
 
-FRED API امکان دریافت داده FRED و ALFRED را به‌صورت برنامه‌ای فراهم می‌کند. citeturn0search4turn0search11
-ECB نیز سرویس REST مبتنی بر SDMX برای دسترسی برنامه‌ای به داده و metadata ارائه می‌کند. citeturn0search7turn0search12
-Alpha Vantage نیز مجموعه‌ای از APIهای سهام، شاخص، آپشن، ارز، کالا، داده بنیادی و شاخص‌های اقتصادی دارد و free API key ارائه می‌کند؛ محدودیت‌های استفاده رایگان باید در Adapter لحاظ شود. citeturn0search5turn0search6
+محدودیت quota، latency، revision و terms باید در Adapter ثبت شود.
 
 ## ۱۰. سایت‌های معتبر / Trusted Websites
-وب‌سایت‌های مرجع که برای Discovery، Verification و دریافت گزارش/داده استفاده می‌شوند.
+IMF، BIS، World Bank، OECD، IEA، EIA، USGS، WGC، LBMA، SEC، CFTC، UN، FAO، ILO، WHO، Reuters و منابع رسمی مشابه.
 
-نمونه‌ها: IMF، BIS، World Bank، OECD، IEA، EIA، USGS، WGC، LBMA، SEC، CFTC، UN، FAO، ILO، WHO، Reuters.
-
-**قاعده:** اعتبار سایت به‌تنهایی کافی نیست؛ باید provenance و timestamp هر داده ثبت شود.
-
----
-
-# ۱۰ دسته پیشنهادی تکمیلی
-
-این ۱۰ دسته را به‌صورت اختصاصی برای BabiMind اضافه می‌کنیم، چون در مدل ۱۰۰۰+ عامل اطلاعات مهمی وجود دارد که در طبقه‌بندی سنتی داده‌ها گم می‌شود.
+قاعده: نام معتبر کافی نیست؛ provenance و timestamp باید ثبت شود.
 
 ## ۱۱. داده خام / Primary Raw Data
-داده نزدیک به منبع تولیدکننده:
-- سنسور
-- کنتور
-- تولید واقعی
-- موجودی انبار
-- shipment
-- load برق
-- تولید معدن
-- ظرفیت کارخانه
+سنسور، کنتور، تولید واقعی، موجودی انبار، shipment، load برق، تولید معدن و ظرفیت کارخانه.
 
-**اولویت بسیار بالا برای Supply/Demand.**
+کاربرد: Supply/Demand با کمترین واسطه.
 
 ## ۱۲. Alternative Data
-داده‌هایی خارج از صورت‌های مالی و آمار سنتی:
-- ترافیک
-- حمل‌ونقل
-- مصرف برق
-- داده اپلیکیشن‌ها
-- تراکنش‌های تجمیعی
-- تصاویر ماهواره‌ای
-- جست‌وجوی اینترنتی
+ترافیک، حمل‌ونقل، مصرف برق، داده اپلیکیشن، تراکنش تجمیعی، تصاویر ماهواره‌ای و جست‌وجوی اینترنتی.
 
-**کاربرد:** کشف تغییرات قبل از انتشار آمار رسمی.
+کاربرد: تشخیص تغییر قبل از انتشار آمار رسمی.
 
-## ۱۳. داده ماهواره‌ای و جغرافیایی / Satellite & Geospatial
-- تصاویر ماهواره‌ای
-- کشتی‌ها
-- بنادر
-- معدن‌ها
-- زمین‌های کشاورزی
-- ساخت‌وساز
-- نور شب
-- ذخایر/سطح آب
+## ۱۳. Satellite & Geospatial
+تصاویر ماهواره‌ای، کشتی‌ها، بنادر، معدن، زمین کشاورزی، ساخت‌وساز، نور شب و سطح آب.
 
-**کاربرد:** اندازه‌گیری فعالیت واقعی در دنیای فیزیکی.
+کاربرد: اندازه‌گیری فعالیت فیزیکی.
 
-## ۱۴. پتنت، R&D و نوآوری / Innovation Signals
-- Patent filings
-- R&D spending
-- scientific publications
-- product launches
-- research grants
-- فناوری‌های نوظهور
+## ۱۴. Patent / R&D / Innovation
+Patent filings، R&D spending، publications، product launches و research grants.
 
-**کاربرد:** تشخیص نیازهای ۲ تا ۱۰ سال آینده.
+کاربرد: Future Demand و فناوری‌های نوظهور با افق چندساله.
 
-## ۱۵. قرارداد، خرید و مناقصه / Procurement Signals
-- قراردادهای دولتی
-- مناقصه‌ها
-- سفارش‌های بزرگ
-- procurement data
-- قراردادهای زیرساختی
-- خرید تجهیزات
+## ۱۵. Procurement / Contracts
+قرارداد دولتی، مناقصه، سفارش بزرگ، procurement، قرارداد زیرساخت و خرید تجهیزات.
 
-**کاربرد:** تشخیص CAPEX آینده قبل از انعکاس کامل در سود شرکت‌ها.
+کاربرد: تشخیص CAPEX پیش از اثرگذاری کامل بر صورت مالی.
 
-## ۱۶. نیروی انسانی و استخدام / Labor & Hiring Signals
-- Job postings
-- تعداد استخدام
-- مهارت‌های موردنیاز
-- دستمزدهای پیشنهادی
-- مهاجرت نیروی متخصص
-- کمبود مهارت
+## ۱۶. Labor & Hiring
+آگهی استخدام، دستمزد، مهارت، کمبود نیروی متخصص و جریان مهاجرت کاری.
 
-**کاربرد:** تشخیص رشد یک صنعت قبل از گزارش مالی.
+کاربرد: تشخیص رشد/کاهش تقاضای واقعی نیروی کار و فناوری.
 
-## ۱۷. توجه و رفتار جمعی / Attention & Sentiment
-- Google Trends
-- جست‌وجوها
-- شبکه‌های اجتماعی
-- Reddit/forum signals
-- sentiment
-- media intensity
-- تغییر Narrative
+## ۱۷. Attention & Sentiment
+جست‌وجوی اینترنتی، رسانه، شبکه اجتماعی، sentiment و engagement.
 
-**کاربرد:** اندازه‌گیری Attention Gap.
+کاربرد: Attention Gap و تغییر Narrative.
 
-## ۱۸. جریان فیزیکی / Physical Flow
-- کشتی
-- کانتینر
-- کامیون
-- راه‌آهن
-- خطوط لوله
-- مصرف برق
-- تولید کارخانه
-- موجودی انبار
+این داده‌ها Signal هستند، نه Ground Truth.
 
-**کاربرد:** اتصال قیمت مالی به اقتصاد واقعی.
+## ۱۸. Physical Flow
+کشتی، کانتینر، بنادر، برق، خط لوله، حمل‌ونقل، موجودی و جریان فیزیکی کالا.
 
-## ۱۹. شبکه ارتباطی و وابستگی / Network & Dependency Data
-برای هر عامل:
-- upstream
-- downstream
-- supplier
-- customer
-- substitute
-- complement
-- geographic dependency
-- critical-node score
+کاربرد: Supply/Demand و Bottleneck Detection.
 
-**کاربرد:** Network Centrality، Contagion و Second-order Effects.
+## ۱۹. Network & Dependency
+Supplier/Customer، Input-Output، مالکیت، وابستگی کشورها، جایگزین‌ها و گلوگاه‌ها.
 
-## ۲۰. داده نسخه‌گذاری‌شده و ضد Look-ahead / Point-in-Time Data
-هر مشاهده باید در مدل حداقل این metadata را داشته باشد:
-- `observation_date`
-- `publication_timestamp`
-- `vintage`
-- `source`
-- `revision`
-- `retrieval_timestamp`
+کاربرد: Network Centrality، Shock Propagation و Second/Third-Order Effects.
 
-**کاربرد:** Backtest واقعی و جلوگیری از استفاده ناخواسته از اطلاعاتی که در زمان تصمیم‌گیری هنوز منتشر نشده بودند.
+## ۲۰. Point-in-Time / Vintage Data
+داده نسخه‌گذاری‌شده همراه با زمان انتشار واقعی، revision و vintage.
+
+کاربرد حیاتی: Backtest بدون Look-ahead Bias.
 
 ---
 
-# ماتریس کیفیت منبع
+# بخش C — استاندارد امتیازدهی منبع
 
-هر داده باید این امتیازها را داشته باشد:
+برای هر منبع این متادیتا ثبت شود:
 
-`authority_score`
-`independence_score`
-`timeliness_score`
-`coverage_score`
+`source_id`
+`source_type`
+`topic_cluster`
+`publisher`
+`url`
+`api_endpoint`
+`frequency`
+`release_timestamp`
+`observation_timestamp`
+`vintage_timestamp`
 `revision_risk`
-`manipulation_risk`
-`reproducibility_score`
+`authority`
+`independence`
+`timeliness`
+`coverage`
 `historical_depth`
+`reproducibility`
 `api_reliability`
+`manipulation_risk`
 `point_in_time_quality`
+`confidence`
 
-و سپس:
+## اولویت پایه
 
-`SourceConfidence = f(Authority, Independence, Timeliness, Coverage, Reproducibility, PointInTimeQuality) - Risks`
+`Official/Primary → Market Data → Corporate Filings → Physical/Alternative Data → International Research → Verified News → Secondary Cross-check → Unverified Signal`
 
-# قانون استفاده در BabiMind
+هیچ منبعی فقط به‌خاطر «رسمی بودن» همیشه برنده نیست؛ برای هر متغیر باید بهترین منبع بر اساس تازگی، دقت، پوشش، revision و استقلال انتخاب شود.
 
-### Tier A — هسته تصمیم
-منابع رسمی/اولیه + داده بازار + داده Point-in-Time.
+---
 
-### Tier B — تأیید و غنی‌سازی
-گزارش شرکت، تحقیق معتبر، Alternative Data، داده فیزیکی و گزارش صنعتی.
+# بخش D — تبدیل منبع به سیگنال BabiMind
 
-### Tier C — کشف زودهنگام
-مقاله، مصاحبه، شبکه اجتماعی، Job Posting، Patent و Narrative.
+هر داده پس از ingestion باید به متغیرهای استاندارد تبدیل شود:
 
-### Tier D — فقط Cross-check
-منابع ناشناس، شایعات، پست‌های بدون provenance و داده‌های بدون timestamp.
-
-**هیچ سیگنال Tier C یا D نباید به‌تنهایی باعث تغییر شدید امتیاز فرصت شود.**
-
-# استاندارد اتصال به مدل
-
-هر منبع پس از دریافت باید به متغیرهای استاندارد تبدیل شود:
-
-`current_price`
+`current_value`
+`change_1d`
+`change_7d`
+`change_30d`
+`trend`
+`direction`
+`velocity`
+`acceleration`
 `demand_growth`
 `supply_growth`
 `supply_constraint`
@@ -347,31 +302,62 @@ Alpha Vantage نیز مجموعه‌ای از APIهای سهام، شاخص، آ
 `capital_flow`
 `future_demand`
 `attention`
-`velocity`
-`acceleration`
+`attention_gap`
 `lead_lag`
 `network_centrality`
 `accumulation_signal`
 `macro_sensitivity`
 `geopolitical_sensitivity`
-`source_confidence`
-`publication_lag`
-`revision_risk`
+`relative_value`
+`confidence`
 
 امتیاز فرصت:
 
-`Opportunity = f(FutureDemand, DemandGrowth, SupplyConstraint, AttentionGap, Flow, Velocity, Acceleration, LeadLag, NetworkImpact, RelativeValue, SourceConfidence)`
+`Opportunity = f(FutureDemand, DemandGrowth, SupplyConstraint, AttentionGap, Flow, Velocity, Acceleration, LeadLag, NetworkImpact, RelativeValue, Confidence)`
 
-## اولویت نهایی منابع
+---
 
-`Official/Primary → Point-in-Time Market Data → Corporate Filings → Physical/Alternative Data → International Research → Trusted Reports → Verified News → Interviews/Articles → Social/Unofficial → Unverified Sources`
+# بخش E — قواعد ضدخطا
 
-IMF منابعی مانند BIS، ECB، Eurostat، ILO، OECD، UN و World Bank را در مجموعه منابع داده بین‌المللی خود معرفی می‌کند. citeturn0search0turn0search1
+1. خبر، مصاحبه یا شبکه اجتماعی به‌تنهایی نباید Ground Truth شود.
+2. «انباشت سرمایه‌دار» فقط `accumulation-compatible signal` است، نه اثبات نیت.
+3. داده اصلاح‌شده باید با vintage اصلی در Backtest نگهداری شود.
+4. هر observation باید `observation_timestamp` و `release_timestamp` داشته باشد.
+5. چند منبع مستقل برای سیگنال‌های مهم ترجیح داده شود.
+6. وابستگی دو منبع به یک upstream source باید در independence لحاظ شود.
+7. API رایگان فقط در صورت کافی بودن کیفیت، پوشش و SLA وارد مسیر اصلی شود؛ در غیر این صورت fallback باشد.
+8. برای داده‌های بازار، timezone و session باید استاندارد شود.
+9. داده‌های missing، stale و revised باید امتیاز confidence را کاهش دهند.
+10. هر سیگنال باید provenance قابل بازتولید داشته باشد.
 
-UN Comtrade داده تجارت را مستقیماً از نهادهای آماری رسمی کشورها دریافت می‌کند. citeturn0search3
+---
 
-BIS، ECB، IMF، OECD، World Bank و UN از استاندارد SDMX برای تبادل داده و metadata پشتیبانی می‌کنند؛ این موضوع برای ساخت Source Adapterهای استاندارد مهم است. citeturn0search9
+# بخش F — اتصال به مدل ۱۰۰۰+ عامل
 
-### نکته مهم درباره «انباشت»
+`Sources (20 Types)`
+`→ 10 Topic Domains`
+`→ Subclusters`
+`→ 1000+ Factors`
+`→ Direction`
+`→ Velocity`
+`→ Acceleration`
+`→ Lead/Lag`
+`→ Supply/Demand`
+`→ Capital Flow`
+`→ Future Demand`
+`→ Network Propagation`
+`→ Opportunity Ranking`
 
-رشد هم‌زمان قیمت، حجم یا معاملات بزرگ به‌تنهایی اثبات نمی‌کند که «افراد پولدار در حال جمع‌آوری» هستند. مدل فقط باید آن را به‌عنوان `accumulation-compatible signal` ثبت کند و با جریان پول، موجودی، عرضه، معاملات و داده بنیادی مستقل تأیید کند.
+هدف نهایی BabiMind این نیست که فقط بگوید «چه چیزی امروز بالا رفت»؛ بلکه باید تشخیص دهد:
+
+**چه چیزی در حال مهم‌تر شدن است، کدام خوشه شتاب می‌گیرد، رهبر و دنباله‌رو کدام‌اند، چه چیزی هنوز توجه بازار را نگرفته، پول جدید با چه سرعتی وارد شده و شوک بعدی احتمالاً به کجا منتقل می‌شود.**
+
+---
+
+# منابع و اعتبارسنجی
+
+IMF مجموعه‌ای از منابع رسمی و بین‌المللی مانند BIS، ECB، Eurostat، ILO، OECD، UN و World Bank را به‌عنوان منابع داده معرفی می‌کند. citeturn0search0turn0search3
+
+IMF Data API دسترسی برنامه‌ای به داده‌ها را از طریق SDMX 2.1 و SDMX 3.0 فراهم می‌کند. citeturn0search5
+
+منابع بین‌المللی همچنین از داده‌های شریک/ملی، آمار بانکی BIS، داده‌های IMF، OECD و World Bank و داده‌های تجاری/بازاری برای cross-check استفاده می‌کنند. citeturn0search1turn0search6
