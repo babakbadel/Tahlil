@@ -1,0 +1,36 @@
+name: BabiMind Global Market Daily
+
+on:
+  schedule:
+    - cron: '30 5 * * *'
+    - cron: '30 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  global-market-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Run global-to-Iran analysis
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          if [ -f scripts/babimind_global_market.py ]; then
+            python scripts/babimind_global_market.py --config config/babimind_global_market_map.yml || echo 'SKIP: global market analysis unavailable'
+          else
+            echo 'SKIP: global market analysis script not present yet'
+          fi
+
+      - name: Continue on unavailable optional API/data
+        if: always()
+        run: echo 'Optional APIs/data sources are non-blocking; pipeline continues.'
