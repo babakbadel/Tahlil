@@ -1,0 +1,37 @@
+{
+  "version": "2026-08-26-v1",
+  "factor_count": 500,
+  "policy": {
+    "use_only_healthy_sources_for_live_signal": true,
+    "primary_sources_preferred": true,
+    "minimum_independent_sources_high_impact": 3,
+    "stale_weight": 0,
+    "unavailable_weight": 0,
+    "news_is_not_ground_truth": true,
+    "fallback_required": true
+  },
+  "mapping": {
+    "macro": ["Central Bank of Iran", "Statistical Center of Iran", "IMF", "World Bank", "BIS", "OECD", "FRED"],
+    "inflation": ["Central Bank of Iran", "Statistical Center of Iran", "World Bank", "IMF"],
+    "fx_regime": ["Central Bank of Iran", "TSETMC", "Reuters Markets", "Bloomberg Markets", "Financial Times", "Donya-e-Eqtesad", "IRNA"],
+    "liquidity": ["Central Bank of Iran", "Statistical Center of Iran", "IMF", "BIS"],
+    "fiscal_stress": ["Ministry of Economic Affairs and Finance", "Central Bank of Iran", "Iran Parliament Research Center", "IMF", "World Bank"],
+    "energy": ["Ministry of Energy", "Ministry of Petroleum", "NIOC", "NIGC", "OPEC", "JODI", "EIA", "IEA", "Reuters", "S&P Global Commodity Insights"],
+    "oil_china": ["NIOC", "Ministry of Petroleum", "OPEC", "JODI", "EIA", "IEA", "Reuters", "Associated Press", "Bloomberg", "Kpler", "Vortexa"],
+    "geopolitics_sanctions": ["US Treasury OFAC", "US State Department", "UN Security Council", "European Commission", "UK FCDO", "IAEA", "Reuters", "AP", "AFP", "CFR", "ICG", "CSIS"],
+    "hormuz_risk": ["Reuters", "AP", "AFP", "Al Jazeera", "The National", "Arab News", "US State Department", "IAEA", "OPEC", "EIA"],
+    "iran_equity_market": ["TSETMC", "Codal", "Tehran Stock Exchange", "Iran Fara Bourse", "Sena", "Donya-e-Eqtesad", "Bourse News", "Reuters Markets"],
+    "commodities": ["Iran Mercantile Exchange", "OPEC", "EIA", "IEA", "LME", "CME Group", "COMEX", "ICE", "WGC", "LBMA"],
+    "trade": ["Iran Customs Administration", "UN Comtrade", "WTO", "UNCTAD", "China Customs", "China National Bureau of Statistics", "Reuters", "Financial Times"],
+    "political_sentiment": ["IRNA", "ISNA", "Mehr", "Tasnim", "Fars", "Khabar Online", "Reuters", "AP", "BBC", "Al Jazeera", "France 24"],
+    "global_risk": ["Reuters", "AP", "AFP", "Bloomberg", "Financial Times", "Wall Street Journal", "Economist", "CFR", "ICG", "CSIS", "RUSI", "Chatham House"]
+  },
+  "runtime": {
+    "expand_group_mappings_to_500_factors": true,
+    "healthy_source_intersection": true,
+    "preserve_unavailable_factors": true,
+    "retry_unavailable_next_run": true,
+    "record_provenance_per_factor": true,
+    "record_source_health_snapshot": true
+  }
+}
