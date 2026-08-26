@@ -1,0 +1,66 @@
+{
+  "as_of": "2026-08-26",
+  "purpose": "Economic/political signal layer for BabiMind. This is an overlay, not a replacement for the canonical people network.",
+  "sources": [
+    {
+      "source": "Tasnim",
+      "url": "https://www.tasnimnews.ir/fa/news/1403/09/19/3145674/",
+      "note": "Initial official appointments included Aref as first deputy, Pourmohammadi at Plan and Budget, Tayebnia as senior advisor, and Aghapour for economic cooperation."
+    },
+    {
+      "source": "IranWire",
+      "url": "https://iranwire.com/fa/news-1/147234-%D8%B3%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%D8%A8%D8%B1%D8%A7%DB%8C-%D9%81%D8%B1%D8%B2%DB%8C%D9%86-%D8%AF%D8%B3%D8%AA%DB%8C%D8%A7%D8%B1-%D9%88%DB%8C%DA%98%D9%87-%D8%B1%DB%8C%DB%8C%D8%B3%D8%AC%D9%85%D9%87%D9%88%D8%B1/",
+      "note": "Reports Farzin's appointment as special economic assistant after leaving the central bank."
+    },
+    {
+      "source": "Tasnim",
+      "url": "https://www.tasnimnews.ir/fa/news/1405/03/06/3601861/",
+      "note": "Pezeshkian emphasized economic resilience, private sector activity, and reform of foreign-exchange, customs, banking and tax processes."
+    }
+  ],
+  "actors": [
+    {"id":"pezeshkian","name":"مسعود پزشکیان","role":"رئیس‌جمهور","policy_weight":1.00,"domains":["policy","economy","foreign"]},
+    {"id":"aref","name":"محمدرضا عارف","role":"معاون اول","policy_weight":0.90,"domains":["execution","economy","policy"]},
+    {"id":"pourmohammadi","name":"سید حمید پورمحمدی","role":"رئیس سازمان برنامه و بودجه","policy_weight":0.85,"domains":["budget","fiscal","economy"]},
+    {"id":"tayebnia","name":"علی طیب‌نیا","role":"مشاور عالی؛ وزن فکری/اقتصادی","policy_weight":0.75,"domains":["inflation","fiscal","economy"],"status_note":"Formal advisory role must be distinguished from operational authority."},
+    {"id":"aghapour","name":"معصومه آقاپور","role":"مشاور امور همکاری‌های اقتصادی","policy_weight":0.55,"domains":["economy","private_sector"]},
+    {"id":"farzin","name":"محمدرضا فرزین","role":"دستیار ویژه اقتصادی؛ سابقه ریاست بانک مرکزی","policy_weight":0.75,"domains":["monetary","fx","banking","economy"],"status_note":"Track as a monetary-policy signal node; do not equate advisory influence with current central-bank authority."},
+    {"id":"abdeh_tabrizi","name":"حسین عبده‌تبریزی","role":"چهره بازار سرمایه/مشاور اقتصادی کمپین در داده شبکه","policy_weight":0.45,"domains":["capital_market","finance","inflation"],"status_note":"Use as market-discourse signal, not as a formal government decision-maker."},
+    {"id":"araqchi","name":"سید عباس عراقچی","role":"وزیر امور خارجه","policy_weight":0.80,"domains":["foreign_policy","sanctions","fx"]},
+    {"id":"afshin","name":"حسین افشین","role":"معاون علمی و فناوری","policy_weight":0.55,"domains":["technology","investment"]},
+    {"id":"haji_mirzaei","name":"محسن حاجی‌میرزایی","role":"رئیس دفتر رئیس‌جمهور در شبکه موجود","policy_weight":0.70,"domains":["coordination","execution"]},
+    {"id":"ansari","name":"مجید انصاری","role":"معاون حقوقی در شبکه موجود","policy_weight":0.60,"domains":["legal","policy"]},
+    {"id":"midri","name":"احمد میدری","role":"وزیر تعاون، کار و رفاه اجتماعی در شبکه موجود","policy_weight":0.60,"domains":["labor","social","economy"]}
+  ],
+  "market_signal_mapping": {
+    "fx": {
+      "primary_nodes":["farzin","araqchi","pourmohammadi","pezeshkian"],
+      "drivers":["monetary_policy","sanctions","budget_deficit","oil_fx_access"],
+      "bullish_for_rial_conditions":["credible_disinflation","fiscal_discipline","improved_external_access"],
+      "bearish_for_rial_conditions":["fiscal_dominance","liquidity_growth","sanctions_pressure","energy_and_supply_shocks"]
+    },
+    "gold": {
+      "primary_nodes":["farzin","araqchi","pezeshkian"],
+      "drivers":["domestic_fx","global_gold","inflation_expectations","geopolitical_risk"],
+      "base_bias":"positive_under_persistent_fx_and_inflation_pressure"
+    },
+    "equities": {
+      "primary_nodes":["aref","pourmohammadi","tayebnia","aghapour","abdeh_tabrizi"],
+      "drivers":["budget","interest_rates","fx_regime","energy_supply","capital_market_policy"],
+      "preferred_regime":"selective_rotation_with_exporters_and_liquid_leaders_over_broad_small-cap_chasing"
+    }
+  },
+  "game_theory": {
+    "government_objective": ["economic_resilience","inflation_containment","social_stability","financing_budget"],
+    "market_conflict": ["inflation_control_vs_nominal_asset_prices","fx_stability_vs_exporter_earnings","budget_financing_vs_interest_rates"],
+    "interpretation_rule":"Statements are weak signals; appointments, budget decisions, FX policy, rates and implementation actions receive higher model weight."
+  },
+  "babi_mind_weights": {
+    "network_influence":0.20,
+    "policy_actions":0.30,
+    "market_data":0.25,
+    "macro":0.15,
+    "external_geopolitics":0.10
+  },
+  "model_rule":"Do not convert a person's appointment or public statement directly into a trading signal. Require confirmation from market data, implementation evidence and cross-node consistency."
+}
