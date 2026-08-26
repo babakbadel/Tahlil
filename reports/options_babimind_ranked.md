@@ -1,6 +1,6 @@
 # BabiMind Option Ranking
 
-Generated: 2026-08-26T13:22:21.963232+00:00
+Generated: 2026-08-26T13:31:36.457911+00:00
 Contracts ranked: 249
 
 | Rank | Underlying | Contract | Type | Score | Decision | Strike | Price | IV | Delta | Gamma | Theta | Vega | Days | BE |
