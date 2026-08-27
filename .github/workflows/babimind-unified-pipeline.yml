@@ -58,31 +58,39 @@ jobs:
           exit 0
 
       - name: Build graph intelligence
-        run: |
-          python scripts/babimind_graph.py
+        run: python scripts/babimind_graph.py
 
       - name: Run unified source pipeline
-        run: |
-          python scripts/babimind_pipeline.py
+        run: python scripts/babimind_pipeline.py
+
+      - name: Prepare BabiMind model memory
+        run: python scripts/babimind_memory.py --prepare
 
       - name: Build OpenRouter prompt from current BabiMind data
         run: |
           python - <<'PY'
           from pathlib import Path
-          files = [Path('reports/babimind_pipeline.json'), Path('reports/babimind_graph.json')]
+          files = [
+              Path('reports/babimind_pipeline.json'),
+              Path('reports/babimind_graph.json'),
+              Path('reports/babimind_memory_context.json'),
+          ]
           parts = [
               'You are BabiMind, the central financial and economic intelligence model for Tahlil.',
-              'Use the supplied CURRENT repository intelligence as evidence.',
+              'OpenRouter is the only active LLM provider in this pipeline.',
+              'Use CURRENT repository intelligence as primary evidence and MEMORY only for historical context/calibration.',
               'Integrate Iran stock market, gold, dollar, macroeconomics, political economy, game theory and dynamic systems.',
+              'Compare the current state with recent model runs and explicitly identify regime changes, recurring data gaps and confidence changes.',
               'Generate scenario probabilities and explain feedback loops, strategic actors, incentives and regime changes.',
-              'Do not invent unavailable observations. Separate evidence, inference and uncertainty.',
+              'Never treat historical memory as current market data. Do not invent unavailable observations.',
+              'Separate evidence, inference and uncertainty.',
               'Return valid JSON with exactly these top-level keys: regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, confidence, data_gaps.'
           ]
           for p in files:
               if p.exists():
                   text = p.read_text(encoding='utf-8')
-                  if len(text) > 90000:
-                      text = text[:90000] + '\n[TRUNCATED]'
+                  if len(text) > 70000:
+                      text = text[:70000] + '\n[TRUNCATED]'
                   parts.append(f'\nSOURCE FILE: {p}\n{text}')
           Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts), encoding='utf-8')
           PY
@@ -95,13 +103,6 @@ jobs:
           python scripts/babimind_llm_router.py \
             --prompt-file babimind_openrouter_prompt.txt \
             --output reports/babimind_llm.json
-
-      - name: Report provider status
-        if: always()
-        run: |
-          if [ -f reports/babimind_provider_status.json ]; then
-            cat reports/babimind_provider_status.json
-          fi
 
       - name: Validate BabiMind outputs
         run: |
@@ -124,7 +125,17 @@ jobs:
           print(f"BabiMind OK: provider={d.get('provider')} model={d.get('model')}")
           PY
 
-      - name: Commit BabiMind reports
+      - name: Ingest successful result into BabiMind memory
+        run: python scripts/babimind_memory.py --ingest
+
+      - name: Report provider status
+        if: always()
+        run: |
+          if [ -f reports/babimind_provider_status.json ]; then
+            cat reports/babimind_provider_status.json
+          fi
+
+      - name: Commit BabiMind reports and memory
         if: always()
         run: |
           set -e
