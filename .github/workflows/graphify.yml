@@ -42,5 +42,13 @@ jobs:
           echo 'Graphify graph output: OK'
           ls -lh graphify-out/
 
+      - name: Upload Graphify output
+        uses: actions/upload-artifact@v4
+        with:
+          name: graphify-output
+          path: graphify-out/
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Verify BabiMind Graphify skill
         run: test -s .agents/skills/graphify/SKILL.md
