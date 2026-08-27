@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """BabiMind LLM router.
 
-OpenRouter Free is the only active LLM provider. Gemini and all other
-providers are intentionally disabled in this stage. Secrets are never
-printed or written to reports.
+OpenRouter Free is the only active LLM provider. Secrets are never printed or
+written to reports. Retries are bounded and quota failures are explicitly
+reported so a run cannot hang indefinitely.
 """
 from __future__ import annotations
 
 import argparse
 import json
 import os
+import random
 import time
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -22,7 +23,7 @@ DEFAULT_MODEL = "openrouter/free"
 URL = "https://openrouter.ai/api/v1/chat/completions"
 MAX_ATTEMPTS = 3
 REQUEST_TIMEOUT = 75
-RETRY_DELAYS = (3, 8)
+MAX_RETRY_SLEEP = 20
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "reports" / "babimind_provider_status.json"
@@ -34,6 +35,22 @@ def is_retryable(code: int, text: str) -> bool:
     return code in (408, 409, 429, 500, 502, 503, 504) or any(x in t for x in (
         "quota", "rate limit", "rate_limit", "resource_exhausted", "credits", "temporarily unavailable"
     ))
+
+
+def retry_after_seconds(headers, body: str) -> float | None:
+    value = headers.get("Retry-After") if headers else None
+    try:
+        if value is not None:
+            return min(MAX_RETRY_SLEEP, max(0.0, float(value)))
+    except ValueError:
+        pass
+    try:
+        info = json.loads(body).get("error", {}).get("metadata", {}).get("retry_after")
+        if info is not None:
+            return min(MAX_RETRY_SLEEP, max(0.0, float(info)))
+    except (ValueError, TypeError):
+        pass
+    return None
 
 
 def call_openrouter(key: str, model: str, prompt: str) -> dict:
@@ -52,9 +69,15 @@ def call_openrouter(key: str, model: str, prompt: str) -> dict:
     req = Request(URL, data=json.dumps(body).encode(), headers=headers, method="POST")
     with urlopen(req, timeout=REQUEST_TIMEOUT) as response:
         raw = json.loads(response.read().decode("utf-8"))
-    text = raw["choices"][0]["message"]["content"]
+    choices = raw.get("choices") or []
+    if not choices:
+        raise ValueError("OpenRouter returned no choices")
+    message = choices[0].get("message") or {}
+    text = message.get("content")
     if isinstance(text, list):
         text = "".join(part.get("text", "") for part in text if isinstance(part, dict))
+    if not isinstance(text, str) or not text.strip():
+        raise ValueError("OpenRouter returned empty content")
     result = json.loads(text)
     if not isinstance(result, dict):
         raise ValueError("OpenRouter returned JSON that is not an object")
@@ -76,20 +99,25 @@ def run(prompt: str) -> tuple[dict | None, dict]:
             statuses.append({"provider": PROVIDER, "status": "ok", "model": model, "attempt": attempt})
             return result, {"selected": PROVIDER, "model": model, "statuses": statuses}
         except HTTPError as exc:
-            body = exc.read().decode("utf-8", "replace")[:2000]
+            body = exc.read().decode("utf-8", "replace")[:4000]
             retryable = is_retryable(exc.code, body)
             status = "quota_exhausted" if exc.code == 429 or "quota" in body.lower() else "http_error"
-            statuses.append({"provider": PROVIDER, "status": status, "http_status": exc.code, "model": model, "attempt": attempt})
+            row = {"provider": PROVIDER, "status": status, "http_status": exc.code, "model": model, "attempt": attempt}
+            wait = retry_after_seconds(exc.headers, body)
+            if wait is not None:
+                row["retry_after_seconds"] = wait
+            statuses.append(row)
             print(f"[BabiMind OpenRouter] attempt={attempt} status={status} http={exc.code}", flush=True)
             if not retryable or attempt == MAX_ATTEMPTS:
                 break
-            time.sleep(RETRY_DELAYS[attempt - 1])
+            delay = wait if wait is not None else min(MAX_RETRY_SLEEP, 2 ** (attempt - 1) + random.random())
+            time.sleep(delay)
         except (URLError, TimeoutError, OSError, KeyError, json.JSONDecodeError, ValueError) as exc:
             statuses.append({"provider": PROVIDER, "status": "error", "error": str(exc)[:500], "model": model, "attempt": attempt})
             print(f"[BabiMind OpenRouter] attempt={attempt} error={type(exc).__name__}", flush=True)
             if attempt == MAX_ATTEMPTS:
                 break
-            time.sleep(RETRY_DELAYS[attempt - 1])
+            time.sleep(min(MAX_RETRY_SLEEP, 2 ** (attempt - 1) + random.random()))
 
     return None, {"selected": None, "model": model, "statuses": statuses}
 
@@ -99,7 +127,6 @@ def main() -> int:
     parser.add_argument("--prompt-file", type=Path)
     parser.add_argument("--output", type=Path, default=LLM_OUT)
     args = parser.parse_args()
-
     default_prompt = (
         "Analyze the supplied BabiMind market intelligence. Return JSON with exactly these top-level keys: "
         "regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, confidence, data_gaps. "
@@ -107,29 +134,15 @@ def main() -> int:
     )
     prompt = args.prompt_file.read_text(encoding="utf-8") if args.prompt_file else default_prompt
     result, meta = run(prompt)
-
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     args.output.parent.mkdir(parents=True, exist_ok=True)
-
     if result is None:
-        payload = {
-            "status": "unavailable",
-            "provider": PROVIDER,
-            "model": meta.get("model"),
-            "analysis": None,
-            "provider_status": meta,
-        }
+        payload = {"status": "unavailable", "provider": PROVIDER, "model": meta.get("model"), "analysis": None, "provider_status": meta}
         args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         print("[BabiMind OpenRouter] unavailable after bounded retries", flush=True)
         return 2
-
-    payload = {
-        "status": "ok",
-        "provider": PROVIDER,
-        "model": meta.get("model"),
-        "analysis": result,
-    }
+    payload = {"status": "ok", "provider": PROVIDER, "model": meta.get("model"), "analysis": result}
     args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[BabiMind OpenRouter] selected={PROVIDER} model={meta['model']}", flush=True)
     return 0
