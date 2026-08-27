@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Multi-provider BabiMind router. DeepSeek first; then OpenAI, Anthropic, Gemini, Kimi."""
+"""BabiMind LLM router: DeepSeek first, OpenRouter Free next, then other providers."""
 from __future__ import annotations
 import json, os
 from pathlib import Path
@@ -8,9 +8,12 @@ from urllib.error import HTTPError, URLError
 
 ORDER=[
 ("deepseek","DEEPSEEK_API_KEY","DEEPSEEK_MODEL","deepseek-chat","https://api.deepseek.com/chat/completions"),
+("openrouter","OPENROUTER_API_KEY","OPENROUTER_MODEL","openrouter/free","https://openrouter.ai/api/v1/chat/completions"),
+("groq","GROQ_API_KEY","GROQ_MODEL","openai/gpt-oss-120b","https://api.groq.com/openai/v1/chat/completions"),
+("cerebras","CEREBRAS_API_KEY","CEREBRAS_MODEL","llama-4-scout-17b-16e-instruct","https://api.cerebras.ai/v1/chat/completions"),
+("gemini","GEMINI_API_KEY","GEMINI_MODEL","gemini-flash-latest","https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"),
 ("openai","OPENAI_API_KEY","OPENAI_MODEL","gpt-5-mini","https://api.openai.com/v1/chat/completions"),
 ("anthropic","ANTHROPIC_API_KEY","ANTHROPIC_MODEL","claude-sonnet-4-5","https://api.anthropic.com/v1/messages"),
-("gemini","GEMINI_API_KEY","GEMINI_MODEL","gemini-flash-latest","https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"),
 ("kimi","MOONSHOT_API_KEY","MOONSHOT_MODEL","kimi-k2.5","https://api.moonshot.ai/v1/chat/completions")]
 OUT=Path(__file__).resolve().parents[1]/"reports"/"babimind_provider_status.json"
 
