@@ -21,24 +21,41 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: Install Graphify
+
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade graphifyy
+
+      - name: Validate Gemini configuration
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          test -n "$GEMINI_API_KEY" || { echo 'GEMINI_API_KEY secret is missing'; exit 1; }
+          echo 'Gemini API key is configured.'
+
       - name: Run Graphify incremental index
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: graphify . --update
+
       - name: Run Graph Intelligence adapter
         run: python scripts/babimind_graph.py
+
       - name: Run unified BabiMind pipeline
         run: python scripts/babimind_pipeline.py
+
       - name: Run Gemini BabiMind reasoning
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ env.GEMINI_MODEL }}
         run: python scripts/babimind_gemini.py
+
       - name: Commit BabiMind + Graph + Gemini reports
         run: |
           git config user.name 'github-actions[bot]'
