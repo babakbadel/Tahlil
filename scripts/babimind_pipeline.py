@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Unified BabiMind source -> signal pipeline with Graph Intelligence."""
+"""Unified BabiMind source -> signal pipeline with Graph Intelligence.
+
+Source checks are concurrent so one slow/unavailable endpoint cannot stall the
+entire pipeline for many minutes.
+"""
 from __future__ import annotations
 
 import json
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -13,12 +18,14 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "babimind_source_health.json"
 OUT = ROOT / "reports" / "babimind_pipeline.json"
 GRAPH_OUT = ROOT / "reports" / "babimind_graph.json"
+MAX_WORKERS = 12
+DEFAULT_TIMEOUT = 8
 
 
-def endpoint_check(url: str, timeout: int = 15) -> dict:
+def endpoint_check(url: str, timeout: int = DEFAULT_TIMEOUT) -> dict:
     started = time.monotonic()
     try:
-        req = Request(url, headers={"User-Agent": "BabiMind-Pipeline/1.2"})
+        req = Request(url, headers={"User-Agent": "BabiMind-Pipeline/1.3"})
         with urlopen(req, timeout=timeout) as response:
             body = response.read(8192)
             status = getattr(response, "status", 200)
@@ -78,21 +85,41 @@ def load_graph() -> dict:
                 "graph_regime": "error", "reason": str(exc)}
 
 
-def main() -> None:
-    catalog = json.loads(CONFIG.read_text(encoding="utf-8"))
+def check_source(src: dict) -> dict:
+    timeout = min(max(int(src.get("timeout_seconds", DEFAULT_TIMEOUT)), 2), DEFAULT_TIMEOUT)
+    result = endpoint_check(src["url"], timeout)
     now = datetime.now(timezone.utc)
-    rows = []
-    for src in catalog.get("sources", []):
-        result = endpoint_check(src["url"], int(src.get("timeout_seconds", 15)))
-        fresh = freshness(src, now)
-        state = operational_state(result, fresh)
-        availability = 1.0 if state == "available" else 0.0
-        conf = confidence(src, availability, fresh)
-        weight = 0.0 if state in {"unavailable", "error", "partial"} else round(0.25 + 0.75*conf, 4)
-        rows.append({**src, **result, "state":state, "freshness":fresh,
-                     "confidence":conf, "signal_weight":weight,
-                     "eligible_for_aggregation":weight > 0.0,
-                     "retry_next_run":state != "available", "checked_at":now.isoformat()})
+    fresh = freshness(src, now)
+    state = operational_state(result, fresh)
+    availability = 1.0 if state == "available" else 0.0
+    conf = confidence(src, availability, fresh)
+    weight = 0.0 if state in {"unavailable", "error", "partial"} else round(0.25 + 0.75*conf, 4)
+    return {**src, **result, "state":state, "freshness":fresh,
+            "confidence":conf, "signal_weight":weight,
+            "eligible_for_aggregation":weight > 0.0,
+            "retry_next_run":state != "available", "checked_at":now.isoformat()}
+
+
+def main() -> None:
+    started = time.monotonic()
+    catalog = json.loads(CONFIG.read_text(encoding="utf-8"))
+    sources = catalog.get("sources", [])
+    rows = [None] * len(sources)
+
+    # Concurrent health checks: 68 sources now take roughly the slowest batch,
+    # rather than 68 * timeout_seconds when endpoints are unavailable.
+    with ThreadPoolExecutor(max_workers=min(MAX_WORKERS, max(1, len(sources)))) as pool:
+        futures = {pool.submit(check_source, src): i for i, src in enumerate(sources)}
+        for future in as_completed(futures):
+            i = futures[future]
+            try:
+                rows[i] = future.result()
+            except Exception as exc:
+                src = sources[i]
+                rows[i] = {**src, "state":"error", "confidence":0.0,
+                           "signal_weight":0.0, "eligible_for_aggregation":False,
+                           "retry_next_run":True, "error":repr(exc),
+                           "checked_at":datetime.now(timezone.utc).isoformat()}
 
     groups = {}
     for r in rows:
@@ -108,13 +135,15 @@ def main() -> None:
     active = sum(r["eligible_for_aggregation"] for r in rows)
     unavailable = sum(r["state"] == "unavailable" for r in rows)
     graph = load_graph()
-    payload={"model":"BabiMind", "pipeline_version":"1.2", "generated_at":now.isoformat(),
+    elapsed = round(time.monotonic() - started, 2)
+    payload={"model":"BabiMind", "pipeline_version":"1.3", "generated_at":datetime.now(timezone.utc).isoformat(),
              "stages":["health","content","freshness","confidence","fallback","signal_weight","graph_intelligence"],
              "missing_data_policy":"SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN",
+             "execution":{"max_workers":MAX_WORKERS,"default_timeout_seconds":DEFAULT_TIMEOUT,"elapsed_seconds":elapsed},
              "summary":{"total_sources":len(rows),"active_sources":active,"unavailable_sources":unavailable},
              "graph_intelligence":graph, "sources":rows, "routing":routing}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"BabiMind pipeline: {len(rows)} sources, {active} active, {unavailable} unavailable; graph={graph.get('graph_regime')}")
+    print(f"BabiMind pipeline: {len(rows)} sources, {active} active, {unavailable} unavailable; graph={graph.get('graph_regime')}; elapsed={elapsed}s")
 
 if __name__ == "__main__": main()
