@@ -449,13 +449,13 @@
       "degree": 16
     },
     {
-      "id": "app_data_brsapi_stream_realtimehub",
-      "label": "RealtimeHub",
+      "id": "app_decision_models_decisionrecord",
+      "label": "DecisionRecord",
       "degree": 15
     },
     {
-      "id": "app_decision_models_decisionrecord",
-      "label": "DecisionRecord",
+      "id": "app_data_brsapi_stream_realtimehub",
+      "label": "RealtimeHub",
       "degree": 15
     },
     {
@@ -479,12 +479,23 @@
       "degree": 11
     },
     {
-      "id": "app_data_brsapi_realtime_realtimecollector",
-      "label": "RealtimeCollector",
+      "id": "app_decision_models_decisionprediction",
+      "label": "DecisionPrediction",
       "degree": 10
     }
   ],
   "surprises": [
+    {
+      "source": "test_hub_fanout_and_bounded_queue()",
+      "target": "RealtimeHub",
+      "source_files": [
+        "tests/test_stream.py",
+        "app/data/brsapi/stream.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
     {
       "source": "test_normalize_empty_feed_is_partial()",
       "target": "normalize()",
@@ -508,17 +519,6 @@
       "why": "connects across different repos/directories; peripheral node `test_normalize_splits_equity_and_option()` unexpectedly reaches hub `normalize()`"
     },
     {
-      "source": "test_hub_fanout_and_bounded_queue()",
-      "target": "RealtimeHub",
-      "source_files": [
-        "tests/test_stream.py",
-        "app/data/brsapi/stream.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "uses",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
-    },
-    {
       "source": "BabiMind Research & News Monitor",
       "target": "Bobby Hosh / Babak Analysis Engine",
       "source_files": [
@@ -531,7 +531,7 @@
     },
     {
       "source": "RealtimeCollector",
-      "target": "BrsApiError",
+      "target": "BrsApiClient",
       "source_files": [
         "app/data/brsapi/realtime.py",
         "app/data/brsapi/client.py"
@@ -542,7 +542,7 @@
     }
   ],
   "tokens": {
-    "input": 60372,
-    "output": 1936
+    "input": 0,
+    "output": 0
   }
 }

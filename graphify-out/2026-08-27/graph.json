@@ -3570,6 +3570,7 @@
     {
       "id": "skills_graphify_skill",
       "label": "Graphify Skill - Tahlil",
+      "_origin": "semantic",
       "community": 11,
       "file_type": "code",
       "norm_label": "graphify skill - tahlil",
@@ -3579,6 +3580,7 @@
     {
       "id": "skills_iran_market_realtime_skill",
       "label": "Iran Market Realtime Skill",
+      "_origin": "semantic",
       "community": 11,
       "file_type": "code",
       "norm_label": "iran market realtime skill",
@@ -3588,6 +3590,7 @@
     {
       "id": "bobby_hosh_engine",
       "label": "Bobby Hosh / Babak Analysis Engine",
+      "_origin": "semantic",
       "community": 11,
       "file_type": "concept",
       "norm_label": "bobby hosh / babak analysis engine",
@@ -3597,6 +3600,7 @@
     {
       "id": "tsetmc_official_source",
       "label": "TSETMC",
+      "_origin": "semantic",
       "community": 11,
       "file_type": "concept",
       "norm_label": "tsetmc",
@@ -3606,6 +3610,7 @@
     {
       "id": "research_advisor_network_20_plus_10_core",
       "label": "BabiMind Economic Advisor Network",
+      "_origin": "semantic",
       "community": 11,
       "file_type": "document",
       "norm_label": "babimind economic advisor network",
@@ -3615,6 +3620,7 @@
     {
       "id": "research_research_source_monitor_monitor",
       "label": "BabiMind Research & News Monitor",
+      "_origin": "semantic",
       "community": 11,
       "file_type": "document",
       "norm_label": "babimind research & news monitor",
@@ -3624,6 +3630,7 @@
     {
       "id": "reports_options_babimind_ranked_khosapa",
       "label": "Khosapa (\u062e\u0633\u0627\u067e\u0627) Options Ranking",
+      "_origin": "semantic",
       "community": 20,
       "file_type": "document",
       "norm_label": "khosapa (\u062e\u0633\u0627\u067e\u0627) options ranking",
@@ -3633,6 +3640,7 @@
     {
       "id": "reports_options_babimind_scenario_ranked_summary",
       "label": "BabiMind Option Scenario Ranking",
+      "_origin": "semantic",
       "community": 20,
       "file_type": "document",
       "norm_label": "babimind option scenario ranking",
@@ -3642,6 +3650,7 @@
     {
       "id": "reports_options_babimind_ranked_fomeli",
       "label": "Fomeli (\u0641\u0645\u0644\u06cc) Options Ranking",
+      "_origin": "semantic",
       "community": 24,
       "file_type": "document",
       "norm_label": "fomeli (\u0641\u0645\u0644\u06cc) options ranking",
@@ -3650,6 +3659,7 @@
     {
       "id": "reports_options_babimind_ranked_shapna",
       "label": "Shapna (\u0634\u067e\u0646\u0627) Options Ranking",
+      "_origin": "semantic",
       "community": 25,
       "file_type": "document",
       "norm_label": "shapna (\u0634\u067e\u0646\u0627) options ranking",
@@ -3658,6 +3668,7 @@
     {
       "id": "reports_options_babimind_ranked_webmellat",
       "label": "Webmellat (\u0648\u0628\u0645\u0644\u062a) Options Ranking",
+      "_origin": "semantic",
       "community": 26,
       "file_type": "document",
       "norm_label": "webmellat (\u0648\u0628\u0645\u0644\u062a) options ranking",
@@ -3666,6 +3677,7 @@
     {
       "id": "skills_headroom_skill",
       "label": "Headroom Skill",
+      "_origin": "semantic",
       "community": 28,
       "file_type": "code",
       "norm_label": "headroom skill",
@@ -11206,6 +11218,7 @@
       "source": "skills_graphify_skill",
       "target": "bobby_hosh_engine",
       "relation": "conceptually_related_to",
+      "_origin": "semantic",
       "confidence": "EXTRACTED",
       "confidence_score": 0.95,
       "source_file": "skills/graphify/SKILL.md"
@@ -11214,6 +11227,7 @@
       "source": "skills_iran_market_realtime_skill",
       "target": "bobby_hosh_engine",
       "relation": "calls",
+      "_origin": "semantic",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "skills/iran-market-realtime/SKILL.md"
@@ -11222,6 +11236,7 @@
       "source": "skills_iran_market_realtime_skill",
       "target": "tsetmc_official_source",
       "relation": "references",
+      "_origin": "semantic",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "skills/iran-market-realtime/SKILL.md"
@@ -11230,6 +11245,7 @@
       "source": "research_advisor_network_20_plus_10_core",
       "target": "research_research_source_monitor_monitor",
       "relation": "participate_in",
+      "_origin": "semantic",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "research/advisor-network-20-plus-10.md"
@@ -11238,6 +11254,7 @@
       "source": "research_research_source_monitor_monitor",
       "target": "bobby_hosh_engine",
       "relation": "shares_data_with",
+      "_origin": "semantic",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "research/research-source-monitor.md"
@@ -11246,6 +11263,7 @@
       "source": "reports_options_babimind_scenario_ranked_summary",
       "target": "reports_options_babimind_ranked_khosapa",
       "relation": "semantically_similar_to",
+      "_origin": "semantic",
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "reports/options_babimind_scenario_ranked.md"

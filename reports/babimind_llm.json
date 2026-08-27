@@ -3,53 +3,237 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "regime": "Bullish",
-    "scenarios": [
-      {
-        "name": "Sustained Bullish Trajectory",
-        "description": "Driven by dominant real-time market signals from equity, options, and SSE sectors. Supported by stable monetary policy (ECB) and resilient commodity prices (Gold). Implies continued capital inflows and upward pressure on risk assets.",
-        "evidence": "Graph top drivers indicate 0.75 contribution from realtime_api_equity_market, options_market, and SSE_market. World Bank and ECB data confirm stable macro foundations.",
-        "inference": "The convergence of high-frequency market data and traditional macro indicators suggests a positive feedback loop reinforcing asset prices.",
-        "uncertainty": "Outcome depends on sustained liquidity in real-time markets and absence of external shock to commodity demand."
+    "regime": {
+      "current": "bullish",
+      "evidence": [
+        "Graph intelligence reports graph_regime as 'bullish' with graph_score 1.0 and graph_confidence 0.75"
+      ],
+      "uncertainty": "Regime classification derived from internal graph model signals rather than direct market price data; no TSETMC or TSE price feeds available to confirm external market behavior"
+    },
+    "scenarios": {
+      "base_case": {
+        "description": "Iran market remains in bullish regime driven by domestic liquidity and government intervention",
+        "probability": 0.65,
+        "evidence": [
+          "Graph regime is bullish",
+          "Graph top drivers include realtime_api_equity_market and scan_market_main contributing 0.75 each"
+        ],
+        "uncertainty": "No direct access to TSETMC price data or TSE gateway to validate actual market movements"
       },
-      {
-        "name": "Corrective Volatility",
-        "description": "Potential short-term correction if scan-market processing lags or geopolitical tensions disrupt specific regional nodes (e.g., Iran-linked segments).",
-        "evidence": "Graph risk drivers show significant weight on scan_market processes (0.2572) and specific regional skills (skills_iran_market_realtime_skill).",
-        "inference": "Systemic fragility exists in secondary data pipelines which could trigger cascading effects in the broader market ecosystem.",
-        "uncertainty": "Low probability of systemic collapse given the 'bullish' graph regime but non-zero risk from identified bottlenecks."
+      "bearish_shift": {
+        "description": "External sanctions pressure or currency devaluation triggers risk-off sentiment",
+        "probability": 0.25,
+        "evidence": [
+          "High correlation penalty (0.2632) suggests potential instability in signal reliability",
+          "Multiple Iranian market data sources unavailable (TSETMC, TSE, CBI)"
+        ],
+        "uncertainty": "No current macroeconomic indicators from CBI or Statistical Center of Iran to assess economic stress"
+      },
+      "stagnation": {
+        "description": "Market enters consolidation phase due to lack of clear directional catalysts",
+        "probability": 0.1,
+        "evidence": [
+          "Missing data policy is SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN, indicating intermittent data availability",
+          "Only 25 of 64 sources active, 23 unavailable"
+        ],
+        "uncertainty": "Insufficient real-time data to determine momentum or trend strength"
       }
-    ],
+    },
     "game_theory": {
-      "strategic_interaction": "High-frequency trading and derivative markets (options/equities) exhibit asymmetric information advantages. The 'scan' nodes acting as information brokers reduce uncertainty, leading to rapid equilibrium adjustments.",
-      "signaling_mechanism": "Real-time market snapshots serve as signals to institutional investors, creating herd behavior that reinforces the bullish regime.",
-      "player_types": "Hedge funds and algorithmic traders dominate the top-weighted edges, competing for informational superiority over slower data providers.",
-      "uncertainty": "Model assumes rational actors; behavioral biases in extreme stress events may deviate from theoretical equilibrium."
+      "strategic_actors": [
+        {
+          "actor": "Central Bank of Iran",
+          "incentives": [
+            "Maintain rial stability",
+            "Control inflation",
+            "Support domestic equity markets"
+          ],
+          "constraints": [
+            "Sanctions limiting foreign exchange reserves",
+            "Limited access to SWIFT"
+          ],
+          "uncertainty": "CBI website currently unavailable; no direct monetary policy data accessible"
+        },
+        {
+          "actor": "Iranian Government",
+          "incentives": [
+            "Maintain social stability",
+            "Support employment",
+            "Manage subsidy costs"
+          ],
+          "constraints": [
+            "Oil revenue volatility",
+            "Sanctions impact on trade"
+          ],
+          "uncertainty": "No access to Ministry of Petroleum or SHANA data for real-time energy sector insights"
+        },
+        {
+          "actor": "Domestic Investors",
+          "incentives": [
+            "Seek returns in equities amid currency uncertainty",
+            "Hedge with gold and USD"
+          ],
+          "constraints": [
+            "Capital controls",
+            "Limited international diversification options"
+          ],
+          "uncertainty": "TSETMC money flow and client type data unavailable to assess investor behavior"
+        }
+      ],
+      "feedback_loops": [
+        {
+          "loop": "Bullish market sentiment → Increased domestic investment → Higher demand for local assets → Potential rial strengthening → Reduced import costs → Improved macro stability → Reinforces bullish sentiment",
+          "type": "positive_feedback",
+          "confidence": 0.75,
+          "uncertainty": "Loop assumes functional domestic market infrastructure; data gaps prevent validation"
+        },
+        {
+          "loop": "Sanctions escalation → Reduced oil exports → Lower government revenue → Decreased market liquidity → Bearish market sentiment → Capital flight to hard assets → Weakened rial → Higher import prices → Inflationary pressure → Policy tightening → Further market decline",
+          "type": "negative_feedback",
+          "confidence": 0.6,
+          "uncertainty": "Depends on external geopolitical developments not captured in current data sources"
+        }
+      ]
     },
     "dynamic_system": {
-      "feedback_loop": "Positive feedback loop exists between real-time price discovery (equity/options) and underlying macro stability (ECB/World Bank). Strong sentiment accelerates price movements, which further attracts capital.",
-      "system_stability": "Stabilized by multi-source redundancy (World Bank, ECB, LBMA) mitigating single-point-of-failure risks observed in other domains.",
-      "state_transition": "Current state is a stable attractor ('bullish') maintained by high signal weights (>0.75) from core market instruments.",
-      "uncertainty": "External exogenous shocks (geopolitical, supply chain) can push the system into a negative feedback loop (crash) if not absorbed by the current stabilizing forces."
+      "key_variables": [
+        "Oil prices (JODI available, OPEC unavailable)",
+        "Gold prices (LBMA and World Gold Council available)",
+        "USD exchange rate (ECB FX data available)",
+        "Domestic equity market performance (TSETMC/TSE unavailable)",
+        "Inflation rate (World Bank and CEIC available)",
+        "Trade volumes (UN Comtrade unavailable, UNCTAD unavailable)"
+      ],
+      "interactions": [
+        {
+          "from": "Oil prices",
+          "to": "Government revenue",
+          "relationship": "positive",
+          "confidence": 0.85,
+          "uncertainty": "JODI data confirms oil price tracking but export volume data missing"
+        },
+        {
+          "from": "Government revenue",
+          "to": "Market liquidity",
+          "relationship": "positive",
+          "confidence": 0.7,
+          "uncertainty": "No direct fiscal data from Iranian government sources"
+        },
+        {
+          "from": "Market liquidity",
+          "to": "Equity market performance",
+          "relationship": "positive",
+          "confidence": 0.75,
+          "uncertainty": "TSETMC and TSE data unavailable to confirm relationship"
+        },
+        {
+          "from": "Equity market performance",
+          "to": "Investor sentiment",
+          "relationship": "positive",
+          "confidence": 0.65,
+          "uncertainty": "No behavioral finance data available"
+        }
+      ],
+      "delays": [
+        "Policy implementation lag (monetary/fiscal responses to market conditions)",
+        "Sanctions impact transmission lag (external shocks to domestic markets)",
+        "Data reporting lag (especially for Iranian domestic indicators)"
+      ]
     },
     "political_economy": {
-      "macro_dynamics": "Central bank policies (ECB) provide a floor for growth, while commodity markets (Gold/LBMA) reflect geopolitical risk premiums, particularly evident in the Iran-specific skill node.",
-      "power_distribution": "Information asymmetry is reduced by advanced scanning capabilities, shifting power towards agile market participants who process data faster than traditional institutions (IMF/BIS).",
-      "governance_impact": "Partial failure of major indices (IMF, OECD, BIS) highlights vulnerabilities in global governance transparency, potentially distorting investor trust.",
-      "uncertainty": "Debt sustainability metrics are incomplete due to missing IMF SDMX data, limiting precise assessment of sovereign risk propagation."
+      "regime_type": "theocratic-republican hybrid",
+      "key_institutions": [
+        "Supreme Leader's office",
+        "Presidency",
+        "Majlis (Parliament)",
+        "Guardian Council",
+        "Expediency Council",
+        "IRGC (Islamic Revolutionary Guard Corps)"
+      ],
+      "economic_policies": [
+        "Subsidization management",
+        "Import substitution programs",
+        "Domestic manufacturing incentives",
+        "Currency dual-exchange system"
+      ],
+      "political_risks": [
+        "Sanctions renewal or escalation",
+        "Domestic protests over economic conditions",
+        "Leadership succession uncertainty",
+        "IRGC influence on economic sectors"
+      ],
+      "uncertainty": "No direct access to Iranian government policy announcements or political developments; analysis based on structural understanding and available international data"
     },
     "market_implications": {
-      "asset_allocation": "Capital is likely rebalanced toward equities and precious metals, with lower yields demanded for safe-haven assets.",
-      "currency_impact": "Strong dollar dynamics supported by USD-based market leaders (LBMA) and strong commodity prices.",
-      "supply_chain": "FAOSTAT data confirms food security stability, reducing immediate inflationary pressure on consumer goods.",
-      "investor_behavior": "Increased reliance on real-time analytics and algorithmic execution, increasing market efficiency but also volatility susceptibility."
+      "equities": {
+        "outlook": "Cautiously bullish in short term",
+        "evidence": [
+          "Graph regime indicates bullish sentiment",
+          "High contribution from equity market signals (0.75)"
+        ],
+        "uncertainty": "No actual price data from TSETMC or TSE to validate directional bias"
+      },
+      "gold": {
+        "outlook": "Stable to upward",
+        "evidence": [
+          "World Gold Council and LBMA data available",
+          "Traditional safe-haven demand in sanctioned economies"
+        ],
+        "uncertainty": "No Iranian-specific gold demand data accessible"
+      },
+      "foreign_exchange": {
+        "outlook": "Volatility expected",
+        "evidence": [
+          "ECB USD/EUR data available",
+          "Historical rial volatility patterns"
+        ],
+        "uncertainty": "No direct CBI exchange rate data; unofficial market rates unknown"
+      },
+      "commodities": {
+        "outlook": "Oil prices key driver",
+        "evidence": [
+          "JODI oil data available",
+          "Iran as OPEC member with production quotas"
+        ],
+        "uncertainty": "Export capacity and sanctioned buyer arrangements not visible in data"
+      }
     },
-    "confidence": 0.72,
+    "confidence": {
+      "overall": 0.75,
+      "methodology": "Weighted aggregation of available source confidence scores (0.585 average for active sources)",
+      "limitations": [
+        "23 of 64 data sources unavailable",
+        "All Iranian domestic market data sources (TSETMC, TSE, CBI) currently inaccessible",
+        "Graph confidence at 0.75 reflects internal model reliability, not external market confirmation"
+      ]
+    },
     "data_gaps": [
-      "IMF SDMX Central API failure prevents access to detailed fiscal data and debt sustainability metrics.",
-      "BIS and OECD site unavailability blocks comprehensive financial stability reporting.",
-      "FRED and UN Comtrade timeouts limit labor productivity and full trade volume analysis.",
-      "Missing cross-border transaction data hampers accurate assessment of capital flow dynamics."
+      "TSETMC market data (all endpoints timing out)",
+      "TSE Official Gateway unavailable",
+      "Central Bank of Iran website inaccessible",
+      "Statistical Center of Iran connection reset",
+      "Iran Customs DNS resolution failure",
+      "Iran Mercantile Exchange timeout",
+      "Iran Energy Exchange SSL certificate error",
+      "Ministry of Industry Mine Trade timeout",
+      "IMF Data API returning empty content",
+      "IMF SDMX Central HTTP 400 error",
+      "BIS Statistics HTTP 404 error",
+      "OECD Data HTTP 403 error",
+      "FRED timeout",
+      "EIA timeout",
+      "IEA Data HTTP 403 error",
+      "OPEC HTTP 403 error",
+      "UN Comtrade HTTP 404 error",
+      "UNCTADstat timeout",
+      "ILOStat HTTP 403 error",
+      "Reuters HTTP 401 error",
+      "Investing Iran Markets HTTP 403 error",
+      "S&P Global HTTP 403 error",
+      "LME HTTP 403 error",
+      "CME Group HTTP 403 error",
+      "Energy Institute HTTP 403 error",
+      "UNDP Data HTTP 403 error"
     ]
   }
 }
