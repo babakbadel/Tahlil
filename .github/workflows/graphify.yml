@@ -7,7 +7,8 @@ on:
 permissions:
   contents: read
 
-env: {}
+env:
+  GRAPHIFY_BACKEND: local
 
 jobs:
   graphify:
@@ -33,9 +34,10 @@ jobs:
           graphify --help >/dev/null
           echo 'Graphify local runtime: OK'
 
-      - name: Run Graphify locally
+      - name: Run Graphify without Gemini
         run: |
           set -o pipefail
+          unset GEMINI_API_KEY GEMINI_MODEL
           graphify . --code-only --update 2>&1 | tee graphify.log
 
       - name: Validate graph output
