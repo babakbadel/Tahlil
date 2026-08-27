@@ -13,13 +13,12 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GEMINI_MODEL: gemini-flash-latest
   OPENROUTER_MODEL: openrouter/free
 
 jobs:
   pipeline:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install --upgrade 'graphifyy[gemini]' openai
+          python -m pip install --upgrade graphifyy
 
       - name: Check OpenRouter configuration
         env:
@@ -46,35 +45,25 @@ jobs:
           fi
           echo 'OpenRouter API key: configured'
 
-      - name: Graphify incremental index
+      - name: Graphify local/code index
         id: graphify
         continue-on-error: true
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ env.GEMINI_MODEL }}
         run: |
           set -o pipefail
-          graphify . --update 2>&1 | tee graphify.log
+          graphify . --code-only --update 2>&1 | tee graphify.log
           status=${PIPESTATUS[0]}
-          if grep -Eiq '429|RESOURCE_EXHAUSTED|quota exceeded|quota.*limit|current quota|free_tier' graphify.log; then
-            echo 'quota_exhausted=true' >> "$GITHUB_OUTPUT"
-            echo '::warning::GEMINI QUOTA EXHAUSTED — semantic Graphify skipped; continuing with local extraction.'
-          else
-            echo 'quota_exhausted=false' >> "$GITHUB_OUTPUT"
+          if [ "$status" -ne 0 ]; then
+            echo '::warning::Local Graphify failed; BabiMind will continue with the source pipeline.'
           fi
-          exit $status
-
-      - name: Graphify local/code fallback
-        if: steps.graphify.outcome == 'failure'
-        run: |
-          echo 'Graphify semantic extraction failed. Running local code-only extraction so BabiMind can continue.'
-          graphify . --code-only || true
+          exit 0
 
       - name: Build graph intelligence
-        run: python scripts/babimind_graph.py
+        run: |
+          python scripts/babimind_graph.py
 
       - name: Run unified source pipeline
-        run: python scripts/babimind_pipeline.py
+        run: |
+          python scripts/babimind_pipeline.py
 
       - name: Build OpenRouter prompt from current BabiMind data
         run: |
@@ -91,10 +80,11 @@ jobs:
           ]
           for p in files:
               if p.exists():
-                  text=p.read_text(encoding='utf-8')
-                  if len(text)>90000: text=text[:90000]+'\n[TRUNCATED]'
+                  text = p.read_text(encoding='utf-8')
+                  if len(text) > 90000:
+                      text = text[:90000] + '\n[TRUNCATED]'
                   parts.append(f'\nSOURCE FILE: {p}\n{text}')
-          Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts),encoding='utf-8')
+          Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts), encoding='utf-8')
           PY
 
       - name: Run BabiMind on OpenRouter Free
@@ -112,9 +102,6 @@ jobs:
           if [ -f reports/babimind_provider_status.json ]; then
             cat reports/babimind_provider_status.json
           fi
-          if [ -f graphify.log ] && grep -Eiq '429|RESOURCE_EXHAUSTED|quota exceeded|quota.*limit|free_tier' graphify.log; then
-            echo '::warning::Gemini quota exhausted. BabiMind continued through local extraction + OpenRouter.'
-          fi
 
       - name: Validate BabiMind outputs
         run: |
@@ -122,16 +109,18 @@ jobs:
           import json
           from pathlib import Path
           for p in ('reports/babimind_graph.json','reports/babimind_pipeline.json','reports/babimind_llm.json'):
-              q=Path(p)
+              q = Path(p)
               if not q.exists() or q.stat().st_size == 0:
                   raise SystemExit(f'Missing/empty output: {p}')
-          d=json.loads(Path('reports/babimind_llm.json').read_text(encoding='utf-8'))
+          d = json.loads(Path('reports/babimind_llm.json').read_text(encoding='utf-8'))
           if d.get('status') != 'ok':
               raise SystemExit('OpenRouter inference did not produce a valid BabiMind result')
-          required=('regime','scenarios','game_theory','dynamic_system','political_economy','market_implications','confidence','data_gaps')
-          missing=[k for k in required if k not in d.get('analysis',{})]
+          required = ('regime','scenarios','game_theory','dynamic_system','political_economy','market_implications','confidence','data_gaps')
+          missing = [k for k in required if k not in d.get('analysis', {})]
           if missing:
               raise SystemExit(f'BabiMind output missing keys: {missing}')
+          if d.get('provider') != 'openrouter':
+              raise SystemExit(f'Unexpected provider: {d.get("provider")}')
           print(f"BabiMind OK: provider={d.get('provider')} model={d.get('model')}")
           PY
 
