@@ -1,0 +1,55 @@
+{
+  "status": "ok",
+  "provider": "openrouter",
+  "model": "openrouter/free",
+  "analysis": {
+    "regime": "Bullish",
+    "scenarios": [
+      {
+        "name": "Sustained Bullish Trajectory",
+        "description": "Driven by dominant real-time market signals from equity, options, and SSE sectors. Supported by stable monetary policy (ECB) and resilient commodity prices (Gold). Implies continued capital inflows and upward pressure on risk assets.",
+        "evidence": "Graph top drivers indicate 0.75 contribution from realtime_api_equity_market, options_market, and SSE_market. World Bank and ECB data confirm stable macro foundations.",
+        "inference": "The convergence of high-frequency market data and traditional macro indicators suggests a positive feedback loop reinforcing asset prices.",
+        "uncertainty": "Outcome depends on sustained liquidity in real-time markets and absence of external shock to commodity demand."
+      },
+      {
+        "name": "Corrective Volatility",
+        "description": "Potential short-term correction if scan-market processing lags or geopolitical tensions disrupt specific regional nodes (e.g., Iran-linked segments).",
+        "evidence": "Graph risk drivers show significant weight on scan_market processes (0.2572) and specific regional skills (skills_iran_market_realtime_skill).",
+        "inference": "Systemic fragility exists in secondary data pipelines which could trigger cascading effects in the broader market ecosystem.",
+        "uncertainty": "Low probability of systemic collapse given the 'bullish' graph regime but non-zero risk from identified bottlenecks."
+      }
+    ],
+    "game_theory": {
+      "strategic_interaction": "High-frequency trading and derivative markets (options/equities) exhibit asymmetric information advantages. The 'scan' nodes acting as information brokers reduce uncertainty, leading to rapid equilibrium adjustments.",
+      "signaling_mechanism": "Real-time market snapshots serve as signals to institutional investors, creating herd behavior that reinforces the bullish regime.",
+      "player_types": "Hedge funds and algorithmic traders dominate the top-weighted edges, competing for informational superiority over slower data providers.",
+      "uncertainty": "Model assumes rational actors; behavioral biases in extreme stress events may deviate from theoretical equilibrium."
+    },
+    "dynamic_system": {
+      "feedback_loop": "Positive feedback loop exists between real-time price discovery (equity/options) and underlying macro stability (ECB/World Bank). Strong sentiment accelerates price movements, which further attracts capital.",
+      "system_stability": "Stabilized by multi-source redundancy (World Bank, ECB, LBMA) mitigating single-point-of-failure risks observed in other domains.",
+      "state_transition": "Current state is a stable attractor ('bullish') maintained by high signal weights (>0.75) from core market instruments.",
+      "uncertainty": "External exogenous shocks (geopolitical, supply chain) can push the system into a negative feedback loop (crash) if not absorbed by the current stabilizing forces."
+    },
+    "political_economy": {
+      "macro_dynamics": "Central bank policies (ECB) provide a floor for growth, while commodity markets (Gold/LBMA) reflect geopolitical risk premiums, particularly evident in the Iran-specific skill node.",
+      "power_distribution": "Information asymmetry is reduced by advanced scanning capabilities, shifting power towards agile market participants who process data faster than traditional institutions (IMF/BIS).",
+      "governance_impact": "Partial failure of major indices (IMF, OECD, BIS) highlights vulnerabilities in global governance transparency, potentially distorting investor trust.",
+      "uncertainty": "Debt sustainability metrics are incomplete due to missing IMF SDMX data, limiting precise assessment of sovereign risk propagation."
+    },
+    "market_implications": {
+      "asset_allocation": "Capital is likely rebalanced toward equities and precious metals, with lower yields demanded for safe-haven assets.",
+      "currency_impact": "Strong dollar dynamics supported by USD-based market leaders (LBMA) and strong commodity prices.",
+      "supply_chain": "FAOSTAT data confirms food security stability, reducing immediate inflationary pressure on consumer goods.",
+      "investor_behavior": "Increased reliance on real-time analytics and algorithmic execution, increasing market efficiency but also volatility susceptibility."
+    },
+    "confidence": 0.72,
+    "data_gaps": [
+      "IMF SDMX Central API failure prevents access to detailed fiscal data and debt sustainability metrics.",
+      "BIS and OECD site unavailability blocks comprehensive financial stability reporting.",
+      "FRED and UN Comtrade timeouts limit labor productivity and full trade volume analysis.",
+      "Missing cross-border transaction data hampers accurate assessment of capital flow dynamics."
+    ]
+  }
+}

@@ -1,0 +1,548 @@
+{
+  "communities": {
+    "0": [
+      "app_decision_engine",
+      "app_decision_engine_decisionengine",
+      "app_decision_engine_decisionengine_init",
+      "app_decision_engine_decisionengine_network_summary",
+      "app_decision_engine_decisionengine_predict",
+      "app_decision_engine_now_iso",
+      "app_decision_engine_rationale_1",
+      "app_decision_engine_rationale_24",
+      "app_decision_engine_rationale_51",
+      "app_decision_example_usage",
+      "app_decision_example_usage_main",
+      "app_decision_example_usage_rationale_1",
+      "app_decision_history",
+      "app_decision_history_decisionhistory",
+      "app_decision_history_decisionhistory_append",
+      "app_decision_history_decisionhistory_by_id",
+      "app_decision_history_decisionhistory_init",
+      "app_decision_history_decisionhistory_latest_prediction",
+      "app_decision_history_decisionhistory_load_all",
+      "app_decision_history_decisionhistory_record_outcome",
+      "app_decision_history_decisionhistory_summary",
+      "app_decision_history_py_path",
+      "app_decision_history_rationale_1",
+      "app_decision_history_rationale_13",
+      "app_decision_history_rationale_55",
+      "app_decision_history_rationale_73",
+      "app_decision_init",
+      "app_decision_init_rationale_1",
+      "app_decision_models",
+      "app_decision_models_decisionprediction",
+      "app_decision_models_decisionprediction_as_dict",
+      "app_decision_models_decisionrecord",
+      "app_decision_models_decisionrecord_as_dict",
+      "app_decision_models_decisionrecord_to_json",
+      "app_decision_models_evidence",
+      "app_decision_models_evidence_as_dict",
+      "app_decision_models_influenceedge",
+      "app_decision_models_influenceedge_as_dict",
+      "app_decision_models_influenceedge_is_valid_as_of",
+      "app_decision_models_networksnapshot",
+      "app_decision_models_networksnapshot_as_dict",
+      "app_decision_models_person",
+      "app_decision_models_person_as_dict",
+      "app_decision_models_py_any",
+      "app_decision_models_rationale_1",
+      "app_decision_models_rationale_118",
+      "app_decision_models_rationale_133",
+      "app_decision_models_rationale_41",
+      "app_decision_models_rationale_61",
+      "app_decision_models_rationale_94",
+      "app_decision_models_roleevent",
+      "app_decision_models_roleevent_as_dict",
+      "app_decision_models_roleevent_is_active_as_of",
+      "app_decision_network",
+      "app_decision_network_influencenetwork",
+      "app_decision_network_influencenetwork_add_edge",
+      "app_decision_network_influencenetwork_add_evidence",
+      "app_decision_network_influencenetwork_add_person",
+      "app_decision_network_influencenetwork_add_role",
+      "app_decision_network_influencenetwork_init",
+      "app_decision_network_influencenetwork_load_from_json",
+      "app_decision_network_influencenetwork_save_to_json",
+      "app_decision_network_influencenetwork_snapshot",
+      "app_decision_network_py_path",
+      "app_decision_network_rationale_1",
+      "app_decision_network_rationale_13"
+    ],
+    "1": [
+      "app_data_brsapi_client",
+      "app_data_brsapi_client_brsapiclient",
+      "app_data_brsapi_client_brsapiclient_get_all_symbols",
+      "app_data_brsapi_client_brsapiclient_get_json",
+      "app_data_brsapi_client_brsapiclient_get_options",
+      "app_data_brsapi_client_brsapiclient_init",
+      "app_data_brsapi_client_brsapierror",
+      "app_data_brsapi_client_py_any",
+      "app_data_brsapi_client_rationale_1",
+      "app_data_brsapi_client_rationale_54",
+      "app_data_brsapi_init",
+      "app_data_brsapi_option_fields",
+      "app_data_brsapi_option_fields_first",
+      "app_data_brsapi_option_fields_normalize_option_row",
+      "app_data_brsapi_option_fields_py_any",
+      "app_data_brsapi_option_fields_rationale_1",
+      "app_data_brsapi_options",
+      "app_data_brsapi_options_find_options",
+      "app_data_brsapi_options_find_targets",
+      "app_data_brsapi_options_find_zmli",
+      "app_data_brsapi_options_name",
+      "app_data_brsapi_options_py_any",
+      "app_data_brsapi_options_rationale_1",
+      "app_data_brsapi_options_rationale_29",
+      "app_data_brsapi_options_rationale_39",
+      "app_data_brsapi_options_rationale_57",
+      "app_data_brsapi_options_rationale_62",
+      "app_data_brsapi_options_rows",
+      "app_data_brsapi_options_snapshot",
+      "app_data_brsapi_options_snapshot_all",
+      "scripts_fetch_options_realtime",
+      "scripts_fetch_options_realtime_build_payload",
+      "scripts_fetch_options_realtime_main",
+      "scripts_fetch_options_realtime_rationale_1",
+      "scripts_fetch_zmli_realtime",
+      "scripts_fetch_zmli_realtime_build_payload",
+      "scripts_fetch_zmli_realtime_main",
+      "scripts_fetch_zmli_realtime_rationale_1"
+    ],
+    "2": [
+      "fastapi",
+      "realtime_api",
+      "realtime_api_equity_market",
+      "realtime_api_equity_symbol",
+      "realtime_api_health",
+      "realtime_api_lifespan",
+      "realtime_api_option_chain",
+      "realtime_api_options_market",
+      "realtime_api_py_any",
+      "realtime_api_rationale_1",
+      "realtime_api_realtime",
+      "realtime_api_snapshot",
+      "realtime_api_sse_events",
+      "realtime_api_sse_market",
+      "realtime_api_websocket_market",
+      "scripts_rank_options_babimind",
+      "scripts_rank_options_babimind_bs_price",
+      "scripts_rank_options_babimind_cdf",
+      "scripts_rank_options_babimind_flatten",
+      "scripts_rank_options_babimind_get",
+      "scripts_rank_options_babimind_greeks",
+      "scripts_rank_options_babimind_implied_vol",
+      "scripts_rank_options_babimind_infer_spots",
+      "scripts_rank_options_babimind_jalali_to_gregorian",
+      "scripts_rank_options_babimind_main",
+      "scripts_rank_options_babimind_norm",
+      "scripts_rank_options_babimind_num",
+      "scripts_rank_options_babimind_opt_type",
+      "scripts_rank_options_babimind_parse_date",
+      "scripts_rank_options_babimind_pdf",
+      "scripts_rank_options_babimind_score",
+      "scripts_rank_options_babimind_target",
+      "streamingresponse",
+      "websocket"
+    ],
+    "3": [
+      "app_data_brsapi_realtime",
+      "app_data_brsapi_realtime_is_option",
+      "app_data_brsapi_realtime_normalize",
+      "app_data_brsapi_realtime_now",
+      "app_data_brsapi_realtime_py_any",
+      "app_data_brsapi_realtime_rationale_1",
+      "app_data_brsapi_realtime_rationale_54",
+      "app_data_brsapi_realtime_realtimecollector",
+      "app_data_brsapi_realtime_realtimecollector_collect_once",
+      "app_data_brsapi_realtime_realtimecollector_init",
+      "app_data_brsapi_realtime_realtimecollector_run_forever",
+      "app_data_brsapi_realtime_realtimecollector_stop",
+      "app_data_brsapi_realtime_rows",
+      "app_data_brsapi_stream",
+      "app_data_brsapi_stream_py_any",
+      "app_data_brsapi_stream_rationale_1",
+      "app_data_brsapi_stream_rationale_27",
+      "app_data_brsapi_stream_rationale_9",
+      "app_data_brsapi_stream_realtimehub",
+      "app_data_brsapi_stream_realtimehub_events",
+      "app_data_brsapi_stream_realtimehub_fanout",
+      "app_data_brsapi_stream_realtimehub_init",
+      "app_data_brsapi_stream_realtimehub_publish",
+      "app_data_brsapi_stream_realtimehub_subscribe",
+      "app_data_brsapi_stream_realtimehub_subscriber_count",
+      "app_data_brsapi_stream_realtimehub_unsubscribe",
+      "asyncio",
+      "queue",
+      "tests_test_realtime",
+      "tests_test_realtime_test_normalize_empty_feed_is_partial",
+      "tests_test_realtime_test_normalize_splits_equity_and_option",
+      "tests_test_stream",
+      "tests_test_stream_test_hub_fanout_and_bounded_queue"
+    ],
+    "4": [
+      "datetime",
+      "scripts_babimind_factor_rotation",
+      "scripts_babimind_factor_rotation_main",
+      "scripts_babimind_global_market",
+      "scripts_babimind_global_market_load_json_candidates",
+      "scripts_babimind_global_market_main",
+      "scripts_babimind_global_market_py_path",
+      "scripts_babimind_source_health",
+      "scripts_babimind_source_health_check",
+      "scripts_babimind_source_health_load_sources",
+      "scripts_babimind_source_health_main",
+      "scripts_backfill",
+      "scripts_backfill_is_stale",
+      "scripts_backfill_main",
+      "scripts_backfill_mark_backfilled",
+      "scripts_backfill_now_tehran",
+      "scripts_backfill_parse_timestamp",
+      "scripts_backfill_py_path",
+      "scripts_backfill_rationale_1",
+      "scripts_backfill_read_json",
+      "scripts_backfill_refresh_market",
+      "scripts_backfill_refresh_options",
+      "scripts_backfill_run",
+      "scripts_backfill_snapshot_time",
+      "scripts_backfill_write_json"
+    ],
+    "5": [
+      "app_forecasting_historical_forecaster",
+      "app_forecasting_historical_forecaster_add_forward_targets",
+      "app_forecasting_historical_forecaster_forecastresult",
+      "app_forecasting_historical_forecaster_forecastresult_as_dict",
+      "app_forecasting_historical_forecaster_historicalanalogforecaster",
+      "app_forecasting_historical_forecaster_historicalanalogforecaster_distance",
+      "app_forecasting_historical_forecaster_historicalanalogforecaster_fit",
+      "app_forecasting_historical_forecaster_historicalanalogforecaster_init",
+      "app_forecasting_historical_forecaster_historicalanalogforecaster_predict",
+      "app_forecasting_historical_forecaster_historicalanalogforecaster_similarity",
+      "app_forecasting_historical_forecaster_py_dataframe",
+      "app_forecasting_historical_forecaster_rationale_1",
+      "app_forecasting_historical_forecaster_rationale_195",
+      "app_forecasting_historical_forecaster_rationale_50",
+      "app_forecasting_walk_forward",
+      "app_forecasting_walk_forward_backtestsummary",
+      "app_forecasting_walk_forward_backtestsummary_as_dict",
+      "app_forecasting_walk_forward_py_dataframe",
+      "app_forecasting_walk_forward_rationale_1",
+      "app_forecasting_walk_forward_rationale_35",
+      "app_forecasting_walk_forward_walk_forward_backtest",
+      "ndarray",
+      "series"
+    ],
+    "6": [
+      "runtimeerror",
+      "scripts_historical_archive_ingest",
+      "scripts_historical_archive_ingest_download_source",
+      "scripts_historical_archive_ingest_main",
+      "scripts_historical_archive_ingest_normalize_csv",
+      "scripts_historical_archive_ingest_py_dataframe",
+      "scripts_historical_archive_ingest_rationale_1",
+      "scripts_historical_backfill",
+      "scripts_historical_backfill_get_json",
+      "scripts_historical_backfill_index_history",
+      "scripts_historical_backfill_index_history_old",
+      "scripts_historical_backfill_main",
+      "scripts_historical_backfill_make_session",
+      "scripts_historical_backfill_market_symbols",
+      "scripts_historical_backfill_py_any",
+      "scripts_historical_backfill_py_dataframe",
+      "scripts_historical_backfill_py_path",
+      "scripts_historical_backfill_rationale_1",
+      "scripts_historical_backfill_symbol_history",
+      "scripts_historical_backfill_write_gz",
+      "session"
+    ],
+    "7": [
+      "app_options_init",
+      "app_options_init_rationale_1",
+      "app_options_ranking",
+      "app_options_ranking_compute_basic_metrics",
+      "app_options_ranking_filter_active",
+      "app_options_ranking_optioncontract",
+      "app_options_ranking_optioncontract_as_dict",
+      "app_options_ranking_parse_date",
+      "app_options_ranking_py_any",
+      "app_options_ranking_rank_options",
+      "app_options_ranking_rankedoption",
+      "app_options_ranking_rankedoption_as_dict",
+      "app_options_ranking_rationale_1",
+      "app_options_ranking_rationale_124",
+      "app_options_ranking_rationale_74",
+      "app_options_ranking_summarize_ranking",
+      "date"
+    ],
+    "8": [
+      "app_rotation_cluster_engine",
+      "app_rotation_cluster_engine_acceleration",
+      "app_rotation_cluster_engine_assetsignal",
+      "app_rotation_cluster_engine_clamp",
+      "app_rotation_cluster_engine_clustersignal",
+      "app_rotation_cluster_engine_last",
+      "app_rotation_cluster_engine_rationale_1",
+      "app_rotation_cluster_engine_rationale_70",
+      "app_rotation_cluster_engine_rotationengine",
+      "app_rotation_cluster_engine_rotationengine_init",
+      "app_rotation_cluster_engine_rotationengine_rank_assets",
+      "app_rotation_cluster_engine_rotationengine_rank_clusters",
+      "app_rotation_cluster_engine_safe",
+      "app_rotation_cluster_engine_velocity",
+      "app_rotation_init",
+      "app_rotation_init_rationale_1"
+    ],
+    "9": [
+      "scripts_babimind_graph",
+      "scripts_babimind_graph_clamp",
+      "scripts_babimind_graph_edge_iter",
+      "scripts_babimind_graph_endpoint",
+      "scripts_babimind_graph_main",
+      "scripts_babimind_graph_num",
+      "scripts_babimind_graph_py_any",
+      "scripts_babimind_graph_status_factor"
+    ],
+    "10": [
+      "scripts_babimind_pipeline",
+      "scripts_babimind_pipeline_check_source",
+      "scripts_babimind_pipeline_confidence",
+      "scripts_babimind_pipeline_endpoint_check",
+      "scripts_babimind_pipeline_freshness",
+      "scripts_babimind_pipeline_load_graph",
+      "scripts_babimind_pipeline_main"
+    ],
+    "11": [
+      "bobby_hosh_engine",
+      "research_advisor_network_20_plus_10_core",
+      "research_research_source_monitor_monitor",
+      "skills_graphify_skill",
+      "skills_iran_market_realtime_skill",
+      "tsetmc_official_source"
+    ],
+    "12": [
+      "scan_market",
+      "scan_market_fetch_all_symbols",
+      "scan_market_main",
+      "scan_market_print_market_summary",
+      "scan_market_save_csv",
+      "scan_market_save_json"
+    ],
+    "13": [
+      "scripts_score_options_babimind_scenarios",
+      "scripts_score_options_babimind_scenarios_expiry_pnl",
+      "scripts_score_options_babimind_scenarios_liquidity_score",
+      "scripts_score_options_babimind_scenarios_main",
+      "scripts_score_options_babimind_scenarios_n",
+      "scripts_score_options_babimind_scenarios_score"
+    ],
+    "14": [
+      "scripts_babimind_gemini",
+      "scripts_babimind_gemini_compact_state",
+      "scripts_babimind_gemini_load_json",
+      "scripts_babimind_gemini_main",
+      "scripts_babimind_gemini_write"
+    ],
+    "15": [
+      "scripts_babimind_llm_router",
+      "scripts_babimind_llm_router_call",
+      "scripts_babimind_llm_router_main",
+      "scripts_babimind_llm_router_quota_error",
+      "scripts_babimind_llm_router_run"
+    ],
+    "16": [
+      "scripts_babimind_source_confidence",
+      "scripts_babimind_source_confidence_main",
+      "scripts_babimind_source_confidence_score",
+      "scripts_babimind_source_confidence_tier"
+    ],
+    "17": [
+      "app_forecasting_regimes",
+      "app_forecasting_regimes_rationale_1",
+      "app_forecasting_regimes_regime_labels"
+    ],
+    "18": [
+      "scripts_brsapi_client",
+      "scripts_brsapi_client_fetch_symbols",
+      "scripts_brsapi_client_py_any"
+    ],
+    "19": [
+      "scripts_risk_adjusted_options_babimind",
+      "scripts_risk_adjusted_options_babimind_calc",
+      "scripts_risk_adjusted_options_babimind_n"
+    ],
+    "20": [
+      "reports_options_babimind_ranked_khosapa",
+      "reports_options_babimind_scenario_ranked_summary"
+    ],
+    "21": [
+      "scripts_babimind_signal_weight",
+      "scripts_babimind_signal_weight_main"
+    ],
+    "22": [
+      "scripts_docker_entrypoint_realtime",
+      "scripts_docker_entrypoint_realtime_sh__entry"
+    ],
+    "23": [
+      "scripts_run_realtime_api",
+      "scripts_run_realtime_api_rationale_1"
+    ],
+    "24": [
+      "reports_options_babimind_ranked_fomeli"
+    ],
+    "25": [
+      "reports_options_babimind_ranked_shapna"
+    ],
+    "26": [
+      "reports_options_babimind_ranked_webmellat"
+    ],
+    "27": [
+      "scripts_babimind_factor_coverage"
+    ],
+    "28": [
+      "skills_headroom_skill"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06993006993006994,
+    "1": 0.1166429587482219,
+    "2": 0.13012477718360071,
+    "3": 0.11174242424242424,
+    "4": 0.16666666666666666,
+    "5": 0.13043478260869565,
+    "6": 0.1761904761904762,
+    "7": 0.2426470588235294,
+    "8": 0.26666666666666666,
+    "9": 0.4642857142857143,
+    "10": 0.5238095238095238,
+    "11": 0.3333333333333333,
+    "12": 0.6,
+    "13": 0.8,
+    "14": 0.7,
+    "15": 0.7,
+    "16": 0.8333333333333334,
+    "17": 0.6666666666666666,
+    "18": 0.6666666666666666,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_decision_network_influencenetwork",
+      "label": "InfluenceNetwork",
+      "degree": 21
+    },
+    {
+      "id": "app_decision_history_decisionhistory",
+      "label": "DecisionHistory",
+      "degree": 17
+    },
+    {
+      "id": "app_data_brsapi_client_brsapiclient",
+      "label": "BrsApiClient",
+      "degree": 16
+    },
+    {
+      "id": "app_decision_models_decisionrecord",
+      "label": "DecisionRecord",
+      "degree": 15
+    },
+    {
+      "id": "app_data_brsapi_stream_realtimehub",
+      "label": "RealtimeHub",
+      "degree": 15
+    },
+    {
+      "id": "app_decision_engine_decisionengine",
+      "label": "DecisionEngine",
+      "degree": 13
+    },
+    {
+      "id": "app_decision_models_evidence",
+      "label": "Evidence",
+      "degree": 12
+    },
+    {
+      "id": "scripts_rank_options_babimind_get",
+      "label": "get()",
+      "degree": 12
+    },
+    {
+      "id": "scripts_rank_options_babimind_main",
+      "label": "main()",
+      "degree": 11
+    },
+    {
+      "id": "app_decision_models_decisionprediction",
+      "label": "DecisionPrediction",
+      "degree": 10
+    }
+  ],
+  "surprises": [
+    {
+      "source": "test_hub_fanout_and_bounded_queue()",
+      "target": "RealtimeHub",
+      "source_files": [
+        "tests/test_stream.py",
+        "app/data/brsapi/stream.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "test_normalize_empty_feed_is_partial()",
+      "target": "normalize()",
+      "source_files": [
+        "tests/test_realtime.py",
+        "app/data/brsapi/realtime.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_normalize_empty_feed_is_partial()` unexpectedly reaches hub `normalize()`"
+    },
+    {
+      "source": "test_normalize_splits_equity_and_option()",
+      "target": "normalize()",
+      "source_files": [
+        "tests/test_realtime.py",
+        "app/data/brsapi/realtime.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_normalize_splits_equity_and_option()` unexpectedly reaches hub `normalize()`"
+    },
+    {
+      "source": "BabiMind Research & News Monitor",
+      "target": "Bobby Hosh / Babak Analysis Engine",
+      "source_files": [
+        "research/research-source-monitor.md",
+        "skills/iran-market-realtime/SKILL.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "shares_data_with",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "RealtimeCollector",
+      "target": "BrsApiClient",
+      "source_files": [
+        "app/data/brsapi/realtime.py",
+        "app/data/brsapi/client.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "model": "BabiMind",
+  "component": "Graph Intelligence",
+  "generated_at": "2026-08-27T12:26:07.942963+00:00",
+  "graph_available": true,
+  "graph_snapshot_id": "20260827T122607Z",
+  "graph_score": 1.0,
+  "graph_confidence": 0.75,
+  "graph_regime": "bullish",
+  "graph_top_drivers": [
+    {
+      "source": "realtime_api_equity_market",
+      "target": "realtime_api_snapshot",
+      "contribution": 0.75
+    },
+    {
+      "source": "realtime_api_options_market",
+      "target": "realtime_api_snapshot",
+      "contribution": 0.75
+    },
+    {
+      "source": "realtime_api_sse_market",
+      "target": "streamingresponse",
+      "contribution": 0.75
+    },
+    {
+      "source": "scan_market_main",
+      "target": "scan_market_fetch_all_symbols",
+      "contribution": 0.75
+    },
+    {
+      "source": "scripts_babimind_global_market_main",
+      "target": "scripts_babimind_global_market_py_path",
+      "contribution": 0.75
+    },
+    {
+      "source": "scripts_backfill_main",
+      "target": "scripts_backfill_refresh_market",
+      "contribution": 0.75
+    },
+    {
+      "source": "scripts_backfill_refresh_market",
+      "target": "scripts_backfill_run",
+      "contribution": 0.75
+    },
+    {
+      "source": "scripts_historical_backfill_main",
+      "target": "scripts_historical_backfill_market_symbols",
+      "contribution": 0.75
+    }
+  ],
+  "graph_risk_drivers": [
+    {
+      "source": "scan_market",
+      "target": "scan_market_print_market_summary",
+      "contribution": 0.1261
+    },
+    {
+      "source": "scan_market",
+      "target": "scan_market_save_csv",
+      "contribution": 0.1801
+    },
+    {
+      "source": "scan_market_main",
+      "target": "scan_market_print_market_summary",
+      "contribution": 0.2572
+    },
+    {
+      "source": "realtime_api",
+      "target": "realtime_api_websocket_market",
+      "contribution": 0.2572
+    },
+    {
+      "source": "scan_market",
+      "target": "scan_market_save_json",
+      "contribution": 0.2572
+    },
+    {
+      "source": "skills_iran_market_realtime_skill",
+      "target": "tsetmc_official_source",
+      "contribution": 0.2625
+    },
+    {
+      "source": "scan_market_main",
+      "target": "scan_market_save_csv",
+      "contribution": 0.3675
+    },
+    {
+      "source": "realtime_api_sse_market",
+      "target": "scripts_rank_options_babimind_get",
+      "contribution": 0.3675
+    }
+  ],
+  "edges_used": 42,
+  "correlation_penalty": 0.2632,
+  "missing_data_policy": "MISSING_IS_NOT_ZERO"
+}
