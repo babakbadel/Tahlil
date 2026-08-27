@@ -1,13 +1,5 @@
 #!/usr/bin/env python3
-"""Unified BabiMind source -> signal pipeline.
-
-Stages:
-source health -> schema/content checks -> freshness -> confidence -> fallback
--> signal weight -> optional cluster scoring.
-
-Unavailable data is explicitly excluded from the current run. It is not a
-negative signal and it is retried on the next scheduled/manual run.
-"""
+"""Unified BabiMind source -> signal pipeline with Graph Intelligence."""
 from __future__ import annotations
 
 import json
@@ -20,12 +12,13 @@ from urllib.error import HTTPError, URLError
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "babimind_source_health.json"
 OUT = ROOT / "reports" / "babimind_pipeline.json"
+GRAPH_OUT = ROOT / "reports" / "babimind_graph.json"
 
 
 def endpoint_check(url: str, timeout: int = 15) -> dict:
     started = time.monotonic()
     try:
-        req = Request(url, headers={"User-Agent": "BabiMind-Pipeline/1.1"})
+        req = Request(url, headers={"User-Agent": "BabiMind-Pipeline/1.2"})
         with urlopen(req, timeout=timeout) as response:
             body = response.read(8192)
             status = getattr(response, "status", 200)
@@ -67,15 +60,22 @@ def confidence(source: dict, availability: float, fresh: float) -> float:
 
 def operational_state(result: dict, fresh: float) -> str:
     status = result.get("status")
-    if status == "unavailable":
-        return "unavailable"
-    if status == "error":
-        return "error"
-    if result.get("content_check") != "nonempty":
-        return "partial"
-    if fresh < 0.25:
-        return "stale"
+    if status == "unavailable": return "unavailable"
+    if status == "error": return "error"
+    if result.get("content_check") != "nonempty": return "partial"
+    if fresh < 0.25: return "stale"
     return "available"
+
+
+def load_graph() -> dict:
+    if not GRAPH_OUT.exists():
+        return {"available": False, "graph_score": None, "graph_confidence": 0.0,
+                "graph_regime": "unavailable", "reason": "graph_score_not_generated"}
+    try:
+        return json.loads(GRAPH_OUT.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return {"available": False, "graph_score": None, "graph_confidence": 0.0,
+                "graph_regime": "error", "reason": str(exc)}
 
 
 def main() -> None:
@@ -88,13 +88,11 @@ def main() -> None:
         state = operational_state(result, fresh)
         availability = 1.0 if state == "available" else 0.0
         conf = confidence(src, availability, fresh)
-        # Missing/unavailable data is SKIP, never a negative signal.
         weight = 0.0 if state in {"unavailable", "error", "partial"} else round(0.25 + 0.75*conf, 4)
         rows.append({**src, **result, "state":state, "freshness":fresh,
                      "confidence":conf, "signal_weight":weight,
                      "eligible_for_aggregation":weight > 0.0,
-                     "retry_next_run":state != "available",
-                     "checked_at":now.isoformat()})
+                     "retry_next_run":state != "available", "checked_at":now.isoformat()})
 
     groups = {}
     for r in rows:
@@ -104,19 +102,19 @@ def main() -> None:
     for key, items in groups.items():
         ranked=sorted(items, key=lambda x:(x["signal_weight"], x["confidence"]), reverse=True)
         primary=next((x for x in ranked if x["eligible_for_aggregation"]), None)
-        routing.append({"group":key,
-                        "primary":primary["name"] if primary else None,
+        routing.append({"group":key, "primary":primary["name"] if primary else None,
                         "fallbacks":[x["name"] for x in ranked if not primary or x["name"] != primary["name"]][:3]})
 
     active = sum(r["eligible_for_aggregation"] for r in rows)
     unavailable = sum(r["state"] == "unavailable" for r in rows)
-    payload={"model":"BabiMind", "pipeline_version":"1.1", "generated_at":now.isoformat(),
-             "stages":["health","content","freshness","confidence","fallback","signal_weight"],
+    graph = load_graph()
+    payload={"model":"BabiMind", "pipeline_version":"1.2", "generated_at":now.isoformat(),
+             "stages":["health","content","freshness","confidence","fallback","signal_weight","graph_intelligence"],
              "missing_data_policy":"SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN",
              "summary":{"total_sources":len(rows),"active_sources":active,"unavailable_sources":unavailable},
-             "sources":rows, "routing":routing}
+             "graph_intelligence":graph, "sources":rows, "routing":routing}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"BabiMind pipeline: {len(rows)} sources, {active} active, {unavailable} unavailable")
+    print(f"BabiMind pipeline: {len(rows)} sources, {active} active, {unavailable} unavailable; graph={graph.get('graph_regime')}")
 
 if __name__ == "__main__": main()
