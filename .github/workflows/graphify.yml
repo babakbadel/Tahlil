@@ -1,11 +1,8 @@
-name: Graphify Install & Verify
+name: Graphify Index & Verify
 
 on:
   workflow_dispatch:
   push:
-    paths:
-      - '.agents/skills/graphify/**'
-      - '.github/workflows/graphify.yml'
 
 permissions:
   contents: read
@@ -13,7 +10,7 @@ permissions:
 jobs:
   graphify:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,6 +30,17 @@ jobs:
           python -c "import graphify; print('Graphify import: OK')"
           graphify --help >/dev/null
           echo 'Graphify CLI: OK'
+
+      - name: Run Graphify on Tahlil
+        run: |
+          graphify . --update
+
+      - name: Validate graph output
+        run: |
+          test -d graphify-out
+          test -s graphify-out/graph.json
+          echo 'Graphify graph output: OK'
+          ls -lh graphify-out/
 
       - name: Verify BabiMind Graphify skill
         run: test -s .agents/skills/graphify/SKILL.md
