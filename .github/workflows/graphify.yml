@@ -7,8 +7,7 @@ on:
 permissions:
   contents: read
 
-env:
-  GEMINI_MODEL: gemini-flash-latest
+env: {}
 
 jobs:
   graphify:
@@ -23,35 +22,21 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Install Graphify and Gemini runtime dependencies
+      - name: Install Graphify runtime
         run: |
-          python -m pip install --upgrade pip uv
-          uv tool install 'graphifyy[gemini]' --with openai --force
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade graphifyy
 
-      - name: Validate Gemini configuration
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          test -n "$GEMINI_API_KEY" || { echo 'GEMINI_API_KEY secret is missing'; exit 1; }
-          echo 'Gemini API key is configured.'
-
-      - name: Verify Graphify runtime dependencies
+      - name: Verify Graphify runtime
         run: |
           which graphify
           graphify --help >/dev/null
-          GRAPHIFY_BIN="$(which graphify)"
-          GRAPHIFY_PY="$(head -n 1 "$GRAPHIFY_BIN" | sed 's/^#!//')"
-          echo "Graphify executable: $GRAPHIFY_BIN"
-          echo "Graphify runtime: $GRAPHIFY_PY"
-          "$GRAPHIFY_PY" -c "import openai; print('OpenAI dependency: OK')"
-          echo 'Graphify Gemini runtime: OK'
+          echo 'Graphify local runtime: OK'
 
-      - name: Run Graphify on Tahlil
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ env.GEMINI_MODEL }}
-        run: graphify . --update
+      - name: Run Graphify locally
+        run: |
+          set -o pipefail
+          graphify . --code-only --update 2>&1 | tee graphify.log
 
       - name: Validate graph output
         run: |
