@@ -1,0 +1,15 @@
+{
+  "analysis_date": "1405-06-04",
+  "nodes": [
+    {"id":"usd","type":"factor","name":"دلار","confidence":0.91},
+    {"id":"copper","type":"commodity","name":"مس جهانی","confidence":0.88},
+    {"id":"femli","type":"asset","name":"فملی","confidence":0.94},
+    {"id":"political_risk","type":"factor","name":"ریسک سیاسی","confidence":0.72}
+  ],
+  "edges": [
+    {"source":"usd","target":"femli","direction":"positive","weight":0.84,"confidence":0.91,"lag":"short_medium"},
+    {"source":"copper","target":"femli","direction":"positive","weight":0.90,"confidence":0.88,"lag":"medium"},
+    {"source":"political_risk","target":"femli","direction":"negative","weight":0.55,"confidence":0.72,"lag":"short"}
+  ],
+  "anti_double_counting": {"enabled":true,"independence_factor":0.8}
+}
