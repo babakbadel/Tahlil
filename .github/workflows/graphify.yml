@@ -23,11 +23,12 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Install Graphify with Gemini support
+      - name: Install Graphify Gemini backend
         run: |
           python -m pip install --upgrade pip
-          python -m pip install --upgrade 'graphifyy[gemini]'
-          python -m pip install --upgrade openai
+          python -m pip install --upgrade uv
+          uv tool install 'graphifyy[gemini]' --force
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Validate Gemini configuration
         env:
@@ -36,10 +37,11 @@ jobs:
           test -n "$GEMINI_API_KEY" || { echo 'GEMINI_API_KEY secret is missing'; exit 1; }
           echo 'Gemini API key is configured.'
 
-      - name: Verify Graphify
+      - name: Verify Graphify installation
         run: |
-          python -c "import graphify; print('Graphify import: OK')"
+          which graphify
           graphify --help >/dev/null
+          python -m pip show openai || true
           echo 'Graphify CLI: OK'
 
       - name: Run Graphify on Tahlil
