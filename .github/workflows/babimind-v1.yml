@@ -1,0 +1,35 @@
+name: BabiMind v1 Signal
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 5 * * 0-4'
+
+permissions:
+  contents: write
+
+jobs:
+  babimind-v1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Run BabiMind v1 core
+        env:
+          BABIMIND_FEATURES: '{}'
+        run: python scripts/babimind_v1.py
+
+      - name: Upload signal
+        uses: actions/upload-artifact@v4
+        with:
+          name: babimind-v1-signal
+          path: reports/babimind_v1_signal.json
+          if-no-files-found: error
+          retention-days: 14
