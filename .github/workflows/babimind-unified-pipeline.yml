@@ -12,6 +12,9 @@ concurrency:
   group: babimind-source-pipeline
   cancel-in-progress: false
 
+env:
+  GEMINI_MODEL: gemini-flash-latest
+
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -32,10 +35,14 @@ jobs:
         run: python scripts/babimind_graph.py
       - name: Run unified BabiMind pipeline
         run: python scripts/babimind_pipeline.py
-      - name: Commit BabiMind + Graph reports
+      - name: Run Gemini BabiMind reasoning
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/babimind_gemini.py
+      - name: Commit BabiMind + Graph + Gemini reports
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/babimind_pipeline.json reports/babimind_graph.json graphify-out/
-          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind Graph Intelligence'
+          git add reports/babimind_pipeline.json reports/babimind_graph.json reports/babimind_gemini.json graphify-out/
+          git diff --cached --quiet || git commit -m 'chore: refresh BabiMind Gemini Graph Intelligence'
           git push
