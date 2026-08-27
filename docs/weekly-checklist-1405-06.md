@@ -7,16 +7,16 @@
 
 ## روز ۱ (اولویت فوری)
 
-- [ ] سه فایل کلیدی را commit کن:
+- [x] سه فایل کلیدی را commit کن:
   - `memory/decision-history-2026-08-25.md`
   - `docs/feature-panel-schema.md`
   - `memory/news-injection-sectors-2026-08-25.md`
-- [ ] فایل طراحی Macro را هم اضافه کن: `docs/macro-layer-design.md`
+- [x] فایل طراحی Macro را هم اضافه کن: `docs/macro-layer-design.md`
 - [ ] در README یا AGENTS به مسیر این فایل‌ها ارجاع بده
 
 ## روز ۲ — Feature Panel
 
-- [ ] یک جدول/CSV ساده برای ۱۰ جلسه اخیر بساز (حتی دستی)
+- [x] یک جدول/CSV ساده برای جلسات اخیر بساز (seed اولیه ۲ جلسه؛ گسترش به ۱۰ جلسه در جریان)
 - [ ] فیلدهای اجباری را پر کن:
   - index کل / هم‌وزن / قیمت
   - AD Ratio و % مثبت
@@ -27,8 +27,8 @@
 
 ## روز ۳ — Decision Engine
 
-- [ ] Outcome جلسه ۱۴۰۵/۰۶/۰۳ را بعد از مشاهده جلسات بعدی پر کن (immutable)
-- [ ] یک Decision History جدید برای جلسه جاری بنویس
+- [x] Outcome جلسه ۱۴۰۵/۰۶/۰۳ پر شد (`memory/outcome-dh-2026-08-25.md`)
+- [x] Decision History جدید برای ۱۴۰۵/۰۶/۰۴ نوشته شد
 - [ ] باطل‌کننده‌ها را صریح بنویس (AD Ratio < 5 یا خروج پول + جهش دلار)
 
 ## روز ۴ — Macro
