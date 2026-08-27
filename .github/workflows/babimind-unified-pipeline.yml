@@ -14,6 +14,7 @@ concurrency:
 
 env:
   GEMINI_MODEL: gemini-flash-latest
+  OPENROUTER_MODEL: openrouter/free
 
 jobs:
   pipeline:
@@ -33,11 +34,15 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --upgrade 'graphifyy[gemini]'
           python -m pip install --upgrade openai
-      - name: Validate Gemini configuration
+      - name: Validate OpenRouter configuration
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
-          if [ -z "$GEMINI_API_KEY" ]; then echo 'GEMINI_API_KEY secret is missing'; exit 1; fi
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo 'OPENROUTER_API_KEY secret is missing'
+            exit 1
+          fi
+          echo 'OpenRouter configuration: present'
       - name: Run Graphify incremental index
         id: graphify
         continue-on-error: true
@@ -65,30 +70,44 @@ jobs:
         run: exit 1
       - name: Run Graph Intelligence adapter
         run: python scripts/babimind_graph.py
-      - name: Run unified BabiMind pipeline
-        run: python scripts/babimind_pipeline.py
-      - name: Run Gemini BabiMind reasoning
-        continue-on-error: true
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ env.GEMINI_MODEL }}
-        run: python scripts/babimind_gemini.py
-      - name: Report Gemini quota status
-        if: always()
+      - name: Prepare BabiMind OpenRouter prompt
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          log=Path('graphify.log')
-          if log.exists() and any(x in log.read_text(errors='ignore').upper() for x in ('429','RESOURCE_EXHAUSTED','QUOTA EXCEEDED')):
-              print('::warning::🚨 GEMINI QUOTA EXHAUSTED — Graphify used local/code-only fallback.')
-          p=Path('reports/babimind_gemini.json')
-          if p.exists():
-              d=json.loads(p.read_text(encoding='utf-8'))
-              if d.get('quota_exhausted'):
-                  print('::warning::🚨 GEMINI QUOTA EXHAUSTED — Gemini reasoning skipped; cached/local outputs remain available.')
-              else: print(f"Gemini status: {d.get('status','unknown')}")
+          files = [Path('reports/babimind_pipeline.json'), Path('reports/babimind_graph.json')]
+          parts = [
+              'You are BabiMind, the central financial and economic intelligence model for Tahlil.',
+              'Analyze the supplied source-health and graph-intelligence outputs.',
+              'Integrate game theory, dynamic systems, political economy, macroeconomics, market regime and scenario analysis.',
+              'Do not invent missing observations. Explicitly separate evidence, inference and uncertainty.',
+              'Return valid JSON with exactly these top-level keys: regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, confidence, data_gaps.'
+          ]
+          for p in files:
+              if p.exists():
+                  text=p.read_text(encoding='utf-8')
+                  if len(text)>60000: text=text[:60000]+'\n[TRUNCATED]'
+                  parts.append(f'\nSOURCE FILE: {p}\n{text}')
+          Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts),encoding='utf-8')
           PY
+      - name: Run BabiMind with OpenRouter Free
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ env.OPENROUTER_MODEL }}
+        run: python scripts/babimind_llm_router.py --prompt-file babimind_openrouter_prompt.txt --output reports/babimind_llm.json
+      - name: Report provider status
+        if: always()
+        run: |
+          if [ -f reports/babimind_provider_status.json ]; then
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('reports/babimind_provider_status.json').read_text(encoding='utf-8'))
+          print('BabiMind provider selected:', d.get('selected'))
+          for s in d.get('statuses',[]):
+              print('Provider:', s.get('provider'), '| status:', s.get('status'))
+          PY
+          fi
       - name: Validate integrated model outputs
         if: always()
         run: |
@@ -97,25 +116,25 @@ jobs:
           from pathlib import Path
           for p in (Path('reports/babimind_graph.json'),Path('reports/babimind_pipeline.json')):
               if not p.exists() or p.stat().st_size==0: raise SystemExit(f'Missing/empty core output: {p}')
-          p=Path('reports/babimind_gemini.json')
-          if p.exists():
-              d=json.loads(p.read_text())
-              if d.get('status')=='ok':
-                  a=d.get('analysis',{}); required=('regime','scenarios','game_theory','dynamic_system','political_economy','market_implications','confidence','data_gaps')
-                  missing=[k for k in required if k not in a]
-                  if missing: raise SystemExit(f'Gemini output missing required keys: {missing}')
-                  print('Integrated BabiMind outputs: OK (Gemini fresh)')
-              elif d.get('quota_exhausted'): print('Integrated BabiMind outputs: OK (Gemini quota fallback)')
+          p=Path('reports/babimind_llm.json')
+          if not p.exists(): raise SystemExit('Missing BabiMind LLM output')
+          d=json.loads(p.read_text())
+          if d.get('status')!='ok': raise SystemExit('OpenRouter BabiMind inference was unavailable')
+          a=d.get('analysis',{})
+          required=('regime','scenarios','game_theory','dynamic_system','political_economy','market_implications','confidence','data_gaps')
+          missing=[k for k in required if k not in a]
+          if missing: raise SystemExit(f'BabiMind output missing required keys: {missing}')
+          print('Integrated BabiMind outputs: OK (OpenRouter)')
           PY
-      - name: Commit BabiMind + Graph + Gemini reports
+      - name: Commit BabiMind + Graph + LLM reports
         if: always()
         run: |
           set -e
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/babimind_pipeline.json reports/babimind_graph.json reports/babimind_gemini.json graphify-out/ 2>/dev/null || true
+          git add reports/babimind_pipeline.json reports/babimind_graph.json reports/babimind_llm.json reports/babimind_provider_status.json graphify-out/ 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'chore: refresh integrated BabiMind intelligence' || true
+          git commit -m 'chore: refresh BabiMind with OpenRouter Free' || true
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then echo "Push succeeded on attempt $attempt"; exit 0; fi
