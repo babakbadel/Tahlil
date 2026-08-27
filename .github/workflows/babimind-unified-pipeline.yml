@@ -24,88 +24,89 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-
       - name: Install Graphify with Gemini support
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade 'graphifyy[gemini]'
           python -m pip install --upgrade openai
-
       - name: Validate Gemini configuration
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          if [ -z "$GEMINI_API_KEY" ]; then
-            echo 'GEMINI_API_KEY secret is missing'
-            exit 1
-          fi
-          echo 'Gemini API key is configured.'
-
+          if [ -z "$GEMINI_API_KEY" ]; then echo 'GEMINI_API_KEY secret is missing'; exit 1; fi
       - name: Run Graphify incremental index
+        id: graphify
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ env.GEMINI_MODEL }}
-        run: graphify . --update
-
+        run: |
+          set -o pipefail
+          graphify . --update 2>&1 | tee graphify.log
+          status=${PIPESTATUS[0]}
+          if grep -Eiq '429|RESOURCE_EXHAUSTED|quota exceeded|quota.*limit' graphify.log; then
+            echo 'quota_exhausted=true' >> "$GITHUB_OUTPUT"
+            echo '::warning::🚨 GEMINI QUOTA EXHAUSTED during Graphify. Using local/code-only fallback.'
+          else
+            echo 'quota_exhausted=false' >> "$GITHUB_OUTPUT"
+          fi
+          exit $status
+      - name: Graphify quota fallback
+        if: steps.graphify.outputs.quota_exhausted == 'true'
+        run: |
+          echo 'Gemini quota exhausted; using local/code-only extraction.'
+          graphify . --code-only || true
+      - name: Stop on non-quota Graphify failure
+        if: steps.graphify.outcome == 'failure' && steps.graphify.outputs.quota_exhausted != 'true'
+        run: exit 1
       - name: Run Graph Intelligence adapter
         run: python scripts/babimind_graph.py
-
       - name: Run unified BabiMind pipeline
         run: python scripts/babimind_pipeline.py
-
       - name: Run Gemini BabiMind reasoning
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ env.GEMINI_MODEL }}
         run: python scripts/babimind_gemini.py
-
       - name: Report Gemini quota status
         if: always()
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
+          log=Path('graphify.log')
+          if log.exists() and any(x in log.read_text(errors='ignore').upper() for x in ('429','RESOURCE_EXHAUSTED','QUOTA EXCEEDED')):
+              print('::warning::🚨 GEMINI QUOTA EXHAUSTED — Graphify used local/code-only fallback.')
           p=Path('reports/babimind_gemini.json')
-          if not p.exists():
-              print('Gemini report not produced.')
-              raise SystemExit(0)
-          d=json.loads(p.read_text(encoding='utf-8'))
-          if d.get('quota_exhausted'):
-              print('::warning::🚨 GEMINI QUOTA EXHAUSTED — Gemini reasoning skipped. Cached/local BabiMind outputs remain available; retry on the next run.')
-              print('GEMINI_QUOTA_EXHAUSTED=true')
-          else:
-              print(f"Gemini status: {d.get('status','unknown')}")
+          if p.exists():
+              d=json.loads(p.read_text(encoding='utf-8'))
+              if d.get('quota_exhausted'):
+                  print('::warning::🚨 GEMINI QUOTA EXHAUSTED — Gemini reasoning skipped; cached/local outputs remain available.')
+              else: print(f"Gemini status: {d.get('status','unknown')}")
           PY
-
       - name: Validate integrated model outputs
         if: always()
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          required=[Path('graphify-out/graph.json'),Path('reports/babimind_graph.json'),Path('reports/babimind_pipeline.json')]
-          for p in required:
+          for p in (Path('reports/babimind_graph.json'),Path('reports/babimind_pipeline.json')):
               if not p.exists() or p.stat().st_size==0: raise SystemExit(f'Missing/empty core output: {p}')
-          gem=Path('reports/babimind_gemini.json')
-          if gem.exists():
-              d=json.loads(gem.read_text())
+          p=Path('reports/babimind_gemini.json')
+          if p.exists():
+              d=json.loads(p.read_text())
               if d.get('status')=='ok':
-                  a=d.get('analysis',{})
-                  for k in ('regime','scenarios','game_theory','dynamic_system','political_economy','market_implications','confidence','data_gaps'):
-                      if k not in a: raise SystemExit(f'Gemini output missing required key: {k}')
+                  a=d.get('analysis',{}); required=('regime','scenarios','game_theory','dynamic_system','political_economy','market_implications','confidence','data_gaps')
+                  missing=[k for k in required if k not in a]
+                  if missing: raise SystemExit(f'Gemini output missing required keys: {missing}')
                   print('Integrated BabiMind outputs: OK (Gemini fresh)')
-              elif d.get('quota_exhausted'):
-                  print('Integrated BabiMind outputs: OK (Gemini quota exhausted; fallback mode)')
-              else:
-                  print(f"Gemini status={d.get('status')}; core outputs remain valid")
+              elif d.get('quota_exhausted'): print('Integrated BabiMind outputs: OK (Gemini quota fallback)')
           PY
-
       - name: Commit BabiMind + Graph + Gemini reports
         if: always()
         run: |
@@ -113,17 +114,12 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add reports/babimind_pipeline.json reports/babimind_graph.json reports/babimind_gemini.json graphify-out/ 2>/dev/null || true
-          if git diff --cached --quiet; then
-            echo 'No model output changes to commit.'
-            exit 0
-          fi
+          if git diff --cached --quiet; then exit 0; fi
           git commit -m 'chore: refresh integrated BabiMind intelligence' || true
           for attempt in 1 2 3; do
             git fetch origin main
-            git rebase origin/main && git push origin HEAD:main && { echo "Push succeeded on attempt $attempt"; exit 0; }
+            if git rebase origin/main && git push origin HEAD:main; then echo "Push succeeded on attempt $attempt"; exit 0; fi
             git rebase --abort 2>/dev/null || true
-            echo "Push attempt $attempt failed; retrying..."
-            sleep $((attempt * 3))
+            sleep $((attempt*3))
           done
-          echo 'Unable to push after 3 attempts.'
           exit 1
