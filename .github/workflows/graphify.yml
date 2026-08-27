@@ -13,7 +13,7 @@ env:
 jobs:
   graphify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,11 +23,10 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Install Graphify Gemini backend
+      - name: Install Graphify and Gemini runtime dependencies
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install --upgrade uv
-          uv tool install 'graphifyy[gemini]' --force
+          python -m pip install --upgrade pip uv
+          uv tool install 'graphifyy[gemini]' --with openai --force
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Validate Gemini configuration
@@ -37,12 +36,16 @@ jobs:
           test -n "$GEMINI_API_KEY" || { echo 'GEMINI_API_KEY secret is missing'; exit 1; }
           echo 'Gemini API key is configured.'
 
-      - name: Verify Graphify installation
+      - name: Verify Graphify runtime dependencies
         run: |
           which graphify
           graphify --help >/dev/null
-          python -m pip show openai || true
-          echo 'Graphify CLI: OK'
+          GRAPHIFY_BIN="$(which graphify)"
+          GRAPHIFY_PY="$(head -n 1 "$GRAPHIFY_BIN" | sed 's/^#!//')"
+          echo "Graphify executable: $GRAPHIFY_BIN"
+          echo "Graphify runtime: $GRAPHIFY_PY"
+          "$GRAPHIFY_PY" -c "import openai; print('OpenAI dependency: OK')"
+          echo 'Graphify Gemini runtime: OK'
 
       - name: Run Graphify on Tahlil
         env:
