@@ -1,0 +1,69 @@
+model:
+  id: pezeshkian_decision_engine
+  name_fa: مدل پزشکیان
+  version: 1.0
+  role: political_decision_layer
+
+entities:
+  president: مسعود پزشکیان
+  scope:
+    - رئیس‌جمهور
+    - دولت
+    - تیم اقتصادی دولت
+    - مشاوران و معاونان
+    - وزیران مرتبط با اقتصاد
+    - نهادهای اثرگذار بر اجرای تصمیم
+
+scoring:
+  dimensions:
+    intent: 0.15
+    feasibility: 0.15
+    institutional_alignment: 0.15
+    economic_constraint: 0.15
+    implementation_probability: 0.20
+    market_impact: 0.10
+    source_confidence: 0.10
+  scenario_count: 3
+  scenarios:
+    - bullish
+    - neutral
+    - bearish
+
+news_monitoring:
+  enabled: true
+  every_run: true
+  lookback_hours: 36
+  deduplicate: true
+  preserve_history: true
+  required_fields:
+    - published_at
+    - title
+    - source
+    - url
+    - relevance
+    - confidence
+    - entities
+    - decision_signal
+    - market_channels
+
+market_channels:
+  - dollar
+  - inflation
+  - liquidity
+  - interest_rate
+  - budget
+  - energy
+  - trade
+  - sanctions
+  - banking
+  - commodities
+  - بورس
+  - options
+
+rules:
+  - Never treat a statement as an implemented policy.
+  - Separate intent, announcement, approval, and execution.
+  - Never fabricate missing news, prices, probabilities, or sources.
+  - Conflicting reports must be retained and scored separately.
+  - New evidence updates the previous decision state rather than deleting history.
+  - Missing sources reduce confidence but do not stop the pipeline.
