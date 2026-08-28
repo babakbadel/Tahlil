@@ -1,47 +1,73 @@
-# BabiMind — Pezeshkian Decision System Dynamics
+# بابی‌مایند — پویایی سیستمی تصمیم‌های پزشکیان
 
-Date: 2026-08-28
+**تاریخ:** ۲۸ اوت ۲۰۲۶
 
-## Objective
-Model the next likely decisions of President Masoud Pezeshkian as a dynamic decision network rather than a news feed.
+## هدف
+مدل‌سازی تصمیم بعدی رئیس‌جمهور پزشکیان به‌صورت یک شبکه تصمیم پویا؛ نه صرفاً جمع‌آوری خبر.
 
-## Decision model
-For each candidate decision, maintain three mutually exclusive scenario paths whose probabilities sum to 100%. Probabilities are evidence-based estimates and must be withheld/marked uncertain when evidence is insufficient; never fabricate precision.
+## مدل تصمیم
+برای هر تصمیم نامزد، سه مسیر سناریویی مستقل تعریف می‌شود و مجموع احتمال‌ها باید ۱۰۰٪ باشد. احتمال‌ها باید بر پایه شواهد باشند و اگر شواهد کافی وجود ندارد، مدل باید عدم‌قطعیت را اعلام کند؛ عدد و دقت ساختگی ممنوع است.
 
-Each scenario propagates through:
-1. Immediate decision
-2. Advisor/institution response
-3. Policy implementation
-4. FX, inflation, liquidity, budget and commodity feedback
-5. Market reaction (stocks, gold, FX, sectors, options)
-6. Political/social feedback
-7. Second-order effects
-8. New decision pressure on Pezeshkian
+هر سناریو در زنجیره زیر دنبال می‌شود:
+۱. تصمیم اولیه
+۲. واکنش مشاوران و نهادها
+۳. اجرای سیاست
+۴. اثر بر ارز، تورم، نقدینگی، بودجه و کامودیتی‌ها
+۵. واکنش بازار؛ سهام، طلا، ارز، صنایع و آپشن
+۶. واکنش سیاسی و اجتماعی
+۷. اثرات مرتبه دوم و سوم
+۸. ایجاد فشار جدید برای تصمیم بعدی پزشکیان
 
-## Influence model
-Advisor influence is dynamic and topic-specific. Track access, institutional authority, domain relevance, alignment, recent demonstrated impact, information advantage, execution power and reliability. Do not equate formal title with actual influence.
+## مدل اثرگذاری مشاوران
+اثرگذاری هر مشاور ثابت نیست و باید موضوع‌محور محاسبه شود. متغیرهای اصلی:
+- دسترسی مستقیم به رئیس‌جمهور
+- قدرت و جایگاه نهادی
+- ارتباط موضوعی با تصمیم
+- میزان هم‌راستایی با پزشکیان
+- اثرگذاری اثبات‌شده در تصمیم‌های اخیر
+- برتری اطلاعاتی
+- توان اجرای تصمیم
+- قابلیت اتکا و اعتبار اظهارات
 
-## Feedback loops
-- FX depreciation -> inflation pressure -> political pressure -> policy response -> liquidity/FX feedback.
-- External tension -> risk premium -> FX/gold -> inflation -> government response.
-- De-escalation -> risk premium decline -> FX/gold repricing -> sector rotation -> political/economic feedback.
-- Budget deficit -> financing pressure -> liquidity/rates -> inflation/market reaction -> fiscal response.
+**سمت رسمی به‌تنهایی معادل نفوذ واقعی نیست.**
 
-## Game Theory layer
-Model strategic interaction among presidency, economic team, parliament, security institutions, external actors, market participants and the public. Separate announced intent from credible commitment and observed implementation.
+## حلقه‌های بازخورد سیستم
+- کاهش ارزش پول ملی ← فشار تورمی ← فشار سیاسی ← واکنش سیاستی ← اثر بر نقدینگی و ارز.
+- افزایش تنش خارجی ← افزایش صرف ریسک ← ارز و طلا ← تورم ← واکنش دولت.
+- کاهش تنش ← کاهش صرف ریسک ← بازقیمت‌گذاری ارز و طلا ← چرخش بین صنایع ← بازخورد سیاسی و اقتصادی.
+- کسری بودجه ← فشار تأمین مالی ← نقدینگی و نرخ بهره ← تورم و واکنش بازار ← سیاست مالی بعدی.
 
-## Three-scenario requirement
-For every tracked decision, generate:
-A) base/continuity path
-B) reform/de-escalation path
-C) adverse/escalation or alternative path
-Then propagate conditional effects. Scenario probabilities must be updated each run from fresh evidence and prior-run calibration.
+## لایه نظریه بازی
+تعامل راهبردی میان ریاست‌جمهوری، تیم اقتصادی، مجلس، نهادهای امنیتی، بازیگران خارجی، فعالان بازار و جامعه مدل می‌شود.
 
-## Calibration
-Persist every forecast with timestamp, evidence, probabilities and eventual outcome. Score Brier/log loss when outcome becomes observable and update feature/influence weights.
+باید بین این سه مورد تفاوت گذاشته شود:
+- اعلام موضع
+- تعهد معتبر
+- اقدام و اجرای واقعی
 
-## Current trigger
-The Hormuz/de-escalation signal is treated as an uncertain geopolitical input, not a confirmed regime change. It affects Game Theory and Decision pressure but must not by itself imply a definite policy decision.
+## الزام سه‌سناریویی
+برای **هر تصمیم مهم** سه سناریو ارائه شود:
 
-## Data integrity
-Prioritize internal Tahlil/API data and authoritative fresh sources. Missing APIs do not block analysis. Missing evidence blocks invented numbers/signals.
+**سناریو ۱ — تداوم وضع موجود:** ادامه سیاست یا اقدام کم‌تغییر.
+
+**سناریو ۲ — اصلاح/کاهش تنش:** حرکت به سمت اصلاح اقتصادی، مذاکره یا کاهش ریسک خارجی، متناسب با موضوع.
+
+**سناریو ۳ — مسیر منفی/تشدید یا گزینه جایگزین:** افزایش فشار، تشدید تنش یا انتخاب سیاست جایگزین.
+
+برای هر سناریو باید پیامدهای مشروط سایر تصمیم‌ها نیز بررسی شود؛ یعنی اگر سناریو ۱ رخ داد، احتمال و اثر سناریوهای بعدی چگونه تغییر می‌کند و همین کار برای سناریوهای ۲ و ۳ انجام شود.
+
+## پویایی سیستم
+مدل یک درخت تصمیم ایستا نیست. خروجی هر تصمیم، ورودی تصمیم بعدی است:
+
+**تصمیم → اثر اقتصادی → واکنش بازار/جامعه → تغییر محدودیت‌ها و انگیزه‌ها → تغییر وزن مشاوران و نهادها → تصمیم بعدی**
+
+تمام حلقه‌های تقویتی و تعدیلی باید تا حد امکان ثبت شوند.
+
+## کالیبراسیون
+هر پیش‌بینی با زمان، شواهد، احتمال‌ها و نتیجه واقعی ذخیره می‌شود. پس از آشکار شدن نتیجه، خطای پیش‌بینی با معیارهایی مانند Brier Score و Log Loss سنجیده و وزن عوامل و افراد به‌تدریج اصلاح می‌شود.
+
+## محرک فعلی
+سیگنال مربوط به هرمز/کاهش تنش فقط یک ورودی نامطمئن ژئوپلیتیکی است و به‌تنهایی به معنی تغییر قطعی رژیم یا تصمیم پزشکیان نیست.
+
+## سلامت داده
+اولویت با داده‌های داخلی Tahlil و APIهای پروژه و سپس منابع تازه و معتبر است. نبود API مانع تحلیل نیست؛ اما نبود شواهد کافی مانع تولید عدد، سیگنال یا احتمال ساختگی است.
