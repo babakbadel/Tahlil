@@ -1,0 +1,35 @@
+name: BabiMind Pezeshkian Decision Daily
+
+on:
+  schedule:
+    # 09:00 and 12:00 Iran time (UTC+3:30), matching the project's market cycle.
+    - cron: '30 5 * * *'
+    - cron: '30 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pezeshkian-monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Collect fresh Pezeshkian news
+        run: |
+          python scripts/babimind_pezeshkian_news.py --hours 36
+
+      - name: Commit evidence log
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artifacts/babimind_pezeshkian_news.json
+          git diff --cached --quiet || git commit -m 'chore: refresh Pezeshkian decision evidence'
+          git push
