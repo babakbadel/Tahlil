@@ -18,7 +18,7 @@ env:
 jobs:
   pipeline:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,6 +34,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade graphifyy
+          python -m pip install -r requirements-finpy-tse.txt
+
+      - name: Collect FinPy-TSE market data
+        continue-on-error: true
+        env:
+          FINPY_TSE_SYMBOLS: 'فملی,وبملت,شپنا,خساپا'
+          FINPY_TSE_LOOKBACK_DAYS: '30'
+        run: python scripts/collect_finpy_tse.py
 
       - name: Check OpenRouter configuration
         env:
@@ -74,11 +82,13 @@ jobs:
               Path('reports/babimind_pipeline.json'),
               Path('reports/babimind_graph.json'),
               Path('reports/babimind_memory_context.json'),
+              Path('data/raw/finpy_tse_snapshot.json'),
           ]
           parts = [
               'You are BabiMind, the central financial and economic intelligence model for Tahlil.',
               'OpenRouter is the only active LLM provider in this pipeline.',
               'Use CURRENT repository intelligence as primary evidence and MEMORY only for historical context/calibration.',
+              'Treat FinPy-TSE as an additional market-data source, not as unquestionable truth; cross-check it against other available sources.',
               'Integrate Iran stock market, gold, dollar, macroeconomics, political economy, game theory and dynamic systems.',
               'Compare the current state with recent model runs and explicitly identify regime changes, recurring data gaps and confidence changes.',
               'Generate scenario probabilities and explain feedback loops, strategic actors, incentives and regime changes.',
@@ -135,15 +145,15 @@ jobs:
             cat reports/babimind_provider_status.json
           fi
 
-      - name: Commit BabiMind reports and memory
+      - name: Commit BabiMind reports, memory and FinPy snapshot
         if: always()
         run: |
           set -e
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ graphify-out/ 2>/dev/null || true
+          git add reports/ graphify-out/ data/raw/finpy_tse_snapshot.json 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'chore: refresh BabiMind OpenRouter intelligence' || true
+          git commit -m 'chore: refresh BabiMind intelligence and FinPy-TSE data' || true
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then
