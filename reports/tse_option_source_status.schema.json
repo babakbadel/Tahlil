@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["source", "upstream", "ref", "commit", "status", "data"],
+  "properties": {
+    "source": {"const": "sm-sokout/tse-option"},
+    "upstream": {"type": "string"},
+    "ref": {"type": "string"},
+    "commit": {"type": "string"},
+    "status": {"type": "string"},
+    "data": {"type": "array"}
+  }
+}
