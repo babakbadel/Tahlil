@@ -14,6 +14,8 @@ concurrency:
 
 env:
   OPENROUTER_MODEL: openrouter/free
+  TSE_OPTION_REPO: https://github.com/sm-sokout/tse-option.git
+  TSE_OPTION_REF: master
 
 jobs:
   pipeline:
@@ -48,6 +50,9 @@ jobs:
 
       - name: Ingest MarketWatchPlus Excel snapshot
         run: python scripts/ingest_marketwatch_plus.py
+
+      - name: Ingest TSE Option upstream source
+        run: python scripts/ingest_tse_option.py
 
       - name: Check OpenRouter configuration
         env:
@@ -93,14 +98,17 @@ jobs:
               Path('reports/option_market_watch_summary.json'),
               Path('data/raw/marketwatch_plus_snapshot.json'),
               Path('reports/marketwatch_plus_summary.json'),
+              Path('data/raw/tse_option_snapshot.json'),
+              Path('reports/tse_option_source_status.json'),
           ]
           parts = [
               'You are BabiMind, the central financial and economic intelligence model for Tahlil.',
               'OpenRouter is the only active LLM provider in this pipeline.',
               'Use CURRENT repository intelligence as primary evidence and MEMORY only for historical context/calibration.',
-              'Treat FinPy-TSE as an additional market-data source, not as unquestionable truth; cross-check it against other available sources.',
+              'Treat FinPy-TSE and sm-sokout/tse-option as auxiliary sources; cross-check them against repository-owned snapshots.',
               'OptionMarketWatch.csv is the repository-owned option-chain snapshot and MUST be used for option-market structure, liquidity, volume, open-interest, strike, moneyness, expiry and underlying-price analysis when present.',
-              'MarketWatchPlus Excel is an additional repository-owned market snapshot. Use all sheets and published fields as evidence for market breadth, trading activity, symbols, prices and other fields present in the workbook.',
+              'MarketWatchPlus Excel is a repository-owned market snapshot. Use all sheets and published fields as evidence for market breadth, trading activity, symbols, prices and other fields present in the workbook.',
+              'sm-sokout/tse-option is an auxiliary upstream option-analysis source. Preserve source provenance and never let it overwrite repository-owned observations.',
               'Do not invent IV, Delta, Gamma, Theta, Vega or synchronized quote timestamps when they are absent. Explicitly report these as data gaps.',
               'Integrate Iran stock market, options, gold, dollar, macroeconomics, political economy, game theory and dynamic systems.',
               'Compare the current state with recent model runs and explicitly identify regime changes, recurring data gaps and confidence changes.',
@@ -132,7 +140,7 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          for p in ('reports/babimind_graph.json','reports/babimind_pipeline.json','reports/babimind_llm.json','data/raw/option_market_watch_snapshot.json','data/raw/marketwatch_plus_snapshot.json'):
+          for p in ('reports/babimind_graph.json','reports/babimind_pipeline.json','reports/babimind_llm.json','data/raw/option_market_watch_snapshot.json','data/raw/marketwatch_plus_snapshot.json','data/raw/tse_option_snapshot.json'):
               q = Path(p)
               if not q.exists() or q.stat().st_size == 0:
                   raise SystemExit(f'Missing/empty output: {p}')
@@ -164,7 +172,7 @@ jobs:
           set -e
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ graphify-out/ data/raw/finpy_tse_snapshot.json data/raw/option_market_watch_snapshot.json data/raw/marketwatch_plus_snapshot.json 2>/dev/null || true
+          git add reports/ graphify-out/ data/raw/finpy_tse_snapshot.json data/raw/option_market_watch_snapshot.json data/raw/marketwatch_plus_snapshot.json data/raw/tse_option_snapshot.json 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'chore: refresh BabiMind intelligence and market snapshots' || true
           for attempt in 1 2 3; do
