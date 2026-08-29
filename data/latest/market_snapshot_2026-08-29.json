@@ -1,0 +1,51 @@
+{
+  "as_of": "2026-08-29",
+  "calendar": "1405-06-07",
+  "market": "iran",
+  "session": "early_session",
+  "sources": [
+    {"type":"web","name":"Sarmayeh va Bourse","ref":"turn0news4"},
+    {"type":"web","name":"EghtesadOnline","ref":"turn0news6"},
+    {"type":"web","name":"Fararu","ref":"turn0news15"},
+    {"type":"web","name":"Vietnam.vn gold market report","ref":"turn0news21"}
+  ],
+  "equity_market": {
+    "status": "bullish_early_session",
+    "index_level_approx": 6500000,
+    "index_change_pct_reported": 1.96,
+    "equal_weight_change_points_reported": 24000,
+    "demand_vs_supply": "demand_dominant",
+    "real_money_inflow_toman_billion": 4900,
+    "note": "Reported market observations for the start of Saturday session; intraday values can change."
+  },
+  "fx": {
+    "usd_irr_market_approx": 203400,
+    "direction": "up",
+    "unit": "IRR per USD",
+    "note": "Free-market seller quote reported by Fararu."
+  },
+  "gold": {
+    "xau_usd_oz_approx": 4557.9,
+    "direction": "down",
+    "note": "Spot gold quote reported in the Aug-29 morning market report; international market is closed over the weekend."
+  },
+  "femli": {
+    "symbol": "فملی",
+    "price_irr_carried_from_project_context": 20540,
+    "fresh_today_verified": false
+  },
+  "options": {
+    "realtime_file_in_repo": "data/latest/options_realtime.json",
+    "contracts_of_interest": ["ضملی 7070", "ضملی 7071"],
+    "realtime_file_status": "present",
+    "note": "The repository realtime options dataset exists; exact contract-level values should be extracted by the pipeline before being treated as today's verified IV/OI/Delta values."
+  },
+  "model_signals": {
+    "regime": "bullish_late_momentum",
+    "trend": "positive",
+    "risk_of_short_term_overextension": "elevated",
+    "base_strategy": "buy_dips_not_pumps",
+    "confidence": "medium",
+    "confidence_reason": "Market and FX observations are fresh, but some contract-level option fields were not independently extracted in this snapshot."
+  }
+}
