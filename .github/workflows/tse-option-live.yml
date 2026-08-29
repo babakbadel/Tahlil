@@ -1,0 +1,78 @@
+name: TSE Option Live Collector
+
+on:
+  workflow_dispatch:
+    inputs:
+      symbol:
+        description: 'Underlying symbol'
+        required: true
+        default: 'فملی'
+        type: string
+      include_greeks:
+        description: 'Calculate IV/BSM/Leverage where supported'
+        required: true
+        default: true
+        type: boolean
+  schedule:
+    - cron: '30 7 * * 6-4'
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install upstream tse-option
+        run: |
+          python -m pip install --upgrade pip
+          git clone --depth 1 --branch master https://github.com/sm-sokout/tse-option.git .cache/tse-option
+          python -m pip install -e .cache/tse-option
+          python -m pip install pandas numpy scipy requests jalali_pandas
+
+      - name: Collect live option chain
+        env:
+          OPTION_SYMBOL: ${{ inputs.symbol || 'فملی' }}
+          OPTION_INCLUDE_GREEKS: ${{ inputs.include_greeks || 'true' }}
+        run: python scripts/collect_tse_option_chain.py
+
+      - name: Validate non-empty snapshot
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/raw/tse_option_chain.json')
+          if not p.exists() or p.stat().st_size == 0: raise SystemExit('empty snapshot')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          rows=d.get('rows', [])
+          if not rows: raise SystemExit('tse-option returned zero rows')
+          print('rows=',len(rows))
+          print('columns=',d.get('columns'))
+          print('sample=',json.dumps(rows[:5],ensure_ascii=False,default=str))
+          PY
+
+      - name: Upload raw snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: tse-option-${{ inputs.symbol || 'fml' }}
+          path: data/raw/tse_option_chain.json
+          retention-days: 14
+
+      - name: Commit snapshot separately
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/raw/tse_option_chain.json
+          git commit -m 'data: refresh live TSE option chain' || exit 0
+          git push origin HEAD:main
