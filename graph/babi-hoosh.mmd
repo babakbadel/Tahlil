@@ -1,0 +1,22 @@
+flowchart TD
+  A[Political Decision / Advisors] --> B[Game Theory]
+  B --> C[Dynamic Systems]
+  C --> D[Economic Variables]
+  D --> E[Market Regime]
+  E --> F[Money Flow / Rotation]
+  F --> G[Industry]
+  G --> H[FMLI]
+  H --> I[Codal / Fundamentals]
+  H --> J[Price Action / Technical]
+  I --> K[Scenario Engine]
+  J --> K
+  K --> L[Options / Greeks / IV / OI]
+  L --> M[Probability / Expected Value]
+  M --> N[Decision]
+  N --> O[Backtest / Calibration]
+  O --> P[Decision History / Memory]
+  P -. evidence .-> B
+  P -. historical outcomes .-> K
+  D -. feedback .-> C
+  H -. feedback .-> E
+  L -. feedback .-> F
