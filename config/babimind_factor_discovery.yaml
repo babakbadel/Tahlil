@@ -1,0 +1,72 @@
+version: 1
+name: BabiMind Hidden Factor Discovery
+purpose: Discover non-redundant predictive factors before promoting them to Factor Registry.
+principles:
+  - no synthetic observations
+  - discovery candidates are not facts
+  - correlation is not causation
+  - prefer internal Tahlil/API/Codal data
+  - preserve provenance and timestamps
+  - control correlated factors and multiple testing
+  - require out-of-sample validation before promotion
+candidate_factors:
+  - id: fx_spread_regime
+    label: FX spread regime
+    hypotheses: [inflation_expectations, free_fx_pressure, capital_rotation]
+  - id: fx_allocation_waiting_time
+    label: FX allocation waiting time
+    hypotheses: [import_supply_shock, working_capital_stress, producer_inflation]
+  - id: trade_settlement_lag
+    label: Trade settlement lag
+    hypotheses: [import_cost, inventory_stress, inflation]
+  - id: shipping_risk_premium
+    label: Shipping risk premium
+    hypotheses: [landed_cost, imported_inflation, trade_volume]
+  - id: inventory_stress
+    label: Inventory stress
+    hypotheses: [supply_shortage, producer_prices, industrial_output]
+  - id: bank_credit_rationing
+    label: Bank credit rationing
+    hypotheses: [working_capital, industrial_output, recession]
+  - id: deposit_duration
+    label: Deposit duration
+    hypotheses: [money_velocity, liquidity_preference, asset_demand]
+  - id: policy_reversal_frequency
+    label: Policy reversal frequency
+    hypotheses: [uncertainty, investment, risk_premium]
+  - id: decision_latency
+    label: Decision implementation latency
+    hypotheses: [policy_effectiveness, uncertainty, market_reaction]
+  - id: credibility_gap
+    label: Policy credibility gap
+    hypotheses: [inflation_expectations, fx_expectations, investment]
+  - id: cash_to_goods_speed
+    label: Cash-to-goods conversion speed
+    hypotheses: [money_velocity, inflation_expectations, hard_asset_demand]
+  - id: option_iv_skew
+    label: Option IV skew
+    hypotheses: [tail_risk_pricing, downside_hedging, underlying_return]
+  - id: oi_concentration
+    label: Open-interest concentration
+    hypotheses: [pinning, gamma_effects, expiry_behavior]
+  - id: commodity_fx_decoupling
+    label: Commodity-FX decoupling
+    hypotheses: [exporter_equity_returns, earnings_translation, valuation]
+  - id: receivables_stress
+    label: Receivables / DSO stress
+    hypotheses: [working_capital, credit_stress, earnings_quality]
+scoring:
+  predictive: 0.25
+  stability: 0.20
+  lead: 0.15
+  causal: 0.15
+  regime: 0.10
+  novelty: 0.10
+  data_quality: 0.05
+promotion:
+  minimum_discovery_score: 0.65
+  minimum_out_of_sample_windows: 3
+  require_source_provenance: true
+  require_non_redundancy: true
+  require_regime_stability: true
+  require_no_synthetic_data: true
