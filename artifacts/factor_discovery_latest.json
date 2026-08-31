@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "candidate_scan_ready",
+  "synthetic_data_used": false,
+  "observation_count": 940,
+  "sources": [
+    "data/feature-panel-seed-1405-06.csv",
+    "data/latest/OptionMarketWatch-1.csv",
+    "data/latest/OptionMarketWatch.csv",
+    "data/marketwatch/stocks_1405-06-07.csv"
+  ],
+  "candidates": [],
+  "notes": [
+    "Candidate factors require historical aligned series for statistical testing.",
+    "No synthetic observations are created by this script.",
+    "Promotion requires the gates documented in docs/babimind-factor-discovery.md."
+  ]
+}
