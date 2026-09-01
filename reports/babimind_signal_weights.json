@@ -3,15 +3,15 @@
   "weights": [
     {
       "source": "IMF Data API",
-      "topic": "official/api",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "topic": "macro",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "IMF SDMX Central",
-      "topic": "official/api",
+      "topic": "macro",
       "confidence": 0.06,
       "signal_weight": 0.295,
       "tier": "D",
@@ -19,7 +19,31 @@
     },
     {
       "source": "World Bank API",
-      "topic": "official/api",
+      "topic": "macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "BIS Statistics",
+      "topic": "monetary",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "OECD Data",
+      "topic": "macro",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "FRED",
+      "topic": "macro",
       "confidence": 0.6,
       "signal_weight": 0.7,
       "tier": "C",
@@ -27,47 +51,39 @@
     },
     {
       "source": "ECB Data API",
-      "topic": "official/api",
+      "topic": "rates_fx",
       "confidence": 0.6,
       "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
-    },
-    {
-      "source": "FRED",
-      "topic": "official/site",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
-      "tier": "C",
-      "status": "ok"
-    },
-    {
-      "source": "BIS",
-      "topic": "official/site",
-      "confidence": 0.06,
-      "signal_weight": 0.295,
-      "tier": "D",
-      "status": "error"
-    },
-    {
-      "source": "OECD",
-      "topic": "official/site",
-      "confidence": 0.06,
-      "signal_weight": 0.295,
-      "tier": "D",
-      "status": "error"
-    },
-    {
-      "source": "IEA",
-      "topic": "official/site",
-      "confidence": 0.06,
-      "signal_weight": 0.295,
-      "tier": "D",
-      "status": "error"
     },
     {
       "source": "EIA",
-      "topic": "official/api",
+      "topic": "energy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "IEA Data",
+      "topic": "energy",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "OPEC",
+      "topic": "oil",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "JODI",
+      "topic": "oil",
       "confidence": 0.6,
       "signal_weight": 0.7,
       "tier": "C",
@@ -75,15 +91,15 @@
     },
     {
       "source": "USGS Minerals",
-      "topic": "official/site",
-      "confidence": 0.045,
-      "signal_weight": 0.2838,
+      "topic": "commodities",
+      "confidence": 0.15,
+      "signal_weight": 0.3625,
       "tier": "D",
-      "status": "error"
+      "status": "unavailable"
     },
     {
       "source": "World Gold Council",
-      "topic": "industry/report",
+      "topic": "gold",
       "confidence": 0.6,
       "signal_weight": 0.7,
       "tier": "C",
@@ -91,23 +107,15 @@
     },
     {
       "source": "LBMA",
-      "topic": "market/site",
+      "topic": "gold",
       "confidence": 0.54,
       "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
     {
-      "source": "SEC EDGAR",
-      "topic": "official/api",
-      "confidence": 0.06,
-      "signal_weight": 0.295,
-      "tier": "D",
-      "status": "error"
-    },
-    {
       "source": "CFTC",
-      "topic": "official/site",
+      "topic": "positioning",
       "confidence": 0.6,
       "signal_weight": 0.7,
       "tier": "C",
@@ -115,39 +123,39 @@
     },
     {
       "source": "UN Comtrade",
-      "topic": "official/api",
+      "topic": "trade",
       "confidence": 0.06,
       "signal_weight": 0.295,
       "tier": "D",
       "status": "error"
     },
     {
-      "source": "UNCTAD",
-      "topic": "official/site",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
-      "tier": "C",
-      "status": "ok"
-    },
-    {
-      "source": "FAOSTAT",
-      "topic": "official/api",
+      "source": "UNCTADstat",
+      "topic": "trade",
       "confidence": 0.6,
       "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
     {
-      "source": "ILO",
-      "topic": "official/site",
+      "source": "FAOSTAT",
+      "topic": "agriculture",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "ILOStat",
+      "topic": "labor",
       "confidence": 0.06,
       "signal_weight": 0.295,
       "tier": "D",
       "status": "error"
     },
     {
-      "source": "WHO",
-      "topic": "official/site",
+      "source": "WHO Data",
+      "topic": "health",
       "confidence": 0.6,
       "signal_weight": 0.7,
       "tier": "C",
@@ -155,7 +163,2015 @@
     },
     {
       "source": "Reuters",
-      "topic": "trusted-news",
+      "topic": "events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "TSE Official Gateway",
+      "topic": "iran_market",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC CDN Market Watch",
+      "topic": "iran_market",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Instrument Search",
+      "topic": "iran_market",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Index",
+      "topic": "iran_market",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Funds",
+      "topic": "funds",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Client Type",
+      "topic": "money_flow",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Market Overview",
+      "topic": "iran_market",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Codal Publisher",
+      "topic": "codal",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Messages",
+      "topic": "events",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Shareholders",
+      "topic": "ownership",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Trade Top",
+      "topic": "market_breadth",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "TSETMC Price History",
+      "topic": "price_history",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Codal",
+      "topic": "codal",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Central Bank of Iran",
+      "topic": "iran_macro",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
+      "status": "ok"
+    },
+    {
+      "source": "Statistical Center of Iran",
+      "topic": "iran_macro",
+      "confidence": 0.15,
+      "signal_weight": 0.3625,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Iran Mercantile Exchange",
+      "topic": "iran_commodities",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Iran Energy Exchange",
+      "topic": "iran_energy",
+      "confidence": 0.135,
+      "signal_weight": 0.3513,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Iran Customs",
+      "topic": "iran_trade",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Ministry of Industry Mine Trade",
+      "topic": "iran_industry",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Ministry of Petroleum",
+      "topic": "iran_energy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "SHANA",
+      "topic": "iran_energy",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Iran Power Grid Management",
+      "topic": "iran_energy",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Iran Open Data",
+      "topic": "iran_macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "World Bank Iran",
+      "topic": "iran_macro",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "IMF Iran",
+      "topic": "iran_macro",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "UNData",
+      "topic": "macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "UNDP Data",
+      "topic": "development",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "FAO Iran",
+      "topic": "agriculture",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Energy Institute",
+      "topic": "energy",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Shanghai Futures Exchange",
+      "topic": "commodities",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "LME",
+      "topic": "metals",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "CME Group",
+      "topic": "futures",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "ICE Markets",
+      "topic": "futures",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Nasdaq",
+      "topic": "global_equity",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "S&P Global",
+      "topic": "macro",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Trading Economics",
+      "topic": "macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "CEIC Iran",
+      "topic": "iran_macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Global Rates",
+      "topic": "rates_fx",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Investing Iran Markets",
+      "topic": "market",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Kpler",
+      "topic": "energy_trade",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Vortexa",
+      "topic": "energy_trade",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "MarineTraffic",
+      "topic": "shipping",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Windy",
+      "topic": "weather",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Tehran Stock Exchange",
+      "topic": "iran_market",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Iran Fara Bourse",
+      "topic": "iran_market",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Ministry of Economic Affairs and Finance",
+      "topic": "iran_fiscal",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "National Iranian Oil Company",
+      "topic": "iran_oil",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
+      "status": "ok"
+    },
+    {
+      "source": "National Iranian Gas Company",
+      "topic": "iran_gas",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Ministry of Energy Iran",
+      "topic": "iran_energy",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Iran Tax Administration",
+      "topic": "iran_fiscal",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Iran Ports and Maritime Organization",
+      "topic": "iran_trade",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Iran Chamber of Commerce",
+      "topic": "iran_business",
+      "confidence": 0.15,
+      "signal_weight": 0.3625,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Iran Chamber Research Center",
+      "topic": "iran_macro",
+      "confidence": 0.15,
+      "signal_weight": 0.3625,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Sena",
+      "topic": "iran_market",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "WTO",
+      "topic": "trade",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "World Economic Forum",
+      "topic": "macro",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Federal Reserve",
+      "topic": "monetary",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "US Treasury",
+      "topic": "rates_policy",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
+      "status": "ok"
+    },
+    {
+      "source": "BEA",
+      "topic": "macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "BLS",
+      "topic": "labor",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "US Census Bureau",
+      "topic": "trade",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Eurostat",
+      "topic": "macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Bank of England",
+      "topic": "monetary",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "ONS UK",
+      "topic": "macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Bank of Japan",
+      "topic": "monetary",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Japan Statistics Bureau",
+      "topic": "macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "PBOC",
+      "topic": "monetary",
+      "confidence": 0.045,
+      "signal_weight": 0.2838,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "China National Bureau of Statistics",
+      "topic": "macro",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
+      "status": "ok"
+    },
+    {
+      "source": "China Customs",
+      "topic": "trade",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "India RBI",
+      "topic": "monetary",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "India MOSPI",
+      "topic": "macro",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Statistics Canada",
+      "topic": "macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Australian Bureau of Statistics",
+      "topic": "macro",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Swiss National Bank",
+      "topic": "monetary",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Deutsche Bundesbank",
+      "topic": "monetary",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Banque de France",
+      "topic": "monetary",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "SAMA",
+      "topic": "monetary",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
+      "status": "ok"
+    },
+    {
+      "source": "UAE Central Bank",
+      "topic": "monetary",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Turkish Statistical Institute",
+      "topic": "macro",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Central Bank of Turkey",
+      "topic": "monetary",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Central Bank of Russia",
+      "topic": "monetary",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Rosstat",
+      "topic": "macro",
+      "confidence": 0.15,
+      "signal_weight": 0.3625,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Argus Media",
+      "topic": "energy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "S&P Global Commodity Insights",
+      "topic": "commodities",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Platts",
+      "topic": "commodities",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "COMEX",
+      "topic": "metals",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "NYMEX",
+      "topic": "energy",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Genscape",
+      "topic": "energy",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "OPIS",
+      "topic": "energy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "EEX",
+      "topic": "energy",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "ACER",
+      "topic": "energy",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "World Platinum Investment Council",
+      "topic": "metals",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Moody's",
+      "topic": "credit",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Fitch Ratings",
+      "topic": "credit",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Morningstar",
+      "topic": "funds",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "MSCI",
+      "topic": "global_equity",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "NYSE",
+      "topic": "global_equity",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Cboe",
+      "topic": "volatility",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "DTCC",
+      "topic": "settlement",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "SEC EDGAR",
+      "topic": "filings",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "FINRA",
+      "topic": "markets",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "LSEG",
+      "topic": "global_markets",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "FactSet",
+      "topic": "global_markets",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "IISS",
+      "topic": "geopolitics",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Brookings Institution",
+      "topic": "policy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "RAND",
+      "topic": "geopolitics",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Wilson Center",
+      "topic": "geopolitics",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "ECFR",
+      "topic": "europe_policy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Bruegel",
+      "topic": "europe_economy",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Peterson Institute",
+      "topic": "global_economy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Stimson Center",
+      "topic": "geopolitics",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Middle East Institute",
+      "topic": "middle_east",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Washington Institute",
+      "topic": "middle_east",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Institute for the Study of War",
+      "topic": "conflict",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "ACLED",
+      "topic": "conflict",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "UN Security Council",
+      "topic": "geopolitics",
+      "confidence": 0.054,
+      "signal_weight": 0.2905,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "US State Department",
+      "topic": "foreign_policy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "US Treasury OFAC",
+      "topic": "sanctions",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
+      "status": "ok"
+    },
+    {
+      "source": "European Commission",
+      "topic": "europe_policy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "UK FCDO",
+      "topic": "foreign_policy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "NATO",
+      "topic": "security",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "IAEA",
+      "topic": "nuclear",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "OPCW",
+      "topic": "security",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Reuters Markets",
+      "topic": "markets",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Bloomberg Markets",
+      "topic": "markets",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Associated Press",
+      "topic": "events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "AFP",
+      "topic": "events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "BBC",
+      "topic": "events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Al Jazeera",
+      "topic": "middle_east",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "France 24",
+      "topic": "events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Euronews",
+      "topic": "europe",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "DW",
+      "topic": "events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "South China Morning Post",
+      "topic": "china",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Nikkei Asia",
+      "topic": "asia",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
+      "status": "ok"
+    },
+    {
+      "source": "Arab News",
+      "topic": "middle_east",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "The National",
+      "topic": "middle_east",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Al Arabiya",
+      "topic": "middle_east",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Al Monitor",
+      "topic": "middle_east",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "OilPrice",
+      "topic": "oil",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Rigzone",
+      "topic": "oil",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Offshore Energy",
+      "topic": "energy",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Mining.com",
+      "topic": "metals",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Kitco",
+      "topic": "gold",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "CoinDesk",
+      "topic": "crypto",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Foreign Affairs",
+      "topic": "geopolitics",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Foreign Policy",
+      "topic": "geopolitics",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "War on the Rocks",
+      "topic": "security",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Council on Foreign Relations",
+      "topic": "geopolitics",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Carnegie Endowment",
+      "topic": "geopolitics",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Chatham House",
+      "topic": "geopolitics",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Atlantic Council",
+      "topic": "geopolitics",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "International Crisis Group",
+      "topic": "conflict",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "CSIS",
+      "topic": "security",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "RUSI",
+      "topic": "security",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "IRNA",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "ISNA",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Mehr News",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Tasnim",
+      "topic": "news_events",
+      "confidence": 0.15,
+      "signal_weight": 0.3625,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "Fars",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "YJC",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "PANA",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "IMNA",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Shabestan",
+      "topic": "news_events",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "SNN",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Donya-e-Eqtesad",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Eghtesad Online",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "EcoIran",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Tejarat News",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Eghtesad News",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Bourse News",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Bourse24",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Sedaye Bourse",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Iran Economist",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Khabar Online",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Tabnak",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Entekhab",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Fararu",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Asr Iran",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Alef",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Mashregh News",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Raja News",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Aftab News",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Hamshahri Online",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "CNN",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "France 24",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "DW",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Sky News",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Bloomberg",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Financial Times",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Wall Street Journal",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "CNBC",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "MarketWatch",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Barron's",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "The Economist",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Forbes",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Business Insider",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Fortune",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "New York Times",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Washington Post",
+      "topic": "news_events",
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
+      "tier": "D",
+      "status": "unavailable"
+    },
+    {
+      "source": "NBC News",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "ABC News",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "CBS News",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "NPR",
+      "topic": "news_events",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
+      "status": "ok"
+    },
+    {
+      "source": "PBS NewsHour",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Politico",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Axios",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "The Hill",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "The Guardian",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "The Telegraph",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "The Times UK",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Der Spiegel",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Die Zeit",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Le Monde",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Les Echos",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "La Tribune",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "El Pais",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "TASS",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "RIA Novosti",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Interfax",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "RT",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "The Moscow Times",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Middle East Eye",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Middle East Monitor",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Asharq Al-Awsat",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Defense News",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Breaking Defense",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Jerusalem Post",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "China Daily",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Global Times",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Xinhua",
+      "topic": "news_events",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
+      "status": "ok"
+    },
+    {
+      "source": "Japan Times",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "NHK World",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Times of India",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Hindustan Times",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Indian Express",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Economic Times India",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Channel NewsAsia",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Straits Times",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Korea Herald",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Yonhap",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Africanews",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "News24",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Daily Maverick",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "The EastAfrican",
+      "topic": "news_events",
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
+    },
+    {
+      "source": "Brazil Journal",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Folha de S.Paulo",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "Clarin",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "La Nacion Argentina",
+      "topic": "news_events",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "El Comercio Peru",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "El Universal Mexico",
+      "topic": "news_events",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
+    },
+    {
+      "source": "The Block",
+      "topic": "news_events",
       "confidence": 0.06,
       "signal_weight": 0.295,
       "tier": "D",
