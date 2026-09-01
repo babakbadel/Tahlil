@@ -366,6 +366,6 @@ IMF Data API دسترسی برنامه‌ای به داده‌ها را از ط�
 ---
 
 ## Automated refresh metadata
-Last catalog refresh: 2026-08-29T12:04:42Z
+Last catalog refresh: 2026-09-01T10:54:45Z
 
 Refresh cadence: every 4 days
