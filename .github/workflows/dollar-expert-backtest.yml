@@ -1,0 +1,36 @@
+name: BabiMind Dollar Expert Backtest
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 5 * * 0-4'
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Score locked forecasts
+        run: python scripts/score_dollar_experts.py
+
+      - name: Commit leaderboard
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/dollar_expert_leaderboard.csv
+          if git diff --cached --quiet; then
+            echo 'No leaderboard changes.'
+          else
+            git commit -m 'chore: refresh dollar expert leaderboard'
+            git push
+          fi
