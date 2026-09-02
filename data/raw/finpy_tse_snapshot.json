@@ -1,0 +1,38 @@
+{
+  "source": "finpy-tse",
+  "upstream": "https://github.com/ARahimiQuant/finpy-tse",
+  "collected_at": "2026-09-02",
+  "status": {
+    "source": "finpy-tse",
+    "upstream": "https://github.com/ARahimiQuant/finpy-tse",
+    "available": true,
+    "import_error": null
+  },
+  "symbols": {
+    "فملی": {
+      "price_history": [],
+      "ri_history": [],
+      "price_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D9%81%D9%85%D9%84%DB%8C (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fcca50ac0e0>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))",
+      "ri_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D9%81%D9%85%D9%84%DB%8C (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fcca4dfb110>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+    },
+    "وبملت": {
+      "price_history": [],
+      "ri_history": [],
+      "price_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D9%88%D8%A8%D9%85%D9%84%D8%AA (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fcca4c22e10>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))",
+      "ri_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D9%88%D8%A8%D9%85%D9%84%D8%AA (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fcca4c235c0>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+    },
+    "شپنا": {
+      "price_history": [],
+      "ri_history": [],
+      "price_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D8%B4%D9%BE%D9%86%D8%A7 (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fcca4c23da0>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))",
+      "ri_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D8%B4%D9%BE%D9%86%D8%A7 (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fcca4c604d0>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+    },
+    "خساپا": {
+      "price_history": [],
+      "ri_history": [],
+      "price_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D8%AE%D8%B3%D8%A7%D9%BE%D8%A7 (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fcca4c60d70>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))",
+      "ri_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D8%AE%D8%B3%D8%A7%D9%BE%D8%A7 (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fcca4c23c20>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+    }
+  },
+  "market_watch_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/ClientTypeAll.aspx (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fcca4c231a0>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+}
