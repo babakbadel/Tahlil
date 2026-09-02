@@ -1,45 +1,36 @@
-"""Score locked BabiMind dollar forecasts.
+"""Score locked BabiMind dollar forecasts without hindsight leakage.
 
-Input CSV columns:
-expert,issued_at,horizon_days,price_at_issue,target_low,target_high,direction,actual_price,actual_at
-
-A forecast is scored only after actual_price is available at/after the declared
-horizon. Missing outcomes remain unscored; this prevents hindsight bias.
+A row is scored only when actual_at is at or after issued_at + horizon_days.
+The outcome timestamp is required so an early/late observation cannot silently
+be treated as the declared horizon.
 """
 from __future__ import annotations
 
 import csv
 import math
 from collections import defaultdict
+from datetime import datetime, timedelta
 from pathlib import Path
 
 INPUT = Path("data/dollar_expert_forecasts.csv")
 OUTPUT = Path("data/dollar_expert_leaderboard.csv")
 
-WEIGHTS = {
-    "direction": 0.30,
-    "price_accuracy": 0.30,
-    "timing": 0.15,
-    "regime": 0.15,
-    "consistency": 0.10,
-}
+WEIGHTS = {"direction": 0.30, "price_accuracy": 0.30, "timing": 0.15, "regime": 0.15, "consistency": 0.10}
 
 
 def clamp(x: float, lo: float = 0.0, hi: float = 100.0) -> float:
     return max(lo, min(hi, x))
 
 
+def parse_dt(value: str) -> datetime:
+    return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
 def direction_score(direction: str, start: float, actual: float) -> float:
     move = actual - start
-    if abs(move) < max(start * 0.005, 1):
-        actual_dir = "flat"
-    else:
-        actual_dir = "up" if move > 0 else "down"
-    if direction == actual_dir:
-        return 100.0
-    if direction == "flat" and actual_dir != "flat":
-        return 0.0
-    return 0.0
+    threshold = max(start * 0.005, 1.0)
+    actual_dir = "flat" if abs(move) < threshold else ("up" if move > 0 else "down")
+    return 100.0 if direction == actual_dir else 0.0
 
 
 def price_score(start: float, low: float, high: float, actual: float) -> float:
@@ -49,14 +40,23 @@ def price_score(start: float, low: float, high: float, actual: float) -> float:
         return 100.0
     target = low if actual < low else high
     width = max(abs(high - low), start * 0.01, 1.0)
-    error = abs(actual - target)
-    return clamp(100.0 * math.exp(-error / width))
+    return clamp(100.0 * math.exp(-abs(actual - target) / width))
 
 
-def regime_score(direction: str, start: float, actual: float) -> float:
-    # Simple regime agreement. A later regime classifier can replace this
-    # without changing the leaderboard schema.
-    return direction_score(direction, start, actual)
+def timing_score(issued_at: datetime, horizon_days: int, actual_at: datetime) -> float:
+    expected = issued_at + timedelta(days=horizon_days)
+    error_days = abs((actual_at - expected).total_seconds()) / 86400.0
+    tolerance = max(1.0, horizon_days * 0.10)
+    return clamp(100.0 * math.exp(-error_days / tolerance))
+
+
+def consistency_score(history: list[float]) -> float:
+    if len(history) < 2:
+        return 100.0
+    # Stable performance gets full credit; highly erratic forecasts are penalized.
+    mean = sum(history) / len(history)
+    variance = sum((x - mean) ** 2 for x in history) / len(history)
+    return clamp(100.0 - math.sqrt(variance))
 
 
 def main() -> None:
@@ -65,45 +65,49 @@ def main() -> None:
         return
 
     rows = list(csv.DictReader(INPUT.open(encoding="utf-8-sig")))
-    by_expert = defaultdict(list)
+    by_expert: dict[str, list[float]] = defaultdict(list)
+
     for row in rows:
         try:
-            actual = float(row.get("actual_price") or "")
+            if str(row.get("locked", "")).strip().lower() not in {"true", "1", "yes"}:
+                continue
+            if not row.get("actual_price") or not row.get("actual_at"):
+                continue
+            issued = parse_dt(row["issued_at"])
+            actual_at = parse_dt(row["actual_at"])
+            horizon = int(row["horizon_days"])
+            if actual_at < issued + timedelta(days=horizon):
+                continue
             start = float(row["price_at_issue"])
             low = float(row["target_low"])
             high = float(row["target_high"])
+            actual = float(row["actual_price"])
         except (ValueError, KeyError):
             continue
-        d = direction_score(row["direction"].lower(), start, actual)
+
+        d = direction_score(row["direction"].strip().lower(), start, actual)
         p = price_score(start, low, high, actual)
-        r = regime_score(row["direction"].lower(), start, actual)
-        # Timing is binary only after the declared horizon is evaluated.
-        timing = 100.0
-        consistency = 100.0
-        total = (
-            WEIGHTS["direction"] * d
-            + WEIGHTS["price_accuracy"] * p
-            + WEIGHTS["timing"] * timing
-            + WEIGHTS["regime"] * r
-            + WEIGHTS["consistency"] * consistency
+        t = timing_score(issued, horizon, actual_at)
+        r = d  # Replace with explicit regime labels when the regime classifier is wired in.
+        by_expert[row["expert"]].append(
+            WEIGHTS["direction"] * d + WEIGHTS["price_accuracy"] * p + WEIGHTS["timing"] * t + WEIGHTS["regime"] * r
         )
-        by_expert[row["expert"]].append(total)
 
     leaderboard = []
     for expert, scores in by_expert.items():
-        leaderboard.append({
-            "expert": expert,
-            "scored_forecasts": len(scores),
-            "score": round(sum(scores) / len(scores), 2),
-        })
-    leaderboard.sort(key=lambda x: (-x["score"], -x["scored_forecasts"], x["expert"]))
+        consistency = consistency_score(scores)
+        base = sum(scores) / len(scores)
+        total = base + WEIGHTS["consistency"] * (consistency - 50.0)
+        leaderboard.append({"expert": expert, "scored_forecasts": len(scores), "score": round(total, 2)})
 
+    leaderboard.sort(key=lambda x: (-x["score"], -x["scored_forecasts"], x["expert"]))
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["rank", "expert", "scored_forecasts", "score"])
         writer.writeheader()
         for rank, item in enumerate(leaderboard, 1):
             writer.writerow({"rank": rank, **item})
+    print(f"Scored forecasts: {sum(len(v) for v in by_expert.values())}")
     for rank, item in enumerate(leaderboard, 1):
         print(rank, item)
 
