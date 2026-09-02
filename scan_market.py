@@ -69,7 +69,11 @@ def save_csv(rows):
         key for row in rows if isinstance(row, dict) for key in row.keys()
     })
     with open("data/all_symbols.csv", "w", encoding="utf-8-sig", newline="") as f:
-        writer = csv.DictWriter(fields=fields, f=f, extrasaction="ignore")
+        writer = csv.DictWriter(
+            f=f,
+            fieldnames=fields,
+            extrasaction="ignore",
+        )
         writer.writeheader()
         for row in rows:
             writer.writerow(row)
