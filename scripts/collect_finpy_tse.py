@@ -7,13 +7,31 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-from app.data.finpy_tse_adapter import get_market_watch, get_price_history, get_ri_history, source_status
+# When this file is executed directly (``python scripts/collect_finpy_tse.py``),
+# Python puts ``scripts/`` on sys.path rather than the repository root. Add the
+# root explicitly so imports such as ``app.data...`` work in GitHub Actions and
+# local execution alike.
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+from app.data.finpy_tse_adapter import (
+    get_market_watch,
+    get_price_history,
+    get_ri_history,
+    source_status,
+)
 
 OUTPUT = Path(os.getenv("FINPY_TSE_OUTPUT", "data/raw/finpy_tse_snapshot.json"))
-SYMBOLS = [s.strip() for s in os.getenv("FINPY_TSE_SYMBOLS", "فملی,وبملت,شپنا,خساپا").split(",") if s.strip()]
+SYMBOLS = [
+    s.strip()
+    for s in os.getenv("FINPY_TSE_SYMBOLS", "فملی,وبملت,شپنا,خساپا").split(",")
+    if s.strip()
+]
 
 
 def main() -> int:
@@ -30,11 +48,15 @@ def main() -> int:
     for symbol in SYMBOLS:
         item = {"price_history": [], "ri_history": []}
         try:
-            item["price_history"] = get_price_history(symbol, start.isoformat(), end.isoformat())
+            item["price_history"] = get_price_history(
+                symbol, start.isoformat(), end.isoformat()
+            )
         except Exception as exc:
             item["price_error"] = str(exc)
         try:
-            item["ri_history"] = get_ri_history(symbol, start.isoformat(), end.isoformat())
+            item["ri_history"] = get_ri_history(
+                symbol, start.isoformat(), end.isoformat()
+            )
         except Exception as exc:
             item["ri_error"] = str(exc)
         payload["symbols"][symbol] = item
@@ -45,7 +67,10 @@ def main() -> int:
         payload["market_watch_error"] = str(exc)
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    OUTPUT.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2, default=str),
+        encoding="utf-8",
+    )
     print(f"wrote {OUTPUT}")
     return 0
 
