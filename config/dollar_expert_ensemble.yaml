@@ -1,0 +1,71 @@
+version: 1
+model: BabiMind-Dollar-Expert-Ensemble
+as_of: 2026-09-02
+selection:
+  initial_pool_size: 30
+  stages: [30, 20, 12, 8, 5]
+  minimum_scored_forecasts_before_elimination: 8
+  lock_forecast_before_outcome: true
+  prevent_hindsight_revision: true
+  final_selection:
+    slots: 5
+    diversity_constraints:
+      macro: 1
+      technical_market: 1
+      political_geopolitical: 1
+      structural_fx: 1
+      best_overall: 1
+  score_weights:
+    direction: 0.30
+    price_accuracy: 0.30
+    timing: 0.15
+    regime_detection: 0.15
+    consistency: 0.10
+  ensemble_weight_method: inverse_recent_error_with_floor
+  max_single_expert_weight: 0.35
+
+forecast_horizons:
+  - intraday
+  - 1d
+  - 1w
+  - 1m
+  - 3m
+  - 6m
+  - year_end
+
+candidate_pool:
+  - {name: مجتبی دیبا, role: technical_market, status: seed}
+  - {name: میلاد زمانی, role: fx_market, status: seed}
+  - {name: علی سعدوندی, role: macro, status: seed}
+  - {name: کامران ندری, role: structural_fx, status: seed}
+  - {name: میثم رادپور, role: fx_gold, status: seed}
+  - {name: فردین آقابزرگی, role: capital_market, status: candidate}
+  - {name: وحید شقاقی شهری, role: macro, status: candidate}
+  - {name: مرتضی افقه, role: macro, status: candidate}
+  - {name: حسین عبده تبریزی, role: macro_finance, status: candidate}
+  - {name: تیمور رحمانی, role: macro, status: candidate}
+  - {name: داود سوری, role: macro, status: candidate}
+  - {name: پویا جبل عاملی, role: monetary_policy, status: candidate}
+  - {name: هادی حق شناس, role: macro, status: candidate}
+  - {name: آلبرت بغزیان, role: macro, status: candidate}
+  - {name: مهدی پازوکی, role: macro, status: candidate}
+  - {name: کامران پورکاظمی, role: banking_fx, status: candidate}
+  - {name: مهدی تقوی, role: macro, status: candidate}
+  - {name: علی قنبری, role: macro, status: candidate}
+  - {name: سعید لیلاز, role: macro_political, status: candidate}
+  - {name: مجید شاکری, role: monetary_fx, status: candidate}
+  - {name: محمدصادق الحسینی, role: macro_fx, status: candidate}
+  - {name: علی‌اکبر نیک‌اقبال, role: macro, status: candidate}
+  - {name: امیرحسین خالقی, role: macro_policy, status: candidate}
+  - {name: مهدی سماواتی, role: capital_market_fx, status: candidate}
+  - {name: همایون دارابی, role: capital_market, status: candidate}
+  - {name: مصطفی صفاری, role: capital_market_fx, status: candidate}
+  - {name: احسان خاندوزی, role: policy_macro, status: candidate}
+  - {name: عبدالناصر همتی, role: monetary_policy, status: candidate}
+  - {name: فرشاد مومنی, role: structural_macro, status: candidate}
+  - {name: علی سرزعیم, role: macro_policy, status: candidate}
+
+current_market_reference:
+  date: 2026-09-02
+  free_market_usd_irr_toman: 218000
+  note: "Reference only; live feeds must override this value in production."
