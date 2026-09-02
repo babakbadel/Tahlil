@@ -1,10 +1,10 @@
-version: 1
+version: 2
 model: BabiMind-Dollar-Expert-Ensemble
 as_of: 2026-09-02
 selection:
   initial_pool_size: 30
   stages: [30, 20, 12, 8, 5]
-  minimum_scored_forecasts_before_elimination: 8
+  minimum_scored_forecasts_before_elimination: 4
   lock_forecast_before_outcome: true
   prevent_hindsight_revision: true
   final_selection:
@@ -34,36 +34,38 @@ forecast_horizons:
   - year_end
 
 candidate_pool:
-  - {name: مجتبی دیبا, role: technical_market, status: seed}
-  - {name: میلاد زمانی, role: fx_market, status: seed}
-  - {name: علی سعدوندی, role: macro, status: seed}
-  - {name: کامران ندری, role: structural_fx, status: seed}
-  - {name: میثم رادپور, role: fx_gold, status: seed}
-  - {name: فردین آقابزرگی, role: capital_market, status: candidate}
+  - {name: محسن زنگنه, role: macro_policy, status: seed}
+  - {name: محمدقلی یوسفی, role: macro, status: seed}
+  - {name: علی مروی, role: fiscal_policy, status: seed}
+  - {name: علی سرزعیم, role: macro_policy, status: seed}
+  - {name: محمدهادی سبحانیان, role: fiscal_fx_policy, status: seed}
+  - {name: مجید شاکری, role: monetary_fx, status: candidate}
   - {name: وحید شقاقی شهری, role: macro, status: candidate}
   - {name: مرتضی افقه, role: macro, status: candidate}
-  - {name: حسین عبده تبریزی, role: macro_finance, status: candidate}
   - {name: تیمور رحمانی, role: macro, status: candidate}
   - {name: داود سوری, role: macro, status: candidate}
   - {name: پویا جبل عاملی, role: monetary_policy, status: candidate}
-  - {name: هادی حق شناس, role: macro, status: candidate}
-  - {name: آلبرت بغزیان, role: macro, status: candidate}
-  - {name: مهدی پازوکی, role: macro, status: candidate}
-  - {name: کامران پورکاظمی, role: banking_fx, status: candidate}
-  - {name: مهدی تقوی, role: macro, status: candidate}
-  - {name: علی قنبری, role: macro, status: candidate}
-  - {name: سعید لیلاز, role: macro_political, status: candidate}
-  - {name: مجید شاکری, role: monetary_fx, status: candidate}
+  - {name: کامران ندری, role: banking_fx, status: candidate}
+  - {name: حسین عبده تبریزی, role: macro_finance, status: candidate}
   - {name: محمدصادق الحسینی, role: macro_fx, status: candidate}
-  - {name: علی‌اکبر نیک‌اقبال, role: macro, status: candidate}
-  - {name: امیرحسین خالقی, role: macro_policy, status: candidate}
-  - {name: مهدی سماواتی, role: capital_market_fx, status: candidate}
-  - {name: همایون دارابی, role: capital_market, status: candidate}
-  - {name: مصطفی صفاری, role: capital_market_fx, status: candidate}
+  - {name: مهدی پازوکی, role: macro, status: candidate}
+  - {name: آلبرت بغزیان, role: macro, status: candidate}
+  - {name: فرشاد مومنی, role: structural_macro, status: candidate}
+  - {name: هادی حق‌شناس, role: macro, status: candidate}
+  - {name: علی قنبری, role: macro, status: candidate}
   - {name: احسان خاندوزی, role: policy_macro, status: candidate}
   - {name: عبدالناصر همتی, role: monetary_policy, status: candidate}
-  - {name: فرشاد مومنی, role: structural_macro, status: candidate}
-  - {name: علی سرزعیم, role: macro_policy, status: candidate}
+  - {name: محمدرضا فرزین, role: central_bank_policy, status: candidate}
+  - {name: مسعود میرکاظمی, role: fiscal_energy_policy, status: candidate}
+  - {name: محسن رضایی, role: macro_policy, status: candidate}
+  - {name: مجتبی یوسفی, role: housing_fx_macro, status: candidate}
+  - {name: مهدی سماواتی, role: capital_market_fx, status: candidate}
+  - {name: مصطفی صفاری, role: capital_market_fx, status: candidate}
+  - {name: همایون دارابی, role: capital_market, status: candidate}
+  - {name: فردین آقابزرگی, role: capital_market, status: candidate}
+  - {name: امیرحسین خالقی, role: macro_policy, status: candidate}
+
+selection_note: "Pool refreshed on 2026-09-02. The prior seed group centered on Mojtaba Diba, Milad Zamani, Ali SaadVandi, Kamran Naderi and Meysam Radpour was intentionally removed. The model may collect forecasts from all 30 candidates; final five are selected only after observed forecast performance."
 
 current_market_reference:
   date: 2026-09-02
