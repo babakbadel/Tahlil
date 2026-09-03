@@ -13,6 +13,7 @@ from urllib.error import HTTPError, URLError
 
 ROOT=Path(__file__).resolve().parents[1]
 CONFIG=ROOT/"config"/"babimind_source_health.json"
+THESIS_CONFIG=ROOT/"config"/"babimind_symbol_theses.json"
 OUT=ROOT/"reports"/"babimind_pipeline.json"
 GRAPH_OUT=ROOT/"reports"/"babimind_graph.json"
 MAX_WORKERS=24
@@ -22,7 +23,7 @@ TOTAL_DEADLINE=30
 def endpoint_check(url, timeout=DEFAULT_TIMEOUT):
     started=time.monotonic()
     try:
-        req=Request(url,headers={"User-Agent":"BabiMind-Pipeline/1.5"})
+        req=Request(url,headers={"User-Agent":"BabiMind-Pipeline/1.6"})
         with urlopen(req,timeout=timeout) as r:
             body=r.read(4096)
             status=getattr(r,"status",200)
@@ -57,6 +58,15 @@ def load_graph():
     try:return json.loads(GRAPH_OUT.read_text(encoding="utf-8"))
     except Exception as e:return {"available":False,"graph_score":None,"graph_confidence":0.0,"graph_regime":"error","reason":repr(e)}
 
+def load_symbol_theses():
+    if not THESIS_CONFIG.exists():
+        return {"version":0,"symbols":{},"available":False}
+    try:
+        payload=json.loads(THESIS_CONFIG.read_text(encoding="utf-8"))
+        return {"version":payload.get("version",0),"updated_at":payload.get("updated_at"),"symbols":payload.get("symbols",{}),"available":True}
+    except Exception as e:
+        return {"version":0,"symbols":{},"available":False,"error":repr(e)}
+
 def main():
     started=time.monotonic(); catalog=json.loads(CONFIG.read_text(encoding="utf-8")); sources=catalog.get("sources",[]); rows=[None]*len(sources)
     print(f"[BabiMind] checking {len(sources)} sources; workers={MAX_WORKERS}; timeout={DEFAULT_TIMEOUT}s; deadline={TOTAL_DEADLINE}s",flush=True)
@@ -79,7 +89,8 @@ def main():
         ranked=sorted(items,key=lambda x:(x.get("signal_weight",0),x.get("confidence",0)),reverse=True); primary=next((x for x in ranked if x.get("eligible_for_aggregation")),None)
         routing.append({"group":key,"primary":primary.get("name") if primary else None,"fallbacks":[x.get("name") for x in ranked if not primary or x.get("name")!=primary.get("name")][:3]})
     active=sum(bool(r.get("eligible_for_aggregation")) for r in rows); unavailable=sum(r.get("state") in {"unavailable","timeout"} for r in rows); elapsed=round(time.monotonic()-started,2)
-    payload={"model":"BabiMind","pipeline_version":"1.5","generated_at":datetime.now(timezone.utc).isoformat(),"stages":["health","content","freshness","confidence","fallback","signal_weight","graph_intelligence"],"missing_data_policy":"SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN","execution":{"max_workers":MAX_WORKERS,"default_timeout_seconds":DEFAULT_TIMEOUT,"total_deadline_seconds":TOTAL_DEADLINE,"elapsed_seconds":elapsed},"summary":{"total_sources":len(rows),"active_sources":active,"unavailable_sources":unavailable},"graph_intelligence":load_graph(),"sources":rows,"routing":routing}
-    OUT.parent.mkdir(parents=True,exist_ok=True); OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8"); print(f"[BabiMind] DONE sources={len(rows)} active={active} unavailable={unavailable} elapsed={elapsed}s",flush=True)
+    theses=load_symbol_theses()
+    payload={"model":"BabiMind","pipeline_version":"1.6","generated_at":datetime.now(timezone.utc).isoformat(),"stages":["health","content","freshness","confidence","fallback","signal_weight","graph_intelligence","symbol_thesis"],"missing_data_policy":"SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN","execution":{"max_workers":MAX_WORKERS,"default_timeout_seconds":DEFAULT_TIMEOUT,"total_deadline_seconds":TOTAL_DEADLINE,"elapsed_seconds":elapsed},"summary":{"total_sources":len(rows),"active_sources":active,"unavailable_sources":unavailable,"symbol_theses":len(theses.get("symbols",{}))},"graph_intelligence":load_graph(),"symbol_theses":theses,"sources":rows,"routing":routing}
+    OUT.parent.mkdir(parents=True,exist_ok=True); OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8"); print(f"[BabiMind] DONE sources={len(rows)} active={active} unavailable={unavailable} theses={len(theses.get('symbols',{}))} elapsed={elapsed}s",flush=True)
 
 if __name__=="__main__":main()
