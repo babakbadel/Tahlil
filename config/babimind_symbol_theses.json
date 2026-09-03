@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-04",
+  "symbols": {
+    "فملی": {
+      "symbol": "فملی",
+      "thesis": "operating-leverage-plus-flow-regime",
+      "core_hypothesis": "The non-obvious edge is not simply higher copper prices; it is the combination of strong sales growth, volume-led expansion, copper-price sensitivity, and leadership in a broad market risk-on regime. A pullback after a leader day can be accumulation rather than weakness, but only if price/volume and real-money flow confirm it.",
+      "observed_facts": {
+        "sales_1405_05_million_rial": 663951296,
+        "sales_ytd_1405_05_million_rial": 2475226320,
+        "q1_eps_rial": 691,
+        "q1_profit_growth_yoy_pct": 262,
+        "q1_operating_revenue_growth_yoy_pct": 183,
+        "q1_gross_profit_growth_yoy_pct": 247,
+        "price_1405_06_04_rial": 19950
+      },
+      "hidden_signal": {
+        "name": "volume_quality_not_price_headline",
+        "logic": "Prioritize sales-volume effect over headline copper-price narratives. If revenue accelerates while volume contribution dominates, the thesis is stronger and less dependent on a single commodity-price spike.",
+        "confirmation": [
+          "monthly sales keeps setting higher highs",
+          "production/sales volume remains firm",
+          "realized copper price stays supportive",
+          "market share/leadership persists",
+          "price advances with improving turnover rather than only gap-up behavior"
+        ],
+        "invalidation": [
+          "sales growth rolls over for two consecutive releases",
+          "volume falls while revenue is supported only by price",
+          "copper price breaks down materially and remains weak",
+          "stock leadership disappears while market breadth remains healthy"
+        ]
+      },
+      "event_chain": [
+        "global copper supply disruption or tightness",
+        "higher copper benchmark",
+        "higher realized sales price / margins",
+        "higher FMLI earnings expectations",
+        "fund-flow rotation toward large liquid commodity leaders",
+        "technical breakout or continuation",
+        "option convexity increases demand for calls"
+      ],
+      "scenario_weights": {
+        "bull": 0.45,
+        "base": 0.40,
+        "bear": 0.15
+      },
+      "price_map_rial": {
+        "accumulation_zone": [19400, 19800],
+        "confirmation": 20000,
+        "first_target": 20500,
+        "second_target": 21500,
+        "third_target": 23000,
+        "risk_line": 18800
+      },
+      "strategy": {
+        "stock": "Scale in only on confirmed support/accumulation; avoid chasing an extended green candle. Increase exposure after a high-volume close above confirmation.",
+        "option": "Use options only when spot confirms direction; prioritize delta, IV, theta, open-interest concentration and spread liquidity. Avoid buying high-IV calls solely because copper is bullish.",
+        "risk": "If 18800 fails on expanding volume, downgrade the thesis and reduce directional exposure. If price rises while real-money flow deteriorates sharply, treat the move as distribution risk."
+      },
+      "babimind_modules": [
+        "codal",
+        "market_data",
+        "commodity_copper",
+        "iran_fx",
+        "money_flow",
+        "price_action",
+        "technical",
+        "options_surface",
+        "game_theory",
+        "decision_model",
+        "dynamic_systems",
+        "graph_intelligence"
+      ]
+    }
+  }
+}
