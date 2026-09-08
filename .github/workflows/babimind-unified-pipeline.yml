@@ -20,7 +20,7 @@ env:
 jobs:
   daily:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,68 +33,123 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
           python -m pip install --upgrade graphifyy
           python -m pip install -r requirements-finpy-tse.txt
+
       - name: Collect current market data
         continue-on-error: true
         env:
           FINPY_TSE_SYMBOLS: 'فملی,وبملت,شپنا,خساپا'
           FINPY_TSE_LOOKBACK_DAYS: '30'
         run: python scripts/collect_finpy_tse.py
-      - name: Ingest market snapshots
+
+      - name: Ingest market and option snapshots
         run: |
           python scripts/ingest_option_market_watch.py
           python scripts/ingest_marketwatch_plus.py
           python scripts/ingest_tse_option.py
+
+      - name: Refresh source health and confidence
+        run: |
+          python scripts/babimind_source_health.py
+          python scripts/babimind_source_confidence.py || true
+
+      - name: Collect daily news and Pezeshkian evidence
+        run: python scripts/babimind_pezeshkian_news.py
+
       - name: Global and macro layer
         continue-on-error: true
         run: |
           if [ -f scripts/babimind_global_market.py ]; then python scripts/babimind_global_market.py --config config/babimind_global_market_map.yml; fi
+
+      - name: Factor coverage and weights
+        continue-on-error: true
+        run: |
+          python scripts/babimind_factor_coverage.py
+          python scripts/babimind_signal_weight.py
+
       - name: Graph intelligence
         continue-on-error: true
         run: |
           graphify . --code-only --update || true
           python scripts/babimind_graph.py
+
       - name: Unified BabiMind pipeline
         run: python scripts/babimind_pipeline.py
+
+      - name: Daily option ranking and factor rotation
+        continue-on-error: true
+        run: |
+          python -m app.options.ranking
+          python scripts/babimind_factor_rotation.py
+
+      - name: Forecasting and regime layer
+        continue-on-error: true
+        run: |
+          python -m app.forecasting.regimes
+          python -m app.forecasting.historical_forecaster
+          python -m app.forecasting.walk_forward
+
+      - name: Decision layer
+        continue-on-error: true
+        run: python -m app.decision.example_usage
+
       - name: Prepare memory
         run: python scripts/babimind_memory.py --prepare
-      - name: Build LLM prompt and run BabiMind
+
+      - name: Build canonical BabiMind prompt and run LLM
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           python - <<'PY'
           from pathlib import Path
           files = [
-              'reports/babimind_pipeline.json','reports/babimind_graph.json','reports/babimind_memory_context.json',
-              'data/raw/finpy_tse_snapshot.json','data/raw/option_market_watch_snapshot.json',
-              'reports/option_market_watch_summary.json','data/raw/marketwatch_plus_snapshot.json',
-              'reports/marketwatch_plus_summary.json','data/raw/tse_option_snapshot.json',
-              'reports/tse_option_source_status.json'
+              'reports/babimind_pipeline.json',
+              'reports/babimind_graph.json',
+              'reports/babimind_memory_context.json',
+              'reports/babimind_source_health.json',
+              'reports/babimind_factor_coverage.json',
+              'reports/babimind_factor_rotation.json',
+              'reports/babimind_signal_weights.json',
+              'reports/option_market_watch_summary.json',
+              'reports/marketwatch_plus_summary.json',
+              'reports/tse_option_source_status.json',
+              'reports/babimind_forecast.json',
+              'reports/babimind_decision.json',
+              'reports/babimind_options_ranking.json',
+              'data/raw/finpy_tse_snapshot.json',
+              'data/raw/option_market_watch_snapshot.json',
+              'data/raw/marketwatch_plus_snapshot.json',
+              'data/raw/tse_option_snapshot.json',
+              'artifacts/babimind_global_market_snapshot.json',
+              'artifacts/babimind_pezeshkian_news.json',
           ]
-          parts = ['You are BabiMind, the central financial and economic intelligence model for Tahlil. Use current repository intelligence as primary evidence and memory only for historical calibration. Do not invent missing observations, Greeks or timestamps. Separate evidence, inference and uncertainty. Integrate Iran stocks, options, gold, dollar, macroeconomics, political economy, game theory and dynamic systems. Return valid JSON with keys: regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, confidence, data_gaps.']
+          parts = ['You are BabiMind, the central financial and economic intelligence model for Tahlil. Use current repository intelligence as primary evidence and memory only for historical calibration. Do not invent missing observations, Greeks or timestamps. Separate evidence, inference and uncertainty. Integrate Iran stocks, options, gold, dollar, macroeconomics, political economy, decision theory, game theory, dynamic systems, graph intelligence, forecasting and factor signals. Return valid JSON with keys: regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, option_implications, confidence, data_gaps.']
           for f in files:
               p=Path(f)
               if p.exists():
-                  t=p.read_text(encoding='utf-8')
-                  parts.append(f'\nSOURCE FILE: {f}\n{t[:70000]}')
+                  parts.append(f'\nSOURCE FILE: {f}\n{p.read_text(encoding="utf-8", errors="replace")[:70000]}')
           Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts),encoding='utf-8')
           PY
           test -n "$OPENROUTER_API_KEY"
           python scripts/babimind_llm_router.py --prompt-file babimind_openrouter_prompt.txt --output reports/babimind_llm.json
+
       - name: Ingest successful memory
         run: python scripts/babimind_memory.py --ingest
+
       - name: Validate and commit
         if: always()
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          for p in ['reports/babimind_graph.json','reports/babimind_pipeline.json']:
-              if not Path(p).exists(): raise SystemExit(f'Missing output: {p}')
+          required=['reports/babimind_graph.json','reports/babimind_pipeline.json']
+          missing=[p for p in required if not Path(p).exists()]
+          if missing: raise SystemExit(f'Missing required output: {missing}')
           if Path('reports/babimind_llm.json').exists(): json.loads(Path('reports/babimind_llm.json').read_text(encoding='utf-8'))
           PY
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ graphify-out/ data/raw/finpy_tse_snapshot.json data/raw/option_market_watch_snapshot.json data/raw/marketwatch_plus_snapshot.json data/raw/tse_option_snapshot.json 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m 'chore: refresh BabiMind daily intelligence' && git push origin HEAD:main)
+          git add reports/ graphify-out/ data/raw/ artifacts/ babimind_openrouter_prompt.txt 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m 'chore: refresh BabiMind daily brain' && git push origin HEAD:main)
