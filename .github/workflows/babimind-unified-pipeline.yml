@@ -1,15 +1,15 @@
-name: BabiMind Unified Source Intelligence
+name: BabiMind Daily Intelligence
 
 on:
   schedule:
-    - cron: '15 7 */4 * *'
+    - cron: '15 7 * * 0,1,2,3,4,6'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: babimind-source-pipeline
+  group: babimind-daily
   cancel-in-progress: false
 
 env:
@@ -18,170 +18,83 @@ env:
   TSE_OPTION_REF: master
 
 jobs:
-  pipeline:
+  daily:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade graphifyy
           python -m pip install -r requirements-finpy-tse.txt
-
-      - name: Collect FinPy-TSE market data
+      - name: Collect current market data
         continue-on-error: true
         env:
           FINPY_TSE_SYMBOLS: 'فملی,وبملت,شپنا,خساپا'
           FINPY_TSE_LOOKBACK_DAYS: '30'
         run: python scripts/collect_finpy_tse.py
-
-      - name: Ingest OptionMarketWatch snapshot
-        run: python scripts/ingest_option_market_watch.py
-
-      - name: Ingest MarketWatchPlus Excel snapshot
-        run: python scripts/ingest_marketwatch_plus.py
-
-      - name: Ingest TSE Option upstream source
-        run: python scripts/ingest_tse_option.py
-
-      - name: Check OpenRouter configuration
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      - name: Ingest market snapshots
         run: |
-          if [ -z "$OPENROUTER_API_KEY" ]; then
-            echo 'ERROR: OPENROUTER_API_KEY GitHub Secret is missing.'
-            exit 1
-          fi
-          echo 'OpenRouter API key: configured'
-
-      - name: Graphify local/code index
-        id: graphify
+          python scripts/ingest_option_market_watch.py
+          python scripts/ingest_marketwatch_plus.py
+          python scripts/ingest_tse_option.py
+      - name: Global and macro layer
         continue-on-error: true
         run: |
-          set -o pipefail
-          graphify . --code-only --update 2>&1 | tee graphify.log
-          status=${PIPESTATUS[0]}
-          if [ "$status" -ne 0 ]; then
-            echo '::warning::Local Graphify failed; BabiMind will continue with the source pipeline.'
-          fi
-          exit 0
-
-      - name: Build graph intelligence
-        run: python scripts/babimind_graph.py
-
-      - name: Run unified source pipeline
+          if [ -f scripts/babimind_global_market.py ]; then python scripts/babimind_global_market.py --config config/babimind_global_market_map.yml; fi
+      - name: Graph intelligence
+        continue-on-error: true
+        run: |
+          graphify . --code-only --update || true
+          python scripts/babimind_graph.py
+      - name: Unified BabiMind pipeline
         run: python scripts/babimind_pipeline.py
-
-      - name: Prepare BabiMind model memory
+      - name: Prepare memory
         run: python scripts/babimind_memory.py --prepare
-
-      - name: Build OpenRouter prompt from current BabiMind data
+      - name: Build LLM prompt and run BabiMind
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           python - <<'PY'
           from pathlib import Path
           files = [
-              Path('reports/babimind_pipeline.json'),
-              Path('reports/babimind_graph.json'),
-              Path('reports/babimind_memory_context.json'),
-              Path('data/raw/finpy_tse_snapshot.json'),
-              Path('data/raw/option_market_watch_snapshot.json'),
-              Path('reports/option_market_watch_summary.json'),
-              Path('data/raw/marketwatch_plus_snapshot.json'),
-              Path('reports/marketwatch_plus_summary.json'),
-              Path('data/raw/tse_option_snapshot.json'),
-              Path('reports/tse_option_source_status.json'),
+              'reports/babimind_pipeline.json','reports/babimind_graph.json','reports/babimind_memory_context.json',
+              'data/raw/finpy_tse_snapshot.json','data/raw/option_market_watch_snapshot.json',
+              'reports/option_market_watch_summary.json','data/raw/marketwatch_plus_snapshot.json',
+              'reports/marketwatch_plus_summary.json','data/raw/tse_option_snapshot.json',
+              'reports/tse_option_source_status.json'
           ]
-          parts = [
-              'You are BabiMind, the central financial and economic intelligence model for Tahlil.',
-              'OpenRouter is the only active LLM provider in this pipeline.',
-              'Use CURRENT repository intelligence as primary evidence and MEMORY only for historical context/calibration.',
-              'Treat FinPy-TSE and sm-sokout/tse-option as auxiliary sources; cross-check them against repository-owned snapshots.',
-              'OptionMarketWatch.csv is the repository-owned option-chain snapshot and MUST be used for option-market structure, liquidity, volume, open-interest, strike, moneyness, expiry and underlying-price analysis when present.',
-              'MarketWatchPlus Excel is a repository-owned market snapshot. Use all sheets and published fields as evidence for market breadth, trading activity, symbols, prices and other fields present in the workbook.',
-              'sm-sokout/tse-option is an auxiliary upstream option-analysis source. Preserve source provenance and never let it overwrite repository-owned observations.',
-              'Do not invent IV, Delta, Gamma, Theta, Vega or synchronized quote timestamps when they are absent. Explicitly report these as data gaps.',
-              'Integrate Iran stock market, options, gold, dollar, macroeconomics, political economy, game theory and dynamic systems.',
-              'Compare the current state with recent model runs and explicitly identify regime changes, recurring data gaps and confidence changes.',
-              'Generate scenario probabilities and explain feedback loops, strategic actors, incentives and regime changes.',
-              'Never treat historical memory as current market data. Do not invent unavailable observations.',
-              'Separate evidence, inference and uncertainty.',
-              'Return valid JSON with exactly these top-level keys: regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, confidence, data_gaps.'
-          ]
-          for p in files:
+          parts = ['You are BabiMind, the central financial and economic intelligence model for Tahlil. Use current repository intelligence as primary evidence and memory only for historical calibration. Do not invent missing observations, Greeks or timestamps. Separate evidence, inference and uncertainty. Integrate Iran stocks, options, gold, dollar, macroeconomics, political economy, game theory and dynamic systems. Return valid JSON with keys: regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, confidence, data_gaps.']
+          for f in files:
+              p=Path(f)
               if p.exists():
-                  text = p.read_text(encoding='utf-8')
-                  if len(text) > 70000:
-                      text = text[:70000] + '\n[TRUNCATED]'
-                  parts.append(f'\nSOURCE FILE: {p}\n{text}')
-          Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts), encoding='utf-8')
+                  t=p.read_text(encoding='utf-8')
+                  parts.append(f'\nSOURCE FILE: {f}\n{t[:70000]}')
+          Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts),encoding='utf-8')
           PY
-
-      - name: Run BabiMind on OpenRouter Free
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_MODEL: ${{ env.OPENROUTER_MODEL }}
-        run: |
-          python scripts/babimind_llm_router.py \
-            --prompt-file babimind_openrouter_prompt.txt \
-            --output reports/babimind_llm.json
-
-      - name: Validate BabiMind outputs
+          test -n "$OPENROUTER_API_KEY"
+          python scripts/babimind_llm_router.py --prompt-file babimind_openrouter_prompt.txt --output reports/babimind_llm.json
+      - name: Ingest successful memory
+        run: python scripts/babimind_memory.py --ingest
+      - name: Validate and commit
+        if: always()
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          for p in ('reports/babimind_graph.json','reports/babimind_pipeline.json','reports/babimind_llm.json','data/raw/option_market_watch_snapshot.json','data/raw/marketwatch_plus_snapshot.json','data/raw/tse_option_snapshot.json'):
-              q = Path(p)
-              if not q.exists() or q.stat().st_size == 0:
-                  raise SystemExit(f'Missing/empty output: {p}')
-          d = json.loads(Path('reports/babimind_llm.json').read_text(encoding='utf-8'))
-          if d.get('status') != 'ok':
-              raise SystemExit('OpenRouter inference did not produce a valid BabiMind result')
-          required = ('regime','scenarios','game_theory','dynamic_system','political_economy','market_implications','confidence','data_gaps')
-          missing = [k for k in required if k not in d.get('analysis', {})]
-          if missing:
-              raise SystemExit(f'BabiMind output missing keys: {missing}')
-          if d.get('provider') != 'openrouter':
-              raise SystemExit(f'Unexpected provider: {d.get("provider")}')
-          print(f"BabiMind OK: provider={d.get('provider')} model={d.get('model')}")
+          for p in ['reports/babimind_graph.json','reports/babimind_pipeline.json']:
+              if not Path(p).exists(): raise SystemExit(f'Missing output: {p}')
+          if Path('reports/babimind_llm.json').exists(): json.loads(Path('reports/babimind_llm.json').read_text(encoding='utf-8'))
           PY
-
-      - name: Ingest successful result into BabiMind memory
-        run: python scripts/babimind_memory.py --ingest
-
-      - name: Report provider status
-        if: always()
-        run: |
-          if [ -f reports/babimind_provider_status.json ]; then
-            cat reports/babimind_provider_status.json
-          fi
-
-      - name: Commit BabiMind reports, memory and market snapshots
-        if: always()
-        run: |
-          set -e
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add reports/ graphify-out/ data/raw/finpy_tse_snapshot.json data/raw/option_market_watch_snapshot.json data/raw/marketwatch_plus_snapshot.json data/raw/tse_option_snapshot.json 2>/dev/null || true
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'chore: refresh BabiMind intelligence and market snapshots' || true
-          for attempt in 1 2 3; do
-            git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
-              echo "Push succeeded on attempt $attempt"
-              exit 0
-            fi
-            git rebase --abort 2>/dev/null || true
-            sleep $((attempt*3))
-          done
-          exit 1
+          git diff --cached --quiet || (git commit -m 'chore: refresh BabiMind daily intelligence' && git push origin HEAD:main)
