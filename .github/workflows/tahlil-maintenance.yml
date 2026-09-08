@@ -1,0 +1,38 @@
+name: Tahlil Maintenance and Health
+
+on:
+  schedule:
+    - cron: '45 6 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Source and repository health
+        continue-on-error: true
+        run: |
+          if [ -f scripts/babimind_source_health.py ]; then python scripts/babimind_source_health.py; fi
+          if [ -f scripts/babimind_source_confidence.py ]; then python scripts/babimind_source_confidence.py; fi
+          if [ -f scripts/babimind_source_refresh.py ]; then python scripts/babimind_source_refresh.py; fi
+      - name: Code graph health
+        continue-on-error: true
+        run: |
+          if command -v graphify >/dev/null 2>&1; then graphify . --code-only --update || true; fi
+      - name: Commit maintenance outputs
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/ graphify-out/ 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m 'chore: refresh Tahlil maintenance and health' && git push origin HEAD:main)
