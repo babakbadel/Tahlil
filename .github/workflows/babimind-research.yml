@@ -1,0 +1,33 @@
+name: BabiMind Research and Factor Discovery
+
+on:
+  schedule:
+    - cron: '15 7 */4 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Factor discovery and coverage
+        continue-on-error: true
+        run: |
+          if [ -f scripts/babimind_factor_discovery.py ]; then python scripts/babimind_factor_discovery.py; fi
+          if [ -f scripts/babimind_factor_coverage.py ]; then python scripts/babimind_factor_coverage.py; fi
+      - name: Commit research outputs
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/ data/ 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m 'chore: refresh BabiMind research and factors' && git push origin HEAD:main)
