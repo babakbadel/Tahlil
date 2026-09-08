@@ -1,17 +1,18 @@
-"""Collect a bounded, model-ready FinPy-TSE snapshot for BabiMind.
+"""Collect a fail-safe, model-ready FinPy-TSE snapshot for BabiMind.
 
-The collector is fail-soft and time-bounded: an upstream FinPy-TSE/TSETMC
-request must never block the Daily Brain indefinitely. Each network call is
-run in a worker thread with a configurable timeout. Partial results are still
-written so downstream source-health logic can see exactly what failed.
+Every upstream request runs in an isolated child process. This is deliberate:
+FinPy-TSE may block inside third-party/network code where a Python thread
+cannot be forcibly stopped. A timed-out child is terminated so the Daily
+Brain can always continue with partial data.
 """
 from __future__ import annotations
 
 import json
+import multiprocessing as mp
 import os
+import queue
 import sys
 import time
-from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeoutError
 from datetime import date, timedelta
 from pathlib import Path
 from typing import Any, Callable
@@ -28,41 +29,64 @@ from app.data.finpy_tse_adapter import (
 )
 
 OUTPUT = Path(os.getenv("FINPY_TSE_OUTPUT", "data/raw/finpy_tse_snapshot.json"))
-SYMBOLS = [
-    s.strip()
-    for s in os.getenv("FINPY_TSE_SYMBOLS", "فملی,وبملت,شپنا,خساپا").split(",")
-    if s.strip()
-]
-TIMEOUT_SECONDS = max(5, int(os.getenv("FINPY_TSE_REQUEST_TIMEOUT_SECONDS", "30")))
+SYMBOLS = [s.strip() for s in os.getenv("FINPY_TSE_SYMBOLS", "فملی,وبملت,شپنا,خساپا").split(",") if s.strip()]
+TIMEOUT_SECONDS = max(5, int(os.getenv("FINPY_TSE_REQUEST_TIMEOUT_SECONDS", "20")))
+
+
+def _worker(func: Callable[[], Any], result_queue: Any) -> None:
+    """Run the actual FinPy call in a killable child process."""
+    try:
+        result_queue.put(("ok", func()))
+    except BaseException as exc:  # child must report every failure cleanly
+        result_queue.put(("error", f"{type(exc).__name__}: {exc}"))
 
 
 def _call_bounded(label: str, func: Callable[[], Any]) -> tuple[Any, dict[str, Any]]:
     started = time.monotonic()
-    executor = ThreadPoolExecutor(max_workers=1, thread_name_prefix="finpy")
-    future = executor.submit(func)
+    ctx = mp.get_context("fork") if "fork" in mp.get_all_start_methods() else mp.get_context()
+    result_queue = ctx.Queue(maxsize=1)
+    process = ctx.Process(target=_worker, args=(func, result_queue), name=f"finpy-{label[:40]}")
+    process.start()
+
     try:
-        value = future.result(timeout=TIMEOUT_SECONDS)
-        return value, {
-            "status": "ok",
-            "elapsed_seconds": round(time.monotonic() - started, 3),
-        }
-    except FuturesTimeoutError:
-        future.cancel()
-        return None, {
-            "status": "timeout",
-            "elapsed_seconds": round(time.monotonic() - started, 3),
-            "error": f"{label} timed out after {TIMEOUT_SECONDS}s",
-        }
-    except Exception as exc:
+        process.join(TIMEOUT_SECONDS)
+        if process.is_alive():
+            process.terminate()
+            process.join(3)
+            if process.is_alive() and hasattr(process, "kill"):
+                process.kill()
+                process.join(2)
+            return None, {
+                "status": "timeout",
+                "elapsed_seconds": round(time.monotonic() - started, 3),
+                "error": f"{label} timed out after {TIMEOUT_SECONDS}s; child process terminated",
+            }
+
+        try:
+            status, value = result_queue.get(timeout=2)
+        except queue.Empty:
+            return None, {
+                "status": "error",
+                "elapsed_seconds": round(time.monotonic() - started, 3),
+                "error": f"{label} exited without returning a result (exit_code={process.exitcode})",
+            }
+
+        if status == "ok":
+            return value, {
+                "status": "ok",
+                "elapsed_seconds": round(time.monotonic() - started, 3),
+            }
         return None, {
             "status": "error",
             "elapsed_seconds": round(time.monotonic() - started, 3),
-            "error": f"{type(exc).__name__}: {exc}",
+            "error": f"{label}: {value}",
         }
     finally:
-        # Do not wait for a stuck network worker. The worker is daemon-like for
-        # the purpose of this collector; the main process remains fail-soft.
-        executor.shutdown(wait=False, cancel_futures=True)
+        try:
+            result_queue.close()
+            result_queue.join_thread()
+        except Exception:
+            pass
 
 
 def main() -> int:
@@ -110,14 +134,8 @@ def main() -> int:
     payload["failures"] = failures
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2, default=str),
-        encoding="utf-8",
-    )
-    print(
-        f"wrote {OUTPUT} | status={payload['collection_status']} "
-        f"failures={len(failures)} timeout={TIMEOUT_SECONDS}s"
-    )
+    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    print(f"wrote {OUTPUT} | status={payload['collection_status']} failures={len(failures)} timeout={TIMEOUT_SECONDS}s")
     return 0
 
 
