@@ -109,42 +109,6 @@
       "scripts_fetch_zmli_realtime_rationale_1"
     ],
     "2": [
-      "datetime",
-      "scripts_babimind_factor_rotation",
-      "scripts_babimind_factor_rotation_main",
-      "scripts_backfill",
-      "scripts_backfill_is_stale",
-      "scripts_backfill_main",
-      "scripts_backfill_mark_backfilled",
-      "scripts_backfill_now_tehran",
-      "scripts_backfill_parse_timestamp",
-      "scripts_backfill_py_path",
-      "scripts_backfill_rationale_1",
-      "scripts_backfill_read_json",
-      "scripts_backfill_refresh_market",
-      "scripts_backfill_refresh_options",
-      "scripts_backfill_run",
-      "scripts_backfill_snapshot_time",
-      "scripts_backfill_write_json",
-      "scripts_collect_tse_option_chain",
-      "scripts_collect_tse_option_chain_main",
-      "scripts_collect_tse_option_chain_rationale_1",
-      "scripts_ingest_marketwatch_plus",
-      "scripts_ingest_marketwatch_plus_clean",
-      "scripts_ingest_marketwatch_plus_main",
-      "scripts_ingest_marketwatch_plus_py_any",
-      "scripts_ingest_marketwatch_plus_rationale_1",
-      "scripts_score_dollar_experts",
-      "scripts_score_dollar_experts_clamp",
-      "scripts_score_dollar_experts_consistency_score",
-      "scripts_score_dollar_experts_direction_score",
-      "scripts_score_dollar_experts_main",
-      "scripts_score_dollar_experts_parse_dt",
-      "scripts_score_dollar_experts_price_score",
-      "scripts_score_dollar_experts_rationale_1",
-      "scripts_score_dollar_experts_timing_score"
-    ],
-    "3": [
       "fastapi",
       "realtime_api",
       "realtime_api_equity_market",
@@ -180,7 +144,7 @@
       "streamingresponse",
       "websocket"
     ],
-    "4": [
+    "3": [
       "app_data_brsapi_realtime",
       "app_data_brsapi_realtime_is_option",
       "app_data_brsapi_realtime_normalize",
@@ -215,6 +179,33 @@
       "tests_test_stream",
       "tests_test_stream_test_hub_fanout_and_bounded_queue"
     ],
+    "4": [
+      "datetime",
+      "scripts_babimind_factor_rotation",
+      "scripts_babimind_factor_rotation_main",
+      "scripts_babimind_global_market",
+      "scripts_babimind_global_market_load_json_candidates",
+      "scripts_babimind_global_market_main",
+      "scripts_babimind_global_market_py_path",
+      "scripts_babimind_source_health",
+      "scripts_babimind_source_health_check",
+      "scripts_babimind_source_health_load_sources",
+      "scripts_babimind_source_health_main",
+      "scripts_backfill",
+      "scripts_backfill_is_stale",
+      "scripts_backfill_main",
+      "scripts_backfill_mark_backfilled",
+      "scripts_backfill_now_tehran",
+      "scripts_backfill_parse_timestamp",
+      "scripts_backfill_py_path",
+      "scripts_backfill_rationale_1",
+      "scripts_backfill_read_json",
+      "scripts_backfill_refresh_market",
+      "scripts_backfill_refresh_options",
+      "scripts_backfill_run",
+      "scripts_backfill_snapshot_time",
+      "scripts_backfill_write_json"
+    ],
     "5": [
       "app_forecasting_historical_forecaster",
       "app_forecasting_historical_forecaster_add_forward_targets",
@@ -241,30 +232,6 @@
       "series"
     ],
     "6": [
-      "app_data_finpy_tse_adapter",
-      "app_data_finpy_tse_adapter_get_market_watch",
-      "app_data_finpy_tse_adapter_get_price_history",
-      "app_data_finpy_tse_adapter_get_ri_history",
-      "app_data_finpy_tse_adapter_get_usd_rial",
-      "app_data_finpy_tse_adapter_py_any",
-      "app_data_finpy_tse_adapter_rationale_1",
-      "app_data_finpy_tse_adapter_rationale_45",
-      "app_data_finpy_tse_adapter_rationale_65",
-      "app_data_finpy_tse_adapter_rationale_81",
-      "app_data_finpy_tse_adapter_rationale_88",
-      "app_data_finpy_tse_adapter_records",
-      "app_data_finpy_tse_adapter_source_status",
-      "dataframe",
-      "scripts_collect_finpy_tse",
-      "scripts_collect_finpy_tse_call_bounded",
-      "scripts_collect_finpy_tse_main",
-      "scripts_collect_finpy_tse_py_any",
-      "scripts_collect_finpy_tse_rationale_1",
-      "scripts_collect_finpy_tse_rationale_37",
-      "scripts_collect_finpy_tse_rationale_48",
-      "scripts_collect_finpy_tse_worker"
-    ],
-    "7": [
       "runtimeerror",
       "scripts_historical_archive_ingest",
       "scripts_historical_archive_ingest_download_source",
@@ -287,7 +254,7 @@
       "scripts_historical_backfill_write_gz",
       "session"
     ],
-    "8": [
+    "7": [
       "app_options_init",
       "app_options_init_rationale_1",
       "app_options_ranking",
@@ -306,26 +273,7 @@
       "app_options_ranking_summarize_ranking",
       "date"
     ],
-    "9": [
-      "reports_tse_option_source_status_schema",
-      "reports_tse_option_source_status_schema_commit_type",
-      "reports_tse_option_source_status_schema_data_type",
-      "reports_tse_option_source_status_schema_properties",
-      "reports_tse_option_source_status_schema_properties_commit",
-      "reports_tse_option_source_status_schema_properties_data",
-      "reports_tse_option_source_status_schema_properties_ref",
-      "reports_tse_option_source_status_schema_properties_source",
-      "reports_tse_option_source_status_schema_properties_status",
-      "reports_tse_option_source_status_schema_properties_upstream",
-      "reports_tse_option_source_status_schema_ref_type",
-      "reports_tse_option_source_status_schema_required",
-      "reports_tse_option_source_status_schema_schema",
-      "reports_tse_option_source_status_schema_source_const",
-      "reports_tse_option_source_status_schema_status_type",
-      "reports_tse_option_source_status_schema_type",
-      "reports_tse_option_source_status_schema_upstream_type"
-    ],
-    "10": [
+    "8": [
       "app_rotation_cluster_engine",
       "app_rotation_cluster_engine_acceleration",
       "app_rotation_cluster_engine_assetsignal",
@@ -343,33 +291,7 @@
       "app_rotation_init",
       "app_rotation_init_rationale_1"
     ],
-    "11": [
-      "scripts_babimind_memory",
-      "scripts_babimind_memory_compact",
-      "scripts_babimind_memory_empty",
-      "scripts_babimind_memory_fp",
-      "scripts_babimind_memory_ingest",
-      "scripts_babimind_memory_load",
-      "scripts_babimind_memory_main",
-      "scripts_babimind_memory_maintenance",
-      "scripts_babimind_memory_normalize",
-      "scripts_babimind_memory_now",
-      "scripts_babimind_memory_prepare",
-      "scripts_babimind_memory_rationale_2",
-      "scripts_babimind_memory_save"
-    ],
-    "12": [
-      "scripts_babimind_pipeline",
-      "scripts_babimind_pipeline_check_source",
-      "scripts_babimind_pipeline_confidence",
-      "scripts_babimind_pipeline_endpoint_check",
-      "scripts_babimind_pipeline_freshness",
-      "scripts_babimind_pipeline_load_graph",
-      "scripts_babimind_pipeline_load_symbol_theses",
-      "scripts_babimind_pipeline_main",
-      "scripts_babimind_pipeline_rationale_2"
-    ],
-    "13": [
+    "9": [
       "scripts_babimind_graph",
       "scripts_babimind_graph_clamp",
       "scripts_babimind_graph_edge_iter",
@@ -379,35 +301,16 @@
       "scripts_babimind_graph_py_any",
       "scripts_babimind_graph_status_factor"
     ],
-    "14": [
-      "scripts_ingest_option_market_watch",
-      "scripts_ingest_option_market_watch_build_summary",
-      "scripts_ingest_option_market_watch_int_num",
-      "scripts_ingest_option_market_watch_main",
-      "scripts_ingest_option_market_watch_num",
-      "scripts_ingest_option_market_watch_parse_rows",
-      "scripts_ingest_option_market_watch_py_any",
-      "scripts_ingest_option_market_watch_rationale_1"
+    "10": [
+      "scripts_babimind_pipeline",
+      "scripts_babimind_pipeline_check_source",
+      "scripts_babimind_pipeline_confidence",
+      "scripts_babimind_pipeline_endpoint_check",
+      "scripts_babimind_pipeline_freshness",
+      "scripts_babimind_pipeline_load_graph",
+      "scripts_babimind_pipeline_main"
     ],
-    "15": [
-      "scripts_babimind_llm_router",
-      "scripts_babimind_llm_router_call_openrouter",
-      "scripts_babimind_llm_router_is_retryable",
-      "scripts_babimind_llm_router_main",
-      "scripts_babimind_llm_router_rationale_2",
-      "scripts_babimind_llm_router_retry_after_seconds",
-      "scripts_babimind_llm_router_run"
-    ],
-    "16": [
-      "scripts_babimind_pezeshkian_news",
-      "scripts_babimind_pezeshkian_news_clean",
-      "scripts_babimind_pezeshkian_news_collect",
-      "scripts_babimind_pezeshkian_news_fetch",
-      "scripts_babimind_pezeshkian_news_main",
-      "scripts_babimind_pezeshkian_news_rationale_2",
-      "scripts_babimind_pezeshkian_news_text"
-    ],
-    "17": [
+    "11": [
       "bobby_hosh_engine",
       "research_advisor_network_20_plus_10_core",
       "research_research_source_monitor_monitor",
@@ -415,7 +318,7 @@
       "skills_iran_market_realtime_skill",
       "tsetmc_official_source"
     ],
-    "18": [
+    "12": [
       "scan_market",
       "scan_market_fetch_all_symbols",
       "scan_market_main",
@@ -423,15 +326,7 @@
       "scan_market_save_csv",
       "scan_market_save_json"
     ],
-    "19": [
-      "scripts_babimind_v1",
-      "scripts_babimind_v1_clamp",
-      "scripts_babimind_v1_main",
-      "scripts_babimind_v1_predict",
-      "scripts_babimind_v1_rationale_2",
-      "scripts_babimind_v1_sigmoid"
-    ],
-    "20": [
+    "13": [
       "scripts_score_options_babimind_scenarios",
       "scripts_score_options_babimind_scenarios_expiry_pnl",
       "scripts_score_options_babimind_scenarios_liquidity_score",
@@ -439,130 +334,103 @@
       "scripts_score_options_babimind_scenarios_n",
       "scripts_score_options_babimind_scenarios_score"
     ],
-    "21": [
-      "scripts_babimind_factor_discovery",
-      "scripts_babimind_factor_discovery_load_csv_files",
-      "scripts_babimind_factor_discovery_main",
-      "scripts_babimind_factor_discovery_pearson",
-      "scripts_babimind_factor_discovery_rationale_2"
-    ],
-    "22": [
+    "14": [
       "scripts_babimind_gemini",
       "scripts_babimind_gemini_compact_state",
       "scripts_babimind_gemini_load_json",
       "scripts_babimind_gemini_main",
       "scripts_babimind_gemini_write"
     ],
-    "23": [
-      "scripts_babimind_global_market",
-      "scripts_babimind_global_market_load_json_candidates",
-      "scripts_babimind_global_market_main",
-      "scripts_babimind_global_market_py_path"
+    "15": [
+      "scripts_babimind_llm_router",
+      "scripts_babimind_llm_router_call",
+      "scripts_babimind_llm_router_main",
+      "scripts_babimind_llm_router_quota_error",
+      "scripts_babimind_llm_router_run"
     ],
-    "24": [
+    "16": [
       "scripts_babimind_source_confidence",
       "scripts_babimind_source_confidence_main",
       "scripts_babimind_source_confidence_score",
       "scripts_babimind_source_confidence_tier"
     ],
-    "25": [
-      "scripts_babimind_source_health",
-      "scripts_babimind_source_health_check",
-      "scripts_babimind_source_health_load_sources",
-      "scripts_babimind_source_health_main"
-    ],
-    "26": [
+    "17": [
       "app_forecasting_regimes",
       "app_forecasting_regimes_rationale_1",
       "app_forecasting_regimes_regime_labels"
     ],
-    "27": [
+    "18": [
       "scripts_brsapi_client",
       "scripts_brsapi_client_fetch_symbols",
       "scripts_brsapi_client_py_any"
     ],
-    "28": [
-      "scripts_ingest_tse_option",
-      "scripts_ingest_tse_option_main",
-      "scripts_ingest_tse_option_rationale_1"
-    ],
-    "29": [
+    "19": [
       "scripts_risk_adjusted_options_babimind",
       "scripts_risk_adjusted_options_babimind_calc",
       "scripts_risk_adjusted_options_babimind_n"
     ],
-    "30": [
+    "20": [
       "reports_options_babimind_ranked_khosapa",
       "reports_options_babimind_scenario_ranked_summary"
     ],
-    "31": [
+    "21": [
       "scripts_babimind_signal_weight",
       "scripts_babimind_signal_weight_main"
     ],
-    "32": [
+    "22": [
       "scripts_docker_entrypoint_realtime",
       "scripts_docker_entrypoint_realtime_sh__entry"
     ],
-    "33": [
+    "23": [
       "scripts_run_realtime_api",
       "scripts_run_realtime_api_rationale_1"
     ],
-    "34": [
+    "24": [
       "reports_options_babimind_ranked_fomeli"
     ],
-    "35": [
+    "25": [
       "reports_options_babimind_ranked_shapna"
     ],
-    "36": [
+    "26": [
       "reports_options_babimind_ranked_webmellat"
     ],
-    "37": [
+    "27": [
       "scripts_babimind_factor_coverage"
     ],
-    "38": [
+    "28": [
       "skills_headroom_skill"
     ]
   },
   "cohesion": {
     "0": 0.06993006993006994,
     "1": 0.1166429587482219,
-    "2": 0.11764705882352941,
-    "3": 0.13012477718360071,
-    "4": 0.11174242424242424,
+    "2": 0.13012477718360071,
+    "3": 0.11174242424242424,
+    "4": 0.16666666666666666,
     "5": 0.13043478260869565,
-    "6": 0.1774891774891775,
-    "7": 0.1761904761904762,
-    "8": 0.2426470588235294,
-    "9": 0.11764705882352941,
-    "10": 0.26666666666666666,
-    "11": 0.3717948717948718,
-    "12": 0.3888888888888889,
-    "13": 0.4642857142857143,
-    "14": 0.4642857142857143,
-    "15": 0.47619047619047616,
-    "16": 0.47619047619047616,
-    "17": 0.3333333333333333,
-    "18": 0.6,
-    "19": 0.5333333333333333,
-    "20": 0.8,
-    "21": 0.5,
-    "22": 0.7,
-    "23": 0.8333333333333334,
-    "24": 0.8333333333333334,
-    "25": 0.8333333333333334,
-    "26": 0.6666666666666666,
-    "27": 0.6666666666666666,
-    "28": 0.6666666666666666,
-    "29": 1.0,
-    "30": 1.0,
-    "31": 1.0,
-    "32": 1.0,
-    "33": 1.0,
-    "34": 1.0,
-    "35": 1.0,
-    "36": 1.0,
-    "37": 1.0,
-    "38": 1.0
+    "6": 0.1761904761904762,
+    "7": 0.2426470588235294,
+    "8": 0.26666666666666666,
+    "9": 0.4642857142857143,
+    "10": 0.5238095238095238,
+    "11": 0.3333333333333333,
+    "12": 0.6,
+    "13": 0.8,
+    "14": 0.7,
+    "15": 0.7,
+    "16": 0.8333333333333334,
+    "17": 0.6666666666666666,
+    "18": 0.6666666666666666,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0
   },
   "gods": [
     {
@@ -662,15 +530,15 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
     },
     {
-      "source": "main()",
-      "target": "get_market_watch()",
+      "source": "RealtimeCollector",
+      "target": "BrsApiClient",
       "source_files": [
-        "scripts/collect_finpy_tse.py",
-        "app/data/finpy_tse_adapter.py"
+        "app/data/brsapi/realtime.py",
+        "app/data/brsapi/client.py"
       ],
       "confidence": "INFERRED",
-      "relation": "indirect_call",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
     }
   ],
   "tokens": {

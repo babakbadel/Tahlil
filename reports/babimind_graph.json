@@ -1,13 +1,23 @@
 {
   "model": "BabiMind",
   "component": "Graph Intelligence",
-  "generated_at": "2026-08-27T13:03:20.878829+00:00",
+  "generated_at": "2026-09-08T13:25:03.045911+00:00",
   "graph_available": true,
-  "graph_snapshot_id": "20260827T130320Z",
+  "graph_snapshot_id": "20260908T132503Z",
   "graph_score": 1.0,
   "graph_confidence": 0.75,
   "graph_regime": "bullish",
   "graph_top_drivers": [
+    {
+      "source": "app_data_finpy_tse_adapter_get_market_watch",
+      "target": "app_data_finpy_tse_adapter_records",
+      "contribution": 0.75
+    },
+    {
+      "source": "app_data_finpy_tse_adapter_get_usd_rial",
+      "target": "app_data_finpy_tse_adapter_records",
+      "contribution": 0.75
+    },
     {
       "source": "realtime_api_equity_market",
       "target": "realtime_api_snapshot",
@@ -37,16 +47,6 @@
       "source": "scripts_backfill_main",
       "target": "scripts_backfill_refresh_market",
       "contribution": 0.75
-    },
-    {
-      "source": "scripts_backfill_refresh_market",
-      "target": "scripts_backfill_run",
-      "contribution": 0.75
-    },
-    {
-      "source": "scripts_historical_backfill_main",
-      "target": "scripts_historical_backfill_market_symbols",
-      "contribution": 0.75
     }
   ],
   "graph_risk_drivers": [
@@ -56,8 +56,18 @@
       "contribution": 0.1261
     },
     {
+      "source": "scripts_ingest_option_market_watch",
+      "target": "scripts_ingest_option_market_watch_parse_rows",
+      "contribution": 0.1261
+    },
+    {
       "source": "scan_market",
       "target": "scan_market_save_csv",
+      "contribution": 0.1801
+    },
+    {
+      "source": "scripts_ingest_option_market_watch",
+      "target": "scripts_ingest_option_market_watch_int_num",
       "contribution": 0.1801
     },
     {
@@ -76,22 +86,12 @@
       "contribution": 0.2572
     },
     {
-      "source": "skills_iran_market_realtime_skill",
-      "target": "tsetmc_official_source",
-      "contribution": 0.2625
-    },
-    {
-      "source": "scan_market_main",
-      "target": "scan_market_save_csv",
-      "contribution": 0.3675
-    },
-    {
-      "source": "realtime_api_sse_market",
-      "target": "scripts_rank_options_babimind_get",
-      "contribution": 0.3675
+      "source": "scripts_ingest_option_market_watch",
+      "target": "scripts_ingest_option_market_watch_num",
+      "contribution": 0.2572
     }
   ],
-  "edges_used": 42,
-  "correlation_penalty": 0.2632,
+  "edges_used": 71,
+  "correlation_penalty": 0.2382,
   "missing_data_policy": "MISSING_IS_NOT_ZERO"
 }

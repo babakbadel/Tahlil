@@ -1,7 +1,7 @@
 {
   "model": "BabiMind",
-  "pipeline_version": "1.5",
-  "generated_at": "2026-08-27T13:03:32.112297+00:00",
+  "pipeline_version": "1.6",
+  "generated_at": "2026-09-08T13:25:14.702367+00:00",
   "stages": [
     "health",
     "content",
@@ -9,30 +9,42 @@
     "confidence",
     "fallback",
     "signal_weight",
-    "graph_intelligence"
+    "graph_intelligence",
+    "symbol_thesis"
   ],
   "missing_data_policy": "SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN",
   "execution": {
     "max_workers": 24,
     "default_timeout_seconds": 3,
     "total_deadline_seconds": 30,
-    "elapsed_seconds": 11.15
+    "elapsed_seconds": 11.58
   },
   "summary": {
     "total_sources": 64,
-    "active_sources": 25,
-    "unavailable_sources": 23
+    "active_sources": 26,
+    "unavailable_sources": 24,
+    "symbol_theses": 1
   },
   "graph_intelligence": {
     "model": "BabiMind",
     "component": "Graph Intelligence",
-    "generated_at": "2026-08-27T13:03:20.878829+00:00",
+    "generated_at": "2026-09-08T13:25:03.045911+00:00",
     "graph_available": true,
-    "graph_snapshot_id": "20260827T130320Z",
+    "graph_snapshot_id": "20260908T132503Z",
     "graph_score": 1.0,
     "graph_confidence": 0.75,
     "graph_regime": "bullish",
     "graph_top_drivers": [
+      {
+        "source": "app_data_finpy_tse_adapter_get_market_watch",
+        "target": "app_data_finpy_tse_adapter_records",
+        "contribution": 0.75
+      },
+      {
+        "source": "app_data_finpy_tse_adapter_get_usd_rial",
+        "target": "app_data_finpy_tse_adapter_records",
+        "contribution": 0.75
+      },
       {
         "source": "realtime_api_equity_market",
         "target": "realtime_api_snapshot",
@@ -62,16 +74,6 @@
         "source": "scripts_backfill_main",
         "target": "scripts_backfill_refresh_market",
         "contribution": 0.75
-      },
-      {
-        "source": "scripts_backfill_refresh_market",
-        "target": "scripts_backfill_run",
-        "contribution": 0.75
-      },
-      {
-        "source": "scripts_historical_backfill_main",
-        "target": "scripts_historical_backfill_market_symbols",
-        "contribution": 0.75
       }
     ],
     "graph_risk_drivers": [
@@ -81,8 +83,18 @@
         "contribution": 0.1261
       },
       {
+        "source": "scripts_ingest_option_market_watch",
+        "target": "scripts_ingest_option_market_watch_parse_rows",
+        "contribution": 0.1261
+      },
+      {
         "source": "scan_market",
         "target": "scan_market_save_csv",
+        "contribution": 0.1801
+      },
+      {
+        "source": "scripts_ingest_option_market_watch",
+        "target": "scripts_ingest_option_market_watch_int_num",
         "contribution": 0.1801
       },
       {
@@ -101,24 +113,96 @@
         "contribution": 0.2572
       },
       {
-        "source": "skills_iran_market_realtime_skill",
-        "target": "tsetmc_official_source",
-        "contribution": 0.2625
-      },
-      {
-        "source": "scan_market_main",
-        "target": "scan_market_save_csv",
-        "contribution": 0.3675
-      },
-      {
-        "source": "realtime_api_sse_market",
-        "target": "scripts_rank_options_babimind_get",
-        "contribution": 0.3675
+        "source": "scripts_ingest_option_market_watch",
+        "target": "scripts_ingest_option_market_watch_num",
+        "contribution": 0.2572
       }
     ],
-    "edges_used": 42,
-    "correlation_penalty": 0.2632,
+    "edges_used": 71,
+    "correlation_penalty": 0.2382,
     "missing_data_policy": "MISSING_IS_NOT_ZERO"
+  },
+  "symbol_theses": {
+    "version": 1,
+    "updated_at": "2026-09-04",
+    "symbols": {
+      "فملی": {
+        "symbol": "فملی",
+        "thesis": "operating-leverage-plus-flow-regime",
+        "core_hypothesis": "The non-obvious edge is not simply higher copper prices; it is the combination of strong sales growth, volume-led expansion, copper-price sensitivity, and leadership in a broad market risk-on regime. A pullback after a leader day can be accumulation rather than weakness, but only if price/volume and real-money flow confirm it.",
+        "observed_facts": {
+          "sales_1405_05_million_rial": 663951296,
+          "sales_ytd_1405_05_million_rial": 2475226320,
+          "q1_eps_rial": 691,
+          "q1_profit_growth_yoy_pct": 262,
+          "q1_operating_revenue_growth_yoy_pct": 183,
+          "q1_gross_profit_growth_yoy_pct": 247,
+          "price_1405_06_04_rial": 19950
+        },
+        "hidden_signal": {
+          "name": "volume_quality_not_price_headline",
+          "logic": "Prioritize sales-volume effect over headline copper-price narratives. If revenue accelerates while volume contribution dominates, the thesis is stronger and less dependent on a single commodity-price spike.",
+          "confirmation": [
+            "monthly sales keeps setting higher highs",
+            "production/sales volume remains firm",
+            "realized copper price stays supportive",
+            "market share/leadership persists",
+            "price advances with improving turnover rather than only gap-up behavior"
+          ],
+          "invalidation": [
+            "sales growth rolls over for two consecutive releases",
+            "volume falls while revenue is supported only by price",
+            "copper price breaks down materially and remains weak",
+            "stock leadership disappears while market breadth remains healthy"
+          ]
+        },
+        "event_chain": [
+          "global copper supply disruption or tightness",
+          "higher copper benchmark",
+          "higher realized sales price / margins",
+          "higher FMLI earnings expectations",
+          "fund-flow rotation toward large liquid commodity leaders",
+          "technical breakout or continuation",
+          "option convexity increases demand for calls"
+        ],
+        "scenario_weights": {
+          "bull": 0.45,
+          "base": 0.4,
+          "bear": 0.15
+        },
+        "price_map_rial": {
+          "accumulation_zone": [
+            19400,
+            19800
+          ],
+          "confirmation": 20000,
+          "first_target": 20500,
+          "second_target": 21500,
+          "third_target": 23000,
+          "risk_line": 18800
+        },
+        "strategy": {
+          "stock": "Scale in only on confirmed support/accumulation; avoid chasing an extended green candle. Increase exposure after a high-volume close above confirmation.",
+          "option": "Use options only when spot confirms direction; prioritize delta, IV, theta, open-interest concentration and spread liquidity. Avoid buying high-IV calls solely because copper is bullish.",
+          "risk": "If 18800 fails on expanding volume, downgrade the thesis and reduce directional exposure. If price rises while real-money flow deteriorates sharply, treat the move as distribution risk."
+        },
+        "babimind_modules": [
+          "codal",
+          "market_data",
+          "commodity_copper",
+          "iran_fx",
+          "money_flow",
+          "price_action",
+          "technical",
+          "options_surface",
+          "game_theory",
+          "decision_model",
+          "dynamic_systems",
+          "graph_intelligence"
+        ]
+      }
+    },
+    "available": true
   },
   "sources": [
     {
@@ -130,7 +214,7 @@
       "http_status": 204,
       "content_type": "",
       "bytes": 0,
-      "latency_ms": 328.9,
+      "latency_ms": 448.7,
       "content_check": "empty",
       "state": "partial",
       "freshness": 0.75,
@@ -138,7 +222,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:21.291499+00:00"
+      "checked_at": "2026-09-08T13:25:03.575374+00:00"
     },
     {
       "name": "IMF SDMX Central",
@@ -155,7 +239,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:21.933439+00:00"
+      "checked_at": "2026-09-08T13:25:04.826031+00:00"
     },
     {
       "name": "World Bank API",
@@ -166,7 +250,7 @@
       "http_status": 200,
       "content_type": "application/json;charset=utf-8",
       "bytes": 309,
-      "latency_ms": 322.3,
+      "latency_ms": 262.3,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -174,24 +258,26 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:21.286429+00:00"
+      "checked_at": "2026-09-08T13:25:03.390340+00:00"
     },
     {
       "name": "BIS Statistics",
       "type": "official/site",
       "topic": "monetary",
       "url": "https://www.bis.org/statistics/",
-      "status": "error",
-      "http_status": 404,
-      "error": "HTTP Error 404: Not Found",
-      "content_check": "failed",
-      "state": "error",
+      "status": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 4096,
+      "latency_ms": 3131.3,
+      "content_check": "nonempty",
+      "state": "ok",
       "freshness": 0.75,
-      "confidence": 0,
-      "signal_weight": 0,
-      "eligible_for_aggregation": false,
-      "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:21.526445+00:00"
+      "confidence": 0.585,
+      "signal_weight": 0.6887,
+      "eligible_for_aggregation": true,
+      "retry_next_run": false,
+      "checked_at": "2026-09-08T13:25:06.260226+00:00"
     },
     {
       "name": "OECD Data",
@@ -208,7 +294,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:21.258423+00:00"
+      "checked_at": "2026-09-08T13:25:03.557693+00:00"
     },
     {
       "name": "FRED",
@@ -224,7 +310,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.272058+00:00"
+      "checked_at": "2026-09-08T13:25:06.387655+00:00"
     },
     {
       "name": "ECB Data API",
@@ -235,7 +321,7 @@
       "http_status": 200,
       "content_type": "application/vnd.sdmx.data+json;version=1.0.0-wd",
       "bytes": 4096,
-      "latency_ms": 1106.1,
+      "latency_ms": 1232.4,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -243,7 +329,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:22.077839+00:00"
+      "checked_at": "2026-09-08T13:25:04.370045+00:00"
     },
     {
       "name": "EIA",
@@ -259,7 +345,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.208786+00:00"
+      "checked_at": "2026-09-08T13:25:06.446672+00:00"
     },
     {
       "name": "IEA Data",
@@ -276,7 +362,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:21.375558+00:00"
+      "checked_at": "2026-09-08T13:25:03.630818+00:00"
     },
     {
       "name": "OPEC",
@@ -293,7 +379,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:21.294539+00:00"
+      "checked_at": "2026-09-08T13:25:03.443692+00:00"
     },
     {
       "name": "JODI",
@@ -304,7 +390,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 942.8,
+      "latency_ms": 903.9,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -312,26 +398,23 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:21.924631+00:00"
+      "checked_at": "2026-09-08T13:25:04.049820+00:00"
     },
     {
       "name": "USGS Minerals",
       "type": "official/site",
       "topic": "commodities",
       "url": "https://www.usgs.gov/centers/national-minerals-information-center",
-      "status": "ok",
-      "http_status": 200,
-      "content_type": "text/html; charset=UTF-8",
-      "bytes": 4096,
-      "latency_ms": 2289.6,
-      "content_check": "nonempty",
-      "state": "ok",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "content_check": "failed",
+      "state": "unavailable",
       "freshness": 0.75,
-      "confidence": 0.585,
-      "signal_weight": 0.6887,
-      "eligible_for_aggregation": true,
-      "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:23.272047+00:00"
+      "confidence": 0,
+      "signal_weight": 0,
+      "eligible_for_aggregation": false,
+      "retry_next_run": true,
+      "checked_at": "2026-09-08T13:25:06.413136+00:00"
     },
     {
       "name": "World Gold Council",
@@ -342,7 +425,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
       "bytes": 4096,
-      "latency_ms": 2282.3,
+      "latency_ms": 552.6,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -350,26 +433,23 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:23.268145+00:00"
+      "checked_at": "2026-09-08T13:25:03.711183+00:00"
     },
     {
       "name": "LBMA",
       "type": "market/site",
       "topic": "gold",
       "url": "https://www.lbma.org.uk/prices-and-data",
-      "status": "ok",
-      "http_status": 200,
-      "content_type": "text/html; charset=UTF-8",
-      "bytes": 4096,
-      "latency_ms": 1324.6,
-      "content_check": "nonempty",
-      "state": "ok",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "content_check": "failed",
+      "state": "unavailable",
       "freshness": 0.75,
-      "confidence": 0.585,
-      "signal_weight": 0.6887,
-      "eligible_for_aggregation": true,
-      "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:22.311051+00:00"
+      "confidence": 0,
+      "signal_weight": 0,
+      "eligible_for_aggregation": false,
+      "retry_next_run": true,
+      "checked_at": "2026-09-08T13:25:06.582960+00:00"
     },
     {
       "name": "CFTC",
@@ -380,7 +460,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 290.5,
+      "latency_ms": 314.2,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -388,7 +468,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:21.284363+00:00"
+      "checked_at": "2026-09-08T13:25:03.476811+00:00"
     },
     {
       "name": "UN Comtrade",
@@ -405,23 +485,26 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:22.093014+00:00"
+      "checked_at": "2026-09-08T13:25:04.282988+00:00"
     },
     {
       "name": "UNCTADstat",
       "type": "official/site",
       "topic": "trade",
       "url": "https://unctadstat.unctad.org/",
-      "status": "unavailable",
-      "error": "The read operation timed out",
-      "content_check": "failed",
-      "state": "unavailable",
+      "status": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 4096,
+      "latency_ms": 1611.4,
+      "content_check": "nonempty",
+      "state": "ok",
       "freshness": 0.75,
-      "confidence": 0,
-      "signal_weight": 0,
-      "eligible_for_aggregation": false,
-      "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.410431+00:00"
+      "confidence": 0.585,
+      "signal_weight": 0.6887,
+      "eligible_for_aggregation": true,
+      "retry_next_run": false,
+      "checked_at": "2026-09-08T13:25:04.782037+00:00"
     },
     {
       "name": "FAOSTAT",
@@ -432,7 +515,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 3752,
-      "latency_ms": 527.4,
+      "latency_ms": 811.3,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -440,7 +523,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:21.541098+00:00"
+      "checked_at": "2026-09-08T13:25:03.997094+00:00"
     },
     {
       "name": "ILOStat",
@@ -457,7 +540,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:21.318192+00:00"
+      "checked_at": "2026-09-08T13:25:03.582273+00:00"
     },
     {
       "name": "WHO Data",
@@ -468,7 +551,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 393.7,
+      "latency_ms": 383.2,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -476,7 +559,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:21.415537+00:00"
+      "checked_at": "2026-09-08T13:25:03.575806+00:00"
     },
     {
       "name": "Reuters",
@@ -493,7 +576,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:21.502866+00:00"
+      "checked_at": "2026-09-08T13:25:03.501624+00:00"
     },
     {
       "name": "TSE Official Gateway",
@@ -509,7 +592,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:26.537863+00:00"
+      "checked_at": "2026-09-08T13:25:09.071991+00:00"
     },
     {
       "name": "TSETMC CDN Market Watch",
@@ -525,7 +608,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.732199+00:00"
+      "checked_at": "2026-09-08T13:25:12.908230+00:00"
     },
     {
       "name": "TSETMC Instrument Search",
@@ -541,7 +624,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.733337+00:00"
+      "checked_at": "2026-09-08T13:25:12.907705+00:00"
     },
     {
       "name": "TSETMC Index",
@@ -557,7 +640,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.733206+00:00"
+      "checked_at": "2026-09-08T13:25:12.907617+00:00"
     },
     {
       "name": "TSETMC Funds",
@@ -573,7 +656,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.732422+00:00"
+      "checked_at": "2026-09-08T13:25:12.907774+00:00"
     },
     {
       "name": "TSETMC Client Type",
@@ -589,7 +672,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.732571+00:00"
+      "checked_at": "2026-09-08T13:25:12.907907+00:00"
     },
     {
       "name": "TSETMC Market Overview",
@@ -605,7 +688,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.732763+00:00"
+      "checked_at": "2026-09-08T13:25:12.908146+00:00"
     },
     {
       "name": "TSETMC Codal Publisher",
@@ -621,7 +704,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.732692+00:00"
+      "checked_at": "2026-09-08T13:25:12.907271+00:00"
     },
     {
       "name": "TSETMC Messages",
@@ -637,7 +720,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.732361+00:00"
+      "checked_at": "2026-09-08T13:25:12.908061+00:00"
     },
     {
       "name": "TSETMC Shareholders",
@@ -653,7 +736,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.733282+00:00"
+      "checked_at": "2026-09-08T13:25:12.908572+00:00"
     },
     {
       "name": "TSETMC Trade Top",
@@ -669,7 +752,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.732024+00:00"
+      "checked_at": "2026-09-08T13:25:12.908419+00:00"
     },
     {
       "name": "TSETMC Price History",
@@ -685,7 +768,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:30.732289+00:00"
+      "checked_at": "2026-09-08T13:25:12.907534+00:00"
     },
     {
       "name": "Codal",
@@ -701,23 +784,26 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:25.013959+00:00"
+      "checked_at": "2026-09-08T13:25:07.364818+00:00"
     },
     {
       "name": "Central Bank of Iran",
       "type": "official/site",
       "topic": "iran_macro",
       "url": "https://www.cbi.ir/",
-      "status": "unavailable",
-      "error": "<urlopen error _ssl.c:1015: The handshake operation timed out>",
-      "content_check": "failed",
-      "state": "unavailable",
+      "status": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 4096,
+      "latency_ms": 1536.6,
+      "content_check": "nonempty",
+      "state": "ok",
       "freshness": 0.75,
-      "confidence": 0,
-      "signal_weight": 0,
-      "eligible_for_aggregation": false,
-      "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:28.040346+00:00"
+      "confidence": 0.585,
+      "signal_weight": 0.6887,
+      "eligible_for_aggregation": true,
+      "retry_next_run": false,
+      "checked_at": "2026-09-08T13:25:05.533895+00:00"
     },
     {
       "name": "Statistical Center of Iran",
@@ -725,7 +811,7 @@
       "topic": "iran_macro",
       "url": "https://www.amar.org.ir/",
       "status": "unavailable",
-      "error": "<urlopen error [Errno 104] Connection reset by peer>",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
       "content_check": "failed",
       "state": "unavailable",
       "freshness": 0.75,
@@ -733,7 +819,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:22.650012+00:00"
+      "checked_at": "2026-09-08T13:25:04.685587+00:00"
     },
     {
       "name": "Iran Mercantile Exchange",
@@ -749,7 +835,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:25.253080+00:00"
+      "checked_at": "2026-09-08T13:25:07.723785+00:00"
     },
     {
       "name": "Iran Energy Exchange",
@@ -765,7 +851,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:23.741060+00:00"
+      "checked_at": "2026-09-08T13:25:05.348601+00:00"
     },
     {
       "name": "Iran Customs",
@@ -781,7 +867,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:32.110264+00:00"
+      "checked_at": "2026-09-08T13:25:14.699958+00:00"
     },
     {
       "name": "Ministry of Industry Mine Trade",
@@ -797,7 +883,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:25.651564+00:00"
+      "checked_at": "2026-09-08T13:25:08.272833+00:00"
     },
     {
       "name": "Ministry of Petroleum",
@@ -808,7 +894,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 1557.7,
+      "latency_ms": 1140.4,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -816,7 +902,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:24.207897+00:00"
+      "checked_at": "2026-09-08T13:25:05.966654+00:00"
     },
     {
       "name": "SHANA",
@@ -827,7 +913,7 @@
       "http_status": 200,
       "content_type": "text/html;charset=UTF-8",
       "bytes": 4096,
-      "latency_ms": 1180.5,
+      "latency_ms": 1292.1,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -835,7 +921,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:24.448842+00:00"
+      "checked_at": "2026-09-08T13:25:06.640923+00:00"
     },
     {
       "name": "Iran Power Grid Management",
@@ -851,7 +937,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:26.620183+00:00"
+      "checked_at": "2026-09-08T13:25:08.949986+00:00"
     },
     {
       "name": "Iran Open Data",
@@ -862,7 +948,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 881.9,
+      "latency_ms": 1335.0,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -870,7 +956,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:24.623155+00:00"
+      "checked_at": "2026-09-08T13:25:07.301923+00:00"
     },
     {
       "name": "World Bank Iran",
@@ -881,7 +967,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 324.5,
+      "latency_ms": 238.2,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -889,7 +975,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:24.532588+00:00"
+      "checked_at": "2026-09-08T13:25:06.498542+00:00"
     },
     {
       "name": "IMF Iran",
@@ -906,7 +992,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.339924+00:00"
+      "checked_at": "2026-09-08T13:25:06.481961+00:00"
     },
     {
       "name": "UNData",
@@ -917,7 +1003,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 372.2,
+      "latency_ms": 777.5,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -925,7 +1011,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:24.644432+00:00"
+      "checked_at": "2026-09-08T13:25:07.190808+00:00"
     },
     {
       "name": "UNDP Data",
@@ -942,7 +1028,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.482637+00:00"
+      "checked_at": "2026-09-08T13:25:06.496214+00:00"
     },
     {
       "name": "FAO Iran",
@@ -953,7 +1039,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 1172.5,
+      "latency_ms": 83.3,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -961,7 +1047,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:25.583174+00:00"
+      "checked_at": "2026-09-08T13:25:06.565496+00:00"
     },
     {
       "name": "Energy Institute",
@@ -978,7 +1064,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.843953+00:00"
+      "checked_at": "2026-09-08T13:25:06.999479+00:00"
     },
     {
       "name": "Shanghai Futures Exchange",
@@ -987,9 +1073,9 @@
       "url": "https://www.shfe.com.cn/",
       "status": "ok",
       "http_status": 200,
-      "content_type": "text/html",
+      "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 2675.5,
+      "latency_ms": 3939.4,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -997,7 +1083,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:27.158404+00:00"
+      "checked_at": "2026-09-08T13:25:10.438142+00:00"
     },
     {
       "name": "LME",
@@ -1014,7 +1100,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.649623+00:00"
+      "checked_at": "2026-09-08T13:25:06.687995+00:00"
     },
     {
       "name": "CME Group",
@@ -1031,7 +1117,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.684762+00:00"
+      "checked_at": "2026-09-08T13:25:06.698329+00:00"
     },
     {
       "name": "ICE Markets",
@@ -1042,7 +1128,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 120.4,
+      "latency_ms": 194.8,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1050,26 +1136,23 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:24.765069+00:00"
+      "checked_at": "2026-09-08T13:25:06.835932+00:00"
     },
     {
       "name": "Nasdaq",
       "type": "market/site",
       "topic": "global_equity",
       "url": "https://www.nasdaq.com/",
-      "status": "ok",
-      "http_status": 200,
-      "content_type": "text/html; charset=UTF-8",
-      "bytes": 4096,
-      "latency_ms": 2039.3,
-      "content_check": "nonempty",
-      "state": "ok",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "content_check": "failed",
+      "state": "unavailable",
       "freshness": 0.75,
-      "confidence": 0.585,
-      "signal_weight": 0.6887,
-      "eligible_for_aggregation": true,
-      "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:26.689066+00:00"
+      "confidence": 0,
+      "signal_weight": 0,
+      "eligible_for_aggregation": false,
+      "retry_next_run": true,
+      "checked_at": "2026-09-08T13:25:09.738162+00:00"
     },
     {
       "name": "S&P Global",
@@ -1086,7 +1169,7 @@
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.811932+00:00"
+      "checked_at": "2026-09-08T13:25:06.776305+00:00"
     },
     {
       "name": "Trading Economics",
@@ -1097,7 +1180,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 156.0,
+      "latency_ms": 182.7,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1105,7 +1188,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:24.921237+00:00"
+      "checked_at": "2026-09-08T13:25:06.959233+00:00"
     },
     {
       "name": "CEIC Iran",
@@ -1116,7 +1199,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 331.0,
+      "latency_ms": 421.9,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1124,7 +1207,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:25.143083+00:00"
+      "checked_at": "2026-09-08T13:25:07.258113+00:00"
     },
     {
       "name": "Global Rates",
@@ -1135,7 +1218,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 838.3,
+      "latency_ms": 1288.9,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1143,24 +1226,26 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:25.682429+00:00"
+      "checked_at": "2026-09-08T13:25:08.248443+00:00"
     },
     {
       "name": "Investing Iran Markets",
       "type": "secondary/data",
       "topic": "market",
       "url": "https://www.investing.com/",
-      "status": "error",
-      "http_status": 403,
-      "error": "HTTP Error 403: Forbidden",
-      "content_check": "failed",
-      "state": "error",
+      "status": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 4096,
+      "latency_ms": 177.8,
+      "content_check": "nonempty",
+      "state": "ok",
       "freshness": 0.75,
-      "confidence": 0,
-      "signal_weight": 0,
-      "eligible_for_aggregation": false,
-      "retry_next_run": true,
-      "checked_at": "2026-08-27T13:03:24.977989+00:00"
+      "confidence": 0.585,
+      "signal_weight": 0.6887,
+      "eligible_for_aggregation": true,
+      "retry_next_run": false,
+      "checked_at": "2026-09-08T13:25:07.177524+00:00"
     },
     {
       "name": "Kpler",
@@ -1171,7 +1256,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 76.0,
+      "latency_ms": 149.0,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1179,7 +1264,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:25.054098+00:00"
+      "checked_at": "2026-09-08T13:25:07.326663+00:00"
     },
     {
       "name": "Vortexa",
@@ -1190,7 +1275,7 @@
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 282.7,
+      "latency_ms": 216.3,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1198,7 +1283,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:25.297101+00:00"
+      "checked_at": "2026-09-08T13:25:07.407288+00:00"
     },
     {
       "name": "MarineTraffic",
@@ -1208,8 +1293,8 @@
       "status": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 3740,
-      "latency_ms": 61.0,
+      "bytes": 3748,
+      "latency_ms": 67.9,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1217,7 +1302,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:25.115281+00:00"
+      "checked_at": "2026-09-08T13:25:07.326089+00:00"
     },
     {
       "name": "Windy",
@@ -1228,7 +1313,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 4096,
-      "latency_ms": 116.5,
+      "latency_ms": 161.9,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1236,7 +1321,7 @@
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-08-27T13:03:25.231928+00:00"
+      "checked_at": "2026-09-08T13:25:07.464034+00:00"
     }
   ],
   "routing": [
@@ -1251,10 +1336,8 @@
     },
     {
       "group": "monetary",
-      "primary": null,
-      "fallbacks": [
-        "BIS Statistics"
-      ]
+      "primary": "BIS Statistics",
+      "fallbacks": []
     },
     {
       "group": "rates_fx",
@@ -1281,9 +1364,9 @@
     },
     {
       "group": "commodities",
-      "primary": "USGS Minerals",
+      "primary": "Shanghai Futures Exchange",
       "fallbacks": [
-        "Shanghai Futures Exchange"
+        "USGS Minerals"
       ]
     },
     {
@@ -1300,10 +1383,9 @@
     },
     {
       "group": "trade",
-      "primary": null,
+      "primary": "UNCTADstat",
       "fallbacks": [
-        "UN Comtrade",
-        "UNCTADstat"
+        "UN Comtrade"
       ]
     },
     {
@@ -1387,11 +1469,11 @@
     },
     {
       "group": "iran_macro",
-      "primary": "Iran Open Data",
+      "primary": "Central Bank of Iran",
       "fallbacks": [
+        "Iran Open Data",
         "World Bank Iran",
-        "CEIC Iran",
-        "Central Bank of Iran"
+        "CEIC Iran"
       ]
     },
     {
@@ -1447,15 +1529,15 @@
     },
     {
       "group": "global_equity",
-      "primary": "Nasdaq",
-      "fallbacks": []
+      "primary": null,
+      "fallbacks": [
+        "Nasdaq"
+      ]
     },
     {
       "group": "market",
-      "primary": null,
-      "fallbacks": [
-        "Investing Iran Markets"
-      ]
+      "primary": "Investing Iran Markets",
+      "fallbacks": []
     },
     {
       "group": "energy_trade",

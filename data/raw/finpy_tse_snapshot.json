@@ -1,38 +1,133 @@
 {
   "source": "finpy-tse",
   "upstream": "https://github.com/ARahimiQuant/finpy-tse",
-  "collected_at": "2026-09-07",
+  "collected_at": "2026-09-08",
   "status": {
     "source": "finpy-tse",
     "upstream": "https://github.com/ARahimiQuant/finpy-tse",
     "available": true,
     "import_error": null
   },
+  "request_timeout_seconds": 20,
   "symbols": {
     "فملی": {
       "price_history": [],
       "ri_history": [],
-      "price_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D9%81%D9%85%D9%84%DB%8C (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fb012c021b0>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))",
-      "ri_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D9%81%D9%85%D9%84%DB%8C (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fb012bdfe60>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+      "price_request": {
+        "status": "timeout",
+        "elapsed_seconds": 20.005,
+        "error": "فملی price history timed out after 20s; child process terminated"
+      },
+      "ri_request": {
+        "status": "timeout",
+        "elapsed_seconds": 20.004,
+        "error": "فملی RI history timed out after 20s; child process terminated"
+      }
     },
     "وبملت": {
       "price_history": [],
       "ri_history": [],
-      "price_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D9%88%D8%A8%D9%85%D9%84%D8%AA (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fb012c029c0>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))",
-      "ri_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D9%88%D8%A8%D9%85%D9%84%D8%AA (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fb012c03170>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+      "price_request": {
+        "status": "timeout",
+        "elapsed_seconds": 20.005,
+        "error": "وبملت price history timed out after 20s; child process terminated"
+      },
+      "ri_request": {
+        "status": "timeout",
+        "elapsed_seconds": 20.005,
+        "error": "وبملت RI history timed out after 20s; child process terminated"
+      }
     },
     "شپنا": {
       "price_history": [],
       "ri_history": [],
-      "price_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D8%B4%D9%BE%D9%86%D8%A7 (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fb012c03950>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))",
-      "ri_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D8%B4%D9%BE%D9%86%D8%A7 (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fb012a40080>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+      "price_request": {
+        "status": "timeout",
+        "elapsed_seconds": 20.004,
+        "error": "شپنا price history timed out after 20s; child process terminated"
+      },
+      "ri_request": {
+        "status": "timeout",
+        "elapsed_seconds": 20.004,
+        "error": "شپنا RI history timed out after 20s; child process terminated"
+      }
     },
     "خساپا": {
       "price_history": [],
       "ri_history": [],
-      "price_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D8%AE%D8%B3%D8%A7%D9%BE%D8%A7 (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fb012a40920>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))",
-      "ri_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/search.aspx?skey=%D8%AE%D8%B3%D8%A7%D9%BE%D8%A7 (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fb012c03650>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+      "price_request": {
+        "status": "timeout",
+        "elapsed_seconds": 20.004,
+        "error": "خساپا price history timed out after 20s; child process terminated"
+      },
+      "ri_request": {
+        "status": "timeout",
+        "elapsed_seconds": 20.004,
+        "error": "خساپا RI history timed out after 20s; child process terminated"
+      }
     }
   },
-  "market_watch_error": "HTTPConnectionPool(host='old.tsetmc.com', port=80): Max retries exceeded with url: /tsev2/data/ClientTypeAll.aspx (Caused by ConnectTimeoutError(<HTTPConnection(host='old.tsetmc.com', port=80) at 0x7fb012c02ea0>, 'Connection to old.tsetmc.com timed out. (connect timeout=None)'))"
+  "market_watch": [],
+  "market_watch_request": {
+    "status": "timeout",
+    "elapsed_seconds": 20.005,
+    "error": "market watch timed out after 20s; child process terminated"
+  },
+  "collection_status": "degraded",
+  "failures": [
+    {
+      "scope": "فملی.price_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.005,
+      "error": "فملی price history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "فملی.ri_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.004,
+      "error": "فملی RI history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "وبملت.price_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.005,
+      "error": "وبملت price history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "وبملت.ri_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.005,
+      "error": "وبملت RI history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "شپنا.price_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.004,
+      "error": "شپنا price history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "شپنا.ri_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.004,
+      "error": "شپنا RI history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "خساپا.price_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.004,
+      "error": "خساپا price history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "خساپا.ri_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.004,
+      "error": "خساپا RI history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "market_watch",
+      "status": "timeout",
+      "elapsed_seconds": 20.005,
+      "error": "market watch timed out after 20s; child process terminated"
+    }
+  ]
 }
