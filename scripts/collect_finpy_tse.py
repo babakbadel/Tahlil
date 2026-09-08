@@ -1,9 +1,8 @@
 """Collect a fail-safe, model-ready FinPy-TSE snapshot for BabiMind.
 
-Every upstream request runs in an isolated child process. This is deliberate:
-FinPy-TSE may block inside third-party/network code where a Python thread
-cannot be forcibly stopped. A timed-out child is terminated so the Daily
-Brain can always continue with partial data.
+Important: FinPy-TSE calls run in killable child processes. We MUST read the
+result queue while the child is running; joining first can deadlock when a
+large pandas result fills multiprocessing.Queue's pipe buffer.
 """
 from __future__ import annotations
 
@@ -31,67 +30,98 @@ from app.data.finpy_tse_adapter import (
 OUTPUT = Path(os.getenv("FINPY_TSE_OUTPUT", "data/raw/finpy_tse_snapshot.json"))
 SYMBOLS = [s.strip() for s in os.getenv("FINPY_TSE_SYMBOLS", "فملی,وبملت,شپنا,خساپا").split(",") if s.strip()]
 TIMEOUT_SECONDS = max(5, int(os.getenv("FINPY_TSE_REQUEST_TIMEOUT_SECONDS", "20")))
+QUEUE_GRACE_SECONDS = 2
 
 
 def _worker(func: Callable[[], Any], result_queue: Any) -> None:
     """Run the actual FinPy call in a killable child process."""
     try:
         result_queue.put(("ok", func()))
-    except BaseException as exc:  # child must report every failure cleanly
-        result_queue.put(("error", f"{type(exc).__name__}: {exc}"))
+    except BaseException as exc:
+        try:
+            result_queue.put(("error", f"{type(exc).__name__}: {exc}"))
+        except Exception:
+            pass
 
 
 def _call_bounded(label: str, func: Callable[[], Any]) -> tuple[Any, dict[str, Any]]:
+    """Execute one upstream call with a hard wall-clock timeout.
+
+    Do not call process.join() before reading Queue: a large serialized result
+    can block the child in Queue.put(), which otherwise makes join hang forever.
+    """
     started = time.monotonic()
     ctx = mp.get_context("fork") if "fork" in mp.get_all_start_methods() else mp.get_context()
     result_queue = ctx.Queue(maxsize=1)
     process = ctx.Process(target=_worker, args=(func, result_queue), name=f"finpy-{label[:40]}")
+    process.daemon = True
     process.start()
+    print(f"[FINPY] START {label}", flush=True)
 
+    result: tuple[str, Any] | None = None
+    deadline = started + TIMEOUT_SECONDS
     try:
-        process.join(TIMEOUT_SECONDS)
-        if process.is_alive():
+        while time.monotonic() < deadline:
+            try:
+                result = result_queue.get(timeout=min(0.5, max(0.05, deadline - time.monotonic())))
+                break
+            except queue.Empty:
+                if not process.is_alive():
+                    break
+
+        if result is None and process.is_alive():
             process.terminate()
-            process.join(3)
+            process.join(1)
             if process.is_alive() and hasattr(process, "kill"):
                 process.kill()
-                process.join(2)
+                process.join(1)
+            elapsed = round(time.monotonic() - started, 3)
+            print(f"[FINPY] TIMEOUT {label} after {elapsed}s", flush=True)
             return None, {
                 "status": "timeout",
-                "elapsed_seconds": round(time.monotonic() - started, 3),
+                "elapsed_seconds": elapsed,
                 "error": f"{label} timed out after {TIMEOUT_SECONDS}s; child process terminated",
             }
 
-        try:
-            status, value = result_queue.get(timeout=2)
-        except queue.Empty:
-            return None, {
-                "status": "error",
-                "elapsed_seconds": round(time.monotonic() - started, 3),
-                "error": f"{label} exited without returning a result (exit_code={process.exitcode})",
-            }
+        # Child exited but may still be flushing the Queue feeder thread.
+        if result is None:
+            try:
+                result = result_queue.get(timeout=QUEUE_GRACE_SECONDS)
+            except queue.Empty:
+                elapsed = round(time.monotonic() - started, 3)
+                print(f"[FINPY] ERROR {label}: no result (exit={process.exitcode})", flush=True)
+                return None, {
+                    "status": "error",
+                    "elapsed_seconds": elapsed,
+                    "error": f"{label} exited without returning a result (exit_code={process.exitcode})",
+                }
 
+        status, value = result
+        elapsed = round(time.monotonic() - started, 3)
+        process.join(1)
         if status == "ok":
-            return value, {
-                "status": "ok",
-                "elapsed_seconds": round(time.monotonic() - started, 3),
-            }
-        return None, {
-            "status": "error",
-            "elapsed_seconds": round(time.monotonic() - started, 3),
-            "error": f"{label}: {value}",
-        }
+            print(f"[FINPY] OK {label} in {elapsed}s", flush=True)
+            return value, {"status": "ok", "elapsed_seconds": elapsed}
+
+        print(f"[FINPY] ERROR {label}: {value}", flush=True)
+        return None, {"status": "error", "elapsed_seconds": elapsed, "error": f"{label}: {value}"}
     finally:
+        if process.is_alive():
+            process.terminate()
+            process.join(1)
         try:
+            result_queue.cancel_join_thread()
             result_queue.close()
-            result_queue.join_thread()
         except Exception:
             pass
 
 
 def main() -> int:
     end = date.today()
-    start = end - timedelta(days=int(os.getenv("FINPY_TSE_LOOKBACK_DAYS", "30")))
+    lookback = max(1, int(os.getenv("FINPY_TSE_LOOKBACK_DAYS", "30")))
+    start = end - timedelta(days=lookback)
+    print(f"[FINPY] BEGIN symbols={','.join(SYMBOLS)} lookback={lookback}d timeout={TIMEOUT_SECONDS}s", flush=True)
+
     payload: dict[str, Any] = {
         "source": "finpy-tse",
         "upstream": "https://github.com/ARahimiQuant/finpy-tse",
@@ -135,7 +165,7 @@ def main() -> int:
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
-    print(f"wrote {OUTPUT} | status={payload['collection_status']} failures={len(failures)} timeout={TIMEOUT_SECONDS}s")
+    print(f"[FINPY] WROTE {OUTPUT} | status={payload['collection_status']} failures={len(failures)}", flush=True)
     return 0
 
 
