@@ -6,128 +6,109 @@
     "regime": {
       "overall": "bullish",
       "confidence": 0.75,
-      "primary_drivers": [
-        "volume_led_expansion",
-        "copper_price_sensitivity",
-        "risk_on_market_regime",
-        "operating_leverage_effectiveness"
+      "evidence": [
+        "graph_intelligence.graph_regime: bullish",
+        "graph_intelligence.graph_score: 1.0",
+        "graph_intelligence.graph_confidence: 0.75",
+        "symbol_thesis.فملی.scenario_weights.bull: 0.45"
       ],
-      "key_factors": {
-        "fundamental_strength": "exceptional_growth_metrics",
-        "technical_position": "accumulation_phase",
-        "market_sentiment": "positive_flow_regime",
-        "commodity_coupling": "copper_price_sensitivity"
-      }
+      "inference": [
+        "Bullish regime driven by copper price sensitivity, volume-led expansion, and risk-on market sentiment"
+      ],
+      "uncertainty": [
+        "Real-time Iranian market data unavailable",
+        "Option chain data missing (IV/Greeks not available)"
+      ]
     },
-    "scenarios": {
-      "bull": {
+    "scenarios": [
+      {
+        "label": "bull",
         "probability": 0.45,
         "target_price_rial": 23000,
         "time_horizon": "Q2-Q3 1405",
         "key_triggers": [
-          "copper_price_breakout",
-          "continued_volume_growth",
-          "fund_flow_rotation_to_commodity_leaders"
+          "global copper supply disruption or tightness",
+          "higher copper benchmark",
+          "higher realized sales price / margins",
+          "higher FMLI earnings expectations",
+          "fund-flow rotation toward large liquid commodity leaders",
+          "technical breakout or continuation",
+          "option convexity increases demand for calls"
         ],
         "risk_factors": [
-          "copper_price_pullback",
-          "volume_deterioration",
-          "broader_market_risk_off"
+          "copper price pullback",
+          "volume deterioration",
+          "broader market risk-off",
+          "sales growth rolls over for two consecutive releases",
+          "volume falls while revenue is supported only by price",
+          "copper price breaks down materially and remains weak",
+          "stock leadership disappears while market breadth remains healthy"
         ]
       },
-      "base": {
+      {
+        "label": "base",
         "probability": 0.4,
         "target_price_rial": 21500,
         "time_horizon": "Q2 1405",
         "key_triggers": [
-          "steady_sales_growth",
-          "maintained_market_leadership",
-          "stable_commodity_prices"
+          "steady sales growth",
+          "maintained market leadership",
+          "stable commodity prices"
         ],
         "risk_factors": [
-          "sales_growth_slowdown",
-          "increased_competition",
-          "currency_volatility"
+          "sales growth slowdown",
+          "increased competition",
+          "currency volatility"
         ]
       },
-      "bear": {
+      {
+        "label": "bear",
         "probability": 0.15,
         "target_price_rial": 18800,
         "time_horizon": "Q1-Q2 1405",
         "key_triggers": [
-          "copper_price_breakdown",
-          "volume_collapse",
-          "real_money_flow_deterioration"
+          "copper price breakdown",
+          "volume collapse",
+          "real money flow deterioration"
         ],
         "risk_factors": [
-          "global_risk_off_spread",
-          "commodity_cycle_peak",
-          "operational_execution_issues"
+          "global risk-off spread",
+          "commodity cycle peak",
+          "operational execution issues"
         ]
       }
-    },
+    ],
     "game_theory": {
-      "market_positioning": {
-        "dominant_strategy": "scale_in_on_support_accumulation",
-        "opponent_response": "mean_reversion_traders_exiting_positions",
-        "equilibrium": "moderate_bullish_with_volatility"
-      },
-      "key_interactions": [
-        {
-          "player": "institutional_investors",
-          "move": "gradual_position_building_on_pullbacks",
-          "counter_move": "opportunistic_selling_by_speculators"
-        },
-        {
-          "player": "commodity_traders",
-          "move": "copper_price_speculation_impact",
-          "counter_move": "profit_taking_after_moves"
-        },
-        {
-          "player": "retail_investors",
-          "move": "chasing_performance",
-          "counter_move": "fear_of_missing_out_exit"
-        }
+      "description": "Market participants face a coordination game where fund flows and option convexity create positive feedback loops: expectations of higher copper prices drive call buying, which amplifies price moves, attracting further momentum traders. Leader-follower dynamics emerge as commodity leaders like FMLI draw inflows, while laggards suffer from reduced liquidity. Sanctions and geopolitical risk introduce a strategic layer where policymakers' actions (e.g., gasoline price hikes) affect market sentiment and option pricing.",
+      "evidence": [
+        "symbol_thesis.فملی.event_chain",
+        "symbol_thesis.فملی.hidden_signal",
+        "graph_intelligence.graph_top_drivers"
       ],
-      " Nash equilibrium": "balanced_market_with_moderate_volatility"
+      "uncertainty": [
+        "Lack of real-time option Greeks prevents precise equilibrium calculation"
+      ]
     },
     "dynamic_system": {
-      "system_type": "operating_leverage_growth_model",
-      "key_variables": {
-        "sales_volume": "primary_driver",
-        "copper_price": "amplifier_effect",
-        "operating_margin": "leveraged_positive",
-        "market_sentiment": "feedback_mechanism"
-      },
-      "equations": {
-        "growth_rate": "volume_growth_rate * operating_leverage + price_sensitivity * commodity_price_change",
-        "valuation_multiple": "base_pe + growth_premium - risk_discount",
-        "momentum_factor": "volume_trend * price_trend * sentiment_trend"
-      },
-      "stability_analysis": {
-        "system_stability": "moderately_stable_with_volatility",
-        "feedback_loops": "positive_volume_price_loop_with_negative_correction_mechanisms",
-        "critical_points": "18800_risk_line, 20000_confirmation_level"
-      }
+      "description": "A dynamic feedback loop links copper price → realized sales price/margins → FMLI earnings expectations → fund flow rotation → price/volume confirmation → option convexity → further price pressure. Volume-quality feedback reinforces the loop when sales growth is volume-led. Disruptions (copper price breakdown, volume decay) act as negative feedback or regime shift triggers.",
+      "evidence": [
+        "symbol_thesis.فملی.event_chain",
+        "symbol_thesis.فملی.hidden_signal",
+        "graph_intelligence.graph_top_drivers"
+      ],
+      "uncertainty": [
+        "Missing real-time price and volume data prevents precise calibration of loop gains"
+      ]
     },
     "political_economy": {
-      "domestic_factors": {
-        "iranian_policy_impact": "commodity_market_regulation_supportive",
-        "currency_regime": "managed_float_with_volatility",
-        "trade_policy": "sanctions_still_present_but_trading_continues",
-        "fiscal_policy": "expansionary_with_infrastructure_focus"
-      },
-      "international_factors": {
-        "global_copper_demand": "china_led_growth_with_diversification",
-        "geopolitical_risk": "middle_east_tensions_supportive_for_commodity_prices",
-        "currency_relations": "usd_rial_volatility_affects_iranian_exporters",
-        "trade_flows": "asian_markets_increasing_import_dependency"
-      },
-      "policy_implications": {
-        "short_term": "commodity_prices_supported_by_policy",
-        "medium_term": "gradual_market liberalization_expected",
-        "long_term": "infrastructure_investment_boosts_demand"
-      }
+      "description": "Iran's macroeconomy is shaped by US sanctions, gasoline price adjustments, and geopolitical tensions. President Pezeshkian's calls for unity and economic pressure mitigation coexist with reports of gasoline price hikes and oil prices near $100, reflecting inflationary pressures and war-related fiscal strain. The political economy features a tension between sanction-induced scarcity and domestic policy responses (fuel subsidies, price adjustments).",
+      "evidence": [
+        "news digest macro_monetary items on gasoline price hikes, oil prices near $100",
+        "pezeshkian news items on economic pressure, unity calls"
+      ],
+      "uncertainty": [
+        "Policy implementation lag and unofficial market reactions not directly observed"
+      ]
     },
     "market_implications": {
       "sector_rotation": {
@@ -156,35 +137,31 @@
         "hedging_opportunities": [
           "commodity_derivatives",
           "currency_futures",
-          " geopolitical_insurance"
+          "geopolitical_insurance"
         ],
         "portfolio_implications": [
           "increase_commodity_exposure",
           "maintain_currency_hedges",
           "diversify_geographic_risk"
         ]
-      }
+      },
+      "evidence": [
+        "memory historical market_implications",
+        "symbol_thesis.فملی.price_map_rial"
+      ],
+      "uncertainty": [
+        "Lack of real-time market breadth data"
+      ]
     },
     "option_implications": {
-      "strategy_recommendations": {
-        "bullish_strategy": "scale_in_calls_with_support_confirmation",
-        "bearish_strategy": "protective_puts_above_18800",
-        "neutral_strategy": "credit_spreads_on_breakout"
-      },
-      "option_valuation": {
-        "implied_volatility": "moderate_with_upward_tendency",
-        "time_decay_impact": "significant_for_long-dated_options",
-        "greeks_analysis": {
-          "delta": "positive_correlation_with_spot_movement",
-          "gamma": "elevated_near_breakout_levels",
-          "theta": "normal_decay_rates"
-        }
-      },
-      "market_structure": {
-        "liquidity_conditions": "moderate_with_wider_spreads_on_large_positions",
-        "volatility_regime": "increasing_with_breakout_potential",
-        "expiration_effectiveness": "weekly_expirations_preferred_for_trading"
-      }
+      "guidance": "Use options only when spot confirms direction; prioritize delta, IV, theta, open-interest concentration and spread liquidity; avoid buying high-IV calls solely because copper is bullish. Current option chain data unavailable (IV/Greeks missing), limiting precise strategy.",
+      "evidence": [
+        "symbol_thesis.فملی.strategy.option",
+        "option_market_watch_summary.data_quality"
+      ],
+      "uncertainty": [
+        "No real-time option data prevents Greek/IV-based ranking"
+      ]
     },
     "confidence": {
       "overall_confidence": 0.75,

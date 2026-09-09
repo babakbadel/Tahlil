@@ -69,138 +69,6 @@
       "app_decision_network_rationale_13"
     ],
     "1": [
-      "app_economic_graph_init",
-      "app_economic_graph_init_rationale_1",
-      "app_economic_graph_models",
-      "app_economic_graph_models_economicedge",
-      "app_economic_graph_models_economicedge_as_dict",
-      "app_economic_graph_models_economicedge_effective_weight",
-      "app_economic_graph_models_economicedge_is_valid_as_of",
-      "app_economic_graph_models_economicnode",
-      "app_economic_graph_models_economicnode_as_dict",
-      "app_economic_graph_models_graphevidence",
-      "app_economic_graph_models_graphevidence_as_dict",
-      "app_economic_graph_models_graphscoreresult",
-      "app_economic_graph_models_graphscoreresult_as_dict",
-      "app_economic_graph_models_graphsnapshot",
-      "app_economic_graph_models_graphsnapshot_as_dict",
-      "app_economic_graph_models_graphsnapshot_to_json",
-      "app_economic_graph_models_py_any",
-      "app_economic_graph_models_rationale_1",
-      "app_economic_graph_models_rationale_144",
-      "app_economic_graph_models_rationale_173",
-      "app_economic_graph_models_rationale_54",
-      "app_economic_graph_models_rationale_71",
-      "app_economic_graph_models_rationale_98",
-      "app_economic_graph_store",
-      "app_economic_graph_store_clamp",
-      "app_economic_graph_store_economicgraphstore",
-      "app_economic_graph_store_economicgraphstore_add_evidence",
-      "app_economic_graph_store_economicgraphstore_append_jsonl",
-      "app_economic_graph_store_economicgraphstore_edges_as_of",
-      "app_economic_graph_store_economicgraphstore_ensure_loaded",
-      "app_economic_graph_store_economicgraphstore_init",
-      "app_economic_graph_store_economicgraphstore_latest_nodes_as_of",
-      "app_economic_graph_store_economicgraphstore_load",
-      "app_economic_graph_store_economicgraphstore_read_jsonl",
-      "app_economic_graph_store_economicgraphstore_score_target",
-      "app_economic_graph_store_economicgraphstore_snapshot",
-      "app_economic_graph_store_economicgraphstore_summary",
-      "app_economic_graph_store_economicgraphstore_upsert_edge",
-      "app_economic_graph_store_economicgraphstore_upsert_node",
-      "app_economic_graph_store_now",
-      "app_economic_graph_store_py_path",
-      "app_economic_graph_store_rationale_1",
-      "scripts_load_economic_graph_seed",
-      "scripts_load_economic_graph_seed_main",
-      "scripts_load_economic_graph_seed_rationale_2"
-    ],
-    "2": [
-      "datetime",
-      "scripts_babimind_factor_rotation",
-      "scripts_babimind_factor_rotation_main",
-      "scripts_babimind_global_market",
-      "scripts_babimind_global_market_load_json_candidates",
-      "scripts_babimind_global_market_main",
-      "scripts_babimind_global_market_py_path",
-      "scripts_babimind_source_health",
-      "scripts_babimind_source_health_check",
-      "scripts_babimind_source_health_load_sources",
-      "scripts_babimind_source_health_main",
-      "scripts_backfill",
-      "scripts_backfill_is_stale",
-      "scripts_backfill_main",
-      "scripts_backfill_mark_backfilled",
-      "scripts_backfill_now_tehran",
-      "scripts_backfill_parse_timestamp",
-      "scripts_backfill_py_path",
-      "scripts_backfill_rationale_1",
-      "scripts_backfill_read_json",
-      "scripts_backfill_refresh_market",
-      "scripts_backfill_refresh_options",
-      "scripts_backfill_run",
-      "scripts_backfill_snapshot_time",
-      "scripts_backfill_write_json",
-      "scripts_collect_tse_option_chain",
-      "scripts_collect_tse_option_chain_main",
-      "scripts_collect_tse_option_chain_rationale_1",
-      "scripts_ingest_marketwatch_plus",
-      "scripts_ingest_marketwatch_plus_clean",
-      "scripts_ingest_marketwatch_plus_main",
-      "scripts_ingest_marketwatch_plus_py_any",
-      "scripts_ingest_marketwatch_plus_rationale_1",
-      "scripts_score_dollar_experts",
-      "scripts_score_dollar_experts_clamp",
-      "scripts_score_dollar_experts_consistency_score",
-      "scripts_score_dollar_experts_direction_score",
-      "scripts_score_dollar_experts_main",
-      "scripts_score_dollar_experts_parse_dt",
-      "scripts_score_dollar_experts_price_score",
-      "scripts_score_dollar_experts_rationale_1",
-      "scripts_score_dollar_experts_timing_score"
-    ],
-    "3": [
-      "app_data_brsapi_stream",
-      "app_data_brsapi_stream_py_any",
-      "app_data_brsapi_stream_rationale_1",
-      "app_data_brsapi_stream_rationale_27",
-      "app_data_brsapi_stream_rationale_9",
-      "app_data_brsapi_stream_realtimehub",
-      "app_data_brsapi_stream_realtimehub_events",
-      "app_data_brsapi_stream_realtimehub_fanout",
-      "app_data_brsapi_stream_realtimehub_init",
-      "app_data_brsapi_stream_realtimehub_publish",
-      "app_data_brsapi_stream_realtimehub_subscribe",
-      "app_data_brsapi_stream_realtimehub_subscriber_count",
-      "app_data_brsapi_stream_realtimehub_unsubscribe",
-      "app_data_finpy_tse_adapter",
-      "app_data_finpy_tse_adapter_get_market_watch",
-      "app_data_finpy_tse_adapter_get_price_history",
-      "app_data_finpy_tse_adapter_get_ri_history",
-      "app_data_finpy_tse_adapter_get_usd_rial",
-      "app_data_finpy_tse_adapter_py_any",
-      "app_data_finpy_tse_adapter_rationale_1",
-      "app_data_finpy_tse_adapter_rationale_45",
-      "app_data_finpy_tse_adapter_rationale_65",
-      "app_data_finpy_tse_adapter_rationale_81",
-      "app_data_finpy_tse_adapter_rationale_88",
-      "app_data_finpy_tse_adapter_records",
-      "app_data_finpy_tse_adapter_source_status",
-      "asyncio",
-      "dataframe",
-      "queue",
-      "scripts_collect_finpy_tse",
-      "scripts_collect_finpy_tse_call_bounded",
-      "scripts_collect_finpy_tse_main",
-      "scripts_collect_finpy_tse_py_any",
-      "scripts_collect_finpy_tse_rationale_1",
-      "scripts_collect_finpy_tse_rationale_37",
-      "scripts_collect_finpy_tse_rationale_48",
-      "scripts_collect_finpy_tse_worker",
-      "tests_test_stream",
-      "tests_test_stream_test_hub_fanout_and_bounded_queue"
-    ],
-    "4": [
       "app_data_brsapi_client",
       "app_data_brsapi_client_brsapiclient",
       "app_data_brsapi_client_brsapiclient_get_all_symbols",
@@ -240,46 +108,43 @@
       "scripts_fetch_zmli_realtime_main",
       "scripts_fetch_zmli_realtime_rationale_1"
     ],
-    "5": [
-      "app_news_collector",
-      "app_news_collector_clean",
-      "app_news_collector_collect_and_persist",
-      "app_news_collector_dailyeconomicnewscollector",
-      "app_news_collector_dailyeconomicnewscollector_collect",
-      "app_news_collector_dailyeconomicnewscollector_init",
-      "app_news_collector_dailyeconomicnewscollector_merge",
-      "app_news_collector_dailyeconomicnewscollector_persist",
-      "app_news_collector_dailyeconomicnewscollector_write_digest",
-      "app_news_collector_fetch",
-      "app_news_collector_py_any",
-      "app_news_collector_py_element",
-      "app_news_collector_py_path",
-      "app_news_collector_rationale_1",
-      "app_news_collector_rationale_62",
-      "app_news_collector_text",
-      "app_news_init",
-      "app_news_init_rationale_1",
-      "app_news_pezeshkian",
-      "app_news_pezeshkian_clean",
-      "app_news_pezeshkian_collect_pezeshkian_and_persist",
-      "app_news_pezeshkian_fetch",
-      "app_news_pezeshkian_pezeshkiannewscollector",
-      "app_news_pezeshkian_pezeshkiannewscollector_collect",
-      "app_news_pezeshkian_pezeshkiannewscollector_init",
-      "app_news_pezeshkian_pezeshkiannewscollector_persist",
-      "app_news_pezeshkian_py_any",
-      "app_news_pezeshkian_py_element",
-      "app_news_pezeshkian_py_path",
-      "app_news_pezeshkian_rationale_1",
-      "app_news_pezeshkian_text",
-      "scripts_babimind_daily_economic_news",
-      "scripts_babimind_daily_economic_news_main",
-      "scripts_babimind_daily_economic_news_rationale_2",
-      "scripts_babimind_pezeshkian_news",
-      "scripts_babimind_pezeshkian_news_main",
-      "scripts_babimind_pezeshkian_news_rationale_2"
+    "2": [
+      "datetime",
+      "scripts_babimind_factor_rotation",
+      "scripts_babimind_factor_rotation_main",
+      "scripts_backfill",
+      "scripts_backfill_is_stale",
+      "scripts_backfill_main",
+      "scripts_backfill_mark_backfilled",
+      "scripts_backfill_now_tehran",
+      "scripts_backfill_parse_timestamp",
+      "scripts_backfill_py_path",
+      "scripts_backfill_rationale_1",
+      "scripts_backfill_read_json",
+      "scripts_backfill_refresh_market",
+      "scripts_backfill_refresh_options",
+      "scripts_backfill_run",
+      "scripts_backfill_snapshot_time",
+      "scripts_backfill_write_json",
+      "scripts_collect_tse_option_chain",
+      "scripts_collect_tse_option_chain_main",
+      "scripts_collect_tse_option_chain_rationale_1",
+      "scripts_ingest_marketwatch_plus",
+      "scripts_ingest_marketwatch_plus_clean",
+      "scripts_ingest_marketwatch_plus_main",
+      "scripts_ingest_marketwatch_plus_py_any",
+      "scripts_ingest_marketwatch_plus_rationale_1",
+      "scripts_score_dollar_experts",
+      "scripts_score_dollar_experts_clamp",
+      "scripts_score_dollar_experts_consistency_score",
+      "scripts_score_dollar_experts_direction_score",
+      "scripts_score_dollar_experts_main",
+      "scripts_score_dollar_experts_parse_dt",
+      "scripts_score_dollar_experts_price_score",
+      "scripts_score_dollar_experts_rationale_1",
+      "scripts_score_dollar_experts_timing_score"
     ],
-    "6": [
+    "3": [
       "fastapi",
       "realtime_api",
       "realtime_api_equity_market",
@@ -315,7 +180,42 @@
       "streamingresponse",
       "websocket"
     ],
-    "7": [
+    "4": [
+      "app_data_brsapi_realtime",
+      "app_data_brsapi_realtime_is_option",
+      "app_data_brsapi_realtime_normalize",
+      "app_data_brsapi_realtime_now",
+      "app_data_brsapi_realtime_py_any",
+      "app_data_brsapi_realtime_rationale_1",
+      "app_data_brsapi_realtime_rationale_54",
+      "app_data_brsapi_realtime_realtimecollector",
+      "app_data_brsapi_realtime_realtimecollector_collect_once",
+      "app_data_brsapi_realtime_realtimecollector_init",
+      "app_data_brsapi_realtime_realtimecollector_run_forever",
+      "app_data_brsapi_realtime_realtimecollector_stop",
+      "app_data_brsapi_realtime_rows",
+      "app_data_brsapi_stream",
+      "app_data_brsapi_stream_py_any",
+      "app_data_brsapi_stream_rationale_1",
+      "app_data_brsapi_stream_rationale_27",
+      "app_data_brsapi_stream_rationale_9",
+      "app_data_brsapi_stream_realtimehub",
+      "app_data_brsapi_stream_realtimehub_events",
+      "app_data_brsapi_stream_realtimehub_fanout",
+      "app_data_brsapi_stream_realtimehub_init",
+      "app_data_brsapi_stream_realtimehub_publish",
+      "app_data_brsapi_stream_realtimehub_subscribe",
+      "app_data_brsapi_stream_realtimehub_subscriber_count",
+      "app_data_brsapi_stream_realtimehub_unsubscribe",
+      "asyncio",
+      "queue",
+      "tests_test_realtime",
+      "tests_test_realtime_test_normalize_empty_feed_is_partial",
+      "tests_test_realtime_test_normalize_splits_equity_and_option",
+      "tests_test_stream",
+      "tests_test_stream_test_hub_fanout_and_bounded_queue"
+    ],
+    "5": [
       "app_forecasting_historical_forecaster",
       "app_forecasting_historical_forecaster_add_forward_targets",
       "app_forecasting_historical_forecaster_forecastresult",
@@ -340,7 +240,31 @@
       "ndarray",
       "series"
     ],
-    "8": [
+    "6": [
+      "app_data_finpy_tse_adapter",
+      "app_data_finpy_tse_adapter_get_market_watch",
+      "app_data_finpy_tse_adapter_get_price_history",
+      "app_data_finpy_tse_adapter_get_ri_history",
+      "app_data_finpy_tse_adapter_get_usd_rial",
+      "app_data_finpy_tse_adapter_py_any",
+      "app_data_finpy_tse_adapter_rationale_1",
+      "app_data_finpy_tse_adapter_rationale_45",
+      "app_data_finpy_tse_adapter_rationale_65",
+      "app_data_finpy_tse_adapter_rationale_81",
+      "app_data_finpy_tse_adapter_rationale_88",
+      "app_data_finpy_tse_adapter_records",
+      "app_data_finpy_tse_adapter_source_status",
+      "dataframe",
+      "scripts_collect_finpy_tse",
+      "scripts_collect_finpy_tse_call_bounded",
+      "scripts_collect_finpy_tse_main",
+      "scripts_collect_finpy_tse_py_any",
+      "scripts_collect_finpy_tse_rationale_1",
+      "scripts_collect_finpy_tse_rationale_37",
+      "scripts_collect_finpy_tse_rationale_48",
+      "scripts_collect_finpy_tse_worker"
+    ],
+    "7": [
       "runtimeerror",
       "scripts_historical_archive_ingest",
       "scripts_historical_archive_ingest_download_source",
@@ -363,7 +287,7 @@
       "scripts_historical_backfill_write_gz",
       "session"
     ],
-    "9": [
+    "8": [
       "app_options_init",
       "app_options_init_rationale_1",
       "app_options_ranking",
@@ -382,7 +306,7 @@
       "app_options_ranking_summarize_ranking",
       "date"
     ],
-    "10": [
+    "9": [
       "reports_tse_option_source_status_schema",
       "reports_tse_option_source_status_schema_commit_type",
       "reports_tse_option_source_status_schema_data_type",
@@ -401,25 +325,7 @@
       "reports_tse_option_source_status_schema_type",
       "reports_tse_option_source_status_schema_upstream_type"
     ],
-    "11": [
-      "app_data_brsapi_realtime",
-      "app_data_brsapi_realtime_is_option",
-      "app_data_brsapi_realtime_normalize",
-      "app_data_brsapi_realtime_now",
-      "app_data_brsapi_realtime_py_any",
-      "app_data_brsapi_realtime_rationale_1",
-      "app_data_brsapi_realtime_rationale_54",
-      "app_data_brsapi_realtime_realtimecollector",
-      "app_data_brsapi_realtime_realtimecollector_collect_once",
-      "app_data_brsapi_realtime_realtimecollector_init",
-      "app_data_brsapi_realtime_realtimecollector_run_forever",
-      "app_data_brsapi_realtime_realtimecollector_stop",
-      "app_data_brsapi_realtime_rows",
-      "tests_test_realtime",
-      "tests_test_realtime_test_normalize_empty_feed_is_partial",
-      "tests_test_realtime_test_normalize_splits_equity_and_option"
-    ],
-    "12": [
+    "10": [
       "app_rotation_cluster_engine",
       "app_rotation_cluster_engine_acceleration",
       "app_rotation_cluster_engine_assetsignal",
@@ -437,7 +343,7 @@
       "app_rotation_init",
       "app_rotation_init_rationale_1"
     ],
-    "13": [
+    "11": [
       "scripts_babimind_memory",
       "scripts_babimind_memory_compact",
       "scripts_babimind_memory_empty",
@@ -452,7 +358,7 @@
       "scripts_babimind_memory_rationale_2",
       "scripts_babimind_memory_save"
     ],
-    "14": [
+    "12": [
       "scripts_babimind_pipeline",
       "scripts_babimind_pipeline_check_source",
       "scripts_babimind_pipeline_confidence",
@@ -463,7 +369,7 @@
       "scripts_babimind_pipeline_main",
       "scripts_babimind_pipeline_rationale_2"
     ],
-    "15": [
+    "13": [
       "scripts_babimind_graph",
       "scripts_babimind_graph_clamp",
       "scripts_babimind_graph_edge_iter",
@@ -473,7 +379,7 @@
       "scripts_babimind_graph_py_any",
       "scripts_babimind_graph_status_factor"
     ],
-    "16": [
+    "14": [
       "scripts_ingest_option_market_watch",
       "scripts_ingest_option_market_watch_build_summary",
       "scripts_ingest_option_market_watch_int_num",
@@ -483,7 +389,7 @@
       "scripts_ingest_option_market_watch_py_any",
       "scripts_ingest_option_market_watch_rationale_1"
     ],
-    "17": [
+    "15": [
       "scripts_babimind_llm_router",
       "scripts_babimind_llm_router_call_openrouter",
       "scripts_babimind_llm_router_is_retryable",
@@ -492,7 +398,16 @@
       "scripts_babimind_llm_router_retry_after_seconds",
       "scripts_babimind_llm_router_run"
     ],
-    "18": [
+    "16": [
+      "scripts_babimind_pezeshkian_news",
+      "scripts_babimind_pezeshkian_news_clean",
+      "scripts_babimind_pezeshkian_news_collect",
+      "scripts_babimind_pezeshkian_news_fetch",
+      "scripts_babimind_pezeshkian_news_main",
+      "scripts_babimind_pezeshkian_news_rationale_2",
+      "scripts_babimind_pezeshkian_news_text"
+    ],
+    "17": [
       "bobby_hosh_engine",
       "research_advisor_network_20_plus_10_core",
       "research_research_source_monitor_monitor",
@@ -500,7 +415,7 @@
       "skills_iran_market_realtime_skill",
       "tsetmc_official_source"
     ],
-    "19": [
+    "18": [
       "scan_market",
       "scan_market_fetch_all_symbols",
       "scan_market_main",
@@ -508,7 +423,7 @@
       "scan_market_save_csv",
       "scan_market_save_json"
     ],
-    "20": [
+    "19": [
       "scripts_babimind_v1",
       "scripts_babimind_v1_clamp",
       "scripts_babimind_v1_main",
@@ -516,7 +431,7 @@
       "scripts_babimind_v1_rationale_2",
       "scripts_babimind_v1_sigmoid"
     ],
-    "21": [
+    "20": [
       "scripts_score_options_babimind_scenarios",
       "scripts_score_options_babimind_scenarios_expiry_pnl",
       "scripts_score_options_babimind_scenarios_liquidity_score",
@@ -524,19 +439,25 @@
       "scripts_score_options_babimind_scenarios_n",
       "scripts_score_options_babimind_scenarios_score"
     ],
-    "22": [
+    "21": [
       "scripts_babimind_factor_discovery",
       "scripts_babimind_factor_discovery_load_csv_files",
       "scripts_babimind_factor_discovery_main",
       "scripts_babimind_factor_discovery_pearson",
       "scripts_babimind_factor_discovery_rationale_2"
     ],
-    "23": [
+    "22": [
       "scripts_babimind_gemini",
       "scripts_babimind_gemini_compact_state",
       "scripts_babimind_gemini_load_json",
       "scripts_babimind_gemini_main",
       "scripts_babimind_gemini_write"
+    ],
+    "23": [
+      "scripts_babimind_global_market",
+      "scripts_babimind_global_market_load_json_candidates",
+      "scripts_babimind_global_market_main",
+      "scripts_babimind_global_market_py_path"
     ],
     "24": [
       "scripts_babimind_source_confidence",
@@ -545,87 +466,93 @@
       "scripts_babimind_source_confidence_tier"
     ],
     "25": [
+      "scripts_babimind_source_health",
+      "scripts_babimind_source_health_check",
+      "scripts_babimind_source_health_load_sources",
+      "scripts_babimind_source_health_main"
+    ],
+    "26": [
       "app_forecasting_regimes",
       "app_forecasting_regimes_rationale_1",
       "app_forecasting_regimes_regime_labels"
     ],
-    "26": [
+    "27": [
       "scripts_brsapi_client",
       "scripts_brsapi_client_fetch_symbols",
       "scripts_brsapi_client_py_any"
     ],
-    "27": [
+    "28": [
       "scripts_ingest_tse_option",
       "scripts_ingest_tse_option_main",
       "scripts_ingest_tse_option_rationale_1"
     ],
-    "28": [
+    "29": [
       "scripts_risk_adjusted_options_babimind",
       "scripts_risk_adjusted_options_babimind_calc",
       "scripts_risk_adjusted_options_babimind_n"
     ],
-    "29": [
+    "30": [
       "reports_options_babimind_ranked_khosapa",
       "reports_options_babimind_scenario_ranked_summary"
     ],
-    "30": [
+    "31": [
       "scripts_babimind_signal_weight",
       "scripts_babimind_signal_weight_main"
     ],
-    "31": [
+    "32": [
       "scripts_docker_entrypoint_realtime",
       "scripts_docker_entrypoint_realtime_sh__entry"
     ],
-    "32": [
+    "33": [
       "scripts_run_realtime_api",
       "scripts_run_realtime_api_rationale_1"
     ],
-    "33": [
+    "34": [
       "reports_options_babimind_ranked_fomeli"
     ],
-    "34": [
+    "35": [
       "reports_options_babimind_ranked_shapna"
     ],
-    "35": [
+    "36": [
       "reports_options_babimind_ranked_webmellat"
     ],
-    "36": [
+    "37": [
       "scripts_babimind_factor_coverage"
     ],
-    "37": [
+    "38": [
       "skills_headroom_skill"
     ]
   },
   "cohesion": {
     "0": 0.06993006993006994,
-    "1": 0.10303030303030303,
-    "2": 0.09059233449477352,
-    "3": 0.09446693657219973,
-    "4": 0.1166429587482219,
-    "5": 0.0960960960960961,
-    "6": 0.13012477718360071,
-    "7": 0.13043478260869565,
-    "8": 0.1761904761904762,
-    "9": 0.2426470588235294,
-    "10": 0.11764705882352941,
-    "11": 0.21666666666666667,
-    "12": 0.26666666666666666,
-    "13": 0.3717948717948718,
-    "14": 0.3888888888888889,
-    "15": 0.4642857142857143,
-    "16": 0.4642857142857143,
-    "17": 0.47619047619047616,
-    "18": 0.3333333333333333,
-    "19": 0.6,
-    "20": 0.5333333333333333,
-    "21": 0.8,
-    "22": 0.5,
-    "23": 0.7,
+    "1": 0.1166429587482219,
+    "2": 0.11764705882352941,
+    "3": 0.13012477718360071,
+    "4": 0.11174242424242424,
+    "5": 0.13043478260869565,
+    "6": 0.1774891774891775,
+    "7": 0.1761904761904762,
+    "8": 0.2426470588235294,
+    "9": 0.11764705882352941,
+    "10": 0.26666666666666666,
+    "11": 0.3717948717948718,
+    "12": 0.3888888888888889,
+    "13": 0.4642857142857143,
+    "14": 0.4642857142857143,
+    "15": 0.47619047619047616,
+    "16": 0.47619047619047616,
+    "17": 0.3333333333333333,
+    "18": 0.6,
+    "19": 0.5333333333333333,
+    "20": 0.8,
+    "21": 0.5,
+    "22": 0.7,
+    "23": 0.8333333333333334,
     "24": 0.8333333333333334,
-    "25": 0.6666666666666666,
+    "25": 0.8333333333333334,
     "26": 0.6666666666666666,
     "27": 0.6666666666666666,
-    "28": 1.0,
+    "28": 0.6666666666666666,
     "29": 1.0,
     "30": 1.0,
     "31": 1.0,
@@ -634,14 +561,10 @@
     "34": 1.0,
     "35": 1.0,
     "36": 1.0,
-    "37": 1.0
+    "37": 1.0,
+    "38": 1.0
   },
   "gods": [
-    {
-      "id": "app_economic_graph_store_economicgraphstore",
-      "label": "EconomicGraphStore",
-      "degree": 22
-    },
     {
       "id": "app_decision_network_influencenetwork",
       "label": "InfluenceNetwork",
@@ -673,11 +596,6 @@
       "degree": 13
     },
     {
-      "id": "app_economic_graph_models_economicedge",
-      "label": "EconomicEdge",
-      "degree": 13
-    },
-    {
       "id": "app_decision_models_evidence",
       "label": "Evidence",
       "degree": 12
@@ -686,6 +604,16 @@
       "id": "scripts_rank_options_babimind_get",
       "label": "get()",
       "degree": 12
+    },
+    {
+      "id": "scripts_rank_options_babimind_main",
+      "label": "main()",
+      "degree": 11
+    },
+    {
+      "id": "app_decision_models_decisionprediction",
+      "label": "DecisionPrediction",
+      "degree": 10
     }
   ],
   "surprises": [
@@ -723,17 +651,6 @@
       "why": "connects across different repos/directories; peripheral node `test_normalize_splits_equity_and_option()` unexpectedly reaches hub `normalize()`"
     },
     {
-      "source": "main()",
-      "target": "get_market_watch()",
-      "source_files": [
-        "scripts/collect_finpy_tse.py",
-        "app/data/finpy_tse_adapter.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "indirect_call",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
-    },
-    {
       "source": "BabiMind Research & News Monitor",
       "target": "Bobby Hosh / Babak Analysis Engine",
       "source_files": [
@@ -742,6 +659,17 @@
       ],
       "confidence": "INFERRED",
       "relation": "shares_data_with",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "main()",
+      "target": "get_market_watch()",
+      "source_files": [
+        "scripts/collect_finpy_tse.py",
+        "app/data/finpy_tse_adapter.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "indirect_call",
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
     }
   ],
