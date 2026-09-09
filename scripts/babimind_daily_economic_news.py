@@ -17,18 +17,25 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
-# query, relevance tag, default market channels
-QUERIES: list[tuple[str, str, list[str]]] = [
-    ("بورس تهران شاخص کل", "bourse", ["equity", "flow"]),
-    ("بورس ورود پول حقیقی", "bourse_flow", ["equity", "flow"]),
-    ("دلار آزاد بازار ارز", "fx", ["fx", "inflation_expectations"]),
-    ("نرخ تورم نقدینگی بانک مرکزی", "macro_monetary", ["monetary", "inflation"]),
-    ("نفت برنت صادرات نفت ایران", "oil", ["oil", "fx_monetization"]),
-    ("پزشکیان اقتصاد ارز بودجه", "pezeshkian", ["policy", "fx", "fiscal"]),
-    ("اختیار معامله بورس فملی", "options", ["options"]),
-    ("تحریم هرمز کشتیرانی ایران", "geopolitics", ["geopolitical_risk", "oil"]),
-    ("طلا سکه صندوق طلا", "gold", ["gold", "fx"]),
-    ("مدنی‌زاده همتی بانک مرکزی", "policy_actors", ["policy", "monetary"]),
+# (query, relevance, channels, hl, gl, ceid)
+QUERIES: list[tuple[str, str, list[str], str, str, str]] = [
+    ("بورس تهران شاخص کل", "bourse", ["equity", "flow"], "fa", "IR", "IR:fa"),
+    ("بورس ورود پول حقیقی", "bourse_flow", ["equity", "flow"], "fa", "IR", "IR:fa"),
+    ("دلار آزاد بازار ارز", "fx", ["fx", "inflation_expectations"], "fa", "IR", "IR:fa"),
+    ("نرخ تورم نقدینگی بانک مرکزی", "macro_monetary", ["monetary", "inflation"], "fa", "IR", "IR:fa"),
+    ("نفت برنت صادرات نفت ایران", "oil", ["oil", "fx_monetization"], "fa", "IR", "IR:fa"),
+    ("پزشکیان اقتصاد ارز بودجه", "pezeshkian", ["policy", "fx", "fiscal"], "fa", "IR", "IR:fa"),
+    ("اختیار معامله بورس فملی", "options", ["options"], "fa", "IR", "IR:fa"),
+    ("تحریم هرمز کشتیرانی ایران", "geopolitics", ["geopolitical_risk", "oil"], "fa", "IR", "IR:fa"),
+    ("طلا سکه صندوق طلا", "gold", ["gold", "fx"], "fa", "IR", "IR:fa"),
+    ("مدنی‌زاده همتی بانک مرکزی", "policy_actors", ["policy", "monetary"], "fa", "IR", "IR:fa"),
+    # English fallbacks (more reliable from non-IR runners)
+    ("Iran stock market Tehran exchange", "bourse", ["equity"], "en", "US", "US:en"),
+    ("Iran rial free market dollar", "fx", ["fx"], "en", "US", "US:en"),
+    ("Pezeshkian Iran economy oil", "pezeshkian", ["policy", "oil"], "en", "US", "US:en"),
+    ("Iran Hormuz oil blockade exports", "geopolitics", ["oil", "geopolitical_risk"], "en", "US", "US:en"),
+    ("Brent crude oil price", "oil", ["oil"], "en", "US", "US:en"),
+    ("Iran inflation gasoline subsidy", "macro_monetary", ["inflation", "fiscal"], "en", "US", "US:en"),
 ]
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,8 +45,10 @@ MAX_ITEMS = 2500
 
 
 def fetch(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": "BabiMind/1.1 daily-econ-news"})
-    with urllib.request.urlopen(req, timeout=20) as r:
+    req = urllib.request.Request(
+        url, headers={"User-Agent": "Mozilla/5.0 (compatible; BabiMind/1.2 daily-econ-news)"}
+    )
+    with urllib.request.urlopen(req, timeout=25) as r:
         return r.read()
 
 
@@ -57,8 +66,8 @@ def clean(s: str) -> str:
 
 def collect() -> list[dict]:
     rows: list[dict] = []
-    for q, relevance, channels in QUERIES:
-        params = urllib.parse.urlencode({"q": q, "hl": "fa", "gl": "IR", "ceid": "IR:fa"})
+    for q, relevance, channels, hl, gl, ceid in QUERIES:
+        params = urllib.parse.urlencode({"q": q, "hl": hl, "gl": gl, "ceid": ceid})
         url = "https://news.google.com/rss/search?" + params
         try:
             root = ET.fromstring(fetch(url))
@@ -114,11 +123,10 @@ def merge(previous: list, fresh: list[dict]) -> list[dict]:
 
 def write_digest(items: list[dict], new_count: int) -> None:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    # newest first by collected_at when present
     news = [x for x in items if x.get("title") and x.get("id")]
-    news = sorted(news, key=lambda x: x.get("collected_at") or x.get("published_at") or "", reverse=True)[
-        :40
-    ]
+    news = sorted(
+        news, key=lambda x: x.get("collected_at") or x.get("published_at") or "", reverse=True
+    )[:40]
     lines = [
         f"# Daily Economic News Digest — {now}",
         "",
