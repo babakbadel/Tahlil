@@ -1,0 +1,168 @@
+{
+  "as_of": "2026-09-08",
+  "model": "BabiMind",
+  "run_type": "daily_factor_registry_review",
+  "policy": {
+    "missing_is_not_zero": true,
+    "no_synthetic_values": true,
+    "internal_tahlil_priority": true,
+    "correlation_control": "cluster-level aggregation; avoid double counting oil/geopolitics/inflation and copper/AI/supply-demand narratives"
+  },
+  "internal_baseline": {
+    "source": "reports/babimind_pipeline.json",
+    "generated_at": "2026-09-08T13:25:14.702367+00:00",
+    "total_sources": 64,
+    "active_sources": 26,
+    "unavailable_sources": 24,
+    "graph_regime": "bullish",
+    "graph_confidence": 0.75,
+    "correlation_penalty": 0.2382,
+    "note": "This is the prior internal run baseline, not a fresh market signal."
+  },
+  "factor_clusters": [
+    {
+      "cluster": "نفت و کامودیتی",
+      "direction": "bullish_for_energy; mixed_for_equities",
+      "intensity": "high",
+      "freshness": "same_day",
+      "confidence": "medium-high",
+      "evidence": [
+        {"claim": "Brent approached/held near 98-99 USD/bbl amid Middle East supply disruption risk", "source": "Reuters/UOL/Barron's", "date": "2026-09-08"},
+        {"claim": "Copper reached fresh records; LME 3-month copper reported near 14,728 USD/t", "source": "WSJ", "date": "2026-09-08"}
+      ],
+      "market_implication": "Supports commodity exporters and inflation hedges; raises macro tightening and risk-premium risk.",
+      "change_vs_prior": "New external confirmation materially strengthens the commodity impulse relative to the 2026-09-08 internal baseline."
+    },
+    {
+      "cluster": "سیاست و ژئوپلیتیک",
+      "direction": "risk-off",
+      "intensity": "high",
+      "freshness": "same_day",
+      "confidence": "medium",
+      "evidence": [
+        {"claim": "Escalation involving Iran, Saudi energy sites, and Strait of Hormuz disruption risk", "source": "Reuters/UOL/MarketWatch", "date": "2026-09-08"}
+      ],
+      "market_implication": "Higher tail risk, wider risk premium, unstable cross-asset correlations.",
+      "change_vs_prior": "Risk intensity upgraded versus prior internal run because fresh same-day reporting shows continued escalation."
+    },
+    {
+      "cluster": "پول و نرخ بهره",
+      "direction": "bearish_for_duration_assets; mixed overall",
+      "intensity": "medium",
+      "freshness": "same_day",
+      "confidence": "medium",
+      "evidence": [
+        {"claim": "Oil/inflation fears increased ahead of upcoming US inflation and rate decision context", "source": "Barron's/MarketWatch", "date": "2026-09-08"}
+      ],
+      "market_implication": "Tighter-financial-conditions risk; pressure on high-duration equities and leveraged positions.",
+      "change_vs_prior": "Macro tightening risk increased; no confirmed new policy rate decision was found in this run."
+    },
+    {
+      "cluster": "ارز",
+      "direction": "risk-up / rial-negative",
+      "intensity": "medium",
+      "freshness": "stale-to-recent",
+      "confidence": "low-medium",
+      "evidence": [
+        {"claim": "Recent reporting described record-low rial levels and increased crypto usage to bypass sanctions", "source": "The Guardian/FT", "date": "2026-09-02 to 2026-09-08"}
+      ],
+      "market_implication": "Supports nominal pricing of exporters but worsens imported inflation and policy uncertainty.",
+      "change_vs_prior": "No verified same-day internal FX snapshot available in the exposed report; mark current point estimate as unavailable."
+    },
+    {
+      "cluster": "جریان پول و رفتار بازار",
+      "direction": "bullish_but_fragile",
+      "intensity": "medium-high",
+      "freshness": "recent",
+      "confidence": "medium",
+      "evidence": [
+        {"claim": "External market-pulse reporting showed a sharp one-week TEDPIX rise and large daily retail inflow on 2026-09-07", "source": "Sahmino citing Boursenews/Ecoiran/Donya-e-Eqtesad", "date": "2026-09-08"}
+      ],
+      "market_implication": "Risk-on leadership exists, but concentration and queue-driven price movement make breadth/quality confirmation necessary.",
+      "change_vs_prior": "Adds external confirmation to prior bullish graph regime; fragility remains due to possible concentration and incomplete internal breadth snapshot."
+    },
+    {
+      "cluster": "بنیادی و کدال",
+      "direction": "positive_for_fmli thesis; market-wide unavailable",
+      "intensity": "medium",
+      "freshness": "internal prior run",
+      "confidence": "medium-high_for_fmli",
+      "evidence": [
+        {"claim": "Prior internal thesis recorded strong sales/profit growth and copper sensitivity for فملی", "source": "Tahlil reports/babimind_pipeline.json", "date": "2026-09-08 internal baseline"}
+      ],
+      "market_implication": "Supports operating-leverage thesis if subsequent monthly sales and volume remain firm.",
+      "change_vs_prior": "No fresh same-day Codal update independently verified in this automation run; do not upgrade beyond baseline."
+    },
+    {
+      "cluster": "تکنیکال و Price Action",
+      "direction": "bullish_regime; confirmation required",
+      "intensity": "medium",
+      "freshness": "recent",
+      "confidence": "medium",
+      "evidence": [
+        {"claim": "Reported index advance was strong but associated with queue mechanics and lower filled turnover than prior session", "source": "Sahmino", "date": "2026-09-08"}
+      ],
+      "market_implication": "Breakout continuation is possible, but failure with expanding volume would invalidate the move.",
+      "change_vs_prior": "Regime remains bullish; quality of advance is flagged as fragile rather than upgraded unconditionally."
+    },
+    {
+      "cluster": "آپشن",
+      "direction": "mixed / data-insufficient",
+      "intensity": "unknown",
+      "freshness": "unavailable",
+      "confidence": "low",
+      "evidence": [],
+      "market_implication": "No current chain-level IV/Greeks/OI/liquidity snapshot was exposed in this run; no option signal is issued.",
+      "change_vs_prior": "No verified change."
+    },
+    {
+      "cluster": "Game Theory / Decision / System Dynamics",
+      "direction": "escalation equilibrium with asymmetric tail risk",
+      "intensity": "high",
+      "freshness": "same_day",
+      "confidence": "medium",
+      "evidence": [
+        {"claim": "Current conflict dynamics increase incentives for retaliatory signaling while raising economic costs of prolonged disruption", "source": "Reuters/UOL/MarketWatch", "date": "2026-09-08"}
+      ],
+      "market_implication": "Base case should include persistent volatility; downside tail remains nonlinear if shipping or energy infrastructure disruption broadens.",
+      "change_vs_prior": "Escalation branch probability should be higher than prior internal neutral assumptions; exact probabilities intentionally not assigned without calibrated model output."
+    },
+    {
+      "cluster": "اقتصاد کلان / بودجه",
+      "direction": "mixed-to-negative",
+      "intensity": "medium",
+      "freshness": "partially unavailable",
+      "confidence": "low-medium",
+      "evidence": [
+        {"claim": "Energy shock raises inflation risk while fresh budget/fiscal execution data were not verified in this run", "source": "MarketWatch/Barron's plus Tahlil source-health baseline", "date": "2026-09-08"}
+      ],
+      "market_implication": "Do not infer budget relief or fiscal improvement; mark as unconfirmed.",
+      "change_vs_prior": "No verified budget-data update."
+    }
+  ],
+  "market_regime": {
+    "label": "risk-on equity impulse under macro/geopolitical stress",
+    "confidence": "medium",
+    "drivers": ["copper strength", "oil/geopolitical shock", "recent domestic equity inflow", "inflation/rate uncertainty"],
+    "invalidators": ["fresh escalation causing broad market halt/risk-off", "loss of domestic equity breadth and real-money flow", "copper reversal with weaker FMLI operating data"]
+  },
+  "scenarios": [
+    {"name": "base", "description": "Commodity strength persists, domestic equities remain supported but volatile; leadership is selective.", "probability": "not numerically assigned"},
+    {"name": "bull", "description": "Copper remains strong, geopolitical risk does not disrupt domestic market functioning, and equity flow broadens.", "probability": "not numerically assigned"},
+    {"name": "bear", "description": "Conflict escalates, oil shock feeds tighter financial conditions, and domestic breadth/flow deteriorates.", "probability": "not numerically assigned"}
+  ],
+  "missing_or_unverified": [
+    "Fresh internal Tahlil market-watch snapshot for the current session",
+    "Current option-chain Greeks/IV/OI/liquidity",
+    "Same-day Codal releases across tracked symbols",
+    "Verified same-day Iran FX spot and rate data",
+    "Fresh budget execution and policy-rate decision data"
+  ],
+  "sources": [
+    {"name": "Reuters", "url": "https://www.reuters.com/business/energy/oil-rises-risks-prolonged-mideast-conflict-heighten-supply-worries-2026-09-08/", "date": "2026-09-08"},
+    {"name": "WSJ", "url": "https://www.wsj.com/finance/commodities-futures/copper-reaches-new-highs-on-u-s-tariff-fears-supply-challenges-93a99fb0", "date": "2026-09-08"},
+    {"name": "UOL", "url": "https://economia.uol.com.br/cotacoes/noticias/redacao/2026/09/08/bolsas-mundiais---8-de-setembro-de-2026.ghtm", "date": "2026-09-08"},
+    {"name": "Sahmino", "url": "https://sahmino.com/en/articles/in-a-week-the-tehran-stock-exchange-index-rose-359000-points-51-percent-of-that-ground-was-covered-in-a-single-session-iran-market-pulse-tuesday-september-8-2026", "date": "2026-09-08"},
+    {"name": "Tahlil internal baseline", "path": "reports/babimind_pipeline.json", "generated_at": "2026-09-08T13:25:14.702367+00:00"}
+  ]
+}
