@@ -1,0 +1,18 @@
+{
+  "comment": "Seed edges — load via a future script; not auto-applied",
+  "nodes": [
+    {"node_id": "usd_free", "type": "fx", "name": "دلار آزاد", "confidence": 0.9},
+    {"node_id": "copper", "type": "commodity", "name": "مس جهانی", "confidence": 0.88},
+    {"node_id": "femli", "type": "asset", "name": "فملی", "confidence": 0.94},
+    {"node_id": "political_risk", "type": "factor", "name": "ریسک سیاسی", "confidence": 0.72},
+    {"node_id": "real_inflow", "type": "flow", "name": "ورود نقدینگی حقیقی", "confidence": 0.8},
+    {"node_id": "market_index", "type": "asset", "name": "شاخص کل", "confidence": 0.95}
+  ],
+  "edges": [
+    {"edge_id": "usd_free__causes__femli", "source_id": "usd_free", "target_id": "femli", "relation": "causes", "direction": "positive", "weight": 0.84, "confidence": 0.91, "lag_days": 5, "independence_factor": 0.75},
+    {"edge_id": "copper__transmits_to__femli", "source_id": "copper", "target_id": "femli", "relation": "transmits_to", "direction": "positive", "weight": 0.90, "confidence": 0.88, "lag_days": 10, "independence_factor": 0.85},
+    {"edge_id": "political_risk__influences__femli", "source_id": "political_risk", "target_id": "femli", "relation": "influences", "direction": "negative", "weight": 0.55, "confidence": 0.72, "lag_days": 2, "independence_factor": 0.7},
+    {"edge_id": "political_risk__influences__usd_free", "source_id": "political_risk", "target_id": "usd_free", "relation": "influences", "direction": "positive", "weight": 0.65, "confidence": 0.7, "lag_days": 1, "independence_factor": 0.8},
+    {"edge_id": "real_inflow__reacts_to__market_index", "source_id": "real_inflow", "target_id": "market_index", "relation": "reacts_to", "direction": "positive", "weight": 0.7, "confidence": 0.8, "lag_days": 0, "independence_factor": 0.9}
+  ]
+}
