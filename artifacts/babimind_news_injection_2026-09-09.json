@@ -1,0 +1,73 @@
+{
+  "model": "BabiMind",
+  "component": "news_injection",
+  "as_of": "2026-09-09T03:50:00+00:00",
+  "policy": "external_evidence_only",
+  "events": [
+    {
+      "id": "pez-cbi-coord-1405-06-03",
+      "type": "policy",
+      "actors": ["pezeshkian", "madani_zadeh", "hemmati"],
+      "summary": "هماهنگی بانک مرکزی و دولت برای ثبات ارزی و مهار انتظارات",
+      "domains": ["fx", "monetary", "inflation_expectations"],
+      "market_effect": "mixed",
+      "confidence": 0.7
+    },
+    {
+      "id": "pez-mou-reciprocal",
+      "type": "geopolitics",
+      "actors": ["pezeshkian", "us"],
+      "summary": "تعهد متقابل در صورت بازگشت آمریکا به یادداشت تفاهم",
+      "domains": ["geopolitical_risk", "fx", "oil"],
+      "market_effect": "option_value_deescalation",
+      "confidence": 0.6
+    },
+    {
+      "id": "trade-drop-25-35",
+      "type": "macro",
+      "actors": ["pezeshkian"],
+      "summary": "افت تجارت ۲۵–۳۵٪ تحت تحریم و محاصره",
+      "domains": ["fiscal", "fx", "exports"],
+      "market_effect": "negative",
+      "confidence": 0.75
+    },
+    {
+      "id": "oil-blockade-stockpile",
+      "type": "oil",
+      "summary": "فشار بلوکه صادرات و کاهش موجودی روی آب",
+      "domains": ["oil", "fx_monetization"],
+      "market_effect": "negative_for_accessible_fx",
+      "confidence": 0.7
+    },
+    {
+      "id": "usd-free-near-229k",
+      "type": "fx",
+      "summary": "دلار آزاد حوالی ۲۲۹ هزار تومان؛ شکاف رسمی-آزاد بزرگ",
+      "domains": ["fx_regime", "inflation_expectations"],
+      "market_effect": "negative_pure_equity_risk_on",
+      "confidence": 0.75
+    },
+    {
+      "id": "bourse-rally-external",
+      "type": "equity",
+      "summary": "گزارش‌های خارجی از رشد شاخص تا کانال ۷ میلیون؛ تأیید داخلی لازم",
+      "domains": ["market", "flow"],
+      "market_effect": "unverified_bullish_external",
+      "confidence": 0.35
+    },
+    {
+      "id": "options-fmli-chain-active",
+      "type": "options",
+      "summary": "زنجیره اختیار فملی فعال؛ ranking فقط expiry>now و داده داخلی",
+      "domains": ["options"],
+      "market_effect": "neutral_until_live_chain",
+      "confidence": 0.5
+    }
+  ],
+  "scenario_nudge": {
+    "fx_control_path": 0.45,
+    "limited_deescalation": 0.3,
+    "emergency_tightening": 0.25
+  },
+  "missing_data_policy": "MISSING_IS_NOT_ZERO"
+}
