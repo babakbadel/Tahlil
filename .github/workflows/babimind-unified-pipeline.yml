@@ -55,8 +55,11 @@ jobs:
           python scripts/babimind_source_health.py
           python scripts/babimind_source_confidence.py || true
 
-      - name: Collect daily news and Pezeshkian evidence
-        run: python scripts/babimind_pezeshkian_news.py
+      - name: Collect daily economic news and Pezeshkian evidence
+        continue-on-error: true
+        run: |
+          python scripts/babimind_daily_economic_news.py
+          python scripts/babimind_pezeshkian_news.py
 
       - name: Global and macro layer
         continue-on-error: true
@@ -123,9 +126,11 @@ jobs:
               'data/raw/marketwatch_plus_snapshot.json',
               'data/raw/tse_option_snapshot.json',
               'artifacts/babimind_global_market_snapshot.json',
+              'artifacts/babimind_daily_economic_news.json',
               'artifacts/babimind_pezeshkian_news.json',
+              'memory/news-daily-latest.md',
           ]
-          parts = ['You are BabiMind, the central financial and economic intelligence model for Tahlil. Use current repository intelligence as primary evidence and memory only for historical calibration. Do not invent missing observations, Greeks or timestamps. Separate evidence, inference and uncertainty. Integrate Iran stocks, options, gold, dollar, macroeconomics, political economy, decision theory, game theory, dynamic systems, graph intelligence, forecasting and factor signals. Return valid JSON with keys: regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, option_implications, confidence, data_gaps.']
+          parts = ['You are BabiMind, the central financial and economic intelligence model for Tahlil. Use current repository intelligence as primary evidence and memory only for historical calibration. Do not invent missing observations, Greeks or timestamps. Separate evidence, inference and uncertainty. Integrate Iran stocks, options, gold, dollar, macroeconomics, political economy, decision theory, game theory, dynamic systems, graph intelligence, forecasting and factor signals. News is evidence not ground truth. Return valid JSON with keys: regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, option_implications, confidence, data_gaps.']
           for f in files:
               p=Path(f)
               if p.exists():
@@ -151,5 +156,5 @@ jobs:
           PY
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ graphify-out/ data/raw/ artifacts/ babimind_openrouter_prompt.txt 2>/dev/null || true
+          git add reports/ graphify-out/ data/raw/ artifacts/ memory/news-daily-latest.md babimind_openrouter_prompt.txt 2>/dev/null || true
           git diff --cached --quiet || (git commit -m 'chore: refresh BabiMind daily brain' && git push origin HEAD:main)
