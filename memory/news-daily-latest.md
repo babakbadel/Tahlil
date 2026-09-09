@@ -1,35 +1,25 @@
-# Daily Economic News Digest — 2026-09-09 04:05 UTC
+# Daily Economic News Digest — 2026-09-09 04:14 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> Items collected this run: **120** (trimmed from 492 for storage)
+> New items this run: **457** · Total stored: **456**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro | Iran appoints new central bank governor after record currency fall and mass protests | BNN Bloomberg | recent |
-| fx | Inside Iran’s maze of multiple exchange rates | Iran International | recent |
-| pezeshkian | Iran delegates import powers as US war threats keep economy unstable | Al Jazeera | recent |
-| bourse | Tehran Stock Exchange Surges; Index Tops 6.3 Million Points | ISNA | recent |
-| fx | One US dollar now costs ~2 million rials in Iran | Al Jazeera | recent |
-| pezeshkian | Iran experiencing worst conditions of economic warfare: Pezeshkian | Anadolu | recent |
-| pezeshkian | US Will Achieve Nothing With Economic Pressure, Says Iran’s President | Channels TV | recent |
-| geopolitics | Energy secretary says U.S. has ended Iran's ability to close Strait of Hormuz | CNBC | recent |
-| oil | Blockade succeeds where sanctions failed as Iran oil exports stall | Reuters | recent |
-| oil | Trump’s Blockade Is Zeroing Out Iran’s Oil Exports | FDD | recent |
-| bourse | Controlled reopening ends Iran’s lengthy stock market shutdown | Al Jazeera | recent |
-| fx | Why Is the Iranian Rial So Weak? 6 Key Reasons Explained | EBC | recent |
+| macro_monetary | Iran Hikes Gasoline Price Again As Consumption Hits Record 145 Million Litres A Day | The Sunday Guardian | Tue, 08 Sep 2026 |
+| macro_monetary | Iran doubles gasoline price for heavy users amid war, economic strain | Moneycontrol | Mon, 07 Sep 2026 |
+| macro_monetary | Iran increases gasoline price for its heaviest consumers as economy struggles | NBC News | Tue, 08 Sep 2026 |
+| macro_monetary | As fuel prices rise again, Iran’s government urges citizens to cut back | Al Jazeera | Tue, 08 Sep 2026 |
+| oil | Brent Crude Nears $100 Again After Six Weeks As Iran-Oman Hormuz Deal Fails To Ease Supply Fears | NDTV Profit | Tue, 08 Sep 2026 |
+| oil | Oil settles up more than 2% after Trump threatens countries supporting Iran | Reuters | recent |
+| oil | Brent crude remains above $90 as Hormuz operations remain disrupted | Times of India | recent |
+| oil | Oil prices climb as Middle East war flares | Free Malaysia Today | Wed, 09 Sep 2026 |
 
-## Counts by relevance (this batch)
-- bourse: 37
-- geopolitics: 25
-- fx: 23
-- oil: 19
-- pezeshkian: 9
-- macro: 7
+## Themes (this run sample)
+- macro_monetary: fuel subsidy stress, inflation channels
+- oil: Brent near/above $90–100, Hormuz risk premium
 
 ## Policy
-- Map events to factors with confidence/freshness before scoring.
-- Cross-check Tier-A sources for market-moving claims.
-- Options: never rank expired contracts from headlines.
-- Full JSON: `artifacts/babimind_daily_economic_news.json`
+- Map to factors with confidence/freshness before scoring.
+- News ≠ implemented policy or TSE price truth.
 
-NEWS_DIGEST | 2026-09-09 04:05 UTC | 120 items
+NEWS_DIGEST | 2026-09-09 04:14 UTC | 457 new | 456 total

@@ -1,0 +1,18 @@
+{
+  "as_of": "2026-09-09T04:14:00Z",
+  "policy": "evidence_only",
+  "daily_fetched": 457,
+  "daily_stored": 456,
+  "pezeshkian_stored": 100,
+  "themes": {"macro_monetary": 24, "oil": 36},
+  "key_signals": [
+    {"id": "fuel_price_hike", "domain": ["fiscal", "inflation"], "summary": "Gasoline price hikes for heavy users; high consumption", "confidence": 0.7},
+    {"id": "brent_near_100", "domain": ["oil", "fx_monetization"], "summary": "Brent narratives near 90-100 with Hormuz risk", "confidence": 0.75},
+    {"id": "monetization_gap", "domain": ["fx", "oil"], "summary": "High oil price does not equal accessible FX under blockade", "confidence": 0.7}
+  ],
+  "scenario_nudge": {
+    "fx_control_path": 0.45,
+    "limited_deescalation": 0.28,
+    "emergency_tightening": 0.27
+  }
+}
