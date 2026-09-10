@@ -4,25 +4,21 @@
   "model": "openrouter/free",
   "analysis": {
     "regime": {
-      "overall": "bullish",
-      "confidence": 0.75,
+      "label": "bullish",
       "evidence": [
         "graph_intelligence.graph_regime: bullish",
         "graph_intelligence.graph_score: 1.0",
         "graph_intelligence.graph_confidence: 0.75",
-        "symbol_thesis.فملی.scenario_weights.bull: 0.45"
+        "symbol_thesis.فملی.scenario_weights.bull: 0.45",
+        "factor_coverage: 285 available factors, including metals_mining and precious_metals clusters",
+        "memory historical runs consistently show bullish bias for فملی"
       ],
-      "inference": [
-        "Bullish regime driven by copper price sensitivity, volume-led expansion, and risk-on market sentiment"
-      ],
-      "uncertainty": [
-        "Real-time Iranian market data unavailable",
-        "Option chain data missing (IV/Greeks not available)"
-      ]
+      "inference": "The regime is bullish, driven by copper price sensitivity, volume-led expansion, and risk-on market sentiment. However, the absence of real-time Iranian market data and option chain information limits the ability to confirm the strength and sustainability of this regime.",
+      "uncertainty": "Real-time Iranian market data unavailable; option chain data missing; many TSE sources timed out; global market snapshot shows 'pending_upstream_data'.",
+      "confidence": 0.7
     },
-    "scenarios": [
-      {
-        "label": "bull",
+    "scenarios": {
+      "bull": {
         "probability": 0.45,
         "target_price_rial": 23000,
         "time_horizon": "Q2-Q3 1405",
@@ -43,10 +39,10 @@
           "volume falls while revenue is supported only by price",
           "copper price breaks down materially and remains weak",
           "stock leadership disappears while market breadth remains healthy"
-        ]
+        ],
+        "source": "memory and symbol thesis"
       },
-      {
-        "label": "base",
+      "base": {
         "probability": 0.4,
         "target_price_rial": 21500,
         "time_horizon": "Q2 1405",
@@ -59,10 +55,10 @@
           "sales growth slowdown",
           "increased competition",
           "currency volatility"
-        ]
+        ],
+        "source": "memory and symbol thesis"
       },
-      {
-        "label": "bear",
+      "bear": {
         "probability": 0.15,
         "target_price_rial": 18800,
         "time_horizon": "Q1-Q2 1405",
@@ -75,40 +71,49 @@
           "global risk-off spread",
           "commodity cycle peak",
           "operational execution issues"
-        ]
+        ],
+        "source": "memory and symbol thesis"
       }
-    ],
+    },
     "game_theory": {
-      "description": "Market participants face a coordination game where fund flows and option convexity create positive feedback loops: expectations of higher copper prices drive call buying, which amplifies price moves, attracting further momentum traders. Leader-follower dynamics emerge as commodity leaders like FMLI draw inflows, while laggards suffer from reduced liquidity. Sanctions and geopolitical risk introduce a strategic layer where policymakers' actions (e.g., gasoline price hikes) affect market sentiment and option pricing.",
+      "description": "The primary game is between Iran and the US/EU over sanctions and oil exports. Iran's strategy is to maintain oil exports despite sanctions, while the US aims to choke revenue. This is a repeated prisoner's dilemma with incomplete information.",
       "evidence": [
-        "symbol_thesis.فملی.event_chain",
-        "symbol_thesis.فملی.hidden_signal",
-        "graph_intelligence.graph_top_drivers"
+        "Pezeshkian news: 'US sanctions and naval blockade hurt Iran’s economy'",
+        "CNBC: 'Iran trade falls as Supreme Leader Khamenei urges less reliance on the U.S. dollar'",
+        "Al Jazeera: 'Pezeshkian calls for unity as US ramps up economic pressure'",
+        "Oil prices remain above $100 despite sanctions, indicating limited effectiveness"
       ],
-      "uncertainty": [
-        "Lack of real-time option Greeks prevents precise equilibrium calculation"
-      ]
+      "inference": "Iran is trying to diversify trade partners (e.g., Russia, China) and reduce dollar reliance. The US is escalating economic pressure. The equilibrium is unstable; a breakthrough requires negotiations, but trust is low.",
+      "uncertainty": "The outcome depends on the political will of both sides and the resilience of Iran's economy."
     },
     "dynamic_system": {
-      "description": "A dynamic feedback loop links copper price → realized sales price/margins → FMLI earnings expectations → fund flow rotation → price/volume confirmation → option convexity → further price pressure. Volume-quality feedback reinforces the loop when sales growth is volume-led. Disruptions (copper price breakdown, volume decay) act as negative feedback or regime shift triggers.",
-      "evidence": [
-        "symbol_thesis.فملی.event_chain",
-        "symbol_thesis.فملی.hidden_signal",
-        "graph_intelligence.graph_top_drivers"
+      "feedback_loops": [
+        "Higher copper price -> higher FMLI earnings expectations -> higher stock price -> positive feedback via fund flows",
+        "Iranian rial depreciation -> inflation -> potential social unrest -> policy response -> market volatility"
       ],
-      "uncertainty": [
-        "Missing real-time price and volume data prevents precise calibration of loop gains"
-      ]
+      "regime_dynamics": "The system is in a bullish regime but with high sensitivity to copper prices and geopolitical events. The lack of real-time data makes it difficult to model the precise dynamics.",
+      "evidence": [
+        "graph_intelligence shows bullish drivers",
+        "factor_rotation indicates metals_mining cluster with source_weight 0.25",
+        "news reports of oil price fluctuations and sanctions"
+      ],
+      "uncertainty": "Missing real-time price and volume data for Iranian equities; option chain data absent; global market snapshot pending."
     },
     "political_economy": {
-      "description": "Iran's macroeconomy is shaped by US sanctions, gasoline price adjustments, and geopolitical tensions. President Pezeshkian's calls for unity and economic pressure mitigation coexist with reports of gasoline price hikes and oil prices near $100, reflecting inflationary pressures and war-related fiscal strain. The political economy features a tension between sanction-induced scarcity and domestic policy responses (fuel subsidies, price adjustments).",
-      "evidence": [
-        "news digest macro_monetary items on gasoline price hikes, oil prices near $100",
-        "pezeshkian news items on economic pressure, unity calls"
+      "key_issues": [
+        "US sanctions and economic pressure",
+        "Gasoline price hikes and fuel shortages",
+        "Iran's push for self-reliance and reduced dollar dependence",
+        "Internal political cohesion under Pezeshkian"
       ],
-      "uncertainty": [
-        "Policy implementation lag and unofficial market reactions not directly observed"
-      ]
+      "evidence": [
+        "Multiple news articles on Pezeshkian admitting economic difficulties",
+        "Reports of gasoline price doubling for heavy users",
+        "Supreme Leader Khamenei urging less reliance on US dollar",
+        "Iran International: 'Pezeshkian hints at gasoline price increase as Iran faces supply pressure'"
+      ],
+      "inference": "The political economy is under severe stress, with the government attempting to manage public discontent while resisting external pressure. This creates a volatile environment for financial markets.",
+      "uncertainty": "The exact impact of sanctions on trade and oil revenues is unclear due to data limitations."
     },
     "market_implications": {
       "sector_rotation": {
@@ -149,30 +154,26 @@
         "memory historical market_implications",
         "symbol_thesis.فملی.price_map_rial"
       ],
-      "uncertainty": [
-        "Lack of real-time market breadth data"
-      ]
+      "uncertainty": "Lack of real-time market breadth data; option chain data missing."
     },
     "option_implications": {
-      "guidance": "Use options only when spot confirms direction; prioritize delta, IV, theta, open-interest concentration and spread liquidity; avoid buying high-IV calls solely because copper is bullish. Current option chain data unavailable (IV/Greeks missing), limiting precise strategy.",
-      "evidence": [
-        "symbol_thesis.فملی.strategy.option",
-        "option_market_watch_summary.data_quality"
-      ],
-      "uncertainty": [
-        "No real-time option data prevents Greek/IV-based ranking"
-      ]
+      "status": "data_unavailable",
+      "details": "Option market watch summary shows 0 records; no IV or Greeks available. TSE option source status is error. Therefore, no quantitative option strategy can be recommended.",
+      "potential_direction": "If volatility increases, call options on فملی could provide convexity, but without IV data, the risk/reward cannot be assessed.",
+      "caution": "Do not trade options based solely on headlines; wait for real-time data."
     },
     "confidence": {
-      "overall_confidence": 0.75,
-      "data_quality_score": 0.65,
-      "model_reliability": 0.8,
-      "external_validation": 0.7,
+      "overall_confidence": 0.68,
+      "data_quality_score": 0.6,
+      "model_reliability": 0.75,
+      "external_validation": 0.65,
       "factors_adjusting_confidence": [
         "limited_iranian_market_data_availability",
         "high_growth_metrics_supporting_thesis",
         "technical_accumulation_patterns",
-        "positive_graph_intelligence_signals"
+        "positive_graph_intelligence_signals",
+        "missing_option_chain_data",
+        "geopolitical uncertainty"
       ]
     },
     "data_gaps": {
@@ -180,7 +181,8 @@
         "real_time_iranian_market_data",
         "comprehensive_option_chain_data",
         "detailed_copper_price_forecasts",
-        "institutional_flow_data"
+        "institutional_flow_data",
+        "real_time_fx_rates"
       ],
       "impact_assessment": {
         "short_term_impact": "moderate_uncertainty_in_entry_timing",
