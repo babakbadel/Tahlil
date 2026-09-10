@@ -1,7 +1,11 @@
 {
-  "source": "sm-sokout/tse-option",
-  "upstream": "https://github.com/sm-sokout/tse-option.git",
-  "ref": "master",
-  "commit": "4731be596b139c9328170762cefbbd0cd440b1d8",
-  "status": "error"
+  "status": "all_providers_failed",
+  "ok_count": 0,
+  "provider_count": 4,
+  "report": [
+    "algotik_tse: partial/empty (status=error)",
+    "5j9/tsetmc: missing",
+    "pytsetmc-api: partial/empty (status=error)",
+    "TSETMC_OPTION API: partial/empty (status=error)"
+  ]
 }
