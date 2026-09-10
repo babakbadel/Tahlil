@@ -5,13 +5,16 @@ on:
     - cron: '15 7 */4 * *'
   workflow_dispatch:
 
+env:
+  AGENT_REACH_REF: da5044d26fc6adddb6554d5679c94ac22e76e428
+
 permissions:
   contents: write
 
 jobs:
   research:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
@@ -19,15 +22,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+
+      - name: Install pinned Agent Reach
+        continue-on-error: true
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "git+https://github.com/Panniantong/Agent-Reach.git@${AGENT_REACH_REF}"
+
+      - name: Agent Reach health check
+        continue-on-error: true
+        run: python scripts/collect_agent_reach.py
+
       - name: Factor discovery and coverage
         continue-on-error: true
         run: |
           if [ -f scripts/babimind_factor_discovery.py ]; then python scripts/babimind_factor_discovery.py; fi
           if [ -f scripts/babimind_factor_coverage.py ]; then python scripts/babimind_factor_coverage.py; fi
+
       - name: Commit research outputs
         if: always()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ data/ 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m 'chore: refresh BabiMind research and factors' && git push origin HEAD:main)
+          git add reports/ data/ artifacts/agent_reach/ config/agent_reach.yml scripts/collect_agent_reach.py 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m 'chore: refresh BabiMind research and Agent Reach health' && git push origin HEAD:main)
