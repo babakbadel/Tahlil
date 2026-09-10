@@ -1,0 +1,29 @@
+# Core
+requests>=2.32,<3
+urllib3>=2.0
+
+# Realtime API
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+
+# Data / market (FinPy-TSE + alternative TSETMC providers)
+finpy-tse==1.2.10
+openpyxl>=3.1,<4
+pandas>=2.2
+numpy>=1.26
+algotik-tse>=1.1.1
+polars>=1.0
+aiohttp>=3.10
+
+# Config / utils
+pyyaml>=6.0
+python-dateutil>=2.9
+
+# Testing
+pytest>=8.0
+pytest-asyncio>=0.24
+anyio>=4.0
+
+# Optional LLM / graph (install when needed)
+# openai
+# graphifyy

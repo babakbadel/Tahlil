@@ -35,7 +35,9 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
           python -m pip install --upgrade graphifyy
-          python -m pip install -r requirements-finpy-tse.txt
+          # Keep legacy partial files as optional extras (already covered by root requirements.txt)
+          if [ -f requirements-finpy-tse.txt ]; then python -m pip install -r requirements-finpy-tse.txt || true; fi
+          if [ -f requirements-market-data.txt ]; then python -m pip install -r requirements-market-data.txt || true; fi
 
       - name: Collect current market data
         continue-on-error: true
