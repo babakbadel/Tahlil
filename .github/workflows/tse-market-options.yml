@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - '.github/workflows/tse-market-options.yml'
-      - 'scripts/collect_tse_option_chain.py'
       - 'scripts/ingest_tse_option.py'
       - 'scripts/rank_options_babimind.py'
       - 'scripts/collect_algotik_tse.py'
@@ -18,21 +17,15 @@ on:
     inputs:
       symbol:
         description: 'Underlying symbol'
-        required: true
+        required: false
         default: 'فملی'
         type: string
-      include_greeks:
-        description: 'Try IV/BSM/Leverage, then fall back to raw chain'
-        required: true
-        default: true
-        type: boolean
 
 permissions:
   contents: write
 
 env:
-  TSE_OPTION_TIMEOUT_SECONDS: '60'
-  OPTION_TRADING_DAYS: '100'
+  ALGOTIK_FETCH_OI: 'true'
 
 jobs:
   market-options:
@@ -61,12 +54,6 @@ jobs:
       - name: Collect alternative provider - TSETMC_OPTION API
         continue-on-error: true
         run: python scripts/collect_tsetmc_option_api.py
-      - name: Collect primary option chain - tse-option
-        continue-on-error: true
-        env:
-          OPTION_SYMBOL: ${{ inputs.symbol || 'فملی' }}
-          OPTION_INCLUDE_GREEKS: ${{ inputs.include_greeks || 'true' }}
-        run: python scripts/collect_tse_option_chain.py
       - name: Validate provider snapshots
         run: |
           python - <<'PY'
@@ -76,7 +63,6 @@ jobs:
               'data/raw/algotik_tse_snapshot.json': 'algotik_tse',
               'data/raw/tsetmc_async_snapshot.json': '5j9/tsetmc',
               'data/raw/tsetmc_option_api_snapshot.json': 'TSETMC_OPTION API',
-              'data/raw/tse_option_chain.json': 'tse-option',
           }
           ok_count = 0
           report = []
@@ -99,22 +85,11 @@ jobs:
               else:
                   report.append(f'{label}: partial/empty (status={status})')
           print('SUMMARY:', '; '.join(report))
-          # Fail-soft: at least one usable provider is enough; missing primary is allowed.
-          if ok_count == 0:
-              # Still write a status file so downstream knows the gap
-              Path('reports').mkdir(parents=True, exist_ok=True)
-              Path('reports/tse_option_source_status.json').write_text(
-                  json.dumps({'status': 'all_providers_failed', 'report': report}, ensure_ascii=False, indent=2),
-                  encoding='utf-8'
-              )
-              print('WARNING: no provider returned valid rows; continuing fail-soft')
-          else:
-              Path('reports').mkdir(parents=True, exist_ok=True)
-              Path('reports/tse_option_source_status.json').write_text(
-                  json.dumps({'status': 'partial_ok' if ok_count < len(checks) else 'ok', 'ok_count': ok_count, 'report': report}, ensure_ascii=False, indent=2),
-                  encoding='utf-8'
-              )
-          PY
+          Path('reports').mkdir(parents=True, exist_ok=True)
+          Path('reports/tse_option_source_status.json').write_text(
+              json.dumps({'status': 'ok' if ok_count == len(checks) else ('partial_ok' if ok_count else 'all_providers_failed'), 'ok_count': ok_count, 'provider_count': len(checks), 'report': report}, ensure_ascii=False, indent=2),
+              encoding='utf-8'
+          )
       - name: Ingest and rank options
         continue-on-error: true
         run: |
