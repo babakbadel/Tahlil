@@ -10,6 +10,8 @@ on:
       - 'scripts/collect_tsetmc_async.py'
       - 'scripts/collect_tsetmc_option_api.py'
       - 'scripts/collect_pytsetmc_api.py'
+      - 'scripts/collect_tsetmc_relay.py'
+      - 'relay/**'
       - 'requirements-market-data.txt'
       - 'requirements.txt'
   schedule:
@@ -21,6 +23,7 @@ permissions:
 
 env:
   ALGOTIK_FETCH_OI: 'true'
+  TSETMC_RELAY_URL: ${{ secrets.TSETMC_RELAY_URL }}
 
 jobs:
   market-options:
@@ -37,7 +40,9 @@ jobs:
           if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
           python -m pip install pandas numpy scipy requests jalali_pandas
           if [ -f requirements-market-data.txt ]; then python -m pip install -r requirements-market-data.txt; fi
-          python -m pip install "git+https://github.com/mshojaei77/pytsetmc-api.git@main"
+      - name: Collect primary Iran-side relay
+        continue-on-error: true
+        run: python scripts/collect_tsetmc_relay.py
       - name: Collect alternative provider - algotik_tse
         continue-on-error: true
         env:
@@ -59,6 +64,7 @@ jobs:
           import json
           from pathlib import Path
           checks = {
+              'data/raw/tsetmc_relay_snapshot.json': 'Iran-side relay',
               'data/raw/algotik_tse_snapshot.json': 'algotik_tse',
               'data/raw/tsetmc_async_snapshot.json': '5j9/tsetmc',
               'data/raw/pytsetmc_market_snapshot.json': 'pytsetmc-api',
@@ -77,7 +83,9 @@ jobs:
                   report.append(f'{label}: invalid json ({e})')
                   continue
               status = d.get('status')
-              if label == 'pytsetmc-api':
+              if label == 'Iran-side relay':
+                  rows = d.get('market_watch') or d.get('options') or []
+              elif label == 'pytsetmc-api':
                   rows = d.get('market_watch') or []
               else:
                   rows = d.get('rows') or d.get('data') or []
