@@ -1,6 +1,12 @@
 name: TSE Market and Options Live
 
 on:
+  push:
+    paths:
+      - '.github/workflows/tse-market-options.yml'
+      - 'scripts/collect_tse_option_chain.py'
+      - 'scripts/ingest_tse_option.py'
+      - 'scripts/rank_options_babimind.py'
   schedule:
     - cron: '*/30 5-9 * * 6,0,1,2,3'
   workflow_dispatch:
@@ -11,7 +17,7 @@ on:
         default: 'فملی'
         type: string
       include_greeks:
-        description: 'Calculate IV/BSM/Leverage where supported'
+        description: 'Try IV/BSM/Leverage, then fall back to raw chain'
         required: true
         default: true
         type: boolean
@@ -19,10 +25,14 @@ on:
 permissions:
   contents: write
 
+env:
+  TSE_OPTION_TIMEOUT_SECONDS: '60'
+  OPTION_TRADING_DAYS: '100'
+
 jobs:
   market-options:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with: {fetch-depth: 0}
@@ -35,6 +45,7 @@ jobs:
           python -m pip install -r requirements-finpy-tse.txt
       - name: Install tse-option
         run: |
+          rm -rf .cache/tse-option
           git clone --depth 1 --branch master https://github.com/sm-sokout/tse-option.git .cache/tse-option
           python -m pip install -e .cache/tse-option
       - name: Collect market data
@@ -48,6 +59,18 @@ jobs:
           OPTION_SYMBOL: ${{ inputs.symbol || 'فملی' }}
           OPTION_INCLUDE_GREEKS: ${{ inputs.include_greeks || 'true' }}
         run: python scripts/collect_tse_option_chain.py
+      - name: Validate option snapshot
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('data/raw/tse_option_chain.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          rows = d.get('rows') or d.get('data') or []
+          if d.get('status') != 'ok' or not rows:
+              raise SystemExit(f"Invalid option snapshot: status={d.get('status')} rows={len(rows)} error={d.get('error','')}")
+          print(f"VALID option snapshot: {len(rows)} rows; mode={d.get('mode')}")
+          PY
       - name: Ingest and rank options
         run: |
           python scripts/ingest_option_market_watch.py
@@ -59,6 +82,6 @@ jobs:
       - name: Commit outputs
         run: |
           git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/raw/ reports/options_babimind* reports/marketwatch_plus_summary.json 2>/dev/null || true
+          git config user.email '41898282+users.noreply.github.com'
+          git add data/raw/ reports/options_babimind* reports/marketwatch_plus_summary.json reports/tse_option_source_status.json 2>/dev/null || true
           git diff --cached --quiet || (git commit -m 'data: refresh TSE market and option intelligence' && git push origin HEAD:main)
