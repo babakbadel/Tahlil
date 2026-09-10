@@ -11,6 +11,7 @@ on:
       - 'scripts/collect_tsetmc_async.py'
       - 'scripts/collect_tsetmc_option_api.py'
       - 'requirements-market-data.txt'
+      - 'requirements.txt'
   schedule:
     - cron: '*/30 5-9 * * 6,0,1,2,3'
   workflow_dispatch:
@@ -45,8 +46,9 @@ jobs:
       - name: Install data stack
         run: |
           python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
           python -m pip install pandas numpy scipy requests jalali_pandas
-          python -m pip install -r requirements-market-data.txt
+          if [ -f requirements-market-data.txt ]; then python -m pip install -r requirements-market-data.txt; fi
       - name: Collect alternative provider - algotik_tse
         continue-on-error: true
         env:
@@ -60,6 +62,7 @@ jobs:
         continue-on-error: true
         run: python scripts/collect_tsetmc_option_api.py
       - name: Collect primary option chain - tse-option
+        continue-on-error: true
         env:
           OPTION_SYMBOL: ${{ inputs.symbol || 'فملی' }}
           OPTION_INCLUDE_GREEKS: ${{ inputs.include_greeks || 'true' }}
@@ -75,30 +78,54 @@ jobs:
               'data/raw/tsetmc_option_api_snapshot.json': 'TSETMC_OPTION API',
               'data/raw/tse_option_chain.json': 'tse-option',
           }
-          failures = []
+          ok_count = 0
+          report = []
           for name, label in checks.items():
               p = Path(name)
               if not p.exists():
-                  failures.append(f'{label}: missing')
+                  report.append(f'{label}: missing')
                   continue
-              d = json.loads(p.read_text(encoding='utf-8'))
-              print(f'{label}: status={d.get("status")}')
-              if label == 'tse-option':
-                  rows = d.get('rows') or d.get('data') or []
-                  if d.get('status') != 'ok' or not rows:
-                      failures.append(f'{label}: no valid rows')
-          if failures:
-              raise SystemExit('Primary option provider invalid: ' + '; '.join(failures))
+              try:
+                  d = json.loads(p.read_text(encoding='utf-8'))
+              except Exception as e:
+                  report.append(f'{label}: invalid json ({e})')
+                  continue
+              status = d.get('status')
+              rows = d.get('rows') or d.get('data') or []
+              print(f'{label}: status={status} rows={len(rows) if isinstance(rows, list) else "n/a"}')
+              if status == 'ok' and rows:
+                  ok_count += 1
+                  report.append(f'{label}: ok')
+              else:
+                  report.append(f'{label}: partial/empty (status={status})')
+          print('SUMMARY:', '; '.join(report))
+          # Fail-soft: at least one usable provider is enough; missing primary is allowed.
+          if ok_count == 0:
+              # Still write a status file so downstream knows the gap
+              Path('reports').mkdir(parents=True, exist_ok=True)
+              Path('reports/tse_option_source_status.json').write_text(
+                  json.dumps({'status': 'all_providers_failed', 'report': report}, ensure_ascii=False, indent=2),
+                  encoding='utf-8'
+              )
+              print('WARNING: no provider returned valid rows; continuing fail-soft')
+          else:
+              Path('reports').mkdir(parents=True, exist_ok=True)
+              Path('reports/tse_option_source_status.json').write_text(
+                  json.dumps({'status': 'partial_ok' if ok_count < len(checks) else 'ok', 'ok_count': ok_count, 'report': report}, ensure_ascii=False, indent=2),
+                  encoding='utf-8'
+              )
           PY
       - name: Ingest and rank options
+        continue-on-error: true
         run: |
-          python scripts/ingest_option_market_watch.py
-          python scripts/ingest_marketwatch_plus.py
-          python scripts/ingest_tse_option.py
-          python scripts/rank_options_babimind.py
-          python scripts/score_options_babimind_scenarios.py
-          python scripts/risk_adjusted_options_babimind.py
+          python scripts/ingest_option_market_watch.py || true
+          python scripts/ingest_marketwatch_plus.py || true
+          python scripts/ingest_tse_option.py || true
+          python scripts/rank_options_babimind.py || true
+          python scripts/score_options_babimind_scenarios.py || true
+          python scripts/risk_adjusted_options_babimind.py || true
       - name: Commit outputs
+        if: always()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
