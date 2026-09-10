@@ -46,19 +46,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install pandas numpy scipy requests jalali_pandas
-          python -m pip install -r requirements-finpy-tse.txt
           python -m pip install -r requirements-market-data.txt
-      - name: Install tse-option
-        run: |
-          rm -rf .cache/tse-option
-          git clone --depth 1 --branch master https://github.com/sm-sokout/tse-option.git .cache/tse-option
-          python -m pip install -e .cache/tse-option
-      - name: Collect market data (legacy FinPy)
-        continue-on-error: true
-        env:
-          FINPY_TSE_SYMBOLS: 'فملی,وبملت,شپنا,خساپا'
-          FINPY_TSE_LOOKBACK_DAYS: '30'
-        run: python scripts/collect_finpy_tse.py
       - name: Collect alternative provider - algotik_tse
         continue-on-error: true
         env:
