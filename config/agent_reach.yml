@@ -1,0 +1,59 @@
+# Agent Reach integration for BabiMind / Tahlil
+# Upstream is pinned for reproducibility; update deliberately after validation.
+provider:
+  name: agent-reach
+  repository: Panniantong/Agent-Reach
+  ref: da5044d26fc6adddb6554d5679c94ac22e76e428
+  url: https://github.com/Panniantong/Agent-Reach
+
+purpose:
+  - web_read
+  - web_search
+  - social_research
+  - youtube_research
+  - github_research
+  - rss_research
+  - market_sentiment_research
+
+policy:
+  role: external-research-source
+  never_override_primary_sources: true
+  never_replace_official_market_data: true
+  require_timestamp: true
+  require_source_url: true
+  require_raw_provenance: true
+  missing_is_not_zero: true
+  fail_open: true
+
+channels:
+  web: true
+  youtube: true
+  rss: true
+  github: true
+  twitter: true
+  reddit: true
+  linkedin: true
+  bilibili: true
+  xiaohongshu: true
+  snowball: true
+
+market_use:
+  enabled: true
+  priority: fallback
+  targets:
+    - FMLI
+    - ZOB
+    - BANKS
+    - AUTO
+    - METALS
+    - OIL_REFINING
+    - OPTIONS
+    - DOLLAR
+    - GOLD
+    - COPPER
+
+output:
+  directory: artifacts/agent_reach
+  format: json
+  retain_raw: true
+  normalize: true
