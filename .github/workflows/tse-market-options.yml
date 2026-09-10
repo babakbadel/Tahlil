@@ -9,17 +9,12 @@ on:
       - 'scripts/collect_algotik_tse.py'
       - 'scripts/collect_tsetmc_async.py'
       - 'scripts/collect_tsetmc_option_api.py'
+      - 'scripts/collect_pytsetmc_api.py'
       - 'requirements-market-data.txt'
       - 'requirements.txt'
   schedule:
     - cron: '*/30 5-9 * * 6,0,1,2,3'
   workflow_dispatch:
-    inputs:
-      symbol:
-        description: 'Underlying symbol'
-        required: false
-        default: 'فملی'
-        type: string
 
 permissions:
   contents: write
@@ -42,6 +37,7 @@ jobs:
           if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
           python -m pip install pandas numpy scipy requests jalali_pandas
           if [ -f requirements-market-data.txt ]; then python -m pip install -r requirements-market-data.txt; fi
+          python -m pip install "git+https://github.com/mshojaei77/pytsetmc-api.git@main"
       - name: Collect alternative provider - algotik_tse
         continue-on-error: true
         env:
@@ -51,6 +47,9 @@ jobs:
       - name: Collect alternative provider - 5j9/tsetmc
         continue-on-error: true
         run: python scripts/collect_tsetmc_async.py
+      - name: Collect alternative provider - pytsetmc-api
+        continue-on-error: true
+        run: python scripts/collect_pytsetmc_api.py
       - name: Collect alternative provider - TSETMC_OPTION API
         continue-on-error: true
         run: python scripts/collect_tsetmc_option_api.py
@@ -62,6 +61,7 @@ jobs:
           checks = {
               'data/raw/algotik_tse_snapshot.json': 'algotik_tse',
               'data/raw/tsetmc_async_snapshot.json': '5j9/tsetmc',
+              'data/raw/pytsetmc_market_snapshot.json': 'pytsetmc-api',
               'data/raw/tsetmc_option_api_snapshot.json': 'TSETMC_OPTION API',
           }
           ok_count = 0
@@ -77,7 +77,10 @@ jobs:
                   report.append(f'{label}: invalid json ({e})')
                   continue
               status = d.get('status')
-              rows = d.get('rows') or d.get('data') or []
+              if label == 'pytsetmc-api':
+                  rows = d.get('market_watch') or []
+              else:
+                  rows = d.get('rows') or d.get('data') or []
               print(f'{label}: status={status} rows={len(rows) if isinstance(rows, list) else "n/a"}')
               if status == 'ok' and rows:
                   ok_count += 1
@@ -90,6 +93,9 @@ jobs:
               json.dumps({'status': 'ok' if ok_count == len(checks) else ('partial_ok' if ok_count else 'all_providers_failed'), 'ok_count': ok_count, 'provider_count': len(checks), 'report': report}, ensure_ascii=False, indent=2),
               encoding='utf-8'
           )
+          if ok_count == 0:
+              raise SystemExit('All live providers failed or returned empty data')
+          PY
       - name: Ingest and rank options
         continue-on-error: true
         run: |
