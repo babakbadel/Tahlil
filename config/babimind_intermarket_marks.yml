@@ -1,0 +1,78 @@
+version: 1
+name: BabiMind Intermarket + Marks
+status: active
+sources:
+  - author: John J. Murphy
+    work: Intermarket Technical Analysis
+    year: 1991
+    role: intermarket_relationships
+  - author: John J. Murphy
+    work: Trading with Intermarket Analysis
+    year: 2012
+    role: intermarket_rotation_and_cycle
+  - author: Howard Marks
+    work: Mastering the Market Cycle
+    year: 2018
+    role: cycle_and_regime
+  - author: Howard Marks
+    work: The Most Important Thing
+    year: 2011
+    role: risk_second_level_value
+principles:
+  intermarket_awareness: true
+  cycle_regime_detection: true
+  sector_rotation: true
+  second_level_thinking: true
+  price_value_gap: true
+  risk_control: true
+  contrarian_check: true
+  patient_opportunism: true
+  divergence_detection: true
+  regime_break_detection: true
+  options_downstream_of_underlying: true
+asset_classes:
+  - iran_equities
+  - fixed_income
+  - usd
+  - gold
+  - housing
+  - auto
+  - oil
+  - copper
+  - industrial_commodities
+  - global_equities
+  - china_cycle
+  - real_rates
+  - liquidity
+rotation_weights:
+  relative_strength: 0.25
+  flow: 0.20
+  macro_fit: 0.15
+  valuation_gap: 0.15
+  cycle_fit: 0.10
+  catalyst: 0.10
+  positioning: 0.05
+risk_penalties:
+  policy_uncertainty: true
+  liquidity_deterioration: true
+  crowded_positioning: true
+  extreme_valuation: true
+  earnings_revision: true
+  event_concentration: true
+  poor_data_quality: true
+confidence_rules:
+  strong_confirmation_min_independent_signals: 3
+  mixed_state_action: WAIT_OR_HOLD
+  divergence_action: REDUCE_CONFIDENCE
+  regime_break_action: INVALIDATE_RELATIONSHIP_AND_RECALIBRATE
+iran_adaptation:
+  textbook_relationships_are_not_fixed: true
+  timestamp_all_relationships: true
+  require_historical_validation: true
+  no_lookahead: true
+options:
+  require_underlying_intermarket_score: true
+  include_iv: true
+  include_oi_flow: true
+  include_greeks: true
+  include_event_risk: true
