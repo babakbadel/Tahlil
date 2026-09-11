@@ -1,0 +1,47 @@
+{
+  "date_shamsi": "1405-06-20",
+  "date_gregorian": "2026-09-11",
+  "market_data_policy": "latest_available_market_data",
+  "market_session_note": "20 Shahrivar is Friday; Tehran cash/equity market is closed, so latest observable domestic market data is primarily 19 Shahrivar.",
+  "estimate": true,
+  "capital_unit": 100,
+  "capital_share_estimate": {
+    "usd": 26,
+    "gold": 23,
+    "fixed_income": 17,
+    "stocks": 14,
+    "housing": 10,
+    "auto": 6,
+    "crypto": 4
+  },
+  "daily_migration_estimate": {
+    "usd": 2,
+    "gold": 1,
+    "fixed_income": 0,
+    "stocks": -2,
+    "housing": 0,
+    "auto": 0,
+    "crypto": -1
+  },
+  "money_flow_score": {
+    "usd": 78,
+    "gold": 70,
+    "fixed_income": 52,
+    "stocks": 42,
+    "housing": 48,
+    "auto": 43,
+    "crypto": 38
+  },
+  "confidence": "medium",
+  "evidence": {
+    "usd": "19 Shahrivar TGJU: 2,359,750 IRR, +1.41% daily.",
+    "gold": "19 Shahrivar: 18k gold 243,425,000 IRR; Imamie coin 2,430,000,000 IRR; global gold 4,418.10 USD/oz.",
+    "stocks": "19 Shahrivar Tindex: 36,161 bn toman daily trading value and -346 bn toman net real-money flow; 18 Shahrivar showed strong metals/mining rotation but the latest day had real-money outflow.",
+    "housing": "Latest available Tindex Tehran listing proxy: 24.76 bn toman/m2, +4.97% month-on-month and +122.96% year-on-year; transaction-flow data is limited.",
+    "auto": "19 Shahrivar market listings show mixed but generally positive moves in several mass-market models; liquidity is materially lower than financial markets.",
+    "crypto": "19 Shahrivar USDT quoted around 236,900 toman in HamRate; crypto share is estimated lower than direct USD/gold exposure.",
+    "fixed_income": "Allocation remains an estimate because a sufficiently fresh unified daily fund-flow series was not retrieved in this snapshot."
+  },
+  "interpretation": "The strongest estimated destination remains FX/gold protection. Stocks are not treated as a wholesale exit because 14 Shahrivar had +3.7tn toman real-money inflow, while 19 Shahrivar had -346bn; this is regime-sensitive rotation, not a one-way flight.",
+  "next_run": "Recalculate from fresh daily evidence and preserve this snapshot for migration history."
+}
