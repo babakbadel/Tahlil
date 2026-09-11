@@ -1,0 +1,39 @@
+version: 1
+name: BabiMind Money Migration Map
+as_of_policy: latest_available_market_data
+normalization:
+  total_capital: 100
+  label: ESTIMATED_CAPITAL_ALLOCATION
+markets:
+  - usd
+  - gold
+  - housing
+  - auto
+  - fixed_income
+  - stocks
+  - crypto
+scoring:
+  price_relative_return: 0.30
+  volume_flow: 0.20
+  liquidity: 0.15
+  inflation_real_rate: 0.15
+  macro_political_risk: 0.10
+  positioning_behavior: 0.10
+rules:
+  - Never infer capital inflow from price appreciation alone.
+  - Separate nominal return from real return.
+  - Compare each market against USD and gold.
+  - Re-normalize weights when data is missing; never invent data.
+  - Store daily allocation and daily migration history.
+  - Flag estimates explicitly.
+outputs:
+  capital_share: true
+  daily_migration: true
+  money_flow_score: true
+  relative_strength: true
+  risk_score: true
+  smart_money_destination: true
+  stock_sector_rotation: true
+  metals_submodel: [fml, فولاد, ذوب, فغدیر, سرچشمه]
+  options_downstream: true
+history_file: reports/babimind_money_migration.json
