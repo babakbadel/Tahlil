@@ -1,0 +1,118 @@
+version: "1.0"
+name: "BabiMind One-Year Market Regime"
+market: "IRAN_EQUITY"
+created_as_of: "1405-06-21"
+
+purpose: >-
+  یک لایه افق یک‌ساله برای تشخیص تغییر رژیم بازار، مقایسه بورس با دلار و سنجش
+  ظرفیت re-rating شاخص. این لایه مکمل مدل‌های کلان، جریان پول، بنیادی، تکنیکال،
+  آپشن، Game Theory و System Dynamics است و به‌تنهایی تصمیم نهایی نمی‌دهد.
+
+horizon:
+  lookback: "12M"
+  forecast: "12M"
+  checkpoints: ["7.25M", "7.8M", "8.5M", "9.0M", "9.5M", "10.8M", "12.0M"]
+
+core_factors:
+  - id: index_12m_return
+    weight: 0.15
+    description: "بازده شاخص در 12 ماه"
+  - id: usd_12m_return
+    weight: 0.15
+    description: "بازده دلار آزاد در 12 ماه"
+  - id: index_usd_ratio
+    weight: 0.12
+    description: "نسبت شاخص کل به دلار آزاد و تغییر رژیم آن"
+  - id: liquidity
+    weight: 0.12
+    description: "نقدینگی، ارزش معاملات و قدرت جریان پول"
+  - id: inflation
+    weight: 0.08
+    description: "تورم و انتقال آن به ارزش اسمی دارایی‌ها"
+  - id: earnings
+    weight: 0.12
+    description: "رشد سود شرکت‌ها، حاشیه سود و re-rating"
+  - id: commodities
+    weight: 0.08
+    description: "مس، فولاد، نفت و سایر کامودیتی‌های مؤثر بر بورس"
+  - id: real_money_flow
+    weight: 0.08
+    description: "ورود/خروج حقیقی، قدرت خریدار و رفتار حقوقی"
+  - id: valuation
+    weight: 0.05
+    description: "P/E، ارزش دلاری بازار و فاصله از رژیم‌های تاریخی"
+  - id: options_confirmation
+    weight: 0.05
+    description: "IV، OI، volume، Greeks و تأیید/رد سناریوی شاخص"
+
+regime_rules:
+  bullish:
+    conditions:
+      - "index >= 7.25M and holds above breakout"
+      - "index_usd_ratio >= 12M average or rising"
+      - "liquidity and real_money_flow confirm"
+      - "earnings/commodity backdrop not deteriorating"
+  neutral:
+    conditions:
+      - "index between 6.5M and 7.25M"
+      - "mixed confirmation across flow, macro and earnings"
+  risk_off:
+    conditions:
+      - "index < 6.5M"
+      - "simultaneous real-money outflow and USD shock"
+      - "market breadth/AD deteriorates materially"
+
+scenarios:
+  correction:
+    range: ["5.8M", "6.3M"]
+    role: "stress test"
+  base:
+    range: ["8.2M", "9.0M"]
+    role: "primary 12M scenario"
+  bullish:
+    range: ["9.5M", "10.8M"]
+    role: "requires macro + flow + earnings confirmation"
+  super_bullish:
+    range: ["11.5M", "13.0M"]
+    role: "requires strong liquidity, FX repricing and earnings confirmation"
+
+hard_levels:
+  invalidation: "6.5M"
+  breakout_confirmation: "7.25M"
+  first_target: "8.0M"
+  main_target_zone: ["8.5M", "9.0M"]
+  bullish_target_zone: ["9.5M", "10.8M"]
+
+historical_anchor:
+  note: >-
+    نسبت شاخص به دلار در 1399 به‌عنوان historical anchor نگهداری می‌شود اما
+    fair value تلقی نمی‌شود؛ دوره 1399 دارای مؤلفه حبابی بوده است.
+
+anti_overfit:
+  - "1399 ratio is an anchor, not fair value"
+  - "scenario probabilities must sum to 1"
+  - "no look-ahead"
+  - "missing data is not zero"
+  - "historical return alone cannot create a buy signal"
+
+required_confirmations:
+  - dollar_free
+  - liquidity
+  - inflation
+  - corporate_earnings
+  - real_money_flow
+  - legal_person_flow
+  - sector_rotation
+  - copper_and_global_commodities
+  - options_chain
+  - news_event_time
+
+outputs:
+  - regime
+  - scenario_probabilities
+  - index_target_ranges
+  - risk_level
+  - confidence
+  - invalidation_level
+  - factor_contribution
+  - change_vs_previous_run
