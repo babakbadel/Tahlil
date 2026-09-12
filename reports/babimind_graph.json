@@ -1,9 +1,9 @@
 {
   "model": "BabiMind",
   "component": "Graph Intelligence",
-  "generated_at": "2026-09-10T12:34:08.687428+00:00",
+  "generated_at": "2026-09-12T11:57:38.672763+00:00",
   "graph_available": true,
-  "graph_snapshot_id": "20260910T123408Z",
+  "graph_snapshot_id": "20260912T115738Z",
   "graph_score": 1.0,
   "graph_confidence": 0.75,
   "graph_regime": "bullish",
@@ -19,6 +19,26 @@
       "contribution": 0.75
     },
     {
+      "source": "app_intermarket_model_evaluate",
+      "target": "app_intermarket_model_weighted_signal_score",
+      "contribution": 0.75
+    },
+    {
+      "source": "app_intermarket_model_marks_second_level_gate",
+      "target": "app_intermarket_model_clamp",
+      "contribution": 0.75
+    },
+    {
+      "source": "app_intermarket_model_rotation_score",
+      "target": "app_intermarket_model_clamp",
+      "contribution": 0.75
+    },
+    {
+      "source": "app_intermarket_model_weighted_signal_score",
+      "target": "app_intermarket_model_clamp",
+      "contribution": 0.75
+    },
+    {
       "source": "realtime_api_equity_market",
       "target": "realtime_api_snapshot",
       "contribution": 0.75
@@ -27,29 +47,39 @@
       "source": "realtime_api_options_market",
       "target": "realtime_api_snapshot",
       "contribution": 0.75
-    },
-    {
-      "source": "realtime_api_sse_market",
-      "target": "streamingresponse",
-      "contribution": 0.75
-    },
-    {
-      "source": "scan_market_main",
-      "target": "scan_market_fetch_all_symbols",
-      "contribution": 0.75
-    },
-    {
-      "source": "scripts_babimind_global_market_main",
-      "target": "scripts_babimind_global_market_py_path",
-      "contribution": 0.75
-    },
-    {
-      "source": "scripts_backfill_main",
-      "target": "scripts_backfill_refresh_market",
-      "contribution": 0.75
     }
   ],
   "graph_risk_drivers": [
+    {
+      "source": "app_intermarket_model",
+      "target": "app_intermarket_model_evaluate",
+      "contribution": 0.0432
+    },
+    {
+      "source": "app_intermarket_model",
+      "target": "app_intermarket_model_rotation_score",
+      "contribution": 0.0618
+    },
+    {
+      "source": "app_intermarket_model_evaluate",
+      "target": "app_intermarket_model_intermarketsignal",
+      "contribution": 0.0882
+    },
+    {
+      "source": "app_intermarket_model",
+      "target": "app_intermarket_model_marks_second_level_gate",
+      "contribution": 0.0882
+    },
+    {
+      "source": "app_intermarket_model_evaluate",
+      "target": "app_intermarket_model_classify_regime",
+      "contribution": 0.1261
+    },
+    {
+      "source": "app_intermarket_model",
+      "target": "app_intermarket_model_classify_regime",
+      "contribution": 0.1261
+    },
     {
       "source": "scan_market",
       "target": "scan_market_print_market_summary",
@@ -59,39 +89,9 @@
       "source": "scripts_ingest_option_market_watch",
       "target": "scripts_ingest_option_market_watch_parse_rows",
       "contribution": 0.1261
-    },
-    {
-      "source": "scan_market",
-      "target": "scan_market_save_csv",
-      "contribution": 0.1801
-    },
-    {
-      "source": "scripts_ingest_option_market_watch",
-      "target": "scripts_ingest_option_market_watch_int_num",
-      "contribution": 0.1801
-    },
-    {
-      "source": "scan_market_main",
-      "target": "scan_market_print_market_summary",
-      "contribution": 0.2572
-    },
-    {
-      "source": "realtime_api",
-      "target": "realtime_api_websocket_market",
-      "contribution": 0.2572
-    },
-    {
-      "source": "scan_market",
-      "target": "scan_market_save_json",
-      "contribution": 0.2572
-    },
-    {
-      "source": "scripts_ingest_option_market_watch",
-      "target": "scripts_ingest_option_market_watch_num",
-      "contribution": 0.2572
     }
   ],
-  "edges_used": 72,
-  "correlation_penalty": 0.2348,
+  "edges_used": 99,
+  "correlation_penalty": 0.2726,
   "missing_data_policy": "MISSING_IS_NOT_ZERO"
 }

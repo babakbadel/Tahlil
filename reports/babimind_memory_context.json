@@ -1,7 +1,7 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 2,
-  "context_runs": 2,
+  "historical_runs_available": 3,
+  "context_runs": 3,
   "recent_runs": [
     {
       "timestamp": "2026-09-08T13:26:25.411222+00:00",
@@ -293,6 +293,159 @@
         ]
       },
       "fingerprint": "26dcb23cdeddd9c2a278"
+    },
+    {
+      "timestamp": "2026-09-10T12:35:03.908601+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": {
+        "label": "bullish",
+        "evidence": [
+          "graph_intelligence.graph_regime: bullish",
+          "graph_intelligence.graph_score: 1.0",
+          "graph_intelligence.graph_confidence: 0.75",
+          "symbol_thesis.فملی.scenario_weights.bull: 0.45",
+          "factor_coverage: 285 available factors, including metals_mining and precious_metals clusters",
+          "memory historical runs consistently show bullish bias for فملی"
+        ],
+        "inference": "The regime is bullish, driven by copper price sensitivity, volume-led expansion, and risk-on market sentiment. However, the absence of real-time Iranian market data and option chain information limits the ability to confirm the strength and sustainability of this regime.",
+        "uncertainty": "Real-time Iranian market data unavailable; option chain data missing; many TSE sources timed out; global market snapshot shows 'pending_upstream_data'.",
+        "confidence": 0.7
+      },
+      "scenarios": {
+        "bull": {
+          "probability": 0.45,
+          "target_price_rial": 23000,
+          "time_horizon": "Q2-Q3 1405",
+          "key_triggers": [
+            "global copper supply disruption or tightness",
+            "higher copper benchmark",
+            "higher realized sales price / margins",
+            "higher FMLI earnings expectations",
+            "fund-flow rotation toward large liquid commodity leaders",
+            "technical breakout or continuation",
+            "option convexity increases demand for calls"
+          ],
+          "risk_factors": [
+            "copper price pullback",
+            "volume deterioration",
+            "broader market risk-off",
+            "sales growth rolls over for two consecutive releases",
+            "volume falls while revenue is supported only by price",
+            "copper price breaks down materially and remains weak",
+            "stock leadership disappears while market breadth remains healthy"
+          ],
+          "source": "memory and symbol thesis"
+        },
+        "base": {
+          "probability": 0.4,
+          "target_price_rial": 21500,
+          "time_horizon": "Q2 1405",
+          "key_triggers": [
+            "steady sales growth",
+            "maintained market leadership",
+            "stable commodity prices"
+          ],
+          "risk_factors": [
+            "sales growth slowdown",
+            "increased competition",
+            "currency volatility"
+          ],
+          "source": "memory and symbol thesis"
+        },
+        "bear": {
+          "probability": 0.15,
+          "target_price_rial": 18800,
+          "time_horizon": "Q1-Q2 1405",
+          "key_triggers": [
+            "copper price breakdown",
+            "volume collapse",
+            "real money flow deterioration"
+          ],
+          "risk_factors": [
+            "global risk-off spread",
+            "commodity cycle peak",
+            "operational execution issues"
+          ],
+          "source": "memory and symbol thesis"
+        }
+      },
+      "market_implications": {
+        "sector_rotation": {
+          "beneficiaries": [
+            "metals_mining",
+            "energy_sector",
+            "commodity_traders"
+          ],
+          "losers": [
+            "import_depending_sectors",
+            "currency_hedge_strategies"
+          ],
+          "rotation_strength": "moderate_to_strong"
+        },
+        "valuation_impact": {
+          "multiple_expansion": "growth_stocks_outperform",
+          "sector_premium": "commodity_related_stocks_gain",
+          "currency_effect": "rial_weakness_boosts_exporters"
+        },
+        "risk_environment": {
+          "primary_risks": [
+            "commodity_price_volatility",
+            "currency_risk",
+            "geopolitical_tensions"
+          ],
+          "hedging_opportunities": [
+            "commodity_derivatives",
+            "currency_futures",
+            "geopolitical_insurance"
+          ],
+          "portfolio_implications": [
+            "increase_commodity_exposure",
+            "maintain_currency_hedges",
+            "diversify_geographic_risk"
+          ]
+        },
+        "evidence": [
+          "memory historical market_implications",
+          "symbol_thesis.فملی.price_map_rial"
+        ],
+        "uncertainty": "Lack of real-time market breadth data; option chain data missing."
+      },
+      "confidence": {
+        "overall_confidence": 0.68,
+        "data_quality_score": 0.6,
+        "model_reliability": 0.75,
+        "external_validation": 0.65,
+        "factors_adjusting_confidence": [
+          "limited_iranian_market_data_availability",
+          "high_growth_metrics_supporting_thesis",
+          "technical_accumulation_patterns",
+          "positive_graph_intelligence_signals",
+          "missing_option_chain_data",
+          "geopolitical uncertainty"
+        ]
+      },
+      "data_gaps": {
+        "critical_gaps": [
+          "real_time_iranian_market_data",
+          "comprehensive_option_chain_data",
+          "detailed_copper_price_forecasts",
+          "institutional_flow_data",
+          "real_time_fx_rates"
+        ],
+        "impact_assessment": {
+          "short_term_impact": "moderate_uncertainty_in_entry_timing",
+          "medium_term_impact": "some_uncertainty_in_position_sizing",
+          "long_term_impact": "minimal_for_overall_thesis_validity"
+        },
+        "mitigation_strategies": [
+          "use_technical_analysis_for_timing",
+          "employ_wide_stop_loss_levels",
+          "monitor_alternative_data_sources",
+          "maintain_flexible_position_sizing"
+        ]
+      },
+      "fingerprint": "183ed8ef92717a6522ba"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."

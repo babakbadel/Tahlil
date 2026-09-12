@@ -446,7 +446,183 @@
         ]
       },
       "fingerprint": "183ed8ef92717a6522ba"
+    },
+    {
+      "timestamp": "2026-09-12T12:00:38.096175+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": {
+        "label": "bullish_conditional",
+        "evidence": [
+          "graph_intelligence.graph_regime: bullish (score 1.0, confidence 0.75)",
+          "symbol_thesis.فملی.scenario_weights.bull: 0.45",
+          "factor_coverage: metals_mining cluster Available (copper_price, copper_volume, copper_demand, copper_supply from USGS, World Bank)",
+          "factor_coverage: precious_metals cluster Available (gold_price, gold_volume from World Gold Council, LBMA)",
+          "factor_coverage: geopolitics_sanctions Available (6 sources including US Treasury OFAC, UN Security Council)",
+          "factor_coverage: hormuz_risk Available (4 sources including AFP, Al Jazeera, EIA)",
+          "memory: 3 consecutive runs show bullish regime for فملی with consistent scenario weights"
+        ],
+        "inference": "Regime is bullish for commodity-linked equities (especially فملی) driven by copper price sensitivity, volume-led expansion, and risk-on sentiment. However, the regime is conditional on sustained commodity prices and absence of severe geopolitical escalation. Iranian equity market breadth data is missing (iran_equity_market factor Partial with only 2 news sources).",
+        "uncertainty": [
+          "Real-time Iranian market data unavailable (TSE, TSETMC, Codal all timeout)",
+          "Option chain data missing (IV/Greeks not available)",
+          "Global market snapshot shows 'pending_upstream_data'",
+          "Finpy-tse snapshot collection degraded (all requests timed out)",
+          "TSE option source error (timeout)"
+        ],
+        "confidence": 0.65
+      },
+      "scenarios": {
+        "bull": {
+          "probability": 0.4,
+          "target_price_rial": 23000,
+          "time_horizon": "Q2-Q3 1405",
+          "key_triggers": [
+            "global copper supply disruption or tightness",
+            "higher copper benchmark",
+            "higher realized sales price / margins for فملی",
+            "fund-flow rotation toward large liquid commodity leaders",
+            "technical breakout above 20000 confirmation level",
+            "rial weakness boosting exporter revenues"
+          ],
+          "risk_factors": [
+            "copper price pullback",
+            "volume deterioration",
+            "broader market risk-off",
+            "sales growth rolls over for two consecutive releases",
+            "volume falls while revenue supported only by price"
+          ],
+          "source": "symbol_thesis.فملی.scenario_weights.bull + factor_coverage metals_mining + memory"
+        },
+        "base": {
+          "probability": 0.35,
+          "target_price_rial": 21500,
+          "time_horizon": "Q2 1405",
+          "key_triggers": [
+            "steady sales growth",
+            "maintained market leadership",
+            "stable commodity prices",
+            "controlled geopolitical tension"
+          ],
+          "risk_factors": [
+            "sales growth slowdown",
+            "increased competition",
+            "currency volatility",
+            "gasoline price hike feeding inflation"
+          ],
+          "source": "symbol_thesis.فملی.scenario_weights.base + news: Iran doubles gasoline price, trade down 25-35%"
+        },
+        "bear": {
+          "probability": 0.25,
+          "target_price_rial": 18800,
+          "time_horizon": "Q1-Q2 1405",
+          "key_triggers": [
+            "copper price breakdown",
+            "volume collapse",
+            "real money flow deterioration",
+            "escalation of US-Iran conflict (Hormuz closure risk)",
+            "severe sanctions enforcement (OFAC)"
+          ],
+          "risk_factors": [
+            "global risk-off spread",
+            "commodity cycle peak",
+            "operational execution issues",
+            "IRGC-government policy conflict"
+          ],
+          "source": "symbol_thesis.فملی.scenario_weights.bear adjusted up from 0.15 due to geopolitical risk escalation in news"
+        }
+      },
+      "market_implications": {
+        "sector_rotation": {
+          "beneficiaries": [
+            "metals_mining (فملی, copper producers)",
+            "energy_sector (oil/gas exporters)",
+            "commodity_traders",
+            "precious_metals (gold as safe haven)"
+          ],
+          "losers": [
+            "import_depending_sectors (auto, consumer goods)",
+            "currency_hedge_strategies (rial depreciation)",
+            "domestic_demand_stocks (retail, services)"
+          ],
+          "rotation_strength": "moderate_to_strong",
+          "evidence": "memory historical market_implications + factor_coverage metals_mining/precious_metals Available"
+        },
+        "valuation_impact": {
+          "multiple_expansion": "growth_stocks_outperform (commodity-linked)",
+          "sector_premium": "commodity_related_stocks_gain",
+          "currency_effect": "rial_weakness_boosts_exporters",
+          "evidence": "memory + symbol_thesis.فملی.price_map_rial"
+        },
+        "risk_environment": {
+          "primary_risks": [
+            "commodity_price_volatility (copper, oil)",
+            "currency_risk (rial volatility)",
+            "geopolitical_tensions (Hormuz, sanctions escalation)",
+            "domestic_inflation_spiral (gasoline price pass-through)"
+          ],
+          "hedging_opportunities": [
+            "commodity_derivatives (copper, gold futures)",
+            "currency_futures (if accessible)",
+            "geopolitical_insurance (limited)"
+          ],
+          "portfolio_implications": [
+            "increase_commodity_exposure (selective)",
+            "maintain_currency_hedges",
+            "diversify_geographic_risk",
+            "avoid import-dependent domestic cyclicals"
+          ]
+        },
+        "liquidity": {
+          "evidence": "MarketWatch Plus snapshot 1405-06-07 shows 3257 rows but stale; real-time TSETMC Client Type unavailable; option market watch empty",
+          "inference": "Market liquidity opaque; bid-ask spreads unknown; institutional flow invisible",
+          "uncertainty": "High"
+        }
+      },
+      "confidence": {
+        "overall_confidence": 0.55,
+        "data_quality_score": 0.45,
+        "model_reliability": 0.7,
+        "external_validation": 0.5,
+        "factors_adjusting_confidence": [
+          "limited_iranian_market_data_availability (critical)",
+          "high_growth_metrics_supporting_thesis (فملی Q1 profit growth 262% YoY)",
+          "technical_accumulation_patterns (from memory, not current)",
+          "positive_graph_intelligence_signals (but based on internal model edges)",
+          "missing_option_chain_data (complete)",
+          "geopolitical_uncertainty_high (Hormuz, sanctions, internal conflict)",
+          "oil_price_surge_ambiguous (helps fiscal but hurts global risk appetite)",
+          "gasoline_price_hike_inflationary (new negative factor)"
+        ]
+      },
+      "data_gaps": {
+        "critical_gaps": [
+          "real_time_iranian_market_data (TSE, TSETMC, Codal all timeout)",
+          "comprehensive_option_chain_data (IV, Greeks, OI, skew, term structure)",
+          "detailed_copper_price_forecasts (supply/demand balance)",
+          "institutional_flow_data (real-money vs retail)",
+          "real_time_fx_rates (official vs market)",
+          "iran_customs_trade_data (Iran Customs unavailable)",
+          "CBI_monetary_aggregates (Statistical Center SSL error)",
+          "energy_balance_data (Iran Energy Exchange SSL error)"
+        ],
+        "impact_assessment": {
+          "short_term_impact": "high_uncertainty_in_entry_timing_and_position_sizing",
+          "medium_term_impact": "significant_uncertainty_in_thesis_validation_and_risk_management",
+          "long_term_impact": "moderate_for_overall_thesis_validity_if_commodity_supercycle_holds"
+        },
+        "mitigation_strategies": [
+          "use_technical_analysis_for_timing (with wide stops)",
+          "employ_wide_stop_loss_levels (risk_line 18800 for فملی)",
+          "monitor_alternative_data_sources (satellite, shipping, news sentiment)",
+          "maintain_flexible_position_sizing (scale-in on confirmation)",
+          "hedge_currency_exposure via offshore NDFs if accessible",
+          "track_global_copper_inventories (LME, SHFE) as proxy",
+          "monitor_Hormuz_shipping_data (MarineTraffic available)"
+        ]
+      },
+      "fingerprint": "e35957d61af139bed8e3"
     }
   ],
-  "updated_at": "2026-09-10T12:35:03.909307+00:00"
+  "updated_at": "2026-09-12T12:00:38.096851+00:00"
 }

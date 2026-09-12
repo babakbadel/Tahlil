@@ -3,8 +3,8 @@ You are BabiMind, the central financial and economic intelligence model for Tahl
 SOURCE FILE: reports/babimind_pipeline.json
 {
   "model": "BabiMind",
-  "pipeline_version": "1.6",
-  "generated_at": "2026-09-10T12:34:20.092544+00:00",
+  "pipeline_version": "1.7",
+  "generated_at": "2026-09-12T11:57:49.849599+00:00",
   "stages": [
     "health",
     "content",
@@ -13,14 +13,15 @@ SOURCE FILE: reports/babimind_pipeline.json
     "fallback",
     "signal_weight",
     "graph_intelligence",
-    "symbol_thesis"
+    "symbol_thesis",
+    "money_migration"
   ],
   "missing_data_policy": "SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN",
   "execution": {
     "max_workers": 24,
     "default_timeout_seconds": 3,
     "total_deadline_seconds": 30,
-    "elapsed_seconds": 11.32
+    "elapsed_seconds": 11.12
   },
   "summary": {
     "total_sources": 64,
@@ -31,9 +32,9 @@ SOURCE FILE: reports/babimind_pipeline.json
   "graph_intelligence": {
     "model": "BabiMind",
     "component": "Graph Intelligence",
-    "generated_at": "2026-09-10T12:34:08.687428+00:00",
+    "generated_at": "2026-09-12T11:57:38.672763+00:00",
     "graph_available": true,
-    "graph_snapshot_id": "20260910T123408Z",
+    "graph_snapshot_id": "20260912T115738Z",
     "graph_score": 1.0,
     "graph_confidence": 0.75,
     "graph_regime": "bullish",
@@ -49,6 +50,26 @@ SOURCE FILE: reports/babimind_pipeline.json
         "contribution": 0.75
       },
       {
+        "source": "app_intermarket_model_evaluate",
+        "target": "app_intermarket_model_weighted_signal_score",
+        "contribution": 0.75
+      },
+      {
+        "source": "app_intermarket_model_marks_second_level_gate",
+        "target": "app_intermarket_model_clamp",
+        "contribution": 0.75
+      },
+      {
+        "source": "app_intermarket_model_rotation_score",
+        "target": "app_intermarket_model_clamp",
+        "contribution": 0.75
+      },
+      {
+        "source": "app_intermarket_model_weighted_signal_score",
+        "target": "app_intermarket_model_clamp",
+        "contribution": 0.75
+      },
+      {
         "source": "realtime_api_equity_market",
         "target": "realtime_api_snapshot",
         "contribution": 0.75
@@ -57,29 +78,39 @@ SOURCE FILE: reports/babimind_pipeline.json
         "source": "realtime_api_options_market",
         "target": "realtime_api_snapshot",
         "contribution": 0.75
-      },
-      {
-        "source": "realtime_api_sse_market",
-        "target": "streamingresponse",
-        "contribution": 0.75
-      },
-      {
-        "source": "scan_market_main",
-        "target": "scan_market_fetch_all_symbols",
-        "contribution": 0.75
-      },
-      {
-        "source": "scripts_babimind_global_market_main",
-        "target": "scripts_babimind_global_market_py_path",
-        "contribution": 0.75
-      },
-      {
-        "source": "scripts_backfill_main",
-        "target": "scripts_backfill_refresh_market",
-        "contribution": 0.75
       }
     ],
     "graph_risk_drivers": [
+      {
+        "source": "app_intermarket_model",
+        "target": "app_intermarket_model_evaluate",
+        "contribution": 0.0432
+      },
+      {
+        "source": "app_intermarket_model",
+        "target": "app_intermarket_model_rotation_score",
+        "contribution": 0.0618
+      },
+      {
+        "source": "app_intermarket_model_evaluate",
+        "target": "app_intermarket_model_intermarketsignal",
+        "contribution": 0.0882
+      },
+      {
+        "source": "app_intermarket_model",
+        "target": "app_intermarket_model_marks_second_level_gate",
+        "contribution": 0.0882
+      },
+      {
+        "source": "app_intermarket_model_evaluate",
+        "target": "app_intermarket_model_classify_regime",
+        "contribution": 0.1261
+      },
+      {
+        "source": "app_intermarket_model",
+        "target": "app_intermarket_model_classify_regime",
+        "contribution": 0.1261
+      },
       {
         "source": "scan_market",
         "target": "scan_market_print_market_summary",
@@ -89,40 +120,10 @@ SOURCE FILE: reports/babimind_pipeline.json
         "source": "scripts_ingest_option_market_watch",
         "target": "scripts_ingest_option_market_watch_parse_rows",
         "contribution": 0.1261
-      },
-      {
-        "source": "scan_market",
-        "target": "scan_market_save_csv",
-        "contribution": 0.1801
-      },
-      {
-        "source": "scripts_ingest_option_market_watch",
-        "target": "scripts_ingest_option_market_watch_int_num",
-        "contribution": 0.1801
-      },
-      {
-        "source": "scan_market_main",
-        "target": "scan_market_print_market_summary",
-        "contribution": 0.2572
-      },
-      {
-        "source": "realtime_api",
-        "target": "realtime_api_websocket_market",
-        "contribution": 0.2572
-      },
-      {
-        "source": "scan_market",
-        "target": "scan_market_save_json",
-        "contribution": 0.2572
-      },
-      {
-        "source": "scripts_ingest_option_market_watch",
-        "target": "scripts_ingest_option_market_watch_num",
-        "contribution": 0.2572
       }
     ],
-    "edges_used": 72,
-    "correlation_penalty": 0.2348,
+    "edges_used": 99,
+    "correlation_penalty": 0.2726,
     "missing_data_policy": "MISSING_IS_NOT_ZERO"
   },
   "symbol_theses": {
@@ -207,6 +208,22 @@ SOURCE FILE: reports/babimind_pipeline.json
     },
     "available": true
   },
+  "money_migration": {
+    "available": true,
+    "path": "config/babimind_money_migration.yml",
+    "model": "seven_market_capital_migration",
+    "total_capital": 100,
+    "markets": [
+      "usd",
+      "gold",
+      "housing",
+      "auto",
+      "fixed_income",
+      "stocks",
+      "crypto"
+    ],
+    "source_text_sha256": "37220c03ca49031f19552017c17c67f5f503909390793a7746fa62bb69838655"
+  },
   "sources": [
     {
       "name": "IMF Data API",
@@ -217,7 +234,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 204,
       "content_type": "",
       "bytes": 0,
-      "latency_ms": 535.6,
+      "latency_ms": 683.2,
       "content_check": "empty",
       "state": "partial",
       "freshness": 0.75,
@@ -225,7 +242,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:09.310530+00:00"
+      "checked_at": "2026-09-12T11:57:39.415143+00:00"
     },
     {
       "name": "IMF SDMX Central",
@@ -242,7 +259,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:09.453561+00:00"
+      "checked_at": "2026-09-12T11:57:39.604294+00:00"
     },
     {
       "name": "World Bank API",
@@ -253,7 +270,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "application/json;charset=utf-8",
       "bytes": 309,
-      "latency_ms": 261.8,
+      "latency_ms": 574.6,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -261,7 +278,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:09.038131+00:00"
+      "checked_at": "2026-09-12T11:57:39.307415+00:00"
     },
     {
       "name": "BIS Statistics",
@@ -272,7 +289,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 1353.7,
+      "latency_ms": 1445.8,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -280,7 +297,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:10.130606+00:00"
+      "checked_at": "2026-09-12T11:57:40.179056+00:00"
     },
     {
       "name": "OECD Data",
@@ -297,7 +314,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:09.107660+00:00"
+      "checked_at": "2026-09-12T11:57:39.223915+00:00"
     },
     {
       "name": "FRED",
@@ -313,7 +330,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:12.085117+00:00"
+      "checked_at": "2026-09-12T11:57:42.400363+00:00"
     },
     {
       "name": "ECB Data API",
@@ -324,7 +341,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "application/vnd.sdmx.data+json;version=1.0.0-wd",
       "bytes": 4096,
-      "latency_ms": 1107.8,
+      "latency_ms": 1040.1,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -332,7 +349,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:09.893147+00:00"
+      "checked_at": "2026-09-12T11:57:39.782412+00:00"
     },
     {
       "name": "EIA",
@@ -348,7 +365,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:11.986206+00:00"
+      "checked_at": "2026-09-12T11:57:42.194344+00:00"
     },
     {
       "name": "IEA Data",
@@ -365,7 +382,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:09.071912+00:00"
+      "checked_at": "2026-09-12T11:57:39.247764+00:00"
     },
     {
       "name": "OPEC",
@@ -382,7 +399,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:09.210771+00:00"
+      "checked_at": "2026-09-12T11:57:39.306799+00:00"
     },
     {
       "name": "JODI",
@@ -393,7 +410,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 818.9,
+      "latency_ms": 1017.6,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -401,7 +418,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:09.613500+00:00"
+      "checked_at": "2026-09-12T11:57:39.765071+00:00"
     },
     {
       "name": "USGS Minerals",
@@ -412,7 +429,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
       "bytes": 4096,
-      "latency_ms": 1761.1,
+      "latency_ms": 2629.1,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -420,7 +437,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:10.564547+00:00"
+      "checked_at": "2026-09-12T11:57:41.376868+00:00"
     },
     {
       "name": "World Gold Council",
@@ -431,7 +448,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
       "bytes": 4096,
-      "latency_ms": 721.8,
+      "latency_ms": 644.3,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -439,7 +456,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:09.525841+00:00"
+      "checked_at": "2026-09-12T11:57:39.392388+00:00"
     },
     {
       "name": "LBMA",
@@ -450,7 +467,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
       "bytes": 4096,
-      "latency_ms": 2419.1,
+      "latency_ms": 1982.0,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -458,7 +475,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:11.235278+00:00"
+      "checked_at": "2026-09-12T11:57:40.730485+00:00"
     },
     {
       "name": "CFTC",
@@ -469,7 +486,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 253.4,
+      "latency_ms": 425.7,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -477,7 +494,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:09.074590+00:00"
+      "checked_at": "2026-09-12T11:57:39.189094+00:00"
     },
     {
       "name": "UN Comtrade",
@@ -494,7 +511,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:10.088304+00:00"
+      "checked_at": "2026-09-12T11:57:39.827080+00:00"
     },
     {
       "name": "UNCTADstat",
@@ -505,7 +522,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 4096,
-      "latency_ms": 1255.0,
+      "latency_ms": 1482.8,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -513,7 +530,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:10.080928+00:00"
+      "checked_at": "2026-09-12T11:57:40.252175+00:00"
     },
     {
       "name": "FAOSTAT",
@@ -524,7 +541,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 3752,
-      "latency_ms": 448.6,
+      "latency_ms": 625.9,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -532,7 +549,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:09.290765+00:00"
+      "checked_at": "2026-09-12T11:57:39.419141+00:00"
     },
     {
       "name": "ILOStat",
@@ -549,7 +566,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:09.293498+00:00"
+      "checked_at": "2026-09-12T11:57:39.384080+00:00"
     },
     {
       "name": "WHO Data",
@@ -560,7 +577,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 404.1,
+      "latency_ms": 857.8,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -568,7 +585,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:09.257531+00:00"
+      "checked_at": "2026-09-12T11:57:39.657191+00:00"
     },
     {
       "name": "Reuters",
@@ -585,7 +602,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:09.231272+00:00"
+      "checked_at": "2026-09-12T11:57:39.366464+00:00"
     },
     {
       "name": "TSE Official Gateway",
@@ -601,7 +618,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:12.482615+00:00"
+      "checked_at": "2026-09-12T11:57:44.937011+00:00"
     },
     {
       "name": "TSETMC CDN Market Watch",
@@ -617,7 +634,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.323680+00:00"
+      "checked_at": "2026-09-12T11:57:48.453275+00:00"
     },
     {
       "name": "TSETMC Instrument Search",
@@ -633,7 +650,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.323895+00:00"
+      "checked_at": "2026-09-12T11:57:48.456457+00:00"
     },
     {
       "name": "TSETMC Index",
@@ -649,7 +666,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.323514+00:00"
+      "checked_at": "2026-09-12T11:57:48.457083+00:00"
     },
     {
       "name": "TSETMC Funds",
@@ -665,7 +682,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.323979+00:00"
+      "checked_at": "2026-09-12T11:57:48.455302+00:00"
     },
     {
       "name": "TSETMC Client Type",
@@ -681,7 +698,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.323600+00:00"
+      "checked_at": "2026-09-12T11:57:48.454889+00:00"
     },
     {
       "name": "TSETMC Market Overview",
@@ -697,7 +714,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.323316+00:00"
+      "checked_at": "2026-09-12T11:57:48.454136+00:00"
     },
     {
       "name": "TSETMC Codal Publisher",
@@ -713,7 +730,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.323017+00:00"
+      "checked_at": "2026-09-12T11:57:48.456279+00:00"
     },
     {
       "name": "TSETMC Messages",
@@ -729,7 +746,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.323222+00:00"
+      "checked_at": "2026-09-12T11:57:48.457167+00:00"
     },
     {
       "name": "TSETMC Shareholders",
@@ -745,7 +762,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.323388+00:00"
+      "checked_at": "2026-09-12T11:57:48.456739+00:00"
     },
     {
       "name": "TSETMC Trade Top",
@@ -761,7 +778,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.601475+00:00"
+      "checked_at": "2026-09-12T11:57:48.454333+00:00"
     },
     {
       "name": "TSETMC Price History",
@@ -777,7 +794,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:18.603361+00:00"
+      "checked_at": "2026-09-12T11:57:48.452764+00:00"
     },
     {
       "name": "Codal",
@@ -793,7 +810,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:12.980331+00:00"
+      "checked_at": "2026-09-12T11:57:47.993632+00:00"
     },
     {
       "name": "Central Bank of Iran",
@@ -804,7 +821,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 3051.9,
+      "latency_ms": 2005.4,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -812,7 +829,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:12.505665+00:00"
+      "checked_at": "2026-09-12T11:57:41.609860+00:00"
     },
     {
       "name": "Statistical Center of Iran",
@@ -820,7 +837,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "topic": "iran_macro",
       "url": "https://www.amar.org.ir/",
       "status": "unavailable",
-      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
       "content_check": "failed",
       "state": "unavailable",
       "freshness": 0.75,
@@ -828,7 +845,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:10.358425+00:00"
+      "checked_at": "2026-09-12T11:57:40.516514+00:00"
     },
     {
       "name": "Iran Mercantile Exchange",
@@ -844,7 +861,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:13.066188+00:00"
+      "checked_at": "2026-09-12T11:57:43.245523+00:00"
     },
     {
       "name": "Iran Energy Exchange",
@@ -860,7 +877,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:11.008867+00:00"
+      "checked_at": "2026-09-12T11:57:40.926854+00:00"
     },
     {
       "name": "Iran Customs",
@@ -876,7 +893,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:20.090418+00:00"
+      "checked_at": "2026-09-12T11:57:49.845936+00:00"
     },
     {
       "name": "Ministry of Industry Mine Trade",
@@ -892,7 +909,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:13.470921+00:00"
+      "checked_at": "2026-09-12T11:57:43.870659+00:00"
     },
     {
       "name": "Ministry of Petroleum",
@@ -903,7 +920,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 1099.1,
+      "latency_ms": 869.3,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -911,7 +928,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:11.229925+00:00"
+      "checked_at": "2026-09-12T11:57:41.121750+00:00"
     },
     {
       "name": "SHANA",
@@ -922,7 +939,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html;charset=UTF-8",
       "bytes": 4096,
-      "latency_ms": 1415.2,
+      "latency_ms": 1100.1,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -930,7 +947,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:11.773821+00:00"
+      "checked_at": "2026-09-12T11:57:41.616821+00:00"
     },
     {
       "name": "Iran Power Grid Management",
@@ -946,7 +963,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:14.057167+00:00"
+      "checked_at": "2026-09-12T11:57:44.164155+00:00"
     },
     {
       "name": "Iran Open Data",
@@ -957,7 +974,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 1322.8,
+      "latency_ms": 1079.6,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -965,7 +982,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:12.331919+00:00"
+      "checked_at": "2026-09-12T11:57:42.006668+00:00"
     },
     {
       "name": "World Bank Iran",
@@ -976,7 +993,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 249.8,
+      "latency_ms": 221.4,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -984,7 +1001,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:11.479919+00:00"
+      "checked_at": "2026-09-12T11:57:41.343381+00:00"
     },
     {
       "name": "IMF Iran",
@@ -1001,7 +1018,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:11.300985+00:00"
+      "checked_at": "2026-09-12T11:57:41.633136+00:00"
     },
     {
       "name": "UNData",
@@ -1012,7 +1029,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 659.4,
+      "latency_ms": 534.0,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1020,7 +1037,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:11.960633+00:00"
+      "checked_at": "2026-09-12T11:57:41.911033+00:00"
     },
     {
       "name": "UNDP Data",
@@ -1037,7 +1054,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:11.717619+00:00"
+      "checked_at": "2026-09-12T11:57:41.914531+00:00"
     },
     {
       "name": "FAO Iran",
@@ -1048,7 +1065,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 37.6,
+      "latency_ms": 230.9,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1056,7 +1073,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:11.755361+00:00"
+      "checked_at": "2026-09-12T11:57:41.847930+00:00"
     },
     {
       "name": "Energy Institute",
@@ -1073,7 +1090,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:13.553287+00:00"
+      "checked_at": "2026-09-12T11:57:42.080612+00:00"
     },
     {
       "name": "Shanghai Futures Exchange",
@@ -1084,7 +1101,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 951.8,
+      "latency_ms": 1618.0,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1092,7 +1109,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:12.725806+00:00"
+      "checked_at": "2026-09-12T11:57:43.466271+00:00"
     },
     {
       "name": "LME",
@@ -1109,7 +1126,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:11.997949+00:00"
+      "checked_at": "2026-09-12T11:57:42.049144+00:00"
     },
     {
       "name": "CME Group",
@@ -1126,7 +1143,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:12.005224+00:00"
+      "checked_at": "2026-09-12T11:57:42.092888+00:00"
     },
     {
       "name": "ICE Markets",
@@ -1137,7 +1154,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 91.5,
+      "latency_ms": 180.6,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1145,7 +1162,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:12.089642+00:00"
+      "checked_at": "2026-09-12T11:57:42.187388+00:00"
     },
     {
       "name": "Nasdaq",
@@ -1156,7 +1173,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
       "bytes": 4096,
-      "latency_ms": 2247.5,
+      "latency_ms": 1254.8,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1164,7 +1181,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:14.252895+00:00"
+      "checked_at": "2026-09-12T11:57:43.304154+00:00"
     },
     {
       "name": "S&P Global",
@@ -1181,7 +1198,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0,
       "eligible_for_aggregation": false,
       "retry_next_run": true,
-      "checked_at": "2026-09-10T12:34:12.111604+00:00"
+      "checked_at": "2026-09-12T11:57:42.189389+00:00"
     },
     {
       "name": "Trading Economics",
@@ -1192,7 +1209,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 98.3,
+      "latency_ms": 245.0,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1200,7 +1217,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:12.188184+00:00"
+      "checked_at": "2026-09-12T11:57:42.338062+00:00"
     },
     {
       "name": "CEIC Iran",
@@ -1211,7 +1228,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 2064.6,
+      "latency_ms": 601.1,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1219,7 +1236,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:14.176415+00:00"
+      "checked_at": "2026-09-12T11:57:42.788745+00:00"
     },
     {
       "name": "Global Rates",
@@ -1230,7 +1247,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 1409.0,
+      "latency_ms": 1085.0,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1238,7 +1255,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:13.597356+00:00"
+      "checked_at": "2026-09-12T11:57:43.274605+00:00"
     },
     {
       "name": "Investing Iran Markets",
@@ -1249,7 +1266,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 120.7,
+      "latency_ms": 166.3,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1257,7 +1274,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:12.452833+00:00"
+      "checked_at": "2026-09-12T11:57:42.360815+00:00"
     },
     {
       "name": "Kpler",
@@ -1268,7 +1285,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 72.4,
+      "latency_ms": 159.8,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1276,7 +1293,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:12.525408+00:00"
+      "checked_at": "2026-09-12T11:57:42.498083+00:00"
     },
     {
       "name": "Vortexa",
@@ -1287,7 +1304,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4096,
-      "latency_ms": 1033.9,
+      "latency_ms": 1274.7,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1295,7 +1312,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:13.516717+00:00"
+      "checked_at": "2026-09-12T11:57:43.635808+00:00"
     },
     {
       "name": "MarineTraffic",
@@ -1306,7 +1323,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
       "bytes": 3748,
-      "latency_ms": 28.6,
+      "latency_ms": 99.4,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1314,7 +1331,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:12.534311+00:00"
+      "checked_at": "2026-09-12T11:57:42.499894+00:00"
     },
     {
       "name": "Windy",
@@ -1325,7 +1342,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 4096,
-      "latency_ms": 154.3,
+      "latency_ms": 189.5,
       "content_check": "nonempty",
       "state": "ok",
       "freshness": 0.75,
@@ -1333,7 +1350,7 @@ SOURCE FILE: reports/babimind_pipeline.json
       "signal_weight": 0.6887,
       "eligible_for_aggregation": true,
       "retry_next_run": false,
-      "checked_at": "2026-09-10T12:34:12.679903+00:00"
+      "checked_at": "2026-09-12T11:57:42.687814+00:00"
     }
   ],
   "routing": [
@@ -1573,9 +1590,9 @@ SOURCE FILE: reports/babimind_graph.json
 {
   "model": "BabiMind",
   "component": "Graph Intelligence",
-  "generated_at": "2026-09-10T12:34:08.687428+00:00",
+  "generated_at": "2026-09-12T11:57:38.672763+00:00",
   "graph_available": true,
-  "graph_snapshot_id": "20260910T123408Z",
+  "graph_snapshot_id": "20260912T115738Z",
   "graph_score": 1.0,
   "graph_confidence": 0.75,
   "graph_regime": "bullish",
@@ -1591,6 +1608,26 @@ SOURCE FILE: reports/babimind_graph.json
       "contribution": 0.75
     },
     {
+      "source": "app_intermarket_model_evaluate",
+      "target": "app_intermarket_model_weighted_signal_score",
+      "contribution": 0.75
+    },
+    {
+      "source": "app_intermarket_model_marks_second_level_gate",
+      "target": "app_intermarket_model_clamp",
+      "contribution": 0.75
+    },
+    {
+      "source": "app_intermarket_model_rotation_score",
+      "target": "app_intermarket_model_clamp",
+      "contribution": 0.75
+    },
+    {
+      "source": "app_intermarket_model_weighted_signal_score",
+      "target": "app_intermarket_model_clamp",
+      "contribution": 0.75
+    },
+    {
       "source": "realtime_api_equity_market",
       "target": "realtime_api_snapshot",
       "contribution": 0.75
@@ -1599,29 +1636,39 @@ SOURCE FILE: reports/babimind_graph.json
       "source": "realtime_api_options_market",
       "target": "realtime_api_snapshot",
       "contribution": 0.75
-    },
-    {
-      "source": "realtime_api_sse_market",
-      "target": "streamingresponse",
-      "contribution": 0.75
-    },
-    {
-      "source": "scan_market_main",
-      "target": "scan_market_fetch_all_symbols",
-      "contribution": 0.75
-    },
-    {
-      "source": "scripts_babimind_global_market_main",
-      "target": "scripts_babimind_global_market_py_path",
-      "contribution": 0.75
-    },
-    {
-      "source": "scripts_backfill_main",
-      "target": "scripts_backfill_refresh_market",
-      "contribution": 0.75
     }
   ],
   "graph_risk_drivers": [
+    {
+      "source": "app_intermarket_model",
+      "target": "app_intermarket_model_evaluate",
+      "contribution": 0.0432
+    },
+    {
+      "source": "app_intermarket_model",
+      "target": "app_intermarket_model_rotation_score",
+      "contribution": 0.0618
+    },
+    {
+      "source": "app_intermarket_model_evaluate",
+      "target": "app_intermarket_model_intermarketsignal",
+      "contribution": 0.0882
+    },
+    {
+      "source": "app_intermarket_model",
+      "target": "app_intermarket_model_marks_second_level_gate",
+      "contribution": 0.0882
+    },
+    {
+      "source": "app_intermarket_model_evaluate",
+      "target": "app_intermarket_model_classify_regime",
+      "contribution": 0.1261
+    },
+    {
+      "source": "app_intermarket_model",
+      "target": "app_intermarket_model_classify_regime",
+      "contribution": 0.1261
+    },
     {
       "source": "scan_market",
       "target": "scan_market_print_market_summary",
@@ -1631,48 +1678,18 @@ SOURCE FILE: reports/babimind_graph.json
       "source": "scripts_ingest_option_market_watch",
       "target": "scripts_ingest_option_market_watch_parse_rows",
       "contribution": 0.1261
-    },
-    {
-      "source": "scan_market",
-      "target": "scan_market_save_csv",
-      "contribution": 0.1801
-    },
-    {
-      "source": "scripts_ingest_option_market_watch",
-      "target": "scripts_ingest_option_market_watch_int_num",
-      "contribution": 0.1801
-    },
-    {
-      "source": "scan_market_main",
-      "target": "scan_market_print_market_summary",
-      "contribution": 0.2572
-    },
-    {
-      "source": "realtime_api",
-      "target": "realtime_api_websocket_market",
-      "contribution": 0.2572
-    },
-    {
-      "source": "scan_market",
-      "target": "scan_market_save_json",
-      "contribution": 0.2572
-    },
-    {
-      "source": "scripts_ingest_option_market_watch",
-      "target": "scripts_ingest_option_market_watch_num",
-      "contribution": 0.2572
     }
   ],
-  "edges_used": 72,
-  "correlation_penalty": 0.2348,
+  "edges_used": 99,
+  "correlation_penalty": 0.2726,
   "missing_data_policy": "MISSING_IS_NOT_ZERO"
 }
 
 SOURCE FILE: reports/babimind_memory_context.json
 {
   "memory_version": 2,
-  "historical_runs_available": 2,
-  "context_runs": 2,
+  "historical_runs_available": 3,
+  "context_runs": 3,
   "recent_runs": [
     {
       "timestamp": "2026-09-08T13:26:25.411222+00:00",
@@ -1964,6 +1981,159 @@ SOURCE FILE: reports/babimind_memory_context.json
         ]
       },
       "fingerprint": "26dcb23cdeddd9c2a278"
+    },
+    {
+      "timestamp": "2026-09-10T12:35:03.908601+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": {
+        "label": "bullish",
+        "evidence": [
+          "graph_intelligence.graph_regime: bullish",
+          "graph_intelligence.graph_score: 1.0",
+          "graph_intelligence.graph_confidence: 0.75",
+          "symbol_thesis.فملی.scenario_weights.bull: 0.45",
+          "factor_coverage: 285 available factors, including metals_mining and precious_metals clusters",
+          "memory historical runs consistently show bullish bias for فملی"
+        ],
+        "inference": "The regime is bullish, driven by copper price sensitivity, volume-led expansion, and risk-on market sentiment. However, the absence of real-time Iranian market data and option chain information limits the ability to confirm the strength and sustainability of this regime.",
+        "uncertainty": "Real-time Iranian market data unavailable; option chain data missing; many TSE sources timed out; global market snapshot shows 'pending_upstream_data'.",
+        "confidence": 0.7
+      },
+      "scenarios": {
+        "bull": {
+          "probability": 0.45,
+          "target_price_rial": 23000,
+          "time_horizon": "Q2-Q3 1405",
+          "key_triggers": [
+            "global copper supply disruption or tightness",
+            "higher copper benchmark",
+            "higher realized sales price / margins",
+            "higher FMLI earnings expectations",
+            "fund-flow rotation toward large liquid commodity leaders",
+            "technical breakout or continuation",
+            "option convexity increases demand for calls"
+          ],
+          "risk_factors": [
+            "copper price pullback",
+            "volume deterioration",
+            "broader market risk-off",
+            "sales growth rolls over for two consecutive releases",
+            "volume falls while revenue is supported only by price",
+            "copper price breaks down materially and remains weak",
+            "stock leadership disappears while market breadth remains healthy"
+          ],
+          "source": "memory and symbol thesis"
+        },
+        "base": {
+          "probability": 0.4,
+          "target_price_rial": 21500,
+          "time_horizon": "Q2 1405",
+          "key_triggers": [
+            "steady sales growth",
+            "maintained market leadership",
+            "stable commodity prices"
+          ],
+          "risk_factors": [
+            "sales growth slowdown",
+            "increased competition",
+            "currency volatility"
+          ],
+          "source": "memory and symbol thesis"
+        },
+        "bear": {
+          "probability": 0.15,
+          "target_price_rial": 18800,
+          "time_horizon": "Q1-Q2 1405",
+          "key_triggers": [
+            "copper price breakdown",
+            "volume collapse",
+            "real money flow deterioration"
+          ],
+          "risk_factors": [
+            "global risk-off spread",
+            "commodity cycle peak",
+            "operational execution issues"
+          ],
+          "source": "memory and symbol thesis"
+        }
+      },
+      "market_implications": {
+        "sector_rotation": {
+          "beneficiaries": [
+            "metals_mining",
+            "energy_sector",
+            "commodity_traders"
+          ],
+          "losers": [
+            "import_depending_sectors",
+            "currency_hedge_strategies"
+          ],
+          "rotation_strength": "moderate_to_strong"
+        },
+        "valuation_impact": {
+          "multiple_expansion": "growth_stocks_outperform",
+          "sector_premium": "commodity_related_stocks_gain",
+          "currency_effect": "rial_weakness_boosts_exporters"
+        },
+        "risk_environment": {
+          "primary_risks": [
+            "commodity_price_volatility",
+            "currency_risk",
+            "geopolitical_tensions"
+          ],
+          "hedging_opportunities": [
+            "commodity_derivatives",
+            "currency_futures",
+            "geopolitical_insurance"
+          ],
+          "portfolio_implications": [
+            "increase_commodity_exposure",
+            "maintain_currency_hedges",
+            "diversify_geographic_risk"
+          ]
+        },
+        "evidence": [
+          "memory historical market_implications",
+          "symbol_thesis.فملی.price_map_rial"
+        ],
+        "uncertainty": "Lack of real-time market breadth data; option chain data missing."
+      },
+      "confidence": {
+        "overall_confidence": 0.68,
+        "data_quality_score": 0.6,
+        "model_reliability": 0.75,
+        "external_validation": 0.65,
+        "factors_adjusting_confidence": [
+          "limited_iranian_market_data_availability",
+          "high_growth_metrics_supporting_thesis",
+          "technical_accumulation_patterns",
+          "positive_graph_intelligence_signals",
+          "missing_option_chain_data",
+          "geopolitical uncertainty"
+        ]
+      },
+      "data_gaps": {
+        "critical_gaps": [
+          "real_time_iranian_market_data",
+          "comprehensive_option_chain_data",
+          "detailed_copper_price_forecasts",
+          "institutional_flow_data",
+          "real_time_fx_rates"
+        ],
+        "impact_assessment": {
+          "short_term_impact": "moderate_uncertainty_in_entry_timing",
+          "medium_term_impact": "some_uncertainty_in_position_sizing",
+          "long_term_impact": "minimal_for_overall_thesis_validity"
+        },
+        "mitigation_strategies": [
+          "use_technical_analysis_for_timing",
+          "employ_wide_stop_loss_levels",
+          "monitor_alternative_data_sources",
+          "maintain_flexible_position_sizing"
+        ]
+      },
+      "fingerprint": "183ed8ef92717a6522ba"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."
@@ -1972,12 +2142,12 @@ SOURCE FILE: reports/babimind_memory_context.json
 SOURCE FILE: reports/babimind_source_health.json
 {
   "model": "BabiMind",
-  "checked_at": "2026-09-10T12:17:00.378368+00:00",
+  "checked_at": "2026-09-12T11:40:20.055626+00:00",
   "summary": {
     "checked": 272,
-    "ok": 184,
+    "ok": 185,
     "unavailable": 38,
-    "error": 50,
+    "error": 49,
     "data_sources": 64,
     "news_sources": 97,
     "news_iran": 29,
@@ -1985,14 +2155,14 @@ SOURCE FILE: reports/babimind_source_health.json
     "class_counts": {
       "data": {
         "total": 64,
-        "ok": 31,
-        "error": 12,
+        "ok": 30,
+        "error": 13,
         "unavailable": 21
       },
       "expanded": {
         "total": 111,
-        "ok": 76,
-        "error": 22,
+        "ok": 78,
+        "error": 20,
         "unavailable": 13
       },
       "news": {
@@ -2012,9 +2182,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 204,
-      "latency_ms": 327.1,
+      "latency_ms": 3776.6,
       "bytes_sampled": 0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "IMF SDMX Central",
@@ -2025,8 +2195,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 400,
       "error": "HTTP Error 400: ",
-      "latency_ms": 729.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 911.0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "World Bank API",
@@ -2036,9 +2206,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 352.0,
+      "latency_ms": 298.5,
       "bytes_sampled": 309,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "BIS Statistics",
@@ -2048,9 +2218,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1346.7,
+      "latency_ms": 1177.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "OECD Data",
@@ -2061,8 +2231,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 256.4,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 294.1,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "FRED",
@@ -2072,9 +2242,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 31.9,
+      "latency_ms": 147.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "ECB Data API",
@@ -2084,9 +2254,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2548.4,
+      "latency_ms": 728.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "EIA",
@@ -2096,9 +2266,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 239.4,
+      "latency_ms": 237.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "IEA Data",
@@ -2109,8 +2279,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 210.5,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 172.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "OPEC",
@@ -2121,8 +2291,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 271.8,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 260.2,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "JODI",
@@ -2132,9 +2302,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 853.0,
+      "latency_ms": 740.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "USGS Minerals",
@@ -2144,9 +2314,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1910.4,
+      "latency_ms": 2909.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "World Gold Council",
@@ -2156,9 +2326,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 347.6,
+      "latency_ms": 305.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "LBMA",
@@ -2168,9 +2338,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1721.0,
+      "latency_ms": 1966.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "CFTC",
@@ -2180,9 +2350,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 50.7,
+      "latency_ms": 99.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "UN Comtrade",
@@ -2193,8 +2363,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 404,
       "error": "HTTP Error 404: Resource Not Found",
-      "latency_ms": 1597.4,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 521.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "UNCTADstat",
@@ -2204,9 +2374,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1176.9,
+      "latency_ms": 968.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "FAOSTAT",
@@ -2216,9 +2386,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 249.6,
+      "latency_ms": 367.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "ILOStat",
@@ -2229,8 +2399,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 23.6,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 89.3,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "WHO Data",
@@ -2240,9 +2410,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 183.3,
+      "latency_ms": 813.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Reuters",
@@ -2253,8 +2423,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 401,
       "error": "HTTP Error 401: HTTP Forbidden",
-      "latency_ms": 49.0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 278.2,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSE Official Gateway",
@@ -2264,8 +2434,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 15535.9,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15401.1,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC CDN Market Watch",
@@ -2275,8 +2445,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45383.4,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45266.8,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Instrument Search",
@@ -2286,8 +2456,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45250.6,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45281.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Index",
@@ -2297,8 +2467,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45368.6,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45265.6,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Funds",
@@ -2308,8 +2478,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45289.4,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45254.9,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Client Type",
@@ -2319,8 +2489,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 47432.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 48022.0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Market Overview",
@@ -2330,8 +2500,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45385.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45359.8,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Codal Publisher",
@@ -2341,8 +2511,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45415.1,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45057.2,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Messages",
@@ -2352,8 +2522,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45367.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45315.0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Shareholders",
@@ -2363,8 +2533,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45318.6,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45358.2,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Trade Top",
@@ -2374,8 +2544,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45280.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 47151.6,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "TSETMC Price History",
@@ -2385,8 +2555,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 45314.1,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45354.0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Codal",
@@ -2396,8 +2566,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 15676.9,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15742.4,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Central Bank of Iran",
@@ -2407,9 +2577,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1605.6,
+      "latency_ms": 3021.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Statistical Center of Iran",
@@ -2419,8 +2589,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error [Errno 104] Connection reset by peer>",
-      "latency_ms": 1322.1,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 808.6,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Mercantile Exchange",
@@ -2430,8 +2600,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 15544.8,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15618.0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Energy Exchange",
@@ -2441,8 +2611,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.irenex.ir'. (_ssl.c:1032)>",
-      "latency_ms": 1281.7,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 1975.4,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Customs",
@@ -2452,8 +2622,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error [Errno -3] Temporary failure in name resolution>",
-      "latency_ms": 10013.9,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 10022.3,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Ministry of Industry Mine Trade",
@@ -2463,8 +2633,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 15531.8,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15396.4,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Ministry of Petroleum",
@@ -2474,9 +2644,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1194.7,
+      "latency_ms": 1017.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "SHANA",
@@ -2486,9 +2656,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1651.6,
+      "latency_ms": 1412.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Power Grid Management",
@@ -2498,8 +2668,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 15462.9,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15368.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Open Data",
@@ -2509,9 +2679,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1314.9,
+      "latency_ms": 901.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "World Bank Iran",
@@ -2521,9 +2691,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 130.2,
+      "latency_ms": 194.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "IMF Iran",
@@ -2534,8 +2704,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 227.1,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 133.8,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "UNData",
@@ -2545,9 +2715,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 673.1,
+      "latency_ms": 499.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "UNDP Data",
@@ -2558,8 +2728,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 206.8,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 240.9,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "FAO Iran",
@@ -2569,9 +2739,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1739.6,
+      "latency_ms": 394.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Energy Institute",
@@ -2582,8 +2752,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 407.5,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 316.9,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Shanghai Futures Exchange",
@@ -2593,9 +2763,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1961.5,
+      "latency_ms": 1404.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "LME",
@@ -2606,8 +2776,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 48.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 137.4,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "CME Group",
@@ -2617,8 +2787,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 15091.1,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15164.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "ICE Markets",
@@ -2628,9 +2798,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 92.2,
+      "latency_ms": 227.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Nasdaq",
@@ -2640,8 +2810,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 15039.8,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15134.6,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "S&P Global",
@@ -2652,8 +2822,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 34.6,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 141.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Trading Economics",
@@ -2663,9 +2833,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 143.6,
+      "latency_ms": 166.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "CEIC Iran",
@@ -2675,9 +2845,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1395.9,
+      "latency_ms": 1839.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Global Rates",
@@ -2687,9 +2857,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1340.1,
+      "latency_ms": 1028.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Investing Iran Markets",
@@ -2697,11 +2867,11 @@ SOURCE FILE: reports/babimind_source_health.json
       "topic": "market",
       "url": "https://www.investing.com/",
       "source_class": "data",
-      "status": "ok",
-      "http_status": 200,
-      "latency_ms": 124.2,
-      "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "status": "error",
+      "http_status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "latency_ms": 81.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Kpler",
@@ -2711,9 +2881,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 70.5,
+      "latency_ms": 230.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Vortexa",
@@ -2723,9 +2893,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 469.8,
+      "latency_ms": 430.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "MarineTraffic",
@@ -2735,9 +2905,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 26.8,
+      "latency_ms": 176.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Windy",
@@ -2747,9 +2917,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 131.0,
+      "latency_ms": 305.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Tehran Stock Exchange",
@@ -2759,8 +2929,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 15535.6,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 17639.8,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Fara Bourse",
@@ -2770,8 +2940,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 30474.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 30427.0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Ministry of Economic Affairs and Finance",
@@ -2781,9 +2951,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1618.8,
+      "latency_ms": 1207.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "National Iranian Oil Company",
@@ -2793,9 +2963,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1184.8,
+      "latency_ms": 1010.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "National Iranian Gas Company",
@@ -2805,8 +2975,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 16279.0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 16150.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Ministry of Energy Iran",
@@ -2816,8 +2986,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 16181.0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 16034.0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Tax Administration",
@@ -2827,8 +2997,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 30416.0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 30597.6,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Ports and Maritime Organization",
@@ -2838,8 +3008,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 15557.5,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15400.2,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Chamber of Commerce",
@@ -2849,8 +3019,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error [Errno -2] Name or service not known>",
-      "latency_ms": 235.6,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 197.6,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Chamber Research Center",
@@ -2860,8 +3030,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error [Errno -2] Name or service not known>",
-      "latency_ms": 163.0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 221.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Sena",
@@ -2871,8 +3041,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 15517.7,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15720.1,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "WTO",
@@ -2882,9 +3052,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 348.2,
+      "latency_ms": 196.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "World Economic Forum",
@@ -2895,8 +3065,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 234.2,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 380.9,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Federal Reserve",
@@ -2906,9 +3076,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 113.6,
+      "latency_ms": 117.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "US Treasury",
@@ -2918,9 +3088,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 8052.2,
+      "latency_ms": 8161.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "BEA",
@@ -2930,9 +3100,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 276.4,
+      "latency_ms": 173.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "BLS",
@@ -2943,8 +3113,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 84.1,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 161.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "US Census Bureau",
@@ -2954,9 +3124,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 163.0,
+      "latency_ms": 178.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Eurostat",
@@ -2966,9 +3136,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 683.3,
+      "latency_ms": 549.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Bank of England",
@@ -2978,9 +3148,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 608.9,
+      "latency_ms": 543.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "ONS UK",
@@ -2990,9 +3160,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 518.4,
+      "latency_ms": 313.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Bank of Japan",
@@ -3002,9 +3172,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 179.3,
+      "latency_ms": 423.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Japan Statistics Bureau",
@@ -3014,9 +3184,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 498.2,
+      "latency_ms": 1149.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "PBOC",
@@ -3027,8 +3197,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 1514.1,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 2164.4,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "China National Bureau of Statistics",
@@ -3038,9 +3208,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 4438.8,
+      "latency_ms": 3432.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "China Customs",
@@ -3050,9 +3220,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1416.4,
+      "latency_ms": 1764.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "India RBI",
@@ -3062,9 +3232,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1388.6,
+      "latency_ms": 1287.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "India MOSPI",
@@ -3074,9 +3244,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1064.2,
+      "latency_ms": 1348.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Statistics Canada",
@@ -3086,9 +3256,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 377.3,
+      "latency_ms": 176.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Australian Bureau of Statistics",
@@ -3098,9 +3268,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 173.1,
+      "latency_ms": 512.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Swiss National Bank",
@@ -3110,9 +3280,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 826.1,
+      "latency_ms": 792.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Deutsche Bundesbank",
@@ -3122,9 +3292,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1026.4,
+      "latency_ms": 1035.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Banque de France",
@@ -3134,9 +3304,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 649.8,
+      "latency_ms": 686.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "SAMA",
@@ -3146,9 +3316,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2009.9,
+      "latency_ms": 1658.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "UAE Central Bank",
@@ -3159,8 +3329,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 739.9,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 867.3,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Turkish Statistical Institute",
@@ -3170,8 +3340,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 16977.8,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 17097.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Central Bank of Turkey",
@@ -3181,9 +3351,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 800.5,
+      "latency_ms": 805.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Central Bank of Russia",
@@ -3193,9 +3363,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1568.2,
+      "latency_ms": 1163.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Rosstat",
@@ -3205,8 +3375,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>",
-      "latency_ms": 989.7,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 820.4,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Argus Media",
@@ -3216,9 +3386,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 202,
-      "latency_ms": 37.2,
+      "latency_ms": 151.0,
       "bytes_sampled": 0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "S&P Global Commodity Insights",
@@ -3229,8 +3399,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 29.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 345.0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Platts",
@@ -3241,8 +3411,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 29.1,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 71.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "COMEX",
@@ -3252,8 +3422,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 15040.5,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15112.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "NYMEX",
@@ -3263,8 +3433,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 15026.5,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15078.4,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Genscape",
@@ -3275,8 +3445,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 93.4,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 201.9,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "OPIS",
@@ -3286,9 +3456,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 238.5,
+      "latency_ms": 183.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "EEX",
@@ -3298,9 +3468,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1522.6,
+      "latency_ms": 1549.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "ACER",
@@ -3310,9 +3480,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1639.5,
+      "latency_ms": 1582.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "World Platinum Investment Council",
@@ -3322,9 +3492,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 551.7,
+      "latency_ms": 492.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Moody's",
@@ -3334,9 +3504,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 85.0,
+      "latency_ms": 145.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Fitch Ratings",
@@ -3346,9 +3516,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 365.1,
+      "latency_ms": 402.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Morningstar",
@@ -3358,9 +3528,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 202,
-      "latency_ms": 46.5,
+      "latency_ms": 189.7,
       "bytes_sampled": 0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "MSCI",
@@ -3370,9 +3540,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 66.8,
+      "latency_ms": 203.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "NYSE",
@@ -3382,9 +3552,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 96.2,
+      "latency_ms": 237.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Cboe",
@@ -3394,9 +3564,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1296.1,
+      "latency_ms": 252.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "DTCC",
@@ -3406,9 +3576,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 114.9,
+      "latency_ms": 862.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "SEC EDGAR",
@@ -3419,8 +3589,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 83.8,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 151.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "FINRA",
@@ -3430,9 +3600,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 58.0,
+      "latency_ms": 231.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "LSEG",
@@ -3442,9 +3612,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 516.2,
+      "latency_ms": 528.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "FactSet",
@@ -3454,9 +3624,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 253.9,
+      "latency_ms": 220.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "IISS",
@@ -3466,9 +3636,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 368.9,
+      "latency_ms": 593.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Brookings Institution",
@@ -3478,9 +3648,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 58.8,
+      "latency_ms": 91.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "RAND",
@@ -3491,8 +3661,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 279.9,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 329.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Wilson Center",
@@ -3502,9 +3672,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 78.3,
+      "latency_ms": 403.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "ECFR",
@@ -3514,9 +3684,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 383.7,
+      "latency_ms": 262.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Bruegel",
@@ -3527,8 +3697,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 39.5,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 195.3,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Peterson Institute",
@@ -3538,9 +3708,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 109.7,
+      "latency_ms": 159.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Stimson Center",
@@ -3550,9 +3720,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 50.2,
+      "latency_ms": 112.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Middle East Institute",
@@ -3562,9 +3732,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 526.1,
+      "latency_ms": 360.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Washington Institute",
@@ -3574,9 +3744,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 80.3,
+      "latency_ms": 198.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Institute for the Study of War",
@@ -3586,9 +3756,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 51.8,
+      "latency_ms": 206.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "ACLED",
@@ -3598,9 +3768,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 259.6,
+      "latency_ms": 291.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "UN Security Council",
@@ -3608,11 +3778,11 @@ SOURCE FILE: reports/babimind_source_health.json
       "topic": "geopolitics",
       "url": "https://www.un.org/securitycouncil/",
       "source_class": "expanded",
-      "status": "error",
-      "http_status": 403,
-      "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 238.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "status": "ok",
+      "http_status": 202,
+      "latency_ms": 394.6,
+      "bytes_sampled": 0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "US State Department",
@@ -3623,8 +3793,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 290.2,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 253.0,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "US Treasury OFAC",
@@ -3634,9 +3804,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 10042.7,
+      "latency_ms": 8192.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "European Commission",
@@ -3646,9 +3816,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 898.2,
+      "latency_ms": 589.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "UK FCDO",
@@ -3658,9 +3828,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1529.9,
+      "latency_ms": 1271.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "NATO",
@@ -3670,9 +3840,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 35.3,
+      "latency_ms": 239.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "IAEA",
@@ -3683,8 +3853,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 40.6,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 85.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "OPCW",
@@ -3694,9 +3864,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 328.3,
+      "latency_ms": 139.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Reuters Markets",
@@ -3707,8 +3877,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 401,
       "error": "HTTP Error 401: HTTP Forbidden",
-      "latency_ms": 44.0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 320.8,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Bloomberg Markets",
@@ -3719,8 +3889,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 122.7,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 158.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Associated Press",
@@ -3731,8 +3901,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 29.7,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 45.1,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "AFP",
@@ -3742,9 +3912,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1752.8,
+      "latency_ms": 781.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "BBC",
@@ -3754,9 +3924,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 100.2,
+      "latency_ms": 132.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Al Jazeera",
@@ -3766,9 +3936,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 81.9,
+      "latency_ms": 245.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "France 24",
@@ -3778,9 +3948,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 797.4,
+      "latency_ms": 348.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Euronews",
@@ -3790,9 +3960,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 27.3,
+      "latency_ms": 109.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "DW",
@@ -3802,9 +3972,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 541.4,
+      "latency_ms": 473.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "South China Morning Post",
@@ -3814,9 +3984,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 38.3,
+      "latency_ms": 126.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Nikkei Asia",
@@ -3826,9 +3996,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1206.7,
+      "latency_ms": 3298.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Arab News",
@@ -3839,8 +4009,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 40.9,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 93.4,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "The National",
@@ -3850,9 +4020,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 493.7,
+      "latency_ms": 641.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Al Arabiya",
@@ -3863,8 +4033,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 141.8,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 129.9,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Al Monitor",
@@ -3874,9 +4044,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 297.6,
+      "latency_ms": 85.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "OilPrice",
@@ -3886,9 +4056,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 373.9,
+      "latency_ms": 205.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Rigzone",
@@ -3898,9 +4068,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 478.1,
+      "latency_ms": 400.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Offshore Energy",
@@ -3908,11 +4078,11 @@ SOURCE FILE: reports/babimind_source_health.json
       "topic": "energy",
       "url": "https://www.offshore-energy.biz/",
       "source_class": "expanded",
-      "status": "error",
-      "http_status": 403,
-      "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 68.7,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 206.6,
+      "bytes_sampled": 512,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Mining.com",
@@ -3923,8 +4093,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 35.0,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 146.3,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Kitco",
@@ -3934,9 +4104,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 224.9,
+      "latency_ms": 259.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "CoinDesk",
@@ -3947,8 +4117,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 429,
       "error": "HTTP Error 429: Too Many Requests",
-      "latency_ms": 36.7,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 189.4,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Foreign Affairs",
@@ -3958,9 +4128,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 66.6,
+      "latency_ms": 149.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Foreign Policy",
@@ -3970,9 +4140,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 59.6,
+      "latency_ms": 124.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "War on the Rocks",
@@ -3982,9 +4152,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 185.7,
+      "latency_ms": 323.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Council on Foreign Relations",
@@ -3994,9 +4164,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 412.7,
+      "latency_ms": 186.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Carnegie Endowment",
@@ -4006,9 +4176,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 27.2,
+      "latency_ms": 295.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Chatham House",
@@ -4018,9 +4188,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 302.2,
+      "latency_ms": 217.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Atlantic Council",
@@ -4030,9 +4200,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 242.9,
+      "latency_ms": 187.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "International Crisis Group",
@@ -4043,8 +4213,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 258.6,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 262.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "CSIS",
@@ -4054,9 +4224,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 272.8,
+      "latency_ms": 214.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "RUSI",
@@ -4066,9 +4236,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2658.0,
+      "latency_ms": 171.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "IRNA",
@@ -4080,9 +4250,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 827.2,
+      "latency_ms": 809.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "ISNA",
@@ -4094,9 +4264,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 973.7,
+      "latency_ms": 844.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Mehr News",
@@ -4108,9 +4278,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1193.4,
+      "latency_ms": 1195.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Tasnim",
@@ -4122,8 +4292,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "unavailable",
       "error": "<urlopen error [Errno -2] Name or service not known>",
-      "latency_ms": 27.4,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 59.6,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Fars",
@@ -4136,8 +4306,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "status": "error",
       "http_status": 500,
       "error": "HTTP Error 500: Internal Server Error",
-      "latency_ms": 2605.3,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 1992.5,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "YJC",
@@ -4149,9 +4319,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1535.9,
+      "latency_ms": 1591.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "PANA",
@@ -4163,9 +4333,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1215.4,
+      "latency_ms": 1257.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "IMNA",
@@ -4177,9 +4347,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 3477.1,
+      "latency_ms": 2492.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Shabestan",
@@ -4191,8 +4361,8 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 15736.7,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "latency_ms": 15599.7,
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "SNN",
@@ -4204,9 +4374,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1674.7,
+      "latency_ms": 1262.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Donya-e-Eqtesad",
@@ -4218,9 +4388,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 986.9,
+      "latency_ms": 938.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Eghtesad Online",
@@ -4232,9 +4402,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 884.4,
+      "latency_ms": 878.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "EcoIran",
@@ -4246,9 +4416,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1370.2,
+      "latency_ms": 1286.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Tejarat News",
@@ -4260,9 +4430,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 836.4,
+      "latency_ms": 897.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Eghtesad News",
@@ -4274,9 +4444,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1770.1,
+      "latency_ms": 1777.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Bourse News",
@@ -4288,9 +4458,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1223.7,
+      "latency_ms": 1216.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Bourse24",
@@ -4302,9 +4472,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1737.5,
+      "latency_ms": 1567.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Sedaye Bourse",
@@ -4316,9 +4486,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2716.4,
+      "latency_ms": 2957.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Iran Economist",
@@ -4330,9 +4500,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 944.1,
+      "latency_ms": 1272.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Khabar Online",
@@ -4344,9 +4514,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2159.8,
+      "latency_ms": 2146.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Tabnak",
@@ -4358,9 +4528,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1108.5,
+      "latency_ms": 1414.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Entekhab",
@@ -4372,9 +4542,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2389.0,
+      "latency_ms": 2449.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Fararu",
@@ -4386,9 +4556,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1324.5,
+      "latency_ms": 978.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-09-10T12:17:00.378368+00:00"
+      "checked_at": "2026-09-12T11:40:20.055626+00:00"
     },
     {
       "name": "Asr Iran",
@@ -4400,9 +4570,9 @@ SOURCE FILE: reports/babimind_source_health.json
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 900.3,
+      "latency_ms": 1108.4,
       "bytes_sampled": 512,
-      "checked_at": "2
+      "checked_at":
 
 SOURCE FILE: reports/babimind_factor_coverage.json
 {
@@ -4416,7 +4586,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
   },
   "covered": 500,
   "coverage_percent": 100.0,
-  "healthy_source_count": 182,
+  "healthy_source_count": 183,
   "records": [
     {
       "factor_id": "F001",
@@ -4559,6 +4729,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -4578,7 +4749,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F009",
@@ -4861,6 +5032,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -4880,7 +5052,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F023",
@@ -5163,6 +5335,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -5182,7 +5355,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F037",
@@ -5465,6 +5638,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -5484,7 +5658,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F051",
@@ -5767,6 +5941,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -5786,7 +5961,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F065",
@@ -6069,6 +6244,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -6088,7 +6264,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F079",
@@ -6371,6 +6547,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -6390,7 +6567,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F093",
@@ -6673,6 +6850,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -6692,7 +6870,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F107",
@@ -6975,6 +7153,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -6994,7 +7173,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F121",
@@ -7277,6 +7456,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -7296,7 +7476,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F135",
@@ -7579,6 +7759,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "status": "Available",
       "healthy_sources": [
         "US Treasury OFAC",
+        "UN Security Council",
         "European Commission",
         "UK FCDO",
         "AFP",
@@ -7598,7 +7779,7 @@ SOURCE FILE: reports/babimind_factor_coverage.json
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 6
     },
     {
       "factor_id": "F149",
@@ -7751,29 +7932,12 @@ SOURCE FILE: reports/babimind_factor_coverage.json
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
-        "IMF",
-        "World Bank",
-        "BIS",
-        "OECD",
-        "FRED"
-      ],
-      "source_count": 2
-    },
-    {
-      "factor_id": "F156",
-      "group": "inflation",
-      "status": "Partial",
-      "healthy_sources": [
-        "Central Bank of Iran"
-      ],
-      "candidate_sources": [
-        "Central Bank of Iran",
-      
+    
 
 SOURCE FILE: reports/babimind_factor_rotation.json
 {
   "model": "BabiMind",
-  "generated_at": "2026-09-10T12:34:20.210798+00:00",
+  "generated_at": "2026-09-12T11:57:49.927200+00:00",
   "factor_count": 490,
   "clusters": {
     "technology_ai": [
@@ -10793,9 +10957,9 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "IMF Data API",
       "topic": "macro",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
-      "tier": "C",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
       "status": "ok"
     },
     {
@@ -10841,8 +11005,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "ECB Data API",
       "topic": "rates_fx",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -10913,16 +11077,16 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "UN Comtrade",
       "topic": "trade",
-      "confidence": 0.054,
-      "signal_weight": 0.2905,
+      "confidence": 0.06,
+      "signal_weight": 0.295,
       "tier": "D",
       "status": "error"
     },
     {
       "source": "UNCTADstat",
       "topic": "trade",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -11065,16 +11229,16 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Central Bank of Iran",
       "topic": "iran_macro",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
-      "tier": "C",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
       "status": "ok"
     },
     {
       "source": "Statistical Center of Iran",
       "topic": "iran_macro",
-      "confidence": 0.135,
-      "signal_weight": 0.3513,
+      "confidence": 0.15,
+      "signal_weight": 0.3625,
       "tier": "D",
       "status": "unavailable"
     },
@@ -11137,8 +11301,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Iran Open Data",
       "topic": "iran_macro",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -11177,8 +11341,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "FAO Iran",
       "topic": "agriculture",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -11265,10 +11429,10 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Investing Iran Markets",
       "topic": "market",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
-      "tier": "C",
-      "status": "ok"
+      "confidence": 0.06,
+      "signal_weight": 0.295,
+      "tier": "D",
+      "status": "error"
     },
     {
       "source": "Kpler",
@@ -11481,8 +11645,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Japan Statistics Bureau",
       "topic": "macro",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -11737,8 +11901,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Cboe",
       "topic": "volatility",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -11881,10 +12045,10 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "UN Security Council",
       "topic": "geopolitics",
-      "confidence": 0.06,
-      "signal_weight": 0.295,
-      "tier": "D",
-      "status": "error"
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
     },
     {
       "source": "US State Department",
@@ -11969,8 +12133,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "AFP",
       "topic": "events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -12025,9 +12189,9 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Nikkei Asia",
       "topic": "asia",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
-      "tier": "C",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
       "status": "ok"
     },
     {
@@ -12081,10 +12245,10 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Offshore Energy",
       "topic": "energy",
-      "confidence": 0.06,
-      "signal_weight": 0.295,
-      "tier": "D",
-      "status": "error"
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
+      "status": "ok"
     },
     {
       "source": "Mining.com",
@@ -12185,8 +12349,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "RUSI",
       "topic": "security",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -12249,9 +12413,9 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "IMNA",
       "topic": "news_events",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
-      "tier": "D",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
       "status": "ok"
     },
     {
@@ -12337,8 +12501,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Iran Economist",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -12369,16 +12533,16 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Fararu",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "Asr Iran",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -12409,17 +12573,17 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Aftab News",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "Hamshahri Online",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
-      "tier": "C",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
       "status": "ok"
     },
     {
@@ -12633,8 +12797,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "The Times UK",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -12705,8 +12869,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Interfax",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -12785,8 +12949,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Global Times",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -12801,8 +12965,8 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Japan Times",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -12865,16 +13029,16 @@ SOURCE FILE: reports/babimind_signal_weights.json
     {
       "source": "Korea Herald",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "Yonhap",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -12974,7 +13138,7 @@ SOURCE FILE: reports/option_market_watch_summary.json
 {
   "source": "data/latest/OptionMarketWatch.csv",
   "source_type": "repository_snapshot",
-  "generated_at": "2026-09-10T12:16:58.875009+00:00",
+  "generated_at": "2026-09-12T11:40:18.747958+00:00",
   "record_count": 0,
   "underlying_count": 0,
   "underlyings": {},
@@ -12991,7 +13155,7 @@ SOURCE FILE: reports/marketwatch_plus_summary.json
 {
   "source": "data/latest/MarketWatchPlus-1405_06_07.xlsx",
   "snapshot_date": "1405-06-07",
-  "generated_at": "2026-09-10T12:16:59.613642Z",
+  "generated_at": "2026-09-12T11:40:19.379041Z",
   "sheet_count": 1,
   "total_data_rows": 3257,
   "sheets": {
@@ -13045,7 +13209,7 @@ SOURCE FILE: data/raw/finpy_tse_snapshot.json
 {
   "source": "finpy-tse",
   "upstream": "https://github.com/ARahimiQuant/finpy-tse",
-  "collected_at": "2026-09-10",
+  "collected_at": "2026-09-12",
   "status": {
     "source": "finpy-tse",
     "upstream": "https://github.com/ARahimiQuant/finpy-tse",
@@ -13059,12 +13223,12 @@ SOURCE FILE: data/raw/finpy_tse_snapshot.json
       "ri_history": [],
       "price_request": {
         "status": "timeout",
-        "elapsed_seconds": 20.004,
+        "elapsed_seconds": 20.003,
         "error": "فملی price history timed out after 20s; child process terminated"
       },
       "ri_request": {
         "status": "timeout",
-        "elapsed_seconds": 20.005,
+        "elapsed_seconds": 20.003,
         "error": "فملی RI history timed out after 20s; child process terminated"
       }
     },
@@ -13073,12 +13237,12 @@ SOURCE FILE: data/raw/finpy_tse_snapshot.json
       "ri_history": [],
       "price_request": {
         "status": "timeout",
-        "elapsed_seconds": 20.005,
+        "elapsed_seconds": 20.004,
         "error": "وبملت price history timed out after 20s; child process terminated"
       },
       "ri_request": {
         "status": "timeout",
-        "elapsed_seconds": 20.004,
+        "elapsed_seconds": 20.003,
         "error": "وبملت RI history timed out after 20s; child process terminated"
       }
     },
@@ -13087,7 +13251,7 @@ SOURCE FILE: data/raw/finpy_tse_snapshot.json
       "ri_history": [],
       "price_request": {
         "status": "timeout",
-        "elapsed_seconds": 20.005,
+        "elapsed_seconds": 20.004,
         "error": "شپنا price history timed out after 20s; child process terminated"
       },
       "ri_request": {
@@ -13101,12 +13265,12 @@ SOURCE FILE: data/raw/finpy_tse_snapshot.json
       "ri_history": [],
       "price_request": {
         "status": "timeout",
-        "elapsed_seconds": 20.005,
+        "elapsed_seconds": 20.004,
         "error": "خساپا price history timed out after 20s; child process terminated"
       },
       "ri_request": {
         "status": "timeout",
-        "elapsed_seconds": 20.005,
+        "elapsed_seconds": 20.004,
         "error": "خساپا RI history timed out after 20s; child process terminated"
       }
     }
@@ -13114,7 +13278,7 @@ SOURCE FILE: data/raw/finpy_tse_snapshot.json
   "market_watch": [],
   "market_watch_request": {
     "status": "timeout",
-    "elapsed_seconds": 20.005,
+    "elapsed_seconds": 20.004,
     "error": "market watch timed out after 20s; child process terminated"
   },
   "collection_status": "degraded",
@@ -13122,31 +13286,31 @@ SOURCE FILE: data/raw/finpy_tse_snapshot.json
     {
       "scope": "فملی.price_request",
       "status": "timeout",
-      "elapsed_seconds": 20.004,
+      "elapsed_seconds": 20.003,
       "error": "فملی price history timed out after 20s; child process terminated"
     },
     {
       "scope": "فملی.ri_request",
       "status": "timeout",
-      "elapsed_seconds": 20.005,
+      "elapsed_seconds": 20.003,
       "error": "فملی RI history timed out after 20s; child process terminated"
     },
     {
       "scope": "وبملت.price_request",
       "status": "timeout",
-      "elapsed_seconds": 20.005,
+      "elapsed_seconds": 20.004,
       "error": "وبملت price history timed out after 20s; child process terminated"
     },
     {
       "scope": "وبملت.ri_request",
       "status": "timeout",
-      "elapsed_seconds": 20.004,
+      "elapsed_seconds": 20.003,
       "error": "وبملت RI history timed out after 20s; child process terminated"
     },
     {
       "scope": "شپنا.price_request",
       "status": "timeout",
-      "elapsed_seconds": 20.005,
+      "elapsed_seconds": 20.004,
       "error": "شپنا price history timed out after 20s; child process terminated"
     },
     {
@@ -13158,19 +13322,19 @@ SOURCE FILE: data/raw/finpy_tse_snapshot.json
     {
       "scope": "خساپا.price_request",
       "status": "timeout",
-      "elapsed_seconds": 20.005,
+      "elapsed_seconds": 20.004,
       "error": "خساپا price history timed out after 20s; child process terminated"
     },
     {
       "scope": "خساپا.ri_request",
       "status": "timeout",
-      "elapsed_seconds": 20.005,
+      "elapsed_seconds": 20.004,
       "error": "خساپا RI history timed out after 20s; child process terminated"
     },
     {
       "scope": "market_watch",
       "status": "timeout",
-      "elapsed_seconds": 20.005,
+      "elapsed_seconds": 20.004,
       "error": "market watch timed out after 20s; child process terminated"
     }
   ]
@@ -13182,7 +13346,7 @@ SOURCE FILE: data/raw/option_market_watch_snapshot.json
   "summary": {
     "source": "data/latest/OptionMarketWatch.csv",
     "source_type": "repository_snapshot",
-    "generated_at": "2026-09-10T12:16:58.875009+00:00",
+    "generated_at": "2026-09-12T11:40:18.747958+00:00",
     "record_count": 0,
     "underlying_count": 0,
     "underlyings": {},
@@ -13201,7 +13365,7 @@ SOURCE FILE: data/raw/marketwatch_plus_snapshot.json
   "source": "data/latest/MarketWatchPlus-1405_06_07.xlsx",
   "source_type": "repository_excel_snapshot",
   "snapshot_date": "1405-06-07",
-  "generated_at": "2026-09-10T12:16:59.613642Z",
+  "generated_at": "2026-09-12T11:40:19.379041Z",
   "sheet_count": 1,
   "total_data_rows": 3257,
   "total_rows_including_headers": 3258,
@@ -16336,24 +16500,30 @@ SOURCE FILE: data/raw/marketwatch_plus_snapshot.json
 SOURCE FILE: data/raw/tse_option_snapshot.json
 {
   "source": "sm-sokout/tse-option",
-  "status": "error",
-  "data": [],
-  "error": "collector output is missing",
   "upstream": "https://github.com/sm-sokout/tse-option.git",
   "ref": "master",
+  "symbol": "فملی",
+  "trading_days": 100,
+  "collected_at_utc": "2026-09-10T13:11:30.495606+00:00",
+  "status": "error",
+  "mode": "none",
+  "columns": [],
+  "rows": [],
+  "error": "mode=greeks exit=124: timeout after 60s | mode=raw exit=124: timeout after 60s",
   "commit": "4731be596b139c9328170762cefbbd0cd440b1d8",
   "provenance": {
     "source": "sm-sokout/tse-option",
     "upstream": "https://github.com/sm-sokout/tse-option.git",
     "ref": "master",
     "commit": "4731be596b139c9328170762cefbbd0cd440b1d8"
-  }
+  },
+  "data": []
 }
 
 SOURCE FILE: artifacts/babimind_global_market_snapshot.json
 {
   "model": "BabiMind",
-  "as_of": "2026-09-10T12:34:06.682379+00:00",
+  "as_of": "2026-09-12T11:57:37.323356+00:00",
   "config": "config/babimind_global_market_map.yml",
   "global_regime": "pending_upstream_data",
   "transmission": {
@@ -18853,57 +19023,57 @@ SOURCE FILE: artifacts/babimind_pezeshkian_news.json
     "relevance
 
 SOURCE FILE: memory/news-daily-latest.md
-# Daily Economic News Digest — 2026-09-10 12:34 UTC
+# Daily Economic News Digest — 2026-09-12 11:57 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **159** · Total stored: **616**
+> New items this run: **138** · Total stored: **753**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Iran war: As oil price balloons, Africa’s fuel-price shield becomes a fiscal test - The Africa Report | The Africa Report | Thu, 30 Apr 2026 07:00 |
-| macro_monetary | How the Iran war is affecting Latin America and the Caribbean’s economic outlook - Atlantic Council | Atlantic Council | Wed, 06 May 2026 07:00 |
-| macro_monetary | Quantifying the impact of the Iran war on US inflation - CEPR | CEPR | Mon, 04 May 2026 07:00 |
-| macro_monetary | 61 days later, no plan: Trump’s Iran war drives national gas prices to a four-year high, sending prices soaring across t | California State Portal | CA.gov | Thu, 30 Apr 2026 07:00 |
-| macro_monetary | Iran signals gas price hike as fuel crisis looms - DW.com | DW.com | Wed, 29 Jul 2026 07:00 |
-| macro_monetary | Iran doubles gasoline price for heavy users amid war and inflation strain - India Today | India Today | Mon, 07 Sep 2026 20:58 |
-| macro_monetary | Iran’s Regime Doubles Gasoline Price as Fuel Crisis Deepens and Fear of Protests Grows - irannewsupdate.com | irannewsupdate.com | Wed, 09 Sep 2026 06:46 |
-| macro_monetary | Iran’s gasoline price hike may add to revenues, but can it ease fuel shortage? - Iran International | Iran International | Tue, 08 Sep 2026 21:25 |
-| oil | U.S. stocks fall on Wall Street as oil prices jump back above US$100 a barrel after Iran war escalates - BNN Bloomberg | BNN Bloomberg | Wed, 09 Sep 2026 11:05 |
-| oil | Oil rises as Trump threatens sanctions on Iran partners - Reuters | Reuters | Fri, 21 Aug 2026 07:00 |
-| oil | Oil prices settle near 4-week high as Middle East crisis escalates - Reuters | Reuters | Wed, 19 Aug 2026 07:00 |
-| oil | Current price of oil as of August 25, 2026 - Fortune | Fortune | Tue, 25 Aug 2026 07:00 |
-| oil | Oil settles down more than 3%; investors shrug off US sanctions on Iran - Reuters | Reuters | Tue, 25 Aug 2026 07:00 |
-| oil | Oil Prices Fall Ahead of U.S. Vow to Intensify Economic War Against Iran - The New York Times | The New York Times | Mon, 24 Aug 2026 07:00 |
-| oil | Stock market: Europe, in disarray, awaits the ECB. Brent crude tops $102 - Il Sole 24 ORE | Il Sole 24 ORE | Thu, 10 Sep 2026 10:18 |
-| oil | Oil prices steady as Brent tops $100 amid supply disruption fears - Sharjah24 | Sharjah24 | Thu, 10 Sep 2026 07:05 |
-| oil | Current price of oil as of Aug. 19, 2026 - Fortune | Fortune | Wed, 19 Aug 2026 07:00 |
-| oil | Oil Prices Fall as Oman-Iran Talks Raise Hopes for Hormuz Reopening - wsj.com | wsj.com | Wed, 26 Aug 2026 07:00 |
-| oil | WTI Oil Prices Surge as Middle East Tensions Push Brent Crude Above $100 - fxleaders.com | fxleaders.com | Thu, 10 Sep 2026 01:04 |
-| oil | Rubber glove stocks rally as Brent crude tops US$100 - The Edge Malaysia | The Edge Malaysia | Thu, 10 Sep 2026 11:26 |
-| oil | Oil settles up by more than 2.5% as US and Iran resume military attacks - Reuters | Reuters | Mon, 31 Aug 2026 07:00 |
-| oil | Oil back above $US100, Wall Street falls - CommBank | CommBank | Wed, 09 Sep 2026 22:49 |
-| oil | Brent holds above US$100 as tanker attacks deepen supply fear - The Business Times | The Business Times | Wed, 09 Sep 2026 22:07 |
-| oil | Oil Price Today (September 9): Brent crude rises above $100 a barrel as Middle East conflict escalates - The Economic Ti | The Economic Times | Wed, 09 Sep 2026 02:17 |
-| oil | Oil prices cross $100 as Iran-US attacks deepen crude supply fears - Business Standard | Business Standard | Thu, 10 Sep 2026 02:12 |
-| oil | Brent Crude Oil Surpasses $100 Amid Escalating Middle East Tensions - India News Network | India News Network | Thu, 10 Sep 2026 04:37 |
-| oil | Trump Says Oil Prices Will "Plunge After the Election" — Republicans on Edge as Brent Crude Tops $100 - finance.biggo.co | finance.biggo.com | Thu, 10 Sep 2026 01:55 |
-| oil | Brent crude oil prices continue to trade above 100 dollars per barrel, as Iran-US conflict intensifies - News On AIR | News On AIR | Thu, 10 Sep 2026 09:19 |
-| oil | Gold, silver rise as dollar weakness offsets oil-driven rate risk - Kitco PM Report - kitco.com | kitco.com | Wed, 09 Sep 2026 21:11 |
-| oil | Trump gives a new timeline for Iran war to end, says oil prices will remain high till US mid-terms - Firstpost | Firstpost | Thu, 10 Sep 2026 08:14 |
-| oil | Brent Crude Oil Price Tops $100 as Morgan Stanley Rings the Alarm Bell - ExxonMobil Holdings (NYSE:XOM) - Benzinga | Benzinga | Wed, 09 Sep 2026 13:36 |
-| oil | Asian shares fall and oil prices trade above $100 a barrel - 朝日新聞 | 朝日新聞 | Thu, 10 Sep 2026 07:35 |
-| oil | Uganda Launches New Crude Grade as First Oil Exports Near - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 09 Sep 2026 17:00 |
-| oil | Current price of oil as of August 26, 2026 - Fortune | Fortune | Wed, 26 Aug 2026 07:00 |
-| oil | Canadian Oil Pushes Deeper Into U.S. Gulf Coast Market - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 09 Sep 2026 23:00 |
-| oil | US-Iran tensions push Brent oil above $100, rai... - pluang.com | pluang.com | Thu, 10 Sep 2026 11:29 |
-| oil | Oil prices flare as Iran tightens grip on Hormuz - Yahoo | Yahoo | Thu, 10 Sep 2026 03:33 |
-| oil | Brent crude oil price on September 09, 2026 at 5:00 PM EDT - Robinhood | Robinhood | Tue, 08 Sep 2026 16:34 |
-| oil | Brent crude oil hit $100 a barrel as experts warn interest rates could stay higher for longer - This is Money | This is Money | Tue, 08 Sep 2026 16:12 |
-| oil | Brent crude oil surges past $100 as Middle East tensions escalate - eciks.org | eciks.org | Wed, 09 Sep 2026 11:24 |
+| macro_monetary | European drivers choke on rising diesel prices due to Iran conflict - France 24 | France 24 | Sat, 04 Apr 2026 07:00 |
+| macro_monetary | The Iran War Shows Why Indonesia Must Accelerate Its Energy Transition - fulcrum.sg | fulcrum.sg | Fri, 17 Apr 2026 07:00 |
+| macro_monetary | Iran doubles gasoline price for heavy users amid war, economic strain - Moneycontrol.com | Moneycontrol.com | Mon, 07 Sep 2026 22:12 |
+| macro_monetary | Canada's inflation rate jumps to 2.4%, fuelled by gas price shock - Financial Post | Financial Post | Mon, 20 Apr 2026 07:00 |
+| macro_monetary | US consumer inflation hot in March amid record surge in gasoline prices - Reuters | Reuters | Fri, 10 Apr 2026 07:00 |
+| macro_monetary | Record gas price surge fuels sharp rise in U.S. inflation - Honolulu Star-Advertiser | Honolulu Star-Advertiser | Fri, 10 Apr 2026 07:00 |
+| macro_monetary | Two months into Iran war, economic strain mounts across emerging markets - Reuters | Reuters | Mon, 27 Apr 2026 07:00 |
+| macro_monetary | Gas price worries continue across US amid Iran war - LiveNOW from FOX | LiveNOW from FOX | Tue, 14 Apr 2026 07:00 |
+| macro_monetary | Iran war: As oil price balloons, Africa’s fuel-price shield becomes a fiscal test - theafricareport.com | theafricareport.com | Thu, 30 Apr 2026 07:00 |
+| macro_monetary | Japan core inflation accelerates for 1st time in 5 months as energy worries mount amid Iran war - Anadolu Ajansı | Anadolu Ajansı | Fri, 24 Apr 2026 07:00 |
+| macro_monetary | Soaring gas prices leads to biggest monthly inflation spike in four years in March - PBS | PBS | Fri, 10 Apr 2026 07:00 |
+| macro_monetary | ‘This is very real’: Surging gas prices drive inflation to highest level in 2 years - Politico | Politico | Fri, 10 Apr 2026 07:00 |
+| macro_monetary | Implications of the Iran war for U.S. inflation - Federal Reserve Bank of Dallas | Federal Reserve Bank of Dallas | Fri, 17 Apr 2026 07:00 |
+| macro_monetary | Iran Regime Raises Gasoline Price to 10,000 Tomans as Inflationary Pressures Mount - irannewsupdate.com | irannewsupdate.com | Thu, 10 Sep 2026 19:17 |
+| macro_monetary | US faces rising costs with Iran war driving energy prices, inflation higher - aljazeera.com | aljazeera.com | Tue, 12 May 2026 07:00 |
+| macro_monetary | Iran faces a new energy imbalance, but its options are limited - aljazeera.com | aljazeera.com | Wed, 03 Jun 2026 07:00 |
+| macro_monetary | Inflation cools more than expected in June as gas costs fall and underlying prices ease - PBS | PBS | Tue, 14 Jul 2026 07:00 |
+| macro_monetary | Iran’s government signals fuel price hike on eve of new US sanctions - aljazeera.com | aljazeera.com | Sun, 23 Aug 2026 07:00 |
+| macro_monetary | Iran deploys security forces as gasoline price rise takes effect - Iran International | Iran International | Tue, 08 Sep 2026 12:31 |
+| macro_monetary | As fuel prices rise again, Iran’s government urges citizens to cut back - aljazeera.com | aljazeera.com | Tue, 08 Sep 2026 23:49 |
+| oil | Oil News: Crude Oil Momentum Builds as Middle East Supply Math Gets Worse - FXEmpire | FXEmpire | Fri, 11 Sep 2026 05:37 |
+| oil | COMMENTARY: Triple-digit oil, yen whiplash and a $2,000 iPhone: The financial week in five charts - Reuters | Reuters | Fri, 11 Sep 2026 11:07 |
+| oil | Oil Prices Fall as Oman-Iran Talks Raise Hopes for Hormuz Reopening - WSJ | WSJ | Wed, 26 Aug 2026 07:00 |
+| oil | Oil touches $107 per barrel as Hormuz remains choked for over six months - The Times of India | The Times of India | Fri, 11 Sep 2026 02:03 |
+| oil | Global crude oil prices surged / Akashvani News - News On AIR | News On AIR | Fri, 11 Sep 2026 22:55 |
+| oil | High oil price volatility expected to continue - IDNFinancials | IDNFinancials | Fri, 11 Sep 2026 16:55 |
+| oil | Dollar holds gains as traders await US price data after oil jumps - KITCO | KITCO | Fri, 11 Sep 2026 12:07 |
+| oil | Crude Oil Jumps 8.4% as Brent Tops $108 on US-Iran Conflict, Petrol Holds at ₹102.12 in Delhi - HDFC Sky | HDFC Sky | Sat, 12 Sep 2026 10:57 |
+| oil | Brent Crude Pulls Back From $100 as Fed Rate Bets Counter Middle East Supply Fears - finance.biggo.com | finance.biggo.com | Fri, 11 Sep 2026 18:40 |
+| oil | That Dastardly Brent Crude Is Charging More Than $100 For A Barrel Of Oil Again - jalopnik.com | jalopnik.com | Thu, 10 Sep 2026 15:55 |
+| oil | Brent Crude Oil Price Breaches Our Price Target – Analysis – 11-09-2026 - Economies.com | Economies.com | Fri, 11 Sep 2026 03:22 |
+| oil | What's Going On With Oil Prices Right Now? - Schaeffer's Investment Research | Schaeffer's Investment Research | Fri, 11 Sep 2026 12:00 |
+| oil | Analyst warns of 'late-stage bubble' as rates and oil prices surge - ABC News & Headlines – Australian Broadcasting Corp | ABC News & Headlines – Australian Broadcasting Corporation | Fri, 11 Sep 2026 05:58 |
+| oil | Surging oil prices from Iran war will be ‘tumbling downward’ after midterms, Trump says - Fast Company | Fast Company | Thu, 10 Sep 2026 14:26 |
+| oil | Oil Prices Rally Over 6%: Brent Crude Nears $109 As Houthis Advance Towards Key Red Sea Chokepoint - ndtvprofit.com | ndtvprofit.com | Fri, 11 Sep 2026 01:21 |
+| oil | U.S. Crude Oil Hits $100 for First Time Since May｜Daily News Digest｜2026-09-11｜web only - 天下雜誌 | 天下雜誌 | Fri, 11 Sep 2026 00:14 |
+| oil | Crude Oil Markets Face Volatility As Trump Forecasts Price Drop After Iran War Ends - Sahi | Sahi | Sat, 12 Sep 2026 10:55 |
+| oil | Oil prices climb higher, dragging Wall Street lower - PennLive.com | PennLive.com | Thu, 10 Sep 2026 17:13 |
+| oil | Debunking the Viral Claim That America Has Only 14 Days of Oil Left - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 11 Sep 2026 14:00 |
+| oil | Houthis close in on Bab el-Mandeb as Brent barrel price soars to over $106 - France 24 | France 24 | Thu, 10 Sep 2026 02:46 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-09-10 12:34 UTC | 159 new | 616 total
+NEWS_DIGEST | 2026-09-12 11:57 UTC | 138 new | 753 total
