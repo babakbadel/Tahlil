@@ -1,4 +1,4 @@
-version: 1
+version: 2
 name: BabiMind Global-to-Iran Market Map
 purpose: Daily transmission of global macro/commodity signals into Iranian equities and sectors.
 
@@ -14,9 +14,23 @@ variables:
     - copper
     - iron_ore
     - brent
+    - wti
     - gold
     - ai_capex
     - geopolitical_risk
+    # Daily energy-shock monitor
+    - diesel_crack_spread
+    - gasoline_crack_spread
+    - vlcc_freight
+    - tanker_insurance_premium
+    - shipping_disruption
+    - hormuz_risk
+    - bab_el_mandeb_risk
+    - strategic_oil_buffer
+    - global_refining_utilization
+    - physical_oil_tightness
+    - refinery_outages
+    - product_inventory_tightness
   domestic:
     - usd_irr
     - inflation_expectations
@@ -45,11 +59,14 @@ sector_transmission:
     weight_money_flow: 0.15
     weight_fundamental: 0.10
   refineries:
-    weight_crack_spread: 0.35
-    weight_fx: 0.25
-    weight_oil: 0.10
-    weight_fundamental: 0.15
-    weight_money_flow: 0.15
+    weight_crack_spread: 0.25
+    weight_diesel_crack: 0.15
+    weight_shipping: 0.10
+    weight_physical_tightness: 0.10
+    weight_fx: 0.15
+    weight_oil: 0.05
+    weight_fundamental: 0.10
+    weight_money_flow: 0.10
   banks:
     weight_domestic_rates: 0.25
     weight_fx_repricing: 0.20
@@ -71,6 +88,19 @@ required_daily_outputs:
   - risk_flags
   - scenario_probabilities
   - evidence_sources
+  - energy_shock_state
+  - refinery_vs_metals_rotation
+
+energy_shock_rules:
+  - Check Brent/WTI, diesel/gasoline crack spreads, VLCC freight, tanker insurance and physical supply disruption every daily run.
+  - Check Hormuz and Bab el-Mandeb separately; a disruption in a bypass route is a second-order escalation signal, not merely duplicate news.
+  - Track strategic-oil-buffer depletion and global refining utilization as confirmation variables.
+  - Refineries receive a stronger short-term catalyst score when oil remains above 100 USD/bbl AND product cracks remain elevated AND physical/shipping disruption is confirmed.
+  - A high crude price without stronger product cracks must NOT be treated as automatically bullish for refineries.
+  - Freight is two-sided: higher freight raises costs, but can coexist with product premiums; BabiMind must evaluate freight-adjusted refinery margin rather than using freight alone.
+  - Copper correction must be checked against copper trend/momentum before increasing FMLI risk; copper being historically expensive is not itself a sell signal.
+  - If oil/refinery signals strengthen while copper momentum weakens and domestic money flow confirms, raise the refinery-vs-metals rotation flag.
+  - If copper reclaims and holds its recent high while FMLI money flow confirms, reduce the rotation penalty against FMLI.
 
 rules:
   - API failure or unavailable data must be SKIP, never fail the pipeline.
@@ -79,3 +109,4 @@ rules:
   - No buy/sell conclusion may rely on a single variable.
   - Technical, price-action, money-flow, fundamental/Codal, options, macro, Game Theory and Decision Engine signals must be independently scored before fusion.
   - Stale data must be flagged and excluded from fresh-signal weighting.
+  - News must be deduplicated by event and scored by source quality, recency and confirmation.
