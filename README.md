@@ -162,11 +162,11 @@
 
 ## 🔌 اولویت منابع داده
 
-1. API داخلی پروژه (BRS، realtime، …)  
-2. داده مستقیم بازار  
-3. رسمی (Codal، CBI، …)  
-4. منابع معتبر عمومی  
-5. وب به‌عنوان fallback  
+1. API داخلی پروژه (BRS، realtime، …)
+2. داده مستقیم بازار
+3. رسمی (Codal، CBI، …)
+4. منابع معتبر عمومی
+5. وب به‌عنوان fallback
 
 **خرابی یک API کل ران را متوقف نمی‌کند** · `MISSING_IS_NOT_ZERO` · confidence پایین با داده ناقص.
 
@@ -205,18 +205,18 @@ python scripts/rank_options_babimind.py
 
 ## 🧪 Backtest و حافظه تصمیم
 
-- Decision History: `app/decision/history.py` → JSONL append-only  
-- Outcome فقط خط جدید؛ پیش‌بینی قفل‌شده با `as_of`  
-- معیارها: جهت، خطا، Brier در صورت تکمیل، MDD، پایداری رژیم  
+- Decision History: `app/decision/history.py` → JSONL append-only
+- Outcome فقط خط جدید؛ پیش‌بینی قفل‌شده با `as_of`
+- معیارها: جهت، خطا، Brier در صورت تکمیل، MDD، پایداری رژیم
 
 ---
 
 ## 🗂️ ساختار دانش
 
-```
+```text
 chats/          آرشیو چت معماری
 memory/         decision history، news injection، dynamics پزشکیان
-reports/        خروجی ران‌ها
+reports/        خروجی pipeline، graph، coverage
 artifacts/      snapshot و inject ماشینی
 docs/           طراحی لایه‌ها
 config/         factors، sources، seed گراف، priorities
@@ -224,20 +224,74 @@ config/         factors، sources، seed گراف، priorities
 
 ---
 
+## 📈 مدل جدید: One-Year Market Regime
+
+از این نسخه، BabiMind یک لایهٔ صریح برای **افق ۱۲ماهه** دارد. هدف این لایه تشخیص تغییر رژیم بازار، مقایسه عملکرد بورس با دلار و سنجش احتمال **re-rating** شاخص است.
+
+### فاکتورهای اصلی
+
+- بازده ۱۲ماهه شاخص کل
+- بازده ۱۲ماهه دلار آزاد
+- نسبت شاخص به دلار و تغییر رژیم آن
+- نقدینگی و ارزش معاملات
+- تورم
+- سود شرکت‌ها و re-rating
+- مس و سایر کامودیتی‌های جهانی
+- ورود/خروج پول حقیقی و رفتار حقوقی
+- P/E و ارزش دلاری بازار
+- تأیید زنجیره آپشن‌ها: IV، OI، volume و Greeks
+
+### سطوح و سناریوهای مرجع
+
+| سناریو/سطح | شاخص |
+|---|---:|
+| Stress / Correction | ۵.۸–۶.۳M |
+| Invalidation اصلی | **۶.۵M** |
+| Breakout Confirmation | **۷.۲۵M** |
+| Base | **۸.۲–۹.۰M** |
+| Bullish | **۹.۵–۱۰.۸M** |
+| Super Bullish | **۱۱.۵–۱۳M** |
+
+این اعداد **سناریوهای مدل هستند، نه پیش‌بینی قطعی** و در هر ران باید با دادهٔ همان `as_of` بازسازی شوند.
+
+### منطق رژیم
+
+- **Bullish:** بالای ۷.۲۵M تثبیت شود و جریان پول، نقدینگی، سودآوری و کامودیتی‌ها تأیید کنند.
+- **Neutral:** بین ۶.۵M تا ۷.۲۵M با تأییدهای ترکیبی.
+- **Risk-off:** شکست ۶.۵M، مخصوصاً همراه با شوک دلار، خروج حقیقی و افت breadth/AD.
+
+### اتصال به Pipeline
+
+```text
+Market Data / USD / Macro / Earnings / Flow / Commodities / Options
+        ↓
+One-Year Market Regime
+        ↓
+Economic Graph + Rotation + Game Theory + System Dynamics
+        ↓
+Scenario & Forecast → Decision Engine → Risk/Confidence
+        ↓
+Backtest → Model Memory → Next Run
+```
+
+فایل تنظیمات: `config/babimind_one_year_regime_model.yml`  
+طراحی: `docs/babimind-one-year-regime.md`
+
+**قواعد کنترلی:** نسبت ۱۳۹۹ فقط historical anchor است و fair value نیست؛ احتمال سناریوها باید جمعاً ۱ شود؛ look-ahead ممنوع؛ `MISSING_IS_NOT_ZERO`؛ بازده تاریخی به‌تنهایی سیگنال خرید نیست.
+
+---
+
 ## 🛠️ اصول توسعه
 
-- اولویت با مدل مرکزی BabiMind  
-- قابلیت جدید → اتصال به یک لایه  
-- timestamp + منبع + confidence روی خروجی  
-- ضد look-ahead  
-- هیچ نتیجهٔ مهمی فقط در چت نماند  
+- اولویت با مدل مرکزی BabiMind
+- قابلیت جدید → اتصال به یک لایه
+- timestamp + منبع + confidence روی خروجی
+- ضد look-ahead
+- هیچ نتیجهٔ مهمی فقط در چت نماند
 
 ---
 
 ## ⚠️ وضعیت
 
 پروژه در حال توسعه است. برخی APIها و snapshotهای روزانه ممکن است partial باشند.  
-**پیش‌بینی ≠ قطعیت.** خروجی را با کیفیت داده تفسیر کنید.
-
-آخرین تزریق خبر مدل: `memory/news-injection-2026-09-09.md`  
-Pre-open: `reports/preopen_2026-09-09.md`
+**پیش‌بینی ≠ قطعیت؛ مدل باید با دادهٔ جدید دوباره اجرا و کالیبره شود.**
