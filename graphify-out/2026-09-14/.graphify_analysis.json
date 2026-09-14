@@ -72,16 +72,15 @@
       "datetime",
       "scripts_babimind_factor_rotation",
       "scripts_babimind_factor_rotation_main",
+      "scripts_babimind_gemini",
+      "scripts_babimind_gemini_compact_state",
+      "scripts_babimind_gemini_load_json",
+      "scripts_babimind_gemini_main",
+      "scripts_babimind_gemini_write",
       "scripts_babimind_source_health",
       "scripts_babimind_source_health_check",
       "scripts_babimind_source_health_load_sources",
       "scripts_babimind_source_health_main",
-      "scripts_babimind_v1",
-      "scripts_babimind_v1_clamp",
-      "scripts_babimind_v1_main",
-      "scripts_babimind_v1_predict",
-      "scripts_babimind_v1_rationale_2",
-      "scripts_babimind_v1_sigmoid",
       "scripts_backfill",
       "scripts_backfill_is_stale",
       "scripts_backfill_main",
@@ -111,11 +110,6 @@
       "scripts_collect_tsetmc_option_api_fetch",
       "scripts_collect_tsetmc_option_api_main",
       "scripts_collect_tsetmc_option_api_rationale_1",
-      "scripts_ingest_marketwatch_plus",
-      "scripts_ingest_marketwatch_plus_clean",
-      "scripts_ingest_marketwatch_plus_main",
-      "scripts_ingest_marketwatch_plus_py_any",
-      "scripts_ingest_marketwatch_plus_rationale_1",
       "scripts_score_dollar_experts",
       "scripts_score_dollar_experts_clamp",
       "scripts_score_dollar_experts_consistency_score",
@@ -556,19 +550,20 @@
       "scan_market_save_json"
     ],
     "22": [
+      "scripts_babimind_v1",
+      "scripts_babimind_v1_clamp",
+      "scripts_babimind_v1_main",
+      "scripts_babimind_v1_predict",
+      "scripts_babimind_v1_rationale_2",
+      "scripts_babimind_v1_sigmoid"
+    ],
+    "23": [
       "scripts_score_options_babimind_scenarios",
       "scripts_score_options_babimind_scenarios_expiry_pnl",
       "scripts_score_options_babimind_scenarios_liquidity_score",
       "scripts_score_options_babimind_scenarios_main",
       "scripts_score_options_babimind_scenarios_n",
       "scripts_score_options_babimind_scenarios_score"
-    ],
-    "23": [
-      "path",
-      "scripts_babimind_global_market",
-      "scripts_babimind_global_market_load_json_candidates",
-      "scripts_babimind_global_market_main",
-      "scripts_babimind_global_market_rationale_2"
     ],
     "24": [
       "scripts_babimind_factor_discovery",
@@ -578,79 +573,82 @@
       "scripts_babimind_factor_discovery_rationale_2"
     ],
     "25": [
-      "scripts_babimind_gemini",
-      "scripts_babimind_gemini_compact_state",
-      "scripts_babimind_gemini_load_json",
-      "scripts_babimind_gemini_main",
-      "scripts_babimind_gemini_write"
-    ],
-    "26": [
       "scripts_collect_agent_reach",
       "scripts_collect_agent_reach_main",
       "scripts_collect_agent_reach_now",
       "scripts_collect_agent_reach_rationale_2",
       "scripts_collect_agent_reach_run"
     ],
+    "26": [
+      "scripts_ingest_marketwatch_plus",
+      "scripts_ingest_marketwatch_plus_clean",
+      "scripts_ingest_marketwatch_plus_main",
+      "scripts_ingest_marketwatch_plus_py_any",
+      "scripts_ingest_marketwatch_plus_rationale_1"
+    ],
     "27": [
+      "scripts_babimind_global_market",
+      "scripts_babimind_global_market_load_json_candidates",
+      "scripts_babimind_global_market_main",
+      "scripts_babimind_global_market_py_path"
+    ],
+    "28": [
       "scripts_babimind_source_confidence",
       "scripts_babimind_source_confidence_main",
       "scripts_babimind_source_confidence_score",
       "scripts_babimind_source_confidence_tier"
     ],
-    "28": [
+    "29": [
       "app_forecasting_regimes",
       "app_forecasting_regimes_rationale_1",
       "app_forecasting_regimes_regime_labels"
     ],
-    "29": [
+    "30": [
       "scripts_brsapi_client",
       "scripts_brsapi_client_fetch_symbols",
       "scripts_brsapi_client_py_any"
     ],
-    "30": [
+    "31": [
       "scripts_ingest_tse_option",
       "scripts_ingest_tse_option_main",
       "scripts_ingest_tse_option_rationale_1"
     ],
-    "31": [
+    "32": [
       "scripts_risk_adjusted_options_babimind",
       "scripts_risk_adjusted_options_babimind_calc",
       "scripts_risk_adjusted_options_babimind_n"
     ],
-    "32": [
+    "33": [
       "app_intermarket_init",
       "app_intermarket_init_rationale_1"
     ],
-    "33": [
+    "34": [
       "reports_options_babimind_ranked_khosapa",
       "reports_options_babimind_scenario_ranked_summary"
     ],
-    "34": [
+    "35": [
       "scripts_babimind_signal_weight",
       "scripts_babimind_signal_weight_main"
     ],
-    "35": [
+    "36": [
       "scripts_docker_entrypoint_realtime",
       "scripts_docker_entrypoint_realtime_sh__entry"
     ],
-    "36": [
+    "37": [
       "scripts_run_realtime_api",
       "scripts_run_realtime_api_rationale_1"
     ],
-    "37": [
+    "38": [
       "reports_options_babimind_ranked_fomeli"
     ],
-    "38": [
+    "39": [
       "reports_options_babimind_ranked_shapna"
     ],
-    "39": [
+    "40": [
       "reports_options_babimind_ranked_webmellat"
     ],
-    "40": [
-      "scripts_babimind_factor_coverage"
-    ],
     "41": [
-      "scripts_babimind_global_market_py_path"
+      "scripts_babimind_factor_coverage"
     ],
     "42": [
       "skills_headroom_skill"
@@ -658,7 +656,7 @@
   },
   "cohesion": {
     "0": 0.06993006993006994,
-    "1": 0.06298701298701298,
+    "1": 0.07346938775510205,
     "2": 0.10303030303030303,
     "3": 0.1166429587482219,
     "4": 0.09388335704125178,
@@ -679,16 +677,16 @@
     "19": 0.47619047619047616,
     "20": 0.3333333333333333,
     "21": 0.6,
-    "22": 0.8,
-    "23": 0.6,
+    "22": 0.5333333333333333,
+    "23": 0.8,
     "24": 0.5,
     "25": 0.7,
-    "26": 0.7,
+    "26": 0.5,
     "27": 0.8333333333333334,
-    "28": 0.6666666666666666,
+    "28": 0.8333333333333334,
     "29": 0.6666666666666666,
     "30": 0.6666666666666666,
-    "31": 1.0,
+    "31": 0.6666666666666666,
     "32": 1.0,
     "33": 1.0,
     "34": 1.0,

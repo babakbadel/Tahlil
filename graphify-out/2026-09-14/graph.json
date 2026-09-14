@@ -771,6 +771,50 @@
       "source_location": "L19"
     },
     {
+      "id": "scripts_babimind_gemini_compact_state",
+      "label": "compact_state()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "compact_state()",
+      "source_file": "scripts/babimind_gemini.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "scripts_babimind_gemini_load_json",
+      "label": "load_json()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "load_json()",
+      "source_file": "scripts/babimind_gemini.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "scripts_babimind_gemini_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/babimind_gemini.py",
+      "source_location": "L27"
+    },
+    {
+      "id": "scripts_babimind_gemini_write",
+      "label": "write()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "write()",
+      "source_file": "scripts/babimind_gemini.py",
+      "source_location": "L24"
+    },
+    {
       "id": "scripts_babimind_source_health_check",
       "label": "check()",
       "_callable": true,
@@ -802,50 +846,6 @@
       "norm_label": "main()",
       "source_file": "scripts/babimind_source_health.py",
       "source_location": "L63"
-    },
-    {
-      "id": "scripts_babimind_v1_clamp",
-      "label": "clamp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "clamp()",
-      "source_file": "scripts/babimind_v1.py",
-      "source_location": "L29"
-    },
-    {
-      "id": "scripts_babimind_v1_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "scripts/babimind_v1.py",
-      "source_location": "L54"
-    },
-    {
-      "id": "scripts_babimind_v1_predict",
-      "label": "predict()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "predict()",
-      "source_file": "scripts/babimind_v1.py",
-      "source_location": "L35"
-    },
-    {
-      "id": "scripts_babimind_v1_sigmoid",
-      "label": "sigmoid()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "sigmoid()",
-      "source_file": "scripts/babimind_v1.py",
-      "source_location": "L32"
     },
     {
       "id": "scripts_backfill_is_stale",
@@ -1044,28 +1044,6 @@
       "norm_label": "main()",
       "source_file": "scripts/collect_tsetmc_option_api.py",
       "source_location": "L37"
-    },
-    {
-      "id": "scripts_ingest_marketwatch_plus_clean",
-      "label": "clean()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "clean()",
-      "source_file": "scripts/ingest_marketwatch_plus.py",
-      "source_location": "L23"
-    },
-    {
-      "id": "scripts_ingest_marketwatch_plus_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "scripts/ingest_marketwatch_plus.py",
-      "source_location": "L35"
     },
     {
       "id": "scripts_score_dollar_experts_clamp",
@@ -2135,11 +2113,55 @@
       "source_location": "L47"
     },
     {
+      "id": "scripts_babimind_v1_clamp",
+      "label": "clamp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "file_type": "code",
+      "norm_label": "clamp()",
+      "source_file": "scripts/babimind_v1.py",
+      "source_location": "L29"
+    },
+    {
+      "id": "scripts_babimind_v1_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/babimind_v1.py",
+      "source_location": "L54"
+    },
+    {
+      "id": "scripts_babimind_v1_predict",
+      "label": "predict()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "file_type": "code",
+      "norm_label": "predict()",
+      "source_file": "scripts/babimind_v1.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "scripts_babimind_v1_sigmoid",
+      "label": "sigmoid()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "file_type": "code",
+      "norm_label": "sigmoid()",
+      "source_file": "scripts/babimind_v1.py",
+      "source_location": "L32"
+    },
+    {
       "id": "scripts_score_options_babimind_scenarios_expiry_pnl",
       "label": "expiry_pnl()",
       "_callable": true,
       "_origin": "ast",
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "norm_label": "expiry_pnl()",
       "source_file": "scripts/score_options_babimind_scenarios.py",
@@ -2150,7 +2172,7 @@
       "label": "liquidity_score()",
       "_callable": true,
       "_origin": "ast",
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "norm_label": "liquidity_score()",
       "source_file": "scripts/score_options_babimind_scenarios.py",
@@ -2161,7 +2183,7 @@
       "label": "main()",
       "_callable": true,
       "_origin": "ast",
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/score_options_babimind_scenarios.py",
@@ -2172,7 +2194,7 @@
       "label": "n()",
       "_callable": true,
       "_origin": "ast",
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "norm_label": "n()",
       "source_file": "scripts/score_options_babimind_scenarios.py",
@@ -2183,33 +2205,11 @@
       "label": "score()",
       "_callable": true,
       "_origin": "ast",
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "norm_label": "score()",
       "source_file": "scripts/score_options_babimind_scenarios.py",
       "source_location": "L31"
-    },
-    {
-      "id": "scripts_babimind_global_market_load_json_candidates",
-      "label": "load_json_candidates()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "file_type": "code",
-      "norm_label": "load_json_candidates()",
-      "source_file": "scripts/babimind_global_market.py",
-      "source_location": "L16"
-    },
-    {
-      "id": "scripts_babimind_global_market_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "scripts/babimind_global_market.py",
-      "source_location": "L35"
     },
     {
       "id": "scripts_babimind_factor_discovery_load_csv_files",
@@ -2245,55 +2245,11 @@
       "source_location": "L37"
     },
     {
-      "id": "scripts_babimind_gemini_compact_state",
-      "label": "compact_state()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "file_type": "code",
-      "norm_label": "compact_state()",
-      "source_file": "scripts/babimind_gemini.py",
-      "source_location": "L20"
-    },
-    {
-      "id": "scripts_babimind_gemini_load_json",
-      "label": "load_json()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "file_type": "code",
-      "norm_label": "load_json()",
-      "source_file": "scripts/babimind_gemini.py",
-      "source_location": "L16"
-    },
-    {
-      "id": "scripts_babimind_gemini_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "scripts/babimind_gemini.py",
-      "source_location": "L27"
-    },
-    {
-      "id": "scripts_babimind_gemini_write",
-      "label": "write()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "file_type": "code",
-      "norm_label": "write()",
-      "source_file": "scripts/babimind_gemini.py",
-      "source_location": "L24"
-    },
-    {
       "id": "scripts_collect_agent_reach_main",
       "label": "main()",
       "_callable": true,
       "_origin": "ast",
-      "community": 26,
+      "community": 25,
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/collect_agent_reach.py",
@@ -2304,7 +2260,7 @@
       "label": "now()",
       "_callable": true,
       "_origin": "ast",
-      "community": 26,
+      "community": 25,
       "file_type": "code",
       "norm_label": "now()",
       "source_file": "scripts/collect_agent_reach.py",
@@ -2315,18 +2271,62 @@
       "label": "run()",
       "_callable": true,
       "_origin": "ast",
-      "community": 26,
+      "community": 25,
       "file_type": "code",
       "norm_label": "run()",
       "source_file": "scripts/collect_agent_reach.py",
       "source_location": "L25"
     },
     {
-      "id": "scripts_babimind_source_confidence_main",
+      "id": "scripts_ingest_marketwatch_plus_clean",
+      "label": "clean()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "file_type": "code",
+      "norm_label": "clean()",
+      "source_file": "scripts/ingest_marketwatch_plus.py",
+      "source_location": "L23"
+    },
+    {
+      "id": "scripts_ingest_marketwatch_plus_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/ingest_marketwatch_plus.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "scripts_babimind_global_market_load_json_candidates",
+      "label": "load_json_candidates()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "file_type": "code",
+      "norm_label": "load_json_candidates()",
+      "source_file": "scripts/babimind_global_market.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "scripts_babimind_global_market_main",
       "label": "main()",
       "_callable": true,
       "_origin": "ast",
       "community": 27,
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/babimind_global_market.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "scripts_babimind_source_confidence_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/babimind_source_confidence.py",
@@ -2337,7 +2337,7 @@
       "label": "score()",
       "_callable": true,
       "_origin": "ast",
-      "community": 27,
+      "community": 28,
       "file_type": "code",
       "norm_label": "score()",
       "source_file": "scripts/babimind_source_confidence.py",
@@ -2348,7 +2348,7 @@
       "label": "tier()",
       "_callable": true,
       "_origin": "ast",
-      "community": 27,
+      "community": 28,
       "file_type": "code",
       "norm_label": "tier()",
       "source_file": "scripts/babimind_source_confidence.py",
@@ -2359,22 +2359,11 @@
       "label": "regime_labels()",
       "_callable": true,
       "_origin": "ast",
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "norm_label": "regime_labels()",
       "source_file": "app/forecasting/regimes.py",
       "source_location": "L47"
-    },
-    {
-      "id": "scripts_brsapi_client_fetch_symbols",
-      "label": "fetch_symbols()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "file_type": "code",
-      "norm_label": "fetch_symbols()",
-      "source_file": "scripts/brsapi_client.py",
-      "source_location": "L22"
     },
     {
       "id": "app_data_brsapi_client_brsapiclient_get_all_symbols",
@@ -2564,11 +2553,22 @@
       "source_location": "L35"
     },
     {
+      "id": "scripts_brsapi_client_fetch_symbols",
+      "label": "fetch_symbols()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "file_type": "code",
+      "norm_label": "fetch_symbols()",
+      "source_file": "scripts/brsapi_client.py",
+      "source_location": "L22"
+    },
+    {
       "id": "scripts_ingest_tse_option_main",
       "label": "main()",
       "_callable": true,
       "_origin": "ast",
-      "community": 30,
+      "community": 31,
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/ingest_tse_option.py",
@@ -2579,7 +2579,7 @@
       "label": "calc()",
       "_callable": true,
       "_origin": "ast",
-      "community": 31,
+      "community": 32,
       "file_type": "code",
       "norm_label": "calc()",
       "source_file": "scripts/risk_adjusted_options_babimind.py",
@@ -2590,7 +2590,7 @@
       "label": "n()",
       "_callable": true,
       "_origin": "ast",
-      "community": 31,
+      "community": 32,
       "file_type": "code",
       "norm_label": "n()",
       "source_file": "scripts/risk_adjusted_options_babimind.py",
@@ -2601,7 +2601,7 @@
       "label": "main()",
       "_callable": true,
       "_origin": "ast",
-      "community": 34,
+      "community": 35,
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/babimind_signal_weight.py",
@@ -3933,6 +3933,16 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_babimind_gemini",
+      "label": "babimind_gemini.py",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "babimind_gemini.py",
+      "source_file": "scripts/babimind_gemini.py",
+      "source_location": "L1"
+    },
+    {
       "id": "scripts_babimind_source_health",
       "label": "babimind_source_health.py",
       "_origin": "ast",
@@ -3940,16 +3950,6 @@
       "file_type": "code",
       "norm_label": "babimind_source_health.py",
       "source_file": "scripts/babimind_source_health.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_babimind_v1",
-      "label": "babimind_v1.py",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "babimind_v1.py",
-      "source_file": "scripts/babimind_v1.py",
       "source_location": "L1"
     },
     {
@@ -4013,26 +4013,6 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_ingest_marketwatch_plus",
-      "label": "ingest_marketwatch_plus.py",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "ingest_marketwatch_plus.py",
-      "source_file": "scripts/ingest_marketwatch_plus.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_ingest_marketwatch_plus_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "scripts_score_dollar_experts",
       "label": "score_dollar_experts.py",
       "_origin": "ast",
@@ -4041,16 +4021,6 @@
       "norm_label": "score_dollar_experts.py",
       "source_file": "scripts/score_dollar_experts.py",
       "source_location": "L1"
-    },
-    {
-      "id": "scripts_babimind_v1_rationale_2",
-      "label": "Lightweight, deterministic BabiMind v1 core. This module intentionally works\u2026",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "rationale",
-      "norm_label": "lightweight, deterministic babimind v1 core. this module intentionally works...",
-      "source_file": "scripts/babimind_v1.py",
-      "source_location": "L2"
     },
     {
       "id": "scripts_backfill_rationale_1",
@@ -4100,16 +4070,6 @@
       "file_type": "rationale",
       "norm_label": "collect the full tsetmc option market from the endpoint used by tsetmc_option....",
       "source_file": "scripts/collect_tsetmc_option_api.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_ingest_marketwatch_plus_rationale_1",
-      "label": "Ingest the repository's MarketWatchPlus Excel snapshot into BabiMind. The\u2026",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "rationale",
-      "norm_label": "ingest the repository's marketwatchplus excel snapshot into babimind. the...",
-      "source_file": "scripts/ingest_marketwatch_plus.py",
       "source_location": "L1"
     },
     {
@@ -4783,44 +4743,34 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_babimind_v1",
+      "label": "babimind_v1.py",
+      "_origin": "ast",
+      "community": 22,
+      "file_type": "code",
+      "norm_label": "babimind_v1.py",
+      "source_file": "scripts/babimind_v1.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_babimind_v1_rationale_2",
+      "label": "Lightweight, deterministic BabiMind v1 core. This module intentionally works\u2026",
+      "_origin": "ast",
+      "community": 22,
+      "file_type": "rationale",
+      "norm_label": "lightweight, deterministic babimind v1 core. this module intentionally works...",
+      "source_file": "scripts/babimind_v1.py",
+      "source_location": "L2"
+    },
+    {
       "id": "scripts_score_options_babimind_scenarios",
       "label": "score_options_babimind_scenarios.py",
       "_origin": "ast",
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "norm_label": "score_options_babimind_scenarios.py",
       "source_file": "scripts/score_options_babimind_scenarios.py",
       "source_location": "L1"
-    },
-    {
-      "id": "path",
-      "label": "Path",
-      "_origin": "ast",
-      "community": 23,
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "scripts_babimind_global_market",
-      "label": "babimind_global_market.py",
-      "_origin": "ast",
-      "community": 23,
-      "file_type": "code",
-      "norm_label": "babimind_global_market.py",
-      "source_file": "scripts/babimind_global_market.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_babimind_global_market_rationale_2",
-      "label": "Daily Global -> Iran market transmission layer for BabiMind. All external\u2026",
-      "_origin": "ast",
-      "community": 23,
-      "file_type": "rationale",
-      "norm_label": "daily global -> iran market transmission layer for babimind. all external...",
-      "source_file": "scripts/babimind_global_market.py",
-      "source_location": "L2"
     },
     {
       "id": "scripts_babimind_factor_discovery",
@@ -4843,20 +4793,10 @@
       "source_location": "L2"
     },
     {
-      "id": "scripts_babimind_gemini",
-      "label": "babimind_gemini.py",
-      "_origin": "ast",
-      "community": 25,
-      "file_type": "code",
-      "norm_label": "babimind_gemini.py",
-      "source_file": "scripts/babimind_gemini.py",
-      "source_location": "L1"
-    },
-    {
       "id": "scripts_collect_agent_reach",
       "label": "collect_agent_reach.py",
       "_origin": "ast",
-      "community": 26,
+      "community": 25,
       "file_type": "code",
       "norm_label": "collect_agent_reach.py",
       "source_file": "scripts/collect_agent_reach.py",
@@ -4866,17 +4806,67 @@
       "id": "scripts_collect_agent_reach_rationale_2",
       "label": "Collect research through Agent Reach without making it a primary data source.\u2026",
       "_origin": "ast",
-      "community": 26,
+      "community": 25,
       "file_type": "rationale",
       "norm_label": "collect research through agent reach without making it a primary data source....",
       "source_file": "scripts/collect_agent_reach.py",
       "source_location": "L2"
     },
     {
+      "id": "scripts_ingest_marketwatch_plus",
+      "label": "ingest_marketwatch_plus.py",
+      "_origin": "ast",
+      "community": 26,
+      "file_type": "code",
+      "norm_label": "ingest_marketwatch_plus.py",
+      "source_file": "scripts/ingest_marketwatch_plus.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_ingest_marketwatch_plus_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 26,
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "scripts_ingest_marketwatch_plus_rationale_1",
+      "label": "Ingest the repository's MarketWatchPlus Excel snapshot into BabiMind. The\u2026",
+      "_origin": "ast",
+      "community": 26,
+      "file_type": "rationale",
+      "norm_label": "ingest the repository's marketwatchplus excel snapshot into babimind. the...",
+      "source_file": "scripts/ingest_marketwatch_plus.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_babimind_global_market",
+      "label": "babimind_global_market.py",
+      "_origin": "ast",
+      "community": 27,
+      "file_type": "code",
+      "norm_label": "babimind_global_market.py",
+      "source_file": "scripts/babimind_global_market.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_babimind_global_market_py_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 27,
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "scripts_babimind_source_confidence",
       "label": "babimind_source_confidence.py",
       "_origin": "ast",
-      "community": 27,
+      "community": 28,
       "file_type": "code",
       "norm_label": "babimind_source_confidence.py",
       "source_file": "scripts/babimind_source_confidence.py",
@@ -4886,7 +4876,7 @@
       "id": "app_forecasting_regimes",
       "label": "regimes.py",
       "_origin": "ast",
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "norm_label": "regimes.py",
       "source_file": "app/forecasting/regimes.py",
@@ -4896,31 +4886,11 @@
       "id": "app_forecasting_regimes_rationale_1",
       "label": "Historical regime templates used by BabiMind's analog layer. These are labels\u2026",
       "_origin": "ast",
-      "community": 28,
+      "community": 29,
       "file_type": "rationale",
       "norm_label": "historical regime templates used by babimind's analog layer. these are labels...",
       "source_file": "app/forecasting/regimes.py",
       "source_location": "L1"
-    },
-    {
-      "id": "scripts_brsapi_client",
-      "label": "brsapi_client.py",
-      "_origin": "ast",
-      "community": 29,
-      "file_type": "code",
-      "norm_label": "brsapi_client.py",
-      "source_file": "scripts/brsapi_client.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_brsapi_client_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 29,
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "app_data_brsapi_client",
@@ -5113,10 +5083,30 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_brsapi_client",
+      "label": "brsapi_client.py",
+      "_origin": "ast",
+      "community": 30,
+      "file_type": "code",
+      "norm_label": "brsapi_client.py",
+      "source_file": "scripts/brsapi_client.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_brsapi_client_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 30,
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "scripts_ingest_tse_option",
       "label": "ingest_tse_option.py",
       "_origin": "ast",
-      "community": 30,
+      "community": 31,
       "file_type": "code",
       "norm_label": "ingest_tse_option.py",
       "source_file": "scripts/ingest_tse_option.py",
@@ -5126,7 +5116,7 @@
       "id": "scripts_ingest_tse_option_rationale_1",
       "label": "Ingest the collected sm-sokout/tse-option snapshot without overwriting it. The\u2026",
       "_origin": "ast",
-      "community": 30,
+      "community": 31,
       "file_type": "rationale",
       "norm_label": "ingest the collected sm-sokout/tse-option snapshot without overwriting it. the...",
       "source_file": "scripts/ingest_tse_option.py",
@@ -5136,7 +5126,7 @@
       "id": "scripts_risk_adjusted_options_babimind",
       "label": "risk_adjusted_options_babimind.py",
       "_origin": "ast",
-      "community": 31,
+      "community": 32,
       "file_type": "code",
       "norm_label": "risk_adjusted_options_babimind.py",
       "source_file": "scripts/risk_adjusted_options_babimind.py",
@@ -5146,7 +5136,7 @@
       "id": "app_intermarket_init",
       "label": "intermarket/__init__.py",
       "_origin": "ast",
-      "community": 32,
+      "community": 33,
       "file_type": "code",
       "norm_label": "intermarket/__init__.py",
       "source_file": "app/intermarket/__init__.py",
@@ -5156,7 +5146,7 @@
       "id": "app_intermarket_init_rationale_1",
       "label": "BabiMind intermarket and Howard Marks model layer.",
       "_origin": "ast",
-      "community": 32,
+      "community": 33,
       "file_type": "rationale",
       "norm_label": "babimind intermarket and howard marks model layer.",
       "source_file": "app/intermarket/__init__.py",
@@ -5166,7 +5156,7 @@
       "id": "scripts_babimind_signal_weight",
       "label": "babimind_signal_weight.py",
       "_origin": "ast",
-      "community": 34,
+      "community": 35,
       "file_type": "code",
       "norm_label": "babimind_signal_weight.py",
       "source_file": "scripts/babimind_signal_weight.py",
@@ -5176,7 +5166,7 @@
       "id": "scripts_docker_entrypoint_realtime",
       "label": "docker-entrypoint-realtime.sh",
       "_origin": "ast",
-      "community": 35,
+      "community": 36,
       "file_type": "code",
       "metadata": {
         "language": "bash",
@@ -5190,7 +5180,7 @@
       "id": "scripts_docker_entrypoint_realtime_sh__entry",
       "label": "docker-entrypoint-realtime.sh script",
       "_origin": "ast",
-      "community": 35,
+      "community": 36,
       "file_type": "code",
       "metadata": {
         "language": "bash",
@@ -5204,7 +5194,7 @@
       "id": "scripts_run_realtime_api",
       "label": "run_realtime_api.py",
       "_origin": "ast",
-      "community": 36,
+      "community": 37,
       "file_type": "code",
       "norm_label": "run_realtime_api.py",
       "source_file": "scripts/run_realtime_api.py",
@@ -5214,7 +5204,7 @@
       "id": "scripts_run_realtime_api_rationale_1",
       "label": "Local launcher for the Tahlil realtime JSON API.",
       "_origin": "ast",
-      "community": 36,
+      "community": 37,
       "file_type": "rationale",
       "norm_label": "local launcher for the tahlil realtime json api.",
       "source_file": "scripts/run_realtime_api.py",
@@ -5374,21 +5364,11 @@
       "id": "scripts_babimind_factor_coverage",
       "label": "babimind_factor_coverage.py",
       "_origin": "ast",
-      "community": 40,
+      "community": 41,
       "file_type": "code",
       "norm_label": "babimind_factor_coverage.py",
       "source_file": "scripts/babimind_factor_coverage.py",
       "source_location": "L1"
-    },
-    {
-      "id": "scripts_babimind_global_market_py_path",
-      "label": "Path",
-      "_origin": "ast",
-      "community": 41,
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "app_news_collector",
@@ -6034,7 +6014,7 @@
       "id": "reports_options_babimind_ranked_khosapa",
       "label": "Khosapa (\u062e\u0633\u0627\u067e\u0627) Options Ranking",
       "_origin": "semantic",
-      "community": 33,
+      "community": 34,
       "file_type": "document",
       "norm_label": "khosapa (\u062e\u0633\u0627\u067e\u0627) options ranking",
       "rationale": "Top ranked option contracts for Khosapa based on BabiMind score.",
@@ -6044,7 +6024,7 @@
       "id": "reports_options_babimind_scenario_ranked_summary",
       "label": "BabiMind Option Scenario Ranking",
       "_origin": "semantic",
-      "community": 33,
+      "community": 34,
       "file_type": "document",
       "norm_label": "babimind option scenario ranking",
       "rationale": "Scenario-based ranking of 249 contracts evaluating P/L under +/- 10/20% underlying price shifts.",
@@ -6054,7 +6034,7 @@
       "id": "reports_options_babimind_ranked_fomeli",
       "label": "Fomeli (\u0641\u0645\u0644\u06cc) Options Ranking",
       "_origin": "semantic",
-      "community": 37,
+      "community": 38,
       "file_type": "document",
       "norm_label": "fomeli (\u0641\u0645\u0644\u06cc) options ranking",
       "source_file": "reports/options_babimind_ranked.md"
@@ -6063,7 +6043,7 @@
       "id": "reports_options_babimind_ranked_shapna",
       "label": "Shapna (\u0634\u067e\u0646\u0627) Options Ranking",
       "_origin": "semantic",
-      "community": 38,
+      "community": 39,
       "file_type": "document",
       "norm_label": "shapna (\u0634\u067e\u0646\u0627) options ranking",
       "source_file": "reports/options_babimind_ranked.md"
@@ -6072,7 +6052,7 @@
       "id": "reports_options_babimind_ranked_webmellat",
       "label": "Webmellat (\u0648\u0628\u0645\u0644\u062a) Options Ranking",
       "_origin": "semantic",
-      "community": 39,
+      "community": 40,
       "file_type": "document",
       "norm_label": "webmellat (\u0648\u0628\u0645\u0644\u062a) options ranking",
       "source_file": "reports/options_babimind_ranked.md"
@@ -7771,7 +7751,7 @@
     },
     {
       "source": "scripts_babimind_global_market_main",
-      "target": "path",
+      "target": "scripts_babimind_global_market_py_path",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -12487,7 +12467,7 @@
     },
     {
       "source": "scripts_babimind_global_market_load_json_candidates",
-      "target": "path",
+      "target": "scripts_babimind_global_market_py_path",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -17472,17 +17452,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_babimind_global_market_rationale_2",
-      "target": "scripts_babimind_global_market",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/babimind_global_market.py",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_babimind_llm_router_rationale_2",
       "target": "scripts_babimind_llm_router",
       "relation": "rationale_for",
@@ -18239,5 +18208,5 @@
       "source_file": "skills/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "8a5903fc8116f6059c35c1e858bb7cd6ede6d719"
+  "built_at_commit": "556688491e8cf306f81004496fa302d66cc14558"
 }
