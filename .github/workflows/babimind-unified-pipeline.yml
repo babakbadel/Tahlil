@@ -35,7 +35,6 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
           python -m pip install --upgrade graphifyy
-          # Keep legacy partial files as optional extras (already covered by root requirements.txt)
           if [ -f requirements-finpy-tse.txt ]; then python -m pip install -r requirements-finpy-tse.txt || true; fi
           if [ -f requirements-market-data.txt ]; then python -m pip install -r requirements-market-data.txt || true; fi
 
@@ -103,12 +102,15 @@ jobs:
       - name: Prepare memory
         run: python scripts/babimind_memory.py --prepare
 
-      - name: Build canonical BabiMind prompt and run LLM
+      - name: Build master Web Research + Decision prompt and run LLM
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           python - <<'PY'
           from pathlib import Path
+          prompt = Path('docs/master-web-research-decision-agent.md')
+          if not prompt.exists():
+              raise SystemExit('Missing canonical master prompt')
           files = [
               'reports/babimind_pipeline.json',
               'reports/babimind_graph.json',
@@ -132,12 +134,13 @@ jobs:
               'artifacts/babimind_pezeshkian_news.json',
               'memory/news-daily-latest.md',
           ]
-          parts = ['You are BabiMind, the central financial and economic intelligence model for Tahlil. Use current repository intelligence as primary evidence and memory only for historical calibration. Do not invent missing observations, Greeks or timestamps. Separate evidence, inference and uncertainty. Integrate Iran stocks, options, gold, dollar, macroeconomics, political economy, decision theory, game theory, dynamic systems, graph intelligence, forecasting and factor signals. News is evidence not ground truth. Return valid JSON with keys: regime, scenarios, game_theory, dynamic_system, political_economy, market_implications, option_implications, confidence, data_gaps.']
+          parts = [prompt.read_text(encoding='utf-8')]
+          parts.append('\n## CURRENT REPOSITORY EVIDENCE\n')
           for f in files:
-              p=Path(f)
+              p = Path(f)
               if p.exists():
                   parts.append(f'\nSOURCE FILE: {f}\n{p.read_text(encoding="utf-8", errors="replace")[:70000]}')
-          Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts),encoding='utf-8')
+          Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts), encoding='utf-8')
           PY
           test -n "$OPENROUTER_API_KEY"
           python scripts/babimind_llm_router.py --prompt-file babimind_openrouter_prompt.txt --output reports/babimind_llm.json
