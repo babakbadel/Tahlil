@@ -3,71 +3,13 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "regime": "bullish",
-    "scenarios": [
-      {
-        "label": "bull",
-        "probability": 0.45,
-        "target_price_rial": 23000,
-        "time_horizon": "Q2-Q3 1405",
-        "key_triggers": [
-          "global copper supply disruption",
-          "higher copper benchmark",
-          "higher realized sales price / margins",
-          "higher FMLI earnings expectations",
-          "fund-flow rotation to large liquid commodity leaders",
-          "technical breakout or continuation",
-          "option convexity increases demand for calls"
-        ],
-        "risk_factors": [
-          "copper price pullback",
-          "volume deterioration",
-          "broader market risk-off",
-          "sales growth rolls over for two consecutive releases",
-          "volume falls while revenue is supported only by price",
-          "copper price breaks down materially and remains weak"
-        ]
-      },
-      {
-        "label": "base",
-        "probability": 0.4,
-        "target_price_rial": 21500,
-        "time_horizon": "Q2 1405",
-        "key_triggers": [
-          "steady sales growth",
-          "maintained market leadership",
-          "stable commodity prices"
-        ],
-        "risk_factors": [
-          "sales growth slowdown",
-          "increased competition",
-          "currency volatility"
-        ]
-      },
-      {
-        "label": "bear",
-        "probability": 0.15,
-        "target_price_rial": 18800,
-        "time_horizon": "Q1-Q2 1405",
-        "key_triggers": [
-          "copper price breakdown",
-          "volume collapse",
-          "real money flow deterioration"
-        ],
-        "risk_factors": [
-          "global risk-off spread",
-          "commodity cycle peak",
-          "operational execution issues"
-        ]
-      }
-    ],
-    "game_theory": "insufficient evidence",
-    "dynamic_system": "bullish regime with strong upward momentum; graph_score 1.0, confidence 0.75; top drivers include market watch, options, intermarket model; risk drivers include regime classification and rotation score; uncertainty high due to missing real-time Iranian market data and option chain data.",
-    "political_economy": "high geopolitical risk from sanctions and Hormuz tensions, but strong commodity demand and price sensitivity support bullish regime for commodity-linked equities; fiscal and energy stress present but offset by growth metrics.",
-    "market_implications": "Sector rotation favors metals_mining, energy_sector, commodity_traders; losers include import_depending_sectors, currency_hedge_strategies, domestic_demand_stocks; valuation impact shows multiple expansion for growth stocks, sector premium for commodity-related stocks, rial weakness boosts exporters; risk environment includes commodity_price_volatility, currency_risk, geopolitical_tensions; hedging_opportunities: commodity_derivatives, currency_futures, geopolitical_insurance.",
-    "option_implications": "Option chain data missing; rely on structure, liquidity and OI; avoid buying high-IV calls based solely on copper bullishness; use delta, IV, theta, open interest and spread liquidity; confirm spot direction before buying options.",
-    "confidence": 0.75,
-    "data_gaps": [
+    "model": "BabiMind",
+    "generated_at": "2026-09-15T13:01:23.112359+00:00",
+    "pipeline_version": "1.7",
+    "regime": "bullish_conditional",
+    "overall_confidence": 0.62,
+    "data_quality_score": 0.45,
+    "critical_data_gaps": [
       "real_time_iranian_market_data",
       "comprehensive_option_chain_data",
       "detailed_copper_price_forecasts",
@@ -76,6 +18,414 @@
       "iran_customs_trade_data",
       "cbi_monetary_aggregates",
       "energy_balance_data"
-    ]
+    ],
+    "executive_summary": [
+      "Graph intelligence confirms bullish regime (score 1.0, confidence 0.75) driven by copper price sensitivity, volume-led expansion, and risk-on market sentiment",
+      "فملی (FMLI) remains the primary thesis symbol with consistent historical bullish bias across 5 memory runs (bull probability 0.40-0.45, base 0.35-0.40, bear 0.15-0.25)",
+      "All real-time Iranian market data sources (TSETMC, Codal, TSE, Finpy-tse) are unavailable due to timeouts, severely limiting current market confirmation",
+      "Global market snapshot shows 'pending_upstream_data' across all transmission channels, preventing cross-market validation",
+      "Oil prices are surging (Brent $107-108) with Saudi pipeline disruptions and Hormuz escalation risk, creating mixed signals for Iranian equities",
+      "President Pezeshkian confirms trade has fallen 25-35% due to sanctions and blockade, while gasoline price hikes add domestic inflation pressure",
+      "Sector rotation analysis from memory favors metals_mining, energy_sector, and commodity_traders; import-dependent sectors and domestic demand stocks are disfavored",
+      "The accumulation zone for فملی is 19,400-19,800 IRR with confirmation at 20,000 and risk line at 18,800 IRR",
+      "With critical data gaps, the overall confidence is moderate (0.62) and the regime is 'conditional' rather than absolute bullish",
+      "Recommended primary strategy is WAIT for real-time market data confirmation before committing new capital"
+    ],
+    "market_regime": {
+      "label": "bullish_conditional",
+      "evidence": [
+        "graph_intelligence.graph_regime: bullish (score 1.0, confidence 0.75)",
+        "graph_intelligence.graph_score: 1.0",
+        "symbol_thesis.فملی.scenario_weights.bull: 0.45",
+        "factor_coverage: metals_mining cluster Available (copper_price, copper_volume, copper_demand, copper_supply from USGS, World Bank)",
+        "factor_coverage: precious_metals cluster Available (gold_price, gold_volume from World Gold Council, LBMA)",
+        "factor_coverage: geopolitics_sanctions Available (6 sources including US Treasury OFAC, UN Security Council)",
+        "factor_coverage: hormuz_risk Available (4 sources including AFP, Al Jazeera, EIA)",
+        "memory: 5 consecutive runs show bullish regime for فملی with consistent scenario weights"
+      ],
+      "inference": "The regime is bullish for commodity-linked equities (especially فملی) driven by copper price sensitivity, volume-led expansion, and risk-on sentiment. However, the regime is conditional on sustained commodity prices and absence of severe geopolitical escalation. Iranian equity market breadth data is missing (iran_equity_market factor Partial with only 2 news sources).",
+      "uncertainty": [
+        "Real-time Iranian market data unavailable (TSE, TSETMC, Codal all timeout)",
+        "Option chain data missing (IV/Greeks not available)",
+        "Global market snapshot shows 'pending_upstream_data'",
+        "Finpy-tse snapshot collection degraded (all requests timed out)",
+        "TSE option source error (timeout)"
+      ],
+      "confidence": 0.62
+    },
+    "evidence": [
+      {
+        "observation": "Graph intelligence regime classification",
+        "source": "reports/babimind_graph.json",
+        "timestamp": "2026-09-15T13:01:11.993512+00:00",
+        "value": "bullish",
+        "confidence": 0.75
+      },
+      {
+        "observation": "فملی Q1 profit growth YoY",
+        "source": "symbol_thesis.فملی.observed_facts",
+        "timestamp": "2026-09-04",
+        "value": "262%",
+        "confidence": 0.8
+      },
+      {
+        "observation": "فملی Q1 operating revenue growth YoY",
+        "source": "symbol_thesis.فملی.observed_facts",
+        "timestamp": "2026-09-04",
+        "value": "183%",
+        "confidence": 0.8
+      },
+      {
+        "observation": "فملی sales 1405/05 (first 5 months)",
+        "source": "symbol_thesis.فملی.observed_facts",
+        "timestamp": "2026-09-04",
+        "value": "663,951,296 million IRR",
+        "confidence": 0.8
+      },
+      {
+        "observation": "Brent crude oil price",
+        "source": "news-digest (multiple sources)",
+        "timestamp": "2026-09-15",
+        "value": "$107-108 per barrel",
+        "confidence": 0.85
+      },
+      {
+        "observation": "Iran trade decline",
+        "source": "pezeshkian_news (Pezeshkian statements)",
+        "timestamp": "2026-08-29 to 2026-09-05",
+        "value": "25-35% decline",
+        "confidence": 0.7
+      },
+      {
+        "observation": "Iran gasoline price hike",
+        "source": "pezeshkian_news (Pezeshkian hints), news-daily-latest",
+        "timestamp": "2026-08-28 to 2026-09-15",
+        "value": "Confirmed hike announced",
+        "confidence": 0.75
+      },
+      {
+        "observation": "Tehran Stock Exchange index level",
+        "source": "news-daily-latest (ISNA, multiple dates)",
+        "timestamp": "2026-08-22 to 2026-08-26",
+        "value": "Crossed 6 million points, then topped 6.3 million",
+        "confidence": 0.7
+      },
+      {
+        "observation": "MarketWatch Plus snapshot (stale)",
+        "source": "data/latest/MarketWatchPlus-1405_06_07.xlsx",
+        "timestamp": "1405-06-07 (2026-09-15 snapshot)",
+        "value": "3,257 rows, last trade 13:56:08",
+        "confidence": 0.3
+      },
+      {
+        "observation": "Real-time TSETMC/Codal/TSE sources",
+        "source": "babimind_source_health.json",
+        "timestamp": "2026-09-15T12:44:06+00:00",
+        "value": "All unavailable (timeout errors)",
+        "confidence": 0.95
+      }
+    ],
+    "macro": {
+      "dollar": {
+        "observation": "Official vs market FX rates unavailable",
+        "source": "TSETMC USD/RIAL source timeout",
+        "confidence": "low",
+        "note": "Central Bank of Iran source is ok but content not parsed for specific rates"
+      },
+      "gold": {
+        "observation": "Gold price data available from World Gold Council and LBMA",
+        "source": "babimind_factor_coverage.json (precious_metals cluster Available)",
+        "confidence": "medium",
+        "note": "Specific price level not extracted from repository"
+      },
+      "rates": {
+        "observation": "ECB Data API and Global Rates sources available",
+        "source": "babimind_source_health.json",
+        "confidence": "medium",
+        "note": "Specific rate levels not extracted"
+      },
+      "inflation": {
+        "observation": "Gasoline price hike confirmed, feeding inflationary pressure",
+        "source": "pezeshkian_news, news-daily-latest",
+        "confidence": "high",
+        "note": "Pezeshkian hints at gasoline price increase; Iran doubles gasoline price per news"
+      },
+      "liquidity": {
+        "observation": "Central Bank of Iran source available but monetary aggregates not extracted",
+        "source": "babimind_source_health.json",
+        "confidence": "low"
+      },
+      "oil": {
+        "observation": "Brent crude at $107-108, WTI elevated, Saudi pipeline disruption, Hormuz escalation risk",
+        "source": "news-daily-latest (multiple sources: NDTV Profit, CNBC, Reuters, AFP)",
+        "timestamp": "2026-09-14 to 2026-09-15",
+        "confidence": "high",
+        "details": "Brent crude tops $108; Saudi East-West pipeline outage; Hormuz shipping risks elevated; FGE sees $150 if supply loss persists"
+      },
+      "policy": {
+        "observation": "Pezeshkian admits economic difficulties, calls for ending war from position of strength, confirms sanctions impact",
+        "source": "pezeshkian_news (multiple outlets: Al Jazeera, Fortune, CNBC, Iran International)",
+        "timestamp": "2026-08-21 to 2026-09-09",
+        "confidence": "high",
+        "details": "Trade down 25-35%; sanctions cutting foreign trade by ~1/3; gasoline price hike announced; US memorandum seen as best path out"
+      }
+    },
+    "industry_rotation": {
+      "1_day": {
+        "observation": "No real-time data available",
+        "source": "TSETMC, Finpy-tse all timeout",
+        "confidence": "none"
+      },
+      "5_day": {
+        "observation": "No real-time data available",
+        "source": "TSETMC, Finpy-tse all timeout",
+        "confidence": "none"
+      },
+      "20_day": {
+        "observation": "Memory-based analysis from historical runs",
+        "source": "babimind_memory_context.json",
+        "timestamp": "2026-09-08 to 2026-09-14",
+        "value": "Metals_mining, energy_sector, commodity_traders favored; import-dependent sectors, currency_hedge strategies, domestic_demand_stocks disfavored",
+        "confidence": "medium"
+      },
+      "relative_strength_ranking": [
+        {
+          "sector": "metals_mining",
+          "rsi": "not_available",
+          "note": "فملی thesis symbol; copper price sensitivity + volume-led expansion"
+        },
+        {
+          "sector": "energy_sector",
+          "rsi": "not_available",
+          "note": "Oil at $107-108; Iranian oil revenues benefit from higher prices"
+        },
+        {
+          "sector": "commodity_traders",
+          "rsi": "not_available",
+          "note": "Beneficiary of commodity price volatility"
+        },
+        {
+          "sector": "precious_metals",
+          "rsi": "not_available",
+          "note": "Gold as safe haven; cluster Available from WGC/LBMA"
+        },
+        {
+          "sector": "import_depending_sectors",
+          "rsi": "not_available",
+          "note": "Auto, consumer goods; negatively impacted by rial depreciation and sanctions"
+        },
+        {
+          "sector": "domestic_demand_stocks",
+          "rsi": "not_available",
+          "note": "Retail, services; hurt by inflation and gasoline price hike"
+        }
+      ]
+    },
+    "symbols": {
+      "best_opportunities": [
+        {
+          "symbol": "فملی",
+          "thesis": "operating-leverage-plus-flow-regime",
+          "core_hypothesis": "The non-obvious edge is not simply higher copper prices; it is the combination of strong sales growth, volume-led expansion, copper-price sensitivity, and leadership in a broad market risk-on regime. A pullback after a leader day can be accumulation rather than weakness, but only if price/volume and real-money flow confirm it.",
+          "observed_facts": {
+            "sales_1405_05_million_rial": 663951296,
+            "sales_ytd_1405_05_million_rial": 2475226320,
+            "q1_eps_rial": 691,
+            "q1_profit_growth_yoy_pct": 262,
+            "q1_operating_revenue_growth_yoy_pct": 183,
+            "q1_gross_profit_growth_yoy_pct": 247,
+            "price_1405_06_04_rial": 19950
+          },
+          "hidden_signal": {
+            "name": "volume_quality_not_price_headline",
+            "logic": "Prioritize sales-volume effect over headline copper-price narratives. If revenue accelerates while volume contribution dominates, the thesis is stronger and less dependent on a single commodity-price spike.",
+            "confirmation": [
+              "monthly sales keeps setting higher highs",
+              "production/sales volume remains firm",
+              "realized copper price stays supportive",
+              "market share/leadership persists",
+              "price advances with improving turnover rather than only gap-up behavior"
+            ],
+            "invalidation": [
+              "sales growth rolls over for two consecutive releases",
+              "volume falls while revenue is supported only by price",
+              "copper price breaks down materially and remains weak",
+              "stock leadership disappears while market breadth remains healthy"
+            ]
+          },
+          "price_map_rial": {
+            "accumulation_zone": [
+              19400,
+              19800
+            ],
+            "confirmation": 20000,
+            "first_target": 20500,
+            "second_target": 21500,
+            "third_target": 23000,
+            "risk_line": 18800
+          },
+          "scenario_weights": {
+            "bull": 0.45,
+            "base": 0.4,
+            "bear": 0.15
+          },
+          "strategy": {
+            "stock": "Scale in only on confirmed support/accumulation; avoid chasing an extended green candle. Increase exposure after a high-volume close above confirmation.",
+            "option": "Use options only when spot confirms direction; prioritize delta, IV, theta, open-interest concentration and spread liquidity. Avoid buying high-IV calls solely because copper is bullish.",
+            "risk": "If 18800 fails on expanding volume, downgrade the thesis and reduce directional exposure. If price rises while real-money flow deteriorates sharply, treat the move as distribution risk."
+          },
+          "confidence": 0.65,
+          "data_gaps": [
+            "Real-time price and volume data unavailable",
+            "Option chain data missing (IV/Greeks not available)",
+            "Institutional flow data unavailable",
+            "Real-time copper price not extracted"
+          ]
+        }
+      ],
+      "risks": [
+        {
+          "symbol": "N/A (no real-time data)",
+          "risk": "All Iranian equity symbols face: (1) data unavailability preventing confirmation, (2) geopolitical escalation risk (Hormuz, sanctions), (3) domestic inflation from gasoline price hike, (4) currency volatility, (5) oil price surge potentially feeding global risk-off"
+        }
+      ],
+      "highest_risk_symbol": {
+        "symbol": "فملی",
+        "risk": "If 18800 fails on expanding volume, thesis invalidation. Copper price breakdown + volume collapse + real money flow deterioration would trigger bear scenario (probability 0.15-0.25)."
+      }
+    },
+    "funds_legal_persons_smart_money": {
+      "observation": "Real-time legal-person flow data unavailable (TSETMC Client Type API timed out). Historical memory shows consistent bullish bias but cannot confirm current institutional behavior.",
+      "source": "babimind_source_health.json, babimind_memory_context.json",
+      "confidence": "low",
+      "inference": "Memory runs consistently show fund-flow rotation toward large liquid commodity leaders as a key trigger for فملی thesis. However, without current data, this remains an inference, not an observation.",
+      "evidence": [
+        "Memory: 3 consecutive runs show fund-flow rotation toward commodity leaders as bull trigger",
+        "Memory: Technical accumulation patterns noted but based on historical, not current data",
+        "Memory: Positive graph intelligence signals but based on internal model edges, not external validation"
+      ]
+    },
+    "options": {
+      "observation": "Option market watch snapshot is empty (0 records). TSE option source has status 'error' with timeout. No IV, Greeks, or open interest data available.",
+      "source": "reports/option_market_watch_summary.json, data/raw/tse_option_snapshot.json, reports/tse_option_source_status.json",
+      "confidence": "none",
+      "note": "Hard rule: expired options must never enter the active universe. Without any option chain data, no options strategy can be recommended."
+    },
+    "scenarios": {
+      "bull": {
+        "probability": 0.4,
+        "target_price_rial": 23000,
+        "time_horizon": "Q2-Q3 1405",
+        "key_triggers": [
+          "global copper supply disruption or tightness",
+          "higher copper benchmark",
+          "higher realized sales price / margins for فملی",
+          "fund-flow rotation toward large liquid commodity leaders",
+          "technical breakout above 20000 confirmation level",
+          "rial weakness boosting exporter revenues"
+        ],
+        "risk_factors": [
+          "copper price pullback",
+          "volume deterioration",
+          "broader market risk-off",
+          "sales growth rolls over for two consecutive releases",
+          "volume falls while revenue supported only by price"
+        ],
+        "source": "symbol_thesis.فملی.scenario_weights.bull + factor_coverage metals_mining + memory"
+      },
+      "base": {
+        "probability": 0.35,
+        "target_price_rial": 21500,
+        "time_horizon": "Q2 1405",
+        "key_triggers": [
+          "steady sales growth",
+          "maintained market leadership",
+          "stable commodity prices",
+          "controlled geopolitical tension"
+        ],
+        "risk_factors": [
+          "sales growth slowdown",
+          "increased competition",
+          "currency volatility",
+          "gasoline price hike feeding inflation"
+        ],
+        "source": "symbol_thesis.فملی.scenario_weights.base + news: Iran doubles gasoline price, trade down 25-35%"
+      },
+      "bear": {
+        "probability": 0.25,
+        "target_price_rial": 18800,
+        "time_horizon": "Q1-Q2 1405",
+        "key_triggers": [
+          "copper price breakdown",
+          "volume collapse",
+          "real money flow deterioration",
+          "escalation of US-Iran conflict (Hormuz closure risk)",
+          "severe sanctions enforcement (OFAC)"
+        ],
+        "risk_factors": [
+          "global risk-off spread",
+          "commodity cycle peak",
+          "operational execution issues",
+          "IRGC-government policy conflict"
+        ],
+        "source": "symbol_thesis.فملی.scenario_weights.bear adjusted up from 0.15 due to geopolitical risk escalation in news"
+      }
+    },
+    "decision": {
+      "regime": "BULLISH_CONDITIONAL",
+      "primary_strategy": "WAIT",
+      "score": 42,
+      "score_breakdown": {
+        "technical": 3,
+        "tape_liquidity": 2,
+        "real_legal_flow": 1,
+        "fundamental": 8,
+        "industry": 5,
+        "macro": 5,
+        "commodities": 4,
+        "news_catalysts": 5,
+        "political_economic_risk": 4,
+        "valuation": 5
+      },
+      "risk": "Medium",
+      "confidence": 42,
+      "best_industry": "metals_mining",
+      "best_symbol": "فملی",
+      "highest_risk_symbol": "فملی (if 18800 fails)",
+      "key_support": "18,800 IRR (risk line for فملی); broader market support levels unknown due to data unavailability",
+      "key_resistance": "20,000 IRR (confirmation level for فملی); 20,500 IRR (first target)",
+      "main_catalyst": "Real-time Iranian market data restoration + copper price stability above current levels + absence of Hormuz closure",
+      "main_risk": "Geopolitical escalation (Hormuz closure, sanctions intensification) + copper price breakdown + loss of real-time data access",
+      "entry_trigger": "WAIT until real-time TSETMC/Codal data is available and فملی shows confirmed accumulation above 19,400 IRR with volume confirmation",
+      "exit_trigger": "If فملی breaks 18,800 IRR on expanding volume, or if copper price breaks down materially and remains weak",
+      "invalidation": "Real-time data remains unavailable AND geopolitical risk escalates further; in that case, reduce all Iranian equity exposure to zero until data conditions improve"
+    },
+    "if_i_were_the_investor": {
+      "would_you_buy_now_or_wait": "WAIT. The fundamental thesis for فملی is strong (262% profit growth, 183% revenue growth, copper price sensitivity), but real-time market data is completely unavailable. Without current price, volume, and flow data, entering is gambling, not investing. Wait for data restoration.",
+      "if_already_holding": "HOLD with tight risk management. If already holding فملی, keep position but set stop at 18,800 IRR. If the position was entered at higher levels, consider reducing to limit exposure given the data blackout and elevated geopolitical risk.",
+      "which_industry_gets_priority": "metals_mining (specifically copper producers like فملی). The combination of strong fundamental growth, copper price sensitivity, and potential rial weakness makes this sector the top priority when data becomes available.",
+      "which_industry_should_be_avoided": "import-dependent sectors (automotive, consumer goods) and domestic demand stocks (retail, services). These face dual headwinds from rial depreciation and domestic inflation (gasoline price hike).",
+      "best_opportunity": "فملی (FMLI) - copper producer with 262% YoY profit growth, 183% revenue growth, and clear technical levels (accumulation 19,400-19,800, confirmation 20,000, target 21,500-23,000, risk line 18,800). The thesis is strong but requires real-time data confirmation.",
+      "most_dangerous_setup": "Chasing فملی higher without real-time volume/flow confirmation during a data blackout. If the price has already advanced significantly while real-money flow is deteriorating (which we cannot currently verify), this would be a distribution trap.",
+      "single_event_that_would_reverse_the_view": "A break below 18,800 IRR on expanding volume in فملی, combined with a material breakdown in copper prices and confirmation of real-money outflow. Alternatively, Hormuz closure or severe sanctions escalation would shift the regime from bullish_conditional to bearish."
+    },
+    "conditional_playbook": {
+      "IF": "data remains unavailable for more than 2 consecutive sessions",
+      "THEN": "Maintain WAIT posture; do not increase exposure; monitor copper price and geopolitical developments as proxy signals"
+    },
+    "tomorrow_mode": {
+      "before_open": "Check: (1) TSETMC/Codal data restoration status, (2) Brent crude oil price (currently $107-108), (3) Copper price action (LME/COMEX if accessible), (4) Any Hormuz escalation news, (5) Any new Pezeshkian policy statements on gasoline prices or sanctions",
+      "open": "IF data restored: Check فملی opening price vs accumulation zone (19,400-19,800). IF price in zone with volume: consider first tranche. IF price above 20,000 with volume: wait for pullback. IF price below 18,800: do not buy. IF data still unavailable: remain in WAIT mode.",
+      "intraday": {
+        "bullish_path": "IF فملی holds above 19,400 with improving volume AND copper price remains firm → Consider staged entry. IF breaks 20,000 on volume → Add to position, target 20,500.",
+        "bearish_path": "IF فملی breaks 18,800 on expanding volume → Exit any long positions. IF copper price drops >3% OR Hormuz escalation confirmed → Full risk-off."
+      },
+      "close": "Record: (1) Was real-time data restored? (2) What was فملی closing price and volume? (3) Any change in copper price or oil price? (4) Any new geopolitical developments? Carry forward: updated data availability assessment and adjusted position size recommendations."
+    },
+    "safety_integrity": {
+      "disclaimer": "This is decision support, not certainty. No returns are guaranteed. Missing data has been explicitly noted and not fabricated. The recommendation is WAIT because the risk/reward is inadequate without real-time market data. The objective is capital preservation through evidence-based decisions.",
+      "missing_data_policy": "MISSING_IS_NOT_ZERO applied throughout. All unavailable sources have been explicitly noted. No prices, statistics, or conclusions have been inferred from missing data.",
+      "anti_bias": "The user's thesis (if any) has been challenged. Evidence FOR the bullish thesis includes strong fundamental growth metrics and positive graph intelligence. Evidence AGAINST includes complete data unavailability, elevated geopolitical risk, and oil price surge potentially feeding global risk-off."
+    }
   }
 }

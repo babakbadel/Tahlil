@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-09-14 14:23 UTC
+# Daily Economic News Digest — 2026-09-15 13:01 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **139** · Total stored: **892**
+> New items this run: **105** · Total stored: **997**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | August Inflation Hits 3.4% as Iran War Gas Prices Push Fed Rate Hike Odds to 90% - The Eastern Herald | The Eastern Herald | Mon, 14 Sep 2026 01:59 |
-| macro_monetary | Iran Regime Raises Gasoline Price to 10,000 Tomans as Inflationary Pressures Mount - irannewsupdate.com | irannewsupdate.com | Thu, 10 Sep 2026 19:17 |
-| macro_monetary | Quantifying the impact of the Iran war on US inflation - cepr.org | cepr.org | Mon, 04 May 2026 07:00 |
-| macro_monetary | Gas prices top $4 a gallon as Iran war escalates - ABC News - Breaking News, Latest News and Videos | ABC News - Breaking News, Latest News and Videos | Mon, 20 Jul 2026 07:00 |
-| oil | Canada's oil windfall may yet wipe out its losses from tariffs - cbc.ca | cbc.ca | Sun, 13 Sep 2026 08:00 |
-| oil | Oil closes at three-week high as hopes of US-Iran peace deal fade - Reuters | Reuters | Tue, 18 Aug 2026 07:00 |
-| oil | The $91 per barrel price for Brent crude is merely superficial; the real energy risk lies in diesel prices at $170. - Mo | Moomoo | Wed, 19 Aug 2026 07:00 |
-| oil | Oil prices jump over 2.7% as Saudi pipeline shu... - Pluang | Pluang | Mon, 14 Sep 2026 03:15 |
-| oil | Boiling Hot: Brent Crude Hits $100 After Seven Weeks Amid US Strikes On Five Iranian Oil Tankers - ndtvprofit.com | ndtvprofit.com | Wed, 09 Sep 2026 07:22 |
-| oil | Oil Prices Fall as Iran-Oman Talks Fuel Hopes of Strait Reopening - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 26 Aug 2026 07:00 |
-| oil | Iran-Oman Meeting Postponed As Brent Crude Tops $107 - Benzinga | Benzinga | Mon, 14 Sep 2026 01:56 |
-| oil | Nasdaq Crashes 2% Pre-Market: AI Trade Reversal, Oil Jitters Among Three Reasons Dragging Futures - ndtvprofit.com | ndtvprofit.com | Mon, 14 Sep 2026 09:37 |
-| oil | Brent crude surges to $109.30 as Saudi pipeline shutdown stokes supply fears - CNBC TV18 | CNBC TV18 | Mon, 14 Sep 2026 13:38 |
-| oil | Crude Oil Price Forecast – WTI and Brent Hold Above 50-Day EMA as Weekend Geopolitical Risks Loom - FXEmpire | FXEmpire | Fri, 21 Aug 2026 15:02 |
-| oil | After oil surge, Fed rate hike will shape challenge - indianexpress.com | indianexpress.com | Mon, 14 Sep 2026 00:35 |
-| oil | Brent crude at $108: What does it mean for India and your investments? - Business Standard | Business Standard | Mon, 14 Sep 2026 07:13 |
-| oil | Oil prices cross $107 a barrel: What is driving the latest surge in Brent crude? - Fortune India | Fortune India | Mon, 14 Sep 2026 04:40 |
-| oil | Current price of oil as of August 24, 2026 - fortune.com | fortune.com | Mon, 24 Aug 2026 07:00 |
-| oil | Crude Oil Prices Rise Amid Supply Disruption Fears - Ratopati | Ratopati | Mon, 14 Sep 2026 10:21 |
-| oil | Brent Crude heads towards $108 a barrel mark after Saudi Arabia shuts key pipeline - CNBC TV18 | CNBC TV18 | Mon, 14 Sep 2026 01:21 |
-| oil | Oil Price Rises Above $107 Amid Mideast Tension - Channels Television | Channels Television | Mon, 14 Sep 2026 06:52 |
-| oil | Current price of oil as of September 1, 2026 - fortune.com | fortune.com | Tue, 01 Sep 2026 07:00 |
-| oil | Current price of oil as of August 25, 2026 - fortune.com | fortune.com | Tue, 25 Aug 2026 07:00 |
-| oil | Oil Above $107: India Faces Massive Import Bill On Iran War Flare-Up As Crude On Track To Hit $115 - ndtvprofit.com | ndtvprofit.com | Mon, 14 Sep 2026 08:36 |
-| oil | Current price of oil as of August 27, 2026 - fortune.com | fortune.com | Thu, 27 Aug 2026 07:00 |
-| oil | Oil Price Today (September 14): Crude oil jumps 3% to near $108/barrel as Middle East tensions escalate. W - The Economi | The Economic Times | Mon, 14 Sep 2026 02:15 |
-| oil | HLIB Warns Oil Price Could Hit US$120 Per Barrel If Saudi Supply Disruptions Intensify - BusinessToday Malaysia | BusinessToday Malaysia | Mon, 14 Sep 2026 09:13 |
-| oil | Oil prices surge ahead of Fed rate decision - Yeni Safak English | Yeni Safak English | Mon, 14 Sep 2026 09:12 |
-| oil | Global crude oil prices rise over two percent - Nepalnews.com | Nepalnews.com | Mon, 14 Sep 2026 02:18 |
-| oil | Current price of oil as of August 26, 2026 - fortune.com | fortune.com | Wed, 26 Aug 2026 07:00 |
-| oil | Crude oil prices jump more than $107 per barrel following Houthi attacks on Saudi - WION | WION | Mon, 14 Sep 2026 03:45 |
-| oil | Brent crude at $107 per barrel following new strikes on Saudi Arabia, Strait of Hormuz - Dawn | Dawn | Mon, 14 Sep 2026 09:05 |
-| oil | Tech stocks drop on warnings about AI as Brent oil's price jumps above $108 - Castanet | Castanet | Mon, 14 Sep 2026 14:05 |
-| oil | Brent Crude climbs above $107 amid rising Middle East supply disruption fears - The Statesman | The Statesman | Mon, 14 Sep 2026 06:49 |
-| oil | Brent Crude Oil Prices Surge 3% as Houthi Attacks, Hormuz Tensions Raise Supply Fears - apacnewsnetwork.com | apacnewsnetwork.com | Mon, 14 Sep 2026 05:11 |
-| oil | Bitcoin rises as AI stocks decline, Brent crude climbs to $107 - CoinDesk | CoinDesk | Mon, 14 Sep 2026 08:07 |
-| oil | Brent crude tops $108 as West Asia attacks fuel fresh oil supply fears - Firstpost | Firstpost | Mon, 14 Sep 2026 08:14 |
-| oil | Tech stocks drop on warnings about AI as Brent oil’s price jumps above $108 - KOB 4 | KOB 4 | Sun, 13 Sep 2026 07:00 |
-| oil | Asian stocks sink on crude oil surge - www.israelhayom.com | www.israelhayom.com | Sun, 13 Sep 2026 22:06 |
-| oil | Oil Industry Braces for Years-Long Iran War - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sat, 12 Sep 2026 23:00 |
+| macro_monetary | US-Israel-Iran War Latest Live News: Oil Price Today – Brent Crude Nears $100 as US-Iran Tensions Escalate; Check Impact | sundayguardianlive.com | Sun, 06 Sep 2026 07:00 |
+| macro_monetary | US-Israel-Iran War Live Updates: Why Iran is Running Out of Easy Fuel Options? Tehran Faces Petrol Price Hike as War, US | sundayguardianlive.com | Mon, 24 Aug 2026 07:00 |
+| macro_monetary | US-Israel-Iran War Latest Live News: Iran Hikes Gasoline Price Again As Consumption Hits Record 145 Million Litres A Day | sundayguardianlive.com | Tue, 08 Sep 2026 03:01 |
+| macro_monetary | Fuel prices surge in Africa as Iran war hits supply - Reuters | Reuters | Wed, 01 Apr 2026 07:00 |
+| macro_monetary | Lower oil prices after US-Iran accord to support Pakistan inflation outlook — report - Arab News PK | Arab News PK | Tue, 30 Jun 2026 07:00 |
+| macro_monetary | Fed’s preferred inflation gauge worsens as Iran war sends food, energy prices surging - nypost.com | nypost.com | Thu, 28 May 2026 07:00 |
+| macro_monetary | Nigeria’s fuel, fertilizer, and food prices feel the strain of the Iran conflict - ifpri.org | ifpri.org | Mon, 22 Jun 2026 07:00 |
+| macro_monetary | Iran’s Gasoline Price Hike Adds Another Shock To A Deepening Cost-Of-Living Crisis - OpEd - Eurasia Review | Eurasia Review | Tue, 15 Sep 2026 03:05 |
+| oil | Supply squeeze likely to support oil price upside - The Star | The Star | Mon, 14 Sep 2026 23:56 |
+| oil | Oil Prices Rise to $107 as Saudi Pipeline Faces Outage - hdfcsky.com | hdfcsky.com | Tue, 15 Sep 2026 04:42 |
+| oil | Brent crude tops $108 as West Asia attacks fuel fresh oil supply fears - firstpost.com | firstpost.com | Mon, 14 Sep 2026 08:14 |
+| oil | Costco nearly doubles Kirkland motor oil prices while implementing purchase limit - Yahoo News UK | Yahoo News UK | Mon, 14 Sep 2026 19:58 |
+| oil | Impact On Malaysia’s O&G Sector As Oil Price Hits Above US$100 - BusinessToday Malaysia | BusinessToday Malaysia | Tue, 15 Sep 2026 04:38 |
+| oil | Elevated crude oil prices and heightened Middle East tensions weigh on INR - Business Standard | Business Standard | Tue, 15 Sep 2026 05:01 |
+| oil | Dow Jones futures fall 350 pts, US stocks set for weak open as crude tops $108, Treasury yield soar above... - Moneycont | Moneycontrol.com | Tue, 15 Sep 2026 10:00 |
+| oil | Brent Crude Price Breaks $107, Middle East Conflict Threatens Supply - VOI.id | VOI.id | Mon, 14 Sep 2026 10:55 |
+| oil | Brent near $107; Oil prices rise as Saudi pipeline outage adds to West Asian supply concerns - cnbctv18.com | cnbctv18.com | Tue, 15 Sep 2026 01:21 |
+| oil | Crude Oil Weekly Outlook: BRICS Summit Calls for Maximum Restraint - FOREX.com | FOREX.com | Sun, 13 Sep 2026 16:03 |
+| oil | WTI and Brent Crude Oil Prices Rebound Again after Oman Weekend Meeting Postponed - fxleaders.com | fxleaders.com | Mon, 14 Sep 2026 01:13 |
+| oil | Why Saudi Arabia’s East-West pipeline matters for global oil - Al Jazeera | Al Jazeera | Mon, 14 Sep 2026 14:11 |
+| oil | Current price of oil as of September 1, 2026 - Fortune | Fortune | Tue, 01 Sep 2026 07:00 |
+| oil | Crude At $150? FGE Sees Brent Hitting That Level If Supply Loss Persists - NDTV Profit | NDTV Profit | Tue, 15 Sep 2026 08:11 |
+| oil | Oil Price Today (September 15): Crude oil rises to $107 as Saudi energy infra attacks raise supply fears. - The Economic | The Economic Times | Tue, 15 Sep 2026 02:11 |
+| oil | Oil Prices On Sept 15: Brent Crude Near $107 As Saudi Pipeline Shutdown Keeps Supply Risks In Focus - NDTV Profit | NDTV Profit | Tue, 15 Sep 2026 01:41 |
+| oil | How Iran's regional allies' attacks in Yemen are compounding the war's impact on oil prices - CBS News | CBS News | Mon, 14 Sep 2026 15:12 |
+| oil | Crude Oil Futures Rise on Positive Global Trends - Rediff MoneyWiz | Rediff MoneyWiz | Tue, 15 Sep 2026 07:58 |
+| oil | Brent beyond $100: Why oil prices are up again, worry for India - indianexpress.com | indianexpress.com | Thu, 10 Sep 2026 13:08 |
+| oil | Crude Oil Prices Jump 3% After Fresh Strikes On Strait of Hormuz; Brent Above $107 A Barrel - NDTV Profit | NDTV Profit | Mon, 14 Sep 2026 01:08 |
+| oil | Oil Prices Down - 14-09-26 - Armenpress | Armenpress | Tue, 15 Sep 2026 05:06 |
+| oil | Saudi pipeline shutdown: What’s next for global crude prices? - firstpost.com | firstpost.com | Tue, 15 Sep 2026 08:37 |
+| oil | Oil prices climb over $100 per barrel as US war in Iran continues - ABC7 New York | ABC7 New York | Wed, 09 Sep 2026 07:00 |
+| oil | Oil prices climb over $100 per barrel as US war in Iran continues - 6abc Philadelphia | 6abc Philadelphia | Wed, 09 Sep 2026 16:15 |
+| oil | Oil Prices Jump as Attacks Choke Off Saudi Energy Supply - The New York Times | The New York Times | Sun, 13 Sep 2026 22:29 |
+| oil | Costco raises price for Kirkland motor oil, sets purchase limit - ABC News - Breaking News, Latest News and Videos | ABC News - Breaking News, Latest News and Videos | Mon, 14 Sep 2026 16:57 |
+| oil | Analysts warn of 'uncontrolled demand destruction' as oil forecast to hit record high - ABC News & Headlines – Australia | ABC News & Headlines – Australian Broadcasting Corporation | Tue, 15 Sep 2026 06:51 |
+| oil | Brent Crude Oil Price Maintains Its Positive Momentum – Analysis – 15-09-2026 - Economies.com | Economies.com | Tue, 15 Sep 2026 02:35 |
+| oil | Brent crude oil price on September 15, 2026 at 5:00 PM EDT - Robinhood | Robinhood | Mon, 14 Sep 2026 10:16 |
+| oil | Costco hikes Kirkland motor oil price to $58, l... - Pluang | Pluang | Tue, 15 Sep 2026 02:16 |
+| oil | Wealthy Investors Flock To Oil & Gas Assets Amid Energy Crisis - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 15 Sep 2026 00:00 |
+| oil | Commerzbank revamps Brent crude forecast for the rest of 2026 - thestreet.com | thestreet.com | Mon, 14 Sep 2026 22:37 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-09-14 14:23 UTC | 139 new | 892 total
+NEWS_DIGEST | 2026-09-15 13:01 UTC | 105 new | 997 total

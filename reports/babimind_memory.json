@@ -698,7 +698,77 @@
         "energy_balance_data"
       ],
       "fingerprint": "4986386789dec846631c"
+    },
+    {
+      "timestamp": "2026-09-15T13:03:32.264243+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": "bullish_conditional",
+      "scenarios": {
+        "bull": {
+          "probability": 0.4,
+          "target_price_rial": 23000,
+          "time_horizon": "Q2-Q3 1405",
+          "key_triggers": [
+            "global copper supply disruption or tightness",
+            "higher copper benchmark",
+            "higher realized sales price / margins for فملی",
+            "fund-flow rotation toward large liquid commodity leaders",
+            "technical breakout above 20000 confirmation level",
+            "rial weakness boosting exporter revenues"
+          ],
+          "risk_factors": [
+            "copper price pullback",
+            "volume deterioration",
+            "broader market risk-off",
+            "sales growth rolls over for two consecutive releases",
+            "volume falls while revenue supported only by price"
+          ],
+          "source": "symbol_thesis.فملی.scenario_weights.bull + factor_coverage metals_mining + memory"
+        },
+        "base": {
+          "probability": 0.35,
+          "target_price_rial": 21500,
+          "time_horizon": "Q2 1405",
+          "key_triggers": [
+            "steady sales growth",
+            "maintained market leadership",
+            "stable commodity prices",
+            "controlled geopolitical tension"
+          ],
+          "risk_factors": [
+            "sales growth slowdown",
+            "increased competition",
+            "currency volatility",
+            "gasoline price hike feeding inflation"
+          ],
+          "source": "symbol_thesis.فملی.scenario_weights.base + news: Iran doubles gasoline price, trade down 25-35%"
+        },
+        "bear": {
+          "probability": 0.25,
+          "target_price_rial": 18800,
+          "time_horizon": "Q1-Q2 1405",
+          "key_triggers": [
+            "copper price breakdown",
+            "volume collapse",
+            "real money flow deterioration",
+            "escalation of US-Iran conflict (Hormuz closure risk)",
+            "severe sanctions enforcement (OFAC)"
+          ],
+          "risk_factors": [
+            "global risk-off spread",
+            "commodity cycle peak",
+            "operational execution issues",
+            "IRGC-government policy conflict"
+          ],
+          "source": "symbol_thesis.فملی.scenario_weights.bear adjusted up from 0.15 due to geopolitical risk escalation in news"
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "43b7db79cbca9810048d"
     }
   ],
-  "updated_at": "2026-09-14T14:35:45.110529+00:00"
+  "updated_at": "2026-09-15T13:03:32.265421+00:00"
 }
