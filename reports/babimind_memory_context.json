@@ -1,7 +1,7 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 6,
-  "context_runs": 6,
+  "historical_runs_available": 7,
+  "context_runs": 7,
   "recent_runs": [
     {
       "timestamp": "2026-09-08T13:26:25.411222+00:00",
@@ -768,6 +768,17 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "43b7db79cbca9810048d"
+    },
+    {
+      "timestamp": "2026-09-16T12:57:26.227075+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {},
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "ac09eed1d59459df32cf"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."
