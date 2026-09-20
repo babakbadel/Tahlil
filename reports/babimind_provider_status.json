@@ -1,12 +1,27 @@
 {
-  "selected": "openrouter",
+  "selected": null,
   "model": "openrouter/free",
   "statuses": [
     {
       "provider": "openrouter",
-      "status": "ok",
+      "status": "error",
+      "error": "OpenRouter returned empty content",
       "model": "openrouter/free",
       "attempt": 1
+    },
+    {
+      "provider": "openrouter",
+      "status": "error",
+      "error": "Expecting value: line 1 column 1 (char 0)",
+      "model": "openrouter/free",
+      "attempt": 2
+    },
+    {
+      "provider": "openrouter",
+      "status": "error",
+      "error": "Expecting value: line 1 column 1 (char 0)",
+      "model": "openrouter/free",
+      "attempt": 3
     }
   ]
 }
