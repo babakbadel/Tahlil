@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-09-22 12:57 UTC
+# Daily Economic News Digest — 2026-09-23 13:05 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **88** · Total stored: **1352**
+> New items this run: **81** · Total stored: **1433**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Petrol Subsidy / Public Relief / Inflation / Fuel Prices / Pakistan - Aaj News - Awaz - Aaj English TV | Aaj English TV | Fri, 18 Sep 2026 23:45 |
-| macro_monetary | Pain at the pump: What spiking gas prices mean for consumers, the US economy - Stanford Institute for Economic Policy Re | Stanford Institute for Economic Policy Research (SIEPR) | Wed, 25 Mar 2026 07:00 |
-| macro_monetary | From Removing Preferential Currency Rates to Raising Gasoline Prices: How One Price Shock Triggers a New Wave of Inflati | irannewsupdate.com | Tue, 22 Sep 2026 06:14 |
-| oil | Today’s Market Recap: AI Chip Stocks Surge as AMD Market Cap Crosses $1 Trillion; Intel Rises 12%, Arm Jumps 17%, Meta G | TradingKey | Tue, 22 Sep 2026 00:54 |
-| oil | Oil prices mixed as investors ponder Strait of Hormuz reopening hopes - Reuters | Reuters | Wed, 05 Aug 2026 07:00 |
-| oil | Indian Stocks Open Higher Despite Rise in Crude Oil Prices - Investing.com India | Investing.com India | Tue, 22 Sep 2026 09:47 |
-| oil | Oil prices jump 5% after U.S. revokes Iran oil sanctions waiver following ship attacks - NBC News | NBC News | Tue, 07 Jul 2026 07:00 |
-| oil | Goldman Sachs forecasts $120 Brent crude oil by Q4 2026 amid global instability - Fox Business | Fox Business | Wed, 22 Jul 2026 07:00 |
-| oil | Why Isn’t the Price of Oil Even Higher? - Paul Krugman / Substack | Paul Krugman | Substack | Thu, 13 Aug 2026 07:00 |
-| oil | Brent crude oil spot prices surge past futures price in April - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Fri, 24 Apr 2026 07:00 |
-| oil | Brent Tops $91 After Unidentified Projectile Hits Vessel Transiting Hormuz - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 18 Aug 2026 07:00 |
-| oil | German 10-Year Yield Falls to Mid-3.4% Range, Brent Crude Drops Below $100 for First Time in About Two Weeks - finance.b | finance.biggo.com | Mon, 21 Sep 2026 17:25 |
-| oil | Petroleum markets responded to disruptions in the Middle East in the second quarter - U.S. Energy Information Administra | U.S. Energy Information Administration (EIA) (.gov) | Wed, 15 Jul 2026 07:00 |
-| oil | Brent crude oil price falls below $102 on hopes of easing West Asia tensions - BusinessLine | BusinessLine | Mon, 21 Sep 2026 04:18 |
-| oil | Oil Prices Today: Brent Crude Pause Near $104 As Saudi Supply Recovers, Iran Diplomacy Takes Focus - NDTV Profit | NDTV Profit | Mon, 21 Sep 2026 01:01 |
-| oil | Crude Oil Weekly Outlook: Saudi–Houthi Escalation vs Key Resistance - stonex.com | stonex.com | Sun, 20 Sep 2026 14:28 |
-| oil | Crude oil prices pull back amid mixed headlines and market uncertainty. - pluang.com | pluang.com | Mon, 21 Sep 2026 14:47 |
-| oil | Brent crude oil tops $100. Here's what that means for U.S. oil prices - Gulf Coast News and Weather | Gulf Coast News and Weather | Wed, 09 Sep 2026 07:00 |
-| oil | Why Has the Price of Oil Remained Below War-Time Expectations? - mecouncil.org | mecouncil.org | Sun, 23 Aug 2026 07:00 |
-| oil | Crude oil price: MCX futures fall on weak global cues, Brent crude at $102 - BusinessLine | BusinessLine | Mon, 21 Sep 2026 10:00 |
-| oil | Brent crude, WTI oil prices fall 2% on demand concerns - qz.com | qz.com | Thu, 13 Aug 2026 07:00 |
-| oil | Stockpile crunch threatens to send oil price towards $US150 a barrel - AFR | AFR | Mon, 21 Sep 2026 03:30 |
-| oil | Oil Price Today (September 22): Crude oil snaps 4-day fall, hovers near $101 on potential US-Iran talk. Wh - The Economi | The Economic Times | Tue, 22 Sep 2026 02:11 |
-| oil | Oil drops below $99 as reports of Iran’s offer to reopen Hormuz ease supply fears - CNBC TV18 | CNBC TV18 | Tue, 22 Sep 2026 09:41 |
-| oil | Crude oil outlook: US-Iran talks; high transit cost in focus - Business Standard | Business Standard | Tue, 22 Sep 2026 06:24 |
-| oil | Oil News: Saudi Exports Recover Through Hormuz but Diesel Keeps Crude’s Floor Intact - FXEmpire | FXEmpire | Mon, 21 Sep 2026 06:56 |
-| oil | Global crude oil prices surged - News On AIR | News On AIR | Mon, 21 Sep 2026 22:31 |
-| oil | ‘Half my day’s pay goes to filling up my car now’: diesel crisis ripples across Britain - The Guardian | The Guardian | Mon, 21 Sep 2026 22:40 |
-| oil | Brent Drops Below $100 on Saudi Supply Recovery, Iran War Truce Prospects - Business Post Nigeria | Business Post Nigeria | Tue, 22 Sep 2026 04:20 |
-| oil | Oil prices drop as Iran hints at reopening Stra... - pluang.com | pluang.com | Tue, 22 Sep 2026 10:34 |
-| oil | Brent crude cools from recent highs, but $100 oil keeps bond markets on edge - investingLive | investingLive | Mon, 21 Sep 2026 04:33 |
-| oil | Crude Oil Price Forecast: Can Brent Hold $100 as Saudi Export Recovery Weighs on Risk Premium? - TradingKey | TradingKey | Mon, 21 Sep 2026 07:01 |
-| oil | U.S. Diesel Surges Past $6.51 a Gallon to Record High, Diverging Sharply from Crude Oil - finance.biggo.com | finance.biggo.com | Tue, 22 Sep 2026 00:35 |
-| oil | Brent Crude Oil Price Faces Negative Pressure – Analysis – 21-09-2026 - Economies.com | Economies.com | Mon, 21 Sep 2026 01:59 |
-| oil | Crude Oil Prices Rise After Four-Day Slide as Trump Signals Iran Talks, Saudi Oil Flows Through Hormuz Increase - APAC M | APAC Media | Tue, 22 Sep 2026 09:28 |
-| oil | US-Iran Diplomacy Drag Global Oil Prices Down - Mexico Business News | Mexico Business News | Mon, 21 Sep 2026 19:10 |
-| oil | Brent Crude Steadies Near $100: Oil Prices Fall 8% In Four Days As Saudi Exports Recover - NDTV Profit | NDTV Profit | Tue, 22 Sep 2026 00:50 |
-| oil | Brent Crude Oil Prices Rise Above $100/Barrel - Marine News Magazine | Marine News Magazine | Wed, 09 Sep 2026 07:00 |
-| oil | Oil Prices Down - 21-09-26 - Armenpress | Armenpress | Tue, 22 Sep 2026 05:08 |
-| oil | Big Oil's Production Keeps Soaring Despite Deep Spending Cuts - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sun, 20 Sep 2026 23:00 |
+| macro_monetary | South Africa’s inflation climbs to 20-month high as Iran war drives fuel shock - Business News Nigeria | Business News Nigeria | Wed, 20 May 2026 07:00 |
+| oil | Brent crude oil price falls below $102 on hopes of easing West Asia tensions - thehindubusinessline.com | thehindubusinessline.com | Mon, 21 Sep 2026 04:18 |
+| oil | Oil Prices Fall Below $100 Amid Signs of Saudi Crude Supply Recovery - news.sbs.co.kr | news.sbs.co.kr | Tue, 22 Sep 2026 22:16 |
+| oil | Brent Crude Steadies Near $100: Oil Prices Fall 8% In Four Days As Saudi Exports Recover - ndtvprofit.com | ndtvprofit.com | Tue, 22 Sep 2026 00:50 |
+| oil | Crude oil price: MCX futures fall on weak global cues, Brent crude at $102 - thehindubusinessline.com | thehindubusinessline.com | Mon, 21 Sep 2026 10:00 |
+| oil | Global Oil Prices Jump After U.S. and Iran Trade Attacks - The New York Times | The New York Times | Mon, 31 Aug 2026 07:00 |
+| oil | U.S. Stocks Overnight / Nasdaq Posts Fourth Consecutive Gain; SanDisk (SNDK.US) Rises 6.8%; WTI and Brent Crude Oil Pric | news.futunn.com | Tue, 22 Sep 2026 22:56 |
+| oil | Crude oil falls for five consecutive days, most metals rise, LME and SHFE nickel, COMEX and SHFE silver, cast aluminum g | news.metal.com | Wed, 23 Sep 2026 00:33 |
+| oil | Crude Oil Prices Fall as Saudi Pipeline Restarts, Hormuz Traffic Resumes - Business Post Nigeria | Business Post Nigeria | Wed, 23 Sep 2026 00:55 |
+| oil | New U.S. Sanctions Law Threatens India's Huge Russian Oil Trade - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 21 Sep 2026 23:00 |
+| oil | Global oil prices have dropped but Australian motorists should remain wary - ABC News & Headlines – Australian Broadcast | ABC News & Headlines – Australian Broadcasting Corporation | Wed, 23 Sep 2026 04:37 |
+| oil | Fitch increases Brent crude outlook, pushes up TTF gas forecast - Quantum Commodity Intelligence | Quantum Commodity Intelligence | Tue, 22 Sep 2026 18:20 |
+| oil | Oil prices rise to six-week highs on worsening Middle East conflict - Reuters | Reuters | Mon, 07 Sep 2026 07:00 |
+| oil | Oil Tumbles 3% as Iran Floats Hormuz Reopening Within a Week - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 22 Sep 2026 11:57 |
+| oil | Oil Prices Fall After Trump Hails ‘Good’ Talks With Iran - channelstv.com | channelstv.com | Wed, 23 Sep 2026 08:47 |
+| oil | Oil prices fall as Saudi pipeline restarts, US-Iran talks raise supply hopes - Firstpost | Firstpost | Wed, 23 Sep 2026 04:20 |
+| oil | Goldman Sachs: China's Q4 Crude Imports Could Fall 3 Million Barrels Year-on-Year, Capping Oil Price Upside - finance.bi | finance.biggo.com | Wed, 23 Sep 2026 03:35 |
+| oil | Brent Crude Falls To $99: Oil Prices Set For Longest Losing Streak In A Year As Saudi Pipeline Restarts - ndtvprofit.com | ndtvprofit.com | Wed, 23 Sep 2026 01:05 |
+| oil | ING Supply-Side Risks Stay Elevated Even as Oil Prices Pull Back - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 22 Sep 2026 11:30 |
+| oil | Oil holds near two-week lows on easing supply concerns - The Straits Times | The Straits Times | Wed, 23 Sep 2026 09:20 |
+| oil | Oil slips below $100 as US-Iran talks put crude prices and Treasury yields at a crossroads - investinglive.com | investinglive.com | Wed, 23 Sep 2026 04:16 |
+| oil | Crude oil price falls $1 on better supply outlook amid hopes for US-Iran talks - TradingView | TradingView | Wed, 23 Sep 2026 05:21 |
+| oil | Oil Prices Down - 22-09-26 - Armenpress | Armenpress | Wed, 23 Sep 2026 05:41 |
+| oil | Current price of oil as of Sept. 22, 2026 - Fortune | Fortune | Tue, 22 Sep 2026 11:00 |
+| oil | Brent Crude Oil Price Shows Signals Easing Downside Pressure – Analysis – 23-09-2026 - Economies.com | Economies.com | Wed, 23 Sep 2026 02:11 |
+| oil | Not Brent Crude, Watch Diesel Prices Instead, Says Economist As Oil Prices Hover Around $100 - ndtvprofit.com | ndtvprofit.com | Wed, 23 Sep 2026 06:23 |
+| oil | investingLive European session wrap: Brent crude retakes $100 as dollar rises, yields climb and stocks slip - investingl | investinglive.com | Wed, 23 Sep 2026 11:59 |
+| oil | Saudi Arabia signals reopening of East-West pipeline - Financial Times | Financial Times | Tue, 22 Sep 2026 11:19 |
+| oil | Oil prices hover around $100 a barrel - Transport Topics | Transport Topics | Tue, 22 Sep 2026 16:27 |
+| oil | Brent crude oil price on September 23, 2026 at 5:00 PM EDT - Robinhood | Robinhood | Tue, 22 Sep 2026 13:57 |
+| oil | Stock market holds near record as oil prices drop - The Arkansas Democrat-Gazette | The Arkansas Democrat-Gazette | Wed, 23 Sep 2026 07:16 |
+| oil | Oil prices settle lower as crude flows from Middle East improve - Reuters | Reuters | Tue, 22 Sep 2026 00:34 |
+| oil | Oil prices mixed after U.S. and Iran talk for hours at UN meeting - CNBC | CNBC | Wed, 23 Sep 2026 01:04 |
+| oil | Oil surges 6%, Brent and US crude both surpass $100 on more tanker attacks - Reuters | Reuters | Thu, 10 Sep 2026 07:00 |
+| oil | Bank of America says Brent crude oil could top $150 a barrel if Iran war disruptions persist - CNBC | CNBC | Tue, 22 Sep 2026 18:00 |
+| oil | $100 Brent Keeping China's Oil Buying in Check, Goldman Says - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 23 Sep 2026 09:00 |
+| oil | Oil price on track for longest losing streak in more than 12 months - Financial Times | Financial Times | Wed, 23 Sep 2026 06:08 |
+| oil | Oil prices see-saw, as markets weigh Trump’s UN speech, potential Saudi pipeline fix - NBC News | NBC News | Tue, 22 Sep 2026 19:55 |
+| oil | Treasury yields little changed as oil price oscillates - CNBC | CNBC | Wed, 23 Sep 2026 07:11 |
+| oil | Oil holds near two-week lows while diesel cracks hit record peak - Reuters | Reuters | Wed, 23 Sep 2026 01:44 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-09-22 12:57 UTC | 88 new | 1352 total
+NEWS_DIGEST | 2026-09-23 13:05 UTC | 81 new | 1433 total
