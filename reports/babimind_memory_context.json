@@ -1,7 +1,7 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 7,
-  "context_runs": 7,
+  "historical_runs_available": 8,
+  "context_runs": 8,
   "recent_runs": [
     {
       "timestamp": "2026-09-08T13:26:25.411222+00:00",
@@ -779,6 +779,17 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "ac09eed1d59459df32cf"
+    },
+    {
+      "timestamp": "2026-09-23T13:11:19.538944+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": "Bull / Base / Bear with probabilities:\n🟢 Bull: probability 0.45, target price 23,000 rial, time horizon Q2-Q3 1405\n  - Key triggers: global copper supply disruption or tightness, higher copper benchmark, higher realized sales price/margins for فملی, fund-flow rotation toward large liquid commodity leaders, technical breakout or continuation, option convexity increases demand for calls\n  - Risk factors: copper price pullback, volume deterioration, broader market risk-off, sales growth rolls over for two consecutive releases, volume falls while revenue supported only by price, copper price breaks down materially and remains weak, stock leadership disappears while market breadth remains healthy\n\n🟡 Base: probability 0.4, target price 21,500 rial, time horizon Q2 1405\n  - Key triggers: steady sales growth, maintained market leadership, stable commodity prices, controlled geopolitical tension\n  - Risk factors: sales growth slowdown, increased competition, currency volatility, gasoline price hike feeding inflation\n\n🔴 Bear: probability 0.15, target price 18,800 rial, time horizon Q1-Q2 1405\n  - Key triggers: copper price breakdown, volume collapse, real money flow deterioration, escalation of US-Iran conflict (Hormuz closure risk), severe sanctions enforcement (OFAC)\n  - Risk factors: global risk-off spread, commodity cycle peak, operational execution issues, IRGC-government policy conflict\n\nProbabilities sum to 1.0 (0.45 + 0.4 + 0.15 = 1.0). If evidence is insufficient, confidence should be lowered rather than fabricating precision.",
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "e187154f694ae654f535"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."
