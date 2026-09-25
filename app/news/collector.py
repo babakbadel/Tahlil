@@ -17,6 +17,8 @@ from typing import Any
 
 # (query, relevance, channels, hl, gl, ceid)
 DEFAULT_QUERIES: list[tuple[str, str, list[str], str, str, str]] = [
+    ("site:kamandar.ir بورس کماندار", "kamandar_bourse", ["equity", "fundamental", "technical", "funds", "options"], "fa", "IR", "IR:fa"),
+    ("site:kamandar.ir اقتصاد ایران کماندار", "kamandar_macro", ["macro", "inflation", "fx", "commodities"], "fa", "IR", "IR:fa"),
     ("بورس تهران شاخص کل", "bourse", ["equity", "flow"], "fa", "IR", "IR:fa"),
     ("بورس ورود پول حقیقی", "bourse_flow", ["equity", "flow"], "fa", "IR", "IR:fa"),
     ("دلار آزاد بازار ارز", "fx", ["fx", "inflation_expectations"], "fa", "IR", "IR:fa"),
