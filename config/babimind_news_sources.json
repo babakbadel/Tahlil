@@ -134,6 +134,17 @@
     {"name":"CSIS","url":"https://www.csis.org/","tier":"A"},
     {"name":"RUSI","url":"https://www.rusi.org/","tier":"A"}
   ],
+  "market_data_sources": [
+    {
+      "name": "Kamandar",
+      "url": "https://kamandar.ir/",
+      "tier": "B",
+      "type": "market_intelligence",
+      "coverage": ["iran_equities", "iran_funds", "options", "fundamental", "technical", "market_trends"],
+      "usage": "supplementary_market_evidence",
+      "policy": "Use as a secondary market-intelligence source; corroborate market-moving claims with primary exchange/Codal data."
+    }
+  ],
   "processing": {
     "breaking_news": "prefer Tier A and cross-check with independent sources",
     "market_news": "prefer financial and commodity sources",
