@@ -1,59 +1,33 @@
 {
-  "status": "ok",
+  "status": "unavailable",
   "provider": "openrouter",
   "model": "openrouter/free",
-  "analysis": {
-    "status_report": "BabiMind Web Research & Decision Agent - Current State Assessment",
-    "timestamp": "2026-09-24T13:04:17.020037+00:00",
-    "pipeline_version": "1.7",
-    "regime_assessment": "Bullish (graph_score: 1.0, graph_confidence: 0.75)",
-    "data_availability": "CRITICAL GAPS - Most Iranian market sources unavailable",
-    "key_findings": [
+  "analysis": null,
+  "provider_status": {
+    "selected": null,
+    "model": "openrouter/free",
+    "statuses": [
       {
-        "category": "Iranian Market Data",
-        "status": "UNAVAILABLE",
-        "details": "TSETMC, Codal, TSE, IFB, IME, IRENEX, CBI, Statistical Center, Iran Customs, MimT, MoE all timeout or SSL errors. Only Ministry of Petroleum, SHANA, Iran Open Data, World Bank Iran ok."
+        "provider": "openrouter",
+        "status": "error",
+        "error": "Expecting value: line 1 column 1 (char 0)",
+        "model": "openrouter/free",
+        "attempt": 1
       },
       {
-        "category": "Global Commodities",
-        "status": "PARTIAL",
-        "details": "Oil prices moving $85-105 range, copper/LME data partially available via USGS, World Bank. JODI ok for oil. LME, CME, ICE error/unavailable."
+        "provider": "openrouter",
+        "status": "error",
+        "error": "Expecting value: line 1 column 1 (char 0)",
+        "model": "openrouter/free",
+        "attempt": 2
       },
       {
-        "category": "Factor Coverage",
-        "status": "MIXED",
-        "details": "285/500 factors available (57%). Metals_mining cluster (copper) available. Iran_equity_market partial (Donya-e-Eqtesad, Bourse News). Political sentiment 7 sources ok. Global risk 4 sources ok."
-      },
-      {
-        "category": "Historical Memory",
-        "status": "CONSISTENT",
-        "details": "8 historical runs show bullish regime for 'فملی' with consistent scenario weights (bull 0.45, base 0.4, bear 0.15). Q1 1405 fundamentals strong: profit growth 262% YoY, revenue growth 183% YoY. Price 19,950 rial, accumulation zone 19,400-19,800."
-      },
-      {
-        "category": "Options Data",
-        "status": "MISSING",
-        "details": "Option market watch snapshot record_count: 0. IV, Greeks, OI all unavailable. TSE option source error (timeout). Expired options must not enter active universe."
-      },
-      {
-        "category": "Geopolitical Risk",
-        "status": "ELEVATED",
-        "details": "US-Iran tensions, Hormuz risk, sanctions enforcement. News: gasoline price hike (25-35% trade down), US memorandum best path out of stalled war, Pezeshkian economic crisis admissions."
+        "provider": "openrouter",
+        "status": "error",
+        "error": "Expecting value: line 1 column 1 (char 0)",
+        "model": "openrouter/free",
+        "attempt": 3
       }
-    ],
-    "confidence_distribution": {
-      "high": "Central Bank of Iran, World Bank Iran, Ministry of Petroleum, SHANA, Iran Open Data (tier C)",
-      "medium": "JODI, USGS, Trading Economics, CFTC, World Gold Council, LBMA (tier C)",
-      "low": "TSETMC sources, Codal, Statistical Center of Iran, TSE, Iran Customs, most news APIs (tier D/error/unavailable)"
-    },
-    "recommendations": [
-      "⚠️ NO TRADE / WAIT - Insufficient current Iranian market data to validate entry",
-      "🟢 Monitor global oil/dollar for transmission to Iranian sectors",
-      "🟡 Use historical thesis for 'فملی' as framework only, not current signal",
-      "🟡 Track alternative data: shipping (MarineTraffic), news sentiment (Al Monitor, IRNA, ISNA)",
-      "🟡 Watch for confirmation: price > 20,000 rial + volume expansion + real-money flow",
-      "🔴 Invalidation: price < 18,800 rial + expanding volume + flow deterioration"
-    ],
-    "decision_engine_ready": false,
-    "reason": "Critical Iranian market data unavailable (TSETMC, Codal, TSE all timeout). Decision requires current price/volume/flow evidence which is missing. Proceed with WAIT/NO TRADE until data gaps resolved."
+    ]
   }
 }
