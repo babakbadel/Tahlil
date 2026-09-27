@@ -38,6 +38,10 @@ jobs:
           if [ -f requirements-finpy-tse.txt ]; then python -m pip install -r requirements-finpy-tse.txt || true; fi
           if [ -f requirements-market-data.txt ]; then python -m pip install -r requirements-market-data.txt || true; fi
 
+      - name: Collect Kamandar market report
+        continue-on-error: true
+        run: python scripts/collect_kamandar_market_report.py
+
       - name: Collect current market data
         continue-on-error: true
         env:
