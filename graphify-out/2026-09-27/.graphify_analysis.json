@@ -793,26 +793,15 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
     },
     {
-      "source": "test_normalize_empty_feed_is_partial()",
-      "target": "normalize()",
+      "source": "main()",
+      "target": "collect_and_persist()",
       "source_files": [
-        "tests/test_realtime.py",
-        "app/data/brsapi/realtime.py"
+        "scripts/babimind_daily_economic_news.py",
+        "app/news/collector.py"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "why": "connects across different repos/directories; peripheral node `test_normalize_empty_feed_is_partial()` unexpectedly reaches hub `normalize()`"
-    },
-    {
-      "source": "test_normalize_splits_equity_and_option()",
-      "target": "normalize()",
-      "source_files": [
-        "tests/test_realtime.py",
-        "app/data/brsapi/realtime.py"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "connects across different repos/directories; peripheral node `test_normalize_splits_equity_and_option()` unexpectedly reaches hub `normalize()`"
+      "why": "connects across different repos/directories; peripheral node `main()` unexpectedly reaches hub `collect_and_persist()`"
     },
     {
       "source": "main()",
@@ -824,6 +813,17 @@
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "connects across different repos/directories; peripheral node `main()` unexpectedly reaches hub `collect_pezeshkian_and_persist()`"
+    },
+    {
+      "source": "test_normalize_empty_feed_is_partial()",
+      "target": "normalize()",
+      "source_files": [
+        "tests/test_realtime.py",
+        "app/data/brsapi/realtime.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_normalize_empty_feed_is_partial()` unexpectedly reaches hub `normalize()`"
     }
   ],
   "tokens": {

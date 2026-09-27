@@ -1,7 +1,7 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 8,
-  "context_runs": 8,
+  "historical_runs_available": 9,
+  "context_runs": 9,
   "recent_runs": [
     {
       "timestamp": "2026-09-08T13:26:25.411222+00:00",
@@ -790,6 +790,88 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "e187154f694ae654f535"
+    },
+    {
+      "timestamp": "2026-09-27T13:25:26.207660+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "probability": 0.45,
+          "target_price_rial": 23000,
+          "time_horizon": "Q2‑Q3 1405",
+          "key_triggers": [
+            "Global copper supply disruption or tightness",
+            "Higher copper benchmark",
+            "Higher realized sales price / margins",
+            "Higher FMLI earnings expectations",
+            "Fund‑flow rotation toward large liquid commodity leaders",
+            "Technical breakout or continuation",
+            "Option convexity increases demand for calls"
+          ],
+          "confirmation_signals": [
+            "Price closes above 20 000 rial with expanding volume",
+            "Real‑money inflow persists for ≥3 sessions",
+            "Copper price remains above $4.5/lb (proxy)",
+            "Industry relative strength improves"
+          ],
+          "invalidation_signals": [
+            "Price rises while real‑money flow deteriorates sharply",
+            "Sales growth rolls over for two consecutive releases",
+            "Volume falls while revenue is supported only by price",
+            "Copper price breaks down materially and remains weak"
+          ]
+        },
+        "base": {
+          "probability": 0.4,
+          "target_price_rial": 21500,
+          "time_horizon": "Q2 1405",
+          "key_triggers": [
+            "Steady sales growth",
+            "Maintained market leadership",
+            "Stable commodity prices",
+            "Controlled geopolitical tension"
+          ],
+          "confirmation_signals": [
+            "Price trades within 19 400‑21 500 band with moderate volume",
+            "Fundamental growth rates remain >100% YoY",
+            "No major sanctions escalation"
+          ],
+          "invalidation_signals": [
+            "Sales growth slows below 50% YoY for two releases",
+            "Geopolitical escalation (Hormuz closure, new sanctions)",
+            "Copper price declines >20% from current level"
+          ]
+        },
+        "bear": {
+          "probability": 0.15,
+          "target_price_rial": 18800,
+          "time_horizon": "Q1‑Q2 1405",
+          "key_triggers": [
+            "Copper price breakdown",
+            "Volume collapse",
+            "Real money flow deterioration",
+            "Escalation of US‑Iran conflict (Hormuz closure risk)",
+            "Severe sanctions enforcement (OFAC)"
+          ],
+          "confirmation_signals": [
+            "Price breaks below 18 800 rial on expanding volume",
+            "Real‑money outflow accelerates",
+            "Copper price falls below $3.5/lb (proxy)",
+            "Industry relative strength deteriorates"
+          ],
+          "invalidation_signals": [
+            "Price rebounds above 20 000 rial with volume",
+            "Fundamental metrics show renewed acceleration",
+            "Geopolitical tensions de‑escalate"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "6b4ea0b2102b67b18506"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."

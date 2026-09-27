@@ -1,9 +1,9 @@
 {
   "model": "BabiMind",
   "component": "Graph Intelligence",
-  "generated_at": "2026-09-27T13:22:20.083564+00:00",
+  "generated_at": "2026-09-27T17:13:49.836428+00:00",
   "graph_available": true,
-  "graph_snapshot_id": "20260927T132220Z",
+  "graph_snapshot_id": "20260927T171349Z",
   "graph_score": 1.0,
   "graph_confidence": 0.75,
   "graph_regime": "bullish",
@@ -51,47 +51,47 @@
   ],
   "graph_risk_drivers": [
     {
-      "source": "app_intermarket_model",
-      "target": "app_intermarket_model_evaluate",
-      "contribution": 0.0432
+      "source": "scripts_collect_kamandar_market_report",
+      "target": "scripts_collect_kamandar_market_report_parse_overview",
+      "contribution": 0.0017
     },
     {
-      "source": "app_intermarket_model",
-      "target": "app_intermarket_model_rotation_score",
-      "contribution": 0.0618
+      "source": "scripts_collect_kamandar_market_report",
+      "target": "scripts_collect_kamandar_market_report_extract_metrics",
+      "contribution": 0.0025
     },
     {
-      "source": "app_intermarket_model_evaluate",
-      "target": "app_intermarket_model_intermarketsignal",
-      "contribution": 0.0882
+      "source": "scripts_collect_kamandar_market_sections",
+      "target": "scripts_collect_kamandar_market_sections_fetch",
+      "contribution": 0.0025
     },
     {
-      "source": "app_intermarket_model",
-      "target": "app_intermarket_model_marks_second_level_gate",
-      "contribution": 0.0882
+      "source": "scripts_collect_kamandar_market_report",
+      "target": "scripts_collect_kamandar_market_report_normalize_url",
+      "contribution": 0.0036
     },
     {
-      "source": "app_intermarket_model_evaluate",
-      "target": "app_intermarket_model_classify_regime",
-      "contribution": 0.1261
+      "source": "scripts_collect_kamandar_market_sections",
+      "target": "scripts_collect_kamandar_market_sections_normalize_url",
+      "contribution": 0.0036
     },
     {
-      "source": "app_intermarket_model",
-      "target": "app_intermarket_model_classify_regime",
-      "contribution": 0.1261
+      "source": "scripts_collect_kamandar_market_report",
+      "target": "scripts_collect_kamandar_market_report_parse_page",
+      "contribution": 0.0051
     },
     {
-      "source": "scan_market",
-      "target": "scan_market_print_market_summary",
-      "contribution": 0.1261
+      "source": "scripts_collect_kamandar_market_sections",
+      "target": "scripts_collect_kamandar_market_sections_clean",
+      "contribution": 0.0051
     },
     {
-      "source": "scripts_ingest_option_market_watch",
-      "target": "scripts_ingest_option_market_watch_parse_rows",
-      "contribution": 0.1261
+      "source": "scripts_collect_kamandar_market_report",
+      "target": "scripts_collect_kamandar_market_report_fetch",
+      "contribution": 0.0073
     }
   ],
-  "edges_used": 100,
-  "correlation_penalty": 0.2698,
+  "edges_used": 169,
+  "correlation_penalty": 0.3723,
   "missing_data_policy": "MISSING_IS_NOT_ZERO"
 }
