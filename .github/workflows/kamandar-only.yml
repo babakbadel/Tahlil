@@ -5,8 +5,12 @@ on:
     paths:
       - 'scripts/kamandar_only_report.py'
       - '.github/workflows/kamandar-only.yml'
+      - 'app/**'
+      - 'package.json'
   schedule:
+    - cron: '30 4 * * 0,1,2,3,4,6'
     - cron: '30 7 * * 0,1,2,3,4,6'
+    - cron: '10 9 * * 0,1,2,3,4,6'
   workflow_dispatch:
 
 permissions:
@@ -25,31 +29,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-
       - name: Collect market report
         continue-on-error: true
         run: python scripts/collect_kamandar_market_report.py
-
       - name: Collect indices
         continue-on-error: true
         run: python scripts/collect_kamandar_indices.py
-
       - name: Collect six market sections
         continue-on-error: true
         run: python scripts/collect_kamandar_market_sections.py
-
       - name: Crawl services and linked pages
         continue-on-error: true
         run: python scripts/collect_kamandar_services.py
-
       - name: Build Kamandar-only manifest
         run: python scripts/kamandar_only_report.py
-
       - name: Commit Kamandar layer
         if: always()
         run: |
