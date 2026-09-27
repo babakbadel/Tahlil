@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-URL = "https://kamandar.ir/app/market/indices"
+URL = "https://kamandar.ir/app/market"
 OUT = ROOT / "data" / "raw" / "kamandar_indices.json"
 REPORT = ROOT / "reports" / "kamandar_indices.json"
 UA = "BabiMind-KamandarIndicesCollector/1.0 (+https://github.com/babakbadel/Tahlil)"
