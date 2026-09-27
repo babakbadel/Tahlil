@@ -5,7 +5,10 @@ on:
     paths:
       - '.github/workflows/babimind-unified-pipeline.yml'
   schedule:
+    # Iran time: 08:00, 11:00, 12:40 (UTC+3:30), Saturday-Thursday
+    - cron: '30 4 * * 0,1,2,3,4,6'
     - cron: '30 7 * * 0,1,2,3,4,6'
+    - cron: '10 9 * * 0,1,2,3,4,6'
   workflow_dispatch:
 
 permissions:
