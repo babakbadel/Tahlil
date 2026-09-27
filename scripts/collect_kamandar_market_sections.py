@@ -19,6 +19,7 @@ PAGES = {
     "funds": "https://kamandar.ir/app/market/funds",
     "options": "https://kamandar.ir/app/market/options",
     "baskets": "https://kamandar.ir/app/market/baskets",
+    "options_top_put": "https://kamandar.ir/app/market/list/options-top-put",
 }
 
 class Parser(HTMLParser):
