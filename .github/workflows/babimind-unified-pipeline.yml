@@ -42,6 +42,10 @@ jobs:
         continue-on-error: true
         run: python scripts/collect_kamandar_market_report.py
 
+      - name: Crawl Kamandar services and linked pages
+        continue-on-error: true
+        run: python scripts/collect_kamandar_services.py
+
       - name: Collect current market data
         continue-on-error: true
         env:
@@ -134,6 +138,7 @@ jobs:
               'data/raw/marketwatch_plus_snapshot.json',
               'data/raw/tse_option_snapshot.json',
               'data/raw/kamandar_market_report.json',
+              'data/raw/kamandar_services_crawl.json',
               'artifacts/babimind_global_market_snapshot.json',
               'artifacts/babimind_daily_economic_news.json',
               'artifacts/babimind_pezeshkian_news.json',
