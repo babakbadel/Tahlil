@@ -1,0 +1,4 @@
+import {NextResponse} from "next/server";
+const base="https://raw.githubusercontent.com/babakbadel/Tahlil/main/";
+const files=["kamandar_market_report.json","kamandar_indices.json","kamandar_stocks.json","kamandar_funds.json","kamandar_options.json","kamandar_baskets.json","kamandar_options_top_put.json","kamandar_services_crawl.json"];
+export async function GET(){const data=await Promise.all(files.map(async f=>{try{const r=await fetch(base+"data/raw/"+f,{cache:"no-store"});return [f,r.ok?await r.json():{status:"missing",http_status:r.status}] as const}catch(e){return [f,{status:"error",error:String(e)}] as const}}));return NextResponse.json(Object.fromEntries(data),{headers:{"Cache-Control":"no-store"}})}
