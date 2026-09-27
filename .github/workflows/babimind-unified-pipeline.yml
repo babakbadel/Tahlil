@@ -2,7 +2,7 @@ name: BabiMind Daily Intelligence
 
 on:
   schedule:
-    - cron: '15 7 * * 0,1,2,3,4,6'
+    - cron: '30 7 * * 0,1,2,3,4,6'
   workflow_dispatch:
 
 permissions:
@@ -41,6 +41,10 @@ jobs:
       - name: Collect Kamandar market report
         continue-on-error: true
         run: python scripts/collect_kamandar_market_report.py
+
+      - name: Collect Kamandar indices and breadth
+        continue-on-error: true
+        run: python scripts/collect_kamandar_indices.py
 
       - name: Crawl Kamandar services and linked pages
         continue-on-error: true
@@ -138,6 +142,7 @@ jobs:
               'data/raw/marketwatch_plus_snapshot.json',
               'data/raw/tse_option_snapshot.json',
               'data/raw/kamandar_market_report.json',
+              'data/raw/kamandar_indices.json',
               'data/raw/kamandar_services_crawl.json',
               'artifacts/babimind_global_market_snapshot.json',
               'artifacts/babimind_daily_economic_news.json',
