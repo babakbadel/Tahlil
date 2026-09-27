@@ -1,4 +1,29 @@
 import {NextResponse} from "next/server";
-const base="https://raw.githubusercontent.com/babakbadel/Tahlil/main/";
-const files=["kamandar_market_report.json","kamandar_indices.json","kamandar_stocks.json","kamandar_funds.json","kamandar_options.json","kamandar_baskets.json","kamandar_options_top_put.json","kamandar_services_crawl.json"];
-export async function GET(){const data=await Promise.all(files.map(async f=>{try{const r=await fetch(base+"data/raw/"+f,{cache:"no-store"});return [f,r.ok?await r.json():{status:"missing",http_status:r.status}] as const}catch(e){return [f,{status:"error",error:String(e)}] as const}}));return NextResponse.json(Object.fromEntries(data),{headers:{"Cache-Control":"no-store"}})}
+
+const repoApi="https://api.github.com/repos/babakbadel/Tahlil/contents/data/raw";
+const rawBase="https://raw.githubusercontent.com/babakbadel/Tahlil/main/data/raw/";
+
+export async function GET(){
+  try{
+    const list=await fetch(repoApi,{headers:{"Accept":"application/vnd.github+json","User-Agent":"Tahlil-Kamandar-Dashboard"},cache:"no-store"});
+    if(!list.ok) return NextResponse.json({status:"error",http_status:list.status,files:{}},{status:200});
+    const entries=await list.json();
+    const names=entries
+      .filter((x:any)=>x.type==="file" && /^kamandar_.*\.json$/i.test(x.name))
+      .map((x:any)=>x.name);
+    const pairs=await Promise.all(names.map(async(name:string)=>{
+      try{
+        const r=await fetch(rawBase+name,{cache:"no-store"});
+        return [name,r.ok?await r.json():{status:"missing",http_status:r.status}] as const;
+      }catch(e){
+        return [name,{status:"error",error:String(e)}] as const;
+      }
+    }));
+    return NextResponse.json(
+      {status:"ok",fetched_at:new Date().toISOString(),files:Object.fromEntries(pairs)},
+      {headers:{"Cache-Control":"no-store"}}
+    );
+  }catch(e){
+    return NextResponse.json({status:"error",error:String(e),files:{}},{status:200});
+  }
+}
