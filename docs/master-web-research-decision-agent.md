@@ -313,3 +313,7 @@ The objective is:
 
 ## Kamandar market-report source
 Use `data/raw/kamandar_market_report.json` as a secondary market-structure evidence source. It can inform market breadth, queues, retail trading value and حقیقی money-flow context. Cross-check numeric market truth against TSE/TSETMC and keep source attribution/freshness explicit.
+
+
+## Kamandar services crawl (daily)
+Treat `data/raw/kamandar_services_crawl.json` as a daily crawl archive starting at https://kamandar.ir/services/market. Review each captured page and its outgoing links as separate evidence items; retain page URL, collection timestamp, and source attribution. Use captured market data and service descriptions only after checking freshness and meaning. Cross-check market figures against official TSE/TSETMC data. The crawler is bounded to 150 same-domain URLs per run and may miss JavaScript-rendered, blocked, or non-linked content; report coverage and errors rather than claiming exhaustive capture.
