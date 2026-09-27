@@ -1,6 +1,9 @@
 name: BabiMind Daily Intelligence
 
 on:
+  push:
+    paths:
+      - '.github/workflows/babimind-unified-pipeline.yml'
   schedule:
     - cron: '30 7 * * 0,1,2,3,4,6'
   workflow_dispatch:
