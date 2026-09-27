@@ -46,6 +46,10 @@ jobs:
         continue-on-error: true
         run: python scripts/collect_kamandar_indices.py
 
+      - name: Collect Kamandar market sections
+        continue-on-error: true
+        run: python scripts/collect_kamandar_market_sections.py
+
       - name: Crawl Kamandar services and linked pages
         continue-on-error: true
         run: python scripts/collect_kamandar_services.py
@@ -143,6 +147,11 @@ jobs:
               'data/raw/tse_option_snapshot.json',
               'data/raw/kamandar_market_report.json',
               'data/raw/kamandar_indices.json',
+              'data/raw/kamandar_indices.json',
+              'data/raw/kamandar_stocks.json',
+              'data/raw/kamandar_funds.json',
+              'data/raw/kamandar_options.json',
+              'data/raw/kamandar_baskets.json',
               'data/raw/kamandar_services_crawl.json',
               'artifacts/babimind_global_market_snapshot.json',
               'artifacts/babimind_daily_economic_news.json',
