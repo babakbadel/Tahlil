@@ -17,6 +17,7 @@ THESIS_CONFIG=ROOT/"config"/"babimind_symbol_theses.json"
 MIGRATION_CONFIG=ROOT/"config"/"babimind_money_migration.yml"
 OUT=ROOT/"reports"/"babimind_pipeline.json"
 GRAPH_OUT=ROOT/"reports"/"babimind_graph.json"
+KAMANDAR_INDICES=ROOT/"data"/"raw"/"kamandar_indices.json"
 MAX_WORKERS=24
 DEFAULT_TIMEOUT=3
 TOTAL_DEADLINE=30
@@ -65,6 +66,11 @@ def load_json(path, default):
 def load_graph():
     return load_json(GRAPH_OUT,{"available":False,"graph_score":None,"graph_confidence":0.0,"graph_regime":"unavailable"})
 
+def load_kamandar_indices():
+    payload=load_json(KAMANDAR_INDICES,{"status":"missing","source":"kamandar","url":"https://kamandar.ir/app/market/indices"})
+    payload["available"]=payload.get("status")=="ok"
+    return payload
+
 def load_symbol_theses():
     payload=load_json(THESIS_CONFIG,{"version":0,"symbols":{}})
     return {"version":payload.get("version",0),"updated_at":payload.get("updated_at"),"symbols":payload.get("symbols",{}),"available":bool(payload.get("symbols"))}
@@ -109,8 +115,8 @@ def main():
         ranked=sorted(items,key=lambda x:(x.get("signal_weight",0),x.get("confidence",0)),reverse=True); primary=next((x for x in ranked if x.get("eligible_for_aggregation")),None)
         routing.append({"group":key,"primary":primary.get("name") if primary else None,"fallbacks":[x.get("name") for x in ranked if not primary or x.get("name")!=primary.get("name")][:3]})
     active=sum(bool(r.get("eligible_for_aggregation")) for r in rows); unavailable=sum(r.get("state") in {"unavailable","timeout"} for r in rows); elapsed=round(time.monotonic()-started,2)
-    theses=load_symbol_theses(); migration=load_money_migration_config()
-    payload={"model":"BabiMind","pipeline_version":"1.7","generated_at":datetime.now(timezone.utc).isoformat(),"stages":["health","content","freshness","confidence","fallback","signal_weight","graph_intelligence","symbol_thesis","money_migration"],"missing_data_policy":"SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN","execution":{"max_workers":MAX_WORKERS,"default_timeout_seconds":DEFAULT_TIMEOUT,"total_deadline_seconds":TOTAL_DEADLINE,"elapsed_seconds":elapsed},"summary":{"total_sources":len(rows),"active_sources":active,"unavailable_sources":unavailable,"symbol_theses":len(theses.get("symbols",{}))},"graph_intelligence":load_graph(),"symbol_theses":theses,"money_migration":migration,"sources":rows,"routing":routing}
+    theses=load_symbol_theses(); migration=load_money_migration_config(); kamandar_indices=load_kamandar_indices()
+    payload={"model":"BabiMind","pipeline_version":"1.7","generated_at":datetime.now(timezone.utc).isoformat(),"stages":["health","content","freshness","confidence","fallback","signal_weight","graph_intelligence","symbol_thesis","money_migration"],"missing_data_policy":"SKIP_CURRENT_RUN_AND_RETRY_NEXT_RUN","execution":{"max_workers":MAX_WORKERS,"default_timeout_seconds":DEFAULT_TIMEOUT,"total_deadline_seconds":TOTAL_DEADLINE,"elapsed_seconds":elapsed},"summary":{"total_sources":len(rows),"active_sources":active,"unavailable_sources":unavailable,"symbol_theses":len(theses.get("symbols",{}))},"graph_intelligence":load_graph(),"symbol_theses":theses,"money_migration":migration,"kamandar_indices":kamandar_indices,"sources":rows,"routing":routing}
     OUT.parent.mkdir(parents=True,exist_ok=True); OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8"); print(f"[BabiMind] DONE sources={len(rows)} active={active} unavailable={unavailable} theses={len(theses.get('symbols',{}))} money_migration={migration.get('available')} elapsed={elapsed}s",flush=True)
 
 if __name__=="__main__":main()
