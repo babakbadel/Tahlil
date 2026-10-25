@@ -2,8 +2,7 @@
 
 The source is the repository's own OptionMarketWatch snapshot.  The CSV has
 Persian headers and duplicated column names for the option and underlying
-sides, so this loader intentionally uses column positions instead of a dict
-reader.  Missing IV/Greeks/timestamps are preserved as data gaps rather than
+sides, so this loader splits the call, shared underlying, and put sections by header.  Missing IV/Greeks/timestamps are preserved as data gaps rather than
 invented.
 """
 from __future__ import annotations
@@ -49,60 +48,65 @@ def parse_rows() -> list[dict[str, Any]]:
     if len(rows) < 2:
         return []
 
-    # Current OptionMarketWatch schema: 43 columns, option side first,
-    # underlying side after the option expiry/date fields.
+    # The export contains paired contracts: call columns, shared underlying/
+    # dates, then put columns in reverse order. Match section headers instead
+    # of assuming 43 columns or interpreting underlying prices as symbols.
+    headers = [value.strip().strip("<>").strip() for value in rows[0]]
+    try:
+        underlying_index = headers.index("نماد پایه")
+        end_index = headers.index("تاریخ پایان")
+    except ValueError as exc:
+        raise ValueError("Unsupported OptionMarketWatch headers") from exc
+
+    def section(row, start, stop):
+        result = {}
+        for index in range(start, stop):
+            if index < len(row):
+                result.setdefault(headers[index], row[index].strip())
+        return result
+
     records: list[dict[str, Any]] = []
     for row in rows[1:]:
-        if not row or not row[0].strip() or len(row) < 43:
+        if not row:
             continue
-        symbol = row[0].strip()
-        underlying = row[20].strip()
-        option_type = "put" if symbol.startswith("ض") else "call" if symbol.startswith("ط") else "unknown"
-        records.append(
-            {
+        if len(row) != len(headers):
+            raise ValueError(f"Malformed OptionMarketWatch row: {len(row)} columns, expected {len(headers)}")
+        shared = section(row, underlying_index, end_index + 1)
+        primary = section(row, 0, underlying_index)
+        counterpart = section(row, end_index + 1, len(headers))
+        for side in (primary, counterpart):
+            symbol = side.get("نماد", "")
+            if not symbol or symbol == "-":
+                continue
+            option_type = "call" if symbol.startswith("ض") else "put" if symbol.startswith("ط") else "unknown"
+            if option_type == "unknown":
+                continue
+            records.append({
                 "symbol": symbol,
                 "option_type": option_type,
-                "status": row[1].strip(),
-                "volume": int_num(row[2]),
-                "trade_count": int_num(row[3]),
-                "value": num(row[4]),
-                "notional_value": num(row[5]),
-                "open_interest": int_num(row[6]),
-                "change_pct": num(row[7]),
-                "close": num(row[8]),
-                "last": num(row[10]),
-                "bid_volume": int_num(row[12]),
-                "bid": num(row[13]),
-                "ask": num(row[14]),
-                "ask_volume": int_num(row[15]),
-                "contract_size": int_num(row[16]),
-                "strike": num(row[17]),
-                "days_to_expiry": int_num(row[18]),
-                "underlying": underlying,
-                "underlying_close": num(row[21]),
-                "underlying_change_pct": num(row[22]),
-                "underlying_last": num(row[23]),
-                "start_date": row[25].strip(),
-                "end_date": row[26].strip(),
-                "underlying_ask_volume": int_num(row[27]),
-                "underlying_ask": num(row[28]),
-                "underlying_bid": num(row[29]),
-                "underlying_bid_volume": int_num(row[30]),
-                "underlying_change_pct_2": num(row[31]),
-                "underlying_last_2": num(row[32]),
-                "underlying_change_pct_3": num(row[33]),
-                "underlying_close_2": num(row[34]),
-                "underlying_change_pct_4": num(row[35]),
-                "underlying_open_interest": int_num(row[36]),
-                "underlying_notional_value": num(row[37]),
-                "underlying_value": num(row[38]),
-                "underlying_trade_count": int_num(row[39]),
-                "underlying_volume": int_num(row[40]),
-                "underlying_status": row[41].strip(),
-                "underlying_symbol": row[42].strip(),
+                "status": side.get("وضعیت در سود بودن نماد"),
+                "volume": int_num(side.get("حجم")),
+                "trade_count": int_num(side.get("تعداد")),
+                "value": num(side.get("ارزش")),
+                "notional_value": num(side.get("ارزش مفهومی")),
+                "open_interest": int_num(side.get("موقعیت های باز")),
+                "change_pct": num(side.get("درصد تغییر")),
+                "close": num(side.get("قیمت پایانی")),
+                "last": num(side.get("قیمت آخرین معامله")),
+                "bid_volume": int_num(side.get("حجم خرید")),
+                "bid": num(side.get("قیمت خرید")),
+                "ask": num(side.get("قیمت فروش")),
+                "ask_volume": int_num(side.get("حجم فروش")),
+                "contract_size": int_num(primary.get("اندازه قرارداد")),
+                "strike": num(primary.get("قیمت اعمال")),
+                "days_to_expiry": int_num(primary.get("روز باقی مانده تا سررسید")),
+                "underlying": shared.get("نماد پایه"),
+                "underlying_close": num(shared.get("پایانی دارایی پایه")),
+                "underlying_last": num(shared.get("آخرین معامله دارایی پایه")),
+                "start_date": shared.get("تاریخ شروع"),
+                "end_date": shared.get("تاریخ پایان"),
                 "data_gaps": ["iv", "delta", "gamma", "theta", "vega", "quote_timestamp"],
-            }
-        )
+            })
     return records
 
 

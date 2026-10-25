@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 env:
+  PYTHONPATH: ${{ github.workspace }}
   AGENT_REACH_REF: da5044d26fc6adddb6554d5679c94ac22e76e428
 
 permissions:
@@ -42,7 +43,4 @@ jobs:
       - name: Commit research outputs
         if: always()
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ data/ artifacts/agent_reach/ config/agent_reach.yml scripts/collect_agent_reach.py 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m 'chore: refresh BabiMind research and Agent Reach health' && git push origin HEAD:main)
+          python scripts/commit_outputs.py 'chore: refresh BabiMind research and Agent Reach health'

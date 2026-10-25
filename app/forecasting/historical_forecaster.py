@@ -135,6 +135,8 @@ class HistoricalAnalogForecaster:
             future = []
             drawdowns = []
             valid_weights = []
+            valid_similarities = []
+            drawdown_weights = []
             for i, w in zip(selected, weights):
                 row = self._train.iloc[i]
                 # The historical frame may already contain precomputed forward
@@ -149,8 +151,10 @@ class HistoricalAnalogForecaster:
                     continue
                 future.append(float(r))
                 valid_weights.append(float(w))
+                valid_similarities.append(float(similarities[i]))
                 if dd_col in self._train.columns and not pd.isna(row[dd_col]):
                     drawdowns.append(float(row[dd_col]))
+                    drawdown_weights.append(float(w))
 
             if not future:
                 results.append(ForecastResult(horizon, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 0, float(similarities[selected].mean()), 0.0))
@@ -168,10 +172,10 @@ class HistoricalAnalogForecaster:
                 return float(r_sorted[np.searchsorted(cdf, q, side="left")])
 
             p_up = float(w[r > 0].sum())
-            sim = float(np.average(similarities[selected], weights=np.asarray(valid_weights)))
+            sim = float(np.average(valid_similarities, weights=np.asarray(valid_weights)))
             sample_factor = min(1.0, len(r) / 30.0)
             confidence = float(np.clip(sim * sample_factor, 0.0, 1.0))
-            dd_proxy = float(np.average(drawdowns, weights=w[: len(drawdowns)])) if drawdowns else np.nan
+            dd_proxy = float(np.average(drawdowns, weights=drawdown_weights)) if drawdowns else np.nan
 
             results.append(
                 ForecastResult(

@@ -43,13 +43,20 @@ def snapshot() -> dict[str, Any]:
             return collector.collect_once()
         except Exception as exc:
             raise HTTPException(status_code=503, detail="market feed unavailable") from exc
-    return collector.latest
+    from datetime import datetime, timezone
+    latest = collector.latest
+    age_ms = max(0, int((datetime.now(timezone.utc) - datetime.fromisoformat(latest["received_at"])).total_seconds() * 1000))
+    quality = {**latest["data_quality"], "age_ms": age_ms}
+    if age_ms > collector.interval * 3000:
+        quality["status"] = "stale"
+    return {**latest, "data_quality": quality}
 
 
 @app.get("/health")
 def health() -> dict[str, Any]:
     return {
-        "status": "ok" if collector.latest else "starting",
+        "status": ("degraded" if collector.last_error else
+                   "ok" if collector.latest else "starting"),
         "source": "BRS_API",
         "last_error": collector.last_error,
         "stream_subscribers": hub.subscriber_count,

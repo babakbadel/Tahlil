@@ -2,6 +2,7 @@ name: BabiMind Daily Intelligence
 
 on:
   push:
+    branches: [main]
     paths:
       - '.github/workflows/babimind-unified-pipeline.yml'
   schedule:
@@ -19,6 +20,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
+  PYTHONPATH: ${{ github.workspace }}
   OPENROUTER_MODEL: openrouter/free
   TSE_OPTION_REPO: https://github.com/sm-sokout/tse-option.git
   TSE_OPTION_REF: master
@@ -67,6 +69,12 @@ jobs:
           FINPY_TSE_LOOKBACK_DAYS: '30'
         run: python scripts/collect_finpy_tse.py
 
+      - name: Collect BRS option feed
+        continue-on-error: true
+        env:
+          BRS_API_KEY: ${{ secrets.BRS_API_KEY }}
+        run: python -m scripts.fetch_options_realtime --output data/raw/brs_options_snapshot.json
+
       - name: Ingest market and option snapshots
         run: |
           python scripts/ingest_option_market_watch.py
@@ -101,30 +109,23 @@ jobs:
           graphify . --code-only --update || true
           python scripts/babimind_graph.py
 
-      - name: Unified BabiMind pipeline
-        run: python scripts/babimind_pipeline.py
-
       - name: Daily option ranking and factor rotation
         continue-on-error: true
         run: |
-          python -m app.options.ranking
+          python scripts/rank_options_babimind.py
           python scripts/babimind_factor_rotation.py
 
-      - name: Forecasting and regime layer
-        continue-on-error: true
-        run: |
-          python -m app.forecasting.regimes
-          python -m app.forecasting.historical_forecaster
-          python -m app.forecasting.walk_forward
+      - name: Record model stage readiness
+        run: python scripts/model_stage_status.py
 
-      - name: Decision layer
-        continue-on-error: true
-        run: python -m app.decision.example_usage
+      - name: Unified BabiMind pipeline
+        run: python scripts/babimind_pipeline.py
 
       - name: Prepare memory
         run: python scripts/babimind_memory.py --prepare
 
       - name: Build master Web Research + Decision prompt and run LLM
+        continue-on-error: true
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
@@ -144,13 +145,14 @@ jobs:
               'reports/option_market_watch_summary.json',
               'reports/marketwatch_plus_summary.json',
               'reports/tse_option_source_status.json',
-              'reports/babimind_forecast.json',
-              'reports/babimind_decision.json',
-              'reports/babimind_options_ranking.json',
+              'reports/tse_option_ingest_status.json',
+              'reports/options_babimind_ranked.json',
+              'reports/babimind_model_stage_status.json',
               'data/raw/finpy_tse_snapshot.json',
               'data/raw/option_market_watch_snapshot.json',
               'data/raw/marketwatch_plus_snapshot.json',
               'data/raw/tse_option_snapshot.json',
+              'data/raw/brs_options_snapshot.json',
               'data/raw/kamandar_market_report.json',
               'data/raw/kamandar_indices.json',
               'data/raw/kamandar_stocks.json',
@@ -172,11 +174,20 @@ jobs:
                   parts.append(f'\nSOURCE FILE: {f}\n{p.read_text(encoding="utf-8", errors="replace")[:70000]}')
           Path('babimind_openrouter_prompt.txt').write_text('\n'.join(parts), encoding='utf-8')
           PY
-          test -n "$OPENROUTER_API_KEY"
           python scripts/babimind_llm_router.py --prompt-file babimind_openrouter_prompt.txt --output reports/babimind_llm.json
 
       - name: Ingest successful memory
         run: python scripts/babimind_memory.py --ingest
+
+      - name: Preserve run evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: babimind-${{ github.run_id }}
+          path: |
+            reports/
+            artifacts/
+          retention-days: 14
 
       - name: Validate and commit
         if: always()
@@ -189,7 +200,4 @@ jobs:
           if missing: raise SystemExit(f'Missing required output: {missing}')
           if Path('reports/babimind_llm.json').exists(): json.loads(Path('reports/babimind_llm.json').read_text(encoding='utf-8'))
           PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ graphify-out/ data/raw/ artifacts/ memory/news-daily-latest.md babimind_openrouter_prompt.txt 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m 'chore: refresh BabiMind daily brain' && git push origin HEAD:main)
+          python scripts/commit_outputs.py 'chore: refresh BabiMind daily brain'

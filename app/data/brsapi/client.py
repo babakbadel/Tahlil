@@ -26,8 +26,6 @@ class BrsApiError(RuntimeError):
 class BrsApiClient:
     def __init__(self, api_key: str | None = None, timeout: int = 20) -> None:
         self.api_key = api_key or os.getenv("BRS_API_KEY")
-        if not self.api_key:
-            raise BrsApiError("BRS_API_KEY is not configured")
         self.timeout = timeout
         self.session = requests.Session()
         self.session.headers.update(
@@ -35,11 +33,17 @@ class BrsApiClient:
         )
 
     def _get_json(self, endpoint: str, **params: Any) -> Any:
-        response = self.session.get(
-            f"{BASE_URL}/{endpoint}",
-            params={"key": self.api_key, **params},
-            timeout=self.timeout,
-        )
+        if not self.api_key:
+            raise BrsApiError("BRS_API_KEY is not configured")
+        try:
+            response = self.session.get(
+                f"{BASE_URL}/{endpoint}",
+                params={"key": self.api_key, **params},
+                timeout=self.timeout,
+            )
+        except requests.RequestException:
+            # requests exceptions can include the full URL and its API key.
+            raise BrsApiError("BRS API transport unavailable") from None
         if response.status_code != 200:
             raise BrsApiError(f"BRS API HTTP {response.status_code}")
         try:

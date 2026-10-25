@@ -13,23 +13,28 @@ from pathlib import Path
 
 COLLECTED = Path(os.getenv("TSE_OPTION_COLLECTED", "data/raw/tse_option_chain.json"))
 OUT = Path("data/raw/tse_option_snapshot.json")
-META = Path("reports/tse_option_source_status.json")
+META = Path("reports/tse_option_ingest_status.json")
 UPSTREAM = os.getenv("TSE_OPTION_REPO", "https://github.com/sm-sokout/tse-option.git")
 REF = os.getenv("TSE_OPTION_REF", "master")
 
 
 def main() -> int:
     work = Path(".cache/tse-option")
-    if not (work / ".git").exists():
-        work.parent.mkdir(parents=True, exist_ok=True)
-        subprocess.run(
-            ["git", "clone", "--depth", "1", "--branch", REF, UPSTREAM, str(work)],
-            check=True,
-            timeout=30,
-        )
-    commit = subprocess.check_output(
-        ["git", "-C", str(work), "rev-parse", "HEAD"], text=True, timeout=10
-    ).strip()
+    commit = None
+    provenance_error = None
+    if COLLECTED.exists():
+        try:
+            if not (work / ".git").exists():
+                work.parent.mkdir(parents=True, exist_ok=True)
+                subprocess.run(
+                    ["git", "clone", "--depth", "1", "--branch", REF, UPSTREAM, str(work)],
+                    check=True, timeout=30, capture_output=True,
+                )
+            commit = subprocess.check_output(
+                ["git", "-C", str(work), "rev-parse", "HEAD"], text=True, timeout=10
+            ).strip()
+        except (OSError, subprocess.SubprocessError) as exc:
+            provenance_error = type(exc).__name__
 
     if COLLECTED.exists():
         try:
@@ -57,6 +62,7 @@ def main() -> int:
         "upstream": UPSTREAM,
         "ref": REF,
         "commit": commit,
+        "lookup_error": provenance_error,
     }
 
     # Keep both the collector schema (rows) and a generic data alias so older

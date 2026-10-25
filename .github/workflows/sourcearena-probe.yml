@@ -23,6 +23,7 @@ jobs:
 
       - name: Call SourceArena
         env:
+          PROBE_SYMBOL: ${{ inputs.symbol }}
           SOURCEARENA_TOKEN: ${{ secrets.SOURCEARENA_TOKEN }}
         run: |
-          python scripts/sourcearena_probe.py --name "${{ inputs.symbol }}"
+          python scripts/sourcearena_probe.py --name "$PROBE_SYMBOL"

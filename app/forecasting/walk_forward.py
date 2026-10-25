@@ -49,7 +49,11 @@ def walk_forward_backtest(
     rows = []
 
     for i in range(train_window, len(df) - horizon, step):
-        train = df.iloc[max(0, i - train_window):i].copy()
+        # At date i, a label is observable only when its entire horizon ended
+        # strictly before i. Slicing by the feature date alone leaks outcomes.
+        train = df.iloc[max(0, i - train_window):i - horizon].copy()
+        if train.empty:
+            continue
         current = df.iloc[i]
         model = HistoricalAnalogForecaster(top_k=top_k, min_similarity=min_similarity)
         model.fit(train, feature_columns)
