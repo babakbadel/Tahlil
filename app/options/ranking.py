@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field, asdict
 from datetime import date, datetime
+from math import isfinite
 from typing import Any, Sequence
 
 
@@ -77,6 +78,12 @@ def filter_active(contracts: Sequence[OptionContract], as_of: date) -> list[Opti
 
 def compute_basic_metrics(c: OptionContract) -> tuple[float | None, float | None, float | None, float | None, list[str]]:
     gaps: list[str] = []
+    if (c.option_type not in {"call", "put"} or not isfinite(c.strike) or c.strike <= 0
+            or any(v is not None and (not isfinite(v) or v < 0)
+                   for v in (c.last_price, c.bid, c.ask, c.volume, c.open_interest, c.underlying_price))):
+        return None, None, None, None, ["invalid_contract", "blocked_for_final_rank"]
+    if c.bid is not None and c.ask is not None and c.bid > c.ask:
+        gaps.append("crossed_bid_ask")
     if c.underlying_price is None or c.underlying_price <= 0:
         gaps.append("missing_underlying_price")
         return None, None, None, None, gaps
@@ -88,11 +95,11 @@ def compute_basic_metrics(c: OptionContract) -> tuple[float | None, float | None
     if c.option_type == "call":
         moneyness = spot / k
         intrinsic = max(0.0, spot - k)
-        break_even = k + (c.last_price or 0.0)
+        break_even = k + c.last_price if c.last_price is not None else None
     else:
         moneyness = k / spot if spot else None
         intrinsic = max(0.0, k - spot)
-        break_even = k - (c.last_price or 0.0)
+        break_even = k - c.last_price if c.last_price is not None else None
 
     time_value = None
     if c.last_price is not None:
@@ -101,7 +108,14 @@ def compute_basic_metrics(c: OptionContract) -> tuple[float | None, float | None
             gaps.append("negative_time_value")
 
     if c.event_time and c.underlying_event_time:
-        if c.event_time[:10] != c.underlying_event_time[:10]:
+        try:
+            quote = datetime.fromisoformat(c.event_time.replace("Z", "+00:00"))
+            underlying_quote = datetime.fromisoformat(c.underlying_event_time.replace("Z", "+00:00"))
+            synchronized = (quote.tzinfo is not None and underlying_quote.tzinfo is not None
+                            and abs((quote - underlying_quote).total_seconds()) <= 60)
+        except (ValueError, TypeError):
+            synchronized = False
+        if not synchronized:
             gaps.append("timestamp_mismatch")
     else:
         gaps.append("missing_synchronized_timestamps")
@@ -135,8 +149,16 @@ def rank_options(
 
         score = None
         conf = 0.0
-        if "timestamp_mismatch" in gaps or "missing_synchronized_timestamps" in gaps:
-            if require_synchronized:
+        if c.event_time:
+            try:
+                if date.fromisoformat(c.event_time[:10]) > as_of_d:
+                    gaps.append("future_quote")
+            except ValueError:
+                gaps.append("timestamp_mismatch")
+        invalid = any(g in gaps for g in ("invalid_contract", "missing_underlying_price", "missing_last_price", "negative_time_value", "crossed_bid_ask", "future_quote"))
+        unsynchronized = any(g in gaps for g in ("timestamp_mismatch", "missing_synchronized_timestamps"))
+        if invalid or (require_synchronized and unsynchronized):
+            if "blocked_for_final_rank" not in gaps:
                 gaps.append("blocked_for_final_rank")
         else:
             vol = c.volume or 0.0

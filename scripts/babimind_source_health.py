@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from concurrent.futures import ThreadPoolExecutor
 import sys
 import time
 from datetime import datetime, timezone
@@ -68,10 +69,12 @@ def main() -> int:
         return 2
 
     now = datetime.now(timezone.utc).isoformat()
-    results = []
-    for source in sources:
-        result = check(source["url"], int(source.get("timeout_seconds", 15)))
-        results.append({**source, **result, "checked_at": now})
+    def check_one(source):
+        result = check(source["url"], min(10, max(1, int(source.get("timeout_seconds", 10)))))
+        return {**source, **result, "checked_at": now}
+
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        results = list(pool.map(check_one, sources))
 
     ok = sum(r["status"] == "ok" for r in results)
     unavailable = sum(r["status"] == "unavailable" for r in results)

@@ -6,6 +6,9 @@ on:
     - cron: '30 8 * * *'
   workflow_dispatch:
 
+env:
+  PYTHONPATH: ${{ github.workspace }}
+
 permissions:
   contents: write
 
@@ -15,6 +18,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with: {python-version: '3.13'}
       - name: Run global market layer
@@ -29,7 +34,4 @@ jobs:
       - name: Commit macro outputs
         if: always()
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ data/raw/ 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m 'chore: refresh global and macro intelligence' && git push origin HEAD:main)
+          python scripts/commit_outputs.py 'chore: refresh global and macro intelligence'

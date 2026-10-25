@@ -22,7 +22,8 @@ def _rows(payload: Any) -> list[dict[str, Any]]:
 
 
 def _is_option(row: dict[str, Any]) -> bool:
-    return bool(row.get("base_l18") or row.get("underlying") or row.get("underlying_symbol"))
+    return bool(row.get("base_l18") or row.get("underlying") or row.get("underlying_symbol")
+                or str(row.get("l18", row.get("symbol", ""))).startswith(("ض", "ط")))
 
 
 def normalize(rows: list[dict[str, Any]], source: str = "BRS_API") -> dict[str, Any]:
@@ -64,7 +65,11 @@ class RealtimeCollector:
     def collect_once(self) -> dict[str, Any]:
         try:
             raw = self.client.get_all_symbols(security_type=1)
-            snapshot = normalize(_rows(raw))
+            options = self.client.get_options()
+            snapshot = normalize(_rows(raw) + _rows(options))
+            snapshot["data_quality"]["status"] = (
+                "live" if snapshot["data"]["equity_count"] and snapshot["data"]["option_count"] else "partial"
+            )
             self.latest = snapshot
             self.last_error = None
             if self.hub is not None:
@@ -73,7 +78,9 @@ class RealtimeCollector:
         except Exception as exc:
             self.last_error = type(exc).__name__
             if self.latest is not None:
-                self.latest["data_quality"]["status"] = "stale"
+                self.latest = {**self.latest, "data_quality": {
+                    **self.latest["data_quality"], "status": "stale",
+                }}
             raise
 
     async def run_forever(self) -> None:
@@ -81,8 +88,11 @@ class RealtimeCollector:
         while self._running:
             started = time.monotonic()
             try:
-                self.collect_once()
-            except (BrsApiError, TypeError, ValueError):
+                snapshot = await asyncio.to_thread(self.collect_once)
+                # Queue delivery must run on the event loop, not the worker.
+                if self.hub is not None:
+                    self.hub.publish(snapshot)
+            except Exception:
                 pass
             await asyncio.sleep(max(0.0, self.interval - (time.monotonic() - started)))
 

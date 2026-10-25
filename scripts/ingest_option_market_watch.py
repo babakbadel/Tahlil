@@ -57,7 +57,7 @@ def parse_rows() -> list[dict[str, Any]]:
             continue
         symbol = row[0].strip()
         underlying = row[20].strip()
-        option_type = "put" if symbol.startswith("ض") else "call" if symbol.startswith("ط") else "unknown"
+        option_type = "call" if symbol.startswith("ض") else "put" if symbol.startswith("ط") else "unknown"
         records.append(
             {
                 "symbol": symbol,

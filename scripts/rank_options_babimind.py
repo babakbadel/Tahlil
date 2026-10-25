@@ -9,7 +9,8 @@ import json, math, re
 from datetime import datetime, timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-SRC=ROOT/'data/latest/options_realtime.json'; OUT_JSON=ROOT/'reports/options_babimind_ranked.json'; OUT_MD=ROOT/'reports/options_babimind_ranked.md'; R=0.25
+LIVE_SRC=ROOT/'data/raw/brs_options_snapshot.json'
+SRC=LIVE_SRC if LIVE_SRC.exists() else ROOT/'data/latest/options_realtime.json'; OUT_JSON=ROOT/'reports/options_babimind_ranked.json'; OUT_MD=ROOT/'reports/options_babimind_ranked.md'; R=0.25
 ALIASES={'underlying':['underlying','underlying_symbol','base_symbol','stock','stock_symbol','asset','نماد_پایه','نمادپایه','سهم_پایه'],'symbol':['symbol','option_symbol','contract','ticker','نماد','نماد_اختیار','نام_نماد'],'strike':['strike','strike_price','exercise_price','قیمت_اعمال','قیمتاعمال','استرایک'],'price':['price','last','last_price','close','close_price','option_price','قیمت','آخرین','آخرین_قیمت'],'bid':['bid','best_bid','buy_price','قیمت_خرید'],'ask':['ask','best_ask','sell_price','قیمت_فروش'],'iv':['iv','implied_volatility','implied_vol','نوسان_ضمنی','نوسانضمنی'],'delta':['delta','دلتا'],'gamma':['gamma','گاما'],'theta':['theta','تتا'],'vega':['vega','وگا'],'expiry':['expiry','expiration','expiry_date','maturity','سررسید','تاریخ_سررسید'],'volume':['volume','trade_volume','حجم'],'open_interest':['open_interest','oi','موقعیت_باز'],'underlying_price':['underlying_price','spot','last_underlying','base_price','قیمت_پایه','قیمت_سهم']}
 def norm(s):return str(s).strip().replace('ي','ی').replace('ك','ک').replace('\u200c','').upper()
 def num(v):
@@ -34,7 +35,7 @@ def flatten(x):
    if isinstance(v,(dict,list)):yield from flatten(v)
 def target(r):
  s=norm(' '.join(str(get(r,a) or '') for a in [ALIASES['underlying'],ALIASES['symbol']]))
- for name,parts in {'فملی':['فملی','FEMLI','ضملی','طملی'],'وبملت':['وبملت','WEMELAT','ضملت','طملت'],'شپنا':['شپنا','SHAPNA','ضشنا','طشنا'],'خساپا':['خساپا','KHODRO','ضسپا','طسپا']}.items():
+ for name,parts in {'فملی':['فملی','FEMLI','ضملی','طملی'],'وبملت':['وبملت','WEMELAT','ضملت','طملت'],'شپنا':['شپنا','SHAPNA','ضشنا','طشنا'],'خساپا':['خساپا','KHESAPA','ضسپا','طسپا'],'خودرو':['خودرو','KHODRO','ضخود','طخود']}.items():
   if any(x in s for x in parts):return name
  return None
 def opt_type(r):
@@ -120,7 +121,7 @@ def score(r):
   elif m<=.20:s+=3
  return round(min(100,s),2)
 def main():
- raw=json.loads(SRC.read_text(encoding='utf-8'));rows=[]
+ raw=json.loads(SRC.read_text(encoding='utf-8')) if SRC.exists() else {};rows=[]
  for rec in flatten(raw):
   u=target(rec);typ=opt_type(rec);dt=parse_date(get(rec,ALIASES['expiry']))
   if not u or not typ or not dt:continue
@@ -141,14 +142,14 @@ def main():
   if S is not None:
    intrinsic=max(0,S-K) if r['option_type']=='CALL' else max(0,K-S);r['intrinsic_value']=round(intrinsic,4);r['time_value']=round(P-intrinsic,4);r['breakeven']=round(K+P,4) if r['option_type']=='CALL' else round(K-P,4)
   else:r['intrinsic_value']=r['time_value']=r['breakeven']=None
-  r.pop('expiry_key');r['babimind_score']=score(r);r['decision']='BUY' if r['babimind_score']>=80 else 'HOLD' if r['babimind_score']>=60 else 'AVOID'
+  r.pop('expiry_key');r['babimind_score']=score(r);r['decision']='REVIEW_REQUIRED';r['ranking_policy']='data_completeness_only_not_a_trade_signal'
  best={}
  for r in rows:
   k=r['symbol'] or f"{r['underlying']}|{r['option_type']}|{r['strike']}|{r['expiry']}"
   if k not in best or r['babimind_score']>best[k]['babimind_score']:best[k]=r
  rows=sorted(best.values(),key=lambda r:(-r['babimind_score'],r['underlying'],r['option_type'],r['strike']))
  for i,r in enumerate(rows,1):r['rank']=i
- generated=datetime.now(timezone.utc).isoformat();OUT_JSON.parent.mkdir(parents=True,exist_ok=True);OUT_JSON.write_text(json.dumps({'generated_at_utc':generated,'record_count':len(rows),'records':rows},ensure_ascii=False,indent=2),encoding='utf-8')
+ generated=datetime.now(timezone.utc).isoformat();OUT_JSON.parent.mkdir(parents=True,exist_ok=True);OUT_JSON.write_text(json.dumps({'generated_at_utc':generated,'source_file':str(SRC.relative_to(ROOT)),'source_event_time':raw.get('event_time') if isinstance(raw,dict) else None,'data_warning':'Completeness scores do not establish synchronized quotes, freshness, or expected returns.','status':'partial' if rows else 'unavailable','ranking_policy':'data_completeness_only_not_a_trade_signal','record_count':len(rows),'records':rows},ensure_ascii=False,indent=2),encoding='utf-8')
  lines=['# BabiMind Option Ranking','',f'Generated: {generated}',f'Contracts ranked: {len(rows)}','', '| Rank | Underlying | Contract | Type | Score | Decision | Strike | Price | IV | Delta | Gamma | Theta | Vega | Days | BE |','|---:|---|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
  for r in rows:
   f=lambda x:'-' if x is None else (f'{x:.6f}' if isinstance(x,float) else str(x));lines.append(f"| {r['rank']} | {r['underlying']} | {r.get('symbol') or '-'} | {r['option_type']} | {r['babimind_score']:.1f} | {r['decision']} | {f(r['strike'])} | {f(r['price'])} | {f(r['iv'])} | {f(r['delta'])} | {f(r['gamma'])} | {f(r['theta'])} | {f(r['vega'])} | {f(r['days_to_expiry'])} | {f(r['breakeven'])} |")
