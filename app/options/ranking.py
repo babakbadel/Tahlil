@@ -151,11 +151,14 @@ def rank_options(
         conf = 0.0
         if c.event_time:
             try:
-                if date.fromisoformat(c.event_time[:10]) > as_of_d:
+                quote_date = date.fromisoformat(c.event_time[:10])
+                if quote_date > as_of_d:
                     gaps.append("future_quote")
+                elif quote_date < as_of_d:
+                    gaps.append("stale_quote")
             except ValueError:
                 gaps.append("timestamp_mismatch")
-        invalid = any(g in gaps for g in ("invalid_contract", "missing_underlying_price", "missing_last_price", "negative_time_value", "crossed_bid_ask", "future_quote"))
+        invalid = any(g in gaps for g in ("invalid_contract", "missing_underlying_price", "missing_last_price", "negative_time_value", "crossed_bid_ask", "future_quote", "stale_quote"))
         unsynchronized = any(g in gaps for g in ("timestamp_mismatch", "missing_synchronized_timestamps"))
         if invalid or (require_synchronized and unsynchronized):
             if "blocked_for_final_rank" not in gaps:

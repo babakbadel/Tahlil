@@ -53,3 +53,9 @@ def test_expiry_gate_and_valid_ranking():
 
 def test_optional_sync_gate_can_be_disabled_explicitly():
     assert rank_options([contract(event_time=None)], '2030-01-01', require_synchronized=False)[0].rank == 1
+
+
+def test_synchronized_historical_quotes_are_not_current_quotes():
+    result = rank_options([contract(event_time='2029-12-31T09:00:00+03:30', underlying_event_time='2029-12-31T09:00:00+03:30')], '2030-01-01')[0]
+    assert result.rank is None
+    assert 'stale_quote' in result.data_gaps

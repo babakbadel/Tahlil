@@ -49,28 +49,28 @@ jobs:
         continue-on-error: true
         env:
           PYPIHAT_TSETMC_OUT: data/raw/pypihat_tsetmc_snapshot.json
-        run: .venv-pypihat/bin/python scripts/collect_pypihat_tsetmc_api.py
+        run: timeout 180s .venv-pypihat/bin/python scripts/collect_pypihat_tsetmc_api.py
       - name: Collect alternative provider - algotik_tse
         continue-on-error: true
         env:
           OPTION_UNDERLYINGS: 'فملی,ذوب,وبملت,شپنا,خساپا,فولاد,فغدیر,سرچشمه'
           ALGOTIK_FETCH_OI: 'true'
-        run: python scripts/collect_algotik_tse.py
+        run: timeout 180s python scripts/collect_algotik_tse.py
       - name: Install async TSETMC provider
         continue-on-error: true
         run: python -m pip install tsetmc
       - name: Collect alternative provider - 5j9/tsetmc
         continue-on-error: true
-        run: python scripts/collect_tsetmc_async.py
+        run: timeout 180s python scripts/collect_tsetmc_async.py
       - name: Install pytsetmc provider
         continue-on-error: true
         run: python -m pip install pytsetmc-api
       - name: Collect alternative provider - pytsetmc-api
         continue-on-error: true
-        run: python scripts/collect_pytsetmc_api.py
+        run: timeout 180s python scripts/collect_pytsetmc_api.py
       - name: Collect alternative provider - TSETMC_OPTION API
         continue-on-error: true
-        run: python scripts/collect_tsetmc_option_api.py
+        run: timeout 180s python scripts/collect_tsetmc_option_api.py
       - name: Collect BRS option feed
         continue-on-error: true
         env:
