@@ -42,3 +42,32 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run typecheck
+  provider-async:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install "git+https://github.com/5j9/tsetmc.git@fdaf0e085c3ed884c828000f2f4752f91a6b5e7b"
+      - name: Verify async provider API
+        run: |
+          python - <<'PY'
+          from inspect import iscoroutinefunction
+          from tsetmc.market_watch import get_market_watch, client_type_all, closing_price_all
+          assert all(iscoroutinefunction(f) for f in (get_market_watch, client_type_all, closing_price_all))
+          PY
+  provider-pytsetmc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install "git+https://github.com/mshojaei77/pytsetmc-api.git@5b87cfb0c69d54d39f23005b35de6908d7864536"
+      - name: Verify pytsetmc provider API
+        run: |
+          python - <<'PY'
+          from pytsetmc_api import TSETMCClient
+          assert callable(TSETMCClient.get_market_watch)
+          PY

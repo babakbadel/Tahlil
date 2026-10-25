@@ -58,18 +58,28 @@ jobs:
           OPTION_UNDERLYINGS: 'فملی,ذوب,وبملت,شپنا,خساپا,فولاد,فغدیر,سرچشمه'
           ALGOTIK_FETCH_OI: 'true'
         run: timeout 180s python scripts/collect_algotik_tse.py
+      - name: Setup isolated async provider Python
+        id: async-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          update-environment: false
       - name: Install async TSETMC provider
         continue-on-error: true
-        run: python -m pip install tsetmc
+        run: |
+          "${{ steps.async-python.outputs.python-path }}" -m venv .venv-tsetmc
+          .venv-tsetmc/bin/python -m pip install "git+https://github.com/5j9/tsetmc.git@fdaf0e085c3ed884c828000f2f4752f91a6b5e7b"
       - name: Collect alternative provider - 5j9/tsetmc
         continue-on-error: true
-        run: timeout 180s python scripts/collect_tsetmc_async.py
+        run: timeout 180s .venv-tsetmc/bin/python scripts/collect_tsetmc_async.py
       - name: Install pytsetmc provider
         continue-on-error: true
-        run: python -m pip install pytsetmc-api
+        run: |
+          python -m venv .venv-pytsetmc
+          .venv-pytsetmc/bin/python -m pip install "git+https://github.com/mshojaei77/pytsetmc-api.git@5b87cfb0c69d54d39f23005b35de6908d7864536"
       - name: Collect alternative provider - pytsetmc-api
         continue-on-error: true
-        run: timeout 180s python scripts/collect_pytsetmc_api.py
+        run: timeout 180s .venv-pytsetmc/bin/python scripts/collect_pytsetmc_api.py
       - name: Collect alternative provider - TSETMC_OPTION API
         continue-on-error: true
         run: timeout 180s python scripts/collect_tsetmc_option_api.py
