@@ -62,7 +62,7 @@ jobs:
         id: async-python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: '3.14'
           update-environment: false
       - name: Install async TSETMC provider
         continue-on-error: true

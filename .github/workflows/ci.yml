@@ -48,7 +48,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: '3.14'
       - run: python -m pip install "git+https://github.com/5j9/tsetmc.git@fdaf0e085c3ed884c828000f2f4752f91a6b5e7b"
       - name: Verify async provider API
         run: |
