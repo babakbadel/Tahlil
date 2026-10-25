@@ -874,78 +874,77 @@
       "fingerprint": "6b4ea0b2102b67b18506"
     },
     {
-      "timestamp": "2026-10-25T17:49:46.650408+00:00",
+      "timestamp": "2026-10-25T18:09:38.495591+00:00",
       "provider": "openrouter",
       "model": "openrouter/free",
       "regime": null,
       "scenarios": {
         "bull": {
           "probability": 0.4,
+          "target": "فملی 23,000 / TSE > 8,200",
           "catalysts": [
-            "Copper breaks $4.80/lb on supply disruption",
-            "فملی sales volume sustains >15% QoQ growth",
-            "Real-money flow turns positive for 3+ sessions",
-            "Index breadth improves >55% advancing"
+            "Copper price breakout/tightness",
+            "Real-money net buying returns",
+            "TSE breadth turns positive with volume",
+            "Fund rotation to commodity leaders"
           ],
-          "confirmation_signals": [
-            "فملی closes >20,000 on expanding volume",
-            "Equal-weight index outperforms total index",
-            "Retail net buy >5T IRR/session"
+          "confirmation": [
+            "Price closes above 20,000 with expanding volume (فملی thesis)",
+            "Real-money inflow persists ≥3 sessions",
+            "Copper price remains supportive"
           ],
-          "invalidation_signals": [
-            "Copper <$4.20/lb",
-            "فملی breaks 18,800 on volume",
-            "Retail net sell accelerates >30T IRR"
-          ],
-          "target_price": 23000,
-          "time_horizon": "Q2-Q3 1405"
+          "invalidation": [
+            "Price rises while real-money flow deteriorates",
+            "Sales growth rolls over two consecutive releases",
+            "Copper breaks down materially"
+          ]
         },
         "base": {
-          "probability": 0.35,
+          "probability": 0.4,
+          "target": "فملی 21,500 / TSE range-bound",
           "catalysts": [
-            "Copper range-bound $4.30-4.70",
-            "فملی sales growth 10-15% QoQ",
-            "Market sideways, sector rotation continues"
+            "Steady sales growth",
+            "Stable commodity prices",
+            "Controlled geopolitical tension"
           ],
-          "confirmation_signals": [
-            "فملی trades 19,400-21,500 with moderate volume",
-            "Index 7.8M-8.2M range"
+          "confirmation": [
+            "Price trades within 19,400–21,500 band with moderate volume",
+            "Fundamental growth >100% YoY",
+            "No major sanctions escalation"
           ],
-          "invalidation_signals": [
-            "Sales growth <5% for two quarters",
-            "Geopolitical escalation (Hormuz closure)",
-            "Copper >$5.00 or <$4.00"
-          ],
-          "target_price": 21500,
-          "time_horizon": "Q2 1405"
+          "invalidation": [
+            "Sales growth slows below 50% YoY for two releases",
+            "Geopolitical escalation (Hormuz, new sanctions)",
+            "Copper declines >20%"
+          ]
         },
         "bear": {
-          "probability": 0.25,
+          "probability": 0.2,
+          "target": "فملی 18,800 / TSE < 7,900",
           "catalysts": [
-            "Copper breakdown <$4.00",
-            "US-Iran conflict escalation (Hormuz risk)",
-            "Severe sanctions enforcement (OFAC)",
-            "Domestic inflation spiral from gasoline hikes"
+            "Copper price breakdown",
+            "Volume collapse",
+            "Real-money outflow accelerates",
+            "US-Iran conflict / Hormuz risk"
           ],
-          "confirmation_signals": [
-            "فملی breaks 18,800 on volume",
-            "Real-money outflow >3 sessions",
-            "Index breaks 7.5M"
+          "confirmation": [
+            "Price breaks below 18,800 on expanding volume",
+            "Real-money outflow accelerates",
+            "Industry relative strength deteriorates"
           ],
-          "invalidation_signals": [
-            "فملی reclaims 20,000 with volume",
-            "Geopolitical de-escalation",
-            "Copper rebounds >$4.50"
-          ],
-          "target_price": 18800,
-          "time_horizon": "Q1-Q2 1405"
-        }
+          "invalidation": [
+            "Price rebounds above 20,000 with volume",
+            "Fundamentals renew acceleration",
+            "Geopolitical de-escalation"
+          ]
+        },
+        "probability_note": "Probabilities sum to 1.0. Confidence lowered due to missing primary exchange data."
       },
       "market_implications": null,
       "confidence": null,
       "data_gaps": [],
-      "fingerprint": "93755b959efda393026a"
+      "fingerprint": "9d9c09a9a196044f76d9"
     }
   ],
-  "updated_at": "2026-10-25T17:49:46.651814+00:00"
+  "updated_at": "2026-10-25T18:09:38.497368+00:00"
 }
