@@ -1,7 +1,48 @@
 {
-  "source": "sm-sokout/tse-option",
-  "upstream": "https://github.com/sm-sokout/tse-option.git",
-  "ref": "master",
-  "commit": "4731be596b139c9328170762cefbbd0cd440b1d8",
-  "status": "error"
+  "generated_at": "2026-10-25T17:34:39.161271+00:00",
+  "status": "partial_ok",
+  "ok_count": 1,
+  "provider_count": 6,
+  "report": [
+    {
+      "provider": "BRS options",
+      "ok": true,
+      "reason": "ok",
+      "row_count": 1103,
+      "age_seconds": 3.729613
+    },
+    {
+      "provider": "pypiHat/tsetmc-api",
+      "ok": false,
+      "reason": "provider_failed_or_empty",
+      "row_count": 0,
+      "age_seconds": 170.713464
+    },
+    {
+      "provider": "algotik_tse",
+      "ok": false,
+      "reason": "provider_failed_or_empty",
+      "row_count": 0,
+      "age_seconds": 128.275898
+    },
+    {
+      "provider": "5j9/tsetmc",
+      "ok": false,
+      "reason": "missing_or_invalid_json"
+    },
+    {
+      "provider": "pytsetmc-api",
+      "ok": false,
+      "reason": "provider_failed_or_empty",
+      "row_count": 0,
+      "age_seconds": 37.295693
+    },
+    {
+      "provider": "TSETMC_OPTION API",
+      "ok": false,
+      "reason": "provider_failed_or_empty",
+      "row_count": 0,
+      "age_seconds": 36.994494
+    }
+  ]
 }
