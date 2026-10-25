@@ -7,6 +7,8 @@ on:
       - '.github/workflows/tse-market-options.yml'
       - 'scripts/ingest_tse_option.py'
       - 'scripts/rank_options_babimind.py'
+      - 'scripts/score_options_babimind_scenarios.py'
+      - 'scripts/risk_adjusted_options_babimind.py'
       - 'scripts/collect_algotik_tse.py'
       - 'scripts/collect_tsetmc_async.py'
       - 'scripts/collect_tsetmc_option_api.py'
