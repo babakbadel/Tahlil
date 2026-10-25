@@ -872,7 +872,80 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "6b4ea0b2102b67b18506"
+    },
+    {
+      "timestamp": "2026-10-25T17:49:46.650408+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "probability": 0.4,
+          "catalysts": [
+            "Copper breaks $4.80/lb on supply disruption",
+            "فملی sales volume sustains >15% QoQ growth",
+            "Real-money flow turns positive for 3+ sessions",
+            "Index breadth improves >55% advancing"
+          ],
+          "confirmation_signals": [
+            "فملی closes >20,000 on expanding volume",
+            "Equal-weight index outperforms total index",
+            "Retail net buy >5T IRR/session"
+          ],
+          "invalidation_signals": [
+            "Copper <$4.20/lb",
+            "فملی breaks 18,800 on volume",
+            "Retail net sell accelerates >30T IRR"
+          ],
+          "target_price": 23000,
+          "time_horizon": "Q2-Q3 1405"
+        },
+        "base": {
+          "probability": 0.35,
+          "catalysts": [
+            "Copper range-bound $4.30-4.70",
+            "فملی sales growth 10-15% QoQ",
+            "Market sideways, sector rotation continues"
+          ],
+          "confirmation_signals": [
+            "فملی trades 19,400-21,500 with moderate volume",
+            "Index 7.8M-8.2M range"
+          ],
+          "invalidation_signals": [
+            "Sales growth <5% for two quarters",
+            "Geopolitical escalation (Hormuz closure)",
+            "Copper >$5.00 or <$4.00"
+          ],
+          "target_price": 21500,
+          "time_horizon": "Q2 1405"
+        },
+        "bear": {
+          "probability": 0.25,
+          "catalysts": [
+            "Copper breakdown <$4.00",
+            "US-Iran conflict escalation (Hormuz risk)",
+            "Severe sanctions enforcement (OFAC)",
+            "Domestic inflation spiral from gasoline hikes"
+          ],
+          "confirmation_signals": [
+            "فملی breaks 18,800 on volume",
+            "Real-money outflow >3 sessions",
+            "Index breaks 7.5M"
+          ],
+          "invalidation_signals": [
+            "فملی reclaims 20,000 with volume",
+            "Geopolitical de-escalation",
+            "Copper rebounds >$4.50"
+          ],
+          "target_price": 18800,
+          "time_horizon": "Q1-Q2 1405"
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "93755b959efda393026a"
     }
   ],
-  "updated_at": "2026-09-27T17:14:02.113732+00:00"
+  "updated_at": "2026-10-25T17:49:46.651814+00:00"
 }
