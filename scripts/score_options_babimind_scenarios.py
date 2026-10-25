@@ -59,11 +59,11 @@ def main():
     rows=data.get('records',[])
     out=[]
     for r in rows:
-        r=dict(r); s,pnls=score(r); r['scenario_pnl_pct']={f'{int(m*100):+d}%':pnls[m] for m in MOVES}; r['scenario_pnl_roi_pct']={f'{int(m*100):+d}%':(pnls[m]/r['price']*100 if pnls[m] is not None and r.get('price') else None) for m in MOVES}; r['babimind_scenario_score']=s; r['decision']='BUY' if s>=82 else 'HOLD' if s>=65 else 'AVOID'; out.append(r)
+        r=dict(r); s,pnls=score(r); r['scenario_pnl_pct']={f'{int(m*100):+d}%':pnls[m] for m in MOVES}; r['scenario_pnl_roi_pct']={f'{int(m*100):+d}%':(pnls[m]/r['price']*100 if pnls[m] is not None and r.get('price') else None) for m in MOVES}; r['babimind_scenario_score']=s; r['decision']='REVIEW_REQUIRED'; r['ranking_policy']='scenario_stress_test_not_a_trade_signal'; out.append(r)
     out.sort(key=lambda x:(-x['babimind_scenario_score'],x.get('underlying',''),x.get('option_type',''),x.get('strike',0)))
     for i,r in enumerate(out,1):r['scenario_rank']=i
     generated=datetime.now(timezone.utc).isoformat()
-    OUTJ.write_text(json.dumps({'generated_at_utc':generated,'record_count':len(out),'moves':MOVES,'records':out},ensure_ascii=False,indent=2),encoding='utf-8')
+    OUTJ.write_text(json.dumps({'generated_at_utc':generated,'record_count':len(out),'status':data.get('status','partial'),'source_event_time':data.get('source_event_time'),'ranking_policy':'scenario_stress_test_not_a_trade_signal','moves':MOVES,'records':out},ensure_ascii=False,indent=2),encoding='utf-8')
     lines=['# BabiMind Option Scenario Ranking','',f'Generated: {generated}',f'Contracts ranked: {len(out)}','', '| Rank | Underlying | Contract | Type | Score | Decision | Price | Strike | IV | Delta | Days | P/L -20% | P/L -10% | P/L +10% | P/L +20% |','|---:|---|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
     for r in out:
         def f(x): return '-' if x is None else f'{x:.2f}'

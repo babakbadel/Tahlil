@@ -113,6 +113,8 @@ jobs:
         continue-on-error: true
         run: |
           python scripts/rank_options_babimind.py
+          python scripts/score_options_babimind_scenarios.py
+          python scripts/risk_adjusted_options_babimind.py
           python scripts/babimind_factor_rotation.py
 
       - name: Record model stage readiness
@@ -147,6 +149,8 @@ jobs:
               'reports/tse_option_source_status.json',
               'reports/tse_option_ingest_status.json',
               'reports/options_babimind_ranked.json',
+              'reports/options_babimind_scenario_ranked.json',
+              'reports/options_babimind_risk_adjusted.json',
               'reports/babimind_model_stage_status.json',
               'data/raw/finpy_tse_snapshot.json',
               'data/raw/option_market_watch_snapshot.json',
