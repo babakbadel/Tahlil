@@ -18,15 +18,17 @@ def contract(**changes):
 
 def test_csv_keeps_call_and_put_direction(tmp_path, monkeypatch):
     source = tmp_path / 'options.csv'
-    rows = []
-    for symbol in ('ضملی1', 'طملی1'):
-        row = ['0'] * 43
-        row[0], row[20] = symbol, 'فملی'
-        rows.append(row)
+    headers = ['نماد', 'حجم', 'قیمت اعمال', 'نماد پایه', 'تاریخ پایان', 'حجم', 'نماد']
+    row = ['ضملی1', '10', '100', 'فملی', '20300201', '20', 'طملی1']
     with source.open('w', encoding='utf-8', newline='') as handle:
-        csv.writer(handle).writerows([['header'] * 43, *rows])
+        csv.writer(handle).writerows([headers, row])
     monkeypatch.setattr(ingest, 'SOURCE', source)
-    assert [r['option_type'] for r in ingest.parse_rows()] == ['call', 'put']
+    records = ingest.parse_rows()
+    assert [r['option_type'] for r in records] == ['call', 'put']
+    assert [r['volume'] for r in records] == [10, 20]
+    assert all(r['underlying'] == 'فملی' for r in records)
+    assert all(r['strike'] == 100 for r in records)
+
 
 
 @pytest.mark.parametrize('changes', [
@@ -59,3 +61,17 @@ def test_synchronized_historical_quotes_are_not_current_quotes():
     result = rank_options([contract(event_time='2029-12-31T09:00:00+03:30', underlying_event_time='2029-12-31T09:00:00+03:30')], '2030-01-01')[0]
     assert result.rank is None
     assert 'stale_quote' in result.data_gaps
+
+
+def test_real_repository_csv_preserves_both_sides_and_underlying(monkeypatch):
+    from pathlib import Path
+    monkeypatch.setattr(ingest, "SOURCE", Path(__file__).parent / "fixtures/option_market_watch.csv")
+    records = ingest.parse_rows()
+    assert records
+    first, counterpart = records[:2]
+    assert first['symbol'] == 'ضهرم6040'
+    assert counterpart['symbol'] == 'طهرم6040'
+    assert first['underlying'] == counterpart['underlying'] == 'اهرم'
+    assert first['last'] == 33110
+    assert counterpart['last'] == 13
+    assert counterpart['volume'] == 22055

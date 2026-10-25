@@ -4,7 +4,7 @@
 
 - Daily run 40198704540 failed when its generated-output commit was rejected because another workflow had advanced main.
 - Market/options run 40180911075 failed installing the legacy pypiHat dependency lxml 4.9.4 on Python 3.13, preventing every collector from running.
-- The OptionMarketWatch CSV importer reversed Iranian call/put symbol prefixes. Re-imported summaries must replace old derived summaries before using their call/put counts.
+- The paired CSV has 42 columns, while the importer required 43, dropping all 466 rows. It also reversed Iranian call/put symbol prefixes. Re-imported summaries must replace old derived summaries before using their call/put counts.
 
 ## Repairs
 
@@ -12,7 +12,7 @@
 - Stage generated files individually, avoiding silent git-add failure when an optional path does not exist. Retain daily and provider artifacts even on failure.
 - Market collection uses Python 3.11; the pinned legacy provider runs in an isolated environment. Optional provider installation cannot stop other collectors. Install the previously absent async/pytsetmc providers.
 - Validate collection timestamps and actual provider envelope schemas. Reject missing, stale, future, malformed, failed, or empty collections. Ingest metadata has its own report and cannot overwrite provider health.
-- Call prefixes are ض and put prefixes are ط. Missing premium stays null. Invalid prices, types, strikes, crossed books, future quotes, and unsynchronized quotes cannot get a final option rank. Completeness scores do not produce BUY/HOLD instructions.
+- CSV ingestion splits the header-defined call, underlying/date and put sections and imports both paired contracts. Call prefixes are ض and put prefixes are ط. Missing premium stays null. Invalid prices, types, strikes, crossed books, future quotes, and unsynchronized quotes cannot get a final option rank. Completeness scores do not produce BUY/HOLD instructions.
 - BRS equity and dedicated option feeds are both requested. Polling runs outside the async event loop and retries transport failures. Missing credentials do not prevent the service from starting or serving health. Responses expose snapshot age and stale/degraded state. Transport exceptions cannot print API keys in URLs.
 - Walk-forward training excludes labels whose horizon is not yet observable. Missing forward labels and drawdowns retain the correct similarity/weight alignment.
 - Production no longer executes placeholder decisions dated 2026-08-25. Model readiness and completeness-only option results are included in the central pipeline and LLM evidence.
