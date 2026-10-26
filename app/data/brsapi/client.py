@@ -63,3 +63,7 @@ class BrsApiClient:
         discovered by filtering the generic AllSymbols endpoint.
         """
         return self._get_json("Option.php")
+
+    def get_daily_history(self, symbol: str) -> Any:
+        """Documented adjusted daily candles; never use intraday type=1 here."""
+        return self._get_json("Candlestick.php", type=3, l18=symbol)

@@ -1,25 +1,15 @@
 #!/usr/bin/env python3
-"""Expose unconnected model layers without inserting demonstration forecasts."""
-import json
+"""Compatibility entrypoint: readiness is now computed by the real runtime."""
 from datetime import datetime, timezone
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from app.forecasting.runtime import run
 
 
 def main():
-    root = Path(__file__).resolve().parents[1]
-    payload = {
-        "model": "BabiMind",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "status": "partial",
-        "forecasting": {"status": "not_connected", "reason": "Requires a validated chronological feature panel and matured forward labels."},
-        "decision": {"status": "not_connected", "reason": "example_usage is demonstration evidence and must not enter production memory."},
-        "missing_data_policy": "MISSING_IS_NOT_ZERO",
-    }
-    out = root / "reports/babimind_model_stage_status.json"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("Forecast and decision integration is partial; no sample predictions emitted")
+    run(Path(__file__).resolve().parents[1], datetime.now(timezone.utc))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

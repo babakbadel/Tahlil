@@ -12,7 +12,7 @@ from collections import deque
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin, urlparse, urldefrag
+from urllib.parse import urljoin, urlparse, urldefrag, quote
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,7 +47,7 @@ def canonical(url):
     p = urlparse(url)
     if p.scheme not in ("http", "https") or p.hostname not in (DOMAIN, "www."+DOMAIN):
         return None
-    return p._replace(fragment="").geturl()
+    return p._replace(scheme="https", netloc=DOMAIN, path=quote(p.path, safe="/%:@-._~!$&'()*+,;="), query=quote(p.query, safe="=&%/:?+@-._~"), fragment="").geturl()
 
 def main():
     queue = deque([START])
