@@ -65,7 +65,9 @@ def load_json(path, default):
         return default
 
 def load_graph():
-    return load_json(GRAPH_OUT,{"available":False,"graph_score":None,"graph_confidence":0.0,"graph_regime":"unavailable"})
+    payload=load_json(GRAPH_OUT,{"available":False})
+    payload.update(graph_score=None,graph_confidence=None,graph_regime="not_applicable_code_index",market_signal_eligible=False)
+    return payload
 
 def load_kamandar_indices():
     payload=load_json(KAMANDAR_INDICES,{"status":"missing","source":"kamandar","url":"https://kamandar.ir/app/market/indices"})
@@ -129,6 +131,8 @@ def main():
     payload["model_layers"]={"options":load_json(ROOT/"reports/options_babimind_ranked.json", {"status":"unavailable"}),"readiness":load_json(ROOT/"reports/babimind_model_stage_status.json", {"status":"unavailable"})}
     payload["model_layers"]["option_scenarios"]=load_json(ROOT/"reports/options_babimind_scenario_ranked.json", {"status":"unavailable"})
     payload["model_layers"]["option_risk"]=load_json(ROOT/"reports/options_babimind_risk_adjusted.json", {"status":"unavailable"})
+    payload["model_layers"]["forecasting"]=load_json(ROOT/"reports/babimind_forecast.json", {"status":"unavailable"})
+    payload["model_layers"]["decision"]=load_json(ROOT/"reports/babimind_decision.json", {"status":"unavailable"})
     OUT.parent.mkdir(parents=True,exist_ok=True); OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8"); print(f"[BabiMind] DONE sources={len(rows)} active={active} unavailable={unavailable} theses={len(theses.get('symbols',{}))} money_migration={migration.get('available')} elapsed={elapsed}s",flush=True)
 
 if __name__=="__main__":main()

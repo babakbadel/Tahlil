@@ -29,7 +29,25 @@ def load():
 
 def compact(d):
     a=d.get('analysis') or {}
-    return {'timestamp':d.get('generated_at') or now(),'provider':d.get('provider'),'model':d.get('model'),'regime':a.get('regime'),'scenarios':a.get('scenarios') or {},'market_implications':a.get('market_implications'),'confidence':a.get('confidence'),'data_gaps':a.get('data_gaps',[])}
+    gaps=a.get('data_gaps', a.get('Safety / integrity', []))
+    if not isinstance(gaps, list): gaps=[gaps]
+    return {'timestamp':d.get('generated_at'),'provider':d.get('provider'),'model':d.get('model'),
+            'regime':a.get('regime', a.get('Market regime')),
+            'scenarios':a.get('scenarios', a.get('Scenarios')),
+            'market_implications':a.get('market_implications', a.get('Decision')),
+            'confidence':a.get('confidence'),'data_gaps':gaps,
+            'analysis_sha256':hashlib.sha256(json.dumps(a,sort_keys=True,ensure_ascii=False).encode()).hexdigest()}
+
+
+def archive_full(d, row):
+    path=ROOT/'data'/'model_llm_history.jsonl'
+    fingerprint=row['analysis_sha256']
+    if path.exists():
+        for line in path.read_text(encoding='utf-8').splitlines():
+            if json.loads(line).get('analysis_sha256') == fingerprint: return
+    path.parent.mkdir(parents=True,exist_ok=True)
+    with path.open('a',encoding='utf-8') as stream:
+        stream.write(json.dumps({'analysis_sha256':fingerprint,'received_at':now(),'result':d},ensure_ascii=False)+'\n')
 
 def fp(row):
     basis={k:v for k,v in row.items() if k!='timestamp'}
@@ -66,7 +84,7 @@ def ingest():
     try: d=json.loads(LLM.read_text(encoding='utf-8'))
     except Exception as e: print(f'[BabiMind Memory] invalid LLM output: {e}'); return
     if d.get('status')!='ok': print('[BabiMind Memory] non-success result not added'); return
-    row=compact(d); row['fingerprint']=fp(row); mem=load(); runs=normalize(mem.get('runs',[]))
+    row=compact(d); archive_full(d,row); row['fingerprint']=fp(row); mem=load(); runs=normalize(mem.get('runs',[]))
     if any(x.get('fingerprint')==row['fingerprint'] for x in runs): print('[BabiMind Memory] duplicate run skipped'); return
     runs.append(row); mem['runs']=runs; save(mem)
     print(f'[BabiMind Memory] ingested run total={len(mem["runs"])} bytes={MEMORY.stat().st_size}')

@@ -1,0 +1,61 @@
+name: BabiMind Forecast and Decision Runtime
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'app/forecasting/**'
+      - 'app/decision/**'
+      - 'scripts/collect_brs_history.py'
+      - 'scripts/run_model_runtime.py'
+      - '.github/workflows/model-runtime.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app/forecasting/**'
+      - 'app/decision/**'
+      - 'scripts/collect_brs_history.py'
+      - 'scripts/run_model_runtime.py'
+      - '.github/workflows/model-runtime.yml'
+permissions:
+  contents: write
+concurrency:
+  group: babimind-model-runtime
+  cancel-in-progress: false
+env:
+  PYTHONPATH: ${{ github.workspace }}
+jobs:
+  model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements-test.txt
+      - name: Collect adjusted daily history
+        env:
+          BRS_API_KEY: ${{ secrets.BRS_API_KEY }}
+        run: python -m scripts.collect_brs_history
+      - name: Forecast, backtest and append decisions
+        run: python -m scripts.run_model_runtime
+      - name: Expose graph metadata without synthetic market signals
+        run: python scripts/babimind_graph.py
+      - name: Integrate model outputs
+        run: python scripts/babimind_pipeline.py
+      - name: Preserve run evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-runtime-${{ github.run_id }}
+          path: |
+            reports/babimind_forecast.json
+            reports/babimind_decision.json
+            reports/babimind_decision.md
+            reports/babimind_model_stage_status.json
+            data/raw/brs_history_snapshot.json
+      - name: Publish model outputs
+        run: |
+          python scripts/commit_outputs.py 'data: refresh sourced BabiMind forecasts and decisions'

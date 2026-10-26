@@ -29,12 +29,14 @@ class ForecastResult:
     sample_count: int
     similarity: float
     confidence: float
+    probability_flat: float = 0.0
 
     def as_dict(self) -> dict:
         return {
             "horizon": self.horizon,
             "probability_up": self.probability_up,
             "probability_down": self.probability_down,
+            "probability_flat": self.probability_flat,
             "expected_return": self.expected_return,
             "median_return": self.median_return,
             "q10_return": self.q10_return,
@@ -87,6 +89,8 @@ class HistoricalAnalogForecaster:
         x = history.loc[:, feature_columns].astype(float).replace([np.inf, -np.inf], np.nan)
         valid = x.notna().all(axis=1) & history["close"].notna()
         self._train = history.loc[valid].copy().reset_index(drop=True)
+        if self._train.empty or not feature_columns:
+            raise ValueError("no valid training observations or features")
         x = self._train.loc[:, feature_columns].astype(float)
         self._feature_mean = x.mean()
         self._feature_std = x.std(ddof=0).replace(0, 1.0)
@@ -103,6 +107,8 @@ class HistoricalAnalogForecaster:
         z_hist = (self._train[self._features] - self._feature_mean) / self._feature_std
 
         weights = np.array([self.feature_weights.get(c, 1.0) for c in self._features], dtype=float)
+        if not np.isfinite(weights).all() or (weights < 0).any() or weights.sum() <= 0:
+            raise ValueError("feature weights must be finite, nonnegative and nonzero")
         weights = weights / weights.sum()
         dist = np.sqrt(((z_hist.to_numpy() - z_cur.to_numpy()) ** 2 * weights).sum(axis=1))
         return dist
@@ -112,12 +118,16 @@ class HistoricalAnalogForecaster:
         # Maps distance to (0, 1], with smooth decay and no arbitrary hard cutoff.
         return np.exp(-distance / 2.0)
 
-    def predict(self, current: pd.Series, horizons: Iterable[int] = (1, 5, 20, 60)) -> list[ForecastResult]:
+    def predict(self, current: pd.Series, horizons: Iterable[int] = (1, 5, 20, 60), neutral_band: float = 0.0) -> list[ForecastResult]:
         if self._train is None:
             raise RuntimeError("fit() must be called before predict()")
         if any(c not in current.index for c in self._features):
             missing = [c for c in self._features if c not in current.index]
             raise ValueError(f"current observation missing features: {missing}")
+        if neutral_band < 0 or not np.isfinite(neutral_band):
+            raise ValueError("invalid neutral band")
+        if not np.isfinite(current[self._features].astype(float)).all():
+            raise ValueError("current features must be finite")
 
         distances = self._distance(current)
         similarities = self._similarity(distances)
@@ -172,6 +182,9 @@ class HistoricalAnalogForecaster:
                 return float(r_sorted[np.searchsorted(cdf, q, side="left")])
 
             p_up = float(w[r > 0].sum())
+            p_bull = float(w[r > neutral_band].sum())
+            p_bear = float(w[r < -neutral_band].sum())
+            p_flat = max(0.0, 1.0 - p_bull - p_bear)
             sim = float(np.average(valid_similarities, weights=np.asarray(valid_weights)))
             sample_factor = min(1.0, len(r) / 30.0)
             confidence = float(np.clip(sim * sample_factor, 0.0, 1.0))
@@ -180,8 +193,9 @@ class HistoricalAnalogForecaster:
             results.append(
                 ForecastResult(
                     horizon=horizon,
-                    probability_up=p_up,
-                    probability_down=1.0 - p_up,
+                    probability_up=p_bull,
+                    probability_down=p_bear,
+                    probability_flat=p_flat,
                     expected_return=float(np.average(r, weights=w)),
                     median_return=weighted_quantile(0.5),
                     q10_return=weighted_quantile(0.1),

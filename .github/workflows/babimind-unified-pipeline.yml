@@ -66,7 +66,7 @@ jobs:
         continue-on-error: true
         env:
           FINPY_TSE_SYMBOLS: 'فملی,وبملت,شپنا,خساپا'
-          FINPY_TSE_LOOKBACK_DAYS: '30'
+          FINPY_TSE_LOOKBACK_DAYS: '730'
         run: python scripts/collect_finpy_tse.py
 
       - name: Collect BRS option feed
@@ -74,6 +74,11 @@ jobs:
         env:
           BRS_API_KEY: ${{ secrets.BRS_API_KEY }}
         run: python -m scripts.fetch_options_realtime --output data/raw/brs_options_snapshot.json
+
+      - name: Collect adjusted history for model inference
+        env:
+          BRS_API_KEY: ${{ secrets.BRS_API_KEY }}
+        run: python -m scripts.collect_brs_history
 
       - name: Ingest market and option snapshots
         run: |
@@ -117,8 +122,8 @@ jobs:
           python scripts/risk_adjusted_options_babimind.py
           python scripts/babimind_factor_rotation.py
 
-      - name: Record model stage readiness
-        run: python scripts/model_stage_status.py
+      - name: Forecast, backtest and record sourced decisions
+        run: python -m scripts.run_model_runtime
 
       - name: Unified BabiMind pipeline
         run: python scripts/babimind_pipeline.py
@@ -137,6 +142,8 @@ jobs:
           if not prompt.exists():
               raise SystemExit('Missing canonical master prompt')
           files = [
+              'reports/babimind_forecast.json',
+              'reports/babimind_decision.json',
               'reports/babimind_pipeline.json',
               'reports/babimind_graph.json',
               'reports/babimind_memory_context.json',
