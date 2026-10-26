@@ -98,7 +98,6 @@ jobs:
           if [ -f scripts/babimind_global_market.py ]; then python scripts/babimind_global_market.py --config config/babimind_global_market_map.yml; fi
 
       - name: Factor coverage and weights
-        continue-on-error: true
         run: |
           python scripts/babimind_factor_coverage.py
           python scripts/babimind_signal_weight.py

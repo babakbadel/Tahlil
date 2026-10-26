@@ -38,7 +38,9 @@ jobs:
         continue-on-error: true
         run: |
           if [ -f scripts/babimind_factor_discovery.py ]; then python scripts/babimind_factor_discovery.py; fi
-          if [ -f scripts/babimind_factor_coverage.py ]; then python scripts/babimind_factor_coverage.py; fi
+
+      - name: Validate factor coverage
+        run: python scripts/babimind_factor_coverage.py
 
       - name: Commit research outputs
         if: always()

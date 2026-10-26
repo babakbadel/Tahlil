@@ -21,7 +21,7 @@ def main() -> None:
     for s in data.get("sources", []):
         c = float(s.get("confidence", 0.0))
         # Keep weak sources visible but prevent them from dominating aggregate signals.
-        weight = round(0.25 + 0.75 * c, 4)
+        weight = round(0.25 + 0.75 * c, 4) if s.get("status") == "ok" and c > 0 else 0.0
         rows.append({
             "source": s.get("name"),
             "topic": s.get("topic", s.get("type")),
