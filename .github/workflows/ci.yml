@@ -9,6 +9,7 @@ on:
       - 'tests/**'
       - '*requirements*.txt'
       - '*config*'
+      - 'config/**'
       - 'package*.json'
       - 'realtime_api.py'
       - '.github/workflows/**'
@@ -31,6 +32,7 @@ jobs:
       - run: python -m pip install -r requirements-test.txt
       - run: python -m compileall -q app scripts realtime_api.py scan_market.py
       - run: python -m pytest -q
+      - run: python scripts/babimind_factor_coverage.py --output-dir /tmp/factor-coverage
   frontend:
     runs-on: ubuntu-latest
     steps:

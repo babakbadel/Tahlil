@@ -19,12 +19,12 @@ OUT=ROOT/"reports"/"babimind_factor_rotation.json"
 def main():
     pipeline=json.loads(PIPE.read_text(encoding="utf-8"))
     catalog=json.loads(FACTORS.read_text(encoding="utf-8")) if FACTORS.exists() else {"factors":[]}
-    source_weights={x["name"]:x.get("signal_weight",0.25) for x in pipeline.get("sources",[])}
+    source_weights={x["name"]:x.get("signal_weight",0) for x in pipeline.get("sources",[])}
     rows=[]
     for f in catalog.get("factors",[]):
         sources=f.get("sources",[])
         weights=[source_weights[s] for s in sources if s in source_weights]
-        source_weight=sum(weights)/len(weights) if weights else 0.25
+        source_weight=sum(weights)/len(weights) if weights else 0.0
         # No market value is fabricated: velocity/acceleration stay null until a feed exists.
         rows.append({**f,"source_weight":round(source_weight,4),"velocity":None,"acceleration":None,"direction":None})
     clusters={}

@@ -12,6 +12,8 @@ OUT_MD = ROOT / "reports" / "babimind_source_confidence.md"
 
 
 def score(r: dict) -> float:
+    if r.get("status") != "ok":
+        return 0.0
     base = float(r.get("authority_score", 0.75))
     independence = float(r.get("independence_score", 0.75))
     coverage = float(r.get("coverage_score", 0.75))
@@ -51,7 +53,7 @@ def main() -> None:
     decisions = []
     for key, items in groups.items():
         ranked = sorted(items, key=lambda x: x["confidence"], reverse=True)
-        primary = next((x for x in ranked if x["eligible_primary"]), ranked[0] if ranked else None)
+        primary = next((x for x in ranked if x["eligible_primary"]), None)
         fallbacks = [x["name"] for x in ranked if primary and x["name"] != primary["name"]]
         decisions.append({"group": key, "primary": primary["name"] if primary else None, "fallbacks": fallbacks[:3]})
     payload = {"model":"BabiMind", "source_count":len(rows), "sources":rows, "routing":decisions}
