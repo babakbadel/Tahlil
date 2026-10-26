@@ -1697,33 +1697,33 @@
       "source": "collect()",
       "target": "get_market_watch()",
       "source_files": [
-        "app/forecasting/historical_forecaster.py",
-        "scripts/rank_options_babimind.py"
+        "scripts/collect_tsetmc_async.py",
+        "app/data/finpy_tse_adapter.py"
       ],
       "confidence": "INFERRED",
-      "relation": "indirect_call",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `weighted_quantile()` unexpectedly reaches hub `cdf()`"
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
     },
     {
-      "source": "test_csv_keeps_call_and_put_direction()",
-      "target": "ingest()",
+      "source": "test_transport_exception_does_not_expose_api_key()",
+      "target": "BrsApiError",
       "source_files": [
-        "tests/test_option_integrity.py",
-        "scripts/babimind_memory.py"
+        "tests/test_realtime.py",
+        "app/data/brsapi/client.py"
       ],
       "confidence": "INFERRED",
-      "relation": "indirect_call",
+      "relation": "uses",
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
     },
     {
-      "source": "test_real_repository_csv_preserves_both_sides_and_underlying()",
-      "target": "ingest()",
+      "source": "test_walk_forward_never_exposes_unmatured_labels()",
+      "target": "HistoricalAnalogForecaster",
       "source_files": [
-        "tests/test_option_integrity.py",
-        "scripts/babimind_memory.py"
+        "tests/test_forecasting.py",
+        "app/forecasting/historical_forecaster.py"
       ],
       "confidence": "INFERRED",
-      "relation": "indirect_call",
+      "relation": "uses",
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
     }
   ],

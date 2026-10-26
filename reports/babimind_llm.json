@@ -3,288 +3,33 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "executive_summary": [
-      "Primary Iranian market sources (TSE, TSETMC, Codal) are unavailable/timed out; analysis relies on Kamandar secondary data and stale model memory. Primary verification is missing.",
-      "TSE Index 8,015,507 (−0.36%); Equal-weight 2,233,537 (−0.13%); Farabourse 67,116 (+0.13%). Market breadth negative: 261 advancing vs 344 declining, 8 unchanged (Kamandar, 2026-10-25T17:52:10Z).",
-      "Real-money flow is net selling (~20.2 trillion IRL) per Kamandar market report; retail trade value ~358.6 trillion IRL; buy/sell queues balanced at 199/199 (Kamandar, 2026-10-25T17:50:59Z).",
-      "Sector rotation (1-day): gainers in Wood +2.95%, Radio +2.44%, Rubber +2.34%, Oil extraction +1.84%; losers in Telecom −2.99%, Wood products −2.99%, Utilities −2.77%, Automotive −1.67%, Banks −1.31%, Basic metals −1.12% (Kamandar indices).",
-      "Only symbol thesis on file is فملی (FMLI), copper-sensitive/operating-leverage, but it is stale (updated 2026-09-04; thesis price 19,950 vs Kamandar current 27,600, −1.92%).",
-      "Options universe active for فملی, خودرو, وبملت, خساپا, شستا, شپنا, اهرم, etc.; IV/Greeks/timestamps missing per BRS data-quality warning.",
-      "Graph Intelligence regime: bullish (score 1.0, confidence 0.75), but derived from internal model edges, not current exchange data (2026-10-25T18:03:26Z).",
-      "Pezeshkian political-economy news indicates economic pressure, sanctions, and gasoline-price discussions; regime is conditional, not certain.",
-      "Global market snapshot is pending upstream data; oil news digest shows Brent in roughly $100–116 range with EIA forecast hikes.",
-      "Data gaps are critical; confidence must be lowered rather than fabricating precision. Primary action bias: WAIT / NO TRADE."
-    ],
-    "market_regime": "Transition",
-    "evidence": [
-      {
-        "observation": "TSE Index 8,015,507 (−0.36%), high 8,063,338, low 7,994,462",
-        "source": "Kamandar indices (kamandar.ir/app/market/indices)",
-        "timestamp": "2026-10-25T17:52:10.035930Z",
-        "confidence": "🟡 medium"
-      },
-      {
-        "observation": "Equal-weight index 2,233,537 (−0.13%); Farabourse 67,116 (+0.13%)",
-        "source": "Kamandar indices",
-        "timestamp": "2026-10-25T17:52:10.035930Z",
-        "confidence": "🟡 medium"
-      },
-      {
-        "observation": "Market breadth: 613 total; 261 positive, 344 negative, 8 unchanged; net excitement negative",
-        "source": "Kamandar indices raw text",
-        "timestamp": "2026-10-25T17:52:10.035930Z",
-        "confidence": "🟡 medium"
-      },
-      {
-        "observation": "Real net selling by individuals ~20,207,300,000,000 IRR; retail trade value ~358,587,500,000,000 IRR; buy queue 199, sell queue 199",
-        "source": "Kamandar market report (kamandar.ir/market-report/1405-08-03)",
-        "timestamp": "2026-10-25T17:50:59.534927Z",
-        "confidence": "🟡 medium"
-      },
-      {
-        "observation": "فملی price 27,600 (−1.92%); وبملت 1,440 (−2.57%); تابان 23,650 (+2.47%)",
-        "source": "Kamandar stocks (kamandar.ir/app/market/stocks)",
-        "timestamp": "2026-10-25T17:53:22.850438Z",
-        "confidence": "🟡 medium"
-      },
-      {
-        "observation": "TSE/TSETMC/Codal all timed out/unavailable; primary Iranian market data missing",
-        "source": "babimind_source_health.json",
-        "timestamp": "2026-10-25T18:02:20.778126Z",
-        "confidence": "🔴 low"
-      },
-      {
-        "observation": "Graph Intelligence: bullish, score 1.0, confidence 0.75",
-        "source": "babimind_graph.json",
-        "timestamp": "2026-10-25T18:03:26.647297Z",
-        "confidence": "🟡 medium"
-      },
-      {
-        "observation": "Symbol thesis فملی stale; price map accumulation 19,400–19,800, confirmation 20,000, risk line 18,800; current Kamandar price 27,600 far above",
-        "source": "babimind_pipeline.json symbol_theses vs kamandar_stocks.json",
-        "timestamp": "thesis updated 2026-09-04; price observed 2026-10-25T17:53:22Z",
-        "confidence": "🔴 low"
-      },
-      {
-        "observation": "Pezeshkian news: economic pressure, sanctions, gasoline-price debate; no implemented policy change confirmed",
-        "source": "babimind_pezeshkian_news.json",
-        "timestamp": "collected 2026-09-09T12:41:06Z",
-        "confidence": "🟡 medium"
-      }
-    ],
-    "macro": {
-      "dollar_fx": "CBI source OK but no live rate captured in current snapshot; factor coverage F003/F017 available (CBI, Donya-e-Eqtesad, IRNA). Confidence 🟡 medium.",
-      "gold": "World Gold Council and LBMA sources OK; no live price captured. Confidence 🟡 medium.",
-      "rates": "Partial coverage (CBI only). Confidence 🔴 low.",
-      "inflation": "Partial coverage (CBI only). Confidence 🔴 low.",
-      "liquidity": "Partial coverage (CBI only). Confidence 🔴 low.",
-      "oil": "News digest indicates Brent roughly $100–116; EIA forecast hikes; Hormuz risk factor available. Confidence 🟡 medium.",
-      "policy": "Pezeshkian political-economy layer signals fiscal/monetary pressure; no official rate or budget change verified. Confidence 🟡 medium."
+    "Executive summary": "Maximum 10 key findings:\n1. Many Iranian market data sources unavailable (TSE, TSETMC, Codal all timed out per source health check)\n2. Graph intelligence shows bullish regime (score 1.0, confidence 0.75) but based on internal model edges, not current market data\n3. Factor coverage for iran_equity_market is Partial with healthy sources limited to Donya-e-Eqtesad and Bourse News\n4. Historical memory shows bullish bias for \"فملی\" but based on past data, not current evidence\n5. Kamandar market report shows mixed index performance with various sectors up/down\n6. Option market data shows liquidity but with explicit data quality warnings (IV/Greeks not available)\n7. News digest shows oil price movements related to Iran but limited Iranian-specific equity data\n8. Global regime shows \"pending_upstream_data\" per global market snapshot\n9. Factor rotation data partially available from kamandar indices\n10. Decision prioritized as WAIT due to significant data gaps limiting evidence quality",
+    "Market regime": "Transition / Uncertain - cannot classify as clearly bullish or bearish given extensive data gaps. Graph intelligence shows bullish signals but these are based on internal model edges rather than current primary market data. Probabilities would need to be lowered rather than fabricated given insufficient evidence.",
+    "Evidence": "Important observations with source, timestamp and confidence:\n- TSE Official Gateway: unavailable (timed out, source health check)\n- TSETMC CDN Market Watch: unavailable (timed out)\n- TSETMC Instrument Search: unavailable (timed out)\n- TSETMC Index: unavailable (timed out)\n- Codal: unavailable (timed out)\n- Tehran Stock Exchange: unavailable (timed out)\n- Iran Fara Bourse: unavailable (timed out)\n- Graph intelligence: bullish regime (score 1.0, confidence 0.75) but based on internal model edges\n- Factor coverage iran_equity_market: Partial, healthy sources: Donya-e-Eqtesad, Bourse News\n- Kamandar indices: mixed performance across sectors\n- Option market: liquidity exists but data quality warnings (IV/Greeks not available)\n- Memory historical runs: consistently show bullish bias for \"فملی\" but based on past data\n- Source health: 183/274 sources ok, 40 unavailable, 51 error",
+    "Macro": "Dollar, gold, rates, inflation, liquidity, oil and policy:\n- Oil prices: mixed movements in news digest (some above $115, some retreating)\n- Gold: hovering near $4,000/ounce per multiple news sources\n- Inflation: rising concerns in multiple reports\n- Liquidity: limited Iranian-specific data\n- Policy: Iranian president Pezeshkian mentioned in multiple news sources regarding economic challenges\n- Missing primary Iranian macro data (CBI, Codal, TSETMC all unavailable)",
+    "Industry rotation": "1-day / 5-day / 20-day flow and relative-strength ranking:\n- Partially available from kamandar indices data\n- Various sectors showing different percentage changes\n- No comprehensive TSE/TSETMC breadth data available\n- Industry rotation cannot be fully assessed without primary exchange data",
+    "Symbols": "Best opportunities, risks and evidence:\n- Limited data available due to many source outages\n- Some sector performance visible from kamandar indices\n- Cannot reliably identify best opportunities without primary market data\n- Risk assessment limited by data gaps",
+    "Funds / legal persons / smart-money evidence": "What large participants are doing and how reliable the inference is:\n- Limited data availability from primary Iranian sources\n- Cannot reliably infer smart money activity without primary market flow data\n- Legal-person behavior analysis not possible without TSE/TSETMC client type data",
+    "Options": "Best risk/reward setups if applicable:\n- Option market watch shows some liquidity but with explicit data quality warnings\n- IV/Greeks not available per option_market_watch_summary.json\n- Expired options must never enter active universe per protocol\n- Risk-adjusted scores available but based on incomplete data",
+    "Scenarios": "Bull / Base / Bear with probabilities:\n- Can construct scenarios but with low confidence due to missing primary data\n- Bull case: would rely on commodity sensitivity, volume-led expansion\n- Base case: steady sales growth, maintained leadership\n- Bear case: copper price breakdown, volume collapse\n- Probabilities would need to be lowered rather than fabricated per protocol",
+    "Decision": {
+      "Regime": "Transition / Uncertain - cannot classify as clearly bullish or bearish given extensive data gaps",
+      "Primary strategy": "WAIT",
+      "Score": 0,
+      "Risk": "High",
+      "Confidence": 30,
+      "Best industry": "Cannot determine with confidence due to data gaps",
+      "Best symbol": "Cannot determine with confidence due to data gaps",
+      "Highest-risk symbol": "Cannot determine with confidence due to data gaps",
+      "Key support": "Cannot determine with confidence due to data gaps",
+      "Key resistance": "Cannot determine with confidence due to data gaps",
+      "Main catalyst": "Cannot determine with confidence due to data gaps",
+      "Main risk": "High - extensive Iranian market data unavailable (TSE, TSETMC, Codal all timed out)",
+      "Entry trigger": "Availability of primary Iranian market data (TSE, TSETMC, Codal)",
+      "Exit trigger": "Same as entry trigger",
+      "Invalidation": "Same as entry trigger - need primary market data restoration"
     },
-    "industry_rotation": {
-      "1_day": {
-        "gainers": [
-          "محصولات چوبي +2.95%",
-          "رادیویی +2.44%",
-          "لاستیک +2.34%",
-          "استخراج نفت جزكشف11 +1.84%",
-          "حمل و نقل +1.61%",
-          "ماشین آلات +1.46%",
-          "انتشار و چاپ +1.17%",
-          "شيميايي +1.17%",
-          "كاشي و سراميك +1.10%",
-          "زراعت +1.08%"
-        ],
-        "losers": [
-          "وسايل ارتباطي −2.99%",
-          "چوب −2.99%",
-          "تامين آب، برق، گاز −2.77%",
-          "اطلاعات و ارتباطات −2.64%",
-          "ساير معادن −2.50%",
-          "سيمان −2.13%",
-          "سايرمالي −2.11%",
-          "خودرو −1.67%",
-          "غذايي بجز قند −1.62%",
-          "محصولات كاغذ −1.31%",
-          "بانكها −1.31%",
-          "كاني غيرفلزي −1.13%",
-          "فلزات اساسي −1.12%",
-          "كانه فلزي −1.08%",
-          "فراورده نفتي −1.01%"
-        ]
-      },
-      "5_day": "Not available in current Kamandar snapshot; historical report links exist but 5-day flow not extracted.",
-      "20_day": "Not available in current Kamandar snapshot; 20-day flow/relative strength missing. Confidence 🔴 low."
-    },
-    "symbols": {
-      "best_opportunities": [
-        {
-          "symbol": "فملی (FMLI)",
-          "evidence": "Only active thesis; copper-sensitive, Q1 profit growth 262% YoY (stale, 2026-09-04); highest trade value per Kamandar report. Current price 27,600 is extended vs thesis accumulation zone 19,400–19,800. Confidence 🔴 low due to stale thesis and unverified current fundamentals."
-        },
-        {
-          "symbol": "تابان",
-          "evidence": "Kamandar top value +2.47%; third-highest trade value. Confidence 🟡 medium (secondary source only)."
-        }
-      ],
-      "risks": [
-        {
-          "symbol": "خودرو",
-          "evidence": "Kamandar −1.67%; sector auto −1.67%; options heavy activity but negative price action. Confidence 🟡 medium."
-        },
-        {
-          "symbol": "وبملت",
-          "evidence": "Kamandar −2.57%; bank sector −1.31%; high option OI but price down. Confidence 🟡 medium."
-        },
-        {
-          "symbol": "فلزات اساسي (Basic Metals)",
-          "evidence": "Kamandar sector −1.12%; relevant to copper thesis but currently weak. Confidence 🟡 medium."
-        }
-      ]
-    },
-    "funds_legal_persons_smart_money": {
-      "observation": "TSETMC Client Type and legal-person flow APIs all timed out; no verified institutional flow.",
-      "inference": "Kamandar market report shows real (individual) net selling ~20.2 trillion IRL; queues balanced 199/199. No legal-person buy/sell split available.",
-      "reliability": "🟡 medium (secondary source; real-flow directional only, not smart-money confirmed).",
-      "note": "Never label smart money from real flow alone; legal-person persistence over 1/5/10/20 sessions unavailable."
-    },
-    "options": {
-      "active_universe": [
-        "فملی",
-        "خودرو",
-        "وبملت",
-        "خساپا",
-        "شستا",
-        "شپنا",
-        "اهرم",
-        "اخابر",
-        "وبصادر",
-        "وتجارت",
-        "تاپیکو",
-        "ذوب"
-      ],
-      "note": "Expired options excluded. IV/Greeks/timestamps missing per BRS data-quality warning; structural analysis only.",
-      "best_risk_reward_setups": [
-        {
-          "symbol": "ضملی9044",
-          "underlying": "فملی",
-          "type": "CALL",
-          "strike": 26000,
-          "underlying_price": 27874.9,
-          "status": "ITM",
-          "price": 3452,
-          "iv": 0.6623,
-          "delta": 0.7154,
-          "expiry": "1405-09-04",
-          "days_to_expiry": 30.25,
-          "breakeven": 29452,
-          "warning": "Chasing at current underlying far above thesis accumulation zone; IV high; no synchronized Greek source."
-        },
-        {
-          "symbol": "ضملی9045",
-          "underlying": "فملی",
-          "type": "CALL",
-          "strike": 28000,
-          "underlying_price": 27874.9,
-          "status": "OTM",
-          "price": 2230,
-          "iv": 0.6299,
-          "delta": 0.5715,
-          "expiry": "1405-09-04",
-          "days_to_expiry": 30.25,
-          "breakeven": 30230,
-          "warning": "OTM call on extended underlying; time decay risk."
-        }
-      ],
-      "caution": "Do not buy high-IV calls solely on copper bullishness without spot confirmation and real-flow inflow."
-    },
-    "scenarios": {
-      "bull": {
-        "probability": 0.4,
-        "target": "فملی 23,000 / TSE > 8,200",
-        "catalysts": [
-          "Copper price breakout/tightness",
-          "Real-money net buying returns",
-          "TSE breadth turns positive with volume",
-          "Fund rotation to commodity leaders"
-        ],
-        "confirmation": [
-          "Price closes above 20,000 with expanding volume (فملی thesis)",
-          "Real-money inflow persists ≥3 sessions",
-          "Copper price remains supportive"
-        ],
-        "invalidation": [
-          "Price rises while real-money flow deteriorates",
-          "Sales growth rolls over two consecutive releases",
-          "Copper breaks down materially"
-        ]
-      },
-      "base": {
-        "probability": 0.4,
-        "target": "فملی 21,500 / TSE range-bound",
-        "catalysts": [
-          "Steady sales growth",
-          "Stable commodity prices",
-          "Controlled geopolitical tension"
-        ],
-        "confirmation": [
-          "Price trades within 19,400–21,500 band with moderate volume",
-          "Fundamental growth >100% YoY",
-          "No major sanctions escalation"
-        ],
-        "invalidation": [
-          "Sales growth slows below 50% YoY for two releases",
-          "Geopolitical escalation (Hormuz, new sanctions)",
-          "Copper declines >20%"
-        ]
-      },
-      "bear": {
-        "probability": 0.2,
-        "target": "فملی 18,800 / TSE < 7,900",
-        "catalysts": [
-          "Copper price breakdown",
-          "Volume collapse",
-          "Real-money outflow accelerates",
-          "US-Iran conflict / Hormuz risk"
-        ],
-        "confirmation": [
-          "Price breaks below 18,800 on expanding volume",
-          "Real-money outflow accelerates",
-          "Industry relative strength deteriorates"
-        ],
-        "invalidation": [
-          "Price rebounds above 20,000 with volume",
-          "Fundamentals renew acceleration",
-          "Geopolitical de-escalation"
-        ]
-      },
-      "probability_note": "Probabilities sum to 1.0. Confidence lowered due to missing primary exchange data."
-    },
-    "decision": {
-      "regime": "Transition",
-      "primary_strategy": "🟡 WAIT",
-      "score": "45/100",
-      "risk": "High",
-      "confidence": "45/100",
-      "best_industry": "None high conviction; short-term relative strength in Wood/Radio/Rubber but low liquidity conviction",
-      "best_symbol": "فملی (FMLI) only on pullback to thesis accumulation zone 19,400–19,800; not a buy at current 27,600",
-      "highest_risk_symbol": "خودرو (negative momentum, heavy options OI, price down)",
-      "key_support": "فملی risk line 18,800 (stale thesis); TSE psychological 8,000",
-      "key_resistance": "فملی current 27,600; TSE 8,200+",
-      "main_catalyst": "Copper price + real-money inflow + breadth confirmation",
-      "main_risk": "Real-money outflow + negative breadth + primary data unavailability + geopolitical/FX shock",
-      "entry_trigger": "فملی returns to 19,400–19,800 with expanding volume AND real-money inflow persists ≥3 sessions; OR TSE breadth turns positive with real inflow above 8,100",
-      "exit_trigger": "Break below 18,800 on expanding volume; or real-money outflow accelerates while price rises (distribution)",
-      "invalidation": "Sales growth rolls over for two consecutive releases; volume falls while revenue supported only by price; copper breaks down and remains weak"
-    },
-    "if_i_were_the_investor": {
-      "buy_now_or_wait": "Wait. Primary Iranian exchange data is unavailable, breadth is negative, real money is net selling, and the only symbol thesis is stale with price far above its accumulation zone.",
-      "if_holding_hold_reduce_sell": "Reduce extended positions, especially any فملی bought near the old accumulation zone; do not add new money until entry trigger is confirmed.",
-      "priority_industry": "None with high conviction. If forced, basic metals only on verified copper breakout and flow confirmation.",
-      "avoid_industry": "Automotive, Banks, and Basic Metals for now (negative 1-day momentum and weak breadth).",
-      "best_opportunity": "فملی on a pullback to 19,400–19,800 with volume confirmation; not at current 27,600.",
-      "most_dangerous_setup": "Chasing فملی calls at current elevated IV without spot confirmation, or adding to automotive/banks on breakdown.",
-      "single_reversing_event": "Verified real-money net buying combined with positive market breadth and TSE reclaiming 8,200 on volume."
-    }
+    "If I were the investor": "Answer directly:\n1. Would you buy now or wait? Wait\n2. If already holding, hold, reduce or sell? Hold (but likely not holding given data gaps)\n3. Which industry gets priority? Cannot determine with confidence\n4. Which industry should be avoided for now? Cannot determine with confidence\n5. What is the best opportunity? Cannot determine with confidence\n6. What is the most dangerous setup? Cannot determine with confidence\n7. What single event would reverse the view? Availability of primary Iranian market data (TSE, TSETMC, Codal)",
+    "Safety / integrity": "This is decision support, not certainty. Never guarantee returns. Never fabricate missing observations. Prefer NO TRADE / WAIT when evidence or risk/reward is inadequate. The objective is: Preserve capital → detect regime → detect liquidity rotation → identify edge → enter with controlled risk → manage position → exit by evidence → learn from outcome."
   }
 }
