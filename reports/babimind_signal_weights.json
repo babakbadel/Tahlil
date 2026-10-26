@@ -12,16 +12,16 @@
     {
       "source": "IMF SDMX Central",
       "topic": "macro",
-      "confidence": 0.06,
-      "signal_weight": 0.295,
+      "confidence": 0.054,
+      "signal_weight": 0.2905,
       "tier": "D",
       "status": "error"
     },
     {
       "source": "World Bank API",
       "topic": "macro",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -52,9 +52,9 @@
     {
       "source": "ECB Data API",
       "topic": "rates_fx",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
-      "tier": "C",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
       "status": "ok"
     },
     {
@@ -124,8 +124,8 @@
     {
       "source": "UN Comtrade",
       "topic": "trade",
-      "confidence": 0.06,
-      "signal_weight": 0.295,
+      "confidence": 0.045,
+      "signal_weight": 0.2838,
       "tier": "D",
       "status": "error"
     },
@@ -276,16 +276,16 @@
     {
       "source": "Central Bank of Iran",
       "topic": "iran_macro",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
-      "tier": "D",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
       "status": "ok"
     },
     {
       "source": "Statistical Center of Iran",
       "topic": "iran_macro",
-      "confidence": 0.15,
-      "signal_weight": 0.3625,
+      "confidence": 0.135,
+      "signal_weight": 0.3513,
       "tier": "D",
       "status": "unavailable"
     },
@@ -348,8 +348,8 @@
     {
       "source": "Iran Open Data",
       "topic": "iran_macro",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -404,9 +404,9 @@
     {
       "source": "Shanghai Futures Exchange",
       "topic": "commodities",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
-      "tier": "C",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
       "status": "ok"
     },
     {
@@ -460,9 +460,9 @@
     {
       "source": "CEIC Iran",
       "topic": "iran_macro",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
-      "tier": "C",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
       "status": "ok"
     },
     {
@@ -708,8 +708,8 @@
     {
       "source": "PBOC",
       "topic": "monetary",
-      "confidence": 0.054,
-      "signal_weight": 0.2905,
+      "confidence": 0.045,
+      "signal_weight": 0.2838,
       "tier": "D",
       "status": "error"
     },
@@ -780,16 +780,16 @@
     {
       "source": "Banque de France",
       "topic": "monetary",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "SAMA",
       "topic": "monetary",
-      "confidence": 0.15,
-      "signal_weight": 0.3625,
+      "confidence": 0.135,
+      "signal_weight": 0.3513,
       "tier": "D",
       "status": "unavailable"
     },
@@ -956,8 +956,8 @@
     {
       "source": "Cboe",
       "topic": "volatility",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -1068,17 +1068,17 @@
     {
       "source": "Middle East Institute",
       "topic": "middle_east",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "Washington Institute",
       "topic": "middle_east",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
-      "tier": "D",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
       "status": "ok"
     },
     {
@@ -1116,10 +1116,10 @@
     {
       "source": "US Treasury OFAC",
       "topic": "sanctions",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
       "tier": "D",
-      "status": "ok"
+      "status": "unavailable"
     },
     {
       "source": "European Commission",
@@ -1132,16 +1132,16 @@
     {
       "source": "UK FCDO",
       "topic": "foreign_policy",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "NATO",
       "topic": "security",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -1188,16 +1188,16 @@
     {
       "source": "AFP",
       "topic": "events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "BBC",
       "topic": "events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -1412,16 +1412,16 @@
     {
       "source": "Kamandar",
       "topic": "iran_market",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "IRNA",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -1452,8 +1452,8 @@
     {
       "source": "Fars",
       "topic": "news_events",
-      "confidence": 0.15,
-      "signal_weight": 0.3625,
+      "confidence": 0.135,
+      "signal_weight": 0.3513,
       "tier": "D",
       "status": "unavailable"
     },
@@ -1468,17 +1468,17 @@
     {
       "source": "PANA",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "IMNA",
       "topic": "news_events",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
-      "tier": "D",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
       "status": "ok"
     },
     {
@@ -1492,8 +1492,8 @@
     {
       "source": "SNN",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -1508,9 +1508,9 @@
     {
       "source": "Eghtesad Online",
       "topic": "news_events",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
-      "tier": "D",
+      "confidence": 0.6,
+      "signal_weight": 0.7,
+      "tier": "C",
       "status": "ok"
     },
     {
@@ -1548,9 +1548,9 @@
     {
       "source": "Bourse24",
       "topic": "news_events",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
-      "tier": "D",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
       "status": "ok"
     },
     {
@@ -1564,8 +1564,8 @@
     {
       "source": "Iran Economist",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -1604,18 +1604,18 @@
     {
       "source": "Asr Iran",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
     {
       "source": "Alef",
       "topic": "news_events",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
+      "confidence": 0.1125,
+      "signal_weight": 0.3344,
       "tier": "D",
-      "status": "ok"
+      "status": "unavailable"
     },
     {
       "source": "Mashregh News",
@@ -1628,25 +1628,25 @@
     {
       "source": "Raja News",
       "topic": "news_events",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
-      "tier": "D",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
       "status": "ok"
     },
     {
       "source": "Aftab News",
       "topic": "news_events",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
-      "tier": "D",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
       "status": "ok"
     },
     {
       "source": "Hamshahri Online",
       "topic": "news_events",
-      "confidence": 0.45,
-      "signal_weight": 0.5875,
-      "tier": "D",
+      "confidence": 0.54,
+      "signal_weight": 0.655,
+      "tier": "C",
       "status": "ok"
     },
     {
@@ -1860,8 +1860,8 @@
     {
       "source": "The Times UK",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -1940,9 +1940,9 @@
     {
       "source": "RT",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
-      "tier": "C",
+      "confidence": 0.45,
+      "signal_weight": 0.5875,
+      "tier": "D",
       "status": "ok"
     },
     {
@@ -2004,8 +2004,8 @@
     {
       "source": "China Daily",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
@@ -2020,8 +2020,8 @@
     {
       "source": "Xinhua",
       "topic": "news_events",
-      "confidence": 0.15,
-      "signal_weight": 0.3625,
+      "confidence": 0.135,
+      "signal_weight": 0.3513,
       "tier": "D",
       "status": "unavailable"
     },
@@ -2100,8 +2100,8 @@
     {
       "source": "Yonhap",
       "topic": "news_events",
-      "confidence": 0.54,
-      "signal_weight": 0.655,
+      "confidence": 0.6,
+      "signal_weight": 0.7,
       "tier": "C",
       "status": "ok"
     },
@@ -2132,8 +2132,8 @@
     {
       "source": "The EastAfrican",
       "topic": "news_events",
-      "confidence": 0.054,
-      "signal_weight": 0.2905,
+      "confidence": 0.06,
+      "signal_weight": 0.295,
       "tier": "D",
       "status": "error"
     },
@@ -2148,8 +2148,8 @@
     {
       "source": "Folha de S.Paulo",
       "topic": "news_events",
-      "confidence": 0.6,
-      "signal_weight": 0.7,
+      "confidence": 0.54,
+      "signal_weight": 0.655,
       "tier": "C",
       "status": "ok"
     },
