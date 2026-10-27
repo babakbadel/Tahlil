@@ -1099,7 +1099,84 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "b2b6b632927cbc2e1320"
+    },
+    {
+      "timestamp": "2026-10-27T13:45:42.016934+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "probability": 0.4,
+          "target": "فملی 23,000 / TEDPIX > 8,200",
+          "catalysts": [
+            "Copper price breakout/tightness (LME/SHFE inventories draw)",
+            "Real-money net buying returns (Client Type data)",
+            "TEDPIX breadth turns positive with volume",
+            "Fund rotation to commodity leaders",
+            "Geopolitical de-escalation (Hormuz risk fades)"
+          ],
+          "confirmation": [
+            "فملی closes >20,000 with expanding volume",
+            "Real-money inflow persists ≥3 sessions",
+            "Copper holds >$4.50/lb",
+            "Industry relative strength improves"
+          ],
+          "invalidation": [
+            "Price rises while real-money flow deteriorates",
+            "Sales growth rolls over 2 consecutive releases",
+            "Copper breaks down materially",
+            "Hormuz closure / severe sanctions"
+          ]
+        },
+        "base": {
+          "probability": 0.4,
+          "target": "فملی 21,500 / TEDPIX range-bound 7,800-8,200",
+          "catalysts": [
+            "Steady sales growth (100%+ YoY)",
+            "Stable commodity prices",
+            "Controlled geopolitical tension",
+            "FX regime managed"
+          ],
+          "confirmation": [
+            "فملی trades 19,400-21,500 with moderate volume",
+            "Fundamental growth >100% YoY",
+            "No major sanctions escalation"
+          ],
+          "invalidation": [
+            "Sales growth slows <50% YoY for 2 releases",
+            "Geopolitical escalation (Hormuz, new sanctions)",
+            "Copper declines >20%"
+          ]
+        },
+        "bear": {
+          "probability": 0.2,
+          "target": "فملی 18,800 / TEDPIX < 7,900",
+          "catalysts": [
+            "Copper price breakdown",
+            "Volume collapse",
+            "Real-money outflow accelerates",
+            "US-Iran conflict / Hormuz closure risk",
+            "Gasoline price hike → inflation spiral → rate hike"
+          ],
+          "confirmation": [
+            "فملی breaks <18,800 on expanding volume",
+            "Real-money outflow accelerates",
+            "Industry relative strength deteriorates",
+            "Equal-weight index leads down"
+          ],
+          "invalidation": [
+            "Price rebounds >20,000 with volume",
+            "Fundamentals re-accelerate",
+            "Geopolitical de-escalation"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "d48e0e727fd30b3dd646"
     }
   ],
-  "updated_at": "2026-10-27T10:10:04.753650+00:00"
+  "updated_at": "2026-10-27T13:45:42.019054+00:00"
 }
