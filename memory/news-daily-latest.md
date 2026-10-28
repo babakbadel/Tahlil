@@ -1,10 +1,14 @@
-# Daily Economic News Digest — 2026-10-28 14:34 UTC
+# Daily Economic News Digest — 2026-10-28 16:11 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **32** · Total stored: **2374**
+> New items this run: **4** · Total stored: **2378**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | Indian Stocks Open Lower as Crude Oil Prices Climb By Investing.com - Investing.com India | Investing.com India | Wed, 28 Oct 2026 04:02 |
+| oil | Oil prices rise about 2% as Yemen fighting stokes supply fears - Reuters | Reuters | Wed, 28 Oct 2026 01:49 |
+| oil | Oil prices rise as U.S. reportedly tells Gulf countries to prepare for Iran strikes after midterm elections - CNBC | CNBC | Wed, 28 Oct 2026 05:52 |
+| bourse | $1.5 trillion relief rally erupts on Wall Street after Trump hits pause on Iran strikes - Fortune | Fortune | Wed, 08 Apr 2026 07:00 |
 | oil | 8-month Iran war looms over Israeli election as Egypt wades into Saudi's fight with the Houthis - CBS News | CBS News | Mon, 26 Oct 2026 10:45 |
 | oil | Sensex, Nifty decline amid rising crude, US Fed caution - Rediff | Rediff | Wed, 28 Oct 2026 11:06 |
 | oil | Brent crude tops $115: What it means for petrol prices, inflation and the Indian rupee - CNBC TV18 | CNBC TV18 | Wed, 28 Oct 2026 14:04 |
@@ -41,14 +45,10 @@
 | macro_monetary | UK Inflation Set to Jump to 3.3% as Iran War Hits Petrol, Airfares, and Rent - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 20 Apr 2026 07:00 |
 | oil | Sensex drops over 600 points dragged by IT stocks, rising crude oil prices - Greater Kashmir | Greater Kashmir | Wed, 28 Oct 2026 04:35 |
 | oil | Stock Markets Today: Sensex, Nifty Tumble as IT Stocks, Crude Prices Weigh - Rediff | Rediff | Wed, 28 Oct 2026 04:32 |
-| oil | Stock markets fall in early trade amid persistently elevated crude oil prices, IT selling - The New Indian Express | The New Indian Express | Tue, 27 Oct 2026 04:40 |
-| oil | Sensex falls nearly 700 points as rising crude prices, FPI outflows weigh on markets - DD India | DD India | Wed, 28 Oct 2026 04:46 |
-| oil | Palm rises on stronger crude oil, Dalian soyoil - Business Recorder | Business Recorder | Wed, 28 Oct 2026 05:26 |
-| oil | Rupee falls to 95.28 against US dollar as crude oil prices rise - Telangana Today | Telangana Today | Wed, 28 Oct 2026 10:49 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-10-28 14:34 UTC | 32 new | 2374 total
+NEWS_DIGEST | 2026-10-28 16:11 UTC | 4 new | 2378 total
