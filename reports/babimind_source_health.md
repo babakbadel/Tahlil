@@ -1,293 +1,293 @@
 # BabiMind Source Health
 
-Checked: `2026-10-27T15:30:14.119737+00:00`
+Checked: `2026-10-28T10:56:02.807476+00:00`
 
-**Total:** 274 | **OK:** 183 | **Unavailable:** 40 | **Error:** 51
+**Total:** 274 | **OK:** 183 | **Unavailable:** 39 | **Error:** 52
 
 ## By class
 
 | Class | Total | OK | Unavailable | Error |
 |---|---:|---:|---:|---:|
 | data | 65 | 33 | 21 | 11 |
-| expanded | 112 | 75 | 15 | 22 |
+| expanded | 112 | 75 | 14 | 23 |
 | news | 97 | 75 | 4 | 18 |
 
 | Source | Class | Region | Tier | Status | HTTP | Latency ms |
 |---|---|---|---|---|---:|---:|
-| IMF Data API | data | - | - | ok | 204 | 606.6 |
-| IMF SDMX Central | data | - | - | error | 400 | 751.6 |
-| World Bank API | data | - | - | ok | 200 | 308.1 |
-| BIS Statistics | data | - | - | ok | 200 | 2700.5 |
-| OECD Data | data | - | - | error | 403 | 401.2 |
-| FRED | data | - | - | ok | 200 | 470.8 |
-| ECB Data API | data | - | - | ok | 200 | 1317.6 |
-| EIA | data | - | - | ok | 200 | 397.3 |
-| IEA Data | data | - | - | error | 403 | 406.0 |
-| OPEC | data | - | - | error | 403 | 341.1 |
-| JODI | data | - | - | ok | 200 | 910.4 |
-| USGS Minerals | data | - | - | ok | 200 | 9992.5 |
-| World Gold Council | data | - | - | ok | 200 | 1512.3 |
-| LBMA | data | - | - | ok | 200 | 2505.9 |
-| CFTC | data | - | - | ok | 200 | 266.4 |
-| UN Comtrade | data | - | - | error | 404 | 1180.2 |
-| UNCTADstat | data | - | - | ok | 200 | 905.3 |
-| FAOSTAT | data | - | - | ok | 200 | 337.4 |
-| ILOStat | data | - | - | error | 403 | 234.2 |
-| WHO Data | data | - | - | ok | 200 | 395.4 |
-| Reuters | data | - | - | error | 401 | 255.0 |
-| TSE Official Gateway | data | - | - | unavailable | - | 10350.7 |
-| TSETMC CDN Market Watch | data | - | - | unavailable | - | 20506.2 |
-| TSETMC Instrument Search | data | - | - | unavailable | - | 20395.0 |
-| TSETMC Index | data | - | - | unavailable | - | 20370.9 |
-| TSETMC Funds | data | - | - | unavailable | - | 20341.8 |
-| TSETMC Client Type | data | - | - | unavailable | - | 20328.7 |
-| TSETMC Market Overview | data | - | - | unavailable | - | 20225.7 |
-| TSETMC Codal Publisher | data | - | - | unavailable | - | 20179.5 |
-| TSETMC Messages | data | - | - | unavailable | - | 20060.5 |
-| TSETMC Shareholders | data | - | - | unavailable | - | 20498.7 |
-| TSETMC Trade Top | data | - | - | unavailable | - | 20484.0 |
-| TSETMC Price History | data | - | - | unavailable | - | 20367.3 |
-| Codal | data | - | - | unavailable | - | 10500.4 |
-| Central Bank of Iran | data | - | - | ok | 200 | 4537.7 |
-| Statistical Center of Iran | data | - | - | unavailable | - | 1049.8 |
-| Iran Mercantile Exchange | data | - | - | unavailable | - | 10544.6 |
-| Iran Energy Exchange | data | - | - | unavailable | - | 1894.7 |
-| Iran Customs | data | - | - | unavailable | - | 10024.0 |
-| Ministry of Industry Mine Trade | data | - | - | unavailable | - | 10375.2 |
-| Ministry of Petroleum | data | - | - | ok | 200 | 1187.9 |
-| SHANA | data | - | - | ok | 200 | 1086.4 |
-| Iran Power Grid Management | data | - | - | unavailable | - | 10357.0 |
-| Iran Open Data | data | - | - | ok | 200 | 957.5 |
-| World Bank Iran | data | - | - | ok | 200 | 308.6 |
-| IMF Iran | data | - | - | ok | 200 | 123.3 |
-| UNData | data | - | - | ok | 200 | 226.4 |
-| UNDP Data | data | - | - | error | 403 | 523.0 |
-| FAO Iran | data | - | - | ok | 200 | 908.7 |
-| Energy Institute | data | - | - | error | 403 | 348.2 |
-| Shanghai Futures Exchange | data | - | - | ok | 200 | 1848.0 |
-| LME | data | - | - | error | 403 | 147.9 |
-| CME Group | data | - | - | unavailable | - | 10112.8 |
-| ICE Markets | data | - | - | ok | 200 | 279.2 |
-| Nasdaq | data | - | - | unavailable | - | 10158.5 |
-| S&P Global | data | - | - | error | 403 | 120.8 |
-| Trading Economics | data | - | - | ok | 200 | 156.9 |
-| CEIC Iran | data | - | - | ok | 200 | 3189.1 |
-| Global Rates | data | - | - | ok | 200 | 1291.6 |
-| Investing Iran Markets | data | - | - | ok | 200 | 189.7 |
-| Kpler | data | - | - | ok | 200 | 236.9 |
-| Vortexa | data | - | - | ok | 200 | 266.3 |
-| MarineTraffic | data | - | - | ok | 200 | 128.7 |
-| Windy | data | - | - | ok | 200 | 211.4 |
-| Kamandar Market Report | data | - | - | ok | 200 | 1374.8 |
-| Tehran Stock Exchange | expanded | - | - | unavailable | - | 10349.0 |
-| Iran Fara Bourse | expanded | - | - | unavailable | - | 20393.4 |
-| Ministry of Economic Affairs and Finance | expanded | - | - | ok | 200 | 1184.0 |
-| National Iranian Oil Company | expanded | - | - | ok | 200 | 1178.4 |
-| National Iranian Gas Company | expanded | - | - | unavailable | - | 15361.5 |
-| Ministry of Energy Iran | expanded | - | - | unavailable | - | 11367.5 |
-| Iran Tax Administration | expanded | - | - | unavailable | - | 20374.2 |
-| Iran Ports and Maritime Organization | expanded | - | - | unavailable | - | 11590.6 |
-| Iran Chamber of Commerce | expanded | - | - | unavailable | - | 166.8 |
-| Iran Chamber Research Center | expanded | - | - | unavailable | - | 243.2 |
-| Sena | expanded | - | - | unavailable | - | 10504.6 |
-| WTO | expanded | - | - | ok | 200 | 376.5 |
-| World Economic Forum | expanded | - | - | error | 403 | 402.0 |
-| Federal Reserve | expanded | - | - | ok | 200 | 174.0 |
-| US Treasury | expanded | - | - | ok | 200 | 9321.8 |
-| BEA | expanded | - | - | ok | 200 | 255.0 |
-| BLS | expanded | - | - | error | 403 | 131.8 |
-| US Census Bureau | expanded | - | - | ok | 200 | 360.0 |
-| Eurostat | expanded | - | - | ok | 200 | 578.3 |
-| Bank of England | expanded | - | - | ok | 200 | 578.0 |
-| ONS UK | expanded | - | - | ok | 200 | 377.5 |
-| Bank of Japan | expanded | - | - | ok | 200 | 282.1 |
-| Japan Statistics Bureau | expanded | - | - | ok | 200 | 529.1 |
-| PBOC | expanded | - | - | error | 403 | 2016.3 |
-| China National Bureau of Statistics | expanded | - | - | ok | 200 | 2834.9 |
-| China Customs | expanded | - | - | ok | 200 | 1501.2 |
-| India RBI | expanded | - | - | ok | 200 | 1355.8 |
-| India MOSPI | expanded | - | - | ok | 200 | 1322.6 |
-| Statistics Canada | expanded | - | - | ok | 200 | 416.1 |
-| Australian Bureau of Statistics | expanded | - | - | ok | 200 | 324.1 |
-| Swiss National Bank | expanded | - | - | ok | 200 | 957.5 |
-| Deutsche Bundesbank | expanded | - | - | ok | 200 | 994.6 |
-| Banque de France | expanded | - | - | ok | 200 | 147.8 |
-| SAMA | expanded | - | - | unavailable | - | 1109.8 |
-| UAE Central Bank | expanded | - | - | error | 403 | 803.0 |
-| Turkish Statistical Institute | expanded | - | - | unavailable | - | 11978.7 |
-| Central Bank of Turkey | expanded | - | - | ok | 200 | 3725.0 |
-| Central Bank of Russia | expanded | - | - | ok | 200 | 1381.9 |
-| Rosstat | expanded | - | - | unavailable | - | 1456.3 |
-| Argus Media | expanded | - | - | ok | 202 | 66.1 |
-| S&P Global Commodity Insights | expanded | - | - | error | 403 | 129.4 |
-| Platts | expanded | - | - | error | 403 | 169.0 |
-| COMEX | expanded | - | - | unavailable | - | 10037.3 |
-| NYMEX | expanded | - | - | unavailable | - | 10037.3 |
-| Genscape | expanded | - | - | error | 403 | 143.4 |
-| OPIS | expanded | - | - | ok | 200 | 264.7 |
-| EEX | expanded | - | - | ok | 200 | 1745.2 |
-| ACER | expanded | - | - | ok | 200 | 1998.4 |
-| World Platinum Investment Council | expanded | - | - | ok | 200 | 632.1 |
-| Moody's | expanded | - | - | ok | 200 | 161.2 |
-| Fitch Ratings | expanded | - | - | ok | 200 | 480.7 |
-| Morningstar | expanded | - | - | error | 403 | 153.2 |
-| MSCI | expanded | - | - | ok | 200 | 124.2 |
-| NYSE | expanded | - | - | ok | 200 | 282.8 |
-| Cboe | expanded | - | - | ok | 200 | 1182.3 |
-| DTCC | expanded | - | - | ok | 200 | 142.3 |
-| SEC EDGAR | expanded | - | - | error | 403 | 165.0 |
-| FINRA | expanded | - | - | ok | 200 | 185.3 |
-| LSEG | expanded | - | - | ok | 200 | 455.7 |
-| FactSet | expanded | - | - | ok | 200 | 313.3 |
-| IISS | expanded | - | - | ok | 200 | 596.1 |
-| Brookings Institution | expanded | - | - | ok | 200 | 195.1 |
-| RAND | expanded | - | - | error | 403 | 99.3 |
-| Wilson Center | expanded | - | - | ok | 200 | 128.6 |
-| ECFR | expanded | - | - | ok | 200 | 328.3 |
-| Bruegel | expanded | - | - | error | 403 | 294.6 |
-| Peterson Institute | expanded | - | - | ok | 200 | 193.3 |
-| Stimson Center | expanded | - | - | error | 403 | 308.9 |
-| Middle East Institute | expanded | - | - | ok | 200 | 987.3 |
-| Washington Institute | expanded | - | - | ok | 200 | 305.8 |
-| Institute for the Study of War | expanded | - | - | error | 403 | 111.2 |
-| ACLED | expanded | - | - | ok | 200 | 410.2 |
-| UN Security Council | expanded | - | - | ok | 202 | 425.3 |
-| US State Department | expanded | - | - | error | 403 | 312.7 |
-| US Treasury OFAC | expanded | - | - | unavailable | - | 10101.6 |
-| European Commission | expanded | - | - | ok | 200 | 502.3 |
-| UK FCDO | expanded | - | - | ok | 200 | 1879.3 |
-| NATO | expanded | - | - | ok | 200 | 972.3 |
-| IAEA | expanded | - | - | error | 403 | 269.4 |
-| OPCW | expanded | - | - | ok | 200 | 390.8 |
-| Reuters Markets | expanded | - | - | error | 401 | 62.0 |
-| Bloomberg Markets | expanded | - | - | error | 403 | 228.7 |
-| Associated Press | expanded | - | - | error | 403 | 105.5 |
-| AFP | expanded | - | - | ok | 200 | 1481.4 |
-| BBC | expanded | - | - | ok | 200 | 1273.6 |
-| Al Jazeera | expanded | - | - | ok | 200 | 115.8 |
-| France 24 | expanded | - | - | ok | 200 | 266.8 |
-| Euronews | expanded | - | - | ok | 200 | 155.1 |
-| DW | expanded | - | - | ok | 200 | 270.2 |
-| South China Morning Post | expanded | - | - | ok | 200 | 130.8 |
-| Nikkei Asia | expanded | - | - | ok | 200 | 1768.2 |
-| Arab News | expanded | - | - | error | 403 | 120.1 |
-| The National | expanded | - | - | ok | 200 | 567.6 |
-| Al Arabiya | expanded | - | - | error | 403 | 153.3 |
-| Al Monitor | expanded | - | - | ok | 200 | 153.7 |
-| OilPrice | expanded | - | - | ok | 200 | 394.0 |
-| Rigzone | expanded | - | - | ok | 200 | 596.5 |
-| Offshore Energy | expanded | - | - | ok | 200 | 141.1 |
-| Mining.com | expanded | - | - | error | 403 | 175.1 |
-| Kitco | expanded | - | - | ok | 200 | 192.5 |
-| CoinDesk | expanded | - | - | ok | 200 | 530.5 |
-| Foreign Affairs | expanded | - | - | ok | 200 | 213.2 |
-| Foreign Policy | expanded | - | - | ok | 200 | 140.6 |
-| War on the Rocks | expanded | - | - | ok | 200 | 408.1 |
-| Council on Foreign Relations | expanded | - | - | ok | 200 | 406.2 |
-| Carnegie Endowment | expanded | - | - | ok | 200 | 174.0 |
-| Chatham House | expanded | - | - | ok | 200 | 273.2 |
-| Atlantic Council | expanded | - | - | ok | 200 | 144.7 |
-| International Crisis Group | expanded | - | - | error | 403 | 209.7 |
-| CSIS | expanded | - | - | ok | 200 | 303.5 |
-| RUSI | expanded | - | - | ok | 200 | 369.7 |
-| Kamandar | expanded | - | - | ok | 200 | 1216.5 |
-| IRNA | news | iran | A | ok | 200 | 1215.0 |
-| ISNA | news | iran | A | ok | 200 | 922.9 |
-| Mehr News | news | iran | A | ok | 200 | 1172.6 |
-| Tasnim | news | iran | A | unavailable | - | 71.5 |
-| Fars | news | iran | A | unavailable | - | 780.7 |
-| YJC | news | iran | B | ok | 200 | 1230.6 |
-| PANA | news | iran | B | ok | 200 | 1399.7 |
-| IMNA | news | iran | B | ok | 200 | 2340.8 |
-| Shabestan | news | iran | B | unavailable | - | 10494.6 |
-| SNN | news | iran | B | ok | 200 | 1168.8 |
-| Donya-e-Eqtesad | news | iran | A | ok | 200 | 914.6 |
-| Eghtesad Online | news | iran | B | ok | 200 | 957.3 |
-| EcoIran | news | iran | A | ok | 200 | 1060.3 |
-| Tejarat News | news | iran | B | ok | 200 | 1219.4 |
-| Eghtesad News | news | iran | B | ok | 200 | 1607.6 |
-| Bourse News | news | iran | B | ok | 200 | 909.1 |
-| Bourse24 | news | iran | B | ok | 200 | 2374.5 |
-| Sedaye Bourse | news | iran | B | ok | 200 | 1974.4 |
-| Iran Economist | news | iran | B | ok | 200 | 1003.4 |
-| Khabar Online | news | iran | B | ok | 200 | 1453.8 |
-| Tabnak | news | iran | B | ok | 200 | 3565.0 |
-| Entekhab | news | iran | B | ok | 200 | 2172.3 |
-| Fararu | news | iran | B | ok | 200 | 1045.5 |
-| Asr Iran | news | iran | B | ok | 200 | 857.6 |
-| Alef | news | iran | C | ok | 200 | 1150.4 |
-| Mashregh News | news | iran | C | ok | 200 | 1706.0 |
-| Raja News | news | iran | C | ok | 200 | 1105.8 |
-| Aftab News | news | iran | C | ok | 200 | 909.6 |
-| Hamshahri Online | news | iran | B | ok | 200 | 2108.2 |
-| CNN | news | international | B | ok | 200 | 66.9 |
-| France 24 | news | international | B | ok | 200 | 106.9 |
-| DW | news | international | B | ok | 200 | 30.3 |
-| Sky News | news | international | B | error | 403 | 74.6 |
-| Bloomberg | news | international | A | error | 403 | 157.9 |
-| Financial Times | news | international | A | error | 403 | 107.6 |
-| Wall Street Journal | news | international | A | error | 401 | 119.0 |
-| CNBC | news | international | B | ok | 200 | 135.4 |
-| MarketWatch | news | international | B | error | 401 | 162.5 |
-| Barron's | news | international | B | error | 401 | 273.7 |
-| The Economist | news | international | A | error | 403 | 130.7 |
-| Forbes | news | international | B | error | 403 | 137.2 |
-| Business Insider | news | international | B | ok | 200 | 241.1 |
-| Fortune | news | international | B | ok | 200 | 75.8 |
-| New York Times | news | international | A | error | 403 | 80.8 |
-| Washington Post | news | international | A | unavailable | - | 10051.0 |
-| NBC News | news | international | B | ok | 200 | 400.0 |
-| ABC News | news | international | B | ok | 200 | 560.3 |
-| CBS News | news | international | B | ok | 200 | 154.3 |
-| NPR | news | international | B | ok | 200 | 224.6 |
-| PBS NewsHour | news | international | B | ok | 200 | 770.6 |
-| Politico | news | international | B | error | 403 | 144.8 |
-| Axios | news | international | B | error | 403 | 76.6 |
-| The Hill | news | international | B | error | 403 | 141.7 |
-| The Guardian | news | international | A | ok | 200 | 231.2 |
-| The Telegraph | news | international | B | ok | 200 | 586.1 |
-| The Times UK | news | international | B | ok | 200 | 841.0 |
-| Der Spiegel | news | international | B | ok | 200 | 710.3 |
-| Die Zeit | news | international | B | error | 403 | 201.9 |
-| Le Monde | news | international | A | ok | 200 | 2894.9 |
-| Les Echos | news | international | B | error | 403 | 250.5 |
-| La Tribune | news | international | B | ok | 200 | 192.0 |
-| El Pais | news | international | B | error | 403 | 154.1 |
-| TASS | news | international | B | ok | 200 | 1437.1 |
-| RIA Novosti | news | international | B | ok | 200 | 2849.8 |
-| Interfax | news | international | B | ok | 200 | 1786.8 |
-| RT | news | international | C | ok | 200 | 3810.0 |
-| The Moscow Times | news | international | B | ok | 200 | 475.1 |
-| Middle East Eye | news | international | C | ok | 200 | 217.8 |
-| Middle East Monitor | news | international | C | ok | 200 | 556.1 |
-| Asharq Al-Awsat | news | international | B | ok | 200 | 158.5 |
-| Defense News | news | international | B | ok | 200 | 958.2 |
-| Breaking Defense | news | international | B | ok | 200 | 173.6 |
-| Jerusalem Post | news | international | B | ok | 200 | 118.6 |
-| China Daily | news | international | B | ok | 200 | 651.2 |
-| Global Times | news | international | C | ok | 200 | 1516.4 |
-| Xinhua | news | international | A | ok | 200 | 986.8 |
-| Japan Times | news | international | B | ok | 200 | 249.8 |
-| NHK World | news | international | A | ok | 200 | 448.1 |
-| Times of India | news | international | B | ok | 200 | 510.2 |
-| Hindustan Times | news | international | B | ok | 200 | 94.2 |
-| Indian Express | news | international | B | error | 403 | 68.7 |
-| Economic Times India | news | international | A | ok | 200 | 666.2 |
-| Channel NewsAsia | news | international | A | ok | 200 | 201.7 |
-| Straits Times | news | international | B | ok | 200 | 733.6 |
-| Korea Herald | news | international | B | ok | 200 | 1244.6 |
-| Yonhap | news | international | A | ok | 200 | 952.8 |
-| Africanews | news | international | B | ok | 200 | 243.0 |
-| News24 | news | international | B | ok | 200 | 177.1 |
-| Daily Maverick | news | international | B | ok | 200 | 177.3 |
-| The EastAfrican | news | international | B | error | 403 | 731.5 |
-| Brazil Journal | news | international | B | ok | 200 | 1513.9 |
-| Folha de S.Paulo | news | international | B | ok | 200 | 1014.6 |
-| Clarin | news | international | B | ok | 200 | 112.5 |
-| La Nacion Argentina | news | international | B | ok | 200 | 763.7 |
-| El Comercio Peru | news | international | B | ok | 200 | 517.8 |
-| El Universal Mexico | news | international | B | ok | 200 | 140.9 |
-| The Block | news | international | B | error | 403 | 77.6 |
+| IMF Data API | data | - | - | ok | 204 | 620.9 |
+| IMF SDMX Central | data | - | - | error | 400 | 2048.5 |
+| World Bank API | data | - | - | ok | 200 | 392.7 |
+| BIS Statistics | data | - | - | ok | 200 | 1446.3 |
+| OECD Data | data | - | - | error | 403 | 465.2 |
+| FRED | data | - | - | ok | 200 | 280.8 |
+| ECB Data API | data | - | - | ok | 200 | 1000.5 |
+| EIA | data | - | - | ok | 200 | 327.1 |
+| IEA Data | data | - | - | error | 403 | 326.0 |
+| OPEC | data | - | - | error | 403 | 391.4 |
+| JODI | data | - | - | ok | 200 | 921.4 |
+| USGS Minerals | data | - | - | ok | 200 | 3152.1 |
+| World Gold Council | data | - | - | ok | 200 | 397.8 |
+| LBMA | data | - | - | ok | 200 | 2096.8 |
+| CFTC | data | - | - | ok | 200 | 215.1 |
+| UN Comtrade | data | - | - | error | 404 | 964.2 |
+| UNCTADstat | data | - | - | ok | 200 | 777.0 |
+| FAOSTAT | data | - | - | ok | 200 | 407.2 |
+| ILOStat | data | - | - | error | 403 | 74.2 |
+| WHO Data | data | - | - | ok | 200 | 662.6 |
+| Reuters | data | - | - | error | 401 | 321.4 |
+| TSE Official Gateway | data | - | - | unavailable | - | 10430.9 |
+| TSETMC CDN Market Watch | data | - | - | unavailable | - | 20537.2 |
+| TSETMC Instrument Search | data | - | - | unavailable | - | 20524.8 |
+| TSETMC Index | data | - | - | unavailable | - | 20482.7 |
+| TSETMC Funds | data | - | - | unavailable | - | 20332.7 |
+| TSETMC Client Type | data | - | - | unavailable | - | 20259.1 |
+| TSETMC Market Overview | data | - | - | unavailable | - | 20238.8 |
+| TSETMC Codal Publisher | data | - | - | unavailable | - | 20491.9 |
+| TSETMC Messages | data | - | - | unavailable | - | 20428.0 |
+| TSETMC Shareholders | data | - | - | unavailable | - | 20425.3 |
+| TSETMC Trade Top | data | - | - | unavailable | - | 20414.5 |
+| TSETMC Price History | data | - | - | unavailable | - | 20386.7 |
+| Codal | data | - | - | unavailable | - | 10499.3 |
+| Central Bank of Iran | data | - | - | ok | 200 | 6859.4 |
+| Statistical Center of Iran | data | - | - | unavailable | - | 786.7 |
+| Iran Mercantile Exchange | data | - | - | unavailable | - | 10352.6 |
+| Iran Energy Exchange | data | - | - | unavailable | - | 1904.2 |
+| Iran Customs | data | - | - | unavailable | - | 10014.7 |
+| Ministry of Industry Mine Trade | data | - | - | unavailable | - | 10362.5 |
+| Ministry of Petroleum | data | - | - | ok | 200 | 1229.8 |
+| SHANA | data | - | - | ok | 200 | 1370.3 |
+| Iran Power Grid Management | data | - | - | unavailable | - | 10383.1 |
+| Iran Open Data | data | - | - | ok | 200 | 1310.4 |
+| World Bank Iran | data | - | - | ok | 200 | 388.3 |
+| IMF Iran | data | - | - | ok | 200 | 96.3 |
+| UNData | data | - | - | ok | 200 | 190.0 |
+| UNDP Data | data | - | - | error | 403 | 237.0 |
+| FAO Iran | data | - | - | ok | 200 | 328.6 |
+| Energy Institute | data | - | - | error | 403 | 323.8 |
+| Shanghai Futures Exchange | data | - | - | ok | 200 | 1875.6 |
+| LME | data | - | - | error | 403 | 105.1 |
+| CME Group | data | - | - | unavailable | - | 10087.4 |
+| ICE Markets | data | - | - | ok | 200 | 183.8 |
+| Nasdaq | data | - | - | unavailable | - | 10109.8 |
+| S&P Global | data | - | - | error | 403 | 81.3 |
+| Trading Economics | data | - | - | ok | 200 | 181.1 |
+| CEIC Iran | data | - | - | ok | 200 | 1852.3 |
+| Global Rates | data | - | - | ok | 200 | 1456.4 |
+| Investing Iran Markets | data | - | - | ok | 200 | 221.8 |
+| Kpler | data | - | - | ok | 200 | 245.3 |
+| Vortexa | data | - | - | ok | 200 | 202.7 |
+| MarineTraffic | data | - | - | ok | 200 | 110.1 |
+| Windy | data | - | - | ok | 200 | 157.9 |
+| Kamandar Market Report | data | - | - | ok | 200 | 1272.9 |
+| Tehran Stock Exchange | expanded | - | - | unavailable | - | 10366.4 |
+| Iran Fara Bourse | expanded | - | - | unavailable | - | 20369.7 |
+| Ministry of Economic Affairs and Finance | expanded | - | - | ok | 200 | 1218.8 |
+| National Iranian Oil Company | expanded | - | - | ok | 200 | 1123.2 |
+| National Iranian Gas Company | expanded | - | - | unavailable | - | 13109.1 |
+| Ministry of Energy Iran | expanded | - | - | unavailable | - | 11103.3 |
+| Iran Tax Administration | expanded | - | - | unavailable | - | 20368.5 |
+| Iran Ports and Maritime Organization | expanded | - | - | unavailable | - | 11479.3 |
+| Iran Chamber of Commerce | expanded | - | - | unavailable | - | 220.6 |
+| Iran Chamber Research Center | expanded | - | - | unavailable | - | 149.9 |
+| Sena | expanded | - | - | unavailable | - | 10678.0 |
+| WTO | expanded | - | - | ok | 200 | 345.9 |
+| World Economic Forum | expanded | - | - | error | 403 | 299.4 |
+| Federal Reserve | expanded | - | - | ok | 200 | 155.1 |
+| US Treasury | expanded | - | - | ok | 200 | 8095.0 |
+| BEA | expanded | - | - | ok | 200 | 227.7 |
+| BLS | expanded | - | - | error | 403 | 132.0 |
+| US Census Bureau | expanded | - | - | ok | 200 | 411.5 |
+| Eurostat | expanded | - | - | ok | 200 | 648.1 |
+| Bank of England | expanded | - | - | ok | 200 | 506.7 |
+| ONS UK | expanded | - | - | ok | 200 | 453.9 |
+| Bank of Japan | expanded | - | - | ok | 200 | 228.6 |
+| Japan Statistics Bureau | expanded | - | - | ok | 200 | 525.8 |
+| PBOC | expanded | - | - | error | 403 | 3515.4 |
+| China National Bureau of Statistics | expanded | - | - | ok | 200 | 2858.3 |
+| China Customs | expanded | - | - | ok | 200 | 1402.5 |
+| India RBI | expanded | - | - | ok | 200 | 1153.1 |
+| India MOSPI | expanded | - | - | ok | 200 | 1352.8 |
+| Statistics Canada | expanded | - | - | ok | 200 | 427.1 |
+| Australian Bureau of Statistics | expanded | - | - | ok | 200 | 198.0 |
+| Swiss National Bank | expanded | - | - | ok | 200 | 781.1 |
+| Deutsche Bundesbank | expanded | - | - | ok | 200 | 1131.4 |
+| Banque de France | expanded | - | - | ok | 200 | 767.0 |
+| SAMA | expanded | - | - | unavailable | - | 770.0 |
+| UAE Central Bank | expanded | - | - | error | 403 | 631.7 |
+| Turkish Statistical Institute | expanded | - | - | unavailable | - | 11683.7 |
+| Central Bank of Turkey | expanded | - | - | ok | 200 | 3749.6 |
+| Central Bank of Russia | expanded | - | - | ok | 200 | 1424.7 |
+| Rosstat | expanded | - | - | unavailable | - | 1475.8 |
+| Argus Media | expanded | - | - | ok | 202 | 48.4 |
+| S&P Global Commodity Insights | expanded | - | - | error | 403 | 19.6 |
+| Platts | expanded | - | - | error | 403 | 20.4 |
+| COMEX | expanded | - | - | unavailable | - | 10027.4 |
+| NYMEX | expanded | - | - | unavailable | - | 10028.1 |
+| Genscape | expanded | - | - | error | 403 | 96.8 |
+| OPIS | expanded | - | - | ok | 200 | 188.1 |
+| EEX | expanded | - | - | ok | 200 | 1974.0 |
+| ACER | expanded | - | - | ok | 200 | 2324.4 |
+| World Platinum Investment Council | expanded | - | - | ok | 200 | 558.2 |
+| Moody's | expanded | - | - | ok | 200 | 154.0 |
+| Fitch Ratings | expanded | - | - | ok | 200 | 454.4 |
+| Morningstar | expanded | - | - | error | 403 | 171.1 |
+| MSCI | expanded | - | - | ok | 200 | 116.3 |
+| NYSE | expanded | - | - | ok | 200 | 187.6 |
+| Cboe | expanded | - | - | ok | 200 | 679.7 |
+| DTCC | expanded | - | - | ok | 200 | 276.1 |
+| SEC EDGAR | expanded | - | - | error | 403 | 59.0 |
+| FINRA | expanded | - | - | ok | 200 | 297.7 |
+| LSEG | expanded | - | - | ok | 200 | 174.6 |
+| FactSet | expanded | - | - | ok | 200 | 298.9 |
+| IISS | expanded | - | - | ok | 200 | 502.2 |
+| Brookings Institution | expanded | - | - | ok | 200 | 134.7 |
+| RAND | expanded | - | - | error | 403 | 646.6 |
+| Wilson Center | expanded | - | - | ok | 200 | 354.8 |
+| ECFR | expanded | - | - | ok | 200 | 237.2 |
+| Bruegel | expanded | - | - | error | 403 | 269.9 |
+| Peterson Institute | expanded | - | - | ok | 200 | 115.9 |
+| Stimson Center | expanded | - | - | error | 403 | 203.7 |
+| Middle East Institute | expanded | - | - | ok | 200 | 703.2 |
+| Washington Institute | expanded | - | - | ok | 200 | 1667.7 |
+| Institute for the Study of War | expanded | - | - | error | 403 | 196.1 |
+| ACLED | expanded | - | - | ok | 200 | 349.9 |
+| UN Security Council | expanded | - | - | ok | 202 | 383.4 |
+| US State Department | expanded | - | - | error | 403 | 265.1 |
+| US Treasury OFAC | expanded | - | - | ok | 200 | 8120.6 |
+| European Commission | expanded | - | - | ok | 200 | 565.7 |
+| UK FCDO | expanded | - | - | ok | 200 | 1568.7 |
+| NATO | expanded | - | - | ok | 200 | 1345.7 |
+| IAEA | expanded | - | - | error | 403 | 194.4 |
+| OPCW | expanded | - | - | ok | 200 | 347.5 |
+| Reuters Markets | expanded | - | - | error | 401 | 142.1 |
+| Bloomberg Markets | expanded | - | - | error | 403 | 185.2 |
+| Associated Press | expanded | - | - | error | 403 | 100.0 |
+| AFP | expanded | - | - | ok | 200 | 1049.8 |
+| BBC | expanded | - | - | ok | 200 | 118.1 |
+| Al Jazeera | expanded | - | - | ok | 200 | 138.7 |
+| France 24 | expanded | - | - | ok | 200 | 348.2 |
+| Euronews | expanded | - | - | ok | 200 | 65.1 |
+| DW | expanded | - | - | ok | 200 | 562.7 |
+| South China Morning Post | expanded | - | - | ok | 200 | 112.1 |
+| Nikkei Asia | expanded | - | - | ok | 200 | 1748.1 |
+| Arab News | expanded | - | - | error | 403 | 114.3 |
+| The National | expanded | - | - | ok | 200 | 203.3 |
+| Al Arabiya | expanded | - | - | error | 403 | 136.8 |
+| Al Monitor | expanded | - | - | ok | 200 | 134.1 |
+| OilPrice | expanded | - | - | ok | 200 | 395.8 |
+| Rigzone | expanded | - | - | ok | 200 | 491.0 |
+| Offshore Energy | expanded | - | - | ok | 200 | 362.1 |
+| Mining.com | expanded | - | - | error | 403 | 89.0 |
+| Kitco | expanded | - | - | ok | 200 | 288.4 |
+| CoinDesk | expanded | - | - | ok | 200 | 609.7 |
+| Foreign Affairs | expanded | - | - | ok | 200 | 145.1 |
+| Foreign Policy | expanded | - | - | ok | 200 | 121.0 |
+| War on the Rocks | expanded | - | - | ok | 200 | 357.1 |
+| Council on Foreign Relations | expanded | - | - | ok | 200 | 287.2 |
+| Carnegie Endowment | expanded | - | - | ok | 200 | 167.1 |
+| Chatham House | expanded | - | - | error | 403 | 181.3 |
+| Atlantic Council | expanded | - | - | ok | 200 | 220.3 |
+| International Crisis Group | expanded | - | - | error | 403 | 256.1 |
+| CSIS | expanded | - | - | ok | 200 | 218.5 |
+| RUSI | expanded | - | - | ok | 200 | 272.6 |
+| Kamandar | expanded | - | - | ok | 200 | 1528.2 |
+| IRNA | news | iran | A | ok | 200 | 828.9 |
+| ISNA | news | iran | A | ok | 200 | 800.4 |
+| Mehr News | news | iran | A | ok | 200 | 1184.4 |
+| Tasnim | news | iran | A | unavailable | - | 63.2 |
+| Fars | news | iran | A | unavailable | - | 1000.3 |
+| YJC | news | iran | B | ok | 200 | 1367.4 |
+| PANA | news | iran | B | ok | 200 | 1145.5 |
+| IMNA | news | iran | B | ok | 200 | 2063.8 |
+| Shabestan | news | iran | B | unavailable | - | 10662.8 |
+| SNN | news | iran | B | ok | 200 | 1098.9 |
+| Donya-e-Eqtesad | news | iran | A | ok | 200 | 944.3 |
+| Eghtesad Online | news | iran | B | ok | 200 | 854.0 |
+| EcoIran | news | iran | A | ok | 200 | 1080.0 |
+| Tejarat News | news | iran | B | ok | 200 | 868.0 |
+| Eghtesad News | news | iran | B | ok | 200 | 1662.5 |
+| Bourse News | news | iran | B | ok | 200 | 1430.4 |
+| Bourse24 | news | iran | B | ok | 200 | 1624.8 |
+| Sedaye Bourse | news | iran | B | ok | 200 | 2087.3 |
+| Iran Economist | news | iran | B | ok | 200 | 1208.4 |
+| Khabar Online | news | iran | B | ok | 200 | 1400.3 |
+| Tabnak | news | iran | B | ok | 200 | 937.2 |
+| Entekhab | news | iran | B | ok | 200 | 1766.2 |
+| Fararu | news | iran | B | ok | 200 | 1110.9 |
+| Asr Iran | news | iran | B | ok | 200 | 1042.4 |
+| Alef | news | iran | C | ok | 200 | 1155.0 |
+| Mashregh News | news | iran | C | ok | 200 | 2079.2 |
+| Raja News | news | iran | C | ok | 200 | 1017.2 |
+| Aftab News | news | iran | C | ok | 200 | 1034.7 |
+| Hamshahri Online | news | iran | B | ok | 200 | 2017.9 |
+| CNN | news | international | B | ok | 200 | 81.2 |
+| France 24 | news | international | B | ok | 200 | 58.3 |
+| DW | news | international | B | ok | 200 | 30.6 |
+| Sky News | news | international | B | error | 403 | 75.4 |
+| Bloomberg | news | international | A | error | 403 | 113.1 |
+| Financial Times | news | international | A | error | 403 | 123.7 |
+| Wall Street Journal | news | international | A | error | 401 | 226.6 |
+| CNBC | news | international | B | ok | 200 | 158.6 |
+| MarketWatch | news | international | B | error | 401 | 125.3 |
+| Barron's | news | international | B | error | 401 | 237.7 |
+| The Economist | news | international | A | error | 403 | 129.8 |
+| Forbes | news | international | B | error | 403 | 100.7 |
+| Business Insider | news | international | B | ok | 200 | 113.8 |
+| Fortune | news | international | B | ok | 200 | 78.4 |
+| New York Times | news | international | A | error | 403 | 165.4 |
+| Washington Post | news | international | A | unavailable | - | 10100.7 |
+| NBC News | news | international | B | ok | 200 | 437.2 |
+| ABC News | news | international | B | ok | 200 | 500.2 |
+| CBS News | news | international | B | ok | 200 | 137.4 |
+| NPR | news | international | B | ok | 200 | 276.6 |
+| PBS NewsHour | news | international | B | ok | 200 | 913.7 |
+| Politico | news | international | B | error | 403 | 108.0 |
+| Axios | news | international | B | error | 403 | 86.3 |
+| The Hill | news | international | B | error | 403 | 137.0 |
+| The Guardian | news | international | A | ok | 200 | 22.7 |
+| The Telegraph | news | international | B | ok | 200 | 536.3 |
+| The Times UK | news | international | B | ok | 200 | 943.4 |
+| Der Spiegel | news | international | B | ok | 200 | 814.2 |
+| Die Zeit | news | international | B | error | 403 | 99.1 |
+| Le Monde | news | international | A | ok | 200 | 181.0 |
+| Les Echos | news | international | B | error | 403 | 231.8 |
+| La Tribune | news | international | B | ok | 200 | 105.4 |
+| El Pais | news | international | B | error | 403 | 104.1 |
+| TASS | news | international | B | ok | 200 | 955.3 |
+| RIA Novosti | news | international | B | ok | 200 | 2344.4 |
+| Interfax | news | international | B | ok | 200 | 1934.4 |
+| RT | news | international | C | ok | 200 | 3303.1 |
+| The Moscow Times | news | international | B | ok | 200 | 362.5 |
+| Middle East Eye | news | international | C | ok | 200 | 255.7 |
+| Middle East Monitor | news | international | C | ok | 200 | 504.4 |
+| Asharq Al-Awsat | news | international | B | ok | 200 | 123.7 |
+| Defense News | news | international | B | ok | 200 | 102.9 |
+| Breaking Defense | news | international | B | ok | 200 | 134.9 |
+| Jerusalem Post | news | international | B | ok | 200 | 122.8 |
+| China Daily | news | international | B | ok | 200 | 1898.8 |
+| Global Times | news | international | C | ok | 200 | 1463.8 |
+| Xinhua | news | international | A | ok | 200 | 2009.5 |
+| Japan Times | news | international | B | ok | 200 | 333.0 |
+| NHK World | news | international | A | ok | 200 | 609.4 |
+| Times of India | news | international | B | ok | 200 | 376.3 |
+| Hindustan Times | news | international | B | ok | 200 | 112.8 |
+| Indian Express | news | international | B | error | 403 | 62.6 |
+| Economic Times India | news | international | A | ok | 200 | 408.5 |
+| Channel NewsAsia | news | international | A | ok | 200 | 170.5 |
+| Straits Times | news | international | B | ok | 200 | 658.3 |
+| Korea Herald | news | international | B | ok | 200 | 1221.3 |
+| Yonhap | news | international | A | ok | 200 | 938.9 |
+| Africanews | news | international | B | ok | 200 | 267.4 |
+| News24 | news | international | B | ok | 200 | 124.4 |
+| Daily Maverick | news | international | B | ok | 200 | 1959.5 |
+| The EastAfrican | news | international | B | error | 403 | 549.9 |
+| Brazil Journal | news | international | B | ok | 200 | 1592.5 |
+| Folha de S.Paulo | news | international | B | ok | 200 | 1254.1 |
+| Clarin | news | international | B | ok | 200 | 122.5 |
+| La Nacion Argentina | news | international | B | ok | 200 | 437.5 |
+| El Comercio Peru | news | international | B | ok | 200 | 261.1 |
+| El Universal Mexico | news | international | B | ok | 200 | 255.6 |
+| The Block | news | international | B | error | 403 | 70.3 |
 
 Health status is operational metadata, not evidence that a source is correct or suitable as Ground Truth.
 News sources are evidence for events, narratives, sentiment and geopolitical risk; they are not automatically economic ground truth.

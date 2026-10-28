@@ -1,6 +1,6 @@
 # BabiMind Option Scenario Ranking
 
-Generated: 2026-10-28T10:59:09.535012+00:00
+Generated: 2026-10-28T10:57:06.343385+00:00
 Contracts ranked: 279
 
 | Rank | Underlying | Contract | Type | Score | Decision | Price | Strike | IV | Delta | Days | P/L -20% | P/L -10% | P/L +10% | P/L +20% |
