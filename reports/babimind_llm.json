@@ -3,6 +3,30 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "error": "Missing required fields: executive_summary, market_regime, evidence, macro, industry_rotation, symbols, funds_evidence, options, scenarios, decision"
+    "model": "BabiMind",
+    "component": "Web Research & Decision Agent",
+    "generated_at": "2026-10-28T14:35:00Z",
+    "report_type": "full_market_decision",
+    "evidence_base": [
+      "reports/babimind_pipeline.json",
+      "reports/babimind_graph.json",
+      "reports/babimind_memory_context.json",
+      "reports/babimind_source_health.json",
+      "reports/babimind_factor_coverage.json",
+      "reports/babimind_signal_weights.json",
+      "reports/kamandar_indices.json",
+      "data/raw/kamandar_market_report.json",
+      "data/raw/kamandar_stocks.json",
+      "data/raw/kamandar_funds.json",
+      "data/raw/kamandar_options.json",
+      "data/raw/brs_options_snapshot.json",
+      "data/raw/option_market_watch_snapshot.json",
+      "data/raw/finpy_tse_snapshot.json",
+      "data/raw/marketwatch_plus_snapshot.json",
+      "artifacts/babimind_global_market_snapshot.json",
+      "artifacts/babimind_daily_economic_news.json",
+      "artifacts/babimind_pezeshkian_news.json",
+      "memory/news-daily-latest.md"
+    ]
   }
 }
