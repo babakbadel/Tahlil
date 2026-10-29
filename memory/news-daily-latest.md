@@ -1,10 +1,22 @@
-# Daily Economic News Digest — 2026-10-29 14:48 UTC
+# Daily Economic News Digest — 2026-10-29 16:15 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **52** · Total stored: **2486**
+> New items this run: **12** · Total stored: **2498**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | Japan to roll out gasoline subsidies amid record-high prices - The Japan Times | The Japan Times | Wed, 18 Mar 2026 07:00 |
+| macro_monetary | Which countries have seen the highest petrol prices since the Iran war? - Al Jazeera | Al Jazeera | Wed, 11 Mar 2026 07:00 |
+| macro_monetary | Vance’s ‘tin-pot dictator’ gas price remark draws Trump comparison as Iran war drives costs higher - Anadolu Ajansı | Anadolu Ajansı | Tue, 27 Oct 2026 00:16 |
+| macro_monetary | Iran war drives $100 billion in extra energy costs for U.S. consumers - Axios | Axios | Mon, 07 Sep 2026 07:00 |
+| geopolitics | Iran Loaded No Oil Onto Tankers Last Month as US Blockade Bites - Bloomberg | Bloomberg | Thu, 01 Oct 2026 07:00 |
+| bourse | Tehran Stock Exchange plunges, baffling investors - Al-Monitor | Al-Monitor | Sat, 27 Mar 2021 22:56 |
+| bourse | Major Gulf stocks rise as Iran risks stay in focus - Reuters | Reuters | Tue, 25 Aug 2026 07:00 |
+| oil | صعود خیره‌کننده نفت برنت به ۱۱۴ دلار؛ بازار چشم‌انتظار توافق بزرگ - خبرپو | خبرپو | Tue, 27 Oct 2026 07:12 |
+| oil | قیمت نفت یک درصد کاهش یافت - میز انرژی | میز انرژی | Tue, 27 Oct 2026 14:50 |
+| oil | افت قیمت نفت برنت به ۱۱۴ دلار؛ امید به ازسرگیری مذاکرات ایران و آمریکا بازار را آرام کرد - پتروشیمی ها | پتروشیمی ها | Thu, 29 Oct 2026 15:52 |
+| bourse | No one wants to be Trump's chief of staff - TABNAK | TABNAK | Sat, 15 Dec 2018 08:00 |
+| bourse | Ayatollah Khamenei calls for a boost in Iran’s domestic production - TABNAK | TABNAK | Thu, 21 Mar 2019 07:00 |
 | macro_monetary | Inflation 2026: Gas prices drove March numbers up to levels not seen in years - LiveNOW from FOX | LiveNOW from FOX | Tue, 14 Apr 2026 07:00 |
 | oil | Oil Prices Fall as Renewed U.S.-Iran Peace Efforts Ease Supply Fears – WTI Near $101.50, Brent Slips Below $114 - Energy | EnergyNow.com | Thu, 29 Oct 2026 11:34 |
 | oil | Current price of oil as of October 29, 2026 - Fortune | Fortune | Thu, 29 Oct 2026 13:32 |
@@ -33,22 +45,10 @@
 | oil | جهش نفت برنت به ۱۱۵ دلار و عقب‌نشینی طلای جهانی به ۴۰۵۵ دلار؛ تأثیر تنش ایران و آمریکا و تصمیم فدرال رزرو بر بازار جهانی | vista.ir | Wed, 28 Oct 2026 12:28 |
 | oil | نفت برنت با 0.34 درصد رشد بالای 116 دلار معامله شد/ترندها - خبرپو | خبرپو | Tue, 27 Oct 2026 07:15 |
 | oil | قیمت نفت به ۱۱۵ دلار رسید/ایران فوری - خبرپو | خبرپو | Wed, 28 Oct 2026 06:29 |
-| oil | رشد ۵.۱ درصدی قیمت نفت برنت در یک هفته اخیر/خبرکده - خبرپو | خبرپو | Tue, 27 Oct 2026 07:15 |
-| oil | نفت خام برنت در محدوده ۱۱۳ دلار/ تداوم نوسان در سایه جنگ افروزی های ترامپ - خبرپو | خبرپو | Thu, 29 Oct 2026 05:18 |
-| oil | عقب‌نشینی نفت از مرز ۱۱۷ دلار؛ سایه نااطمینانی بر بازار انرژی - انرژی پرس | انرژی پرس | Tue, 27 Oct 2026 06:09 |
-| oil | نفت برنت امروز 6 آبان با افزایش 1.43 درصدی به 115.51 دلار رسید - خبرپو | خبرپو | Wed, 28 Oct 2026 05:00 |
-| oil | بازار نفت جهانی همچنان رو به کاهش - انرژی پرس | انرژی پرس | Tue, 27 Oct 2026 09:00 |
-| oil | نفت برنت به 115 دلار رسید - ایران جیب | ایران جیب | Wed, 28 Oct 2026 04:37 |
-| oil | رشد قیمت نفت برنت و WTI در بازارهای جهانی/دانشجو - خبرپو | خبرپو | Wed, 28 Oct 2026 05:22 |
-| oil | واکنش قیمت نفت به احتمال مذاکرات صلح میان ایران و آمریکا - شهر خبر | شهر خبر | Thu, 29 Oct 2026 09:30 |
-| oil | نفت برنت رکوردشکنی کرد/ چه بلایی سر بازار نفت آمده؟! - TABNAK | TABNAK | Wed, 28 Oct 2026 08:41 |
-| oil | عقب‌نشینی نفت از اوج روز قبل / برنت به ۱۱۴ دلار رسید - روزنامه دنیای اقتصاد | روزنامه دنیای اقتصاد | Thu, 29 Oct 2026 11:30 |
-| oil | واکنش قیمت نفت به احتمال مذاکرات ایران و آمریکا - https://khabarjadid.com/ | https://khabarjadid.com/ | Thu, 29 Oct 2026 10:22 |
-| oil | افت قیمت نفت با امید به مذاکرات صلح - سایت طلا | سایت طلا | Thu, 29 Oct 2026 05:59 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-10-29 14:48 UTC | 52 new | 2486 total
+NEWS_DIGEST | 2026-10-29 16:15 UTC | 12 new | 2498 total
