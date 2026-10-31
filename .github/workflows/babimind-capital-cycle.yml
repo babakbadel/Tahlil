@@ -1,0 +1,43 @@
+name: BabiMind Capital Cycle Game
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["BabiMind Daily Intelligence"]
+    types: [completed]
+permissions:
+  contents: write
+concurrency:
+  group: babimind-cycle-game
+  cancel-in-progress: false
+jobs:
+  cycle-game:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Run capital cycle game with validated observations if present
+        run: |
+          if [ -f data/latest/babimind_cycle_observations.json ]; then
+            python scripts/babimind_cycle_game_v3.py --observations data/latest/babimind_cycle_observations.json --output reports/babimind_cycle_game_v3.json
+          else
+            python scripts/babimind_cycle_game_v3.py --output reports/babimind_cycle_game_v3.json
+          fi
+      - name: Verify capital conservation
+        run: |
+          python -c "import json; d=json.load(open('reports/babimind_cycle_game_v3.json')); assert d['capital_conservation']; print(d['status'])"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: babimind-capital-cycle
+          path: reports/babimind_cycle_game_v3.json
+      - name: Commit model output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/babimind_cycle_game_v3.json
+          git diff --cached --quiet || (git commit -m "chore: refresh capital cycle scenario output" && git push)
