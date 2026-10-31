@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-10-31 10:13 UTC
+# Daily Economic News Digest — 2026-10-31 10:41 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **65** · Total stored: **2500**
+> New items this run: **62** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Iran’s Energy Dilemma: Constraints, Repercussions, and Policy Options - Carnegie Endowment for International Peace | Carnegie Endowment for International Peace | Thu, 26 Jun 2025 07:00 |
-| macro_monetary | Retail price impacts from the Iran war are uneven but add up for US households before midterms - AP News | AP News | Sat, 17 Oct 2026 07:00 |
-| oil | Brent (UKOIL) Moved Sharply on Oct 30: Inventories, the Dollar, or Geopolitics? - TradingKey | TradingKey | Fri, 30 Oct 2026 01:55 |
-| oil | Sensex, Nifty open marginally higher amid rising crude prices, weak global cues - TradingView | TradingView | Fri, 30 Oct 2026 04:19 |
-| oil | Brent Crude Oil Challenges a Key Resistance – Analysis –30-10-2026 - Economies.com | Economies.com | Fri, 30 Oct 2026 04:05 |
-| oil | Brent Crude Oil Price Forecast 2026: Will It Hit $120? - Intellectia AI | Intellectia AI | Wed, 28 Oct 2026 08:45 |
-| oil | Crude Rises Again; Brent Near $116 as Houthi Attacks Escalate - HDFC Sky | HDFC Sky | Fri, 30 Oct 2026 04:27 |
-| oil | World Bank sees Brent crude falling to $79 in 2027 - Businessday NG | Businessday NG | Fri, 30 Oct 2026 19:07 |
-| oil | Brent crude price crosses $116, WTI tops $103 as Saudi attacks fuel supply disruption fears - Moneycontrol.com | Moneycontrol.com | Fri, 30 Oct 2026 04:21 |
-| oil | Investors Are Piling Into Dangote. But Is the Price Right - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 29 Oct 2026 15:00 |
-| oil | Crude Oil Extends Gains as Houthi Attacks on Saudi Refineries Tighten Supply Chain; Brent Headed for 14% Monthly Rise -  | BigGo Finance | Fri, 30 Oct 2026 03:25 |
-| oil | Gold drops below $4,000, silver tumbles as Hormuz attack lifts oil prices - Kitco AM Report - Kitco | Kitco | Fri, 30 Oct 2026 12:52 |
-| oil | Japan to Overtake China As World's Top LNG Importer This Year - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 30 Oct 2026 15:30 |
-| oil | Crude oil surges past $115 as Saudi attacks fuel global supply fears - The Indian Panorama | The Indian Panorama | Fri, 30 Oct 2026 12:27 |
-| oil | Oil prices rise as Houthi attacks on Saudi Arabia stoke supply fears; Brent nears $116 - The Times of India | The Times of India | Fri, 30 Oct 2026 02:46 |
-| oil | Oil Prices Today: Brent Crude Nears $116, Jumps 10% In October; Is $120 The Next Stop? - NDTV Profit | NDTV Profit | Fri, 30 Oct 2026 01:20 |
-| oil | Brent And WTI Crude Oil Price Forecasts Rise As Freight Costs Stay High - Exchange Rates UK | Exchange Rates UK | Fri, 30 Oct 2026 15:30 |
-| oil | Brent crude approaches $120 amid rising supply risks - Realnews Magazine | Realnews Magazine | Fri, 30 Oct 2026 17:58 |
-| oil | Brent Crude Nears $118, Up 4th Straight Month as Iran Escalation Fears Lift Oil - BigGo Finance | BigGo Finance | Sat, 31 Oct 2026 00:35 |
-| oil | Oil prices soar 14% in October to 6-month high as US weighs fresh Iran strikes after midterms. More pain a - The Economi | The Economic Times | Sat, 31 Oct 2026 04:41 |
-| oil | Oil Prices Head for Fourth Monthly Gain as Middle East Tensions Escalate - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 30 Oct 2026 06:20 |
-| oil | ExxonMobil Profits Double to $15.4 Billion - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 30 Oct 2026 17:27 |
-| oil | TRICK OR TREAT? Oil Prices Jump More Than 2% as Strait of Hormuz Tanker Attack Renews Middle East Supply Fears - EnergyN | EnergyNow.com | Fri, 30 Oct 2026 11:27 |
-| oil | US Oil Replenishment Could Support Crude Prices Through 2027, MBSB Research - BusinessToday Malaysia | BusinessToday Malaysia | Sat, 31 Oct 2026 04:35 |
-| oil | Chevron Profits Nearly Triple to $9.9 Billion - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 30 Oct 2026 18:30 |
-| oil | Brent crude oil price rises - Apa.az | Apa.az | Sat, 31 Oct 2026 05:29 |
-| oil | Oil Price Today (October 30): Crude oil jumps to $118 as Trump weighs fresh attacks after midterm. What ar - The Economi | The Economic Times | Fri, 30 Oct 2026 02:20 |
-| oil | The never-ending absurdity of global oil markets - The Economist | The Economist | Thu, 29 Oct 2026 11:16 |
-| oil | Oil Prices - 30-10-26 - Armenpress | Armenpress | Sat, 31 Oct 2026 07:11 |
-| oil | Oil prices mixed as traders assess Middle East developments - CNBC | CNBC | Wed, 21 Oct 2026 07:00 |
-| oil | Oil prices steady as investors weigh geopolitics, lower US stockpiles - Reuters | Reuters | Wed, 21 Oct 2026 07:00 |
-| oil | Brent falls as Iran's president discusses mediation with Pakistani army chief - Reuters | Reuters | Tue, 20 Oct 2026 07:00 |
-| oil | U.S. Oil, Gas Drillers Still on Hold - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 30 Oct 2026 17:09 |
-| oil | Oil prices edge lower as renewed U.S.-Iran peace efforts ease supply fears - CNBC | CNBC | Thu, 29 Oct 2026 07:48 |
-| oil | Crude Oil Price Forecast: WTI, Brent Rise After Hormuz Tanker Attack - FXEmpire | FXEmpire | Fri, 30 Oct 2026 10:23 |
-| oil | Oil prices increase as attacks on shipping ramp up - Transport Topics | Transport Topics | Fri, 30 Oct 2026 12:21 |
-| oil | Crude Oil Weekly Price Forecast – Oil Continues to See Dip Buying - FXEmpire | FXEmpire | Fri, 30 Oct 2026 16:30 |
-| oil | Crude Oil Price Forecast – Oil Continues to Grind Higher - FXEmpire | FXEmpire | Fri, 30 Oct 2026 14:07 |
-| oil | SCARY WEEK FOR OIL – OCTOBER OIL GAINS EXCEED 13% – Oil Climbs More Than 2% Friday as Middle East Attacks Intensify – WT | EnergyNow.com | Fri, 30 Oct 2026 21:01 |
-| oil | Oil prices hit five-month high as Houthi attacks stoke Middle East supply fears - Reuters | Reuters | Thu, 22 Oct 2026 07:00 |
+| macro_monetary | Gas Price Approaches $9 at California Station as Iran War Rages - Newsweek | Newsweek | Wed, 25 Mar 2026 07:00 |
+| macro_monetary | Japan core inflation accelerates after five months as Iran war stokes energy worries - CNBC | CNBC | Thu, 23 Apr 2026 07:00 |
+| macro_monetary | Fresh Labor Protests Spread as Tehran Doubles Third-Tier Gasoline Price - National Council of Resistance of Iran - NCRI | National Council of Resistance of Iran - NCRI | Mon, 07 Sep 2026 07:00 |
+| oil | Brent Crude Prices Slip Amidst Houthi Attacks - Marine News Magazine | Marine News Magazine | Tue, 20 Oct 2026 07:00 |
+| oil | Brent Back Above $100 as Houthis Hit Saudi Infrastructure - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 07 Oct 2026 07:00 |
+| oil | Oil Futures Settle Lower in Volatile Session - WSJ | WSJ | Tue, 20 Oct 2026 07:09 |
+| oil | Current price of oil as of October 14, 2026 - Fortune | Fortune | Wed, 14 Oct 2026 07:00 |
+| oil | Why Is the WTI Oil Price Rising More than Brent Intraday? - Rigzone | Rigzone | Tue, 20 Oct 2026 07:00 |
+| pezeshkian | Russia, Iran eye joint oil and gas projects as Pezeshkian, Putin hold talks in Moscow - WION | WION | Tue, 27 Oct 2026 19:33 |
+| bourse | ‘Transparency necessary for stock market’s companies receiving tax incentives’ - Tehran Times | Tehran Times | Tue, 07 Jul 2020 07:00 |
+| bourse | TEDPIX goes up 8,400 points on Monday - Tehran Times | Tehran Times | Mon, 19 Jul 2021 07:00 |
+| bourse | Iranian major railway companies to be listed on stock exchange - Tehran Times | Tehran Times | Tue, 22 Sep 2020 07:00 |
+| bourse | Capital market attracts over $700m of liquidity: SEO head - Tehran Times | Tehran Times | Wed, 28 Aug 2019 07:00 |
+| bourse | Iran War: Asian stock market falls after Trump threatens Tehran (with video) - Plataforma Media | Plataforma Media | Thu, 02 Apr 2026 07:00 |
+| bourse | TSE unveils TAL system to modernize stock market trading - Tehran Times | Tehran Times | Tue, 11 Nov 2025 08:00 |
+| bourse | The Rise and Fall (and Another Fall) of the Tehran Stock Exchange - IranWire | IranWire | Thu, 05 Nov 2020 08:00 |
+| bourse | Panic At Tehran Stock Exchange As Investors Rush To Sell - Iran International | Iran International | Sun, 14 Apr 2024 07:00 |
+| bourse | Iran: New Scandal at Tehran’s Stock Exchange Market - National Council of Resistance of Iran - NCRI | National Council of Resistance of Iran - NCRI | Thu, 30 Sep 2021 07:00 |
+| bourse | TEDPIX drops 85,000 points on Sunday - Tehran Times | Tehran Times | Sun, 22 Feb 2026 08:00 |
+| bourse | Iran’s Stock Market Bubble - National Council of Resistance of Iran - NCRI | National Council of Resistance of Iran - NCRI | Sun, 31 May 2020 07:00 |
+| bourse | Foreign investors in Iran’s stock market rise to 5,100 - Tehran Times | Tehran Times | Mon, 11 Aug 2025 07:00 |
+| bourse | Iran's Stock Market Begins To Fall After An Astronomical Rise In Four Months - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Mon, 17 Aug 2020 07:00 |
+| bourse | TEDPIX gains 962 points on Sunday - Tehran Times | Tehran Times | Sun, 04 Jan 2026 08:00 |
+| bourse | Iran Stock Market Reopens After 80-Day War Shutdown on 19 May 2026: What Investors Need to Know - Univest | Univest | Tue, 19 May 2026 07:00 |
+| bourse | Iran’s Stock Market Continues to Plunge After War - IranWire | IranWire | Mon, 30 Jun 2025 07:00 |
+| bourse | 10-month stock market return tops 62% - Tehran Times | Tehran Times | Tue, 27 Jan 2026 08:00 |
+| bourse | Iran’s stock market: Growth in the midst of a recession? - Atlantic Council | Atlantic Council | Thu, 14 May 2020 07:00 |
+| bourse | Iran’s Stock Market in Crisis Following the 12-Day Conflict - National Council of Resistance of Iran - NCRI | National Council of Resistance of Iran - NCRI | Mon, 30 Jun 2025 07:00 |
+| bourse | Capital flees Tehran stocks as geopolitical tensions deepen - Iran International | Iran International | Mon, 23 Feb 2026 08:00 |
+| bourse | Tehran stocks head for reopening, but it risks triggering a new crisis - Iran International | Iran International | Thu, 23 Apr 2026 07:00 |
+| bourse | Iran's Tehran Stock Exchange reopens after 80 days since the beginning of war with US - CNBC TV18 | CNBC TV18 | Tue, 19 May 2026 07:00 |
+| bourse | Tehran stock exchange resumes trading after 80-Day Hiatus - وكالة سبأ | وكالة سبأ | Tue, 19 May 2026 07:00 |
+| bourse | Tehran Stock Exchange hits new all-time high, surging 122,000 points - ISNA News Agency | ISNA News Agency | Sun, 14 Jun 2026 07:00 |
+| bourse | Tehran Stock Exchange Hits Historic High as Main Index Surpasses 5.3 Million Points - ISNA News Agency | ISNA News Agency | Tue, 07 Jul 2026 07:00 |
+| bourse | Iran stock market to reopen today after 80-day closure amid US-Israel-Iran war - The Economic Times | The Economic Times | Tue, 19 May 2026 07:00 |
+| bourse | Tehran Stock Exchange Surges in Final Trading Day of Week; Index Tops 6.3 Million Points - ISNA News Agency | ISNA News Agency | Wed, 26 Aug 2026 07:00 |
+| bourse | Iran reopened its stock market after 80 days of war: 72% of stocks fell, here's what it means - Moneycontrol.com | Moneycontrol.com | Tue, 19 May 2026 07:00 |
+| bourse | Tehran stocks reopen after 80-day wartime shutdown under selling pressure - Türkiye Today | Türkiye Today | Tue, 19 May 2026 07:00 |
+| bourse | Tehran Stock Exchange index crosses 6 million points in historic surge - ISNA News Agency | ISNA News Agency | Sat, 22 Aug 2026 07:00 |
+| bourse | Iran Stock Market Reopening: Why the Index Rise May Be Misleading - EBC Financial Group | EBC Financial Group | Thu, 21 May 2026 07:00 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-10-31 10:13 UTC | 65 new | 2500 total
+NEWS_DIGEST | 2026-10-31 10:41 UTC | 62 new | 2500 total
