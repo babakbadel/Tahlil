@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-10-31 10:41 UTC
+# Daily Economic News Digest — 2026-10-31 13:59 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
 > New items this run: **62** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Gas Price Approaches $9 at California Station as Iran War Rages - Newsweek | Newsweek | Wed, 25 Mar 2026 07:00 |
-| macro_monetary | Japan core inflation accelerates after five months as Iran war stokes energy worries - CNBC | CNBC | Thu, 23 Apr 2026 07:00 |
-| macro_monetary | Fresh Labor Protests Spread as Tehran Doubles Third-Tier Gasoline Price - National Council of Resistance of Iran - NCRI | National Council of Resistance of Iran - NCRI | Mon, 07 Sep 2026 07:00 |
-| oil | Brent Crude Prices Slip Amidst Houthi Attacks - Marine News Magazine | Marine News Magazine | Tue, 20 Oct 2026 07:00 |
-| oil | Brent Back Above $100 as Houthis Hit Saudi Infrastructure - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 07 Oct 2026 07:00 |
-| oil | Oil Futures Settle Lower in Volatile Session - WSJ | WSJ | Tue, 20 Oct 2026 07:09 |
-| oil | Current price of oil as of October 14, 2026 - Fortune | Fortune | Wed, 14 Oct 2026 07:00 |
-| oil | Why Is the WTI Oil Price Rising More than Brent Intraday? - Rigzone | Rigzone | Tue, 20 Oct 2026 07:00 |
-| pezeshkian | Russia, Iran eye joint oil and gas projects as Pezeshkian, Putin hold talks in Moscow - WION | WION | Tue, 27 Oct 2026 19:33 |
-| bourse | ‘Transparency necessary for stock market’s companies receiving tax incentives’ - Tehran Times | Tehran Times | Tue, 07 Jul 2020 07:00 |
-| bourse | TEDPIX goes up 8,400 points on Monday - Tehran Times | Tehran Times | Mon, 19 Jul 2021 07:00 |
-| bourse | Iranian major railway companies to be listed on stock exchange - Tehran Times | Tehran Times | Tue, 22 Sep 2020 07:00 |
-| bourse | Capital market attracts over $700m of liquidity: SEO head - Tehran Times | Tehran Times | Wed, 28 Aug 2019 07:00 |
-| bourse | Iran War: Asian stock market falls after Trump threatens Tehran (with video) - Plataforma Media | Plataforma Media | Thu, 02 Apr 2026 07:00 |
-| bourse | TSE unveils TAL system to modernize stock market trading - Tehran Times | Tehran Times | Tue, 11 Nov 2025 08:00 |
-| bourse | The Rise and Fall (and Another Fall) of the Tehran Stock Exchange - IranWire | IranWire | Thu, 05 Nov 2020 08:00 |
-| bourse | Panic At Tehran Stock Exchange As Investors Rush To Sell - Iran International | Iran International | Sun, 14 Apr 2024 07:00 |
-| bourse | Iran: New Scandal at Tehran’s Stock Exchange Market - National Council of Resistance of Iran - NCRI | National Council of Resistance of Iran - NCRI | Thu, 30 Sep 2021 07:00 |
-| bourse | TEDPIX drops 85,000 points on Sunday - Tehran Times | Tehran Times | Sun, 22 Feb 2026 08:00 |
-| bourse | Iran’s Stock Market Bubble - National Council of Resistance of Iran - NCRI | National Council of Resistance of Iran - NCRI | Sun, 31 May 2020 07:00 |
-| bourse | Foreign investors in Iran’s stock market rise to 5,100 - Tehran Times | Tehran Times | Mon, 11 Aug 2025 07:00 |
-| bourse | Iran's Stock Market Begins To Fall After An Astronomical Rise In Four Months - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Mon, 17 Aug 2020 07:00 |
-| bourse | TEDPIX gains 962 points on Sunday - Tehran Times | Tehran Times | Sun, 04 Jan 2026 08:00 |
-| bourse | Iran Stock Market Reopens After 80-Day War Shutdown on 19 May 2026: What Investors Need to Know - Univest | Univest | Tue, 19 May 2026 07:00 |
-| bourse | Iran’s Stock Market Continues to Plunge After War - IranWire | IranWire | Mon, 30 Jun 2025 07:00 |
-| bourse | 10-month stock market return tops 62% - Tehran Times | Tehran Times | Tue, 27 Jan 2026 08:00 |
-| bourse | Iran’s stock market: Growth in the midst of a recession? - Atlantic Council | Atlantic Council | Thu, 14 May 2020 07:00 |
-| bourse | Iran’s Stock Market in Crisis Following the 12-Day Conflict - National Council of Resistance of Iran - NCRI | National Council of Resistance of Iran - NCRI | Mon, 30 Jun 2025 07:00 |
-| bourse | Capital flees Tehran stocks as geopolitical tensions deepen - Iran International | Iran International | Mon, 23 Feb 2026 08:00 |
-| bourse | Tehran stocks head for reopening, but it risks triggering a new crisis - Iran International | Iran International | Thu, 23 Apr 2026 07:00 |
-| bourse | Iran's Tehran Stock Exchange reopens after 80 days since the beginning of war with US - CNBC TV18 | CNBC TV18 | Tue, 19 May 2026 07:00 |
-| bourse | Tehran stock exchange resumes trading after 80-Day Hiatus - وكالة سبأ | وكالة سبأ | Tue, 19 May 2026 07:00 |
-| bourse | Tehran Stock Exchange hits new all-time high, surging 122,000 points - ISNA News Agency | ISNA News Agency | Sun, 14 Jun 2026 07:00 |
-| bourse | Tehran Stock Exchange Hits Historic High as Main Index Surpasses 5.3 Million Points - ISNA News Agency | ISNA News Agency | Tue, 07 Jul 2026 07:00 |
-| bourse | Iran stock market to reopen today after 80-day closure amid US-Israel-Iran war - The Economic Times | The Economic Times | Tue, 19 May 2026 07:00 |
-| bourse | Tehran Stock Exchange Surges in Final Trading Day of Week; Index Tops 6.3 Million Points - ISNA News Agency | ISNA News Agency | Wed, 26 Aug 2026 07:00 |
-| bourse | Iran reopened its stock market after 80 days of war: 72% of stocks fell, here's what it means - Moneycontrol.com | Moneycontrol.com | Tue, 19 May 2026 07:00 |
-| bourse | Tehran stocks reopen after 80-day wartime shutdown under selling pressure - Türkiye Today | Türkiye Today | Tue, 19 May 2026 07:00 |
-| bourse | Tehran Stock Exchange index crosses 6 million points in historic surge - ISNA News Agency | ISNA News Agency | Sat, 22 Aug 2026 07:00 |
-| bourse | Iran Stock Market Reopening: Why the Index Rise May Be Misleading - EBC Financial Group | EBC Financial Group | Thu, 21 May 2026 07:00 |
+| macro_monetary | Iranian Regime’s Judiciary Calls for IRGC Role in Hijab Enforcement as Fuel-Price Powers Expand - National Council of Re | National Council of Resistance of Iran - NCRI | Fri, 30 Oct 2026 19:18 |
+| oil | Crude Oil Prices Hit Six-Month High as Iran War Escalation Fears Grow - Business Post Nigeria | Business Post Nigeria | Sat, 31 Oct 2026 12:48 |
+| oil | CPC to leave domestic gasoline, diesel prices unchanged next week - Focus Taiwan | Focus Taiwan | Sat, 31 Oct 2026 10:12 |
+| oil | Trump Considers Lifting Sanctions on Putin's 'Slush Fund' - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 30 Oct 2026 14:00 |
+| geopolitics | Trump says Iran war will end soon, US military insists Hormuz is secure - Arab News | Arab News | Fri, 30 Oct 2026 12:04 |
+| geopolitics | A resumed Iran war after midterms would put fragile gains in Hormuz to the test - The Washington Post | The Washington Post | Fri, 30 Oct 2026 19:06 |
+| geopolitics | Iran Update, October 30, 2026 - Critical Threats | Critical Threats | Sat, 31 Oct 2026 01:10 |
+| geopolitics | Iranian media debate new war amid Hormuz attacks, military buildup - Iran International | Iran International | Thu, 29 Oct 2026 16:41 |
+| geopolitics | America's Least Bad Option in Iran - RAND | RAND | Thu, 29 Oct 2026 15:33 |
+| geopolitics | Admiral says Iran’s navy is sunk, Hormuz mines are cleared and tankers are rolling again - Washington Times | Washington Times | Fri, 30 Oct 2026 15:37 |
+| geopolitics | Exclusive / Inside the U.S. Military’s Open-Ended Mission to Keep Gulf Oil Flowing - WSJ | WSJ | Sat, 31 Oct 2026 04:30 |
+| geopolitics | US service members, aircraft under strain amid nightly operations - The Jerusalem Post | The Jerusalem Post | Sat, 31 Oct 2026 00:05 |
+| geopolitics | Tankers defy sharp escalation of Iranian attacks to keep crude oil flowing through Strait of Hormuz - CNBC | CNBC | Fri, 30 Oct 2026 17:21 |
+| geopolitics | Iran War Updates: Trump says war "going to end soon" as Qatar pushes for a U.S.-Iran deal - CBS News | CBS News | Sat, 31 Oct 2026 11:02 |
+| fx | Shafaq News..Iran’s dollar rate jumps 13K Rials in free market - شفق نيوز | شفق نيوز | Thu, 02 Oct 2025 07:00 |
+| fx | US dollar hits record high of 1,060,000 rials in Iran’s market - Iran International | Iran International | Sun, 21 Sep 2025 07:00 |
+| fx | Inside Iran’s maze of multiple exchange rates - Iran International | Iran International | Wed, 30 Apr 2025 07:00 |
+| fx | Iranian rial crashes to 1.63 million per US dollar: How just having $735 now makes you a billionaire in Ir - The Economi | The Economic Times | Thu, 19 Feb 2026 08:00 |
+| fx | Iran’s rial plunges to record low of more than 2.2 million per dollar amid renewed US-Iran strikes - Moneycontrol.com | Moneycontrol.com | Thu, 03 Sep 2026 07:00 |
+| fx | The Worst Currencies in the World - WorldAtlas | WorldAtlas | Fri, 15 May 2026 07:00 |
+| fx | Shafaq News..Iran’s Toman hits new low as dollar surpasses 128K - شفق نيوز | شفق نيوز | Sun, 14 Dec 2025 08:00 |
+| fx | The dollar breaks the 192,000 toman barrier: The Iranian currency hits a new record high - صوت الإمارات | صوت الإمارات | Sat, 18 Jul 2026 07:00 |
+| fx | Why Is the Iranian Rial So Weak? 6 Key Reasons Explained - EBC Financial Group | EBC Financial Group | Wed, 25 Mar 2026 07:00 |
+| fx | Iranian currency Rial hits 1.58 million per US dollar: Economy in freefall after war, civilian sector col - The Times of | The Times of India | Mon, 13 Apr 2026 07:00 |
+| fx | Iran’s rial loses three times its value since Trump took office - The New Region | The New Region | Tue, 02 Dec 2025 08:00 |
+| fx | Iran Currency Crisis: What’s Driving the Rial Down - Caspian Post | Caspian Post | Tue, 27 Jan 2026 08:00 |
+| fx | Iran currency plunges to record low as US dollar breaks 2 million rials on open market - Gulf News | Gulf News | Mon, 24 Aug 2026 07:00 |
+| fx | Iran’s rial drops to new low of 2.2 million to the dollar, tracking websites show - The Times of Israel | The Times of Israel | Wed, 02 Sep 2026 07:00 |
+| fx | US dollar hits record high in Iran as rial weakens amid renewed regional conflict - Yahoo Finance | Yahoo Finance | Sat, 18 Jul 2026 07:00 |
+| bourse | Tehran Stock Exchange market capitalization hits $105B - AzerNews | AzerNews | Thu, 30 Oct 2014 07:00 |
+| bourse | Iran's Currency Rial Loses More Value Against US Dollar - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Mon, 11 May 2020 07:00 |
+| bourse | Iran’s Stock Market Drops As Exports Decline - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Sun, 03 Feb 2019 08:00 |
+| bourse | Foreign investment in Tehran stock market more than doubles in a year - Tehran Times | Tehran Times | Sat, 15 Nov 2025 08:00 |
+| bourse | Tehran Stock Market Hits One-Year High After Sanctions Lifted - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Wed, 03 Feb 2016 08:00 |
+| bourse | Iran's Currency Unexpectedly Rises 10 Percent Pushing Stock Market Lower - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Wed, 17 Jul 2019 07:00 |
+| bourse | Israel-Iran conflict escalates, destabilizing economies in Mideast - The Jerusalem Post | The Jerusalem Post | Wed, 07 Aug 2024 07:00 |
+| bourse | Tehran's Stock Exchange Indices Fall For The Fifth Consecutive Day - Iran International | Iran International | Sat, 13 May 2023 07:00 |
+| bourse | Iran's stock market roars as sanctions go away - CNBC | CNBC | Wed, 20 Jan 2016 08:00 |
+| bourse | IRGC stops stock market listing of popular website Divar - The Jerusalem Post | The Jerusalem Post | Sat, 09 Aug 2025 07:00 |
+| bourse | An ETF for folks who want to invest in...Iran - CNBC | CNBC | Mon, 26 Jan 2015 08:00 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-10-31 10:41 UTC | 62 new | 2500 total
+NEWS_DIGEST | 2026-10-31 13:59 UTC | 62 new | 2500 total
