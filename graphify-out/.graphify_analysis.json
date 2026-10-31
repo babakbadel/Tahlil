@@ -1728,17 +1728,6 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
     },
     {
-      "source": "collect()",
-      "target": "get_market_watch()",
-      "source_files": [
-        "scripts/collect_tsetmc_async.py",
-        "app/data/finpy_tse_adapter.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "calls",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
-    },
-    {
       "source": "test_csv_keeps_call_and_put_direction()",
       "target": "ingest()",
       "source_files": [
@@ -1758,6 +1747,17 @@
       ],
       "confidence": "INFERRED",
       "relation": "indirect_call",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "collect()",
+      "target": "get_market_watch()",
+      "source_files": [
+        "scripts/collect_tsetmc_async.py",
+        "app/data/finpy_tse_adapter.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
     }
   ],

@@ -3,71 +3,22 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "execution_info": {
-      "model": "BabiMind",
-      "pipeline_version": "1.7",
-      "generated_at": "2026-10-31T13:59:50.839216+00:00",
-      "stages": [
-        "health",
-        "content",
-        "freshness",
-        "confidence",
-        "fallback",
-        "signal_weight",
-        "graph_intelligence",
-        "symbol_thesis",
-        "money_migration"
-      ]
-    },
-    "required_final_report": {
-      "executive_summary": "Maximum 10 key findings:",
-      "findings": [
-        "1. FMLI (فملی) thesis: operating-leverage-plus-flow-regime with exceptional Q1 metrics (262% YoY profit growth, 183% revenue growth, 247% gross profit growth)",
-        "2. Graph intelligence shows bullish regime with score 1.0, confidence 0.75, driven by copper price sensitivity and volume-led expansion",
-        "3. Multiple memory runs (17 consecutive) consistently show bullish bias for FMLI with scenario weights: bull 0.45, base 0.4, bear 0.15",
-        "4. Option market active with volume data available; BRS options snapshot shows 309 records with Greeks and IV where available",
-        "5. Primary TSE/TSETMC data sources mostly unavailable (all timeouts >30s); Codal, TSE gateway all timeout errors",
-        "6. Kamandar market report provides supplemental breadth data; cross-check against official sources recommended",
-        "7. Factor coverage: Iranian equity market Partial (2 healthy sources: Donya-e-Eqtesad, Bourse News); commodities Partial (EIA, LBMA)",
-        "8. Price map: accumulation zone 19400-19800 rial, confirmation at 20000, targets 20500-23000, risk line 18800",
-        "9. Data gaps critical: real-time Iranian market data unavailable, comprehensive option chain data missing, institutional flow data absent",
-        "10. Confidence: overall 0.75 but with high uncertainty due to missing primary exchange data and FX opacity"
-      ],
-      "market_regime": "Bull / Base / Transition / Shock: Bullish regime per graph intelligence (score 1.0, confidence 0.75), but conditional on sustained commodity prices and absence of severe geopolitical escalation. Probabilities: Bull 0.45, Base 0.40, Bear 0.15 (sum to 1.0).",
-      "evidence": "Important observations with source, timestamp and confidence:\n- FMLI Q1 1405: sales 663,951,296 million rial (YoY +183%), profit 262% YoY, EPS 691 rial (source: symbol_thesis.فملی, collected 2026-09-04)\n- Graph intelligence: bullish regime score 1.0, confidence 0.75 (source: reports/babimind_graph.json, collected 2026-10-31)\n- Memory runs: 17 consecutive runs show bullish regime for FMLI (source: reports/babimind_memory_context.json, collected 2026-09-08 to 2026-10-31)\n- Option market: BRS options snapshot 309 records, volume and OI available where data exists (source: data/raw/brs_options_snapshot.json, collected 2026-10-31)\n- TSE data: all primary sources timeout (>30s); Codal, TSETMC, Codal all unavailable (source: reports/source_health.json, collected 2026-10-31)\n- Kamandar: market report ok, 60 pages fetched (source: data/raw/kamandar_market_report.json, collected 2026-10-31)\n- Factor coverage: Iranian equity market Partial (2 healthy sources), commodities Partial (EIA, LBMA) (source: reports/babimind_factor_coverage.json)",
-      "macro": "Dollar: free/official rates tracking needed; Gold: tracking global prices; Rates: CBI monetary aggregates unavailable; Inflation: CBI reports needed; Liquidity: monetary base tracking needed; Oil: global prices, OPEC conditions; Policy: Pezeshkian model as scenario layer not certainty",
-      "industry_rotation": "1-day/5-day/20-day flow and relative-strength ranking: Not fully available due to TSE data gaps. Kamandar indices show sector performance but need TSE cross-check. Key sectors: metals_mining, energy_sector, commodity_traders beneficiaries; import_depending_sectors losers per symbol_thesis.فملی.",
-      "symbols": "Best opportunities: FMLI (فملی) with thesis operating-leverage-plus-flow-regime; Risks: copper price pullback, volume deterioration, broader market risk-off; Evidence: strong sales growth, volume-led expansion, copper-price sensitivity, leadership in risk-on regime; Best symbol: فملی; Highest-risk symbol: Any symbol with deteriorating real-money flow while price advances",
-      "funds_legal_persons_smart_money_evidence": "Legal-person activity analysis over 1/5/10/20 sessions where data exists. Major funds by portfolio changes, purchases, sales, NAV, discount/premium and industry weights. Never label move as smart money from real-money flow alone. Combine flow, volume, value, buyer power, multi-day persistence, price action, relative strength, legal-person behavior and industry rotation.",
-      "options": "Best risk/reward setups if applicable: From BRS options snapshot: top contracts include ضseptا9030 (call, strike 1000, OI 25501), ضخود9052 (call, strike 600, OI 8076725), فملی options with strike 26000-30000 range. Hard rule: expired options must never enter active universe. IV available for some contracts but not all; Greeks available for subset only.",
-      "scenarios": "Bull / Base / Bear with probabilities: 🟢 Bull: probability 0.45, target price 23,000 rial, time horizon Q2-Q3 1405; Key triggers: global copper supply disruption, higher copper benchmark, higher realized sales price/margins for FMLI, fund-flow rotation to commodity leaders, technical breakout or continuation, option convexity increases demand for calls; Risk factors: copper price pullback, volume deterioration, broader market risk-off, sales growth rolls over for two consecutive releases, volume falls while revenue supported only by price, copper price breaks down materially and remains weak, stock leadership disappears while market breadth remains healthy; 🟡 Base: probability 0.40, target price 21,500 rial, time horizon Q2 1405; Key triggers: steady sales growth, maintained market leadership, stable commodity prices, controlled geopolitical tension; Risk factors: sales growth slowdown, increased competition, currency volatility; 🔴 Bear: probability 0.15, target price 18,800 rial, time horizon Q1-Q2 1405; Key triggers: copper price breakdown, volume collapse, real money flow deterioration, escalation of US-Iran conflict (Hormuz closure risk), severe sanctions enforcement (OFAC); Risk factors: global risk-off spread, commodity cycle peak, operational execution issues",
-      "decision": {
-        "regime": "Bullish (High Uncertainty)",
-        "primary_strategy": "SCALE-IN BUY on confirmed support/accumulation; avoid chasing extended green candle. Increase exposure after high-volume close above confirmation level (20,000 rial).",
-        "score": 68,
-        "risk": "Medium",
-        "confidence": 75,
-        "best_industry": "metals_mining (including FMLI)",
-        "best_symbol": "فملی",
-        "highest_risk_symbol": "Any symbol with deteriorating real-money flow while price advances",
-        "key_support": "19,400-19,800 rial (accumulation zone)",
-        "key_resistance": "20,000 rial (confirmation level)",
-        "main_catalyst": "Copper price sensitivity + volume-led expansion + risk-on regime confirmation",
-        "main_risk": "Copper price pullback while real-money flow deteriorates sharply",
-        "entry_trigger": "Price closes above 20,000 rial with expanding volume + real-money inflow persists ≥3 sessions",
-        "exit_trigger": "Price breaks below 18,800 rial on expanding volume + real-money outflow accelerates",
-        "invalidation": "Price rises while real-money flow deteriorates sharply OR sales growth rolls over for two consecutive releases OR copper price breaks down materially and remains weak"
-      },
-      "if_i_were_the_investor": {
-        "1_would_you_buy_now_or_wait": "Wait for confirmation: price close above 20,000 rial with expanding volume + real-money inflow persists. Do not chase extended green candles.",
-        "2_if_already_holding_hold_reduce_or_sell": "Hold if already positioned with stop at 18,800 rial. Reduce if real-money flow deteriorates sharply while price advances. Consider partial reduction if copper price breaks down materially.",
-        "3_which_industry_gets_priority": "metals_mining (including FMLI, copper producers) per symbol_thesis operating-leverage-plus-flow-regime",
-        "4_which_industry_should_be_avoided_for_now": "import_depending_sectors (auto, consumer goods) per symbol_thesis losers list",
-        "5_best_opportunity": "FMLI (فملی) on confirmed support/accumulation with volume confirmation",
-        "6_most_dangerous_setup": "Price advancing while real-money flow deteriorates sharply - treat as distribution risk, not accumulation",
-        "7_what_single_event_would_reverse_the_view": "Copper price breaks down materially and remains weak OR sales growth rolls over for two consecutive releases OR real-money flow accelerates downward while price advances"
-      }
-    },
-    "safety_integrity": "This is decision support, not certainty. Never guarantee returns. Never fabricate missing observations. Prefer NO TRADE / WAIT when evidence or risk/reward is inadequate. The objective: Preserve capital → detect regime → detect liquidity rotation → identify edge → enter with controlled risk → manage position → exit by evidence → learn from outcome."
+    "Executive summary": "FMLI shows strong fundamentals (262% YoY profit growth, 183% revenue growth) with consistent bullish regime across 3 memory runs. Market breadth favors positive movers (422 vs 186 negative). However, critical primary exchange data (TSE/TSETMC) is unavailable, preventing definitive technical analysis. Option activity shows reasonable IV (0.65) but lacks synchronized Greeks. Recommend cautious scale-in on accumulation zones with wide stops due to data gaps.",
+    "Market regime": "Bullish (High Uncertainty) - Consistent bullish signals from fundamental metrics and memory consensus, but critical data gaps prevent definitive technical confirmation.",
+    "Evidence": "Key observations with source, timestamp and confidence:\n- FMLI fundamentals: sales_1405_05_million_rial 663951296, sales_ytd 2475226320, q1_eps_rial 691, q1_profit_growth_yoy_pct 262, q1_operating_revenue_growth_yoy_pct 183, q1_gross_profit_growth_yoy_pct 247, price_1405_06_04_rial 19950\n- Market breadth: 422 positive vs 186 negative vs 9 unchanged (kamandar indices)\n- Index kl: +0.51% (+40223), Index frabours: +0.59% (+391), Index him-wazen: +0.32% (+7000)\n- Index chob: -3.00% (-52), Index fan mohandes: +2.35% (+26)\n- FMLI options: 46 contracts, OI 492016, IV 0.6533 (prmaly9044 call strike 26000)\n- Memory: 3 consecutive runs show bullish regime for FMLI with consistent scenario weights\n- Critical gap: TSE/TSETMC all timeout (30+ seconds each)\n- Geopolitical: Hormuz risk, sanctions escalation ongoing\n- Sector divergence: metals +1.81%, wood -3.00%, electricity -0.15%",
+    "Macro": "Dollar: FX opacity (official vs market rates unavailable). Gold: International factors tracked. Rates: Missing Iranian monetary data. Liquidity: Missing CBI aggregates. Oil: Geopolitical risks (Hormuz) present. Policy: Fiscal/monetary policy tracking ongoing.",
+    "Industry rotation": "1-day: metals +1.81%, wood -3.00%, electricity -0.15%. 5-day/20-day: Need primary exchange data. Relative strength: Metals leading, wood lagging. Need TSE breadth data for definitive ranking.",
+    "Symbols": "Best opportunity: FMLI (fundamentally strong, bullish memory consensus, options activity). Best risk: FMLI without confirmed technical breakout (data gap). Highest-risk symbol: Any symbol without primary exchange data confirmation.",
+    "Funds / legal persons / smart-money evidence": "Memory historical runs consistently show bullish bias for FMLI with consistent scenario weights. Institutional flow data unavailable (critical gap). Option activity shows reasonable IV but lacks synchronized Greeks.",
+    "Options": "Best risk/reward setups: Prmaly9044 call (strike 26000, IV 0.6533, OI 72061) if spot confirms direction. Avoid buying high-IV calls solely because copper is bullish. Prioritize delta, IV, theta, open-interest concentration and spread liquidity.",
+    "Scenarios": "Bull: probability 0.45, target 23,000 rial, time horizon Q2-Q3 1405 - Key triggers: copper price breakout, continued volume growth, fund-flow rotation to commodity leaders. Base: probability 0.4, target 21,500 rial, time horizon Q2 1405 - Key triggers: steady sales growth, maintained market leadership, stable commodity prices. Bear: probability 0.15, target 18,800 rial, time horizon Q1-Q2 1405 - Key triggers: copper price breakdown, volume collapse, real-money flow deterioration.",
+    "Decision": "\n- Regime: Bullish (High Uncertainty)\n- Primary strategy: SCALE-IN BUY on confirmed support/accumulation; avoid chasing extended green candles\n- Score: 68/100 (Technical: 15%, Tape/liquidity: 15%, Real/legal flow: 10%, Fundamental: 20%, Industry: 10%, Macro: 10%, Commodities: 5%, News/catalysts: 5%, Political/economic risk: 5%)\n- Risk: Medium (data gaps prevent full assessment, but fundamentals support thesis)\n- Confidence: 70/100 (Memory consensus + fundamental strength, but lowered by critical data gaps)\n- Best industry: Metals/mining (FMLI exposure, copper sensitivity)\n- Best symbol: FMLI (fundamentally strong, but requires technical confirmation)\n- Highest-risk symbol: FMLI without confirmed technical breakout (data gap)\n- Key support: 19400-19800 accumulation zone\n- Key resistance: 20000 confirmation level\n- Main catalyst: FMLI sales growth confirmation + copper price support\n- Main risk: Missing primary exchange data prevents proper risk management\n- Entry trigger: FMLI closes >20,000 with expanding volume + real-money inflow persists ≥3 sessions\n- Exit trigger: FMLI breaks <18,800 on expanding volume + real-money outflow accelerates\n- Invalidation: Price rises while real-money flow deteriorates sharply; sales growth rolls over 2 consecutive releases; volume falls while revenue supported only by price; copper price breaks down materially and remains weak",
+    "If I were the investor": "1. Would you buy now or wait? Wait for technical confirmation (close >20,000 with expanding volume) due to missing primary exchange data, but fundamentals support position with wide stops.\n2. If already holding, hold with wide stop at 18,800; reassess if price breaks support on expanding volume.\n3. Which industry gets priority? Metals/mining (FMLI exposure, copper sensitivity, strong fundamentals).\n4. Which industry should be avoided for now? Import-dependent domestic cyclicals (currently underweighted per memory).\n5. What is the best opportunity? FMLI (strong fundamentals, bullish memory consensus, options activity).\n6. What is the most dangerous setup? FMLI chasing extended green candles without volume confirmation.\n7. What single event would reverse the view? Price breaks below 18,800 on expanding volume with real-money outflow acceleration.",
+    "Safety / integrity": "This is decision support, not certainty. Never guarantee returns. Never fabricate missing observations. Prefer NO TRADE / WAIT when evidence or risk/reward is inadequate. The objective is: Preserve capital → detect regime → detect liquidity rotation → identify edge → enter with controlled risk → manage position → exit by outcome → learn from outcome.",
+    "Primary action": "SCALE-IN BUY on FMLI only on confirmed support/accumulation (19400-19800 zone); avoid chasing extended green candles. Set risk line at 18,800. Targets: 20,500 / 21,500 / 23,000. Expected risk/reward: Favorable on accumulation entry, but high uncertainty from data gaps. Invalidation: Price rises while real-money flow deteriorates sharply; sales growth rolls over 2 consecutive releases; volume falls while revenue supported only by price; copper price breaks down materially and remains weak.",
+    "Conditional playbook": "IF FMLI closes >20,000 with expanding volume + real-money inflow persists ≥3 sessions → THEN increase bullish confidence and consider staged entry. IF FMLI breaks <18,800 + real-money outflow accelerates + industry relative strength deteriorates → THEN stop new buying and reduce risk.",
+    "Tomorrow mode": "Before open: Data and overnight events to check. Open: Signals to confirm or reject the setup. Intraday: IF/THEN actions for bullish and bearish paths. Close: What changed and what must be carried into the next session.",
+    "Anti-bias rule": "Challenge the user's thesis. Always list evidence FOR and AGAINST it. If the evidence contradicts the user's view, say so directly.",
+    "Required final report": "See full report above"
   }
 }
