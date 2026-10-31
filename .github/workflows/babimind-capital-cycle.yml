@@ -21,6 +21,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+      - name: Collect live US macro factors
+        run: python scripts/collect_babimind_cycle_factors.py
       - name: Run capital cycle game with validated observations if present
         run: |
           if [ -f data/latest/babimind_cycle_observations.json ]; then
@@ -34,10 +36,12 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: babimind-capital-cycle
-          path: reports/babimind_cycle_game_v3.json
+          path: |
+            reports/babimind_cycle_game_v3.json
+            data/latest/babimind_cycle_observations.json
       - name: Commit model output
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reports/babimind_cycle_game_v3.json
+          git add reports/babimind_cycle_game_v3.json data/latest/babimind_cycle_observations.json
           git diff --cached --quiet || (git commit -m "chore: refresh capital cycle scenario output" && git push)
