@@ -1,7 +1,7 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 15,
-  "context_runs": 15,
+  "historical_runs_available": 16,
+  "context_runs": 16,
   "recent_runs": [
     {
       "timestamp": "2026-09-08T13:26:25.411222+00:00",
@@ -1332,6 +1332,17 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "67c891b1b3b7604e70a8"
+    },
+    {
+      "timestamp": "2026-10-29T16:17:29.304049+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": "Bullish (High Uncertainty)",
+      "scenarios": "Bull: probability 0.45, target 23,000 rial, time horizon Q2-Q3 1405; Base: probability 0.4, target 21,500 rial, time horizon Q2 1405; Bear: probability 0.15, target 18,800 rial, time horizon Q1-Q2 1405; Probabilities sum to 1.0",
+      "market_implications": null,
+      "confidence": 65,
+      "data_gaps": [],
+      "fingerprint": "492e266de3829d62069d"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."
