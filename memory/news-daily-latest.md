@@ -1,10 +1,28 @@
-# Daily Economic News Digest — 2026-11-01 11:37 UTC
+# Daily Economic News Digest — 2026-11-01 14:39 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **30** · Total stored: **2500**
+> New items this run: **19** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | As Toman Hits 204,000 and Fuel Runs Dry, Iran’s Clerical Regime Faces Mounting Storm - National Council of Resistance of | National Council of Resistance of Iran - NCRI | Tue, 25 Aug 2026 07:00 |
+| oil | Oil prices rise on supply concerns as Houthis attack Saudi Arabia - Business Standard | Business Standard | Fri, 30 Oct 2026 03:15 |
+| oil | Oil jumps 2%, settles at 6-month highs on fears of escalation in Iran - CNBC | CNBC | Fri, 30 Oct 2026 02:36 |
+| oil | Crude oil prices likely to remain volatile with upward bias amid US-Iran tensions: Analysts - Moneycontrol.com | Moneycontrol.com | Sun, 01 Nov 2026 11:27 |
+| geopolitics | Saudi Arabia, UAE urge Trump to maintain pressure on Iran - WSJ - Iran International | Iran International | Fri, 25 Sep 2026 07:00 |
+| geopolitics | Iran touts military response as US maintains blockade, hits tankers - Al Jazeera | Al Jazeera | Sun, 06 Sep 2026 07:00 |
+| geopolitics | Former Trump Economic Adviser: Iran's Oil Exports Have Fallen to Zero. Here's What It Could Mean for Oil Prices - 24/7 W | 24/7 Wall St. | Sun, 06 Sep 2026 07:00 |
+| geopolitics | Iran’s Oil Exports Collapse as Hormuz Standoff Drags On - Yahoo Finance | Yahoo Finance | Tue, 08 Sep 2026 07:00 |
+| geopolitics | US Blockade Has Succeeded In Stalling Iranian Oil Exports For The Past Seven Weeks - i24NEWS | i24NEWS | Tue, 01 Sep 2026 07:00 |
+| geopolitics | Iran, Qatar hold Hormuz talks as US blockade squeezes Iran oil exports - France 24 | France 24 | Thu, 27 Aug 2026 07:00 |
+| geopolitics | U.S. Navy blockade slashes Iran oil exports as Trump administration shifts to economic warfare - CNBC | CNBC | Fri, 28 Aug 2026 07:00 |
+| geopolitics | Blockade succeeds where sanctions failed as Iran oil exports stall - Reuters | Reuters | Tue, 01 Sep 2026 07:00 |
+| pezeshkian | Iranian president slams parliament amid economic crisis - Iran International | Iran International | Sun, 20 Oct 2024 07:00 |
+| pezeshkian | Türkiye has higher living standard than Iran without oil: Pezeshkian - Türkiye Today | Türkiye Today | Thu, 23 Oct 2025 07:00 |
+| pezeshkian | Iran in 'full-scale war' with US, economy could erode gains: Pezeshkian - Türkiye Today | Türkiye Today | Mon, 20 Jul 2026 07:00 |
+| pezeshkian | China’s support for Iran shows its limits as US ramps up pressure on Tehran - Al Jazeera | Al Jazeera | Thu, 03 Sep 2026 07:00 |
+| pezeshkian | Iran's president admits 'we have many problems' as the U.S. blockade chokes its economy - Fortune | Fortune | Sun, 30 Aug 2026 07:00 |
+| fx | The Devaluation of Iran’s Rial Has Accelerated - Iran Focus | Iran Focus | Mon, 10 Feb 2025 08:00 |
 | macro_monetary | Canada’s inflation rate jumps to 2.4%, fuelled by gas price shock - Financial Post | Financial Post | Mon, 20 Apr 2026 07:00 |
 | macro_monetary | Brazil to Subsidize Gasoline as Lula Ramps Up Election Stimulus - Bloomberg.com | Bloomberg.com | Wed, 13 May 2026 07:00 |
 | macro_monetary | Iranian State Media Warns of Social Explosion Over Looming Fuel Price Hikes - National Council of Resistance of Iran - N | National Council of Resistance of Iran - NCRI | Tue, 25 Aug 2026 07:00 |
@@ -27,28 +45,10 @@
 | pezeshkian | 'We will not endure' — Top Iranian leaders signal they are running out of time as economy crumbles ahead of Trump's next | Fortune | Sat, 22 Aug 2026 07:00 |
 | pezeshkian | Embattled Iranian president admits crippling US sanctions suffocating Tehran: ‘We are in a war situation’ - New York Pos | New York Post | Sat, 29 Aug 2026 07:00 |
 | pezeshkian | Shafaq News..Pezeshkian: Iran will raise gasoline prices - شفق نيوز | شفق نيوز | Fri, 28 Aug 2026 07:00 |
-| pezeshkian | Pezeshkian says economic pressure could erode public support - Iran International | Iran International | Mon, 20 Jul 2026 07:00 |
-| pezeshkian | Can Iran retaliate against countries that join US ‘economic war’? - Al Jazeera | Al Jazeera | Sun, 23 Aug 2026 07:00 |
-| pezeshkian | Iran’s president admits country faces ‘many problems,’ insists deal is best way forward - The Times of Israel | The Times of Israel | Sun, 23 Aug 2026 07:00 |
-| fx | One US dollar now costs 2 million rials in Iran, and here’s what it can buy - Al Jazeera | Al Jazeera | Wed, 26 Aug 2026 07:00 |
-| bourse | Iran’s Economy Is Bleak. Its Stock Market Is Soaring. (Published 2020) - The New York Times | The New York Times | Thu, 13 Feb 2020 08:00 |
-| oil | واکنش قیمت نفت به احتمال مذاکرات صلح میان ایران و آمریکا - vista.ir | vista.ir | Thu, 29 Oct 2026 21:37 |
-| oil | نفت برنت از ۱۱۳ دلار گذشت │ حمله در هرمز دوباره نگرانی بازارها درباره امنیت صادرات نفت جهان را بالا برد - نبض قیمت | نبض قیمت | Sat, 31 Oct 2026 21:13 |
-| oil | بسنت: جهان می‌تواند بدون نفت ایران زندگی کند، اما ایران نمی‌تواند بدون صادرات نفت به حیاتش ادامه دهد - اقتصادنیوز سایت م | اقتصادنیوز سایت مرجع اقتصاد ایران | Sun, 01 Nov 2026 09:37 |
-| geopolitics | $100 oil? Prolonged Hormuz closure could spark a 1970s-style energy shock - CNBC | CNBC | Sun, 01 Mar 2026 08:00 |
-| pezeshkian | Iran’s central bank warns economy may take 12 years to rebuild after war - Iran International | Iran International | Tue, 14 Apr 2026 07:00 |
-| pezeshkian | Iran's Ghalibaf welcomes China’s rejection of new US sanctions, Pezeshkian says US economic pressure would 'fail' - Gulf | Gulf News | Thu, 27 Aug 2026 07:00 |
-| pezeshkian | Pezeshkian says Iran’s economic problems multiply as oil revenues fall - Saudi Gazette | Saudi Gazette | Sat, 15 Aug 2026 07:00 |
-| pezeshkian | Pezeshkian says Iran’s trade has fallen by 25–35% - UA.NEWS | UA.NEWS | Sat, 29 Aug 2026 07:00 |
-| pezeshkian | Iran’s president defends US talks as he lays bare economic strain - Iran International | Iran International | Mon, 18 May 2026 07:00 |
-| pezeshkian | Pezeshkian says Iranians must accept inflation as country is in war - Iran International | Iran International | Mon, 18 May 2026 07:00 |
-| pezeshkian | President's economic reality check fuels Iran's US deal debate - Iran International | Iran International | Thu, 25 Jun 2026 07:00 |
-| pezeshkian | Iran trade falls as Supreme Leader Khamenei urges less reliance on the U.S. dollar - CNBC | CNBC | Sat, 29 Aug 2026 07:00 |
-| pezeshkian | Iran's Pezeshkian admits US sanctions are hurting economy - Middle East Eye | Middle East Eye | Sat, 29 Aug 2026 07:00 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-01 11:37 UTC | 30 new | 2500 total
+NEWS_DIGEST | 2026-11-01 14:39 UTC | 19 new | 2500 total
