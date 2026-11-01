@@ -1,7 +1,7 @@
 {
   "source": "finpy-tse",
   "upstream": "https://github.com/ARahimiQuant/finpy-tse",
-  "collected_at": "2026-10-31",
+  "collected_at": "2026-11-01",
   "status": {
     "source": "finpy-tse",
     "upstream": "https://github.com/ARahimiQuant/finpy-tse",
@@ -14,48 +14,56 @@
       "price_history": [],
       "ri_history": [],
       "price_request": {
-        "status": "ok",
-        "elapsed_seconds": 0.067
+        "status": "timeout",
+        "elapsed_seconds": 20.003,
+        "error": "فملی price history timed out after 20s; child process terminated"
       },
       "ri_request": {
-        "status": "ok",
-        "elapsed_seconds": 0.005
+        "status": "timeout",
+        "elapsed_seconds": 20.003,
+        "error": "فملی RI history timed out after 20s; child process terminated"
       }
     },
     "وبملت": {
       "price_history": [],
       "ri_history": [],
       "price_request": {
-        "status": "ok",
-        "elapsed_seconds": 0.005
+        "status": "timeout",
+        "elapsed_seconds": 20.003,
+        "error": "وبملت price history timed out after 20s; child process terminated"
       },
       "ri_request": {
-        "status": "ok",
-        "elapsed_seconds": 0.005
+        "status": "timeout",
+        "elapsed_seconds": 20.003,
+        "error": "وبملت RI history timed out after 20s; child process terminated"
       }
     },
     "شپنا": {
       "price_history": [],
       "ri_history": [],
       "price_request": {
-        "status": "ok",
-        "elapsed_seconds": 0.005
+        "status": "timeout",
+        "elapsed_seconds": 20.003,
+        "error": "شپنا price history timed out after 20s; child process terminated"
       },
       "ri_request": {
-        "status": "ok",
-        "elapsed_seconds": 0.005
+        "status": "timeout",
+        "elapsed_seconds": 20.003,
+        "error": "شپنا RI history timed out after 20s; child process terminated"
       }
     },
     "خساپا": {
       "price_history": [],
       "ri_history": [],
       "price_request": {
-        "status": "ok",
-        "elapsed_seconds": 0.005
+        "status": "timeout",
+        "elapsed_seconds": 20.004,
+        "error": "خساپا price history timed out after 20s; child process terminated"
       },
       "ri_request": {
-        "status": "ok",
-        "elapsed_seconds": 0.005
+        "status": "timeout",
+        "elapsed_seconds": 20.004,
+        "error": "خساپا RI history timed out after 20s; child process terminated"
       }
     }
   },
@@ -67,6 +75,54 @@
   },
   "collection_status": "degraded",
   "failures": [
+    {
+      "scope": "فملی.price_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.003,
+      "error": "فملی price history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "فملی.ri_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.003,
+      "error": "فملی RI history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "وبملت.price_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.003,
+      "error": "وبملت price history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "وبملت.ri_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.003,
+      "error": "وبملت RI history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "شپنا.price_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.003,
+      "error": "شپنا price history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "شپنا.ri_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.003,
+      "error": "شپنا RI history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "خساپا.price_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.004,
+      "error": "خساپا price history timed out after 20s; child process terminated"
+    },
+    {
+      "scope": "خساپا.ri_request",
+      "status": "timeout",
+      "elapsed_seconds": 20.004,
+      "error": "خساپا RI history timed out after 20s; child process terminated"
+    },
     {
       "scope": "market_watch",
       "status": "timeout",
