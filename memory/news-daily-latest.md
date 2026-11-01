@@ -1,10 +1,31 @@
-# Daily Economic News Digest — 2026-11-01 14:39 UTC
+# Daily Economic News Digest — 2026-11-01 16:11 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **19** · Total stored: **2500**
+> New items this run: **21** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | Brent remains around $115; Oil remains high as fears of renewed US strikes on Iran grow - CNBC TV18 | CNBC TV18 | Fri, 30 Oct 2026 01:09 |
+| geopolitics | Iran crude exports through Hormuz stall for first time on record - Reuters - Iran International | Iran International | Tue, 01 Sep 2026 07:00 |
+| geopolitics | Iran war could last deep into 2027 as the Strait of Hormuz isn't that closed, allowing more oil out - Fortune | Fortune | Sun, 23 Aug 2026 07:00 |
+| geopolitics | Iran's Oil Blockade Trilemma: Endure, Escalate or Talk - Kpler | Kpler | Thu, 20 Aug 2026 07:00 |
+| geopolitics | COMMENTARY: Oil market starts pricing in a prolonged Hormuz crisis - Reuters | Reuters | Tue, 18 Aug 2026 07:00 |
+| geopolitics | Iran's Hormuz leverage wanes as US economic squeeze bites - Reuters | Reuters | Sun, 06 Sep 2026 07:00 |
+| geopolitics | Iran’s oil exports near zero as Persian Gulf flows recover - Iran International | Iran International | Fri, 28 Aug 2026 07:00 |
+| geopolitics | Iranian oil offers to Chinese buyers fall as US blockade bites, sources say - Reuters | Reuters | Fri, 21 Aug 2026 07:00 |
+| geopolitics | The Gulf Isn’t Ready for a Renewed Iran War - Foreign Policy | Foreign Policy | Fri, 30 Oct 2026 18:08 |
+| geopolitics | Collapsing Currency, Soaring Inflation and No Oil Exports. The Treasury Department Says Economic Pressure on Iran Works. | Yahoo | Fri, 30 Oct 2026 20:37 |
+| geopolitics | How Trump Can Fight Iran After the Midterms - The Free Press | The Free Press | Fri, 30 Oct 2026 14:22 |
+| geopolitics | Iran says US tone shifts but demands still block talks - Iran International | Iran International | Sat, 31 Oct 2026 23:26 |
+| geopolitics | Iran and US explore diplomacy amid rising threats of war - Al Jazeera | Al Jazeera | Sun, 01 Nov 2026 13:12 |
+| pezeshkian | US-Israel-Iran War Live News: Pezeshkian Admits US Sanctions Are ‘Hurting’ Iran’s Economy as Trade Falls 35% – Inflation | The Sunday Guardian | Sun, 30 Aug 2026 07:00 |
+| pezeshkian | US-Iran War: ‘Not going to bow our heads,’ says Pezeshkian; Iran has not compromised on any MoU clause - Livemint | Livemint | Sun, 23 Aug 2026 07:00 |
+| pezeshkian | Pezeshkian: Recent agreements have brought significant economic, trade gains to Iran - وكالة سبأ | وكالة سبأ | Wed, 01 Jul 2026 07:00 |
+| bourse | TEDPIX climbs 12,500 points on Tuesday - Tehran Times | Tehran Times | Tue, 19 Oct 2021 07:00 |
+| bourse | Tehran Stocks Surge by 83,000 Points as Comprehensive Regulatory Package Drives Post-Closure Rally - ISNA News Agency | ISNA News Agency | Sun, 31 May 2026 07:00 |
+| bourse | Iranian stock market reports historic trade as shares surge - PressTV | PressTV | Sat, 30 May 2026 07:00 |
+| oil | قدس آنلاین - جهش قیمت نفت برنت به بیش از ۱۱۶ دلار - صاحب‌خبر | صاحب‌خبر | Fri, 30 Oct 2026 05:59 |
+| oil | بسنت: جهان می‌تواند بدون نفت ایران زندگی کند، اما ایران نمی‌تواند بدون صادرات نفت به حیاتش ادامه دهد - vista.ir | vista.ir | Sun, 01 Nov 2026 10:01 |
 | macro_monetary | As Toman Hits 204,000 and Fuel Runs Dry, Iran’s Clerical Regime Faces Mounting Storm - National Council of Resistance of | National Council of Resistance of Iran - NCRI | Tue, 25 Aug 2026 07:00 |
 | oil | Oil prices rise on supply concerns as Houthis attack Saudi Arabia - Business Standard | Business Standard | Fri, 30 Oct 2026 03:15 |
 | oil | Oil jumps 2%, settles at 6-month highs on fears of escalation in Iran - CNBC | CNBC | Fri, 30 Oct 2026 02:36 |
@@ -24,31 +45,10 @@
 | pezeshkian | Iran's president admits 'we have many problems' as the U.S. blockade chokes its economy - Fortune | Fortune | Sun, 30 Aug 2026 07:00 |
 | fx | The Devaluation of Iran’s Rial Has Accelerated - Iran Focus | Iran Focus | Mon, 10 Feb 2025 08:00 |
 | macro_monetary | Canada’s inflation rate jumps to 2.4%, fuelled by gas price shock - Financial Post | Financial Post | Mon, 20 Apr 2026 07:00 |
-| macro_monetary | Brazil to Subsidize Gasoline as Lula Ramps Up Election Stimulus - Bloomberg.com | Bloomberg.com | Wed, 13 May 2026 07:00 |
-| macro_monetary | Iranian State Media Warns of Social Explosion Over Looming Fuel Price Hikes - National Council of Resistance of Iran - N | National Council of Resistance of Iran - NCRI | Tue, 25 Aug 2026 07:00 |
-| oil | Tanker attack in Strait of Hormuz sends oil prices sharply higher - The New Voice of Ukraine | The New Voice of Ukraine | Fri, 30 Oct 2026 11:56 |
-| oil | US Oil Replenishment Could Support Crude Prices Through 2027, MBSB Research - BusinessToday Malaysia | BusinessToday Malaysia | Sat, 31 Oct 2026 04:35 |
-| oil | Oil prices fall as peace hopes offset fears of growing Middle East conflict - Arab News | Arab News | Thu, 29 Oct 2026 07:13 |
-| oil | Crude oil prices likely to remain volatile with upward bias amid US-Iran tensions: Analysts - Moneycontrol.com | Moneycontrol.com | Sun, 01 Nov 2026 11:27 |
-| oil | Oil Prices Rebound as Houthi Attack on Saudi Refinery Renews Supply Fears – WTI Climbs Above $101, Brent Near $115 - Ene | EnergyNow.com | Wed, 28 Oct 2026 11:30 |
-| oil | Brent Crude Oil Price Forecast 2026: Supply Crunch Outlook - Intellectia AI | Intellectia AI | Sun, 01 Nov 2026 00:42 |
-| oil | Chevron Raises Exploration Spending By 50% - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sat, 31 Oct 2026 23:00 |
-| oil | U.S. Intelligence China Could Put Laser Weapons in Space by 2030 - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sat, 31 Oct 2026 21:00 |
-| pezeshkian | The economic roots of Iran’s unrest - The Japan Times | The Japan Times | Tue, 13 Jan 2026 08:00 |
-| pezeshkian | Iran president says government will stop subsidized dollar handouts - Iran International | Iran International | Thu, 01 Jan 2026 08:00 |
-| pezeshkian | Iran War Has a “Second Front”—and Tehran Has Already Lost It - The Heritage Foundation | The Heritage Foundation | Tue, 14 Apr 2026 20:31 |
-| pezeshkian | US President Trump, Iran's Pezeshkian sign deal to end war, open Hormuz strait - Khaleej Times | Khaleej Times | Thu, 18 Jun 2026 07:00 |
-| pezeshkian | War hits Iran’s economy as food inflation surpasses 115% - IDNFinancials | IDNFinancials | Mon, 11 May 2026 07:00 |
-| pezeshkian | Masoud Pezeshkian spoke about Iran's economic difficulties - Baku.ws | Baku.ws | Sun, 16 Aug 2026 07:00 |
-| pezeshkian | Iran Oil Exports Plunge 80 Percent, Tehran's Economy Hit by U.S. Sanctions - VOI.ID | VOI.ID | Sun, 30 Aug 2026 02:37 |
-| pezeshkian | Live Updates: Latest from Israel, Iran, and the Middle East - The Jerusalem Post | The Jerusalem Post | Fri, 21 Aug 2026 07:00 |
-| pezeshkian | 'We will not endure' — Top Iranian leaders signal they are running out of time as economy crumbles ahead of Trump's next | Fortune | Sat, 22 Aug 2026 07:00 |
-| pezeshkian | Embattled Iranian president admits crippling US sanctions suffocating Tehran: ‘We are in a war situation’ - New York Pos | New York Post | Sat, 29 Aug 2026 07:00 |
-| pezeshkian | Shafaq News..Pezeshkian: Iran will raise gasoline prices - شفق نيوز | شفق نيوز | Fri, 28 Aug 2026 07:00 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-01 14:39 UTC | 19 new | 2500 total
+NEWS_DIGEST | 2026-11-01 16:11 UTC | 21 new | 2500 total

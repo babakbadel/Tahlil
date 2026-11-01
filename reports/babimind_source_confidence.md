@@ -7,9 +7,7 @@ Confidence is operational trust, not truth probability.
 | IMF Data API | ok | 0.600 | C | no |
 | World Bank API | ok | 0.600 | C | no |
 | FRED | ok | 0.600 | C | no |
-| ECB Data API | ok | 0.600 | C | no |
 | EIA | ok | 0.600 | C | no |
-| JODI | ok | 0.600 | C | no |
 | World Gold Council | ok | 0.600 | C | no |
 | CFTC | ok | 0.600 | C | no |
 | UNCTADstat | ok | 0.600 | C | no |
@@ -18,6 +16,7 @@ Confidence is operational trust, not truth probability.
 | World Bank Iran | ok | 0.600 | C | no |
 | IMF Iran | ok | 0.600 | C | no |
 | UNData | ok | 0.600 | C | no |
+| FAO Iran | ok | 0.600 | C | no |
 | ICE Markets | ok | 0.600 | C | no |
 | Trading Economics | ok | 0.600 | C | no |
 | CEIC Iran | ok | 0.600 | C | no |
@@ -59,10 +58,8 @@ Confidence is operational trust, not truth probability.
 | Washington Institute | ok | 0.600 | C | no |
 | ACLED | ok | 0.600 | C | no |
 | UN Security Council | ok | 0.600 | C | no |
-| European Commission | ok | 0.600 | C | no |
 | NATO | ok | 0.600 | C | no |
 | OPCW | ok | 0.600 | C | no |
-| AFP | ok | 0.600 | C | no |
 | BBC | ok | 0.600 | C | no |
 | Al Jazeera | ok | 0.600 | C | no |
 | France 24 | ok | 0.600 | C | no |
@@ -84,13 +81,10 @@ Confidence is operational trust, not truth probability.
 | CSIS | ok | 0.600 | C | no |
 | RUSI | ok | 0.600 | C | no |
 | IRNA | ok | 0.600 | C | no |
-| ISNA | ok | 0.600 | C | no |
 | Eghtesad Online | ok | 0.600 | C | no |
 | EcoIran | ok | 0.600 | C | no |
 | Tejarat News | ok | 0.600 | C | no |
 | Asr Iran | ok | 0.600 | C | no |
-| Raja News | ok | 0.600 | C | no |
-| Aftab News | ok | 0.600 | C | no |
 | CNN | ok | 0.600 | C | no |
 | France 24 | ok | 0.600 | C | no |
 | DW | ok | 0.600 | C | no |
@@ -108,8 +102,6 @@ Confidence is operational trust, not truth probability.
 | Der Spiegel | ok | 0.600 | C | no |
 | Le Monde | ok | 0.600 | C | no |
 | La Tribune | ok | 0.600 | C | no |
-| TASS | ok | 0.600 | C | no |
-| Interfax | ok | 0.600 | C | no |
 | The Moscow Times | ok | 0.600 | C | no |
 | Middle East Eye | ok | 0.600 | C | no |
 | Middle East Monitor | ok | 0.600 | C | no |
@@ -125,72 +117,78 @@ Confidence is operational trust, not truth probability.
 | Economic Times India | ok | 0.600 | C | no |
 | Channel NewsAsia | ok | 0.600 | C | no |
 | Straits Times | ok | 0.600 | C | no |
-| Korea Herald | ok | 0.600 | C | no |
+| Yonhap | ok | 0.600 | C | no |
 | Africanews | ok | 0.600 | C | no |
 | News24 | ok | 0.600 | C | no |
-| Daily Maverick | ok | 0.600 | C | no |
 | Folha de S.Paulo | ok | 0.600 | C | no |
 | Clarin | ok | 0.600 | C | no |
 | La Nacion Argentina | ok | 0.600 | C | no |
 | El Comercio Peru | ok | 0.600 | C | no |
 | El Universal Mexico | ok | 0.600 | C | no |
-| BIS Statistics | ok | 0.540 | C | no |
+| ECB Data API | ok | 0.540 | C | no |
+| JODI | ok | 0.540 | C | no |
+| USGS Minerals | ok | 0.540 | C | no |
 | LBMA | ok | 0.540 | C | no |
+| Central Bank of Iran | ok | 0.540 | C | no |
 | Ministry of Petroleum | ok | 0.540 | C | no |
 | SHANA | ok | 0.540 | C | no |
 | Iran Open Data | ok | 0.540 | C | no |
-| FAO Iran | ok | 0.540 | C | no |
 | Shanghai Futures Exchange | ok | 0.540 | C | no |
 | Global Rates | ok | 0.540 | C | no |
 | Kamandar Market Report | ok | 0.540 | C | no |
 | Ministry of Economic Affairs and Finance | ok | 0.540 | C | no |
-| National Iranian Oil Company | ok | 0.540 | C | no |
-| Eurostat | ok | 0.540 | C | no |
+| China National Bureau of Statistics | ok | 0.540 | C | no |
 | China Customs | ok | 0.540 | C | no |
 | India RBI | ok | 0.540 | C | no |
 | India MOSPI | ok | 0.540 | C | no |
 | Deutsche Bundesbank | ok | 0.540 | C | no |
 | Central Bank of Russia | ok | 0.540 | C | no |
 | EEX | ok | 0.540 | C | no |
-| ACER | ok | 0.540 | C | no |
 | UK FCDO | ok | 0.540 | C | no |
+| AFP | ok | 0.540 | C | no |
 | Nikkei Asia | ok | 0.540 | C | no |
 | Kamandar | ok | 0.540 | C | no |
+| ISNA | ok | 0.540 | C | no |
 | Mehr News | ok | 0.540 | C | no |
 | YJC | ok | 0.540 | C | no |
 | PANA | ok | 0.540 | C | no |
-| IMNA | ok | 0.540 | C | no |
 | SNN | ok | 0.540 | C | no |
 | Donya-e-Eqtesad | ok | 0.540 | C | no |
 | Eghtesad News | ok | 0.540 | C | no |
 | Bourse News | ok | 0.540 | C | no |
+| Bourse24 | ok | 0.540 | C | no |
 | Sedaye Bourse | ok | 0.540 | C | no |
 | Iran Economist | ok | 0.540 | C | no |
 | Khabar Online | ok | 0.540 | C | no |
+| Tabnak | ok | 0.540 | C | no |
 | Entekhab | ok | 0.540 | C | no |
 | Fararu | ok | 0.540 | C | no |
-| Alef | ok | 0.540 | C | no |
 | Mashregh News | ok | 0.540 | C | no |
+| Raja News | ok | 0.540 | C | no |
+| Aftab News | ok | 0.540 | C | no |
 | Hamshahri Online | ok | 0.540 | C | no |
+| TASS | ok | 0.540 | C | no |
 | RIA Novosti | ok | 0.540 | C | no |
+| Interfax | ok | 0.540 | C | no |
 | Global Times | ok | 0.540 | C | no |
-| Yonhap | ok | 0.540 | C | no |
+| Xinhua | ok | 0.540 | C | no |
+| Korea Herald | ok | 0.540 | C | no |
+| Daily Maverick | ok | 0.540 | C | no |
 | Brazil Journal | ok | 0.540 | C | no |
-| USGS Minerals | ok | 0.450 | D | no |
-| Central Bank of Iran | ok | 0.450 | D | no |
+| BIS Statistics | ok | 0.450 | D | no |
 | US Treasury | ok | 0.450 | D | no |
-| China National Bureau of Statistics | ok | 0.450 | D | no |
+| Eurostat | ok | 0.450 | D | no |
 | Central Bank of Turkey | ok | 0.450 | D | no |
-| US Treasury OFAC | ok | 0.450 | D | no |
-| Bourse24 | ok | 0.450 | D | no |
-| Tabnak | ok | 0.450 | D | no |
+| ACER | ok | 0.450 | D | no |
+| European Commission | ok | 0.450 | D | no |
+| IMNA | ok | 0.450 | D | no |
 | RT | ok | 0.450 | D | no |
 | Statistical Center of Iran | unavailable | 0.150 | D | no |
 | Iran Chamber of Commerce | unavailable | 0.150 | D | no |
 | Iran Chamber Research Center | unavailable | 0.150 | D | no |
-| SAMA | unavailable | 0.150 | D | no |
 | Tasnim | unavailable | 0.150 | D | no |
 | Iran Energy Exchange | unavailable | 0.135 | D | no |
+| National Iranian Oil Company | unavailable | 0.135 | D | no |
 | Fars | unavailable | 0.135 | D | no |
 | TSE Official Gateway | unavailable | 0.113 | D | no |
 | TSETMC CDN Market Watch | unavailable | 0.113 | D | no |
@@ -218,18 +216,18 @@ Confidence is operational trust, not truth probability.
 | Iran Tax Administration | unavailable | 0.113 | D | no |
 | Iran Ports and Maritime Organization | unavailable | 0.113 | D | no |
 | Sena | unavailable | 0.113 | D | no |
+| SAMA | unavailable | 0.113 | D | no |
 | Turkish Statistical Institute | unavailable | 0.113 | D | no |
 | Rosstat | unavailable | 0.113 | D | no |
 | COMEX | unavailable | 0.113 | D | no |
 | NYMEX | unavailable | 0.113 | D | no |
+| US Treasury OFAC | unavailable | 0.113 | D | no |
 | Shabestan | unavailable | 0.113 | D | no |
+| Alef | unavailable | 0.113 | D | no |
 | Washington Post | unavailable | 0.113 | D | no |
-| Xinhua | unavailable | 0.113 | D | no |
-| IMF SDMX Central | error | 0.060 | D | no |
 | OECD Data | error | 0.060 | D | no |
 | IEA Data | error | 0.060 | D | no |
 | OPEC | error | 0.060 | D | no |
-| UN Comtrade | error | 0.060 | D | no |
 | ILOStat | error | 0.060 | D | no |
 | Reuters | error | 0.060 | D | no |
 | UNDP Data | error | 0.060 | D | no |
@@ -277,6 +275,8 @@ Confidence is operational trust, not truth probability.
 | Indian Express | error | 0.060 | D | no |
 | The EastAfrican | error | 0.060 | D | no |
 | The Block | error | 0.060 | D | no |
+| IMF SDMX Central | error | 0.054 | D | no |
+| UN Comtrade | error | 0.054 | D | no |
 | PBOC | error | 0.054 | D | no |
 
 ## Routing
@@ -286,15 +286,15 @@ Primary selection uses the highest-confidence healthy source in each topic/type 
 - **monetary** → primary: `Federal Reserve`; fallback: Bank of England, Bank of Japan, Swiss National Bank
 - **rates_fx** → primary: `ECB Data API`; fallback: Global Rates
 - **energy** → primary: `EIA`; fallback: Argus Media, OPIS, Offshore Energy
-- **oil** → primary: `JODI`; fallback: OilPrice, Rigzone, OPEC
-- **commodities** → primary: `Shanghai Futures Exchange`; fallback: USGS Minerals, S&P Global Commodity Insights, Platts
+- **oil** → primary: `OilPrice`; fallback: Rigzone, JODI, OPEC
+- **commodities** → primary: `USGS Minerals`; fallback: Shanghai Futures Exchange, S&P Global Commodity Insights, Platts
 - **gold** → primary: `World Gold Council`; fallback: Kitco, LBMA
 - **positioning** → primary: `CFTC`; fallback: -
 - **trade** → primary: `UNCTADstat`; fallback: WTO, US Census Bureau, China Customs
 - **agriculture** → primary: `FAOSTAT`; fallback: FAO Iran
 - **labor** → primary: `ILOStat`; fallback: BLS
 - **health** → primary: `WHO Data`; fallback: -
-- **events** → primary: `AFP`; fallback: BBC, France 24, DW
+- **events** → primary: `BBC`; fallback: France 24, DW, AFP
 - **iran_market** → primary: `Kamandar`; fallback: TSE Official Gateway, TSETMC CDN Market Watch, TSETMC Instrument Search
 - **funds** → primary: `TSETMC Funds`; fallback: Morningstar
 - **money_flow** → primary: `TSETMC Client Type`; fallback: -
@@ -302,7 +302,7 @@ Primary selection uses the highest-confidence healthy source in each topic/type 
 - **ownership** → primary: `TSETMC Shareholders`; fallback: -
 - **market_breadth** → primary: `TSETMC Trade Top`; fallback: -
 - **price_history** → primary: `TSETMC Price History`; fallback: -
-- **iran_macro** → primary: `World Bank Iran`; fallback: IMF Iran, CEIC Iran, Iran Open Data
+- **iran_macro** → primary: `World Bank Iran`; fallback: IMF Iran, CEIC Iran, Central Bank of Iran
 - **iran_commodities** → primary: `Iran Mercantile Exchange`; fallback: -
 - **iran_energy** → primary: `Ministry of Petroleum`; fallback: SHANA, Iran Energy Exchange, Iran Power Grid Management
 - **iran_trade** → primary: `Iran Customs`; fallback: Iran Ports and Maritime Organization
@@ -342,4 +342,4 @@ Primary selection uses the highest-confidence healthy source in each topic/type 
 - **china** → primary: `South China Morning Post`; fallback: -
 - **asia** → primary: `Nikkei Asia`; fallback: -
 - **crypto** → primary: `CoinDesk`; fallback: -
-- **news_events** → primary: `IRNA`; fallback: ISNA, Eghtesad Online, EcoIran
+- **news_events** → primary: `IRNA`; fallback: Eghtesad Online, EcoIran, Tejarat News
