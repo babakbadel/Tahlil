@@ -5,6 +5,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Sequence
 import uuid
+import math
 
 from .models import (
     DecisionRecord,
@@ -47,12 +48,28 @@ class DecisionEngine:
         scenarios: Sequence[dict] | None = None,
         tags: Sequence[str] = (),
         notes: str = "",
+        decision_id: str | None = None,
     ) -> DecisionRecord:
         """Create a DecisionRecord at as_of.
 
         If scenarios is not provided, a neutral placeholder is used.
         Callers should supply explicit scenarios for real analysis.
         """
+        timestamp = datetime.fromisoformat(as_of.replace('Z', '+00:00'))
+        timestamp = timestamp.replace(tzinfo=timezone.utc) if timestamp.tzinfo is None else timestamp
+        for item in evidence:
+            if not math.isfinite(item.confidence) or not 0 <= item.confidence <= 1:
+                raise ValueError('invalid evidence confidence')
+            for stamp in (item.observed_at, item.source_published_at):
+                if stamp:
+                    observed = datetime.fromisoformat(stamp.replace('Z', '+00:00'))
+                    observed = observed.replace(tzinfo=timezone.utc) if observed.tzinfo is None else observed
+                    if observed > timestamp:
+                        raise ValueError('future evidence is not available as_of')
+        if decision_id:
+            existing = self.history.latest_prediction(decision_id)
+            if existing:
+                return existing
         snapshot = self.network.snapshot(as_of=as_of)
         evidence_ids = [e.evidence_id for e in evidence]
         for e in evidence:
@@ -70,9 +87,9 @@ class DecisionEngine:
                 )
                 for i, s in enumerate(scenarios)
             ]
-            total = sum(p.probability for p in preds) or 1.0
-            for p in preds:
-                p.probability = round(p.probability / total, 4)
+            total = sum(p.probability for p in preds)
+            if any(not math.isfinite(p.probability) or not 0 <= p.probability <= 1 for p in preds) or abs(total - 1.0) > 1e-6:
+                raise ValueError('scenario probabilities must be finite, nonnegative and sum to one')
         else:
             preds = [
                 DecisionPrediction(
@@ -86,7 +103,7 @@ class DecisionEngine:
             ]
 
         record = DecisionRecord(
-            decision_id=f"dec-{uuid.uuid4().hex[:12]}",
+            decision_id=decision_id or f"dec-{uuid.uuid4().hex[:12]}",
             as_of=as_of,
             title=title,
             decision_target=decision_target,
