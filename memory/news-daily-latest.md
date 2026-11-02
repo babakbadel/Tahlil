@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-01 16:11 UTC
+# Daily Economic News Digest — 2026-11-02 12:57 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **21** · Total stored: **2500**
+> New items this run: **57** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| oil | Brent remains around $115; Oil remains high as fears of renewed US strikes on Iran grow - CNBC TV18 | CNBC TV18 | Fri, 30 Oct 2026 01:09 |
-| geopolitics | Iran crude exports through Hormuz stall for first time on record - Reuters - Iran International | Iran International | Tue, 01 Sep 2026 07:00 |
-| geopolitics | Iran war could last deep into 2027 as the Strait of Hormuz isn't that closed, allowing more oil out - Fortune | Fortune | Sun, 23 Aug 2026 07:00 |
-| geopolitics | Iran's Oil Blockade Trilemma: Endure, Escalate or Talk - Kpler | Kpler | Thu, 20 Aug 2026 07:00 |
-| geopolitics | COMMENTARY: Oil market starts pricing in a prolonged Hormuz crisis - Reuters | Reuters | Tue, 18 Aug 2026 07:00 |
-| geopolitics | Iran's Hormuz leverage wanes as US economic squeeze bites - Reuters | Reuters | Sun, 06 Sep 2026 07:00 |
-| geopolitics | Iran’s oil exports near zero as Persian Gulf flows recover - Iran International | Iran International | Fri, 28 Aug 2026 07:00 |
-| geopolitics | Iranian oil offers to Chinese buyers fall as US blockade bites, sources say - Reuters | Reuters | Fri, 21 Aug 2026 07:00 |
-| geopolitics | The Gulf Isn’t Ready for a Renewed Iran War - Foreign Policy | Foreign Policy | Fri, 30 Oct 2026 18:08 |
-| geopolitics | Collapsing Currency, Soaring Inflation and No Oil Exports. The Treasury Department Says Economic Pressure on Iran Works. | Yahoo | Fri, 30 Oct 2026 20:37 |
-| geopolitics | How Trump Can Fight Iran After the Midterms - The Free Press | The Free Press | Fri, 30 Oct 2026 14:22 |
-| geopolitics | Iran says US tone shifts but demands still block talks - Iran International | Iran International | Sat, 31 Oct 2026 23:26 |
-| geopolitics | Iran and US explore diplomacy amid rising threats of war - Al Jazeera | Al Jazeera | Sun, 01 Nov 2026 13:12 |
-| pezeshkian | US-Israel-Iran War Live News: Pezeshkian Admits US Sanctions Are ‘Hurting’ Iran’s Economy as Trade Falls 35% – Inflation | The Sunday Guardian | Sun, 30 Aug 2026 07:00 |
-| pezeshkian | US-Iran War: ‘Not going to bow our heads,’ says Pezeshkian; Iran has not compromised on any MoU clause - Livemint | Livemint | Sun, 23 Aug 2026 07:00 |
-| pezeshkian | Pezeshkian: Recent agreements have brought significant economic, trade gains to Iran - وكالة سبأ | وكالة سبأ | Wed, 01 Jul 2026 07:00 |
-| bourse | TEDPIX climbs 12,500 points on Tuesday - Tehran Times | Tehran Times | Tue, 19 Oct 2021 07:00 |
-| bourse | Tehran Stocks Surge by 83,000 Points as Comprehensive Regulatory Package Drives Post-Closure Rally - ISNA News Agency | ISNA News Agency | Sun, 31 May 2026 07:00 |
-| bourse | Iranian stock market reports historic trade as shares surge - PressTV | PressTV | Sat, 30 May 2026 07:00 |
-| oil | قدس آنلاین - جهش قیمت نفت برنت به بیش از ۱۱۶ دلار - صاحب‌خبر | صاحب‌خبر | Fri, 30 Oct 2026 05:59 |
-| oil | بسنت: جهان می‌تواند بدون نفت ایران زندگی کند، اما ایران نمی‌تواند بدون صادرات نفت به حیاتش ادامه دهد - vista.ir | vista.ir | Sun, 01 Nov 2026 10:01 |
-| macro_monetary | As Toman Hits 204,000 and Fuel Runs Dry, Iran’s Clerical Regime Faces Mounting Storm - National Council of Resistance of | National Council of Resistance of Iran - NCRI | Tue, 25 Aug 2026 07:00 |
-| oil | Oil prices rise on supply concerns as Houthis attack Saudi Arabia - Business Standard | Business Standard | Fri, 30 Oct 2026 03:15 |
-| oil | Oil jumps 2%, settles at 6-month highs on fears of escalation in Iran - CNBC | CNBC | Fri, 30 Oct 2026 02:36 |
-| oil | Crude oil prices likely to remain volatile with upward bias amid US-Iran tensions: Analysts - Moneycontrol.com | Moneycontrol.com | Sun, 01 Nov 2026 11:27 |
-| geopolitics | Saudi Arabia, UAE urge Trump to maintain pressure on Iran - WSJ - Iran International | Iran International | Fri, 25 Sep 2026 07:00 |
-| geopolitics | Iran touts military response as US maintains blockade, hits tankers - Al Jazeera | Al Jazeera | Sun, 06 Sep 2026 07:00 |
-| geopolitics | Former Trump Economic Adviser: Iran's Oil Exports Have Fallen to Zero. Here's What It Could Mean for Oil Prices - 24/7 W | 24/7 Wall St. | Sun, 06 Sep 2026 07:00 |
-| geopolitics | Iran’s Oil Exports Collapse as Hormuz Standoff Drags On - Yahoo Finance | Yahoo Finance | Tue, 08 Sep 2026 07:00 |
-| geopolitics | US Blockade Has Succeeded In Stalling Iranian Oil Exports For The Past Seven Weeks - i24NEWS | i24NEWS | Tue, 01 Sep 2026 07:00 |
-| geopolitics | Iran, Qatar hold Hormuz talks as US blockade squeezes Iran oil exports - France 24 | France 24 | Thu, 27 Aug 2026 07:00 |
-| geopolitics | U.S. Navy blockade slashes Iran oil exports as Trump administration shifts to economic warfare - CNBC | CNBC | Fri, 28 Aug 2026 07:00 |
-| geopolitics | Blockade succeeds where sanctions failed as Iran oil exports stall - Reuters | Reuters | Tue, 01 Sep 2026 07:00 |
-| pezeshkian | Iranian president slams parliament amid economic crisis - Iran International | Iran International | Sun, 20 Oct 2024 07:00 |
-| pezeshkian | Türkiye has higher living standard than Iran without oil: Pezeshkian - Türkiye Today | Türkiye Today | Thu, 23 Oct 2025 07:00 |
-| pezeshkian | Iran in 'full-scale war' with US, economy could erode gains: Pezeshkian - Türkiye Today | Türkiye Today | Mon, 20 Jul 2026 07:00 |
-| pezeshkian | China’s support for Iran shows its limits as US ramps up pressure on Tehran - Al Jazeera | Al Jazeera | Thu, 03 Sep 2026 07:00 |
-| pezeshkian | Iran's president admits 'we have many problems' as the U.S. blockade chokes its economy - Fortune | Fortune | Sun, 30 Aug 2026 07:00 |
-| fx | The Devaluation of Iran’s Rial Has Accelerated - Iran Focus | Iran Focus | Mon, 10 Feb 2025 08:00 |
-| macro_monetary | Canada’s inflation rate jumps to 2.4%, fuelled by gas price shock - Financial Post | Financial Post | Mon, 20 Apr 2026 07:00 |
+| macro_monetary | South Africa to Raise Gasoline Price by Most Since at Least 2008 - Bloomberg | Bloomberg | Tue, 31 Mar 2026 07:00 |
+| oil | Will Brent crude oil price hold above $107.14 support as oversold momentum builds? - Traders Union | Traders Union | Mon, 02 Nov 2026 09:19 |
+| oil | Europe Brent Spot Price FOB (Dollars per Barrel) - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Sun, 01 Apr 2018 07:36 |
+| oil | UAE fuel prices out today: How much will motorists save after November cut? - Gulf News | Gulf News | Fri, 30 Oct 2026 20:01 |
+| oil | Asian Markets Today: Nikkei, ASX 200 Slip After Wall Street Falls; Kospi Bucks The Trend - NDTV Profit | NDTV Profit | Mon, 02 Nov 2026 01:17 |
+| oil | Gift Nifty Signals Gap-Up Open; Asia Mixed, Crude Slides to $110 - HDFC Sky | HDFC Sky | Mon, 02 Nov 2026 03:23 |
+| oil | Palm oil slips as weaker crude offsets gains in edible oils - Business Recorder | Business Recorder | Mon, 02 Nov 2026 06:11 |
+| oil | Sensex Jumps 765 Pts on Reliance Rally, Falling Oil Prices - Rediff MoneyWiz | Rediff MoneyWiz | Mon, 02 Nov 2026 04:56 |
+| oil | Crude, not rupee, holds key to FII flows; JM Fin flags $105 threshold - Business Standard | Business Standard | Mon, 02 Nov 2026 09:02 |
+| oil | Oil prices fall, Brent at US$111.84 per barrel - برق الإمارات | برق الإمارات | Mon, 02 Nov 2026 07:06 |
+| oil | Gold, Silver Prices Rebound as Crude Oil Eases; Giottus CEO Warns of Fresh Volatility Ahead of US Jobs Data - SMEStreet | SMEStreet | Mon, 02 Nov 2026 05:12 |
+| oil | Oil Prices Drop More Than 3% On Hopes Of US-Iran Diplomatic Progress - TVC News | TVC News | Mon, 02 Nov 2026 06:39 |
+| oil | Goldman Sachs raises Brent crude forecast to $105 for December, sees oil at $88 in 2027 amid Iran war... - Moneycontrol. | Moneycontrol.com | Mon, 02 Nov 2026 03:26 |
+| oil | Brent crude falls 4% as Hormuz flows return to pre-conflict levels - scanx.trade | scanx.trade | Mon, 02 Nov 2026 10:57 |
+| oil | Markets open higher following AI-selling in Wall Street, fall in crude - The Hindu | The Hindu | Mon, 02 Nov 2026 04:50 |
+| oil | Oil prices fall as Goldman Sachs raises December Brent crude forecast to $105 - Daily Post Nigeria | Daily Post Nigeria | Mon, 02 Nov 2026 10:28 |
+| oil | Crude Falls 3% to $110 as Iran–Qatar Talks Ease Supply Fears - HDFC Sky | HDFC Sky | Mon, 02 Nov 2026 04:34 |
+| oil | Oil prices fall over 1% as Iran peace talks gather pace; Brent slips below $112 - Moneycontrol.com | Moneycontrol.com | Mon, 02 Nov 2026 00:47 |
+| oil | Brent crude price slips 3% to $110, WTI at $100.9 amid talks over ending Iran war - Moneycontrol.com | Moneycontrol.com | Mon, 02 Nov 2026 04:17 |
+| oil | Reliance-led rally, falling crude oil prices drive Sensex up 1,233 points - Rediff | Rediff | Mon, 02 Nov 2026 11:20 |
+| oil | Crude Oil Prices Fall as Trump Backs Iran Diplomacy Ahead of US Midterm Elections - APAC Media | APAC Media | Mon, 02 Nov 2026 03:44 |
+| oil | Goldman Sachs raises oil price forecasts, sees Brent upside at US$140 a barrel - NST Online | NST Online | Mon, 02 Nov 2026 04:12 |
+| oil | Brent Crude Cools Off To $111/Barrel After Report Signals US Diplomatic Push On Iran, OPEC+ Countries Keep Dec Targets S | NDTV Profit | Mon, 02 Nov 2026 01:36 |
+| oil | U.S. Labs Look to New Materials to Close China's Nuclear Lead - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sun, 01 Nov 2026 18:00 |
+| oil | Fuel prices unchanged for seventh straight week - Taipei Times | Taipei Times | Sun, 01 Nov 2026 16:00 |
+| oil | WTI and Brent Crude Oil Prices Fall as U.S.-Iran Peace Talks Raise Hopes of De-escalation - FXLeaders | FXLeaders | Mon, 02 Nov 2026 03:46 |
+| oil | US futures rise up to 1% as crude oil prices fall 4%; AI stocks inch higher - Moneycontrol.com | Moneycontrol.com | Mon, 02 Nov 2026 12:21 |
+| oil | Global oil prices retreat, Brent falls to USD 111.84 a barrel - IDNFinancials | IDNFinancials | Mon, 02 Nov 2026 03:40 |
+| oil | Oil prices decline on Monday: Brent crude performance and the OPEC+ decision regarding December production - صوت الإمارا | صوت الإمارات | Mon, 02 Nov 2026 09:06 |
+| oil | Goldman Sachs Raises Oil Price Forecasts... Brent at $105 by Year-End - 아시아경제 | 아시아경제 | Mon, 02 Nov 2026 05:21 |
+| oil | US Stocks Halt Selloff as Oil Prices Retreat: Markets Wrap - Bloomberg | Bloomberg | Mon, 02 Nov 2026 09:55 |
+| oil | Brent Crude Oil Forecast Raised by Goldman Sachs for 2027 - The Cryptonomist | The Cryptonomist | Mon, 02 Nov 2026 11:03 |
+| oil | Goldman Sachs Raises December Brent Target to $105 as Middle East and Russia-Ukraine Wars Lift Risk Premium - BigGo Fina | BigGo Finance | Mon, 02 Nov 2026 02:06 |
+| oil | Oil Price Today (November 2): Crude oil falls to $111 as Iran-Qatar talks continue to end war. What are ex - The Economi | The Economic Times | Mon, 02 Nov 2026 02:17 |
+| oil | Iraq's Oil Exports via Turkey Surge to 500,000 Bpd - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 10:00 |
+| oil | Oil Prices Slide 3% as Hopes for Iran Peace Deal Grow - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 06:30 |
+| oil | USO, UCO Slide As Brent Retreats On US-Iran De-escalation Hopes – But Goldman Reportedly Sees Oil At $105 In December -  | Yahoo Finance | Mon, 02 Nov 2026 07:07 |
+| oil | Oil prices fall as report of US diplomatic efforts eases Iran fears - Yahoo Finance | Yahoo Finance | Mon, 02 Nov 2026 07:33 |
+| oil | WTI Crude Pulls Back From Highs Near $100 as US and Iran Plan Talks, Risking 20% Correction - TradingKey | TradingKey | Mon, 02 Nov 2026 03:50 |
+| oil | Oil News: Crude Oil Outlook Turns Cautious as Iran Talks Test War Premium - FXEmpire | FXEmpire | Mon, 02 Nov 2026 10:43 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-01 16:11 UTC | 21 new | 2500 total
+NEWS_DIGEST | 2026-11-02 12:57 UTC | 57 new | 2500 total
