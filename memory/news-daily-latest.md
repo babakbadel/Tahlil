@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-02 17:34 UTC
+# Daily Economic News Digest — 2026-11-02 19:39 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **43** · Total stored: **2500**
+> New items this run: **45** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Average Gas Price Approaches Record High Under Trump - Newsmax | Newsmax | Mon, 02 Nov 2026 16:39 |
-| oil | Dow Jones, S&P 500, Nasdaq futures hint gap-up open amid an over 4% pullback in crude oil prices; stocks to watch - Upst | Upstox | Mon, 02 Nov 2026 12:51 |
-| oil | Crude oil prices drop 3% as Trump favours peacful resolution with Iran; Brent crude drops to $108 per barrel - Upstox | Upstox | Mon, 02 Nov 2026 13:42 |
-| oil | Bond yields fall nearly 10 bps as crude slides, rupee gains against dollar - Business Standard | Business Standard | Mon, 02 Nov 2026 14:19 |
-| oil | WTI and Brent Crude Oil Prices Tumble as U.S.-Iran Peace Talks Raise Hopes of De-escalation - FXLeaders | FXLeaders | Sun, 01 Nov 2026 07:00 |
-| oil | US futures rise up to 1% as crude oil prices fall 4%; AI stocks inch higher - Moneycontrol.com | Moneycontrol.com | Mon, 02 Nov 2026 12:21 |
-| oil | Oil Prices Plunge More Than 4% as U.S.-Iran Peace Talks Raise Hopes of Easing Middle East Supply Disruptions - EnergyNow | EnergyNow | Mon, 02 Nov 2026 11:30 |
-| oil | Oil prices pull back sharply on signs of US-Iran diplomacy to end war - Yahoo News UK | Yahoo News UK | Mon, 02 Nov 2026 15:53 |
-| oil | Oil prices ease 3% on optimism for Qatari-led talks on ending Iran war - Arab News | Arab News | Mon, 02 Nov 2026 06:01 |
-| oil | Goldman Sachs Sees Oil Averaging $130 A Barrel In 2027 - The Globe and Mail | The Globe and Mail | Mon, 02 Nov 2026 15:21 |
-| oil | US Stocks Recover Some of Last Week's Sell-Off After Oil Prices Drop - U.S. News & World Report | U.S. News & World Report | Mon, 02 Nov 2026 05:29 |
-| oil | WTI Crude Plunges 6% Below $100: What Caused the Sharp Drop in Oil Prices? - TradingKey | TradingKey | Mon, 02 Nov 2026 14:54 |
-| oil | Oil price falls on optimism talks will bring end to Iran war - The Times | The Times | Mon, 02 Nov 2026 10:42 |
-| oil | Brent And WTI Crude Oil Price Forecasts Face A New Test As Peace Hopes Cut Prices - Exchange Rates UK | Exchange Rates UK | Mon, 02 Nov 2026 16:00 |
-| oil | Goldman Sachs Raises Oil Price Forecasts, Sees Brent Upside at $140 a Barrel - EnergyNow | EnergyNow | Mon, 02 Nov 2026 15:41 |
-| oil | Buy CVX and XOM Amid Solid Q3 Earnings and Surging Crude Oil Prices - The Globe and Mail | The Globe and Mail | Mon, 02 Nov 2026 14:07 |
-| oil | WTI and Brent: Inventory Draws Meet an Unchanged OPEC+ Policy - FXEmpire | FXEmpire | Mon, 02 Nov 2026 15:37 |
-| oil | How Iran Just Broke the U.S. Oil Shield In Saudi Arabia Yet Again - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 16:00 |
-| oil | Brent crude could hit $140 next year in upside scenario, Goldman analysts say - TradingView | TradingView | Mon, 02 Nov 2026 15:32 |
-| oil | Oil Prices Plunge 7% as U.S. and Iran Signal Room for Diplomacy - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 16:36 |
-| oil | Goldman Hikes Oil-Price Forecasts on ‘Substantial’ Supply Risks - Bloomberg.com | Bloomberg.com | Mon, 02 Nov 2026 06:04 |
-| oil | Why are oil prices down today? Brent Crude futures drop by 5.9%. Here's the latest price - The Economic Times | The Economic Times | Mon, 02 Nov 2026 15:19 |
+| oil | Crude Oil Price Forecast – WTI Oil Faces $95 Ceiling as Gulf of Mexico Supply Recovery Builds - FXEmpire | FXEmpire | Tue, 13 Oct 2026 07:00 |
+| oil | Oil prices whipsaw as markets weigh Middle East turmoil against uncertain demand - NBC News | NBC News | Tue, 20 Oct 2026 07:00 |
+| oil | Riley Exploration Permian, Occidental Petroleum, Permian Resources, Matador Resources, and Tidewater shares are falling, | StockStory | Mon, 02 Nov 2026 18:10 |
+| oil | Riley Exploration Permian, Occidental Petroleum, Permian Resources, Matador Resources, and Tidewater shares are falling, | The Globe and Mail | Mon, 02 Nov 2026 18:06 |
+| oil | US Stocks Recover Some of Last Week's Sell-Off After Oil Prices Fall Sharply - U.S. News & World Report | U.S. News & World Report | Mon, 02 Nov 2026 05:29 |
+| oil | Gas prices likely to drop below $4 a gallon in the next week if oil prices keep declining, analyst says - Yahoo Finance | Yahoo Finance | Mon, 02 Nov 2026 17:12 |
+| oil | Oil Prices Plunge More Than 4% as U.S.-Iran Peace Talks Raise Hopes of Easing Middle East Supply Disruptions - EnergyNow | EnergyNow.com | Mon, 02 Nov 2026 11:30 |
+| oil | Goldman Sachs Raises Oil Price Forecasts, Sees Brent Upside at $140 a Barrel - EnergyNow.com | EnergyNow.com | Mon, 02 Nov 2026 15:24 |
+| oil | Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days - LiteFinance | LiteFinance | Mon, 02 Nov 2026 15:49 |
+| oil | Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal - EnergyNow.com | EnergyNow.com | Mon, 02 Nov 2026 12:59 |
+| oil | November 3, 2026: Brent crude oil price on Nov 3, 2026 at 5:00 PM EST Commodities Prediction Market - Robinhood | Robinhood | Mon, 02 Nov 2026 13:26 |
+| oil | Oil drops 7% as Iran signals openness to peace talks - Reuters | Reuters | Sun, 01 Nov 2026 23:13 |
 | oil | Gas, diesel, oil prices are down, but reprieve could be temporary - Spectrum News | Spectrum News | Mon, 02 Nov 2026 17:01 |
-| oil | Oil prices decline after draft of Iran peace agreement circulates - upi | upi | Mon, 02 Nov 2026 16:29 |
-| oil | Oil drops 6% as Iran signals openness to peace talks - Reuters | Reuters | Sun, 01 Nov 2026 23:13 |
-| oil | Oil price falls amid hope of a breakthrough to end Iran war - The Guardian | The Guardian | Mon, 02 Nov 2026 16:39 |
-| oil | Oil Prices Fall More Than 6% as Iran Peace Talks Ease Supply Fears - WSJ | WSJ | Mon, 02 Nov 2026 15:55 |
-| oil | Azerbaijan's Renewable Energy Boom Is Transforming Its Power Sector - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sun, 01 Nov 2026 16:00 |
-| oil | Why Is This Rare Earth Metal 346 Times More Expensive In America Than in China - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 01:00 |
-| oil | Oil Prices Plunge as Draft Proposal to End U.S.-Iran War is Circulated - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 14:30 |
-| oil | Crude oil prices sell off more than 7% on Iran peace talk hopes ahead of U.S. midterms - CNBC | CNBC | Mon, 02 Nov 2026 05:04 |
-| geopolitics | How much will US Hormuz blockade hurt Iran, and does Tehran have an escape? - Al Jazeera | Al Jazeera | Tue, 14 Apr 2026 07:00 |
-| geopolitics | US naval blockade squeezes Iran's oil exports, forces crude onto floating storage - Reuters | Reuters | Fri, 01 May 2026 07:00 |
-| geopolitics | How the U.S. Navy Is Helping Get Oil Through the Strait of Hormuz - The New York Times | The New York Times | Wed, 19 Aug 2026 07:00 |
-| geopolitics | How the US naval blockade has bled Iran of nearly $6bn in oil revenues - Al Jazeera | Al Jazeera | Fri, 05 Jun 2026 07:00 |
-| geopolitics | Strait of Hormuz: Iran sends loaded oil tankers past US naval blockade - BBC | BBC | Wed, 17 Jun 2026 07:00 |
-| geopolitics | Iran's Oil Exports Collapse as Hormuz Standoff Drags On - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 08 Sep 2026 07:00 |
-| geopolitics | Oil falls on Hormuz deal hopes but Trump keeps strikes on the table - Euronews.com | Euronews.com | Mon, 02 Nov 2026 10:21 |
-| pezeshkian | Iran reconsiders a direct strike on Israel - GIS Reports | GIS Reports | Mon, 07 Oct 2024 07:00 |
-| pezeshkian | The Iranian Economy Keeps Deteriorating. The President Now Called on Residents to Reduce Energy Consumption. - Internati | International Business Times | Thu, 08 Oct 2026 07:00 |
+| geopolitics | Trump Says Iran War Will End Soon, US Military Insists Hormuz Is Secure - Eurasia Review | Eurasia Review | Sat, 31 Oct 2026 01:37 |
+| geopolitics | Shipping Strikes In Hormuz Leave Both Sides With Economic Pain - Bloomberg.com | Bloomberg.com | Sat, 31 Oct 2026 10:30 |
+| geopolitics | Iran still exporting millions of barrels of oil through Strait of Hormuz even as other traffic paralyzed / CNN Business  | CNN | Mon, 16 Mar 2026 07:00 |
+| geopolitics | Iran has largely halted oil and gas exports through strait of Hormuz - The Guardian | The Guardian | Tue, 03 Mar 2026 08:00 |
+| geopolitics | Negotiators ‘braced for worst’ over US-Iran talks to reopen strait of Hormuz - The Guardian | The Guardian | Sun, 01 Nov 2026 18:25 |
+| geopolitics | Iranian ‘ghost fleet’ filmed evading US blockade en route to China, UANI says - Fox News | Fox News | Mon, 02 Nov 2026 00:28 |
+| geopolitics | Iran Says It Would Reopen Strait of Hormuz in 2 Days as Part of U.S. Deal - The New York Times | The New York Times | Mon, 02 Nov 2026 18:06 |
+| geopolitics | How US oil firms profit $130bn from Iran war as household bills surge - Al Jazeera | Al Jazeera | Mon, 02 Nov 2026 14:30 |
+| geopolitics | Crude oil sinks more than 7% as U.S.-Iran peace talks ease war fears - Quartz | Quartz | Mon, 02 Nov 2026 18:16 |
+| geopolitics | Iran engages US in 'intensive' negotiations to avert fresh war outbreak - France 24 | France 24 | Mon, 02 Nov 2026 17:42 |
+| geopolitics | Gulf Arab Oil Giants Are Exporting Crude at Pre-War Rates Again - Bloomberg.com | Bloomberg.com | Mon, 02 Nov 2026 17:25 |
+| bourse | India's Market Reset: SEBI Proposes Tax Relief to Woo Foreigners After $31 Billion Exodus / Vantage - Firstpost | Firstpost | Mon, 02 Nov 2026 17:40 |
+| bourse | Hong Kong Stock Exchange Today: Hang Seng Index Rises to 23,393.32 Amid Ukraine-Russia Talks and Iran-US Negotiations -  | BBN Times | Mon, 02 Nov 2026 18:51 |
+| bourse | Dow Rises 1%, Oil Sinks 7% on Iran Peace Hopes: Stock Market Today - TradingView | TradingView | Mon, 02 Nov 2026 17:32 |
+| bourse | Why stocks are up today: oil falls about 7% on US-Iran talk, and tech recovers before the midterms - Nacionale | Nacionale | Mon, 02 Nov 2026 18:15 |
+| bourse | Dow pops 500 points, oil tumbles on hopes of a US-Iran peace deal - New York Post | New York Post | Mon, 02 Nov 2026 17:07 |
+| bourse | Oil prices drop and stock markets rise after reports of deal to end Iran war - BBC | BBC | Wed, 06 May 2026 07:00 |
+| oil | قیمت نفت برنت از ۱۱۷ دلار عبور کرد - vista.ir | vista.ir | Fri, 30 Oct 2026 15:19 |
+| oil | چرا نفت ارزان شد؟ توافق در راه است؟ - vista.ir | vista.ir | Mon, 02 Nov 2026 09:10 |
+| oil | اقتصاد جهانی در آبان چه مسیری پیش روی بازار ایران می‌گذارد؟ │ افت نفت، تصمیم فدرال رزرو و خطری که هنوز برطرف نشده است -  | vista.ir | Mon, 02 Nov 2026 16:43 |
+| oil | قیمت جدید نفت امروز ۱۱ آبان ۱۴۰۵ │ افت روزانه برنت چرا هنوز کاهش هزینه تولید و حمل‌ونقل را در ایران تضمین نمی‌کند؟ - vis | vista.ir | Mon, 02 Nov 2026 18:22 |
+| oil | بازار جهانی نفت زیر فشار تنش هرمز و تصمیم اوپک‌پلاس ماند │ برنت و WTI در شروع هفته چه مسیری دارند؟ - نبض قیمت | نبض قیمت | Sun, 01 Nov 2026 19:06 |
+| oil | قیمت نفت امروز ۱۰ آبان ۱۴۰۵ │ فاصله ۱۳ دلاری برنت و تگزاس با مقایسه سررسیدها کمتر از تصور است - vista.ir | vista.ir | Sun, 01 Nov 2026 04:34 |
+| oil | نفت برنت رکوردشکنی کرد/ چه بلایی سر بازار نفت آمده؟! - vista.ir | vista.ir | Mon, 02 Nov 2026 15:13 |
+| oil | عقب‌نشینی نفت با چراغ سبز ترامپ به مذاکره با ایران - vista.ir | vista.ir | Mon, 02 Nov 2026 10:50 |
+| oil | نفت برنت و نفت خام امروز ارزان شدند │ مذاکرات ایران و قطر بازار انرژی را از کدام نگرانی دور می‌کند؟ - نبض قیمت | نبض قیمت | Mon, 02 Nov 2026 07:35 |
+| oil | انفجار نفتکش‌ها، نفت را به بالاترین سطح ۶ ماهه رساند/ نفت برنت بشکه‌ای ۱۱۷ دلار شد - Khabaronline | Khabaronline | Sat, 31 Oct 2026 14:16 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-02 17:34 UTC | 43 new | 2500 total
+NEWS_DIGEST | 2026-11-02 19:39 UTC | 45 new | 2500 total
