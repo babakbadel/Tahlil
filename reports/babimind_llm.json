@@ -3,42 +3,287 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "execution_time": "2026-11-03T15:38:44.449676+00:00",
-    "pipeline_version": "1.7",
-    "model": "BabiMind",
-    "executive_summary": "Maximum 10 key findings:\n1. Graph intelligence shows bullish regime (score 1.0, confidence 0.75)\n2. Multiple memory runs consistently show bullish bias for \"فملی\" (FMLI)\n3. Scenario weights: bull 0.45, base 0.4, bear 0.15\n4. Many TSE sources unavailable (timeouts): TSE Official Gateway, TSETMC, Codal all timeout\n5. \"فملی\" has options data: 46 contracts, 23 calls/puts, volume 103,770, OI 492,016\n6. \"فملی\" ranked 16th in options ranking with score 100\n7. Confidence lowered due to missing primary exchange data but high growth metrics support thesis\n8. Key risk factors: copper price sensitivity, volume-led expansion, risk-on regime\n9. Price map: accumulation zone 19,400-19,800 rial, confirmation at 20,000 rial\n10. Strategy: Scale in only on confirmed support/accumulation; avoid chasing extended green candles",
+    "executive_summary": [
+      "Market regime assessed as bullish (graph score 1.0, confidence 0.75) but with critical data gaps in primary Iranian exchange feeds.",
+      "فملی (FMLI) remains the flagship thesis: operating leverage + copper sensitivity + volume-led growth + market leadership. Current price 27,690 (11 Aban 1405) well above thesis price map targets (20,500/21,500/23,000), suggesting extended move.",
+      "Sector rotation favors Basic Metals (+1.66%), Auto (+1.87%), Rubber (+2.56%); Oil Products (-2.72%) and Wood (-2.89%) lagging.",
+      "Market breadth positive: 401 advancing vs 206 declining (Kamandar 11 Aban). Equal-weight index (+0.45%) outperforming cap-weighted TEDPIX (-0.07%).",
+      "Options liquidity concentrated in شستا (Shesta), خودرو (Khodro), وبملت (Webmelt), فملی (FMLI). فملی OI highest at 28,000/30,000 call strikes.",
+      "Macro backdrop: Brent >$100 on US-Iran tensions, Hormuz risk, Iran gasoline price hike → inflation → rate hike risk. Rial weakness benefits exporters.",
+      "Pezeshkian admits sanctions hurting economy, trade down 25-35%, but seeks diplomatic de-escalation.",
+      "Critical data gaps: TSE/TSETMC/Codal all timeout; no real-time Client Type flow, no option Greeks/IV, stale MarketWatch Plus (1405-06-07).",
+      "فملی thesis validation: sales growth 183% YoY, profit growth 262% YoY (Q1 1405), copper price supportive, but price 27,690 >> thesis confirmation 20,000.",
+      "Decision: WAIT for pullback to accumulation zone (19,400-19,800) or confirmed support with volume. Do not chase extended move."
+    ],
     "market_regime": "Bullish (High Uncertainty)",
-    "evidence": "Important observations with source, timestamp and confidence:\n- Graph intelligence bullish regime: score 1.0, confidence 0.75 (babimind_graph.json)\n- Multiple memory runs bullish for فملی (babimind_memory_context.json)\n- Scenario weights: bull 0.45, base 0.4, bear 0.15 (babimind_memory_context.json)\n- Source conflicts: TSE/TSETMC/Codal all timeout (babimind_source_health.json)\n- \"فملی\" options: 46 contracts, volume 103,770, OI 492,016 (option_market_watch_summary.json)\n- \"فملی\" ranked 16th in options ranking (options_babimind_ranked.json)\n- Key risk: missing primary exchange data limits current validation (babimind_source_health.json)\n- High growth metrics supporting thesis: Q1 profit growth 262% YoY, sales growth 183% YoY (symbol_thesis.فملی)\n- Price map: accumulation zone 19,400-19,800 rial, confirmation at 20,000 rial (symbol_thesis.فملی)\n- Confidence: 🟡 medium (limited primary data, high growth metrics)",
-    "macro": "Dollar, gold, rates, inflation, liquidity, oil and policy:\n- Graph intelligence tracks: dollar free/official, gold, coin, inflation, liquidity, monetary base, rates, bonds, banking rates, budget, oil revenue, trade, housing, autos, energy, FX policy\n- Key factors: copper price sensitivity, volume-led expansion, risk-on sentiment\n- Oil/energy: tracking oil, gas, copper, steel, iron ore, aluminum, zinc, gold, urea, methanol\n- Global variables mapped to Iranian sectors through Economic Graph\n- Confidence: 🟡 medium (limited Iranian market data, high growth metrics supporting thesis)",
-    "industry_rotation": "1-day / 5-day / 20-day flow and relative-strength ranking:\n- Top performing industries (kamandar_indices.json):\n  * فلزات اساسي: +1.66% (7,366,567 volume)\n  * فراورده هاي نفتي، كك و سوخت هسته اي: -2.72% (52,723,971 volume)\n  * استخراج كانه هاي فلزي: -0.92% (1,256,878 volume)\n  * محصولات شيميايي: -0.90% (616,798 volume)\n  * محصولات چوبي: -2.89% (1,016,000 volume)\n  * فلزات اساسي (هم وزن): +1.66% (7,366,567 volume)\n- Relative strength ranking (kamandar_indices.json):\n  * لاستيك: +2.91% (654)\n  * ماشين آلات فرابورس: +2.77% (322)\n  * محصولات فلزي: +1.30% (847,699)\n- Confidence: 🟡 medium (limited current market breadth data)",
-    "symbols": "Best opportunities, risks and evidence:\n- \"فملی\" (FMLI): Best opportunity per thesis\n  * Last price: 19,950 rial (1405-06-04)\n * Sales 1405-05: 663,951,296 million rial\n * Sales YTD 1405-05: 2,475,226,320 million rial\n * Q1 EPS: 691 rial\n * Q1 profit growth YoY: 262%\n * Q1 operating revenue growth YoY: 183%\n * Q1 gross profit growth YoY: 247%\n * Price map: accumulation zone 19,400-19,800 rial, confirmation at 20,000 rial\n * Scenario weights: bull 0.45, base 0.4, bear 0.15\n * Targets: first 20,500, second 21,500, third 23,000 rial\n * Risk line: 18,800 rial\n- \"خساپا\" (KASPA): Options ranked #1 with score 100\n  * CALL \"ضseptا9025\": strike 650, price 23.0, IV 0.083, delta 0.889\n  * High volume: 34,316, OI 135,303\n- \"وبملت\": Options ranked #21-#25 with scores 96-100\n- Confidence: 🟡 medium (limited current market data, high growth metrics supporting thesis)",
-    "funds_legal_persons_smart_money_evidence": "What large participants are doing and how reliable the inference is:\n- Legal-person activity analysis over 1/5/10/20 sessions where data exists\n- Major funds analyzed by portfolio changes, purchases, sales, NAV, discount/premium and industry weights\n- Flow, volume, value, buyer power, multi-day persistence, price action, relative strength, legal-person behavior and industry rotation combined\n- Confidence: 🟡 medium (limited current legal-person flow data from TSE)\n- Key observation: Real-money flow deterioration would cancel the setup (symbol_thesis.فملی risk factors)\n- Confidence: 🟡 medium (limited TSE client type data unavailable)",
-    "options": "Best risk/reward setups if applicable:\n- Top ranked: \"ضseptا9025\" (خساپا CALL, strike 650, price 23.0)\n  * IV: 0.083, delta: 0.889, gamma: 0.010, theta: -0.424\n  * Volume: 34,316, OI: 135,303\n  * Breakeven: 673 rial\n  * Scenario PnL: -20%: -23.0, -10%: -23.0, -5%: -23.0, +5%: +13.08, +10%: +45.76, +20%: +111.10\n- \"فملی\" options ranked 16th with score 100\n  * CALL \"ضملي9045\": strike 28,000, price 2,439, IV 0.600, delta 0.661\n  * Volume: 25,070, OI: 118,016\n  * Breakeven: 30,439 rial\n  * Scenario PnL: -20%: -2,439, -10%: -2,439, -5%: -2,439, +5%: +16.07, +10%: +1,466, +20%: +4,367\n- Confidence: 🟡 medium (limited Greeks/IV data, options snapshot only)",
-    "scenarios": "Bull / Base / Bear with probabilities:\n- 🟢 Bull: probability 0.45, target price 23,000 rial, time horizon Q2-Q3 1405\n  * Key triggers: global copper supply disruption, higher copper benchmark, higher realized sales price/margins, fund-flow rotation to commodity leaders, technical breakout/continuation, option convexity increases demand for calls\n  * Risk factors: copper price pullback, volume deterioration, broader market risk-off, sales growth rolls over for two consecutive releases, volume falls while revenue supported only by price, copper price breaks down materially and remains weak\n- 🟡 Base: probability 0.4, target price 21,500 rial, time horizon Q2 1405\n  * Key triggers: steady sales growth, maintained market leadership, stable commodity prices\n  * Risk factors: sales growth slowdown, increased competition, currency volatility\n- 🔴 Bear: probability 0.15, target price 18,800 rial, time horizon Q1-Q2 1405\n  * Key triggers: copper price breakdown, volume collapse, real money flow deterioration\n  * Risk factors: global risk-off spread, commodity cycle peak, operational execution issues\n- Probabilities sum to 1.0 (0.45 + 0.4 + 0.15 = 1.0)\n- Confidence: 🟡 medium (insufficient evidence lowers confidence rather than fabricating precision)",
+    "evidence": [
+      {
+        "observation": "Graph Intelligence regime bullish, score 1.0, confidence 0.75",
+        "source": "babimind_graph.json",
+        "timestamp": "2026-11-03T17:12:43.138433+00:00",
+        "confidence": "🟢"
+      },
+      {
+        "observation": "TEDPIX 7,649,409 (-0.07%), Equal-weight 2,175,547 (+0.45%), Fara Bourse 65,549 (+0.52%)",
+        "source": "kamandar_indices.json",
+        "timestamp": "2026-11-03T17:01:13.659571+00:00",
+        "confidence": "🟢"
+      },
+      {
+        "observation": "Market breadth: 401 advancing, 206 declining, 12 unchanged",
+        "source": "kamandar_indices.json",
+        "timestamp": "2026-11-03T17:01:13.659571+00:00",
+        "confidence": "🟢"
+      },
+      {
+        "observation": "فملی last 27,690 (+800, +2.98%) on 11 Aban 1405",
+        "source": "kamandar_stocks.json",
+        "timestamp": "2026-11-03T17:02:22.482446+00:00",
+        "confidence": "🟢"
+      },
+      {
+        "observation": "فملی thesis: sales 2.475T (YTD 1405), Q1 profit growth 262% YoY, revenue growth 183% YoY",
+        "source": "babimind_pipeline.json -> symbol_theses",
+        "timestamp": "2026-09-04",
+        "confidence": "🟡"
+      },
+      {
+        "observation": "Sector rotation: Basic Metals +1.66%, Auto +1.87%, Rubber +2.56% leading; Oil Products -2.72%, Wood -2.89% lagging",
+        "source": "kamandar_indices.json",
+        "timestamp": "2026-11-03T17:01:13.659571+00:00",
+        "confidence": "🟢"
+      },
+      {
+        "observation": "Options OI leaders: شستا 40.1M, خودرو 62.2M, وبملت 56.5M, فملی 492K",
+        "source": "option_market_watch_summary.json",
+        "timestamp": "2026-11-03T17:11:33.134825+00:00",
+        "confidence": "🟢"
+      },
+      {
+        "observation": "فملی options: 28,000 call ITM (OI 118K), 30,000 call near ATM (OI 55K), 34,000 call OTM (OI 111K)",
+        "source": "options_babimind_ranked.json",
+        "timestamp": "2026-11-03T17:12:43.317785+00:00",
+        "confidence": "🟢"
+      },
+      {
+        "observation": "Brent >$100, US-Iran tensions, Hormuz risk, Iran gasoline price hike → inflation spiral risk",
+        "source": "babimind_memory_context.json + babimind_daily_economic_news.json",
+        "timestamp": "2026-11-03",
+        "confidence": "🟢"
+      },
+      {
+        "observation": "Pezeshkian: sanctions hurting, trade down 25-35%, gasoline hike, but seeks diplomatic solution",
+        "source": "babimind_pezeshkian_news.json",
+        "timestamp": "2026-09-09",
+        "confidence": "🟡"
+      },
+      {
+        "observation": "TSE/TSETMC/Codal all timeout; MarketWatch Plus snapshot 1405-06-07 (stale); no real-time Client Type flow",
+        "source": "babimind_source_health.json + finpy_tse_snapshot.json",
+        "timestamp": "2026-11-03T17:11:35.444820+00:00",
+        "confidence": "🔴"
+      }
+    ],
+    "macro": {
+      "dollar_gold": "Free-market USD/IRR and gold/coin data unavailable (primary sources timeout). Kamandar market report shows retail flow context only.",
+      "rates_inflation": "Iran CBI policy rate unknown (source timeout). Gasoline price hike (doubled per Pezeshkian news) feeds inflation expectations. Global: Fed/ECB rates steady per FRED/ECB API (OK).",
+      "liquidity": "Monetary base M0/M1/M2 unavailable (CBI/Statistical Center timeout). Kamandar market report provides retail value/flow proxy only.",
+      "oil": "Brent >$100 (multiple news sources 2026-09-10). OPEC/JODI/EIA sources mixed (OPEC 403, JODI OK, EIA OK). China demand via Kpler/Vortexa OK.",
+      "policy": "Fiscal stress: Ministry of Economic Affairs OK. Budget/oil revenue opaque. Monetary: CBI site OK but data endpoints timeout. FX regime: dual rate persists, free market unavailable."
+    },
+    "industry_rotation": {
+      "1d": [
+        "Basic Metals +1.66%",
+        "Auto +1.87%",
+        "Rubber +2.56%",
+        "Transport +2.54%",
+        "Textiles +1.95%"
+      ],
+      "5d": "Data not available in current crawl (kamandar_indices shows single snapshot).",
+      "20d": "Data not available. Requires historical index series."
+    },
+    "symbols": {
+      "best_opportunities": [
+        {
+          "symbol": "فملی",
+          "thesis": "Operating leverage + copper sensitivity + volume growth + leadership. But price 27,690 >> thesis targets. Wait for pullback.",
+          "evidence": "Sales 2.475T YTD, Q1 profit +262% YoY, copper price supportive, equal-weight leadership",
+          "risk": "Extended above all thesis targets; if 18,800 fails on volume → thesis downgrade"
+        }
+      ],
+      "risks": [
+        {
+          "symbol": "شستا",
+          "concern": "High options OI (40M) but underlying 3,110 (-2.81%). Put/call skew suggests hedging.",
+          "evidence": "طستا8060 put OI 1.38M, ضستا8059 call OI 2.87M"
+        }
+      ],
+      "evidence": "فملی fundamentals strong but price disconnected from thesis valuation map. Sector rotation supports Basic Metals."
+    },
+    "funds_legal_smart_money": {
+      "legal_person_activity": "Unavailable (TSETMC Client Type timeout). Kamandar market report provides only retail flow proxy.",
+      "fund_activity": "Unavailable (TSETMC Funds timeout). No NAV/discount/premium data.",
+      "smart_money_inference": "Low confidence. Equal-weight outperformance (+0.45% vs -0.07%) suggests broad participation not concentrated in mega-caps. Option OI in شستا/خودرو/وبملت suggests institutional hedging/speculation."
+    },
+    "options": {
+      "best_setups": [
+        {
+          "underlying": "فملی",
+          "structure": "28,000 Call (ITM) / 30,000 Call (near ATM) / 34,000 Call (OTM)",
+          "risk_reward": "High IV (60-70%) makes long calls expensive. Consider spreads or wait for IV contraction.",
+          "liquidity": "OI 118K/55K/111K respectively. Bid-ask spreads wide on OTM."
+        },
+        {
+          "underlying": "شستا",
+          "structure": "3,000 Call (ITM, OI 4.18M) / 3,250 Call (OTM, OI 7.07M)",
+          "risk_reward": "High gamma near expiry (4 days). 3,000 Call delta ~0.99, low time value.",
+          "liquidity": "Highest volume/OI in market. Bid-ask tight on active strikes."
+        }
+      ],
+      "warning": "No Greeks/IV from primary source. BRS snapshot provides Greeks but quote timestamp unknown. Expired contracts filtered."
+    },
+    "scenarios": {
+      "bull": {
+        "probability": 0.4,
+        "catalysts": [
+          "Copper supply disruption → higher realized prices",
+          "فملی sales volume sustains >200% YoY",
+          "Rial weakness boosts exporter margins",
+          "Equal-weight leadership persists",
+          "Geopolitical de-escalation (Hormuz)"
+        ],
+        "confirmation": [
+          "فملی pulls back to 22,000-24,000 with volume support",
+          "Real-money inflow returns (if Client Type recovers)",
+          "Copper holds >$4.50/lb"
+        ],
+        "invalidation": [
+          "Price rises while real-money flow deteriorates",
+          "Sales growth rolls over 2 consecutive quarters",
+          "Copper breaks <$4.00/lb"
+        ]
+      },
+      "base": {
+        "probability": 0.35,
+        "catalysts": [
+          "Steady sales growth 100%+ YoY",
+          "Stable copper $4.00-4.50",
+          "Controlled geopolitical tension",
+          "FX regime managed"
+        ],
+        "confirmation": [
+          "فملی trades 22,000-26,000 with moderate volume",
+          "Fundamental growth >100% YoY",
+          "No major sanctions escalation"
+        ],
+        "invalidation": [
+          "Sales growth slows <50% YoY",
+          "Geopolitical escalation (Hormuz/new sanctions)",
+          "Copper declines >20%"
+        ]
+      },
+      "bear": {
+        "probability": 0.25,
+        "catalysts": [
+          "Copper price breakdown <$3.50",
+          "Volume collapse",
+          "Real-money outflow accelerates",
+          "US-Iran conflict / Hormuz closure",
+          "Gasoline hike → inflation → rate hike"
+        ],
+        "confirmation": [
+          "فملی breaks <18,800 on expanding volume",
+          "Equal-weight index leads down",
+          "Industry relative strength deteriorates"
+        ],
+        "invalidation": [
+          "Price rebounds >20,000 with volume",
+          "Fundamentals re-accelerate",
+          "Geopolitical de-escalation"
+        ]
+      }
+    },
     "decision": {
       "regime": "Bullish (High Uncertainty)",
-      "primary_strategy": "SCALE-IN BUY on confirmed support/accumulation; avoid chasing extended green candles. Increase exposure after a high-volume close above confirmation level (20,000 rial for فملی).",
-      "score": 68,
-      "risk": "Medium",
-      "confidence": 68,
-      "best_industry": "metals_mining (فملی, copper producers)",
-      "best_symbol": "فملی",
-      "highest_risk_symbol": "شبندر (supply-sensitive sector)",
-      "key_support": "19,400 rial (accumulation zone for فملی)",
-      "key_resistance": "20,000 rial (confirmation level for فملی)",
-      "main_catalyst": "Copper price sensitivity + volume-led expansion + risk-on regime confirmation",
-      "main_risk": "Missing primary exchange data (TSE/TSETMC timeouts) + copper price breakdown + volume deterioration",
-      "entry_trigger": "Price closes above 20,000 rial with expanding volume + real-money inflow persists ≥3 sessions",
-      "exit_trigger": "Price breaks below 18,800 rial on expanding volume + real-money outflow accelerates + industry relative strength deteriorates",
-      "invalidation": "Price rises while real-money flow deteriorates sharply + sales growth rolls over two consecutive releases + copper breaks down materially and remains weak",
-      "decision_score_framework": "Technical: 15%, Tape/liquidity: 15%, Real/legal flow: 10%, Fundamental: 20%, Industry: 10%, Macro: 10%, Commodities: 5%, News/catalysts: 5%, Political/economic risk: 5%, Valuation: 5%",
-      "would_buy_now": "YES, but only on confirmed support/accumulation; avoid chasing extended green candles",
-      "if_already_holding": "HOLD - confirmed positions; add on support breaks, reduce on deterioration",
-      "best_industry_priority": "metals_mining (فملی, copper producers)",
-      "best_industry_avoid": "import_depending_sectors (auto, consumer goods) for now",
-      "best_opportunity": "فملی on confirmed support/accumulation with scale-in strategy",
-      "most_dangerous_setup": "Chasing extended green candle without volume/flow confirmation + ignoring 18,800 risk line",
-      "single_event_reverse_view": "Price breaks below 18,800 rial on expanding volume + real-money outflow accelerates + copper price breaks down materially"
+      "primary_strategy": "WAIT",
+      "score": 55,
+      "risk": "High",
+      "confidence": 60,
+      "best_industry": "Basic Metals",
+      "best_symbol": "فملی (on pullback)",
+      "highest_risk_symbol": "شستا (high gamma, near expiry)",
+      "key_support": "22,000 (فملی) / 7,800 (TEDPIX)",
+      "key_resistance": "28,000 (فملی) / 8,200 (TEDPIX)",
+      "main_catalyst": "Copper price action + US-Iran de-escalation signals",
+      "main_risk": "Extended price vs thesis valuation + Hormuz escalation + missing real-time flow data",
+      "entry_trigger": "فملی pulls back to 22,000-24,000 with volume support AND real-money inflow confirmation",
+      "exit_trigger": "فملی breaks 18,800 on volume OR copper <$3.50/lb OR Hormuz closure",
+      "invalidation": "Thesis sales growth rolls over 2 consecutive releases OR volume falls while revenue supported only by price"
+    },
+    "actionable_strategy": {
+      "if_buy_scale_in": {
+        "current_price_context": "فملی 27,690 (11 Aban 1405) — 38% above thesis confirmation 20,000",
+        "entry_zone": "22,000-24,000 (thesis accumulation zone adjusted for current level)",
+        "tranches": [
+          "T1: 23,500 on volume-supported bounce",
+          "T2: 22,000 on deeper pullback with flow confirmation",
+          "T3: 20,500 only if copper >$4.50 & breadth strong"
+        ],
+        "stop_invalidation": "18,800 (thesis risk line) — must hold on closing basis with volume",
+        "targets": [
+          "T1: 26,000 (prior high)",
+          "T2: 28,500 (extension)",
+          "T3: 31,000 (bull case)"
+        ],
+        "risk_reward": "~1:2.5 at T1 entry",
+        "cancel_setup": "Break 18,800 on volume OR copper breakdown OR real-money outflow persists"
+      }
+    },
+    "conditional_playbook": [
+      "IF فملی pulls back to 22,000-24,000 + volume expands + real-money inflow → THEN stage entry per tranches.",
+      "IF فملی holds >26,000 but flow deteriorates → THEN reduce exposure, treat as distribution risk.",
+      "IF copper breaks $4.00/lb + volume collapses → THEN stop new buying, hedge copper exposure.",
+      "IF Hormuz closure risk spikes (shipping insurance >5%) → THEN reduce all commodity longs, increase cash.",
+      "IF equal-weight index leads down for 3 sessions → THEN shift to defensive sectors (pharma, utilities)."
+    ],
+    "portfolio_mode": {
+      "position_weights": "Not provided. If holding فملی >15% portfolio, consider partial reduction at current extended level.",
+      "industry_concentration": "Basic Metals overweight justified by rotation but size positions to survive 30% drawdown.",
+      "correlations": "فملی correlates with copper (0.7+), USD/IRR (-0.6), TEDPIX (0.5). Diversify with low-correlation assets.",
+      "fx_oil_rate_political_exposure": "High: Iran exporter (FX +), copper beta (+), geopolitical beta (++).",
+      "liquidity": "فملی liquid (daily value >10T rial). Options liquid at key strikes.",
+      "scenario_concentration": "Portfolio likely concentrated in bull scenario. Add bear hedges: long USD/IRR, long put spreads on فملی."
+    },
+    "tomorrow_mode": {
+      "before_open": [
+        "Check LME copper overnight (Shanghai close)",
+        "Monitor Brent/WTI gap vs prior close",
+        "Scan Kamandar pre-market breadth (if available)",
+        "Review Pezeshkian/IRGC statements overnight"
+      ],
+      "open": [
+        "Confirm فملی opening vs 27,690 reference",
+        "Watch first 30min volume vs 20-day avg",
+        "Check option IV opening vs prior close (BRS)"
+      ],
+      "intraday": {
+        "bullish_path": "IF فملی >28,000 + volume >1.5x avg + call OI builds → add T1",
+        "bearish_path": "IF فملی <26,500 + put OI builds + breadth negative → reduce/hedge"
+      },
+      "close": [
+        "Record closing basis vs key levels",
+        "Update flow proxy (Kamandar retail value)",
+        "Carry forward: copper close, breadth, option OI changes"
+      ]
+    },
+    "if_i_were_the_investor": {
+      "buy_now_or_wait": "WAIT. Price 27,690 is 38% above thesis confirmation (20,000). No flow confirmation. Risk/reward unfavorable at current level.",
+      "hold_reduce_sell": "If holding: REDUCE 25-30% at current level. Re-enter on pullback to 22,000-24,000 with flow confirmation.",
+      "priority_industry": "Basic Metals (copper/steel/aluminum) — rotation leadership + commodity tailwind + rial weakness benefit.",
+      "avoid_industry": "Oil Products (refining cracks collapsing, sanctions risk), Wood Products (demand weak, housing slowdown).",
+      "best_opportunity": "فملی on structured pullback entry (22,000-24,000) with copper >$4.50 and real-money inflow.",
+      "most_dangerous_setup": "Chasing فملی breakout above 28,000 with deteriorating flow + high IV calls. Gamma trap risk in شستا near expiry.",
+      "single_event_reversal": "US-Iran diplomatic breakthrough (sanctions relief) + copper supply disruption → simultaneous FX rally + commodity surge → فملی re-rating to 35,000+."
     }
   }
 }
