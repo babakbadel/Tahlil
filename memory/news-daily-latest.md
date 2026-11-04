@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-03 17:12 UTC
+# Daily Economic News Digest — 2026-11-04 12:37 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **23** · Total stored: **2500**
+> New items this run: **56** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Subsidy for gas trebles in Iran war fallout - The Daily Star | The Daily Star | Mon, 15 Jun 2026 07:10 |
-| macro_monetary | US Average Gasoline Price Breaches $4 for First Time in a Month as Middle East Conflict and Peak Season Demand Fuel Infl | finance.biggo.com | Mon, 20 Jul 2026 07:00 |
-| macro_monetary | Global Oil Price Rises After U.S. Strikes in Iran Cloud Peace Deal - The New York Times | The New York Times | Tue, 26 May 2026 07:00 |
-| macro_monetary | Malaysia sees risk of missing deficit goals on subsidy pressures - The Straits Times | The Straits Times | Wed, 10 Jun 2026 07:00 |
-| macro_monetary | Brazil to Subsidize Gasoline as Lula Ramps Up Election Stimulus - Bloomberg | Bloomberg | Wed, 13 May 2026 07:00 |
-| macro_monetary | US faces rising costs with Iran war driving energy prices, inflation higher - Al Jazeera | Al Jazeera | Tue, 12 May 2026 07:00 |
-| macro_monetary | Iran faces a new energy imbalance, but its options are limited - Al Jazeera | Al Jazeera | Wed, 03 Jun 2026 07:00 |
-| macro_monetary | Nigeria’s fuel, fertilizer, and food prices feel the strain of the Iran conflict - IFPRI | IFPRI | Mon, 22 Jun 2026 07:00 |
-| oil | S&P 500, Nasdaq open higher as oil prices extend declines, midterms on tap - The Business Times | The Business Times | Tue, 03 Nov 2026 14:27 |
-| oil | Indian Refiner BPCL Buys U.S. WTI Crude Oil Cargo - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 03 Nov 2026 13:30 |
-| oil | Trump Bombs Iran, Talks Peace, and Sends Oil Prices Tumbling - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 03 Nov 2026 16:43 |
-| oil | Brent Flash Crashes $6 Before Rebounding Towards $104 - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 03 Nov 2026 15:35 |
-| oil | November 4, 2026: Brent crude oil price on Nov 4, 2026 at 5:00 PM EST Commodities Prediction Market - Robinhood | Robinhood | Tue, 03 Nov 2026 12:35 |
-| oil | Crude oil prices fall for second day as market hopes for diplomatic resolution to Iran war - CNBC | CNBC | Tue, 03 Nov 2026 06:41 |
-| geopolitics | US blockade stalls Iran’s oil exports: Report - Anadolu Ajansı | Anadolu Ajansı | Fri, 07 Aug 2026 07:00 |
-| geopolitics | Iran's oil supply threat extends beyond Strait of Hormuz - DW.com | DW.com | Fri, 17 Jul 2026 07:00 |
-| geopolitics | Aramco looking to circumvent Strait of Hormuz via pipeline expansion, CEO says - The Jerusalem Post | The Jerusalem Post | Tue, 03 Nov 2026 11:26 |
-| geopolitics | Iranian Tankers Bypass U.S. Naval Blockade to Transport Gas to China - IranWire | IranWire | Mon, 02 Nov 2026 09:35 |
-| geopolitics | Arab states warn Iran of individual, collective retaliation over attacks - WSJ - Iran International | Iran International | Tue, 03 Nov 2026 00:21 |
-| geopolitics | US strikes Iranian targets in the Strait of Hormuz, official says, leaving unclear what comes next - KSL News | KSL News | Tue, 03 Nov 2026 14:02 |
-| geopolitics | Gulf oil flows dip in October from post-Iran war high, data shows - Reuters | Reuters | Tue, 03 Nov 2026 15:39 |
-| bourse | Tehran Stock Exchange Sees Historic Capital Flight Amid Post-War Crisis - Iran News Update | Iran News Update | Wed, 02 Jul 2025 07:00 |
-| bourse | Iran stock exchange reopens after war forced longest-ever shutdown - Al Arabiya English | Al Arabiya English | Tue, 19 May 2026 07:00 |
-| macro_monetary | Iran doubles gasoline price amid fears of renewed unrest - Iran International | Iran International | Mon, 07 Sep 2026 07:00 |
-| macro_monetary | Iran MP says government considering petrol price rise despite war and inflation - Iran International | Iran International | Tue, 21 Jul 2026 07:00 |
-| macro_monetary | As fuel prices rise again, Iran’s government urges citizens to cut back - Al Jazeera | Al Jazeera | Tue, 08 Sep 2026 07:00 |
-| macro_monetary | Iran war hits home as gasoline prices fuel significant U.S. inflation jump - PBS | PBS | Tue, 12 May 2026 07:00 |
-| macro_monetary | Iran’s government signals fuel price hike on eve of new US sanctions - Al Jazeera | Al Jazeera | Sun, 23 Aug 2026 07:00 |
-| macro_monetary | Iran increases gasoline price for its heaviest consumers as economy struggles - NBC News | NBC News | Mon, 07 Sep 2026 07:00 |
-| oil | Oil drops 7% as Iran signals openness to peace talks - The Business Times | The Business Times | Mon, 02 Nov 2026 22:05 |
-| oil | Buy CVX and XOM Amid Solid Q3 Earnings and Surging Crude Oil Prices - TradingView | TradingView | Mon, 02 Nov 2026 11:53 |
-| oil | S&P 500, Nasdaq set for higher open as oil prices extend declines, midterm results awaited - The Business Times | The Business Times | Tue, 03 Nov 2026 14:27 |
-| oil | Goldman Raises Its Brent Oil Forecast To $105, WTI Crude To $94 - Exchange Rates UK | Exchange Rates UK | Tue, 03 Nov 2026 12:45 |
-| oil | After Brent Crude's 75% Surge This Year, "Commodities Godfather" Currie Says: Time to Take Profits on the Short Term - f | finance.biggo.com | Tue, 03 Nov 2026 12:56 |
-| oil | Middle East Oil Markets Flash Signs of Abundance as Flows Rise - Bloomberg.com | Bloomberg.com | Tue, 03 Nov 2026 06:54 |
-| oil | Oil rises after report of US strike on Iran's Qeshm Island - CNBC | CNBC | Tue, 03 Nov 2026 01:47 |
-| oil | Current price of oil as of November 3, 2026 - Fortune | Fortune | Tue, 03 Nov 2026 07:28 |
-| oil | Oil rises as Iran says war deal remains distant, US strikes Qeshm - Reuters | Reuters | Tue, 03 Nov 2026 01:27 |
-| oil | Crude oil tumbles aren't helping diesel - Axios | Axios | Tue, 03 Nov 2026 12:12 |
-| oil | Alaska North Slope crude oil records fifth-highest monthly average price in history - Alaska Beacon | Alaska Beacon | Tue, 03 Nov 2026 14:04 |
+| macro_monetary | US-Israel-Iran War Latest Live News: Iran Hikes Gasoline Price Again As Consumption Hits Record 145 Million Litres A Day | The Sunday Guardian | Tue, 08 Sep 2026 07:00 |
+| macro_monetary | US-Israel-Iran War Live Updates: Why Iran is Running Out of Easy Fuel Options? Tehran Faces Petrol Price Hike as War, US | The Sunday Guardian | Mon, 24 Aug 2026 07:00 |
+| macro_monetary | Iran’s Fuel Freeze and $127 Billion IOU: Why Economic Failure Is Becoming a Political Crisis - National Council of Resis | National Council of Resistance of Iran - NCRI | Sat, 15 Aug 2026 07:00 |
+| oil | Four Gulf States' Crude Exports Return to Pre-War Levels; 15.53 Million Barrels a Day Caps Oil Price Rally - BigGo Finan | BigGo Finance | Tue, 03 Nov 2026 16:35 |
+| oil | U.S. Pushes to Restore Russian Gas Flows to Europe - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 07:50 |
+| oil | After Brent Crude's 75% Surge This Year, "Commodities Godfather" Currie Says: Time to Take Profits on the Short Term - B | BigGo Finance | Tue, 03 Nov 2026 12:56 |
+| oil | US Open: Lower oil prices boost indices, markets await Midterms results (03.11.2026) - XTB.com | XTB.com | Tue, 03 Nov 2026 16:47 |
+| oil | Brent crude slips below $103, WTI near $95 as investors track US midterm election results, Middle East... - Moneycontrol | Moneycontrol.com | Wed, 04 Nov 2026 05:05 |
+| oil | Crude Oil Prices Rise on Supply Concerns Despite OPEC’s Sixth Demand Forecast Cut - APAC Media | APAC Media | Wed, 04 Nov 2026 06:12 |
+| oil | Brent near $104; Oil volatile as traders weigh US-Iran peace prospects - CNBC TV18 | CNBC TV18 | Wed, 04 Nov 2026 01:26 |
+| oil | Brent, WTI, Murban crude oil slide as Iran peace hopes outweigh fresh supply fears - Gulf News | Gulf News | Tue, 03 Nov 2026 23:27 |
+| oil | Oil Price Today (November 4): Crude oil falls below $104 ahead of US midterm elections outcome. What are a - The Economi | The Economic Times | Wed, 04 Nov 2026 02:24 |
+| oil | Shafaq News..Basrah crude prices retreat alongside global decline - شفق نيوز | شفق نيوز | Wed, 04 Nov 2026 06:52 |
+| oil | Oil Prices Swing as Uncertainty Swirls Over US-Iran Peace Talks - Bloomberg.com | Bloomberg.com | Mon, 02 Nov 2026 23:01 |
+| oil | Oil Prices Rebound as Strait of Hormuz Supply Risks Persist - JournalArta | JournalArta | Wed, 04 Nov 2026 10:37 |
+| oil | Crude Oil Slips to $103 as Markets Track US Midterm Results - HDFC Sky | HDFC Sky | Wed, 04 Nov 2026 04:35 |
+| oil | Crude Oil Futures Rise Amid Positive Global Trends - Rediff MoneyWiz | Rediff MoneyWiz | Wed, 04 Nov 2026 06:01 |
+| oil | Brent crude could hit $140 next year in upside scenario, Goldman analysts say (CL1:COM:Commodity) - Seeking Alpha | Seeking Alpha | Mon, 02 Nov 2026 15:32 |
+| oil | Oil price extends decline to $103 - Financial Times | Financial Times | Tue, 03 Nov 2026 07:33 |
+| oil | Oil rises on Iran war uncertainty after Trump's Republicans face election rout - Deccan Herald | Deccan Herald | Wed, 04 Nov 2026 08:55 |
+| oil | Brent Crude Oil Price Rises After US Strike on Iran’s Qeshm Island - Coinpedia | Coinpedia | Tue, 03 Nov 2026 11:58 |
+| oil | Oil Prices Down - 03-11-26 - Armenpress | Armenpress | Wed, 04 Nov 2026 05:04 |
+| oil | Oil Prices Today: Brent Crude Hovers Near $104 Amid Uncertainty Over US-Iran Peace Talks - NDTV Profit | NDTV Profit | Wed, 04 Nov 2026 01:21 |
+| oil | Peace Talk Hopes Weigh on Oil Prices as Brent Crude Slips Below $104 to Four-Week Low - BigGo Finance | BigGo Finance | Tue, 03 Nov 2026 23:25 |
+| oil | Global Diesel Crunch Set to Last Well Into 2027 - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 04 Nov 2026 00:00 |
+| oil | Oil prices slide as hopes rise for potential US-Iran diplomatic breakthrough - Yahoo Finance | Yahoo Finance | Mon, 02 Nov 2026 18:27 |
+| oil | A Top Oil Bull Says Take Profits as Crude Prices Slide - Barron's | Barron's | Tue, 03 Nov 2026 19:39 |
+| oil | Global Oil Prices Plunge for Second Day; Brent Crude in $103 Range on US-Iran Talks Hopes, Midterm Election Factor - Big | BigGo Finance | Wed, 04 Nov 2026 08:45 |
+| oil | Oil prices swing after U.S. attacks Iran - Transport Topics | Transport Topics | Tue, 03 Nov 2026 15:13 |
+| oil | Suncor Energy tops profit estimates on higher oil prices, margins - WTVB | WTVB | Wed, 04 Nov 2026 01:16 |
+| oil | Oil prices ease to settle near 4-week low on hopes peace talks will end wars - Reuters | Reuters | Tue, 03 Nov 2026 01:27 |
+| oil | Current price of oil as of Nov. 4, 2026 - Fortune | Fortune | Wed, 04 Nov 2026 12:15 |
+| oil | Oil falls on Iran war uncertainty, US Democrats' midterm sweep - Reuters | Reuters | Wed, 04 Nov 2026 02:10 |
+| oil | Oil Futures Turn Lower as Market Holds Out Hope for Middle East Diplomacy - WSJ | WSJ | Tue, 03 Nov 2026 20:57 |
+| oil | Oil Prices Fall as Democrats Seize Control of U.S. Congress and Uncertainty Grows Over Iran Conflict — WTI Below $95, Br | EnergyNow.com | Wed, 04 Nov 2026 12:29 |
+| oil | Pentagon Eyes Unprecedented 75-Year Deal to End China's Rare Earth Stranglehold - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 04 Nov 2026 01:22 |
+| oil | US Crude Oil Inventories Still in Freefall - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 03 Nov 2026 22:00 |
+| geopolitics | Iran says Americans voted ‘no to war’ after Republican midterm defeat - Ammon News | Ammon News | Wed, 04 Nov 2026 09:55 |
+| geopolitics | Amid regional conflict, the Strait of Hormuz remains critical oil chokepoint - U.S. Energy Information Administration (E | U.S. Energy Information Administration (EIA) (.gov) | Mon, 16 Jun 2025 07:00 |
+| geopolitics | The Doha Trap: How Iran Is Using Hormuz to Extort the West - Algemeiner.com | Algemeiner.com | Tue, 03 Nov 2026 15:46 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-03 17:12 UTC | 23 new | 2500 total
+NEWS_DIGEST | 2026-11-04 12:37 UTC | 56 new | 2500 total
