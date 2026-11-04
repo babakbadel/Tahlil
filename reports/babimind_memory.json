@@ -1834,7 +1834,80 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "376ae41a599e1cd869a4"
+    },
+    {
+      "timestamp": "2026-11-04T16:01:01.247431+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "probability": 0.4,
+          "target": "TEDPIX >8,200 / فملی 23,000",
+          "catalysts": [
+            "Copper breakout >$4.50/lb",
+            "Retail inflow persists 3+ sessions",
+            "TEDPIX breadth >600 advancers",
+            "Geopolitical de-escalation (Hormuz)"
+          ],
+          "confirmation": [
+            "فملی closes >20,000 on volume",
+            "Equal-weight leads up",
+            "Retail net buy >30T rials"
+          ],
+          "invalidation": [
+            "Copper <$4.00",
+            "Real-money outflow accelerates",
+            "Breadth <400"
+          ]
+        },
+        "base": {
+          "probability": 0.4,
+          "target": "TEDPIX 7,800-8,200 / فملی 21,500",
+          "catalysts": [
+            "Steady sales growth 100%+ YoY",
+            "Stable copper $4.00-4.50",
+            "Managed FX regime",
+            "No new sanctions"
+          ],
+          "confirmation": [
+            "فملی trades 19,400-21,500",
+            "Volume moderate",
+            "Breadth 450-550"
+          ],
+          "invalidation": [
+            "Sales growth <50% YoY 2 quarters",
+            "Copper -20%",
+            "USD/IRR >2.2M"
+          ]
+        },
+        "bear": {
+          "probability": 0.2,
+          "target": "TEDPIX <7,500 / فملی 18,800",
+          "catalysts": [
+            "Copper breakdown <$3.50",
+            "Volume collapse",
+            "Real-money outflow accelerates",
+            "US-Iran conflict / Hormuz closure",
+            "Gasoline hike → inflation → rate hike"
+          ],
+          "confirmation": [
+            "فملی breaks <18,800 on volume",
+            "Equal-weight leads down",
+            "Breadth <300"
+          ],
+          "invalidation": [
+            "Price rebounds >20,000",
+            "Fundamentals re-accelerate",
+            "De-escalation"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "1f21276c182e04d3bd01"
     }
   ],
-  "updated_at": "2026-11-04T12:40:50.668976+00:00"
+  "updated_at": "2026-11-04T16:01:01.249470+00:00"
 }

@@ -1,10 +1,24 @@
-# Daily Economic News Digest — 2026-11-04 12:37 UTC
+# Daily Economic News Digest — 2026-11-04 15:55 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **56** · Total stored: **2500**
+> New items this run: **14** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | Crude oil prices hit one-month low; Brent crude oil falls below $102 per barrel - Upstox | Upstox | Wed, 04 Nov 2026 13:13 |
+| oil | Ukraine Has Hit Three Russian Refineries Since Friday - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 15:30 |
+| oil | Oil price falls on optimism talks will bring end to Iran war - The Times | The Times | Mon, 02 Nov 2026 18:35 |
+| oil | Oil prices rise on Saudi Arabia attacks, overshadowing Trump's diesel deal - Reuters | Reuters | Mon, 12 Oct 2026 07:00 |
+| oil | Oil News: Crude Oil Futures Fall as Iran Peace Talks Pressure War Premium - FXEmpire | FXEmpire | Wed, 04 Nov 2026 13:14 |
+| oil | Suncor Energy tops profit estimates on higher oil prices, margins - Merced Sun-Star | Merced Sun-Star | Tue, 03 Nov 2026 23:59 |
+| oil | Crude Oil Prices Fall, What the U.S. Midterms Mean for Brent - FOREX.com | FOREX.com | Wed, 04 Nov 2026 13:53 |
+| oil | Current price of oil as of November 4, 2026 - Fortune | Fortune | Wed, 04 Nov 2026 12:15 |
+| oil | Oil Prices Fall as Investors Weigh U.S. Midterm Results, Iran Risks - WSJ | WSJ | Wed, 04 Nov 2026 13:49 |
+| oil | Oil Prices Fall as Democrats Seize Control of U.S. Congress and Uncertainty Grows Over Iran Conflict – WTI Below $95, Br | EnergyNow.com | Wed, 04 Nov 2026 12:29 |
+| oil | Crude oil prices fall for second day as market hopes for diplomatic resolution to Iran war - CNBC | CNBC | Tue, 03 Nov 2026 06:41 |
+| geopolitics | Iran says Americans voted ‘no to war’ after Republican midterm defeat - Ammon News | Ammon News | Wed, 04 Nov 2026 09:56 |
+| fx | Cure for Iran currency slide could be worse than the disease - Iran International | Iran International | Mon, 15 Dec 2025 08:00 |
+| fx | Iranian parliament approves currency redenomination - Reuters | Reuters | Mon, 06 Oct 2025 07:00 |
 | macro_monetary | US-Israel-Iran War Latest Live News: Iran Hikes Gasoline Price Again As Consumption Hits Record 145 Million Litres A Day | The Sunday Guardian | Tue, 08 Sep 2026 07:00 |
 | macro_monetary | US-Israel-Iran War Live Updates: Why Iran is Running Out of Easy Fuel Options? Tehran Faces Petrol Price Hike as War, US | The Sunday Guardian | Mon, 24 Aug 2026 07:00 |
 | macro_monetary | Iran’s Fuel Freeze and $127 Billion IOU: Why Economic Failure Is Becoming a Political Crisis - National Council of Resis | National Council of Resistance of Iran - NCRI | Sat, 15 Aug 2026 07:00 |
@@ -31,24 +45,10 @@
 | oil | Peace Talk Hopes Weigh on Oil Prices as Brent Crude Slips Below $104 to Four-Week Low - BigGo Finance | BigGo Finance | Tue, 03 Nov 2026 23:25 |
 | oil | Global Diesel Crunch Set to Last Well Into 2027 - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 04 Nov 2026 00:00 |
 | oil | Oil prices slide as hopes rise for potential US-Iran diplomatic breakthrough - Yahoo Finance | Yahoo Finance | Mon, 02 Nov 2026 18:27 |
-| oil | A Top Oil Bull Says Take Profits as Crude Prices Slide - Barron's | Barron's | Tue, 03 Nov 2026 19:39 |
-| oil | Global Oil Prices Plunge for Second Day; Brent Crude in $103 Range on US-Iran Talks Hopes, Midterm Election Factor - Big | BigGo Finance | Wed, 04 Nov 2026 08:45 |
-| oil | Oil prices swing after U.S. attacks Iran - Transport Topics | Transport Topics | Tue, 03 Nov 2026 15:13 |
-| oil | Suncor Energy tops profit estimates on higher oil prices, margins - WTVB | WTVB | Wed, 04 Nov 2026 01:16 |
-| oil | Oil prices ease to settle near 4-week low on hopes peace talks will end wars - Reuters | Reuters | Tue, 03 Nov 2026 01:27 |
-| oil | Current price of oil as of Nov. 4, 2026 - Fortune | Fortune | Wed, 04 Nov 2026 12:15 |
-| oil | Oil falls on Iran war uncertainty, US Democrats' midterm sweep - Reuters | Reuters | Wed, 04 Nov 2026 02:10 |
-| oil | Oil Futures Turn Lower as Market Holds Out Hope for Middle East Diplomacy - WSJ | WSJ | Tue, 03 Nov 2026 20:57 |
-| oil | Oil Prices Fall as Democrats Seize Control of U.S. Congress and Uncertainty Grows Over Iran Conflict — WTI Below $95, Br | EnergyNow.com | Wed, 04 Nov 2026 12:29 |
-| oil | Pentagon Eyes Unprecedented 75-Year Deal to End China's Rare Earth Stranglehold - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 04 Nov 2026 01:22 |
-| oil | US Crude Oil Inventories Still in Freefall - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 03 Nov 2026 22:00 |
-| geopolitics | Iran says Americans voted ‘no to war’ after Republican midterm defeat - Ammon News | Ammon News | Wed, 04 Nov 2026 09:55 |
-| geopolitics | Amid regional conflict, the Strait of Hormuz remains critical oil chokepoint - U.S. Energy Information Administration (E | U.S. Energy Information Administration (EIA) (.gov) | Mon, 16 Jun 2025 07:00 |
-| geopolitics | The Doha Trap: How Iran Is Using Hormuz to Extort the West - Algemeiner.com | Algemeiner.com | Tue, 03 Nov 2026 15:46 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-04 12:37 UTC | 56 new | 2500 total
+NEWS_DIGEST | 2026-11-04 15:55 UTC | 14 new | 2500 total
