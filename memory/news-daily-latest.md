@@ -1,10 +1,22 @@
-# Daily Economic News Digest — 2026-11-04 15:55 UTC
+# Daily Economic News Digest — 2026-11-04 17:21 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **14** · Total stored: **2500**
+> New items this run: **12** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | 61 days later, no plan: Trump’s Iran war drives national gas prices to a four-year high, sending prices soaring across t | California State Portal | CA.gov | Thu, 30 Apr 2026 07:00 |
+| macro_monetary | Quantifying the impact of the Iran war on US inflation - CEPR | CEPR | Mon, 04 May 2026 07:00 |
+| macro_monetary | Iran’s gasoline price hike may add to revenues, but can it ease fuel shortage? - Iran International | Iran International | Tue, 08 Sep 2026 07:00 |
+| oil | Oil slides again: How Iran peace hopes outweigh supply fears, affect oil markets - Gulf News | Gulf News | Tue, 03 Nov 2026 23:27 |
+| oil | Brent crude drops below $100 for first time since October as investors assess post-election Iran war... - Moneycontrol.c | Moneycontrol.com | Wed, 04 Nov 2026 17:01 |
+| oil | Bet on These Oil & Gas ETFs Capitalizing on the US-Iran War Windfall - The Globe and Mail | The Globe and Mail | Wed, 04 Nov 2026 16:02 |
+| oil | Brent Crude Drops 5% to $98.52 a Barrel as WTI Falls 4.6% - www.tokenpost.com | www.tokenpost.com | Wed, 04 Nov 2026 16:19 |
+| oil | Oil tumbles as investors weigh end to Iran war after US Democrats' midterm elections sweep - Reuters | Reuters | Wed, 04 Nov 2026 02:10 |
+| oil | Oil prices slide as midterm results ease Iran escalation fears - Quartz | Quartz | Wed, 04 Nov 2026 16:32 |
+| oil | Democrats Win Texas Oil Regulator Seat for First Time Since 1990 - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 04 Nov 2026 14:00 |
+| oil | Crude oil prices fall below $90 a barrel as Vance blames GOP election defeat on Iran war - CNBC | CNBC | Wed, 04 Nov 2026 16:43 |
+| macro_monetary | افزایش نرخ سود؛ نسخه نجات اقتصاد یا فشار تازه بر مردم؟ - تسنیم - vista.ir | vista.ir | Wed, 04 Nov 2026 06:37 |
 | oil | Crude oil prices hit one-month low; Brent crude oil falls below $102 per barrel - Upstox | Upstox | Wed, 04 Nov 2026 13:13 |
 | oil | Ukraine Has Hit Three Russian Refineries Since Friday - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 15:30 |
 | oil | Oil price falls on optimism talks will bring end to Iran war - The Times | The Times | Mon, 02 Nov 2026 18:35 |
@@ -33,22 +45,10 @@
 | oil | Oil Price Today (November 4): Crude oil falls below $104 ahead of US midterm elections outcome. What are a - The Economi | The Economic Times | Wed, 04 Nov 2026 02:24 |
 | oil | Shafaq News..Basrah crude prices retreat alongside global decline - شفق نيوز | شفق نيوز | Wed, 04 Nov 2026 06:52 |
 | oil | Oil Prices Swing as Uncertainty Swirls Over US-Iran Peace Talks - Bloomberg.com | Bloomberg.com | Mon, 02 Nov 2026 23:01 |
-| oil | Oil Prices Rebound as Strait of Hormuz Supply Risks Persist - JournalArta | JournalArta | Wed, 04 Nov 2026 10:37 |
-| oil | Crude Oil Slips to $103 as Markets Track US Midterm Results - HDFC Sky | HDFC Sky | Wed, 04 Nov 2026 04:35 |
-| oil | Crude Oil Futures Rise Amid Positive Global Trends - Rediff MoneyWiz | Rediff MoneyWiz | Wed, 04 Nov 2026 06:01 |
-| oil | Brent crude could hit $140 next year in upside scenario, Goldman analysts say (CL1:COM:Commodity) - Seeking Alpha | Seeking Alpha | Mon, 02 Nov 2026 15:32 |
-| oil | Oil price extends decline to $103 - Financial Times | Financial Times | Tue, 03 Nov 2026 07:33 |
-| oil | Oil rises on Iran war uncertainty after Trump's Republicans face election rout - Deccan Herald | Deccan Herald | Wed, 04 Nov 2026 08:55 |
-| oil | Brent Crude Oil Price Rises After US Strike on Iran’s Qeshm Island - Coinpedia | Coinpedia | Tue, 03 Nov 2026 11:58 |
-| oil | Oil Prices Down - 03-11-26 - Armenpress | Armenpress | Wed, 04 Nov 2026 05:04 |
-| oil | Oil Prices Today: Brent Crude Hovers Near $104 Amid Uncertainty Over US-Iran Peace Talks - NDTV Profit | NDTV Profit | Wed, 04 Nov 2026 01:21 |
-| oil | Peace Talk Hopes Weigh on Oil Prices as Brent Crude Slips Below $104 to Four-Week Low - BigGo Finance | BigGo Finance | Tue, 03 Nov 2026 23:25 |
-| oil | Global Diesel Crunch Set to Last Well Into 2027 - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 04 Nov 2026 00:00 |
-| oil | Oil prices slide as hopes rise for potential US-Iran diplomatic breakthrough - Yahoo Finance | Yahoo Finance | Mon, 02 Nov 2026 18:27 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-04 15:55 UTC | 14 new | 2500 total
+NEWS_DIGEST | 2026-11-04 17:21 UTC | 12 new | 2500 total
