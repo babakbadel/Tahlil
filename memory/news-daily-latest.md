@@ -1,10 +1,21 @@
-# Daily Economic News Digest — 2026-11-07 11:28 UTC
+# Daily Economic News Digest — 2026-11-07 14:29 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **76** · Total stored: **2500**
+> New items this run: **11** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | India's Renewables Have Saved $100 Billion in Fuel Imports, IEA Says - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 05 Nov 2026 22:00 |
+| oil | US stocks surge, Dow soars 1,500 points as Brent oil’s price drops below $95 per barrel after Democrats take control of  | WAGM | Wed, 04 Nov 2026 13:11 |
+| oil | Current price of oil as of November 6, 2026 - Fortune | Fortune | Fri, 06 Nov 2026 12:45 |
+| oil | Oil prices tumble for the week as investors weigh Iran conflict risk after midterm elections - CNBC | CNBC | Fri, 06 Nov 2026 05:06 |
+| pezeshkian | Can Iran’s New President Change the Regime’s Confrontational Foreign Policy? - CSIS / Center for Strategic and Internati | CSIS | Center for Strategic and International Studies | Tue, 09 Jul 2024 07:00 |
+| bourse | US carries out fresh strikes on Iran's air defences as Tehran sends nuclear proposal with 7 conditions - Moneycontrol.co | Moneycontrol.com | Sat, 07 Nov 2026 03:00 |
+| bourse | US military carries out new targeted strike on Iran as Tehran's leaders weigh mediator's proposals - The Economic Times | The Economic Times | Sat, 07 Nov 2026 01:41 |
+| bourse | Competitive exports, strengthening trade corridors: strategic axes of Iran-China interactions - Tehran Times | Tehran Times | Fri, 06 Nov 2026 12:57 |
+| bourse | Iran's currency hits a new record low as war erodes the country's economic stability - Yahoo Finance | Yahoo Finance | Tue, 29 Sep 2026 07:00 |
+| bourse | Wall Street indexes mostly fall as Iran war widens - Reuters | Reuters | Mon, 30 Mar 2026 07:00 |
+| bourse | COMMENTARY: Washington reset, market meltdown and the Iran oil bet: The financial week in five charts - Reuters | Reuters | Fri, 06 Nov 2026 13:46 |
 | macro_monetary | Gas Prices Start Sliding as Hopes for Iran Deal Grow - NerdWallet | NerdWallet | Mon, 02 Nov 2026 08:00 |
 | macro_monetary | Inflation cools more than expected in June as gas costs fall and underlying prices ease - PBS | PBS | Tue, 14 Jul 2026 07:00 |
 | oil | Oil Price Today (November 6): Crude oil nears $100 again as fresh attacks dent peace talk hopes. What are - The Economic | The Economic Times | Fri, 06 Nov 2026 02:22 |
@@ -34,21 +45,10 @@
 | oil | Oil Rebounds Toward $100 as Democrats' Sweep Rattles Energy Stocks - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 06 Nov 2026 01:00 |
 | oil | Brent crude falls below $114 as Iran diplomacy accelerates and Israeli election outcome awaited - Energies Media | Energies Media | Fri, 06 Nov 2026 15:37 |
 | oil | Oil Prices Head for 12% Weekly Loss Despite Fresh Tanker Attacks - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 06 Nov 2026 06:05 |
-| oil | Brent oil prices set for biggest weekly drop since 2020 - RTE.ie | RTE.ie | Fri, 06 Nov 2026 14:41 |
-| oil | Oil Price Predictions: Why Goldman Sachs Is Betting on Brent to Climb to $140 - Barchart.com | Barchart.com | Thu, 05 Nov 2026 16:22 |
-| oil | Crude Oil Forecast: Why Falling Inventories Keep Supply Risks in Focus - FXEmpire | FXEmpire | Fri, 06 Nov 2026 15:54 |
-| oil | Strait of Hormuz disruption ‘to keep oil prices high’ - The Times | The Times | Fri, 06 Nov 2026 19:45 |
-| oil | The Iran War Isn't Over, but Oil Traders Are Already Pricing In Peace - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 06 Nov 2026 15:28 |
-| oil | Brent crude jumps, settles up over $3 after tanker attacks - Yahoo Finance | Yahoo Finance | Thu, 05 Nov 2026 20:15 |
-| oil | Is the crude rally over? Brent on track for worst week since 2020 - Baird Maritime | Baird Maritime | Fri, 06 Nov 2026 17:10 |
-| oil | Oil Prices Down - 06-11-26 - Armenpress | Armenpress | Sat, 07 Nov 2026 07:06 |
-| oil | Global Oil Prices Drop Sharply Amid Reports of Potential Iran–U.S. Peace Talks - IranWire | IranWire | Fri, 06 Nov 2026 16:11 |
-| oil | As high oil prices curb demand, fresh signs of glut appear - Reuters | Reuters | Fri, 06 Nov 2026 02:04 |
-| oil | Oil Prices Pick Up as Market Mulls Over Prospects for Middle East Settlement - WSJ | WSJ | Thu, 05 Nov 2026 20:45 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-07 11:28 UTC | 76 new | 2500 total
+NEWS_DIGEST | 2026-11-07 14:29 UTC | 11 new | 2500 total
