@@ -1,17 +1,17 @@
 {
   "source": "amirkazem/TSETMC_OPTION -> TSETMC GetInstrumentOptionMarketWatch",
-  "collected_at_utc": "2026-11-04T12:48:09.784737+00:00",
+  "collected_at_utc": "2026-11-07T11:32:16.000430+00:00",
   "status": "error",
   "markets": {
     "bourse": {
       "status": "error",
       "url": "https://cdn.tsetmc.com/api/Instrument/GetInstrumentOptionMarketWatch/1",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='cdn.tsetmc.com', port=443): Max retries exceeded with url: /api/Instrument/GetInstrumentOptionMarketWatch/1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='cdn.tsetmc.com', port=443) at 0x7f5fb0740450>, 'Connection to cdn.tsetmc.com timed out. (connect timeout=5)'))"
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='cdn.tsetmc.com', port=443): Max retries exceeded with url: /api/Instrument/GetInstrumentOptionMarketWatch/1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='cdn.tsetmc.com', port=443) at 0x7f20b8e3b210>, 'Connection to cdn.tsetmc.com timed out. (connect timeout=5)'))"
     },
     "farabourse": {
       "status": "error",
       "url": "https://cdn.tsetmc.com/api/Instrument/GetInstrumentOptionMarketWatch/2",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='cdn.tsetmc.com', port=443): Max retries exceeded with url: /api/Instrument/GetInstrumentOptionMarketWatch/2 (Caused by ConnectTimeoutError(<HTTPSConnection(host='cdn.tsetmc.com', port=443) at 0x7f5fb063be90>, 'Connection to cdn.tsetmc.com timed out. (connect timeout=5)'))"
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='cdn.tsetmc.com', port=443): Max retries exceeded with url: /api/Instrument/GetInstrumentOptionMarketWatch/2 (Caused by ConnectTimeoutError(<HTTPSConnection(host='cdn.tsetmc.com', port=443) at 0x7f20b8e48fd0>, 'Connection to cdn.tsetmc.com timed out. (connect timeout=5)'))"
     }
   },
   "total_rows": 0
