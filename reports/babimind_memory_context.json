@@ -1,90 +1,8 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 28,
+  "historical_runs_available": 29,
   "context_runs": 20,
   "recent_runs": [
-    {
-      "timestamp": "2026-09-27T13:25:26.207660+00:00",
-      "provider": "openrouter",
-      "model": "openrouter/free",
-      "regime": null,
-      "scenarios": {
-        "bull": {
-          "probability": 0.45,
-          "target_price_rial": 23000,
-          "time_horizon": "Q2‑Q3 1405",
-          "key_triggers": [
-            "Global copper supply disruption or tightness",
-            "Higher copper benchmark",
-            "Higher realized sales price / margins",
-            "Higher FMLI earnings expectations",
-            "Fund‑flow rotation toward large liquid commodity leaders",
-            "Technical breakout or continuation",
-            "Option convexity increases demand for calls"
-          ],
-          "confirmation_signals": [
-            "Price closes above 20 000 rial with expanding volume",
-            "Real‑money inflow persists for ≥3 sessions",
-            "Copper price remains above $4.5/lb (proxy)",
-            "Industry relative strength improves"
-          ],
-          "invalidation_signals": [
-            "Price rises while real‑money flow deteriorates sharply",
-            "Sales growth rolls over for two consecutive releases",
-            "Volume falls while revenue is supported only by price",
-            "Copper price breaks down materially and remains weak"
-          ]
-        },
-        "base": {
-          "probability": 0.4,
-          "target_price_rial": 21500,
-          "time_horizon": "Q2 1405",
-          "key_triggers": [
-            "Steady sales growth",
-            "Maintained market leadership",
-            "Stable commodity prices",
-            "Controlled geopolitical tension"
-          ],
-          "confirmation_signals": [
-            "Price trades within 19 400‑21 500 band with moderate volume",
-            "Fundamental growth rates remain >100% YoY",
-            "No major sanctions escalation"
-          ],
-          "invalidation_signals": [
-            "Sales growth slows below 50% YoY for two releases",
-            "Geopolitical escalation (Hormuz closure, new sanctions)",
-            "Copper price declines >20% from current level"
-          ]
-        },
-        "bear": {
-          "probability": 0.15,
-          "target_price_rial": 18800,
-          "time_horizon": "Q1‑Q2 1405",
-          "key_triggers": [
-            "Copper price breakdown",
-            "Volume collapse",
-            "Real money flow deterioration",
-            "Escalation of US‑Iran conflict (Hormuz closure risk)",
-            "Severe sanctions enforcement (OFAC)"
-          ],
-          "confirmation_signals": [
-            "Price breaks below 18 800 rial on expanding volume",
-            "Real‑money outflow accelerates",
-            "Copper price falls below $3.5/lb (proxy)",
-            "Industry relative strength deteriorates"
-          ],
-          "invalidation_signals": [
-            "Price rebounds above 20 000 rial with volume",
-            "Fundamental metrics show renewed acceleration",
-            "Geopolitical tensions de‑escalate"
-          ]
-        }
-      },
-      "market_implications": null,
-      "confidence": null,
-      "data_gaps": [],
-      "fingerprint": "6b4ea0b2102b67b18506"
-    },
     {
       "timestamp": "2026-10-25T18:09:38.495591+00:00",
       "provider": "openrouter",
@@ -1203,6 +1121,79 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "b281ca862753061ed3af"
+    },
+    {
+      "timestamp": "2026-11-07T14:32:04.366071+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "probability": 0.4,
+          "target": "TEDPIX >8,500 / فملی 23,000",
+          "catalysts": [
+            "copper breakout >$4.80/lb",
+            "Hormuz de-escalation",
+            "real-money inflow returns",
+            "fiscal relief/gasoline subsidy maintained"
+          ],
+          "confirmation": [
+            "فملی >20,000 on expanding volume + real-money inflow ≥3 sessions",
+            "TEDPIX breadth >600 advancers",
+            "equal-weight leads cap-weighted"
+          ],
+          "invalidation": [
+            "فملی <18,800 on volume",
+            "copper <$4.00",
+            "real-money outflow accelerates"
+          ]
+        },
+        "base": {
+          "probability": 0.4,
+          "target": "TEDPIX 7,800-8,200 / فملی 21,500",
+          "catalysts": [
+            "steady sales growth 100%+ YoY",
+            "stable copper $4.00-4.50",
+            "managed FX regime",
+            "no new sanctions"
+          ],
+          "confirmation": [
+            "فملی trades 19,400-21,500 with moderate volume",
+            "fundamental growth >100% YoY",
+            "breadth 450-550"
+          ],
+          "invalidation": [
+            "sales growth <50% YoY for 2 quarters",
+            "copper -20%",
+            "USD/IRR >2.2M"
+          ]
+        },
+        "bear": {
+          "probability": 0.2,
+          "target": "TEDPIX <7,500 / فملی 18,800",
+          "catalysts": [
+            "copper breakdown <$3.50",
+            "volume collapse",
+            "real-money outflow accelerates",
+            "US-Iran conflict / Hormuz closure",
+            "gasoline hike → inflation → rate hike"
+          ],
+          "confirmation": [
+            "فملی breaks <18,800 on expanding volume",
+            "equal-weight leads down",
+            "breadth <300"
+          ],
+          "invalidation": [
+            "price rebounds >20,000 with volume",
+            "fundamentals re-accelerate",
+            "geopolitical de-escalation"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "65f33e2210aaf092494c"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."

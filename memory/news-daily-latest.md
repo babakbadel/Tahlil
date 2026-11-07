@@ -1,10 +1,27 @@
-# Daily Economic News Digest — 2026-11-07 14:29 UTC
+# Daily Economic News Digest — 2026-11-07 15:50 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **11** · Total stored: **2500**
+> New items this run: **17** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | Brent crude caps biggest weekly drop since pandemic as war premium begins to unwind (USO:NYSEARCA) - Seeking Alpha | Seeking Alpha | Sat, 07 Nov 2026 00:57 |
+| geopolitics | The Doha Trap: How Iran Is Using Hormuz to Extort the West - Middle East Forum | Middle East Forum | Thu, 05 Nov 2026 21:04 |
+| geopolitics | Beyond oil: 9 commodities impacted by the Strait of Hormuz crisis - World Economic Forum | World Economic Forum | Wed, 01 Apr 2026 07:00 |
+| geopolitics | Iran war: Gulf tanker attacked, 1 seaferer killed - DW.com | DW.com | Sat, 07 Nov 2026 05:49 |
+| geopolitics | More ships attacked in Persian Gulf, oil prices rebound slightly after post-midterm plunge - CBS News | CBS News | Fri, 06 Nov 2026 10:23 |
+| geopolitics | Iran challenges US naval blockade by granting China and 3 other countries passage through Hormuz as African economies mo | Business Insider Africa | Fri, 06 Nov 2026 12:52 |
+| geopolitics | Iran’s Hormuz toll regime to punish weakened Trump’s Asian allies - Asia Times | Asia Times | Fri, 06 Nov 2026 04:36 |
+| geopolitics | Why is Iran exempting India, China, Qatar, Iraq from Hormuz restrictions? - Al Jazeera | Al Jazeera | Fri, 06 Nov 2026 06:13 |
+| geopolitics | Tankers hit in Hormuz as Iran keeps up pressure after US vote - Reuters | Reuters | Thu, 05 Nov 2026 16:47 |
+| geopolitics | Iran Oil Exports Near Zero But Peace Deal Not Likely, FGE Says - Bloomberg.com | Bloomberg.com | Fri, 06 Nov 2026 05:43 |
+| geopolitics | 'Iron Gate': US forms special task force to restrict Iran's land exports - The Times of India | The Times of India | Sat, 07 Nov 2026 14:33 |
+| geopolitics | Iran war live: Ship hit in Hormuz; Iraqi FM warns of potential regional war - Al Jazeera | Al Jazeera | Sat, 07 Nov 2026 10:57 |
+| geopolitics | Strait of Hormuz could reopen under Qatari plan to end US war with Iran - The Independent | The Independent | Sat, 07 Nov 2026 13:10 |
+| geopolitics | Breakthrough ahead? US prepares to expand the blockade on Iran - Ynetnews | Ynetnews | Sat, 07 Nov 2026 14:20 |
+| bourse | US strikes Iran’s Qeshm Island, Tehran threatens wider missile response amid Qatar peace push - Moneycontrol.com | Moneycontrol.com | Sat, 07 Nov 2026 14:50 |
+| bourse | Trump says Iran's economy is collapsing. A former central bank adviser in Tehran pushes back - CNBC | CNBC | Thu, 20 Aug 2026 07:00 |
+| bourse | After midterms, Trump is left to weigh his next move in Iran war that contributed to GOP loss - PBS | PBS | Thu, 05 Nov 2026 23:46 |
 | oil | India's Renewables Have Saved $100 Billion in Fuel Imports, IEA Says - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 05 Nov 2026 22:00 |
 | oil | US stocks surge, Dow soars 1,500 points as Brent oil’s price drops below $95 per barrel after Democrats take control of  | WAGM | Wed, 04 Nov 2026 13:11 |
 | oil | Current price of oil as of November 6, 2026 - Fortune | Fortune | Fri, 06 Nov 2026 12:45 |
@@ -28,27 +45,10 @@
 | oil | Brent Crude Plunges 20% in a Week as Goldman Sachs Calls Gold the "Inverse Oil Trade" - BigGo Finance | BigGo Finance | Fri, 06 Nov 2026 06:36 |
 | oil | Oil prices rise: Brent nears $100, while U.S. crude hits $91.66 - صوت الإمارات | صوت الإمارات | Fri, 06 Nov 2026 08:11 |
 | oil | Crude oil price gain amid fresh tanker attacks in Strait of Hormuz - BusinessLine | BusinessLine | Fri, 06 Nov 2026 04:21 |
-| oil | Brent Crude Set for Biggest Weekly Drop Since 2020, Offering Relief for India's Oil Import Bill - Siliconindia | Siliconindia | Sat, 07 Nov 2026 03:24 |
-| oil | Crude costs for Indian refiners dip to $103: Oil price decline lifts mood, but volatility remains high - The Times of In | The Times of India | Thu, 05 Nov 2026 23:35 |
-| oil | Will We Ever See $3 Gas in Texas Again? - Amarillo Country Radio | Amarillo Country Radio | Fri, 06 Nov 2026 13:02 |
-| oil | Brent oil price benchmark set for biggest weekly drop since 2020 - Investify | Investify | Sat, 07 Nov 2026 02:27 |
-| oil | Crude Oil Crashes 15%, But Petrol, Diesel Prices Stay Flat - HDFC Sky | HDFC Sky | Sat, 07 Nov 2026 05:00 |
-| oil | Brent oil price benchmark set for biggest weekly drop since 2020 By Reuters - Investing.com Australia | Investing.com Australia | Fri, 06 Nov 2026 18:47 |
-| oil | Brent oil price benchmark set for biggest weekly drop since 2020 - The Globe and Mail | The Globe and Mail | Fri, 06 Nov 2026 09:15 |
-| oil | OIL PRICES FALL AGAIN as U.S. Election Results Fuel Hopes of Middle East Peace - WTI Below $90, Brent Near $98 - EnergyN | EnergyNow | Fri, 06 Nov 2026 12:33 |
-| oil | Samvat 2082: Commodities witness sharp volatility as crude surges - Rediff | Rediff | Sat, 07 Nov 2026 05:23 |
-| oil | Oil Prices Today: Brent Crude Near $99 Despite 13% Weekly Fall; Why Risks Remain - NDTV Profit | NDTV Profit | Fri, 06 Nov 2026 01:30 |
-| oil | Guyana's Oil Boom Could Ease the Global Supply Crunch - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 05 Nov 2026 17:00 |
-| oil | Top 5 African countries that produced the most crude oil in September 2026 - Business Insider Africa | Business Insider Africa | Fri, 06 Nov 2026 12:10 |
-| oil | Crude Oil Drops Over 12% in a Week Amid Collapse of War Premium - KuCoin | KuCoin | Sat, 07 Nov 2026 04:30 |
-| oil | U.S. Shale Giants Hold Back on Drilling Despite Higher Oil Prices - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 06 Nov 2026 00:00 |
-| oil | Oil Rebounds Toward $100 as Democrats' Sweep Rattles Energy Stocks - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 06 Nov 2026 01:00 |
-| oil | Brent crude falls below $114 as Iran diplomacy accelerates and Israeli election outcome awaited - Energies Media | Energies Media | Fri, 06 Nov 2026 15:37 |
-| oil | Oil Prices Head for 12% Weekly Loss Despite Fresh Tanker Attacks - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 06 Nov 2026 06:05 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-07 14:29 UTC | 11 new | 2500 total
+NEWS_DIGEST | 2026-11-07 15:50 UTC | 17 new | 2500 total
