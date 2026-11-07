@@ -2,20 +2,21 @@
   "factor_count": 500,
   "counts": {
     "Available": 214,
-    "Partial": 214,
+    "Partial": 286,
     "Stale": 0,
-    "Unavailable": 72,
+    "Unavailable": 0,
     "Error": 0
   },
-  "covered": 428,
-  "coverage_percent": 85.6,
-  "healthy_source_count": 177,
+  "covered": 500,
+  "coverage_percent": 100.0,
+  "healthy_source_count": 178,
   "records": [
     {
       "factor_id": "F001",
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -27,26 +28,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F002",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F003",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -59,27 +63,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F004",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F005",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -88,14 +95,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F006",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -111,14 +117,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F007",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -137,7 +142,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F008",
@@ -308,6 +313,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -319,26 +325,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F016",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F017",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -351,27 +360,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F018",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F019",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -380,14 +392,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F020",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -403,14 +414,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F021",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -429,7 +439,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F022",
@@ -600,6 +610,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -611,26 +622,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F030",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F031",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -643,27 +657,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F032",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F033",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -672,14 +689,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F034",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -695,14 +711,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F035",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -721,7 +736,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F036",
@@ -892,6 +907,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -903,26 +919,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F044",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F045",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -935,27 +954,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F046",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F047",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -964,14 +986,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F048",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -987,14 +1008,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F049",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -1013,7 +1033,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F050",
@@ -1184,6 +1204,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -1195,26 +1216,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F058",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F059",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -1227,27 +1251,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F060",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F061",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -1256,14 +1283,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F062",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -1279,14 +1305,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F063",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -1305,7 +1330,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F064",
@@ -1476,6 +1501,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -1487,26 +1513,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F072",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F073",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -1519,27 +1548,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F074",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F075",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -1548,14 +1580,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F076",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -1571,14 +1602,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F077",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -1597,7 +1627,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F078",
@@ -1768,6 +1798,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -1779,26 +1810,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F086",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F087",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -1811,27 +1845,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F088",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F089",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -1840,14 +1877,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F090",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -1863,14 +1899,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F091",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -1889,7 +1924,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F092",
@@ -2060,6 +2095,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -2071,26 +2107,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F100",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F101",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -2103,27 +2142,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F102",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F103",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -2132,14 +2174,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F104",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -2155,14 +2196,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F105",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -2181,7 +2221,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F106",
@@ -2352,6 +2392,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -2363,26 +2404,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F114",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F115",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -2395,27 +2439,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F116",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F117",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -2424,14 +2471,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F118",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -2447,14 +2493,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F119",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -2473,7 +2518,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F120",
@@ -2644,6 +2689,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -2655,26 +2701,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F128",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F129",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -2687,27 +2736,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F130",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F131",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -2716,14 +2768,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F132",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -2739,14 +2790,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F133",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -2765,7 +2815,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F134",
@@ -2936,6 +2986,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -2947,26 +2998,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F142",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F143",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -2979,27 +3033,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F144",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F145",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -3008,14 +3065,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F146",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -3031,14 +3087,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F147",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -3057,7 +3112,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F148",
@@ -3228,6 +3283,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -3239,26 +3295,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F156",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F157",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -3271,27 +3330,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F158",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F159",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -3300,14 +3362,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F160",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -3323,14 +3384,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F161",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -3349,7 +3409,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F162",
@@ -3520,6 +3580,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -3531,26 +3592,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F170",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F171",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -3563,27 +3627,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F172",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F173",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -3592,14 +3659,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F174",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -3615,14 +3681,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F175",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -3641,7 +3706,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F176",
@@ -3812,6 +3877,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -3823,26 +3889,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F184",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F185",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -3855,27 +3924,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F186",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F187",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -3884,14 +3956,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F188",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -3907,14 +3978,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F189",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -3933,7 +4003,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F190",
@@ -4104,6 +4174,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -4115,26 +4186,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F198",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F199",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -4147,27 +4221,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F200",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F201",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -4176,14 +4253,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F202",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -4199,14 +4275,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F203",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -4225,7 +4300,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F204",
@@ -4396,6 +4471,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -4407,26 +4483,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F212",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F213",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -4439,27 +4518,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F214",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F215",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -4468,14 +4550,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F216",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -4491,14 +4572,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F217",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -4517,7 +4597,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F218",
@@ -4688,6 +4768,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -4699,26 +4780,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F226",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F227",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -4731,27 +4815,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F228",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F229",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -4760,14 +4847,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F230",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -4783,14 +4869,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F231",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -4809,7 +4894,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F232",
@@ -4980,6 +5065,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -4991,26 +5077,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F240",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F241",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -5023,27 +5112,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F242",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F243",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -5052,14 +5144,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F244",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -5075,14 +5166,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F245",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -5101,7 +5191,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F246",
@@ -5272,6 +5362,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -5283,26 +5374,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F254",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F255",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -5315,27 +5409,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F256",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F257",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -5344,14 +5441,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F258",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -5367,14 +5463,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F259",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -5393,7 +5488,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F260",
@@ -5564,6 +5659,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -5575,26 +5671,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F268",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F269",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -5607,27 +5706,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F270",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F271",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -5636,14 +5738,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F272",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -5659,14 +5760,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F273",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -5685,7 +5785,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F274",
@@ -5856,6 +5956,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -5867,26 +5968,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F282",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F283",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -5899,27 +6003,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F284",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F285",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -5928,14 +6035,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F286",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -5951,14 +6057,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F287",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -5977,7 +6082,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F288",
@@ -6148,6 +6253,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -6159,26 +6265,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F296",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F297",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -6191,27 +6300,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F298",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F299",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -6220,14 +6332,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F300",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -6243,14 +6354,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F301",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -6269,7 +6379,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F302",
@@ -6440,6 +6550,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -6451,26 +6562,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F310",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F311",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -6483,27 +6597,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F312",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F313",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -6512,14 +6629,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F314",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -6535,14 +6651,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F315",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -6561,7 +6676,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F316",
@@ -6732,6 +6847,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -6743,26 +6859,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F324",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F325",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -6775,27 +6894,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F326",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F327",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -6804,14 +6926,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F328",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -6827,14 +6948,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F329",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -6853,7 +6973,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F330",
@@ -7024,6 +7144,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -7035,26 +7156,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F338",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F339",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -7067,27 +7191,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F340",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F341",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -7096,14 +7223,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F342",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -7119,14 +7245,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F343",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -7145,7 +7270,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F344",
@@ -7316,6 +7441,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -7327,26 +7453,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F352",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F353",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -7359,27 +7488,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F354",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F355",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -7388,14 +7520,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F356",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -7411,14 +7542,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F357",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -7437,7 +7567,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F358",
@@ -7608,6 +7738,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -7619,26 +7750,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F366",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F367",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -7651,27 +7785,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F368",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F369",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -7680,14 +7817,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F370",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -7703,14 +7839,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F371",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -7729,7 +7864,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F372",
@@ -7900,6 +8035,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -7911,26 +8047,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F380",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F381",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -7943,27 +8082,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F382",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F383",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -7972,14 +8114,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F384",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -7995,14 +8136,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F385",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -8021,7 +8161,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F386",
@@ -8192,6 +8332,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -8203,26 +8344,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F394",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F395",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -8235,27 +8379,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F396",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F397",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -8264,14 +8411,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F398",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -8287,14 +8433,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F399",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -8313,7 +8458,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F400",
@@ -8484,6 +8629,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -8495,26 +8641,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F408",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F409",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -8527,27 +8676,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F410",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F411",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -8556,14 +8708,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F412",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -8579,14 +8730,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F413",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -8605,7 +8755,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F414",
@@ -8776,6 +8926,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -8787,26 +8938,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F422",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F423",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -8819,27 +8973,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F424",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F425",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -8848,14 +9005,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F426",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -8871,14 +9027,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F427",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -8897,7 +9052,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F428",
@@ -9068,6 +9223,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -9079,26 +9235,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F436",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F437",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -9111,27 +9270,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F438",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F439",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -9140,14 +9302,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F440",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -9163,14 +9324,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F441",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -9189,7 +9349,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F442",
@@ -9360,6 +9520,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -9371,26 +9532,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F450",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F451",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -9403,27 +9567,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F452",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F453",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -9432,14 +9599,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F454",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -9455,14 +9621,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F455",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -9481,7 +9646,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F456",
@@ -9652,6 +9817,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -9663,26 +9829,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F464",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F465",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -9695,27 +9864,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F466",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F467",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -9724,14 +9896,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F468",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -9747,14 +9918,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F469",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -9773,7 +9943,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F470",
@@ -9944,6 +10114,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -9955,26 +10126,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F478",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F479",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -9987,27 +10161,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F480",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F481",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -10016,14 +10193,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F482",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -10039,14 +10215,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F483",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -10065,7 +10240,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F484",
@@ -10236,6 +10411,7 @@
       "group": "macro",
       "status": "Partial",
       "healthy_sources": [
+        "Central Bank of Iran",
         "FRED"
       ],
       "candidate_sources": [
@@ -10247,26 +10423,29 @@
         "OECD",
         "FRED"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F492",
       "group": "inflation",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "World Bank",
         "IMF"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F493",
       "group": "fx_regime",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
+        "Central Bank of Iran",
         "Donya-e-Eqtesad",
         "IRNA"
       ],
@@ -10279,27 +10458,30 @@
         "Donya-e-Eqtesad",
         "IRNA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F494",
       "group": "liquidity",
-      "status": "Unavailable",
-      "healthy_sources": [],
+      "status": "Partial",
+      "healthy_sources": [
+        "Central Bank of Iran"
+      ],
       "candidate_sources": [
         "Central Bank of Iran",
         "Statistical Center of Iran",
         "IMF",
         "BIS"
       ],
-      "source_count": 0
+      "source_count": 1
     },
     {
       "factor_id": "F495",
       "group": "fiscal_stress",
       "status": "Partial",
       "healthy_sources": [
-        "Ministry of Economic Affairs and Finance"
+        "Ministry of Economic Affairs and Finance",
+        "Central Bank of Iran"
       ],
       "candidate_sources": [
         "Ministry of Economic Affairs and Finance",
@@ -10308,14 +10490,13 @@
         "IMF",
         "World Bank"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F496",
       "group": "energy",
-      "status": "Available",
+      "status": "Partial",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA"
       ],
@@ -10331,14 +10512,13 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 3
+      "source_count": 2
     },
     {
       "factor_id": "F497",
       "group": "oil_china",
       "status": "Available",
       "healthy_sources": [
-        "Ministry of Petroleum",
         "JODI",
         "EIA",
         "Kpler",
@@ -10357,7 +10537,7 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F498",
