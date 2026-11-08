@@ -2139,7 +2139,80 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "48c4c90a1877da9b230b"
+    },
+    {
+      "timestamp": "2026-11-08T11:42:05.506658+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "probability": 0.4,
+          "target": "TEDPIX >8,500 / فملی 23,000",
+          "catalysts": [
+            "Copper breakout >$4.80/lb",
+            "Hormuz de-escalation/Qatar mediation",
+            "Real-money inflow 3+ sessions",
+            "Fiscal relief: gasoline subsidy maintained"
+          ],
+          "confirmation": [
+            "فملی >20,000 on volume + real-money inflow",
+            "TEDPIX breadth >600",
+            "Equal-weight leads cap-weighted"
+          ],
+          "invalidation": [
+            "فملی <18,800 on volume",
+            "Copper <$4.00",
+            "Real-money outflow accelerates"
+          ]
+        },
+        "base": {
+          "probability": 0.4,
+          "target": "TEDPIX 7,800-8,200 / فملی 21,500",
+          "catalysts": [
+            "Steady sales growth 100%+ YoY",
+            "Stable copper $4.00-4.50",
+            "Managed FX regime",
+            "No new sanctions"
+          ],
+          "confirmation": [
+            "فملی 19,400-21,500 moderate volume",
+            "Fundamental growth >100% YoY",
+            "Breadth 450-550"
+          ],
+          "invalidation": [
+            "Sales growth <50% YoY 2 quarters",
+            "Copper -20%",
+            "USD/IRR >2.3M"
+          ]
+        },
+        "bear": {
+          "probability": 0.2,
+          "target": "TEDPIX <7,500 / فملی 18,800",
+          "catalysts": [
+            "Copper breakdown <$3.50",
+            "Volume collapse + breadth <300",
+            "Real-money outflow accelerates",
+            "US-Iran conflict / Hormuz closure",
+            "Gasoline hike → inflation → rate hike"
+          ],
+          "confirmation": [
+            "فملی breaks <18,800 on volume",
+            "Equal-weight leads down",
+            "Breadth <300"
+          ],
+          "invalidation": [
+            "Price rebounds >20,000 with volume",
+            "Fundamentals re-accelerate",
+            "Geopolitical de-escalation"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "99c481bb7268c4046ed2"
     }
   ],
-  "updated_at": "2026-11-07T15:52:38.552331+00:00"
+  "updated_at": "2026-11-08T11:42:05.509335+00:00"
 }

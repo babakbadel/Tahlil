@@ -1,10 +1,33 @@
-# Daily Economic News Digest — 2026-11-07 15:50 UTC
+# Daily Economic News Digest — 2026-11-08 11:39 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **17** · Total stored: **2500**
+> New items this run: **23** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | Gas was pricier on this Election Day than any before it — up almost 40% to $4.15 a gallon since the Iran war began - For | Fortune | Fri, 06 Nov 2026 20:15 |
+| macro_monetary | Iran deploys security forces as gasoline price rise takes effect - Iran International | Iran International | Tue, 08 Sep 2026 07:00 |
+| oil | Brent Reclaims $100 as Tanker Attacks Lift Oil Prices - HDFC Sky | HDFC Sky | Fri, 06 Nov 2026 04:39 |
+| oil | Global developments to keep commodity prices volatile in Samvat 2083 - Business Standard | Business Standard | Sun, 08 Nov 2026 08:36 |
+| oil | CPC to leave domestic, diesel prices unchanged next week - Focus Taiwan | Focus Taiwan | Sat, 07 Nov 2026 09:41 |
+| oil | Brent crude may find support at $70-$90 as global oil inventories rebuild: Saxo Bank - CNBC TV18 | CNBC TV18 | Sun, 08 Nov 2026 11:05 |
+| oil | Oil rises as investors weigh uncertainties around Iran war - Yahoo Finance | Yahoo Finance | Thu, 05 Nov 2026 10:44 |
+| oil | Brent crude drops 16% in a week to $98 as traders bet on a US-Iran deal - Startup Fortune | Startup Fortune | Sun, 08 Nov 2026 06:21 |
+| oil | America's Nuclear Revival Is Running Into a Fuel Supply Wall - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 06 Nov 2026 21:00 |
+| oil | Wall Street's "Energy Transition" Funds Are Packed With Natural Gas - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 06 Nov 2026 23:00 |
+| pezeshkian | Pezeshkian CIS summit invitation shows Iran’s economic isolation has failed, his aide says - Iran International | Iran International | Fri, 09 Oct 2026 07:00 |
+| pezeshkian | Pezeshkian says Iran is in worst conditions of economic war - Iran International | Iran International | Wed, 26 Aug 2026 07:00 |
+| bourse | Euro tops 3 million rials as Iran's currency hits fresh record lows - Iran International | Iran International | Sat, 03 Oct 2026 07:00 |
+| oil | قیمت نفت امروز جمعه ۱۵ آبان ۱۴۰۵ │ برنت پس از سقوط سنگین دوباره جان گرفت و نگرانی از امنیت نفتکش‌ها معادلات بازار انرژی  | vista.ir | Fri, 06 Nov 2026 08:04 |
+| oil | قیمت نفت برنت ۱۶ آبان ۱۴۰۵ │ افت هفتگی ادامه دارد، اما ریسک هرمز مانع آرامش بازار جهانی شده است - vista.ir | vista.ir | Sat, 07 Nov 2026 05:14 |
+| oil | نفت روی دور کاهش افتاد - رصد روز | رصد روز | Thu, 05 Nov 2026 12:00 |
+| oil | قیمت نفت برنت زیر ۱۰۰ دلار ماند │ امید به توافق سیاسی عرضه جهانی را تقویت کرد، اما خطر اختلال در مسیرهای انتقال همچنان پ | نبض قیمت | Sat, 07 Nov 2026 14:03 |
+| oil | قیمت نفت برنت و WTI امروز یکشنبه ۱۷ آبان │ بازگشت محدود خریداران پس از افت سنگین هفتگی بازار انرژی - vista.ir | vista.ir | Sun, 08 Nov 2026 03:30 |
+| oil | ریزش سنگین نفت برنت در هفته گذشته / بازار به اخبار جنگ ایران واکنش نشان داد - گسترش نیوز | گسترش نیوز | Sun, 08 Nov 2026 06:18 |
+| oil | نفت گران‌تر می‌شود، اما سهم ایران از درآمد جهانی افزایش نمی‌یابد │ مشکل اصلی در فروش و وصول پول نفت است - نبض قیمت | نبض قیمت | Sun, 08 Nov 2026 09:49 |
+| oil | قیمت نفت زیر سایه جنگ ایران و تحولات سیاسی آمریکا/کیان آنلاین - خبرپو | خبرپو | Sun, 08 Nov 2026 08:03 |
+| oil | رشد نفت به دنبال افزایش نگرانی ها از احتمال حمله آمریکا به ایران - بورس نیوز | بورس نیوز | Sat, 07 Nov 2026 09:14 |
+| oil | افزایش قیمت نفت بدون افزایش درآمد؛ صادرات ایران زیر فشار محاصره و هزینه‌های حمل‌ونقل - خبرپو | خبرپو | Sun, 08 Nov 2026 05:40 |
 | oil | Brent crude caps biggest weekly drop since pandemic as war premium begins to unwind (USO:NYSEARCA) - Seeking Alpha | Seeking Alpha | Sat, 07 Nov 2026 00:57 |
 | geopolitics | The Doha Trap: How Iran Is Using Hormuz to Extort the West - Middle East Forum | Middle East Forum | Thu, 05 Nov 2026 21:04 |
 | geopolitics | Beyond oil: 9 commodities impacted by the Strait of Hormuz crisis - World Economic Forum | World Economic Forum | Wed, 01 Apr 2026 07:00 |
@@ -22,33 +45,10 @@
 | bourse | US strikes Iran’s Qeshm Island, Tehran threatens wider missile response amid Qatar peace push - Moneycontrol.com | Moneycontrol.com | Sat, 07 Nov 2026 14:50 |
 | bourse | Trump says Iran's economy is collapsing. A former central bank adviser in Tehran pushes back - CNBC | CNBC | Thu, 20 Aug 2026 07:00 |
 | bourse | After midterms, Trump is left to weigh his next move in Iran war that contributed to GOP loss - PBS | PBS | Thu, 05 Nov 2026 23:46 |
-| oil | India's Renewables Have Saved $100 Billion in Fuel Imports, IEA Says - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 05 Nov 2026 22:00 |
-| oil | US stocks surge, Dow soars 1,500 points as Brent oil’s price drops below $95 per barrel after Democrats take control of  | WAGM | Wed, 04 Nov 2026 13:11 |
-| oil | Current price of oil as of November 6, 2026 - Fortune | Fortune | Fri, 06 Nov 2026 12:45 |
-| oil | Oil prices tumble for the week as investors weigh Iran conflict risk after midterm elections - CNBC | CNBC | Fri, 06 Nov 2026 05:06 |
-| pezeshkian | Can Iran’s New President Change the Regime’s Confrontational Foreign Policy? - CSIS / Center for Strategic and Internati | CSIS | Center for Strategic and International Studies | Tue, 09 Jul 2024 07:00 |
-| bourse | US carries out fresh strikes on Iran's air defences as Tehran sends nuclear proposal with 7 conditions - Moneycontrol.co | Moneycontrol.com | Sat, 07 Nov 2026 03:00 |
-| bourse | US military carries out new targeted strike on Iran as Tehran's leaders weigh mediator's proposals - The Economic Times | The Economic Times | Sat, 07 Nov 2026 01:41 |
-| bourse | Competitive exports, strengthening trade corridors: strategic axes of Iran-China interactions - Tehran Times | Tehran Times | Fri, 06 Nov 2026 12:57 |
-| bourse | Iran's currency hits a new record low as war erodes the country's economic stability - Yahoo Finance | Yahoo Finance | Tue, 29 Sep 2026 07:00 |
-| bourse | Wall Street indexes mostly fall as Iran war widens - Reuters | Reuters | Mon, 30 Mar 2026 07:00 |
-| bourse | COMMENTARY: Washington reset, market meltdown and the Iran oil bet: The financial week in five charts - Reuters | Reuters | Fri, 06 Nov 2026 13:46 |
-| macro_monetary | Gas Prices Start Sliding as Hopes for Iran Deal Grow - NerdWallet | NerdWallet | Mon, 02 Nov 2026 08:00 |
-| macro_monetary | Inflation cools more than expected in June as gas costs fall and underlying prices ease - PBS | PBS | Tue, 14 Jul 2026 07:00 |
-| oil | Oil Price Today (November 6): Crude oil nears $100 again as fresh attacks dent peace talk hopes. What are - The Economic | The Economic Times | Fri, 06 Nov 2026 02:22 |
-| oil | Brent crude oil price exceeds $100 - Apa.az | Apa.az | Fri, 06 Nov 2026 04:43 |
-| oil | Drivers left fuming as petrol prices stay sky-high despite oil price plunge - Female First | Female First | Fri, 06 Nov 2026 11:57 |
-| oil | International Crude Oil Futures Plunge on November 4 - Sunsirs | Sunsirs | Thu, 05 Nov 2026 05:26 |
-| oil | Tanker Attacks in the Strait of Hormuz Push Brent Crude Toward $100 Mark - BigGo Finance | BigGo Finance | Fri, 06 Nov 2026 06:05 |
-| oil | Brent Crude Climbs Above $100 as Middle East Oil Supply Risks Persist - marketscreener.com | marketscreener.com | Fri, 06 Nov 2026 07:09 |
-| oil | Crude oil prices jump for second straight day; Brent tops $100, WTI nears $92 as fresh attacks on tankers... - Moneycont | Moneycontrol.com | Fri, 06 Nov 2026 04:20 |
-| oil | Brent Crude Plunges 20% in a Week as Goldman Sachs Calls Gold the "Inverse Oil Trade" - BigGo Finance | BigGo Finance | Fri, 06 Nov 2026 06:36 |
-| oil | Oil prices rise: Brent nears $100, while U.S. crude hits $91.66 - صوت الإمارات | صوت الإمارات | Fri, 06 Nov 2026 08:11 |
-| oil | Crude oil price gain amid fresh tanker attacks in Strait of Hormuz - BusinessLine | BusinessLine | Fri, 06 Nov 2026 04:21 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-07 15:50 UTC | 17 new | 2500 total
+NEWS_DIGEST | 2026-11-08 11:39 UTC | 23 new | 2500 total
