@@ -1,10 +1,14 @@
-# Daily Economic News Digest — 2026-11-08 11:39 UTC
+# Daily Economic News Digest — 2026-11-08 14:41 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **23** · Total stored: **2500**
+> New items this run: **4** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | Oil Price Predictions: Why Goldman Sachs Is Betting on Brent to Climb to $140 - Yahoo Finance | Yahoo Finance | Thu, 05 Nov 2026 16:22 |
+| oil | Oil Climbs From Two-Month Low as Traders Parse Iran War Outlook - Bloomberg | Bloomberg | Thu, 05 Nov 2026 20:36 |
+| geopolitics | Iran Oil Exports Near Zero But Peace Deal Not Likely, FGE Says - gCaptain | gCaptain | Fri, 06 Nov 2026 13:06 |
+| bourse | Iran Risks Crash With Record Stock Market Boom, Say Economists - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Thu, 02 Sep 2010 07:00 |
 | macro_monetary | Gas was pricier on this Election Day than any before it — up almost 40% to $4.15 a gallon since the Iran war began - For | Fortune | Fri, 06 Nov 2026 20:15 |
 | macro_monetary | Iran deploys security forces as gasoline price rise takes effect - Iran International | Iran International | Tue, 08 Sep 2026 07:00 |
 | oil | Brent Reclaims $100 as Tanker Attacks Lift Oil Prices - HDFC Sky | HDFC Sky | Fri, 06 Nov 2026 04:39 |
@@ -41,14 +45,10 @@
 | geopolitics | 'Iron Gate': US forms special task force to restrict Iran's land exports - The Times of India | The Times of India | Sat, 07 Nov 2026 14:33 |
 | geopolitics | Iran war live: Ship hit in Hormuz; Iraqi FM warns of potential regional war - Al Jazeera | Al Jazeera | Sat, 07 Nov 2026 10:57 |
 | geopolitics | Strait of Hormuz could reopen under Qatari plan to end US war with Iran - The Independent | The Independent | Sat, 07 Nov 2026 13:10 |
-| geopolitics | Breakthrough ahead? US prepares to expand the blockade on Iran - Ynetnews | Ynetnews | Sat, 07 Nov 2026 14:20 |
-| bourse | US strikes Iran’s Qeshm Island, Tehran threatens wider missile response amid Qatar peace push - Moneycontrol.com | Moneycontrol.com | Sat, 07 Nov 2026 14:50 |
-| bourse | Trump says Iran's economy is collapsing. A former central bank adviser in Tehran pushes back - CNBC | CNBC | Thu, 20 Aug 2026 07:00 |
-| bourse | After midterms, Trump is left to weigh his next move in Iran war that contributed to GOP loss - PBS | PBS | Thu, 05 Nov 2026 23:46 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-08 11:39 UTC | 23 new | 2500 total
+NEWS_DIGEST | 2026-11-08 14:41 UTC | 4 new | 2500 total
