@@ -92,7 +92,7 @@ def normalize_url(base, href):
         return None
     # Fragments never change server content. Keep query parameters because
     # some Kamandar pages use them to identify a symbol/list.
-    return urllib.parse.urlunsplit(("https", HOST, path.rstrip("/") or "/", parsed.query, ""))
+    return urllib.parse.urlunsplit(("https", HOST, urllib.parse.quote(path.rstrip("/") or "/", safe="/%:@-._~!$&'()*+,;="), urllib.parse.quote(parsed.query, safe="=&%/:?+@-._~"), ""))
 
 
 def fetch(url):

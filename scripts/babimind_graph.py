@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Turn Graphify's generated graph into an auditable BabiMind feature.
+"""Expose the Graphify knowledge index without a synthetic market signal.
 
-The adapter is deliberately schema-tolerant because Graphify output can evolve.
-Missing data is never converted to a negative signal. Inferred/ambiguous edges
-are discounted and repeated/correlated paths are penalized.
+Code relationships support retrieval. They do not establish economic direction;
+market scenarios require dated price observations and explicit provenance.
 """
 from __future__ import annotations
 
@@ -64,76 +63,25 @@ def status_factor(edge: dict) -> float:
 
 def main() -> None:
     now = datetime.now(timezone.utc)
+    edges = []
+    error = None
+    if GRAPH.exists():
+        try:
+            edges = list(edge_iter(json.loads(GRAPH.read_text(encoding="utf-8"))))
+        except (OSError, ValueError) as exc:
+            error = type(exc).__name__
     payload = {
-        "model": "BabiMind",
-        "component": "Graph Intelligence",
-        "generated_at": now.isoformat(),
-        "graph_available": GRAPH.exists(),
-        "graph_snapshot_id": now.strftime("%Y%m%dT%H%M%SZ"),
-        "graph_score": 0.0,
-        "graph_confidence": 0.0,
-        "graph_regime": "unavailable",
-        "graph_top_drivers": [],
-        "graph_risk_drivers": [],
-        "edges_used": 0,
-        "correlation_penalty": 0.0,
-        "missing_data_policy": "MISSING_IS_NOT_ZERO",
+        "model": "BabiMind", "component": "Graphify knowledge index", "generated_at": now.isoformat(),
+        "graph_available": GRAPH.exists() and error is None, "index_path": "graphify-out/graph.json",
+        "index_edge_count": len(edges), "market_signal_eligible": False,
+        "graph_score": None, "graph_confidence": None, "graph_regime": "not_applicable_code_index",
+        "graph_top_drivers": [], "graph_risk_drivers": [], "edges_used": 0,
+        "missing_data_policy": "MISSING_IS_NOT_ZERO", "error": error,
+        "instruction": "Use the code graph for retrieval only. Its edges do not establish market direction or probabilities. Economic relationships require dated observations and provenance.",
     }
-    if not GRAPH.exists():
-        OUT.parent.mkdir(parents=True, exist_ok=True)
-        OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-        print("Graphify output unavailable; Graph contribution skipped")
-        return
-
-    data = json.loads(GRAPH.read_text(encoding="utf-8"))
-    edges = list(edge_iter(data))
-    scored = []
-    for e in edges:
-        src, dst = endpoint(e, "source"), endpoint(e, "target")
-        text = f"{src} {dst}".lower()
-        if not any(t.lower() in text for t in TARGETS):
-            continue
-        direction = num(e.get("direction"), 1.0)
-        weight = clamp(num(e.get("weight"), num(e.get("strength"), 0.5)), 0.0, 1.0)
-        conf = clamp(num(e.get("confidence"), 0.75), 0.0, 1.0)
-        freshness = clamp(num(e.get("freshness"), 1.0), 0.0, 1.0)
-        value = direction * weight * conf * freshness * status_factor(e)
-        scored.append((value, src, dst, e))
-
-    # Conservative aggregation: duplicate source/target pairs are counted once
-    # and repeated sources receive diminishing marginal contribution.
-    seen_pairs: set[tuple[str, str]] = set()
-    source_count: dict[str, int] = {}
-    values = []
-    for value, src, dst, e in sorted(scored, key=lambda x: abs(x[0]), reverse=True):
-        pair = (src.lower(), dst.lower())
-        if pair in seen_pairs:
-            continue
-        seen_pairs.add(pair)
-        n = source_count.get(src.lower(), 0)
-        adjusted = value * (0.70 ** n)
-        source_count[src.lower()] = n + 1
-        values.append((adjusted, src, dst, e))
-
-    raw = sum(v[0] for v in values)
-    denom = max(1.0, sum(abs(v[0]) for v in values))
-    score = clamp(raw / denom if values else 0.0)
-    confidence = sum(num(v[3].get("confidence"), 0.75) for v in values) / len(values) if values else 0.0
-    top = sorted(values, key=lambda x: x[0], reverse=True)[:8]
-    risk = sorted(values, key=lambda x: x[0])[:8]
-
-    payload.update({
-        "graph_score": round(score, 4),
-        "graph_confidence": round(confidence, 4),
-        "graph_regime": "bullish" if score >= 0.20 else "bearish" if score <= -0.20 else "neutral",
-        "graph_top_drivers": [{"source": s, "target": d, "contribution": round(v, 4)} for v, s, d, _ in top],
-        "graph_risk_drivers": [{"source": s, "target": d, "contribution": round(v, 4)} for v, s, d, _ in risk],
-        "edges_used": len(values),
-        "correlation_penalty": round(max(0.0, 1.0 - sum(abs(v[0]) for v in values) / max(1.0, sum(abs(v[0]) for v in scored))), 4) if scored else 0.0,
-    })
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Graph Intelligence: {len(values)} edges used, score={score:.4f}, confidence={confidence:.4f}")
+    print(f"Graphify index: {len(edges)} edges; no synthetic market signal")
 
 
 if __name__ == "__main__":

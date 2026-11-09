@@ -8,6 +8,7 @@ reported so a run cannot hang indefinitely.
 from __future__ import annotations
 
 import argparse
+from datetime import datetime, timezone
 import json
 import os
 import random
@@ -138,11 +139,11 @@ def main() -> int:
     OUT.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     if result is None:
-        payload = {"status": "unavailable", "provider": PROVIDER, "model": meta.get("model"), "analysis": None, "provider_status": meta}
+        payload = {"generated_at": datetime.now(timezone.utc).isoformat(), "status": "unavailable", "provider": PROVIDER, "model": meta.get("model"), "analysis": None, "provider_status": meta}
         args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         print("[BabiMind OpenRouter] unavailable after bounded retries", flush=True)
         return 2
-    payload = {"status": "ok", "provider": PROVIDER, "model": meta.get("model"), "analysis": result}
+    payload = {"generated_at": datetime.now(timezone.utc).isoformat(), "analysis_kind": "uncalibrated_llm_context", "status": "ok", "provider": PROVIDER, "model": meta.get("model"), "analysis": result}
     args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[BabiMind OpenRouter] selected={PROVIDER} model={meta['model']}", flush=True)
     return 0

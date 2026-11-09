@@ -31,6 +31,10 @@ def _records(frame: pd.DataFrame | None) -> list[dict[str, Any]]:
     if frame is None or frame.empty:
         return []
     out = frame.copy()
+    # FinPy puts observation dates in the index. Dropping that index destroys
+    # chronology and makes the price history unusable for forecasting.
+    if not isinstance(out.index, pd.RangeIndex):
+        out = out.reset_index(drop=out.index.name in out.columns)
     out = out.where(pd.notna(out), None)
     return out.to_dict(orient="records")
 
@@ -52,7 +56,7 @@ def get_price_history(
         ignore_date=False,
         adjust_price=adjust_price,
         show_weekday=False,
-        double_date=False,
+        double_date=True,
     )
     return _records(frame)
 
