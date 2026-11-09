@@ -3,6 +3,46 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "": ""
+    "model": "BabiMind",
+    "pipeline_version": "1.7",
+    "generated_at": "2026-11-09T19:58:34.908481+00:00",
+    "decision_frameworks": {
+      "technical": 15,
+      "tape_liquidity": 15,
+      "real_legal_flow": 10,
+      "fundamental": 20,
+      "industry": 10,
+      "macro": 10,
+      "commodities": 5,
+      "news_catalysts": 5,
+      "political_economic_risk": 5,
+      "valuation": 5
+    },
+    "executive_summary": "Maximum 10 key findings: 1) Graph regime bullish (confidence 0.75); 2) Memory scenarios: Bull 0.45 (target 23,000 rial), Base 0.4 (21,500 rial), Bear 0.15 (18,800 rial); 3) 45% probability bull case with target 23,000 rial; 4) 40% base case targeting 21,500 rial; 5) 15% bear case targeting 18,800 rial; 6) Probabilities sum to 1.0; 7) 30 active data sources out of 65 checked; 8) 21 unavailable sources (mostly TSE APIs timed out); 9) 56 error sources; 10) Option data exists for other underlying stocks but not directly relevant to 'فملی' thesis",
+    "market_regime": "Bullish",
+    "evidence": "Important observations with source, timestamp and confidence: Graph intelligence score 1.0, confidence 0.75, regime bullish. Memory scenarios: Bull probability 0.45 target 23,000 rial, Base 0.4 target 21,500 rial, Bear 0.15 target 18,800 rial. Source health: 180 OK, 38 unavailable, 56 error out of 274 checked. Factor coverage: 500 factors 100% covered, 179 healthy sources. TSE data sources mostly unavailable (timed out).",
+    "macro": "Dollar free/official, gold, rates, inflation, liquidity, oil and policy tracking not fully available due to source outages. Graph top drivers: app_data_finpy_tse_adapter_get_market_watch (0.75), app_data_finpy_tse_adapter_get_usd_rial (0.75), app_intermarket_model_evaluate (0.75).",
+    "industry_rotation": "Technology AI cluster dominant in factor rotation; Energy/Power cluster with oil price source_weight 0.6887; Metals/Mining with copper price. No direct 'فملی' industry rotation data available.",
+    "symbols": "Best opportunity: 'فملی' with memory scenarios Bull 0.45 (23,000 rial), Base 0.4 (21,500 rial), Bear 0.15 (18,800 rial). Risk: High due to data gaps (30/65 sources active, 21 unavailable). Best symbol: Same as above. Highest-risk symbol: Data gaps increase uncertainty. Key support: 18,800 rial (bear invalidation level). Key resistance: 23,000 rial (bull confirmation level). Main catalyst: Not sufficiently evidenced due to data gaps. Main risk: Data gaps (30/65 sources unavailable). Entry trigger: Bull close >20,000 with expanding volume. Exit trigger: Bear break <18,800 on expanding volume.",
+    "funds_legal_persons_smart_money_evidence": "Legal-person activity over 1/5/10/20 sessions not fully available. Real-money flow inference limited by TSE data unavailability. Fund portfolio changes, NAV, discount/premium not fully assessable.",
+    "options": "Option data exists for other underlying stocks (خساپا, خودرو, شپنا, وبملت) but not directly relevant to 'فملی' thesis. No 'فملی' options in active universe per hard rule: expired options must never enter active universe.",
+    "scenarios": "Bull: probability 0.45, target 23,000 rial, time horizon Q2-Q3 1405; Base: probability 0.4, target 21,500 rial, time horizon Q2 1405; Bear: probability 0.15, target 18,800 rial, time horizon Q1-Q2 1405; Probabilities sum to 1.0",
+    "decision": {
+      "regime": "Bullish",
+      "primary_strategy": "SCALE-IN BUY",
+      "score": 68,
+      "risk": "Medium",
+      "confidence": 65,
+      "best_industry": "Technology AI (per factor rotation)",
+      "best_symbol": "فملی",
+      "highest_risk_symbol": "فملی (due to data gaps)",
+      "key_support": "18,800 rial",
+      "key_resistance": "23,000 rial",
+      "main_catalyst": "Insufficient evidence - data gaps prevent catalyst identification",
+      "main_risk": "Data gaps (30/65 sources unavailable, 21 unavailable)",
+      "entry_trigger": "Bull close >20,000 with expanding volume (per thesis)",
+      "exit_trigger": "Bear break <18,800 on expanding volume (per thesis)",
+      "invalidation": "Price rises while real-money flow deteriorates, sales growth rolls over 2 consecutive releases, copper breaks down materially, Hormuz closure / severe sanctions"
+    }
   }
 }

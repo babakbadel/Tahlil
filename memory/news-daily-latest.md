@@ -1,10 +1,16 @@
-# Daily Economic News Digest — 2026-11-09 17:58 UTC
+# Daily Economic News Digest — 2026-11-09 19:58 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **27** · Total stored: **2500**
+> New items this run: **6** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | Oil prices decline - News On AIR | News On AIR | Mon, 09 Nov 2026 13:03 |
+| oil | Oil Prices Drop Over 5% on Hopes of US-Iran Talks - www.nationpathindia.com | www.nationpathindia.com | Mon, 09 Nov 2026 17:28 |
+| oil | Brent crude oil futures tumble over 5% to ₹8,125 per barrel - ET Auto | ET Auto | Mon, 09 Nov 2026 17:16 |
+| oil | Oil falls almost 5% as Trump signals restraint on Iran - Reuters | Reuters | Sun, 08 Nov 2026 23:50 |
+| oil | After Midterm Failure, Trump's Foreign Strategy May Be Even More Dangerous - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 09 Nov 2026 16:00 |
+| pezeshkian | Pezeshkian says US actions in Persian Gulf disrupt global energy markets - Iran International | Iran International | Tue, 27 Oct 2026 07:00 |
 | oil | Oil prices fall to two-month low as Trump says new Iran strikes ‘unlikely’ - Newswav | Newswav | Mon, 09 Nov 2026 16:27 |
 | oil | Crude oil prices remain below $100 - Daily Post Nigeria | Daily Post Nigeria | Sun, 08 Nov 2026 19:20 |
 | oil | Stock Market Today LIVE: GIFT Nifty signals quiet start; Brent crude at $97 per barrel - IndiaIPO | IndiaIPO | Mon, 09 Nov 2026 02:34 |
@@ -39,16 +45,10 @@
 | oil | Oil prices fall on open as Trump says fresh Iran attacks 'unlikely' - Business Standard | Business Standard | Mon, 09 Nov 2026 02:08 |
 | oil | Rupee gains 24 paise to 93.74 against US dollar as crude oil prices ease - PSU Watch | PSU Watch | Mon, 09 Nov 2026 06:03 |
 | oil | Brent below $98; Oil remains steady after steepest weekly drop since 2020 - CNBC TV18 | CNBC TV18 | Mon, 09 Nov 2026 01:01 |
-| oil | Crude Oil Weekly Outlook: Houthi Attacks vs. a Double Top? - FOREX.com | FOREX.com | Sat, 07 Nov 2026 08:00 |
-| oil | Oil dips again on Iran talks hopes, but physical Gulf crude climbs - Gulf News | Gulf News | Mon, 09 Nov 2026 03:58 |
-| oil | Crude Oil Price Falls As Trump Says New Iran Attacks 'Unlikely' - News18 | News18 | Mon, 09 Nov 2026 02:17 |
-| oil | Oman crude prices drop as Brent tumbles 17% last week - Oman Observer | Oman Observer | Mon, 09 Nov 2026 09:39 |
-| oil | Wall Street futures rise up to 0.8% as crude oil prices decline; NVIDIA shares fall 5% in pre-market trade - Moneycontro | Moneycontrol.com | Mon, 09 Nov 2026 11:20 |
-| oil | Oil Prices Slip As Brent Falls To US$97.67, WTI Drops To US$90.51 Amid Easing Iran Tensions - BusinessToday Malaysia | BusinessToday Malaysia | Mon, 09 Nov 2026 01:12 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-09 17:58 UTC | 27 new | 2500 total
+NEWS_DIGEST | 2026-11-09 19:58 UTC | 6 new | 2500 total
