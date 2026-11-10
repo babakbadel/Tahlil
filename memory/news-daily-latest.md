@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-10 13:06 UTC
+# Daily Economic News Digest — 2026-11-10 15:58 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **102** · Total stored: **2500**
+> New items this run: **37** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | The Iran war and surging oil prices are affecting consumers. Here's how - PBS | PBS | Wed, 11 Mar 2026 07:00 |
+| oil | Oil price drop should mean cheaper fuel for motorists - RACQ | RACQ | Mon, 09 Nov 2026 22:23 |
+| oil | Oil Prices Fall Below $90 as Trump Signals Reduced Risk of New Iran Attacks — Middle East Supply Recovery Pressures Crud | EnergyNow | Mon, 09 Nov 2026 12:14 |
+| oil | FCCPC Tracks Petrol Prices As Global Crude Costs Decline - Independent Newspaper Nigeria | Independent Newspaper Nigeria | Tue, 10 Nov 2026 15:12 |
+| oil | Brent and WTI Crude Oil Prices Tumble as Trump Signals Iran Deal More Likely Than Renewed Military Action - FXLeaders | FXLeaders | Sun, 08 Nov 2026 08:00 |
+| oil | FCCPC monitors falling global crude oil prices - Tribune Online | Tribune Online | Tue, 10 Nov 2026 14:52 |
+| oil | FCCPC moves to force down fuel prices as global crude oil rates decline - شبكة تواصل الإخبارية | شبكة تواصل الإخبارية | Tue, 10 Nov 2026 15:09 |
+| oil | Global crude oil prices plunge 23% in less than two weeks - Newswire | Newswire | Tue, 10 Nov 2026 14:46 |
+| oil | Wall Street mixed in early trading ahead of a new peek at inflation - BNN Bloomberg | BNN Bloomberg | Tue, 10 Nov 2026 13:32 |
+| oil | Trump’s West Asia peace signal and falling crude prices may bring fresh cheer to Indian market - The New Indian Express | The New Indian Express | Tue, 10 Nov 2026 13:08 |
+| oil | Global crude oil prices decline, Brent falls 2.2% to $90.51 a barrel - News On AIR | News On AIR | Tue, 10 Nov 2026 13:20 |
+| oil | Oil prices drop below 90 dollars as Trump says Iran war could end soon - The Independent | The Independent | Tue, 10 Nov 2026 11:15 |
+| oil | WTI Crude Oil Tests Support as U.S. Distillate Stocks Tighten - FXEmpire | FXEmpire | Tue, 10 Nov 2026 15:37 |
+| oil | European Stocks Approach Record Highs as Oil Prices Fall and Technology Shares Advance: DAX, CAC, FTSE100 - Yahoo Financ | Yahoo Finance UK | Tue, 10 Nov 2026 14:04 |
+| oil | Current price of oil as of November 10, 2026 - Fortune | Fortune | Tue, 10 Nov 2026 04:45 |
+| oil | Oil Extends Drop as Trump Says Further Iran Strikes Unnecessary - Bloomberg.com | Bloomberg.com | Tue, 10 Nov 2026 14:05 |
+| oil | Oil prices fall due to reduced tension with Iran - Inspenet | Inspenet | Tue, 10 Nov 2026 15:05 |
+| oil | Oil falls as Trump downplays prospect of escalation with Iran - Reuters | Reuters | Tue, 10 Nov 2026 01:43 |
+| geopolitics | Oil falls as Trump downplays prospect of escalation with Iran - CNBC | CNBC | Tue, 10 Nov 2026 03:34 |
+| geopolitics | Oil Falls on Unconfirmed Report That Iran Eased Hormuz Demands - Bloomberg.com | Bloomberg.com | Mon, 09 Nov 2026 20:16 |
+| geopolitics | Iran Could Face Significant Gas Shortages This Winter as U.S. Maintains Economic Pressure - Yahoo | Yahoo | Tue, 10 Nov 2026 15:50 |
+| geopolitics | Rubio says 'no need' to attack Iran as diplomacy gathers pace - France 24 | France 24 | Tue, 10 Nov 2026 15:39 |
+| geopolitics | U.S., Iran Exchange Strikes on Islands as They Fight for Control of Strait - WSJ | WSJ | Tue, 10 Nov 2026 13:07 |
+| oil | قیمت نفت برنت زیر ۱۰۰ دلار ماند │ امید به توافق سیاسی عرضه جهانی را تقویت کرد، اما خطر اختلال در مسیرهای انتقال همچنان پ | vista.ir | Sat, 07 Nov 2026 14:04 |
+| oil | قیمت نفت برنت تا مرز ۹۷ دلار افت کرد │ سه‌شنبه میان امید توافق و نگرانی عرضه نوسان سیاسی می‌کند - vista.ir | vista.ir | Mon, 09 Nov 2026 17:36 |
+| oil | قیمت نفت برنت به زیر ۹۰ دلار رسید │ کاهش نگرانی‌های ژئوپلیتیکی فشار تازه‌ای بر بازار جهانی انرژی وارد کرد - vista.ir | vista.ir | Tue, 10 Nov 2026 12:27 |
+| oil | جنگ قیمتی نفت در خاورمیانه؛ پایان جنگ آمریکا و ایران می‌تواند بازار جهانی را با مازاد نفت روبه‌رو کند؟ - vista.ir | vista.ir | Mon, 09 Nov 2026 13:18 |
+| oil | افزایش قیمت نفت بدون افزایش درآمد؛ صادرات ایران زیر فشار محاصره و هزینه‌های حمل‌ونقل - vista.ir | vista.ir | Mon, 09 Nov 2026 07:45 |
+| oil | قیمت نفت برنت امروز │ تنش خلیج فارس ریسک عرضه را حفظ کرد؛ افت تقاضا ترمز بازار جهانی انرژی شد - نبض قیمت | نبض قیمت | Mon, 09 Nov 2026 03:54 |
+| oil | قیمت نفت برنت به زیر ۹۲ دلار رسید │ اظهارات ترامپ درباره ایران چگونه معادلات بازار جهانی انرژی را تغییر داد و مسیر معامل | نبض قیمت | Tue, 10 Nov 2026 09:44 |
+| oil | نفت، طلا و دلار زیر سایه اخبار ایران؛ چرا برنت سریع‌تر واکنش نشان می‌دهد و بازار ارز مسیر متفاوتی دارد؟ - نبض قیمت | نبض قیمت | Tue, 10 Nov 2026 12:10 |
+| oil | سقوط تاریخی قیمت نفت در سایه تحولات جنگ ایران؛ برنت در یک هف/شایانیوز - خبرپو | خبرپو | Sun, 08 Nov 2026 07:08 |
+| oil | سقوط تاریخی قیمت نفت برنت؛ بهای نفت در یک هفته ۱۷ درصد کاهش /صفحه سیاست - خبرپو | خبرپو | Mon, 09 Nov 2026 05:46 |
+| oil | افت قیمت نفت پس از آنکه ترامپ حملات تازه به ایران را «بعید» خواند - سایت طلا | سایت طلا | Mon, 09 Nov 2026 05:12 |
+| oil | نفت برنت در یک هفته ۱۶ درصد سقوط کرد؛ بزرگ‌ترین ریزش از زمان کرونا - تحلیل بازار | تحلیل بازار | Mon, 09 Nov 2026 16:36 |
+| oil | قیمت نفت برنت به ۹۲ دلار رسید/کیان آنلاین - خبرپو | خبرپو | Tue, 10 Nov 2026 07:42 |
+| oil | قیمت نفت برنت از 98 دلار گذشت - سایت طلا | سایت طلا | Tue, 10 Nov 2026 14:51 |
 | oil | Brent crude slides to $93 as petrol prices remain high - Daily Trust | Daily Trust | Tue, 10 Nov 2026 00:46 |
 | oil | Stocks rise as oil prices dip heading into US CPI print - The Canberra Times | The Canberra Times | Tue, 10 Nov 2026 10:14 |
 | oil | Brent oil jumps more than 4% as U.S. reportedly sends third aircraft carrier to Middle East - CNBC | CNBC | Thu, 01 Oct 2026 07:00 |
-| oil | Brent crude oil tops $101 to close at highest level since May as fighting escalates in Persian Gulf - CNBC | CNBC | Tue, 08 Sep 2026 07:00 |
-| oil | Brent tops $106 after deadly Saudi airport attack, Ukraine says Russia violated energy ceasefire - CNBC | CNBC | Sun, 11 Oct 2026 07:00 |
-| oil | Crude oil price fall offers India relief, but exporters await cheaper inputs: IIFT Vice Chancellor K... - Moneycontrol.c | Moneycontrol.com | Tue, 10 Nov 2026 10:49 |
-| oil | Asian stocks rise, oil prices fall below USD 100 - IDNFinancials | IDNFinancials | Tue, 10 Nov 2026 03:40 |
-| oil | Oil prices fall as Trump eases Iran attack threats - IDNFinancials | IDNFinancials | Tue, 10 Nov 2026 00:00 |
-| oil | Reported Breakthrough in US-Iran Nuclear Talks Sends Brent Crude Plunging Nearly 8% Intraday, Breaking Below $91 - BigGo | BigGo Finance | Mon, 09 Nov 2026 21:05 |
-| oil | Oil Prices Drop Over 5% on Hopes of US-Iran Talks - www.nationpathindia.com | www.nationpathindia.com | Mon, 09 Nov 2026 17:28 |
-| oil | Crude’s post-US midterms price plunge may be short-lived. Here’s why - ThePrint | ThePrint | Tue, 10 Nov 2026 01:30 |
-| oil | Brent Price Drops Below $90 On US-Iran Peace Hopes - Channels Television | Channels Television | Tue, 10 Nov 2026 10:25 |
-| oil | Oil prices fall as Trump signals pause in military action against Iran - Business Standard | Business Standard | Tue, 10 Nov 2026 09:37 |
-| oil | Brent oil touches $110 as Iran escalates Hormuz attacks, Ukraine vows to hit Russian refineries - CNBC | CNBC | Fri, 16 Oct 2026 07:00 |
-| oil | Oil slides as Iran strike fears ease — Brent falls - Gulf News | Gulf News | Mon, 09 Nov 2026 23:29 |
-| oil | Oil Prices Extend Losses as Trump Signals Early End to Iran War; Brent Falls to $91 - APAC Media | APAC Media | Tue, 10 Nov 2026 07:14 |
-| oil | The price of oil fell below 90 dollars following Iran's offer, viewed as a move concerning the Strait of Hormuz - Inform | Informat.ro | Tue, 10 Nov 2026 11:01 |
-| oil | Saudi Pipeline Attacked as OPEC Output Climbs to 90% of Pre-War Levels - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 09 Nov 2026 17:16 |
-| oil | US Stocks Rally as Crude Oil Prices Drop, Even as Nvidia Sinks - The National Herald | The National Herald | Mon, 09 Nov 2026 14:56 |
-| oil | Oil prices drop below 90 dollars as Trump says Iran war could end soon - The Impartial Reporter | The Impartial Reporter | Tue, 10 Nov 2026 12:34 |
-| oil | Brent crude plunges 16% in a week; China's domestic fuel price adjustment window likely to bring cuts - BigGo Finance | BigGo Finance | Tue, 10 Nov 2026 01:06 |
-| oil | Crude oil prices extend losses on hopes of easing Middle East tensions - cfo.economictimes.indiatimes.com | cfo.economictimes.indiatimes.com | Tue, 10 Nov 2026 06:05 |
-| oil | Brent oil tops $109 after Houthi militants claim they attacked Saudi airports and Aramco facilities - CNBC | CNBC | Sun, 18 Oct 2026 07:00 |
-| oil | US, Iran Said to Accept 3.67% Uranium Enrichment Cap; Brent Crude Falls Below $93 to 8-Month Low - BigGo Finance | BigGo Finance | Mon, 09 Nov 2026 23:55 |
-| oil | Crude oil prices fall to $91 a barrel as Trump signals pause in further military strikes on Iran - Moneycontrol.com | Moneycontrol.com | Tue, 10 Nov 2026 07:27 |
-| oil | Brent crude tops $113, highest level since May, after Trump hints at action on Iran - CNBC | CNBC | Thu, 22 Oct 2026 07:00 |
-| oil | Crude oil prices decline further amid optimism for easing tensions in Middle East - The Tribune | The Tribune | Tue, 10 Nov 2026 10:25 |
-| oil | Brent crude falls below $90 a barrel for first time since August / World News - Hindustan Times | Hindustan Times | Tue, 10 Nov 2026 11:19 |
-| oil | What to know about fuel prices after a midterm elections oil price drop - ABC News & Headlines – Australian Broadcasting | ABC News & Headlines – Australian Broadcasting Corporation | Tue, 10 Nov 2026 02:28 |
-| oil | Stocks jump as oil tumbles, Nvidia falls amid internal probe - Yahoo Finance | Yahoo Finance | Mon, 09 Nov 2026 22:27 |
-| oil | Oil prices fall as traders hope for diplomatic progress in Middle East - CNBC | CNBC | Tue, 20 Oct 2026 07:00 |
-| oil | FTSE 100 Rises 0.8% as Lower Oil Prices Support London Stocks Ahead of US Inflation Data - Yahoo Finance UK | Yahoo Finance UK | Tue, 10 Nov 2026 09:45 |
-| oil | Oil Prices Down - 09-11-26 - Armenpress | Armenpress | Tue, 10 Nov 2026 06:03 |
-| oil | U.S. Traders Weigh the Cost of Taking Trump's Russian Diesel - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 10 Nov 2026 01:00 |
-| oil | Oil falls as Trump signals restraint on Iran despite fresh shipping attacks - Yahoo Finance | Yahoo Finance | Mon, 09 Nov 2026 10:22 |
-| oil | Brent Crude Falls Below $90: Will US Inflation Data and Fed Rate Bets Drive Oil Lower? - Coinpedia | Coinpedia | Tue, 10 Nov 2026 12:07 |
-| oil | Oil Prices Today: Brent Near $92 After 16% Weekly Rout; Is $100 Oil A Thing Of The Past? - NDTV Profit | NDTV Profit | Tue, 10 Nov 2026 01:37 |
-| oil | Crude Oil Price Forecast: Brent Falls Below $90 to Lowest Since Late August, Next Target May Point to $80 - TradingKey | TradingKey | Tue, 10 Nov 2026 10:20 |
-| oil | Oil Price Today (November 10): Brent crude falls below $90 for first time in 3 months as Trump says Iran w - The Economi | The Economic Times | Tue, 10 Nov 2026 09:28 |
-| oil | China Is Buying Oil Again After Months of Living Off Its Stockpiles - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 10 Nov 2026 12:30 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-10 13:06 UTC | 102 new | 2500 total
+NEWS_DIGEST | 2026-11-10 15:58 UTC | 37 new | 2500 total
