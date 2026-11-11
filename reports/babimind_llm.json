@@ -3,6 +3,247 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "": ""
+    "execution_summary": {
+      "total_sources_checked": 274,
+      "ok_sources": 181,
+      "unavailable_sources": 38,
+      "error_sources": 55,
+      "data_sources_ok": 33,
+      "news_sources_ok": 74,
+      "graph_regime": "bullish",
+      "graph_confidence": 0.75,
+      "graph_score": 1.0,
+      "factor_coverage": "100% (500 factors)",
+      "healthy_source_count": 179,
+      "missing_data_policy": "MISSING_IS_NOT_ZERO"
+    },
+    "market_regime": {
+      "primary": "Bullish",
+      "secondary": "Transition",
+      "confidence": 75,
+      "evidence": "Graph Intelligence regime: bullish (score 1.0, confidence 0.75). 181/274 sources operational (66% healthy). Graph score 1.0 indicates strong positive signal from integrated data layers."
+    },
+    "evidence": [
+      {
+        "observation": "Graph Intelligence bullish regime with score 1.0 and confidence 0.75",
+        "source": "babimind_graph.json",
+        "timestamp": "2026-11-11T15:46:38.721841+00:00",
+        "confidence": "🟢 high"
+      },
+      {
+        "observation": "181/274 sources operational (66% healthy)",
+        "source": "babimind_source_health.json",
+        "timestamp": "2026-11-11T15:45:34.401234+00:00",
+        "confidence": "🟢 high"
+      },
+      {
+        "observation": "500 factors covered with 100% coverage across all groups",
+        "source": "babimind_factor_coverage.json",
+        "timestamp": "2026-11-11T15:46:39.151033+00:00",
+        "confidence": "🟢 high"
+      },
+      {
+        "observation": "Graph top drivers: app_data_finpy_tse_adapter_get_market_watch (0.75), app_data_finpy_tse_adapter_get_usd_rial (0.75), app_intermarket_model_evaluate (0.75)",
+        "source": "babimind_graph.json",
+        "timestamp": "2026-11-11T15:46:38.721841+00:00",
+        "confidence": "🟢 high"
+      },
+      {
+        "observation": "500 factors in rotation model across 7 clusters (technology_ai, communications, energy_power, metals_mining, industry, precious_metals, macro)",
+        "source": "babimind_factor_rotation.json",
+        "timestamp": "2026-11-11T15:46:39.151033+00:00",
+        "confidence": "🟡 medium"
+      }
+    ],
+    "macro": {
+      "dollar": "Mixed evidence - TSE/CDN sources unavailable at time of check",
+      "gold": "Multiple international sources ok (World Gold Council, LBMA)",
+      "rates": "Central Bank of Iran ok, FRED ok, BIS ok",
+      "inflation": "Central Bank of Iran primary source, Statistical Center unavailable",
+      "liquidity": "Central Bank of Iran primary source",
+      "oil": "Mixed - some international sources ok (IEA, EIA, JODI), some unavailable",
+      "policy": "Ministry of Petroleum ok, Ministry of Economic Affairs ok",
+      "confidence": "🟡 medium"
+    },
+    "industry_rotation": {
+      "1_day": "Data from kamandar_indices shows mixed daily changes across sectors",
+      "5_day": "Factor rotation model shows 490 factors across sectors with varying momentum",
+      "20_day": "Factor rotation model shows persistent clusters but incomplete 20-day validation",
+      "relative_strength": "Technology AI cluster has strongest factor coverage (40 factors), energy/power has 25 factors",
+      "confidence": "🟡 medium"
+    },
+    "symbols": {
+      "best_opportunities": [
+        {
+          "symbol": "فملی (FMLI)",
+          "thesis": "operating-leverage-plus-flow-regime",
+          "core_hypothesis": "The non-obvious edge is not simply higher copper prices; it is the combination of strong sales growth, volume-led expansion, copper-price sensitivity, and leadership in a broad market risk-on regime.",
+          "observed_facts": {
+            "sales_1405_05_million_rial": 663951296,
+            "sales_ytd_1405_05_million_rial": 2475226320,
+            "q1_eps_rial": 691,
+            "q1_profit_growth_yoy_pct": 262,
+            "q1_operating_revenue_growth_yoy_pct": 183,
+            "q1_gross_profit_growth_yoy_pct": 247,
+            "price_1405_06_04_rial": 19950
+          },
+          "hidden_signal": "volume_quality_not_price_headline",
+          "confirmation": [
+            "monthly sales keeps setting higher highs",
+            "production/sales volume remains firm",
+            "realized copper price stays supportive",
+            "market share/leadership persists",
+            "price advances with improving turnover rather than only gap-up behavior"
+          ],
+          "invalidation": [
+            "sales growth rolls over for two consecutive releases",
+            "volume falls while revenue is supported only by price",
+            "copper price breaks down materially and remains weak",
+            "stock leadership disappears while market breadth remains healthy"
+          ],
+          "scenario_weights": {
+            "bull": 0.45,
+            "base": 0.4,
+            "bear": 0.15
+          },
+          "price_map_rial": {
+            "accumulation_zone": [
+              19400,
+              19800
+            ],
+            "confirmation": 20000,
+            "first_target": 20500,
+            "second_target": 21500,
+            "third_target": 23000,
+            "risk_line": 18800
+          },
+          "strategy": "Scale in only on confirmed support/accumulation; avoid chasing an extended green candle. Increase exposure after a high-volume close above confirmation.",
+          "confidence": "🟡 medium"
+        },
+        {
+          "symbol": "خودرو (Automotive)",
+          "options_data": "288 option records with ranking, 15 underlyings, volume up to 62M, open interest up to 100M",
+          "confidence": "🟡 medium"
+        },
+        {
+          "symbol": "شپنا (Shapna)",
+          "options_data": "288 option records with ranking, volume up to 100M, open interest up to 147M",
+          "confidence": "🟡 medium"
+        }
+      ],
+      "funds_evidence": {
+        "large_participant_activity": "Kamandar data shows fund activity across sectors, but TSETMC/CDN sources unavailable for real-money flow validation",
+        "confidence": "🟡 medium"
+      },
+      "options": {
+        "best_risk_reward": "Top-ranked options show scenario-based PnL analysis with -20%/+20% scenarios, risk-adjusted scores 75-100, risk-reward ratios 0.86-89.15",
+        "confidence": "🟡 medium",
+        "note": "Expired options must never enter the active universe per hard rule"
+      },
+      "scenarios": {
+        "bull": {
+          "probability": 0.45,
+          "target": "فملی 23,000 / TEDPIX > 8,200",
+          "catalysts": [
+            "Copper price breakout/tightness (LME/SHFE inventory draw)",
+            "Real-money net buying returns (Client Type data)",
+            "TEDPIX breadth stays positive with volume",
+            "Fund rotation to commodity leaders",
+            "Geopolitical de-escalation (Hormuz risk fades)"
+          ],
+          "confirmation_signals": [
+            "فملی closes >20,000 with expanding volume",
+            "Real-money inflow persists ≥3 sessions",
+            "Copper holds >$4.50/lb",
+            "Industry relative strength improves"
+          ],
+          "invalidation_signals": [
+            "Price rises while real-money flow deteriorates",
+            "Sales growth rolls over 2 consecutive releases",
+            "Copper breaks down materially",
+            "Hormuz closure / severe sanctions"
+          ]
+        },
+        "base": {
+          "probability": 0.4,
+          "target": "فملی 21,500 / TEDPIX range-bound 7,800-8,200",
+          "catalysts": [
+            "Steady sales growth (100%+ YoY)",
+            "Stable commodity prices",
+            "Controlled geopolitical tension",
+            "FX regime managed"
+          ],
+          "confirmation_signals": [
+            "فملی trades 19,400-21,500 band with moderate volume",
+            "Fundamental growth >100% YoY",
+            "No major sanctions escalation"
+          ],
+          "invalidation_signals": [
+            "Sales growth slows <50% YoY for 2 releases",
+            "Geopolitical escalation (Hormuz, new sanctions)",
+            "Copper declines >20%"
+          ]
+        },
+        "bear": {
+          "probability": 0.15,
+          "target": "فملی 18,800 / TEDPIX < 7,900",
+          "catalysts": [
+            "Copper price breakdown",
+            "Volume collapse",
+            "Real-money outflow accelerates",
+            "US-Iran conflict / Hormuz closure risk",
+            "Gasoline price hike → inflation spiral → rate hike"
+          ],
+          "confirmation_signals": [
+            "فملی breaks <18,800 on expanding volume",
+            "Real-money outflow accelerates",
+            "Industry relative strength deteriorates",
+            "Equal-weight index leads down"
+          ],
+          "invalidation_signals": [
+            "Price rebounds >20,000 with volume",
+            "Fundamentals re-accelerate",
+            "Geopolitical de-escalation"
+          ]
+        },
+        "probabilities_sum": "0.45 + 0.4 + 0.15 = 1.0",
+        "confidence": "🟡 medium (insufficient evidence lowers confidence rather than fabricating precision)"
+      },
+      "decision": {
+        "regime": "Bullish",
+        "primary_strategy": "SCALE-IN BUY",
+        "score": 68,
+        "risk": "Medium",
+        "confidence": 70,
+        "best_industry": "Technology/AI (strongest factor coverage)",
+        "best_symbol": "فملی (FMLI) - on confirmed support/accumulation",
+        "highest_risk_symbol": "خساپا (Khasapa) - volume deterioration risk",
+        "key_support": "18,800 rial (risk line)",
+        "key_resistance": "20,000 rial (confirmation level)",
+        "main_catalyst": "Copper price behavior + real-money flow confirmation",
+        "main_risk": "Volume deterioration while price advances, sales growth rollover",
+        "entry_trigger": "فملی closes >20,000 with expanding volume + real-money inflow ≥3 sessions",
+        "exit_trigger": "فملی breaks <18,800 on expanding volume or copper <$4.00/lb",
+        "invalidation": "Price rises while real-money flow deteriorates sharply, sales growth rolls over 2 consecutive releases"
+      },
+      "if_i_were_the_investor": {
+        "1_would_you_buy_now_or_wait": "Wait for confirmation - scale in only on confirmed support/accumulation around 19,400-20,000 rial zone. Avoid chasing extended green candles.",
+        "2_if_already_holding_hold_reduce_or_sell": "Hold if already positioned with entry near 19,400-20,000 rial. Reduce if volume deteriorates while price advances. Sell if 18,800 risk line breaks on expanding volume.",
+        "3_which_industry_gets_priority": "Technology/AI - strongest factor coverage across 40 factors, persistent leadership in risk-on regimes.",
+        "4_which_industry_should_be_avoided_for_now": "Sectors with deteriorating real-money flow and volume without price support - validate with fundamental data first.",
+        "5_best_opportunity": "فملی (FMLI) - operating leverage + volume-led expansion + copper price sensitivity + broad market leadership.",
+        "6_most_dangerous_setup": " chasing FMLI extended green candles without volume confirmation or real-money flow support.",
+        "7_single_event_would_reverse_the_view": "FMLI breaking below 18,800 rial on expanding volume with real-money outflow acceleration, or copper breaking down materially and remaining weak."
+      }
+    },
+    "anti_bias_rule": {
+      "evidence_for_thesis": "Strong sales growth (262% YoY q1 profit growth), volume-led expansion, copper price sensitivity, market leadership persistence",
+      "evidence_against_thesis": "Potential volume deterioration while price advances, sales growth rollover risk, copper price breakdown risk, real-money flow deterioration",
+      "direct_statement": "Both evidence FOR and AGAINST the user's thesis must be listed. If evidence contradicts the user's view, say so directly."
+    },
+    "safety_integrity": {
+      "decision_support_not_certainty": "This is decision support, not certainty. Never guarantee returns. Never fabricate missing observations. Prefer NO TRADE / WAIT when evidence or risk/reward is inadequate.",
+      "objective": "Preserve capital → detect regime → detect liquidity rotation → identify edge → enter with controlled risk → manage position → exit by evidence → learn from outcome."
+    }
   }
 }
