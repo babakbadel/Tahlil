@@ -1,10 +1,37 @@
-# Daily Economic News Digest — 2026-11-12 13:15 UTC
+# Daily Economic News Digest — 2026-11-12 16:22 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **63** · Total stored: **2500**
+> New items this run: **27** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | ECB says the gap between refined diesel and crude oil prices has nearly tripled in Europe - Informat.ro | Informat.ro | Thu, 12 Nov 2026 13:43 |
+| oil | Iran Called U.S. Claims of Qatar Talks a “Pure Lie.” Oil Bounced Off Two-Month Lows. Gasoline Stayed Under $4. - Energy  | Energy News Beat | Thu, 12 Nov 2026 13:30 |
+| oil | Brent crude oil spot prices surge past futures price in April - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Fri, 24 Apr 2026 07:00 |
+| oil | Oil prices fall as rising crude output offsets geopolitical risks - Business Standard | Business Standard | Thu, 12 Nov 2026 13:12 |
+| oil | Oil Prices Fall Below $93 as OPEC+ Restores 97% of Prewar Production - Coinpaper | Coinpaper | Thu, 12 Nov 2026 12:30 |
+| oil | Oil Prices Down - 11-11-26 - Armenpress | Armenpress | Thu, 12 Nov 2026 05:36 |
+| oil | Brent Crude, WTI Oil Price Forecasts: Goldman Puts Oil At $108 For Q4 2026 - Exchange Rates UK | Exchange Rates UK | Thu, 12 Nov 2026 13:30 |
+| oil | Oil Tanker Explosion Reported Again in Strait of Hormuz; International Crude Prices Spike Intraday - BigGo Finance | BigGo Finance | Thu, 12 Nov 2026 14:55 |
+| oil | Oil prices rise after Trump said the U.S. doesn't need an Iran deal - Quartz | Quartz | Thu, 12 Nov 2026 13:48 |
+| oil | Oil Prices Slip as Rising OPEC+ Production and Peace Prospects Offset Middle East Supply Risks - EnergyNow.com | EnergyNow.com | Thu, 12 Nov 2026 11:34 |
+| oil | EIA Raises 2026, 2027 Oil Price Forecasts Yet Again - Rigzone | Rigzone | Thu, 12 Nov 2026 15:22 |
+| oil | Oil prices rise as geopolitical risks offset rising crude output - Reuters | Reuters | Thu, 12 Nov 2026 01:52 |
+| oil | Fusion's Next Race Is Over Superconducting Tape, Not Plasma - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 11 Nov 2026 23:00 |
+| geopolitics | Inside Trump’s new ‘Iron Gate’ op to starve Iran in full-scale land blockade - The Sun | The Sun | Thu, 12 Nov 2026 09:48 |
+| geopolitics | The Strait of Hormuz was the biggest game changer for markets in 2026 - Yahoo Finance | Yahoo Finance | Thu, 12 Nov 2026 12:00 |
+| geopolitics | Iran says the US must ‘surrender’ to seven conditions. What are they? - Iran International | Iran International | Thu, 12 Nov 2026 14:03 |
+| geopolitics | Oil Rises After Trump Says the US Doesn’t Need a Deal With Iran - Bloomberg.com | Bloomberg.com | Thu, 12 Nov 2026 14:07 |
+| bourse | Stock market passes a month with 4 weekly drops - Tehran Times | Tehran Times | Fri, 11 Sep 2020 07:00 |
+| bourse | Businesses Controlled By Khamenei To Be Listed On Iran's Stock Exchange - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Tue, 21 Jan 2020 08:00 |
+| bourse | ‘ETFs, proper option for stock market’s new investors’ - Tehran Times | Tehran Times | Fri, 27 Aug 2021 07:00 |
+| bourse | Tehran Stock Exchange reopens after 80-day suspension - Roya News | Roya News | Tue, 19 May 2026 07:00 |
+| bourse | Tehran Stock Exchange Conquers 7.4 Million-Unit Mark - ISNA News Agency | ISNA News Agency | Sun, 13 Sep 2026 07:00 |
+| bourse | Tehran Stock Exchange sets new record as index breaks 7.5 million mark - ISNA News Agency | ISNA News Agency | Tue, 15 Sep 2026 07:00 |
+| bourse | Is the Tehran Stock Exchange a Tool of the Revolutionary Guards? - American Enterprise Institute - AEI | American Enterprise Institute - AEI | Tue, 04 Aug 2026 10:45 |
+| oil | قیمت نفت کاهش یافت - تیتر کوتاه | تیتر کوتاه | Thu, 12 Nov 2026 12:30 |
+| oil | خبر زنده: نفت برنت ۹۲ دلار شد/میل سخن - خبرپو | خبرپو | Tue, 10 Nov 2026 06:30 |
+| macro_monetary | آینده تورم ایران؛ همتی روایت دیگری از رشد پایه پولی دارد - زومان | زومان | Thu, 12 Nov 2026 08:50 |
 | macro_monetary | Middle East geopolitical risk modestly affects inflation and inflation expectations - Federal Reserve Bank of Dallas | Federal Reserve Bank of Dallas | Thu, 21 Aug 2025 07:00 |
 | oil | Brent oil trades near $93 a barrel as global benchmark declines from previous month - Traders Union | Traders Union | Wed, 11 Nov 2026 08:54 |
 | oil | Crude Oil Futures Fall on Profit Taking & Global Cues - Rediff MoneyWiz | Rediff MoneyWiz | Thu, 12 Nov 2026 08:59 |
@@ -18,37 +45,10 @@
 | oil | Oil prices fall more than $1 on easing geopolitical tensions - سانا | سانا | Thu, 12 Nov 2026 06:34 |
 | oil | Oil Rebounds as Tight Inventories and Middle East Risks Support Prices - FXEmpire | FXEmpire | Wed, 11 Nov 2026 15:02 |
 | oil | Brent falls below $90 as Iran peace hopes and recovering oil supplies pressure prices - Oil & Gas 360 | Oil & Gas 360 | Tue, 10 Nov 2026 17:42 |
-| oil | Crude Falls 1% as Iran, Ukraine Talks Ease Supply Fears - HDFC Sky | HDFC Sky | Thu, 12 Nov 2026 04:20 |
-| oil | Brent gains as Iran hardens stance against US - https://www.engine.online/ | https://www.engine.online/ | Thu, 12 Nov 2026 10:16 |
-| oil | OPEC October Output Rose 2 Million Bpd as Brent Fell Below $90 - https://houseofsaud.com/ | https://houseofsaud.com/ | Thu, 12 Nov 2026 08:02 |
-| oil | Crude oil price slips on US-Iran peace talk hopes; Brent dips below $92, WTI under $86 - Moneycontrol.com | Moneycontrol.com | Thu, 12 Nov 2026 04:19 |
-| oil | Crude oil price slips on US-Iran peace talk hopes; Brent dips below $92, WTI under $86- Moneycontrol.com - LinkedIn | LinkedIn | Thu, 12 Nov 2026 05:37 |
-| oil | Oil up 1% as Iran official says country will keep enriched nuclear material - Reuters | Reuters | Wed, 11 Nov 2026 02:10 |
-| oil | Oil Prices Sink as Iran and Ukraine Peace Optimism Builds - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 12 Nov 2026 06:35 |
-| oil | Oil down more than $7 a barrel in post settlement trade as Trump signals restraint on Iran - Yahoo Finance | Yahoo Finance | Mon, 09 Nov 2026 20:01 |
-| oil | U.S. Energy Agency Increases 2026 Crude Oil Price Forecasts - MarketForces Africa | MarketForces Africa | Thu, 12 Nov 2026 06:58 |
-| oil | Current price of oil as of November 12, 2026 - Fortune | Fortune | Thu, 12 Nov 2026 12:54 |
-| oil | Oil prices edge lower as rising crude output offset geopolitical risks - Reuters | Reuters | Thu, 12 Nov 2026 01:52 |
-| oil | EIA sees Brent near $100/bbl through yearend 2026 as Middle East supply constraints persist - Oil & Gas Journal | Oil & Gas Journal | Wed, 11 Nov 2026 18:39 |
-| oil | Quantum Computing Is Being Pitched as the Fix for AI's Runaway Power Appetite - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 11 Nov 2026 22:00 |
-| oil | Global Power Grid Expansion Surges 50% to Record High - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 12 Nov 2026 00:00 |
-| oil | Asian Oil Buyers Turn to Africa and Brazil as Tanker Rates Plunge - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 12 Nov 2026 08:30 |
-| oil | Who Will Buy Sable's Oil if California Keeps Closing Refineries - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 12 Nov 2026 01:00 |
-| geopolitics | Inside Trump’s new ‘Iron Gate’ op to starve Iran in full-scale land blockade - The Sun | The Sun | Thu, 12 Nov 2026 09:39 |
-| geopolitics | Oil exporters scramble for routes beyond Hormuz — but there are no easy options - CNBC | CNBC | Thu, 23 Apr 2026 07:00 |
-| geopolitics | US blockade: Iran starts feeling the heat - Kpler | Kpler | Mon, 27 Apr 2026 09:55 |
-| geopolitics | US targets Iran's land trade routes, but Tehran may hold firm - Iran International | Iran International | Wed, 11 Nov 2026 16:58 |
-| geopolitics | What a Hormuz Endgame Could Actually Look Like - Foreign Policy | Foreign Policy | Wed, 11 Nov 2026 21:37 |
-| geopolitics | Oil rises after Iran says no nuclear material will leave the country - CNBC | CNBC | Wed, 11 Nov 2026 03:13 |
-| geopolitics | Oil prices rise as investors monitor Hormuz shipping disruption - Euronews.com | Euronews.com | Wed, 11 Nov 2026 10:47 |
-| geopolitics | Oil slicks seen from space: the devastating impact of boat strikes on fragile Gulf ecosystems - The Guardian | The Guardian | Thu, 12 Nov 2026 03:02 |
-| geopolitics | U.S. Efforts to Tighten Blockade of Iran Rely on Reluctant Neighbors - The New York Times | The New York Times | Wed, 11 Nov 2026 17:18 |
-| geopolitics | Can Tehran survive a ‘zero oil’ budget, if US blockade on Iran persists? - Al Jazeera | Al Jazeera | Wed, 11 Nov 2026 15:43 |
-| geopolitics | Trump’s peaceful mood doesn’t fully explain why energy prices are plunging - CNN | CNN | Wed, 11 Nov 2026 10:00 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-12 13:15 UTC | 63 new | 2500 total
+NEWS_DIGEST | 2026-11-12 16:22 UTC | 27 new | 2500 total
