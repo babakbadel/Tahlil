@@ -1,15 +1,15 @@
 {
   "factor_count": 500,
   "counts": {
-    "Available": 178,
-    "Partial": 322,
+    "Available": 250,
+    "Partial": 250,
     "Stale": 0,
     "Unavailable": 0,
     "Error": 0
   },
   "covered": 500,
   "coverage_percent": 100.0,
-  "healthy_source_count": 179,
+  "healthy_source_count": 178,
   "records": [
     {
       "factor_id": "F001",
@@ -100,10 +100,11 @@
     {
       "factor_id": "F006",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -117,7 +118,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F007",
@@ -126,6 +127,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -142,14 +144,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F008",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -169,15 +170,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F009",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -191,7 +193,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F010",
@@ -218,6 +220,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -232,7 +235,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F012",
@@ -395,10 +398,11 @@
     {
       "factor_id": "F020",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -412,7 +416,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F021",
@@ -421,6 +425,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -437,14 +442,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F022",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -464,15 +468,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F023",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -486,7 +491,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F024",
@@ -513,6 +518,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -527,7 +533,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F026",
@@ -690,10 +696,11 @@
     {
       "factor_id": "F034",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -707,7 +714,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F035",
@@ -716,6 +723,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -732,14 +740,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F036",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -759,15 +766,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F037",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -781,7 +789,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F038",
@@ -808,6 +816,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -822,7 +831,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F040",
@@ -985,10 +994,11 @@
     {
       "factor_id": "F048",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -1002,7 +1012,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F049",
@@ -1011,6 +1021,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -1027,14 +1038,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F050",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -1054,15 +1064,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F051",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -1076,7 +1087,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F052",
@@ -1103,6 +1114,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -1117,7 +1129,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F054",
@@ -1280,10 +1292,11 @@
     {
       "factor_id": "F062",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -1297,7 +1310,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F063",
@@ -1306,6 +1319,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -1322,14 +1336,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F064",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -1349,15 +1362,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F065",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -1371,7 +1385,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F066",
@@ -1398,6 +1412,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -1412,7 +1427,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F068",
@@ -1575,10 +1590,11 @@
     {
       "factor_id": "F076",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -1592,7 +1608,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F077",
@@ -1601,6 +1617,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -1617,14 +1634,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F078",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -1644,15 +1660,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F079",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -1666,7 +1683,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F080",
@@ -1693,6 +1710,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -1707,7 +1725,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F082",
@@ -1870,10 +1888,11 @@
     {
       "factor_id": "F090",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -1887,7 +1906,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F091",
@@ -1896,6 +1915,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -1912,14 +1932,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F092",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -1939,15 +1958,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F093",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -1961,7 +1981,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F094",
@@ -1988,6 +2008,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -2002,7 +2023,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F096",
@@ -2165,10 +2186,11 @@
     {
       "factor_id": "F104",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -2182,7 +2204,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F105",
@@ -2191,6 +2213,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -2207,14 +2230,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F106",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -2234,15 +2256,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F107",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -2256,7 +2279,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F108",
@@ -2283,6 +2306,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -2297,7 +2321,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F110",
@@ -2460,10 +2484,11 @@
     {
       "factor_id": "F118",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -2477,7 +2502,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F119",
@@ -2486,6 +2511,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -2502,14 +2528,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F120",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -2529,15 +2554,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F121",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -2551,7 +2577,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F122",
@@ -2578,6 +2604,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -2592,7 +2619,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F124",
@@ -2755,10 +2782,11 @@
     {
       "factor_id": "F132",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -2772,7 +2800,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F133",
@@ -2781,6 +2809,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -2797,14 +2826,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F134",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -2824,15 +2852,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F135",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -2846,7 +2875,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F136",
@@ -2873,6 +2902,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -2887,7 +2917,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F138",
@@ -3050,10 +3080,11 @@
     {
       "factor_id": "F146",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -3067,7 +3098,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F147",
@@ -3076,6 +3107,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -3092,14 +3124,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F148",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -3119,15 +3150,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F149",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -3141,7 +3173,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F150",
@@ -3168,6 +3200,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -3182,7 +3215,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F152",
@@ -3345,10 +3378,11 @@
     {
       "factor_id": "F160",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -3362,7 +3396,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F161",
@@ -3371,6 +3405,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -3387,14 +3422,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F162",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -3414,15 +3448,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F163",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -3436,7 +3471,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F164",
@@ -3463,6 +3498,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -3477,7 +3513,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F166",
@@ -3640,10 +3676,11 @@
     {
       "factor_id": "F174",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -3657,7 +3694,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F175",
@@ -3666,6 +3703,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -3682,14 +3720,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F176",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -3709,15 +3746,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F177",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -3731,7 +3769,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F178",
@@ -3758,6 +3796,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -3772,7 +3811,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F180",
@@ -3935,10 +3974,11 @@
     {
       "factor_id": "F188",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -3952,7 +3992,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F189",
@@ -3961,6 +4001,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -3977,14 +4018,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F190",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -4004,15 +4044,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F191",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -4026,7 +4067,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F192",
@@ -4053,6 +4094,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -4067,7 +4109,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F194",
@@ -4230,10 +4272,11 @@
     {
       "factor_id": "F202",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -4247,7 +4290,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F203",
@@ -4256,6 +4299,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -4272,14 +4316,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F204",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -4299,15 +4342,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F205",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -4321,7 +4365,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F206",
@@ -4348,6 +4392,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -4362,7 +4407,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F208",
@@ -4525,10 +4570,11 @@
     {
       "factor_id": "F216",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -4542,7 +4588,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F217",
@@ -4551,6 +4597,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -4567,14 +4614,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F218",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -4594,15 +4640,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F219",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -4616,7 +4663,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F220",
@@ -4643,6 +4690,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -4657,7 +4705,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F222",
@@ -4820,10 +4868,11 @@
     {
       "factor_id": "F230",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -4837,7 +4886,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F231",
@@ -4846,6 +4895,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -4862,14 +4912,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F232",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -4889,15 +4938,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F233",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -4911,7 +4961,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F234",
@@ -4938,6 +4988,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -4952,7 +5003,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F236",
@@ -5115,10 +5166,11 @@
     {
       "factor_id": "F244",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -5132,7 +5184,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F245",
@@ -5141,6 +5193,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -5157,14 +5210,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F246",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -5184,15 +5236,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F247",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -5206,7 +5259,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F248",
@@ -5233,6 +5286,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -5247,7 +5301,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F250",
@@ -5410,10 +5464,11 @@
     {
       "factor_id": "F258",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -5427,7 +5482,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F259",
@@ -5436,6 +5491,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -5452,14 +5508,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F260",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -5479,15 +5534,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F261",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -5501,7 +5557,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F262",
@@ -5528,6 +5584,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -5542,7 +5599,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F264",
@@ -5705,10 +5762,11 @@
     {
       "factor_id": "F272",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -5722,7 +5780,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F273",
@@ -5731,6 +5789,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -5747,14 +5806,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F274",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -5774,15 +5832,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F275",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -5796,7 +5855,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F276",
@@ -5823,6 +5882,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -5837,7 +5897,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F278",
@@ -6000,10 +6060,11 @@
     {
       "factor_id": "F286",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -6017,7 +6078,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F287",
@@ -6026,6 +6087,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -6042,14 +6104,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F288",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -6069,15 +6130,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F289",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -6091,7 +6153,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F290",
@@ -6118,6 +6180,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -6132,7 +6195,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F292",
@@ -6295,10 +6358,11 @@
     {
       "factor_id": "F300",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -6312,7 +6376,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F301",
@@ -6321,6 +6385,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -6337,14 +6402,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F302",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -6364,15 +6428,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F303",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -6386,7 +6451,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F304",
@@ -6413,6 +6478,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -6427,7 +6493,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F306",
@@ -6590,10 +6656,11 @@
     {
       "factor_id": "F314",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -6607,7 +6674,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F315",
@@ -6616,6 +6683,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -6632,14 +6700,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F316",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -6659,15 +6726,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F317",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -6681,7 +6749,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F318",
@@ -6708,6 +6776,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -6722,7 +6791,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F320",
@@ -6885,10 +6954,11 @@
     {
       "factor_id": "F328",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -6902,7 +6972,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F329",
@@ -6911,6 +6981,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -6927,14 +6998,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F330",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -6954,15 +7024,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F331",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -6976,7 +7047,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F332",
@@ -7003,6 +7074,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -7017,7 +7089,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F334",
@@ -7180,10 +7252,11 @@
     {
       "factor_id": "F342",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -7197,7 +7270,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F343",
@@ -7206,6 +7279,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -7222,14 +7296,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F344",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -7249,15 +7322,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F345",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -7271,7 +7345,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F346",
@@ -7298,6 +7372,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -7312,7 +7387,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F348",
@@ -7475,10 +7550,11 @@
     {
       "factor_id": "F356",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -7492,7 +7568,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F357",
@@ -7501,6 +7577,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -7517,14 +7594,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F358",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -7544,15 +7620,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F359",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -7566,7 +7643,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F360",
@@ -7593,6 +7670,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -7607,7 +7685,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F362",
@@ -7770,10 +7848,11 @@
     {
       "factor_id": "F370",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -7787,7 +7866,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F371",
@@ -7796,6 +7875,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -7812,14 +7892,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F372",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -7839,15 +7918,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F373",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -7861,7 +7941,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F374",
@@ -7888,6 +7968,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -7902,7 +7983,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F376",
@@ -8065,10 +8146,11 @@
     {
       "factor_id": "F384",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -8082,7 +8164,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F385",
@@ -8091,6 +8173,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -8107,14 +8190,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F386",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -8134,15 +8216,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F387",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -8156,7 +8239,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F388",
@@ -8183,6 +8266,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -8197,7 +8281,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F390",
@@ -8360,10 +8444,11 @@
     {
       "factor_id": "F398",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -8377,7 +8462,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F399",
@@ -8386,6 +8471,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -8402,14 +8488,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F400",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -8429,15 +8514,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F401",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -8451,7 +8537,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F402",
@@ -8478,6 +8564,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -8492,7 +8579,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F404",
@@ -8655,10 +8742,11 @@
     {
       "factor_id": "F412",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -8672,7 +8760,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F413",
@@ -8681,6 +8769,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -8697,14 +8786,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F414",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -8724,15 +8812,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F415",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -8746,7 +8835,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F416",
@@ -8773,6 +8862,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -8787,7 +8877,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F418",
@@ -8950,10 +9040,11 @@
     {
       "factor_id": "F426",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -8967,7 +9058,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F427",
@@ -8976,6 +9067,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -8992,14 +9084,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F428",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -9019,15 +9110,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F429",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -9041,7 +9133,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F430",
@@ -9068,6 +9160,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -9082,7 +9175,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F432",
@@ -9245,10 +9338,11 @@
     {
       "factor_id": "F440",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -9262,7 +9356,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F441",
@@ -9271,6 +9365,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -9287,14 +9382,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F442",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -9314,15 +9408,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F443",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -9336,7 +9431,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F444",
@@ -9363,6 +9458,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -9377,7 +9473,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F446",
@@ -9540,10 +9636,11 @@
     {
       "factor_id": "F454",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -9557,7 +9654,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F455",
@@ -9566,6 +9663,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -9582,14 +9680,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F456",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -9609,15 +9706,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F457",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -9631,7 +9729,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F458",
@@ -9658,6 +9756,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -9672,7 +9771,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F460",
@@ -9835,10 +9934,11 @@
     {
       "factor_id": "F468",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -9852,7 +9952,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F469",
@@ -9861,6 +9961,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -9877,14 +9978,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F470",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -9904,15 +10004,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F471",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -9926,7 +10027,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F472",
@@ -9953,6 +10054,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -9967,7 +10069,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F474",
@@ -10130,10 +10232,11 @@
     {
       "factor_id": "F482",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -10147,7 +10250,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F483",
@@ -10156,6 +10259,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -10172,14 +10276,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F484",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -10199,15 +10302,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F485",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -10221,7 +10325,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F486",
@@ -10248,6 +10352,7 @@
       "group": "commodities",
       "status": "Partial",
       "healthy_sources": [
+        "EIA",
         "LBMA"
       ],
       "candidate_sources": [
@@ -10262,7 +10367,7 @@
         "WGC",
         "LBMA"
       ],
-      "source_count": 1
+      "source_count": 2
     },
     {
       "factor_id": "F488",
@@ -10425,10 +10530,11 @@
     {
       "factor_id": "F496",
       "group": "energy",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Ministry of Petroleum",
-        "JODI"
+        "JODI",
+        "EIA"
       ],
       "candidate_sources": [
         "Ministry of Energy",
@@ -10442,7 +10548,7 @@
         "Reuters",
         "S&P Global Commodity Insights"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F497",
@@ -10451,6 +10557,7 @@
       "healthy_sources": [
         "Ministry of Petroleum",
         "JODI",
+        "EIA",
         "Kpler",
         "Vortexa"
       ],
@@ -10467,14 +10574,13 @@
         "Kpler",
         "Vortexa"
       ],
-      "source_count": 4
+      "source_count": 5
     },
     {
       "factor_id": "F498",
       "group": "geopolitics_sanctions",
       "status": "Available",
       "healthy_sources": [
-        "US Treasury OFAC",
         "UN Security Council",
         "European Commission",
         "UK FCDO",
@@ -10494,15 +10600,16 @@
         "ICG",
         "CSIS"
       ],
-      "source_count": 5
+      "source_count": 4
     },
     {
       "factor_id": "F499",
       "group": "hormuz_risk",
-      "status": "Partial",
+      "status": "Available",
       "healthy_sources": [
         "Al Jazeera",
-        "The National"
+        "The National",
+        "EIA"
       ],
       "candidate_sources": [
         "Reuters",
@@ -10516,7 +10623,7 @@
         "OPEC",
         "EIA"
       ],
-      "source_count": 2
+      "source_count": 3
     },
     {
       "factor_id": "F500",
