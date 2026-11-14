@@ -1,8 +1,8 @@
 # BabiMind — 500 Factor Coverage
 
 - Total factors: **500**
-- Available: **250**
-- Partial: **250**
+- Available: **214**
+- Partial: **286**
 - Stale: **0**
 - Unavailable: **0**
 - Error: **0**

@@ -1,10 +1,24 @@
-# Daily Economic News Digest — 2026-11-14 11:51 UTC
+# Daily Economic News Digest — 2026-11-14 14:40 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **95** · Total stored: **2500**
+> New items this run: **14** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | Tankers Still Get Hit but Brent Crude Oil Keeps Falling - FOREX.com | FOREX.com | Thu, 12 Nov 2026 16:45 |
+| oil | EIA raises oil price forecast for 4th straight month amid Mideast disruptions - Anadolu Ajansı | Anadolu Ajansı | Wed, 11 Nov 2026 09:00 |
+| oil | Oil Prices Fall for Second Straight Week as Global Supply Surplus Emerges - WTI Closes at $88.56, Brent at $95.84 - Ener | EnergyNow | Fri, 13 Nov 2026 22:00 |
+| oil | Oil surges 6%, Brent and US crude both surpass $100 on more tanker attacks - Reuters | Reuters | Thu, 10 Sep 2026 07:00 |
+| oil | Oil News: WTI and Brent Rise as Hormuz Shipping Disruptions Renew Supply Fears - FXEmpire | FXEmpire | Fri, 13 Nov 2026 05:26 |
+| oil | Germany Is Dismantling a Nord Stream Power Plant for Ukraine - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 13 Nov 2026 16:10 |
+| geopolitics | Oil Jumps After Trump Says US Doesn’t Need Deal With Iran - Bloomberg | Bloomberg | Thu, 12 Nov 2026 20:18 |
+| geopolitics | Iran Says Two Supertankers Carrying 4 Million Barrels Were Disabled. Shipping Attacks Continue In Strait Of Hormuz. - Ya | Yahoo | Thu, 12 Nov 2026 10:53 |
+| fx | Iranian rial in freefall as dollar breaks 2.1 million mark - Euronews.com | Euronews.com | Wed, 02 Sep 2026 07:00 |
+| bourse | 72% Of Stocks Bleed As Tehran Stock Exchange Opens After 80-Day Wartime Freeze / Numbers Decoded - NDTV Profit | NDTV Profit | Tue, 19 May 2026 07:00 |
+| oil | تحولات خاورمیانه و تاثیر آن بر قیمت نفت خام برنت و وست تگزاس/خبرکده - خبرپو | خبرپو | Sat, 14 Nov 2026 07:05 |
+| oil | قیمت نفت برنت از 95 دلار گذشت - اخبار جدید | اخبار جدید | Sat, 14 Nov 2026 06:28 |
+| oil | شوک تازه به بازار انرژی؛ قیمت نفت برنت ۹۵ دلاری شد - جهان صنعت نیوز | جهان صنعت نیوز | Sat, 14 Nov 2026 06:31 |
+| oil | عرضه جهانی نفت برای نخستین بار از آغاز جنگ ایران از تقاضا پیشی گرفت - Iran International | Iran International | Fri, 13 Nov 2026 23:20 |
 | macro_monetary | Europe’s Citizens Face a New Inflation Blow as Ukraine and Iran Wars Raise Fears of Winter Fuel and Gas Price Hikes - Ur | UrduPoint | Fri, 13 Nov 2026 09:48 |
 | macro_monetary | As Iran war disrupts oil prices, consumers could be 'hammered,' economist says - CNBC | CNBC | Tue, 10 Mar 2026 07:00 |
 | macro_monetary | US consumer inflation steady before Iran conflict drives up oil prices - Reuters | Reuters | Wed, 11 Mar 2026 07:00 |
@@ -31,24 +45,10 @@
 | oil | Oil Prices Face Mixed Signals as U.S. Distillate Stocks Fall - FXEmpire | FXEmpire | Thu, 12 Nov 2026 13:49 |
 | oil | Oil Prices Up Over Unresolved US-Iran War, Brent Tops $96 - MarketForces Africa | MarketForces Africa | Fri, 13 Nov 2026 12:55 |
 | oil | Oil prices fall due to increased production despite tensions in Hormuz - Inspenet | Inspenet | Thu, 12 Nov 2026 13:20 |
-| oil | Brent crude edges higher as Middle East tensions offset US stock build - Anadolu Ajansı | Anadolu Ajansı | Fri, 13 Nov 2026 07:31 |
-| oil | Oil prices rise after Trump says U.S. doesn't need Iran deal - Transport Topics | Transport Topics | Thu, 12 Nov 2026 15:27 |
-| oil | Oil prices rise after Trump says no Iran deal needed: 'We've got their Strait' - CNBC | CNBC | Thu, 12 Nov 2026 13:24 |
-| oil | Oil Prices Squeezed Between Peace Hopes and Iran Escalation Risk - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 13 Nov 2026 00:00 |
-| oil | CPC to keep domestic gasoline, diesel prices steady - Focus Taiwan | Focus Taiwan | Sat, 14 Nov 2026 09:55 |
-| oil | BP, Shell, and TotalEnergies: Where Next for Oil Stocks as Crude Prices Fall? - Morningstar | Morningstar | Thu, 12 Nov 2026 14:05 |
-| oil | Oil Prices Rebound as Middle East Risks Offset U.S. Inventory Builds - FXEmpire | FXEmpire | Fri, 13 Nov 2026 15:05 |
-| oil | Oil Prices Head for Second Weekly Loss Despite Fresh Middle East Attacks - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 13 Nov 2026 05:45 |
-| oil | Morningstar holds 2027 Brent forecast at $71/bbl as Persian Gulf supply recovers - Oil & Gas Journal | Oil & Gas Journal | Thu, 12 Nov 2026 18:21 |
-| oil | Oil Prices Slip as U.S. Maintains Iran Blockade and Global Supply Outlook Weakens — WTI Near $88, Brent Below $96 - Ener | EnergyNow.com | Fri, 13 Nov 2026 12:45 |
-| oil | Oil prices set for second straight weekly drop on signs of growing supply surplus - Reuters | Reuters | Fri, 13 Nov 2026 03:01 |
-| oil | Oil Prices Up - 13/11/26 - Armenpress | Armenpress | Sat, 14 Nov 2026 07:05 |
-| oil | Brent and WTI set for losses of about 2.5% in week to Nov 13 as surplus concerns grow - Nation Thailand | Nation Thailand | Sat, 14 Nov 2026 00:30 |
-| oil | Why is Brent crude price up 4% today? - Traders Union | Traders Union | Thu, 12 Nov 2026 21:10 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-14 11:51 UTC | 95 new | 2500 total
+NEWS_DIGEST | 2026-11-14 14:40 UTC | 14 new | 2500 total
