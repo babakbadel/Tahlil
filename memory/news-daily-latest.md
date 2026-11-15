@@ -1,10 +1,18 @@
-# Daily Economic News Digest — 2026-11-15 12:21 UTC
+# Daily Economic News Digest — 2026-11-15 15:10 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **30** · Total stored: **2500**
+> New items this run: **8** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | Gas prices in U.S. hit record Labor Day high, thanks to Iran war and refinery issues - PBS | PBS | Mon, 07 Sep 2026 07:00 |
+| macro_monetary | Average Gasoline Price Hits $4 in U.S., a ‘Headache’ for Drivers and Trump - The New York Times | The New York Times | Tue, 31 Mar 2026 07:00 |
+| oil | Global crude oil prices decline - News On AIR | News On AIR | Thu, 12 Nov 2026 16:23 |
+| oil | Crude Futures Post Back-to-Back Weekly Losses - WSJ | WSJ | Fri, 13 Nov 2026 21:11 |
+| geopolitics | Iran targets US military base in Bahrain with drone attack - BBC | BBC | Sun, 15 Nov 2026 13:42 |
+| bourse | Official Denies Government Meddling Tehran Stock Market - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Wed, 28 Oct 2020 07:00 |
+| macro_monetary | پایان دسترسی بانک‌ها به پول ارزان - بانک مردم | بانک مردم | Sun, 15 Nov 2026 10:18 |
+| macro_monetary | افزایش سود بین‌بانکی؛ وام‌ها گران‌تر می‌شوند؟ - جماران | جماران | Sun, 15 Nov 2026 12:59 |
 | macro_monetary | Fact Sheet: Costs of the Iran War - Center for American Progress | Center for American Progress | Fri, 23 Oct 2026 07:00 |
 | oil | Oil Prices Mixed Amid Surplus Fears, Geopolitical Tensions - Business Post Nigeria | Business Post Nigeria | Sat, 14 Nov 2026 10:18 |
 | oil | Oil prices set for second weekly decline in a row - RTE.ie | RTE.ie | Fri, 13 Nov 2026 16:37 |
@@ -37,18 +45,10 @@
 | macro_monetary | ترمز تورم کجاست؟ نسخه بانک مرکزی برای مهار نقدینگی - تسنیم | تسنیم | Sun, 15 Nov 2026 12:11 |
 | oil | Global crude oil prices show mixed trend - News On AIR | News On AIR | Thu, 12 Nov 2026 12:48 |
 | oil | Crude Oil Prices Down In Week As Russian Exports Surge - MarketForces Africa | MarketForces Africa | Sat, 14 Nov 2026 10:02 |
-| oil | Iran Braces for a Budget Without Oil Revenue - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 13 Nov 2026 23:00 |
-| geopolitics | Live Updates: 3 oil tankers hit mines in Strait of Hormuz, Iran says - CBS News | CBS News | Sat, 14 Nov 2026 13:39 |
-| bourse | Iran, Oman trade exchanges on trajectory growth this year - Mehr News Agency | Mehr News Agency | Sat, 14 Nov 2026 09:55 |
-| macro_monetary | پایه پولی از نقدینگی سبقت گرفت/ تورم از کجا آب می‌خورد؟ - ایسنا | ایسنا | Sat, 14 Nov 2026 08:29 |
-| oil | Tankers Still Get Hit but Brent Crude Oil Keeps Falling - FOREX.com | FOREX.com | Thu, 12 Nov 2026 16:45 |
-| oil | EIA raises oil price forecast for 4th straight month amid Mideast disruptions - Anadolu Ajansı | Anadolu Ajansı | Wed, 11 Nov 2026 09:00 |
-| oil | Oil Prices Fall for Second Straight Week as Global Supply Surplus Emerges - WTI Closes at $88.56, Brent at $95.84 - Ener | EnergyNow | Fri, 13 Nov 2026 22:00 |
-| oil | Oil surges 6%, Brent and US crude both surpass $100 on more tanker attacks - Reuters | Reuters | Thu, 10 Sep 2026 07:00 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-15 12:21 UTC | 30 new | 2500 total
+NEWS_DIGEST | 2026-11-15 15:10 UTC | 8 new | 2500 total
