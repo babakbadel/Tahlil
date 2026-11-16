@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-16 13:15 UTC
+# Daily Economic News Digest — 2026-11-16 17:32 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **0** · Total stored: **2500**
+> New items this run: **94** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Gas prices in U.S. hit record Labor Day high, thanks to Iran war and refinery issues - PBS | PBS | Mon, 07 Sep 2026 07:00 |
-| macro_monetary | Average Gasoline Price Hits $4 in U.S., a ‘Headache’ for Drivers and Trump - The New York Times | The New York Times | Tue, 31 Mar 2026 07:00 |
-| oil | Global crude oil prices decline - News On AIR | News On AIR | Thu, 12 Nov 2026 16:23 |
-| oil | Crude Futures Post Back-to-Back Weekly Losses - WSJ | WSJ | Fri, 13 Nov 2026 21:11 |
-| geopolitics | Iran targets US military base in Bahrain with drone attack - BBC | BBC | Sun, 15 Nov 2026 13:42 |
-| bourse | Official Denies Government Meddling Tehran Stock Market - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Wed, 28 Oct 2020 07:00 |
-| macro_monetary | پایان دسترسی بانک‌ها به پول ارزان - بانک مردم | بانک مردم | Sun, 15 Nov 2026 10:18 |
-| macro_monetary | افزایش سود بین‌بانکی؛ وام‌ها گران‌تر می‌شوند؟ - جماران | جماران | Sun, 15 Nov 2026 12:59 |
-| macro_monetary | Fact Sheet: Costs of the Iran War - Center for American Progress | Center for American Progress | Fri, 23 Oct 2026 07:00 |
-| oil | Oil Prices Mixed Amid Surplus Fears, Geopolitical Tensions - Business Post Nigeria | Business Post Nigeria | Sat, 14 Nov 2026 10:18 |
-| oil | Oil prices set for second weekly decline in a row - RTE.ie | RTE.ie | Fri, 13 Nov 2026 16:37 |
-| oil | Global crude oil prices down for second consecutive week - News On AIR | News On AIR | Sat, 14 Nov 2026 18:58 |
-| oil | Trump Says 'No Need for Iran Deal,' Oil Prices Jump Over 1%, Nasdaq Futures Weaken - BigGo Finance | BigGo Finance | Thu, 12 Nov 2026 14:05 |
-| oil | Brent oil rises as US light crude prices decline - Today.Az | Today.Az | Sun, 15 Nov 2026 12:00 |
-| oil | Trump Says 'No Need for a Deal With Iran' as Oil Prices Jump More Than 2.6%, Brent Nears $96 - BigGo Finance | BigGo Finance | Fri, 13 Nov 2026 00:55 |
-| oil | Oil surges above $100 a barrel as US and Iran launch new attacks, while gasoline prices also jump - AP News | AP News | Wed, 09 Sep 2026 07:00 |
-| oil | Oil: Brent rebounds above 200-day average – BBH - www.tmgm.com | www.tmgm.com | Fri, 13 Nov 2026 14:34 |
-| oil | Oil prices fall as OPEC+ production increases - Inspenet | Inspenet | Thu, 12 Nov 2026 19:35 |
-| oil | Brent oil rises as US light crude prices decline - AzerNews | AzerNews | Sun, 15 Nov 2026 07:12 |
-| oil | Crude Oil May Fall Further: Brent Targets $90-92 Amid Supply - Rediff MoneyWiz | Rediff MoneyWiz | Sun, 15 Nov 2026 10:37 |
-| oil | Oil Price Forecast: WTI Falls Below $87 as Supply Fears Ease - FXEmpire | FXEmpire | Thu, 12 Nov 2026 07:22 |
-| oil | Singapore Makes a $65 Billion Bet on the Future of Gold - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sat, 14 Nov 2026 18:00 |
-| oil | Electrifying Ambitions Meet Tough Reality in Europe - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sun, 15 Nov 2026 00:00 |
-| geopolitics | The Oil Market Is Brimming With Crude Despite Tanker Attacks - Bloomberg.com | Bloomberg.com | Sat, 14 Nov 2026 08:30 |
-| geopolitics | Iran's ‘mine war’ claims questioned as UN warns over uranium buried at secret nuclear site - Ynetnews | Ynetnews | Sat, 14 Nov 2026 17:15 |
-| geopolitics | Live Updates: Bahrain says it intercepted Iranian attacks after Tehran claims it targeted U.S. assets - CBS News | CBS News | Sun, 15 Nov 2026 08:01 |
-| pezeshkian | Masoud Pezeshkian Says US Sanctions And Naval Blockade Hurt Iran’s Economy: 15 outlets compared - NewsCord | NewsCord | Sat, 29 Aug 2026 07:00 |
-| fx | Iranian Currency Slumps on Black Market After US Quits Iran Deal - Voice of America English News | Voice of America English News | Thu, 10 May 2018 07:00 |
-| bourse | Iran Offers Shares of Loss-Making Banks At Stock Market To Raise Money - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Wed, 29 Apr 2020 07:00 |
-| oil | قیمت نفت برنت و تگزاس، بنزین و گازوئیل در بازار جهانی انرژی امروز شنبه ۲۳ آبان ۱۴۰۵ - vista.ir | vista.ir | Sat, 14 Nov 2026 06:34 |
-| oil | قیمت نفت برنت امروز جمعه ۲۲ آبان ۱۴۰۵؛ هر بشکه ۹۵ دلار و ۴۱ سنت - خبرپو | خبرپو | Fri, 13 Nov 2026 06:05 |
-| oil | نفت برنت ٩۶ دلار شد - شهر خبر | شهر خبر | Sat, 14 Nov 2026 08:00 |
-| oil | بازار نفت به سمت مازاد عرضه رفت؛ کاهش قیمتها همزمان با توقف صادرات ایران - mojahedin.org | mojahedin.org | Fri, 13 Nov 2026 14:11 |
-| macro_monetary | پیام معنادار همتی درباره نقدینگی؛ رشد 90درصدی پایه پولی چه معنایی دارد؟ / آخرین خبر - vista.ir | vista.ir | Sat, 14 Nov 2026 17:12 |
-| macro_monetary | کسری بودجه دولت چه اثری بر نرخ ارز و قیمت دلار دارد؟ - vista.ir | vista.ir | Sun, 15 Nov 2026 04:34 |
-| macro_monetary | ضرورت یک انتخاب تلخ - https://tosebrand.ir/ | https://tosebrand.ir/ | Sun, 15 Nov 2026 04:21 |
-| macro_monetary | اصلاح نرخ سود به شفافیت بازار بین‌بانکی کمک می‌کند - ایرنا | ایرنا | Sun, 15 Nov 2026 09:30 |
-| macro_monetary | ترمز تورم کجاست؟ نسخه بانک مرکزی برای مهار نقدینگی - تسنیم | تسنیم | Sun, 15 Nov 2026 12:11 |
-| oil | Global crude oil prices show mixed trend - News On AIR | News On AIR | Thu, 12 Nov 2026 12:48 |
-| oil | Crude Oil Prices Down In Week As Russian Exports Surge - MarketForces Africa | MarketForces Africa | Sat, 14 Nov 2026 10:02 |
+| macro_monetary | After 60 Days at War With Iran, See Where Gas Prices Have Risen the Most - U.S. News & World Report | U.S. News & World Report | Fri, 01 May 2026 07:00 |
+| oil | Fuel price reduction update across Nigeria as crude oil falls - شبكة تواصل الإخبارية | شبكة تواصل الإخبارية | Mon, 16 Nov 2026 05:44 |
+| oil | Brent above $96; Oil steadies after two-week slide as fresh West Asia attacks raise supply concerns - CNBC TV18 | CNBC TV18 | Mon, 16 Nov 2026 00:55 |
+| oil | Crude Oil Prices May Fall Further Next Week, Brent Could Slip To $90–92 As Supply Pressure Mounts - Free Press Journal | Free Press Journal | Sun, 15 Nov 2026 11:10 |
+| oil | Oil falls as recovering Middle East exports bolster surplus outlook - Business Recorder | Business Recorder | Mon, 16 Nov 2026 02:41 |
+| oil | Crude oil may extend losses next week, Brent seen testing $90-92/barrel: Analysts - CNBC TV18 | CNBC TV18 | Sun, 15 Nov 2026 10:42 |
+| oil | Brent Crude Above $95 Amid US-Iran Tensions - News Karnataka | News Karnataka | Mon, 16 Nov 2026 11:24 |
+| oil | Brent Crude oil price drops 2% to $93.92 as Middle East supply flows recover - Business Upturn | Business Upturn | Mon, 16 Nov 2026 14:37 |
+| oil | Brent Crude Oil Resumes Its Losses – Analysis –16-11-2026 - Economies.com | Economies.com | Mon, 16 Nov 2026 03:32 |
+| oil | Oil Prices Today: Brent Reverses Course, Climbs Above $95; What Happens Next? - NDTV Profit | NDTV Profit | Fri, 13 Nov 2026 01:12 |
+| oil | Crude Oil May Extend Losses This Week; Brent Seen Testing $90-92 Per Barrel, Say Analysts - NDTV Profit | NDTV Profit | Sun, 15 Nov 2026 12:14 |
+| oil | Brent Crude Holds Above $95 Per Barrel As Fresh US-Iran Flare Ups Dim Growing Supply Surplus - NDTV Profit | NDTV Profit | Mon, 16 Nov 2026 01:24 |
+| oil | Brent Crude Oil Price: $95.84 Sunday Before the Futures Open, Iran Mine Claims, Bull $98, Bear $91 - FinanceFeeds | FinanceFeeds | Sun, 15 Nov 2026 06:52 |
+| oil | Brent Crude Oil Price: $95.84 Saturday Week Ahead After a Second Weekly Loss, Bull $98, Bear $91 - FinanceFeeds | FinanceFeeds | Sat, 14 Nov 2026 06:50 |
+| oil | Oil prices near $95: will Brent crude crash below $90 as supply glut grows? - Invezz | Invezz | Mon, 16 Nov 2026 08:17 |
+| oil | Brent Crude Trades at $95.99 a Barrel After a 2.6% Decline - www.tokenpost.com | www.tokenpost.com | Mon, 16 Nov 2026 14:16 |
+| oil | Brent Crude Oil Price: $96.28 Monday After Iran Strikes a US Base in Bahrain, Bull $98, Bear $91 - FinanceFeeds | FinanceFeeds | Mon, 16 Nov 2026 06:50 |
+| oil | Oil Price Today (November 16): Brent crude hovers near $95 despite hopes of Middle East supply surplus. Wh - The Economi | The Economic Times | Mon, 16 Nov 2026 02:25 |
+| oil | Brent Crude Oil Price Chart and Latest News - Hargreaves Lansdown | Hargreaves Lansdown | Sun, 22 Jul 2018 04:35 |
+| oil | UKOIL — Brent Crude Oil Price Chart - TradingView | TradingView | Thu, 23 Nov 2017 12:29 |
+| oil | Short-Term Energy Outlook - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Mon, 28 Nov 2016 14:52 |
+| oil | Brent Crude Oil Last Day Financial Futures (BZ=F) stock price, news, quote and history - Yahoo Finance UK | Yahoo Finance UK | Tue, 13 Jun 2017 03:23 |
+| oil | Crude Oil Future Price - Live MCX Crude Oil Future Price Chart - Groww | Groww | Mon, 04 Aug 2025 14:05 |
+| oil | A look back at our forecast for global crude oil prices in 2024 - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Fri, 17 Jan 2025 08:00 |
+| oil | World Oil Prices Today, November 14, 2026: Brent and WTI Weaken, What Is the Impact on Indonesia? - Aktualita.co | Aktualita.co | Sat, 14 Nov 2026 02:58 |
+| oil | Indian Equities Rise: Sensex Up 512 Points, Nifty Nears 25,300 Amidst FII Inflows - Rediff | Rediff | Mon, 16 Nov 2026 11:32 |
+| oil | Rupee Gains 6 Paise to 94.13 vs US Dollar Amid Oil Price Drop - Rediff MoneyWiz | Rediff MoneyWiz | Mon, 16 Nov 2026 04:35 |
+| oil | Oil prices show mixed trend - Azərtac | Azərtac | Mon, 16 Nov 2026 06:58 |
+| oil | Rupee rises 6 paise to 94.13 as crude oil prices ease, strong dollar limit gains - The Times of India | The Times of India | Mon, 16 Nov 2026 04:56 |
+| oil | Brent crude’s sharp reversal points to weakening near-term momentum - The Business Times | The Business Times | Sun, 15 Nov 2026 23:00 |
+| oil | Brent Crude Could Fall To US$67 By End 2027 As Global Oil Market Swings To Surplus - BusinessToday Malaysia | BusinessToday Malaysia | Mon, 16 Nov 2026 03:00 |
+| oil | WTI and Brent Crude Oil Prices Decline as Trump Extends the Jones Act Waiver by 90 Days - FXLeaders | FXLeaders | Sun, 15 Nov 2026 08:00 |
+| oil | Fuel prices unchanged for ninth consecutive week - Taipei Times | Taipei Times | Sun, 15 Nov 2026 16:00 |
+| oil | Crude oil war premium falls to zero; Goldman Sachs: This is the optimal time to buy commodities for hedging - 富途牛牛 | 富途牛牛 | Mon, 16 Nov 2026 06:47 |
+| oil | Brent Crude Falls to $96 as Global Oil Supply Outlook Improves Amid Middle East Conflict - APAC Media | APAC Media | Mon, 16 Nov 2026 07:19 |
+| oil | Crude oil prices slip on expectations of coming supply surplus; Brent falls below $95, WTI at $86 - Moneycontrol.com | Moneycontrol.com | Mon, 16 Nov 2026 04:13 |
+| oil | Oil price analysis: Sellers are losing momentum, but $86.75 remains the danger line - investingLive | investingLive | Mon, 16 Nov 2026 01:52 |
+| oil | Goldman Sachs warns: The oil market will face a "massive supply surplus" in 2027, with Brent crude falling to $78 per ba | Moomoo | Mon, 16 Nov 2026 05:59 |
+| oil | Oversupply Expectations Weigh on Market as Brent Crude Falls Below $95; US-Iran Stalemate Provides Floor Support - BigGo | BigGo Finance | Mon, 16 Nov 2026 04:05 |
+| oil | Goldman warns of sizable 2027 oil surplus, prices may fall - Crypto Briefing | Crypto Briefing | Mon, 16 Nov 2026 11:30 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-16 13:15 UTC | 0 new | 2500 total
+NEWS_DIGEST | 2026-11-16 17:32 UTC | 94 new | 2500 total
