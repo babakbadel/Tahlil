@@ -1,10 +1,13 @@
-# Daily Economic News Digest — 2026-11-16 17:32 UTC
+# Daily Economic News Digest — 2026-11-16 19:45 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **94** · Total stored: **2500**
+> New items this run: **3** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| geopolitics | As Saudi Arabia and Iraq move to capture Iran’s oil market in China, Nigeria and Saudi Arabia face a blow in the U.S. ec | Business Insider Africa | Sun, 15 Nov 2026 20:17 |
+| geopolitics | China’s Teapot Refiners Turn to Trading Giants as Iran Oil Ebbs - Bloomberg.com | Bloomberg.com | Mon, 16 Nov 2026 00:52 |
+| bourse | South Korea’s stock market suffers biggest drop in history amid US-Iran war - Al Jazeera | Al Jazeera | Wed, 04 Mar 2026 08:00 |
 | macro_monetary | After 60 Days at War With Iran, See Where Gas Prices Have Risen the Most - U.S. News & World Report | U.S. News & World Report | Fri, 01 May 2026 07:00 |
 | oil | Fuel price reduction update across Nigeria as crude oil falls - شبكة تواصل الإخبارية | شبكة تواصل الإخبارية | Mon, 16 Nov 2026 05:44 |
 | oil | Brent above $96; Oil steadies after two-week slide as fresh West Asia attacks raise supply concerns - CNBC TV18 | CNBC TV18 | Mon, 16 Nov 2026 00:55 |
@@ -42,13 +45,10 @@
 | oil | Brent Crude Falls to $96 as Global Oil Supply Outlook Improves Amid Middle East Conflict - APAC Media | APAC Media | Mon, 16 Nov 2026 07:19 |
 | oil | Crude oil prices slip on expectations of coming supply surplus; Brent falls below $95, WTI at $86 - Moneycontrol.com | Moneycontrol.com | Mon, 16 Nov 2026 04:13 |
 | oil | Oil price analysis: Sellers are losing momentum, but $86.75 remains the danger line - investingLive | investingLive | Mon, 16 Nov 2026 01:52 |
-| oil | Goldman Sachs warns: The oil market will face a "massive supply surplus" in 2027, with Brent crude falling to $78 per ba | Moomoo | Mon, 16 Nov 2026 05:59 |
-| oil | Oversupply Expectations Weigh on Market as Brent Crude Falls Below $95; US-Iran Stalemate Provides Floor Support - BigGo | BigGo Finance | Mon, 16 Nov 2026 04:05 |
-| oil | Goldman warns of sizable 2027 oil surplus, prices may fall - Crypto Briefing | Crypto Briefing | Mon, 16 Nov 2026 11:30 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-16 17:32 UTC | 94 new | 2500 total
+NEWS_DIGEST | 2026-11-16 19:45 UTC | 3 new | 2500 total
