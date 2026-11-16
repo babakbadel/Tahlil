@@ -1,4 +1,4 @@
-# Daily Economic News Digest — 2026-11-15 16:32 UTC
+# Daily Economic News Digest — 2026-11-16 13:15 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
 > New items this run: **0** · Total stored: **2500**
@@ -51,4 +51,4 @@
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-15 16:32 UTC | 0 new | 2500 total
+NEWS_DIGEST | 2026-11-16 13:15 UTC | 0 new | 2500 total

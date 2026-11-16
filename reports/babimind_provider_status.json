@@ -11,9 +11,16 @@
     },
     {
       "provider": "openrouter",
-      "status": "ok",
+      "status": "error",
+      "error": "OpenRouter returned JSON that is not an object",
       "model": "openrouter/free",
       "attempt": 2
+    },
+    {
+      "provider": "openrouter",
+      "status": "ok",
+      "model": "openrouter/free",
+      "attempt": 3
     }
   ]
 }
