@@ -1,10 +1,20 @@
-# Daily Economic News Digest — 2026-11-17 13:55 UTC
+# Daily Economic News Digest — 2026-11-17 17:16 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **93** · Total stored: **2500**
+> New items this run: **10** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | Iran’s Parliament Reveals Fears of New Uprising as Gasoline Price Dispute Intensifies - Iran News Update | Iran News Update | Tue, 17 Nov 2026 08:00 |
+| fx | Iran's currency tumbles as tensions escalate in the Middle East - Euronews.com | Euronews.com | Mon, 29 Jan 2024 08:00 |
+| bourse | Iran's stock market surges despite war, currency crisis, worsening economy - The Jerusalem Post | The Jerusalem Post | Wed, 14 Oct 2026 07:00 |
+| bourse | As the rial sinks, Iranians seek shelter in almost anything else - Iran International | Iran International | Fri, 02 Oct 2026 07:00 |
+| oil | قیمت نفت برنت و نفت آمریکا امروز ۲۵ آبان ۱۴۰۵ چقدر شد؟ │ مازاد عرضه مسیر آینده بازار انرژی را تغییر می‌دهد؟ - vista.ir | vista.ir | Mon, 16 Nov 2026 09:24 |
+| macro_monetary | یک کارشناس: اصلاح نرخ سود به شفافیت بازار بین‌بانکی کمک می‌کند - vista.ir | vista.ir | Sun, 15 Nov 2026 09:53 |
+| macro_monetary | نمایندگان مجلس درباره عملکرد بانک مرکزی و وضعیت اقتصادی کشور چه گفتند؟ - vista.ir | vista.ir | Tue, 17 Nov 2026 07:35 |
+| macro_monetary | آزمون اعتبار بانک مرکزی در بازار پول / بازگشت بانک مرکزی به ابزار نرخ بهره پس از 3 سال / احیای اعتبار پولی چگونه ممکن اس | vista.ir | Tue, 17 Nov 2026 07:30 |
+| macro_monetary | بی‌خبری ۵ میلیارد دلاری - روزنامه جهان صنعت | روزنامه جهان صنعت | Tue, 17 Nov 2026 17:12 |
+| macro_monetary | واقعی‌سازی نرخ سود به شفافیت بازار پول کمک می‌کند/اصلاح ناترازی بانک‌ها تداوم یابد - ایرنا | ایرنا | Tue, 17 Nov 2026 05:14 |
 | oil | Oil Price Today (November 17): Brent crude drops below $92 amid supply surplus hopes. What Goldman Sachs n - The Economi | The Economic Times | Tue, 17 Nov 2026 02:04 |
 | oil | Nifty tops 25,500 to hit 9-month high, banking stocks lead the rally - The New Indian Express | The New Indian Express | Tue, 17 Nov 2026 13:36 |
 | oil | Stock markets climb in early trade on foreign fund inflows, fall in crude oil prices - Daily Excelsior | Daily Excelsior | Tue, 17 Nov 2026 06:28 |
@@ -35,20 +45,10 @@
 | oil | Technical analysis of the Nasdaq 100, USD/JPY and Brent crude oil while all three are under selling pressure. - IG | IG | Tue, 17 Nov 2026 09:31 |
 | oil | Airlines Face Fuel Crisis as Price Hedges Expire - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 17 Nov 2026 00:00 |
 | oil | Oil falls as recovering Middle East exports bolster surplus outlook - CNBC | CNBC | Mon, 16 Nov 2026 08:32 |
-| oil | Goldman Sachs forecasts an oil surplus of 2 million barrels in 2027 - Inspenet | Inspenet | Mon, 16 Nov 2026 15:46 |
-| oil | Oil prices retreat as global supply surplus comes into focus - Oil & Gas 360 | Oil & Gas 360 | Mon, 16 Nov 2026 19:10 |
-| oil | Oil settles lower as recovering Middle East exports bolster surplus outlook - Reuters | Reuters | Mon, 16 Nov 2026 02:00 |
-| oil | Oil Prices Down - 16-11-26 - Armenpress | Armenpress | Tue, 17 Nov 2026 05:46 |
-| oil | Crude Oil Prices Fall on Global Supply Surplus Outlook - HDFC Sky | HDFC Sky | Tue, 17 Nov 2026 04:10 |
-| oil | Goldman Sachs sees Brent oil averaging $88 in 2027 despite expected oil market surplus - ET EnergyWorld | ET EnergyWorld | Tue, 17 Nov 2026 06:55 |
-| oil | Brent crude oil price on Nov 17, 2026 at 5:00 PM EST? - Coinbase | Coinbase | Tue, 17 Nov 2026 03:40 |
-| oil | U.S. crude oil declines to $85 a barrel on recovering Middle East exports - CNBC | CNBC | Mon, 16 Nov 2026 15:55 |
-| oil | Oil Price Forecast: Brent and WTI Slide on Supply Surplus Outlook - FXEmpire | FXEmpire | Tue, 17 Nov 2026 07:57 |
-| oil | Oil prices swing as vessel attacks reported around Hormuz - Transport Topics | Transport Topics | Tue, 17 Nov 2026 13:10 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-17 13:55 UTC | 93 new | 2500 total
+NEWS_DIGEST | 2026-11-17 17:16 UTC | 10 new | 2500 total
