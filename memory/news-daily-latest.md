@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-16 19:45 UTC
+# Daily Economic News Digest — 2026-11-17 13:55 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **3** · Total stored: **2500**
+> New items this run: **93** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| geopolitics | As Saudi Arabia and Iraq move to capture Iran’s oil market in China, Nigeria and Saudi Arabia face a blow in the U.S. ec | Business Insider Africa | Sun, 15 Nov 2026 20:17 |
-| geopolitics | China’s Teapot Refiners Turn to Trading Giants as Iran Oil Ebbs - Bloomberg.com | Bloomberg.com | Mon, 16 Nov 2026 00:52 |
-| bourse | South Korea’s stock market suffers biggest drop in history amid US-Iran war - Al Jazeera | Al Jazeera | Wed, 04 Mar 2026 08:00 |
-| macro_monetary | After 60 Days at War With Iran, See Where Gas Prices Have Risen the Most - U.S. News & World Report | U.S. News & World Report | Fri, 01 May 2026 07:00 |
-| oil | Fuel price reduction update across Nigeria as crude oil falls - شبكة تواصل الإخبارية | شبكة تواصل الإخبارية | Mon, 16 Nov 2026 05:44 |
-| oil | Brent above $96; Oil steadies after two-week slide as fresh West Asia attacks raise supply concerns - CNBC TV18 | CNBC TV18 | Mon, 16 Nov 2026 00:55 |
-| oil | Crude Oil Prices May Fall Further Next Week, Brent Could Slip To $90–92 As Supply Pressure Mounts - Free Press Journal | Free Press Journal | Sun, 15 Nov 2026 11:10 |
-| oil | Oil falls as recovering Middle East exports bolster surplus outlook - Business Recorder | Business Recorder | Mon, 16 Nov 2026 02:41 |
-| oil | Crude oil may extend losses next week, Brent seen testing $90-92/barrel: Analysts - CNBC TV18 | CNBC TV18 | Sun, 15 Nov 2026 10:42 |
-| oil | Brent Crude Above $95 Amid US-Iran Tensions - News Karnataka | News Karnataka | Mon, 16 Nov 2026 11:24 |
-| oil | Brent Crude oil price drops 2% to $93.92 as Middle East supply flows recover - Business Upturn | Business Upturn | Mon, 16 Nov 2026 14:37 |
-| oil | Brent Crude Oil Resumes Its Losses – Analysis –16-11-2026 - Economies.com | Economies.com | Mon, 16 Nov 2026 03:32 |
-| oil | Oil Prices Today: Brent Reverses Course, Climbs Above $95; What Happens Next? - NDTV Profit | NDTV Profit | Fri, 13 Nov 2026 01:12 |
-| oil | Crude Oil May Extend Losses This Week; Brent Seen Testing $90-92 Per Barrel, Say Analysts - NDTV Profit | NDTV Profit | Sun, 15 Nov 2026 12:14 |
-| oil | Brent Crude Holds Above $95 Per Barrel As Fresh US-Iran Flare Ups Dim Growing Supply Surplus - NDTV Profit | NDTV Profit | Mon, 16 Nov 2026 01:24 |
-| oil | Brent Crude Oil Price: $95.84 Sunday Before the Futures Open, Iran Mine Claims, Bull $98, Bear $91 - FinanceFeeds | FinanceFeeds | Sun, 15 Nov 2026 06:52 |
-| oil | Brent Crude Oil Price: $95.84 Saturday Week Ahead After a Second Weekly Loss, Bull $98, Bear $91 - FinanceFeeds | FinanceFeeds | Sat, 14 Nov 2026 06:50 |
-| oil | Oil prices near $95: will Brent crude crash below $90 as supply glut grows? - Invezz | Invezz | Mon, 16 Nov 2026 08:17 |
-| oil | Brent Crude Trades at $95.99 a Barrel After a 2.6% Decline - www.tokenpost.com | www.tokenpost.com | Mon, 16 Nov 2026 14:16 |
-| oil | Brent Crude Oil Price: $96.28 Monday After Iran Strikes a US Base in Bahrain, Bull $98, Bear $91 - FinanceFeeds | FinanceFeeds | Mon, 16 Nov 2026 06:50 |
-| oil | Oil Price Today (November 16): Brent crude hovers near $95 despite hopes of Middle East supply surplus. Wh - The Economi | The Economic Times | Mon, 16 Nov 2026 02:25 |
-| oil | Brent Crude Oil Price Chart and Latest News - Hargreaves Lansdown | Hargreaves Lansdown | Sun, 22 Jul 2018 04:35 |
-| oil | UKOIL — Brent Crude Oil Price Chart - TradingView | TradingView | Thu, 23 Nov 2017 12:29 |
-| oil | Short-Term Energy Outlook - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Mon, 28 Nov 2016 14:52 |
-| oil | Brent Crude Oil Last Day Financial Futures (BZ=F) stock price, news, quote and history - Yahoo Finance UK | Yahoo Finance UK | Tue, 13 Jun 2017 03:23 |
-| oil | Crude Oil Future Price - Live MCX Crude Oil Future Price Chart - Groww | Groww | Mon, 04 Aug 2025 14:05 |
-| oil | A look back at our forecast for global crude oil prices in 2024 - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Fri, 17 Jan 2025 08:00 |
-| oil | World Oil Prices Today, November 14, 2026: Brent and WTI Weaken, What Is the Impact on Indonesia? - Aktualita.co | Aktualita.co | Sat, 14 Nov 2026 02:58 |
-| oil | Indian Equities Rise: Sensex Up 512 Points, Nifty Nears 25,300 Amidst FII Inflows - Rediff | Rediff | Mon, 16 Nov 2026 11:32 |
-| oil | Rupee Gains 6 Paise to 94.13 vs US Dollar Amid Oil Price Drop - Rediff MoneyWiz | Rediff MoneyWiz | Mon, 16 Nov 2026 04:35 |
-| oil | Oil prices show mixed trend - Azərtac | Azərtac | Mon, 16 Nov 2026 06:58 |
-| oil | Rupee rises 6 paise to 94.13 as crude oil prices ease, strong dollar limit gains - The Times of India | The Times of India | Mon, 16 Nov 2026 04:56 |
-| oil | Brent crude’s sharp reversal points to weakening near-term momentum - The Business Times | The Business Times | Sun, 15 Nov 2026 23:00 |
-| oil | Brent Crude Could Fall To US$67 By End 2027 As Global Oil Market Swings To Surplus - BusinessToday Malaysia | BusinessToday Malaysia | Mon, 16 Nov 2026 03:00 |
-| oil | WTI and Brent Crude Oil Prices Decline as Trump Extends the Jones Act Waiver by 90 Days - FXLeaders | FXLeaders | Sun, 15 Nov 2026 08:00 |
-| oil | Fuel prices unchanged for ninth consecutive week - Taipei Times | Taipei Times | Sun, 15 Nov 2026 16:00 |
-| oil | Crude oil war premium falls to zero; Goldman Sachs: This is the optimal time to buy commodities for hedging - 富途牛牛 | 富途牛牛 | Mon, 16 Nov 2026 06:47 |
-| oil | Brent Crude Falls to $96 as Global Oil Supply Outlook Improves Amid Middle East Conflict - APAC Media | APAC Media | Mon, 16 Nov 2026 07:19 |
-| oil | Crude oil prices slip on expectations of coming supply surplus; Brent falls below $95, WTI at $86 - Moneycontrol.com | Moneycontrol.com | Mon, 16 Nov 2026 04:13 |
-| oil | Oil price analysis: Sellers are losing momentum, but $86.75 remains the danger line - investingLive | investingLive | Mon, 16 Nov 2026 01:52 |
+| oil | Oil Price Today (November 17): Brent crude drops below $92 amid supply surplus hopes. What Goldman Sachs n - The Economi | The Economic Times | Tue, 17 Nov 2026 02:04 |
+| oil | Nifty tops 25,500 to hit 9-month high, banking stocks lead the rally - The New Indian Express | The New Indian Express | Tue, 17 Nov 2026 13:36 |
+| oil | Stock markets climb in early trade on foreign fund inflows, fall in crude oil prices - Daily Excelsior | Daily Excelsior | Tue, 17 Nov 2026 06:28 |
+| oil | Stock markets rally for 2nd day on foreign fund inflows, moderate crude oil prices - Daily Excelsior | Daily Excelsior | Tue, 17 Nov 2026 11:01 |
+| oil | Crude oil prices drop 5.6%: IndiGo, HPCL, Indian Oil, Asian Paints, other oil-sensitive stocks rise; here's why - Upstox | Upstox | Tue, 17 Nov 2026 03:21 |
+| oil | Oil Prices Plummet as Middle East Crude Exports Recover; WTI at $85.72 : Global : JKN - 재경일보 | 재경일보 | Mon, 16 Nov 2026 23:55 |
+| oil | Rupee rises 31 paise to 93.63 against US dollar in early trade - The New Indian Express | The New Indian Express | Tue, 17 Nov 2026 04:25 |
+| oil | Crude oil prices drop as supply recovers and de... - Pluang | Pluang | Tue, 17 Nov 2026 04:14 |
+| oil | Rupee Gains 31 Paise to 93.63 vs US Dollar on Crude Fall, FIIs - Rediff MoneyWiz | Rediff MoneyWiz | Tue, 17 Nov 2026 04:24 |
+| oil | Oil prices fall, Brent at US$92 a barrel - برق الإمارات | برق الإمارات | Tue, 17 Nov 2026 05:42 |
+| oil | Global crude oil prices up - News On AIR | News On AIR | Tue, 17 Nov 2026 12:26 |
+| oil | Oil prices fall as surplus fears return after a nine-month dry spell in the market - The Times of India | The Times of India | Mon, 16 Nov 2026 02:15 |
+| oil | Oil prices caught between rising Mideast exports and tanker attacks - Investify | Investify | Tue, 17 Nov 2026 13:09 |
+| oil | Iran Claims Two More Oil Tankers Hit Mines in Strait of Hormuz - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 16 Nov 2026 10:00 |
+| oil | Oil prices fall despite Gulf security risks - Gulf News | Gulf News | Tue, 17 Nov 2026 06:46 |
+| oil | Oil Prices Fall Over 2% as Hormuz Supply Flows Recover - Business Post Nigeria | Business Post Nigeria | Tue, 17 Nov 2026 05:08 |
+| oil | Stock markets rally second day on foreign fund inflows, moderate crude oil prices - The Hindu | The Hindu | Tue, 17 Nov 2026 12:18 |
+| oil | Crude Oil Weekly Outlook: Geopolitics vs Oversupply Risks - FOREX.com | FOREX.com | Mon, 16 Nov 2026 14:33 |
+| oil | US Dollar Rallies as Fed Rate Risks Pressure Global Markets - FXEmpire | FXEmpire | Tue, 17 Nov 2026 02:54 |
+| oil | Goldman Sachs: Oil Prices to Fall to $78/Bbl by End-2027 on Supply Surplus - Egypt Oil & Gas | Egypt Oil & Gas | Mon, 16 Nov 2026 14:51 |
+| oil | Goldman Sachs: Global Oil Market Faces Large Surplus by 2027 - IDNFinancials | IDNFinancials | Tue, 17 Nov 2026 04:40 |
+| oil | Oil slips on supply surplus outlook despite Gulf tensions - ET EnergyWorld | ET EnergyWorld | Tue, 17 Nov 2026 02:11 |
+| oil | Brent crude slips below $92, WTI at $83 as supply surplus outlook outweighs Middle East tensions - Moneycontrol.com | Moneycontrol.com | Tue, 17 Nov 2026 04:09 |
+| oil | Oil falls over 3% on Nov 16 as Middle East exports recover - Nation Thailand | Nation Thailand | Tue, 17 Nov 2026 00:19 |
+| oil | Oil Prices Stabilize After Monday’s Sharp Selloff as Global Supply Surplus Offsets Middle East Tanker Risks - EnergyNow | EnergyNow | Tue, 17 Nov 2026 11:33 |
+| oil | Still In The Danger Zone: Why Crude Oil's Decline Might Only Be Temporary (SP500) - Seeking Alpha | Seeking Alpha | Mon, 16 Nov 2026 21:27 |
+| oil | Oil Prices Struggle for Direction as Middle East Supply Recovers - EnergyNow.com | EnergyNow.com | Mon, 16 Nov 2026 13:05 |
+| oil | Technical analysis of the Nasdaq 100, USD/JPY and Brent crude oil while all three are under selling pressure. - IG | IG | Tue, 17 Nov 2026 09:31 |
+| oil | Airlines Face Fuel Crisis as Price Hedges Expire - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 17 Nov 2026 00:00 |
+| oil | Oil falls as recovering Middle East exports bolster surplus outlook - CNBC | CNBC | Mon, 16 Nov 2026 08:32 |
+| oil | Goldman Sachs forecasts an oil surplus of 2 million barrels in 2027 - Inspenet | Inspenet | Mon, 16 Nov 2026 15:46 |
+| oil | Oil prices retreat as global supply surplus comes into focus - Oil & Gas 360 | Oil & Gas 360 | Mon, 16 Nov 2026 19:10 |
+| oil | Oil settles lower as recovering Middle East exports bolster surplus outlook - Reuters | Reuters | Mon, 16 Nov 2026 02:00 |
+| oil | Oil Prices Down - 16-11-26 - Armenpress | Armenpress | Tue, 17 Nov 2026 05:46 |
+| oil | Crude Oil Prices Fall on Global Supply Surplus Outlook - HDFC Sky | HDFC Sky | Tue, 17 Nov 2026 04:10 |
+| oil | Goldman Sachs sees Brent oil averaging $88 in 2027 despite expected oil market surplus - ET EnergyWorld | ET EnergyWorld | Tue, 17 Nov 2026 06:55 |
+| oil | Brent crude oil price on Nov 17, 2026 at 5:00 PM EST? - Coinbase | Coinbase | Tue, 17 Nov 2026 03:40 |
+| oil | U.S. crude oil declines to $85 a barrel on recovering Middle East exports - CNBC | CNBC | Mon, 16 Nov 2026 15:55 |
+| oil | Oil Price Forecast: Brent and WTI Slide on Supply Surplus Outlook - FXEmpire | FXEmpire | Tue, 17 Nov 2026 07:57 |
+| oil | Oil prices swing as vessel attacks reported around Hormuz - Transport Topics | Transport Topics | Tue, 17 Nov 2026 13:10 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-16 19:45 UTC | 3 new | 2500 total
+NEWS_DIGEST | 2026-11-17 13:55 UTC | 93 new | 2500 total
