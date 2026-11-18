@@ -1,10 +1,17 @@
-# Daily Economic News Digest — 2026-11-18 16:52 UTC
+# Daily Economic News Digest — 2026-11-18 18:11 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **23** · Total stored: **2500**
+> New items this run: **7** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | BMI Predicts Brent Crude Will Remain Above $100 for Months - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 12 Oct 2026 07:00 |
+| oil | Oil Prices Fall Despite Iran Attacks as US Crude Inventories Jump 5.28M Barrels - Coinpaper | Coinpaper | Wed, 18 Nov 2026 16:21 |
+| oil | Oil Prices Rebound Amid Persistent Middle East Supply Risks - WSJ | WSJ | Mon, 12 Oct 2026 07:00 |
+| oil | تداوم فشار نزولی بر قیمت نفت برنت و WTI / مازاد عرضه، بزرگترین تهدید بازار - خبرپو | خبرپو | Wed, 18 Nov 2026 17:30 |
+| oil | ریزش نفت برنت ادامه دارد؛ قیمت نفت به مرز ۹۰ دلار نزدیک شد/راهبرد فردا - خبرپو | خبرپو | Wed, 18 Nov 2026 17:53 |
+| macro_monetary | همتی: فشار اقتصادی بر ایران ادامه دارد؛ بانک مرکزی رشد نقدینگی را کنترل می‌کند - https://khabarjadid.com/ | https://khabarjadid.com/ | Tue, 17 Nov 2026 06:23 |
+| macro_monetary | انتقاد نمایندگان مجلس از سیاست‌های بانک مرکزی و افزایش تورم/خبر جدید - خبرپو | خبرپو | Wed, 18 Nov 2026 06:22 |
 | oil | Lower crude oil prices could bring huge windfall for India in FY28: CEA - Business Standard | Business Standard | Wed, 18 Nov 2026 16:14 |
 | oil | Oil prices fall as higher US crude stocks temper supply risks - The Edge Malaysia | The Edge Malaysia | Wed, 18 Nov 2026 03:28 |
 | oil | Global crude oil prices show mixed trend - News On AIR | News On AIR | Wed, 18 Nov 2026 13:59 |
@@ -38,17 +45,10 @@
 | oil | India bonds rise tracking easing crude oil, US Treasury yields - Investify | Investify | Wed, 18 Nov 2026 06:37 |
 | oil | Oil prices fall as higher US crude stocks temper supply risks - Investify | Investify | Wed, 18 Nov 2026 05:41 |
 | oil | Oil prices decline on API inventory data, Middle East tensions - Report.az | Report.az | Wed, 18 Nov 2026 05:50 |
-| oil | Oil Prices Struggle for Direction as Middle East Supply Recovers - EnergyNow | EnergyNow | Mon, 16 Nov 2026 13:05 |
-| oil | Oil Price Today UAE: Brent Holds Near $95 as Attacks on ADNOC Tankers Disrupt Hormuz Shipping - Markets.com | Markets.com | Sun, 15 Nov 2026 16:03 |
-| oil | Oil prices slip on US stock build-up, Iran conflict limits losses - Investify | Investify | Wed, 18 Nov 2026 05:54 |
-| oil | Rubber Market Ends Lower, Tracking Losses In Regional Futures, Crude Oil Prices - bernama | bernama | Wed, 18 Nov 2026 11:14 |
-| oil | Oil Prices Edge Up as Middle East Tensions Escalate; Brent Crude Up 0.76% in the $93 Range - 파이낸셜뉴스 | 파이낸셜뉴스 | Tue, 17 Nov 2026 21:36 |
-| oil | Oil prices fall as higher US crude stocks temper supply risks, World News - AsiaOne.com | AsiaOne.com | Wed, 18 Nov 2026 11:34 |
-| oil | Oil falls as higher US crude stocks temper supply risks - RTE.ie | RTE.ie | Wed, 18 Nov 2026 08:22 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-18 16:52 UTC | 23 new | 2500 total
+NEWS_DIGEST | 2026-11-18 18:11 UTC | 7 new | 2500 total
