@@ -1,19 +1,8 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 40,
+  "historical_runs_available": 41,
   "context_runs": 20,
   "recent_runs": [
-    {
-      "timestamp": "2026-11-02T17:42:27.562340+00:00",
-      "provider": "openrouter",
-      "model": "openrouter/free",
-      "regime": null,
-      "scenarios": "Bull / Base / Bear with probabilities:\n🟢 Bull: probability 0.45, target price 23,000 rial, time horizon Q2-Q3 1405\n  - Key triggers: global copper supply disruption or tightness, higher copper benchmark, higher realized sales price/margins for FMLI, fund-flow rotation toward large liquid commodity leaders, technical breakout or continuation, option convexity increases demand for calls\n  - Risk factors: copper price pullback, volume deterioration, broader market risk-off, sales growth rolls over for two consecutive releases, volume falls while revenue supported only by price, copper price breaks down materially and remains weak\n\n🟡 Base: probability 0.4, target price 21,500 rial, time horizon Q2 1405\n  - Key triggers: steady sales growth, maintained market leadership, stable commodity prices, controlled geopolitical tension\n  - Risk factors: sales growth slowdown, increased competition, currency volatility\n\n🔴 Bear: probability 0.15, target price 18,800 rial, time horizon Q1-Q2 1405\n  - Key triggers: copper price breakdown, volume collapse, real money flow deterioration\n  - Risk factors: global risk-off spread, commodity cycle peak, operational execution issues\n\nProbabilities sum to 1.0 (0.45 + 0.4 + 0.15 = 1.0)",
-      "market_implications": null,
-      "confidence": null,
-      "data_gaps": [],
-      "fingerprint": "19d8cb14b088d4b78d37"
-    },
     {
       "timestamp": "2026-11-03T12:28:21.849827+00:00",
       "provider": "openrouter",
@@ -1131,6 +1120,81 @@
       "confidence": "medium",
       "data_gaps": [],
       "fingerprint": "b53ccfd8c0e7824e7b6b"
+    },
+    {
+      "timestamp": "2026-11-17T18:47:41.844515+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "probability": 0.45,
+          "target": "فملی 23,000 / TEDPIX >8,500",
+          "catalysts": [
+            "Copper breakout >$4.80/lb (LME inventory draw)",
+            "Hormuz de-escalation / Qatar mediation success",
+            "Real-money net buying returns (Client Type recovery ≥3 sessions)",
+            "Fiscal relief: gasoline subsidy maintained, no VAT hike"
+          ],
+          "confirmation": [
+            "فملی closes >20,000 on expanding volume + real-money inflow",
+            "TEDPIX breadth >600 advancers",
+            "Equal-weight leads cap-weighted",
+            "Copper holds >$4.50/lb"
+          ],
+          "invalidation": [
+            "فملی <18,800 on volume",
+            "Copper <$4.00/lb",
+            "Real-money outflow accelerates",
+            "Hormuz closure / US-Iran kinetic conflict"
+          ]
+        },
+        "base": {
+          "probability": 0.4,
+          "target": "فملی 21,500 / TEDPIX 7,800-8,200",
+          "catalysts": [
+            "Steady sales growth 100%+ YoY",
+            "Stable copper $4.00-4.50",
+            "Managed FX regime (NIMA ~2.0-2.2M)",
+            "No new sanctions escalation"
+          ],
+          "confirmation": [
+            "فملی trades 19,400-21,500 with moderate volume",
+            "Fundamental growth >100% YoY",
+            "Breadth 450-550"
+          ],
+          "invalidation": [
+            "Sales growth <50% YoY for 2 quarters",
+            "Copper -20%",
+            "USD/IRR >2.3M"
+          ]
+        },
+        "bear": {
+          "probability": 0.15,
+          "target": "فملی 18,800 / TEDPIX <7,500",
+          "catalysts": [
+            "Copper breakdown <$3.50/lb",
+            "Volume collapse + breadth <300",
+            "Real-money outflow accelerates",
+            "US-Iran conflict / Hormuz closure",
+            "Gasoline hike → inflation spiral → rate hike"
+          ],
+          "confirmation": [
+            "فملی breaks <18,800 on expanding volume",
+            "Equal-weight leads down",
+            "Breadth <300"
+          ],
+          "invalidation": [
+            "Price rebounds >20,000 with volume",
+            "Fundamentals re-accelerate",
+            "Geopolitical de-escalation"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "59d5bb1f30b8038bafce"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."
