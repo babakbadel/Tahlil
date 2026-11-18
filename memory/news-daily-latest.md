@@ -1,10 +1,33 @@
-# Daily Economic News Digest — 2026-11-18 13:30 UTC
+# Daily Economic News Digest — 2026-11-18 16:52 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **67** · Total stored: **2500**
+> New items this run: **23** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| oil | Lower crude oil prices could bring huge windfall for India in FY28: CEA - Business Standard | Business Standard | Wed, 18 Nov 2026 16:14 |
+| oil | Oil prices fall as higher US crude stocks temper supply risks - The Edge Malaysia | The Edge Malaysia | Wed, 18 Nov 2026 03:28 |
+| oil | Global crude oil prices show mixed trend - News On AIR | News On AIR | Wed, 18 Nov 2026 13:59 |
+| oil | Rubber Market Ends Lower, Tracking Losses In Regional Futures, Crude Oil Prices - Bernama | Bernama | Wed, 18 Nov 2026 11:14 |
+| oil | Oil Prices Today: Brent Near $93 on US Stockbuild - Markets.com | Markets.com | Tue, 17 Nov 2026 16:01 |
+| oil | Crude Oil Prices Lower On Concerns Over Excess Supply - MarketForces Africa | MarketForces Africa | Wed, 18 Nov 2026 08:01 |
+| oil | Oil prices fall as higher U.S. crude stocks temper supply risks - The Globe and Mail | The Globe and Mail | Wed, 18 Nov 2026 10:15 |
+| oil | Oil News: Crude Oil Falls as Traders Weigh Inventory Data and Middle East Risks - FXEmpire | FXEmpire | Wed, 18 Nov 2026 16:36 |
+| oil | Crude Oil Price Forecast: WTI Faces $80 Test Ahead of EIA Report - FXEmpire | FXEmpire | Wed, 18 Nov 2026 14:20 |
+| oil | Oil down 1% as US oil stocks post larger-than-expected rise, EIA says - Reuters | Reuters | Wed, 18 Nov 2026 02:16 |
+| oil | Oil Prices Fall Amid Supply Surplus Expectations, Middle East Tensions - WSJ | WSJ | Wed, 18 Nov 2026 13:45 |
+| oil | Oil prices in limbo between higher US crude stocks and supply risks By Reuters - Investing.com | Investing.com | Wed, 18 Nov 2026 02:21 |
+| geopolitics | Crude oil exports through the Strait of Hormuz hit prewar levels, but fuel shipments remain constrained - CNBC | CNBC | Wed, 30 Sep 2026 07:00 |
+| geopolitics | Is Iran losing its leverage over the Strait of Hormuz? - Al Jazeera | Al Jazeera | Wed, 30 Sep 2026 07:00 |
+| geopolitics | More Oil, Same War: Why Increased Exports Aren’t a Sign of Iran’s Imminent Defeat - Council on Foreign Relations | Council on Foreign Relations | Mon, 05 Oct 2026 07:00 |
+| geopolitics | US tightens Iran blockade with curbs on oil transfers at sea, advisory shows - Reuters | Reuters | Wed, 18 Nov 2026 16:35 |
+| geopolitics | ‘Status quo’ between US and Iran could break out into war, analysts warn - Al Jazeera | Al Jazeera | Wed, 18 Nov 2026 14:40 |
+| geopolitics | Can the US and Iran sustain a ‘frozen war’? - Al Jazeera | Al Jazeera | Wed, 18 Nov 2026 14:15 |
+| geopolitics | Kuwait says it repelled first Iranian attack in two months after US strikes island - BBC | BBC | Wed, 18 Nov 2026 13:04 |
+| oil | قیمت نفت امروز ۲۷ آبان ۱۴۰۵ │ برنت کمتر افت کرد؛ افزایش ذخایر آمریکا فشار بیشتری به نفت تگزاس آورد - vista.ir | vista.ir | Wed, 18 Nov 2026 10:20 |
+| macro_monetary | صمصامی: علت اصلی افزایش تورم رشد نرخ ارز است / آخرین خبر - vista.ir | vista.ir | Wed, 18 Nov 2026 08:10 |
+| macro_monetary | همتی از مهار تورم و کنترل نقدینگی می گوید / پس چرا فشار اقتص/رکنا - خبرپو | خبرپو | Tue, 17 Nov 2026 07:15 |
+| macro_monetary | مهار افزایش رشد نقدینگی در سایه ابهام آماری - vista.ir | vista.ir | Wed, 18 Nov 2026 15:11 |
 | macro_monetary | Gas pump price hits 8-month low to ease inflation worries - Transport Topics | Transport Topics | Tue, 17 Nov 2026 13:41 |
 | macro_monetary | Petrol restrictions spark public anger, fears of rising prices in Iran - Iran International | Iran International | Sun, 15 Nov 2026 09:55 |
 | oil | Stock markets climb in early trade on foreign fund inflows, fall in crude oil prices - DD News | DD News | Tue, 17 Nov 2026 04:59 |
@@ -22,33 +45,10 @@
 | oil | Oil Prices Edge Up as Middle East Tensions Escalate; Brent Crude Up 0.76% in the $93 Range - 파이낸셜뉴스 | 파이낸셜뉴스 | Tue, 17 Nov 2026 21:36 |
 | oil | Oil prices fall as higher US crude stocks temper supply risks, World News - AsiaOne.com | AsiaOne.com | Wed, 18 Nov 2026 11:34 |
 | oil | Oil falls as higher US crude stocks temper supply risks - RTE.ie | RTE.ie | Wed, 18 Nov 2026 08:22 |
-| oil | Crude Oil Prices Edge Higher on Tanker Attacks, US Stockpile Outlook / - Business Post Nigeria | Business Post Nigeria | Wed, 18 Nov 2026 04:47 |
-| oil | Oil Falls as U.S. Crude Stockpiles Surge 5.28 Million Barrels; Strait of Hormuz Risk Underpins Prices - BigGo Finance | BigGo Finance | Wed, 18 Nov 2026 04:05 |
-| oil | U.S.-Iran Exchange of Fire Keeps Oil Prices Afloat; Strait of Hormuz Risk Unresolved as API Inventory Surge of 5.3 Milli | BigGo Finance | Wed, 18 Nov 2026 03:05 |
-| oil | Shafaq News..Basrah crude prices sink amid global oil decline - شفق نيوز | شفق نيوز | Wed, 18 Nov 2026 06:23 |
-| oil | Crude oil prices fall as US inventories temper supply risks; Brent slips below $93, WTI near $83 - Moneycontrol.com | Moneycontrol.com | Wed, 18 Nov 2026 04:10 |
-| oil | Oil Prices - 17/11/26 - Armenpress | Armenpress | Wed, 18 Nov 2026 05:07 |
-| oil | Shafaq News..Oil dips on US crude build against Hormuz threats - شفق نيوز | شفق نيوز | Wed, 18 Nov 2026 05:18 |
-| oil | Oil edges up on tanker attacks, expected US crude drop - Reuters | Reuters | Tue, 17 Nov 2026 01:37 |
-| oil | Crude Oil Falls as US Stockpiles Rise, Hormuz Risks Persist - HDFC Sky | HDFC Sky | Wed, 18 Nov 2026 04:40 |
-| oil | Oil prices fall as higher US crude stocks temper supply risks - アラブニュース | アラブニュース | Wed, 18 Nov 2026 09:07 |
-| oil | Oil Prices Fall Sharply as U.S. Crude Inventories Rise, Overshadowing Middle East Supply Risks - EnergyNow.com | EnergyNow.com | Wed, 18 Nov 2026 11:31 |
-| oil | Current price of oil as of November 18, 2026 - Fortune | Fortune | Wed, 18 Nov 2026 11:45 |
-| oil | Oil Futures Rise as Middle East Shipping Risks Persist - WSJ | WSJ | Tue, 17 Nov 2026 20:44 |
-| oil | Oil prices fall as higher US crude stocks temper supply risks - Reuters | Reuters | Wed, 18 Nov 2026 02:16 |
-| oil | U.S. Opens New Front in Campaign to Cut Off Iran's Supply Routes - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 17 Nov 2026 14:30 |
-| oil | Russian Crude Exports Hit Four-Month High - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 17 Nov 2026 17:30 |
-| oil | Oil Prices Drop Despite Escalating U.S.-Iran Conflict - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 18 Nov 2026 05:55 |
-| oil | Democrats Target Trump's $100 Billion Venezuela Oil Deal - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 17 Nov 2026 17:00 |
-| oil | API Shows Substantial Crude Oil, Gasoline Inventory Builds - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 17 Nov 2026 21:58 |
-| oil | 5 Oil and Gas Stocks That Crushed Third-Quarter Earnings Estimates - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 18 Nov 2026 01:00 |
-| oil | Oil prices fall as higher US crude stocks temper supply risks By Reuters - Investing.com | Investing.com | Wed, 18 Nov 2026 02:21 |
-| geopolitics | US strikes Iran’s Qeshm island in Strait of Hormuz after Guards target Bahrain - The Straits Times | The Straits Times | Tue, 17 Nov 2026 21:11 |
-| geopolitics | Oil edges up on tanker attacks, expected U.S. crude drop - CNBC | CNBC | Tue, 17 Nov 2026 01:43 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-18 13:30 UTC | 67 new | 2500 total
+NEWS_DIGEST | 2026-11-18 16:52 UTC | 23 new | 2500 total
