@@ -1,10 +1,32 @@
-# Daily Economic News Digest — 2026-11-19 16:58 UTC
+# Daily Economic News Digest — 2026-11-19 18:24 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **17** · Total stored: **2500**
+> New items this run: **22** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | Even if the Iran war ended today, US fuel prices aren’t likely to normalize this year - The Guardian | The Guardian | Sat, 23 May 2026 07:00 |
+| macro_monetary | Paying at the Pump: A Timeline of US Gas Prices - History.com | History.com | Wed, 13 May 2026 07:00 |
+| macro_monetary | Iran gasoline price hike risks more public unrest - DW.com | DW.com | Sat, 29 Nov 2025 08:00 |
+| macro_monetary | Iran's currency plummets to new low, sparking fears of higher food prices - PBS | PBS | Mon, 15 Dec 2025 08:00 |
+| macro_monetary | Inflation tops 4% for the first time in 3 years on spike in gasoline prices - NPR | NPR | Wed, 10 Jun 2026 07:00 |
+| macro_monetary | Gas Prices Are Rising—and So Are the Iran War Stakes for Trump - Bloomberg.com | Bloomberg.com | Mon, 09 Mar 2026 07:00 |
+| macro_monetary | U.S. gasoline prices rise 50% since the start of the Iran war - PBS | PBS | Tue, 05 May 2026 07:00 |
+| macro_monetary | Experts analyze what the Iran war could mean for U.S. gasoline prices - PBS | PBS | Wed, 04 Mar 2026 08:00 |
+| macro_monetary | Spain sets out $5.8 billion support package to counter Iran war's impact - Reuters | Reuters | Fri, 20 Mar 2026 07:00 |
+| oil | Gas prices fall below $4-a-gallon ahead of Thanksiving — as oil continues to flow from Persian Gulf - New York Post | New York Post | Wed, 18 Nov 2026 22:00 |
+| oil | Oil Prices Steady as Hormuz Tanker Threats Offset Supply Glut Fears - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 19 Nov 2026 06:00 |
+| oil | Oil Prices Edge Higher as Middle East Shipping Attacks Counter Growing Global Supply Surplus - EnergyNow.com | EnergyNow.com | Thu, 19 Nov 2026 11:30 |
+| oil | Google Signs Landmark Superhot Geothermal Deal - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 19 Nov 2026 00:00 |
+| oil | Inside the Army's 75 Year Plan to Escape China's Rare Earth Dominance - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 19 Nov 2026 02:00 |
+| geopolitics | ‘Status Quo’ With Iran Is a Dangerous Delusion - The American Conservative | The American Conservative | Thu, 19 Nov 2026 05:03 |
+| geopolitics | U.S. launches strikes on Iran's Qeshm Island in Strait of Hormuz - CBS News | CBS News | Tue, 17 Nov 2026 23:59 |
+| geopolitics | Why Oil Prices Are Falling Despite Strait Of Hormuz Risks - Forbes | Forbes | Thu, 19 Nov 2026 15:26 |
+| fx | Licensable video: Iran's currency hit a new all-time low - Reuters Connect | Reuters Connect | Wed, 30 Sep 2026 07:00 |
+| bourse | Tehran Stock Exchange: The end of an illusion - Al-Monitor | Al-Monitor | Fri, 19 Mar 2021 13:57 |
+| oil | نفت زیر فشار مازاد عرضه و افت تقاضای چین؛ تنگه هرمز تنها امید بازار؟ - vista.ir | vista.ir | Thu, 19 Nov 2026 07:44 |
+| macro_monetary | خداحافظی بانک‌ها با پول ارزان!/کیان آنلاین - خبرپو | خبرپو | Thu, 19 Nov 2026 07:10 |
+| kamandar_bourse | - کمان دار | کمان دار | Tue, 08 Sep 2026 21:48 |
 | macro_monetary | The U.S. economy before and after the Iran war, in five charts - NBC News | NBC News | Wed, 23 Sep 2026 07:00 |
 | macro_monetary | Rising gas prices frustrate voters. Trump says it's an 'inexpensive price to pay' for the Iran war - PBS | PBS | Mon, 21 Sep 2026 07:00 |
 | oil | Oil Prices Fall Over 1% as US Crude Inventories Rise - Business Post Nigeria | Business Post Nigeria | Thu, 19 Nov 2026 04:23 |
@@ -23,32 +45,10 @@
 | macro_monetary | مهار تورم با ابزارهای تعهدی؛ کنترل نقدینگی بدون محدود کردن تولید - تیتر کوتاه | تیتر کوتاه | Thu, 19 Nov 2026 14:40 |
 | oil | Oil prices fall as higher US crude stocks temper supply risks, Money News - AsiaOne.com | AsiaOne.com | Wed, 18 Nov 2026 11:34 |
 | oil | Oil prices steady as Middle East shipping attacks counter supply surplus outlook - Investify | Investify | Thu, 19 Nov 2026 05:33 |
-| oil | Global crude oil prices trading with gains - News On AIR | News On AIR | Thu, 19 Nov 2026 13:49 |
-| oil | Oil Prices Fall Sharply as U.S. Crude Inventories Rise, Overshadowing Middle East Supply Risks - EnergyNow | EnergyNow | Wed, 18 Nov 2026 11:31 |
-| oil | Oil prices settle lower as traders weigh surplus supply outlook - The Business Times | The Business Times | Wed, 18 Nov 2026 22:01 |
-| oil | Drilling for Yield in the Gulf: Chevron Drops Anchor in Deepwater - TradingView | TradingView | Wed, 18 Nov 2026 20:50 |
-| oil | Brent tops $106 after deadly Saudi airport attack, Ukraine says Russia violated energy ceasefire - CNBC | CNBC | Sun, 11 Oct 2026 07:00 |
-| oil | Oil steady as supply surplus softens sentiment though Gulf war supports - Business Standard | Business Standard | Thu, 19 Nov 2026 04:44 |
-| oil | Trump Reportedly Weighing New Military Strike on Iran; Global Oil Prices Halt Slide and Rebound - BigGo Finance | BigGo Finance | Thu, 19 Nov 2026 03:05 |
-| oil | Oil Prices with Hormuz Tensions and Rising Supply - Inspenet | Inspenet | Tue, 17 Nov 2026 19:28 |
-| oil | Crude oil prices steady after sharp fall; Brent hovers near $92, WTI at $82 as supply surplus softens... - Moneycontrol. | Moneycontrol.com | Thu, 19 Nov 2026 04:23 |
-| oil | Oil falls on Nov 18 as US crude stocks rise by 3.4m barrels - Nation Thailand | Nation Thailand | Thu, 19 Nov 2026 00:06 |
-| oil | Natural Gas, WTI Oil, Brent Oil Forecasts – Oil Retreats As Traders Focus On Hawkish Interest Rate Outlook - FXEmpire | FXEmpire | Thu, 19 Nov 2026 03:04 |
-| oil | U.S. oil price slides as data shows larger-than-expected increases in crude, gasoline stocks - TradingView | TradingView | Thu, 19 Nov 2026 00:47 |
-| oil | Oil Prices Stabilize After Monday’s Sharp Selloff as Global Supply Surplus Offsets Middle East Tanker Risks - EnergyNow. | EnergyNow.com | Tue, 17 Nov 2026 11:33 |
-| oil | Brent Crude Falls to $91.70, WTI Drops 0.7% - HDFC Sky | HDFC Sky | Thu, 19 Nov 2026 04:41 |
-| oil | Oil prices steady as Middle East shipping attacks counter supply surplus outlook - Arab News | Arab News | Thu, 19 Nov 2026 07:07 |
-| oil | Oil Prices Down - 18/11/26 - Armenpress | Armenpress | Thu, 19 Nov 2026 05:13 |
-| oil | Recovering regional exports put pressure on Brent crude oil as supply picture shifts - Traders Union | Traders Union | Wed, 18 Nov 2026 19:08 |
-| oil | Oil prices fall as larger U.S. inventory build reinforces global supply concerns - Oil & Gas 360 | Oil & Gas 360 | Wed, 18 Nov 2026 17:47 |
-| oil | Natural Gas and Oil Forecast: Oil Steadies After Big US Stock Builds, Can WTI Hold $81.13? - FXEmpire | FXEmpire | Thu, 19 Nov 2026 10:14 |
-| oil | Crude oil price today: Brent futures rise despite increase in US oil inventories - BusinessLine | BusinessLine | Thu, 19 Nov 2026 04:11 |
-| oil | Crude Oil Forecast: WTI Struggles as US Inventories Rise - FXEmpire | FXEmpire | Thu, 19 Nov 2026 13:31 |
-| oil | Oil News: WTI and Brent Steady as Surplus Outlook Meets Shipping Risks - FXEmpire | FXEmpire | Thu, 19 Nov 2026 10:13 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-19 16:58 UTC | 17 new | 2500 total
+NEWS_DIGEST | 2026-11-19 18:24 UTC | 22 new | 2500 total
