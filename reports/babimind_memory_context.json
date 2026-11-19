@@ -1,79 +1,8 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 43,
+  "historical_runs_available": 44,
   "context_runs": 20,
   "recent_runs": [
-    {
-      "timestamp": "2026-11-03T17:15:23.429334+00:00",
-      "provider": "openrouter",
-      "model": "openrouter/free",
-      "regime": null,
-      "scenarios": {
-        "bull": {
-          "probability": 0.4,
-          "catalysts": [
-            "Copper supply disruption → higher realized prices",
-            "فملی sales volume sustains >200% YoY",
-            "Rial weakness boosts exporter margins",
-            "Equal-weight leadership persists",
-            "Geopolitical de-escalation (Hormuz)"
-          ],
-          "confirmation": [
-            "فملی pulls back to 22,000-24,000 with volume support",
-            "Real-money inflow returns (if Client Type recovers)",
-            "Copper holds >$4.50/lb"
-          ],
-          "invalidation": [
-            "Price rises while real-money flow deteriorates",
-            "Sales growth rolls over 2 consecutive quarters",
-            "Copper breaks <$4.00/lb"
-          ]
-        },
-        "base": {
-          "probability": 0.35,
-          "catalysts": [
-            "Steady sales growth 100%+ YoY",
-            "Stable copper $4.00-4.50",
-            "Controlled geopolitical tension",
-            "FX regime managed"
-          ],
-          "confirmation": [
-            "فملی trades 22,000-26,000 with moderate volume",
-            "Fundamental growth >100% YoY",
-            "No major sanctions escalation"
-          ],
-          "invalidation": [
-            "Sales growth slows <50% YoY",
-            "Geopolitical escalation (Hormuz/new sanctions)",
-            "Copper declines >20%"
-          ]
-        },
-        "bear": {
-          "probability": 0.25,
-          "catalysts": [
-            "Copper price breakdown <$3.50",
-            "Volume collapse",
-            "Real-money outflow accelerates",
-            "US-Iran conflict / Hormuz closure",
-            "Gasoline hike → inflation → rate hike"
-          ],
-          "confirmation": [
-            "فملی breaks <18,800 on expanding volume",
-            "Equal-weight index leads down",
-            "Industry relative strength deteriorates"
-          ],
-          "invalidation": [
-            "Price rebounds >20,000 with volume",
-            "Fundamentals re-accelerate",
-            "Geopolitical de-escalation"
-          ]
-        }
-      },
-      "market_implications": null,
-      "confidence": null,
-      "data_gaps": [],
-      "fingerprint": "cba221f4773e0aa3ce60"
-    },
     {
       "timestamp": "2026-11-04T12:40:50.666360+00:00",
       "provider": "openrouter",
@@ -1243,6 +1172,17 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "4a3af60bb00575a67b89"
+    },
+    {
+      "timestamp": "2026-11-19T13:56:40.961404+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {},
+      "market_implications": null,
+      "confidence": 75,
+      "data_gaps": [],
+      "fingerprint": "48f2bf677d9b82c916bb"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."

@@ -1,11 +1,11 @@
 {
   "model": "BabiMind",
-  "checked_at": "2026-11-19T13:54:21.482547+00:00",
+  "checked_at": "2026-11-19T16:57:47.395247+00:00",
   "summary": {
     "checked": 274,
-    "ok": 187,
-    "unavailable": 31,
-    "error": 56,
+    "ok": 186,
+    "unavailable": 30,
+    "error": 58,
     "data_sources": 65,
     "news_sources": 97,
     "news_iran": 29,
@@ -20,13 +20,13 @@
       "expanded": {
         "total": 112,
         "ok": 73,
-        "error": 25,
-        "unavailable": 14
+        "error": 26,
+        "unavailable": 13
       },
       "news": {
         "total": 97,
-        "ok": 74,
-        "error": 17,
+        "ok": 73,
+        "error": 18,
         "unavailable": 6
       }
     }
@@ -40,9 +40,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 204,
-      "latency_ms": 250.7,
+      "latency_ms": 322.9,
       "bytes_sampled": 0,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "IMF SDMX Central",
@@ -53,8 +53,8 @@
       "status": "error",
       "http_status": 400,
       "error": "HTTP Error 400: ",
-      "latency_ms": 647.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 647.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "World Bank API",
@@ -62,10 +62,11 @@
       "topic": "macro",
       "url": "https://api.worldbank.org/v2/country/IRN/indicator/NY.GDP.MKTP.CD?format=json&per_page=1",
       "source_class": "data",
-      "status": "unavailable",
-      "error": "The read operation timed out",
-      "latency_ms": 10090.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 7105.6,
+      "bytes_sampled": 309,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "BIS Statistics",
@@ -75,9 +76,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2881.4,
+      "latency_ms": 1071.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "OECD Data",
@@ -88,8 +89,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 108.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 209.9,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "FRED",
@@ -99,9 +100,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 217.0,
+      "latency_ms": 107.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "ECB Data API",
@@ -111,9 +112,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 9470.9,
+      "latency_ms": 982.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "EIA",
@@ -123,9 +124,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 310.6,
+      "latency_ms": 183.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "IEA Data",
@@ -136,8 +137,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 100.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 144.7,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "OPEC",
@@ -148,8 +149,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 115.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 100.3,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "JODI",
@@ -157,11 +158,10 @@
       "topic": "oil",
       "url": "https://www.jodidata.org/",
       "source_class": "data",
-      "status": "ok",
-      "http_status": 200,
-      "latency_ms": 658.9,
-      "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "status": "unavailable",
+      "error": "[Errno 104] Connection reset by peer",
+      "latency_ms": 618.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "USGS Minerals",
@@ -171,9 +171,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2680.6,
+      "latency_ms": 3677.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "World Gold Council",
@@ -183,9 +183,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 101.6,
+      "latency_ms": 145.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "LBMA",
@@ -195,9 +195,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1072.0,
+      "latency_ms": 1319.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "CFTC",
@@ -207,9 +207,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 139.1,
+      "latency_ms": 115.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "UN Comtrade",
@@ -220,8 +220,8 @@
       "status": "error",
       "http_status": 404,
       "error": "HTTP Error 404: Resource Not Found",
-      "latency_ms": 713.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 671.7,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "UNCTADstat",
@@ -231,9 +231,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 674.1,
+      "latency_ms": 1428.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "FAOSTAT",
@@ -243,9 +243,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 322.5,
+      "latency_ms": 286.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "ILOStat",
@@ -256,8 +256,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 96.9,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 117.0,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "WHO Data",
@@ -267,9 +267,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 194.3,
+      "latency_ms": 1163.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Reuters",
@@ -280,8 +280,8 @@
       "status": "error",
       "http_status": 401,
       "error": "HTTP Error 401: HTTP Forbidden",
-      "latency_ms": 304.6,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 144.9,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSE Official Gateway",
@@ -291,8 +291,8 @@
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 11832.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10362.7,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC CDN Market Watch",
@@ -302,9 +302,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 21122.8,
+      "latency_ms": 1115.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Instrument Search",
@@ -314,9 +314,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 21113.7,
+      "latency_ms": 1159.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Index",
@@ -326,9 +326,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 20867.6,
+      "latency_ms": 913.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Funds",
@@ -338,9 +338,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 20862.2,
+      "latency_ms": 899.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Client Type",
@@ -350,9 +350,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 20778.8,
+      "latency_ms": 830.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Market Overview",
@@ -362,9 +362,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 20727.6,
+      "latency_ms": 20661.7,
       "bytes_sampled": 467,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Codal Publisher",
@@ -375,8 +375,8 @@
       "status": "error",
       "http_status": 500,
       "error": "HTTP Error 500: Internal Server Error",
-      "latency_ms": 896.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 20987.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Messages",
@@ -386,9 +386,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1288.8,
+      "latency_ms": 21022.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Shareholders",
@@ -398,9 +398,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 10736.4,
+      "latency_ms": 10949.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Trade Top",
@@ -411,8 +411,8 @@
       "status": "error",
       "http_status": 500,
       "error": "HTTP Error 500: Internal Server Error",
-      "latency_ms": 10700.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 885.1,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TSETMC Price History",
@@ -422,9 +422,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 20843.0,
+      "latency_ms": 20724.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Codal",
@@ -434,8 +434,8 @@
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 10461.6,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10500.1,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Central Bank of Iran",
@@ -445,9 +445,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2268.5,
+      "latency_ms": 3388.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Statistical Center of Iran",
@@ -456,9 +456,9 @@
       "url": "https://www.amar.org.ir/",
       "source_class": "data",
       "status": "unavailable",
-      "error": "<urlopen error [Errno 104] Connection reset by peer>",
-      "latency_ms": 750.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1035)>",
+      "latency_ms": 799.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Mercantile Exchange",
@@ -468,8 +468,8 @@
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 10329.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10383.0,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Energy Exchange",
@@ -479,8 +479,8 @@
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.irenex.ir'. (_ssl.c:1035)>",
-      "latency_ms": 3886.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 1718.7,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Customs",
@@ -490,8 +490,8 @@
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error [Errno -3] Temporary failure in name resolution>",
-      "latency_ms": 10016.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10018.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Ministry of Industry Mine Trade",
@@ -501,8 +501,8 @@
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 10401.0,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10372.1,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Ministry of Petroleum",
@@ -512,9 +512,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1173.1,
+      "latency_ms": 965.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "SHANA",
@@ -524,9 +524,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1332.4,
+      "latency_ms": 1107.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Power Grid Management",
@@ -536,8 +536,8 @@
       "source_class": "data",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 10403.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10356.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Open Data",
@@ -547,9 +547,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 893.9,
+      "latency_ms": 1225.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "World Bank Iran",
@@ -559,9 +559,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 264.5,
+      "latency_ms": 379.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "IMF Iran",
@@ -571,9 +571,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 130.5,
+      "latency_ms": 82.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "UNData",
@@ -583,9 +583,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 273.3,
+      "latency_ms": 208.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "UNDP Data",
@@ -596,8 +596,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 334.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 291.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "FAO Iran",
@@ -607,9 +607,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 878.8,
+      "latency_ms": 403.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Energy Institute",
@@ -620,8 +620,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 191.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 124.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Shanghai Futures Exchange",
@@ -631,9 +631,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 3554.6,
+      "latency_ms": 1683.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "LME",
@@ -644,8 +644,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 80.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 95.1,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "CME Group",
@@ -655,8 +655,8 @@
       "source_class": "data",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 10105.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10149.7,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "ICE Markets",
@@ -666,9 +666,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 171.5,
+      "latency_ms": 211.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Nasdaq",
@@ -678,8 +678,8 @@
       "source_class": "data",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 10159.9,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10059.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "S&P Global",
@@ -690,8 +690,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 77.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 182.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Trading Economics",
@@ -701,9 +701,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 211.8,
+      "latency_ms": 137.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "CEIC Iran",
@@ -713,9 +713,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 482.9,
+      "latency_ms": 631.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Global Rates",
@@ -725,9 +725,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1247.0,
+      "latency_ms": 1463.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Investing Iran Markets",
@@ -738,8 +738,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 64.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 84.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Kpler",
@@ -749,9 +749,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 121.9,
+      "latency_ms": 128.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Vortexa",
@@ -761,9 +761,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 269.3,
+      "latency_ms": 302.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "MarineTraffic",
@@ -773,9 +773,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 62.3,
+      "latency_ms": 95.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Windy",
@@ -785,9 +785,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 193.4,
+      "latency_ms": 192.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Kamandar Market Report",
@@ -797,9 +797,9 @@
       "source_class": "data",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1321.5,
+      "latency_ms": 2974.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Tehran Stock Exchange",
@@ -809,8 +809,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 10331.9,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 13023.0,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Fara Bourse",
@@ -820,8 +820,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 20421.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 20376.5,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Ministry of Economic Affairs and Finance",
@@ -831,9 +831,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1097.1,
+      "latency_ms": 1243.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "National Iranian Oil Company",
@@ -843,9 +843,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 829.3,
+      "latency_ms": 936.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "National Iranian Gas Company",
@@ -855,8 +855,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 10864.5,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10986.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Ministry of Energy Iran",
@@ -866,8 +866,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 11149.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 11124.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Tax Administration",
@@ -877,8 +877,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 20336.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 20377.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Ports and Maritime Organization",
@@ -887,9 +887,9 @@
       "url": "https://www.pmo.ir/",
       "source_class": "expanded",
       "status": "unavailable",
-      "error": "<urlopen error timed out>",
-      "latency_ms": 17280.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "error": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+      "latency_ms": 10023.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Chamber of Commerce",
@@ -899,8 +899,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error [Errno -2] Name or service not known>",
-      "latency_ms": 216.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 156.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Chamber Research Center",
@@ -910,8 +910,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error [Errno -2] Name or service not known>",
-      "latency_ms": 212.5,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 152.0,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Sena",
@@ -921,8 +921,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 10457.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10505.7,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "WTO",
@@ -932,9 +932,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 245.1,
+      "latency_ms": 374.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "World Economic Forum",
@@ -945,8 +945,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 479.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 534.5,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Federal Reserve",
@@ -956,9 +956,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 125.1,
+      "latency_ms": 172.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "US Treasury",
@@ -968,9 +968,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 9230.7,
+      "latency_ms": 8297.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "BEA",
@@ -980,9 +980,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 215.1,
+      "latency_ms": 252.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "BLS",
@@ -993,8 +993,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 282.0,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 115.3,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "US Census Bureau",
@@ -1004,9 +1004,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 178.3,
+      "latency_ms": 320.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Eurostat",
@@ -1016,9 +1016,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 694.1,
+      "latency_ms": 616.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Bank of England",
@@ -1028,9 +1028,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 563.7,
+      "latency_ms": 401.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "ONS UK",
@@ -1040,9 +1040,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 389.9,
+      "latency_ms": 381.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Bank of Japan",
@@ -1052,9 +1052,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 511.3,
+      "latency_ms": 1108.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Japan Statistics Bureau",
@@ -1064,9 +1064,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 588.2,
+      "latency_ms": 459.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "PBOC",
@@ -1077,8 +1077,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 2661.2,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 2204.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "China National Bureau of Statistics",
@@ -1088,9 +1088,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 3391.2,
+      "latency_ms": 4806.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "China Customs",
@@ -1100,9 +1100,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2777.3,
+      "latency_ms": 1275.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "India RBI",
@@ -1112,9 +1112,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2017.7,
+      "latency_ms": 5522.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "India MOSPI",
@@ -1124,9 +1124,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1086.4,
+      "latency_ms": 1061.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Statistics Canada",
@@ -1136,9 +1136,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 194.7,
+      "latency_ms": 409.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Australian Bureau of Statistics",
@@ -1148,9 +1148,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 323.5,
+      "latency_ms": 374.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Swiss National Bank",
@@ -1160,9 +1160,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1040.5,
+      "latency_ms": 920.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Deutsche Bundesbank",
@@ -1172,9 +1172,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1086.9,
+      "latency_ms": 1045.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Banque de France",
@@ -1184,9 +1184,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2486.3,
+      "latency_ms": 1620.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "SAMA",
@@ -1196,9 +1196,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1673.2,
+      "latency_ms": 1577.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "UAE Central Bank",
@@ -1208,9 +1208,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1694.6,
+      "latency_ms": 2357.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Turkish Statistical Institute",
@@ -1220,8 +1220,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 11809.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 11893.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Central Bank of Turkey",
@@ -1231,9 +1231,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 3835.7,
+      "latency_ms": 3881.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Central Bank of Russia",
@@ -1243,9 +1243,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1257.2,
+      "latency_ms": 1440.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Rosstat",
@@ -1255,8 +1255,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1035)>",
-      "latency_ms": 1668.2,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 3278.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Argus Media",
@@ -1266,9 +1266,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 202,
-      "latency_ms": 101.4,
+      "latency_ms": 77.6,
       "bytes_sampled": 0,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "S&P Global Commodity Insights",
@@ -1279,8 +1279,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 169.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 42.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Platts",
@@ -1291,8 +1291,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 111.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 35.7,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "COMEX",
@@ -1302,8 +1302,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 10064.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10036.5,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "NYMEX",
@@ -1313,8 +1313,8 @@
       "source_class": "expanded",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 10063.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10034.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Genscape",
@@ -1325,8 +1325,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 126.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 112.1,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "OPIS",
@@ -1336,9 +1336,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 669.1,
+      "latency_ms": 203.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "EEX",
@@ -1348,9 +1348,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1718.2,
+      "latency_ms": 1587.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "ACER",
@@ -1360,9 +1360,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 4604.5,
+      "latency_ms": 2055.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "World Platinum Investment Council",
@@ -1372,9 +1372,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 933.2,
+      "latency_ms": 609.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Moody's",
@@ -1384,9 +1384,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 121.1,
+      "latency_ms": 134.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Fitch Ratings",
@@ -1396,9 +1396,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 236.2,
+      "latency_ms": 236.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Morningstar",
@@ -1409,8 +1409,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 277.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 129.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "MSCI",
@@ -1420,9 +1420,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 288.9,
+      "latency_ms": 109.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "NYSE",
@@ -1432,9 +1432,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 256.5,
+      "latency_ms": 223.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Cboe",
@@ -1444,9 +1444,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 251.7,
+      "latency_ms": 1756.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "DTCC",
@@ -1456,9 +1456,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 167.1,
+      "latency_ms": 235.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "SEC EDGAR",
@@ -1469,8 +1469,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 290.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 89.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "FINRA",
@@ -1480,9 +1480,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 152.7,
+      "latency_ms": 181.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "LSEG",
@@ -1492,9 +1492,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 227.8,
+      "latency_ms": 152.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "FactSet",
@@ -1504,9 +1504,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 178.9,
+      "latency_ms": 336.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "IISS",
@@ -1516,9 +1516,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 382.2,
+      "latency_ms": 410.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Brookings Institution",
@@ -1528,9 +1528,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 155.3,
+      "latency_ms": 153.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "RAND",
@@ -1541,8 +1541,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 2598.2,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 83.1,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Wilson Center",
@@ -1552,9 +1552,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 152.1,
+      "latency_ms": 101.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "ECFR",
@@ -1564,9 +1564,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 227.9,
+      "latency_ms": 322.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Bruegel",
@@ -1577,8 +1577,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 102.0,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 206.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Peterson Institute",
@@ -1588,9 +1588,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 178.6,
+      "latency_ms": 149.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Stimson Center",
@@ -1601,8 +1601,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 126.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 76.0,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Middle East Institute",
@@ -1612,9 +1612,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 374.9,
+      "latency_ms": 825.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Washington Institute",
@@ -1625,8 +1625,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 108.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 142.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Institute for the Study of War",
@@ -1637,8 +1637,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 74.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 79.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "ACLED",
@@ -1648,9 +1648,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 327.8,
+      "latency_ms": 390.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "UN Security Council",
@@ -1660,9 +1660,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 202,
-      "latency_ms": 396.3,
+      "latency_ms": 468.7,
       "bytes_sampled": 0,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "US State Department",
@@ -1673,8 +1673,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 228.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 359.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "US Treasury OFAC",
@@ -1682,10 +1682,11 @@
       "topic": "sanctions",
       "url": "https://ofac.treasury.gov/",
       "source_class": "expanded",
-      "status": "unavailable",
-      "error": "The read operation timed out",
-      "latency_ms": 10072.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "status": "ok",
+      "http_status": 200,
+      "latency_ms": 9106.4,
+      "bytes_sampled": 512,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "European Commission",
@@ -1695,9 +1696,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 359.4,
+      "latency_ms": 372.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "UK FCDO",
@@ -1707,9 +1708,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 648.4,
+      "latency_ms": 1788.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "NATO",
@@ -1719,9 +1720,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 195.3,
+      "latency_ms": 654.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "IAEA",
@@ -1732,8 +1733,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 122.9,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 197.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "OPCW",
@@ -1743,9 +1744,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 142.0,
+      "latency_ms": 134.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Reuters Markets",
@@ -1756,8 +1757,8 @@
       "status": "error",
       "http_status": 401,
       "error": "HTTP Error 401: HTTP Forbidden",
-      "latency_ms": 73.6,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 154.9,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Bloomberg Markets",
@@ -1768,8 +1769,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 152.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 236.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Associated Press",
@@ -1780,8 +1781,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 133.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 99.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "AFP",
@@ -1792,8 +1793,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 100.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 123.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "BBC",
@@ -1803,9 +1804,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 141.7,
+      "latency_ms": 1193.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Al Jazeera",
@@ -1815,9 +1816,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 180.6,
+      "latency_ms": 127.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "France 24",
@@ -1825,11 +1826,11 @@
       "topic": "events",
       "url": "https://www.france24.com/en/",
       "source_class": "expanded",
-      "status": "ok",
-      "http_status": 200,
-      "latency_ms": 161.9,
-      "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "status": "error",
+      "http_status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "latency_ms": 140.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Euronews",
@@ -1839,9 +1840,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 121.4,
+      "latency_ms": 266.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "DW",
@@ -1851,9 +1852,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 497.0,
+      "latency_ms": 542.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "South China Morning Post",
@@ -1863,9 +1864,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 75.6,
+      "latency_ms": 132.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Nikkei Asia",
@@ -1875,9 +1876,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 4008.5,
+      "latency_ms": 2508.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Arab News",
@@ -1888,8 +1889,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 92.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 93.1,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "The National",
@@ -1899,9 +1900,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 291.9,
+      "latency_ms": 197.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Al Arabiya",
@@ -1912,8 +1913,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 160.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 115.0,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Al Monitor",
@@ -1923,9 +1924,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 110.8,
+      "latency_ms": 145.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "OilPrice",
@@ -1935,9 +1936,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 191.6,
+      "latency_ms": 671.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Rigzone",
@@ -1947,9 +1948,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1089.6,
+      "latency_ms": 458.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Offshore Energy",
@@ -1959,9 +1960,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 233.6,
+      "latency_ms": 324.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Mining.com",
@@ -1972,8 +1973,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 111.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 95.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Kitco",
@@ -1983,9 +1984,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 256.3,
+      "latency_ms": 285.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "CoinDesk",
@@ -1996,8 +1997,8 @@
       "status": "error",
       "http_status": 429,
       "error": "HTTP Error 429: Too Many Requests",
-      "latency_ms": 135.0,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 126.3,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Foreign Affairs",
@@ -2007,9 +2008,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 114.8,
+      "latency_ms": 133.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Foreign Policy",
@@ -2019,9 +2020,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 127.4,
+      "latency_ms": 126.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "War on the Rocks",
@@ -2031,9 +2032,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 197.4,
+      "latency_ms": 410.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Council on Foreign Relations",
@@ -2043,9 +2044,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 168.8,
+      "latency_ms": 133.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Carnegie Endowment",
@@ -2055,9 +2056,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 120.0,
+      "latency_ms": 61.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Chatham House",
@@ -2068,8 +2069,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 101.6,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 94.9,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Atlantic Council",
@@ -2079,9 +2080,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 150.8,
+      "latency_ms": 241.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "International Crisis Group",
@@ -2092,8 +2093,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 91.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 62.9,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "CSIS",
@@ -2103,9 +2104,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 125.7,
+      "latency_ms": 213.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "RUSI",
@@ -2115,9 +2116,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 185.1,
+      "latency_ms": 2798.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Kamandar",
@@ -2128,9 +2129,9 @@
       "source_class": "expanded",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1346.3,
+      "latency_ms": 1260.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "IRNA",
@@ -2142,9 +2143,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 999.0,
+      "latency_ms": 701.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "ISNA",
@@ -2156,9 +2157,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 998.2,
+      "latency_ms": 938.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Mehr News",
@@ -2170,9 +2171,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1025.6,
+      "latency_ms": 1108.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Tasnim",
@@ -2184,8 +2185,8 @@
       "region": "iran",
       "status": "unavailable",
       "error": "<urlopen error [Errno -2] Name or service not known>",
-      "latency_ms": 31.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 81.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Fars",
@@ -2197,8 +2198,8 @@
       "region": "iran",
       "status": "unavailable",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.farsnews.ir'. (_ssl.c:1035)>",
-      "latency_ms": 984.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 800.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "YJC",
@@ -2210,9 +2211,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1430.2,
+      "latency_ms": 1560.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "PANA",
@@ -2224,9 +2225,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1102.3,
+      "latency_ms": 1161.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "IMNA",
@@ -2238,9 +2239,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2082.6,
+      "latency_ms": 2352.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Shabestan",
@@ -2252,8 +2253,8 @@
       "region": "iran",
       "status": "unavailable",
       "error": "<urlopen error timed out>",
-      "latency_ms": 10598.5,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10505.8,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "SNN",
@@ -2265,9 +2266,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1188.1,
+      "latency_ms": 1263.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Donya-e-Eqtesad",
@@ -2279,9 +2280,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 916.3,
+      "latency_ms": 3250.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Eghtesad Online",
@@ -2293,9 +2294,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 960.6,
+      "latency_ms": 850.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "EcoIran",
@@ -2307,9 +2308,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 990.4,
+      "latency_ms": 1567.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Tejarat News",
@@ -2321,9 +2322,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 877.1,
+      "latency_ms": 834.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Eghtesad News",
@@ -2335,9 +2336,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1439.5,
+      "latency_ms": 1659.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Bourse News",
@@ -2349,9 +2350,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1083.2,
+      "latency_ms": 957.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Bourse24",
@@ -2363,9 +2364,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1414.5,
+      "latency_ms": 1483.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Sedaye Bourse",
@@ -2377,9 +2378,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2119.0,
+      "latency_ms": 2181.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Iran Economist",
@@ -2391,9 +2392,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1115.7,
+      "latency_ms": 1726.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Khabar Online",
@@ -2405,9 +2406,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2100.3,
+      "latency_ms": 2285.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Tabnak",
@@ -2419,9 +2420,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 4001.2,
+      "latency_ms": 2454.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Entekhab",
@@ -2433,9 +2434,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1968.2,
+      "latency_ms": 2480.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Fararu",
@@ -2447,9 +2448,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1115.0,
+      "latency_ms": 2990.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Asr Iran",
@@ -2461,9 +2462,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 918.6,
+      "latency_ms": 846.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Alef",
@@ -2475,8 +2476,8 @@
       "region": "iran",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 10624.5,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10829.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Mashregh News",
@@ -2488,9 +2489,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2049.1,
+      "latency_ms": 2329.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Raja News",
@@ -2502,8 +2503,8 @@
       "region": "iran",
       "status": "unavailable",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1035)>",
-      "latency_ms": 646.0,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 601.5,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Aftab News",
@@ -2515,9 +2516,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1190.4,
+      "latency_ms": 1126.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Hamshahri Online",
@@ -2529,9 +2530,9 @@
       "region": "iran",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1892.0,
+      "latency_ms": 1754.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "CNN",
@@ -2543,9 +2544,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 105.4,
+      "latency_ms": 78.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "France 24",
@@ -2557,9 +2558,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 182.8,
+      "latency_ms": 157.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "DW",
@@ -2571,9 +2572,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 46.2,
+      "latency_ms": 31.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Sky News",
@@ -2586,8 +2587,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 158.2,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 111.5,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Bloomberg",
@@ -2600,8 +2601,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 113.2,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 121.9,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Financial Times",
@@ -2614,8 +2615,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 123.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 146.5,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Wall Street Journal",
@@ -2628,8 +2629,8 @@
       "status": "error",
       "http_status": 401,
       "error": "HTTP Error 401: HTTP Forbidden",
-      "latency_ms": 99.6,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 268.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "CNBC",
@@ -2641,9 +2642,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 98.7,
+      "latency_ms": 216.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "MarketWatch",
@@ -2656,8 +2657,8 @@
       "status": "error",
       "http_status": 401,
       "error": "HTTP Error 401: HTTP Forbidden",
-      "latency_ms": 126.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 206.5,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Barron's",
@@ -2670,8 +2671,8 @@
       "status": "error",
       "http_status": 401,
       "error": "HTTP Error 401: HTTP Forbidden",
-      "latency_ms": 186.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 231.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "The Economist",
@@ -2684,8 +2685,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 129.9,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 137.7,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Forbes",
@@ -2698,8 +2699,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 92.4,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 96.3,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Business Insider",
@@ -2711,9 +2712,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 96.8,
+      "latency_ms": 406.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Fortune",
@@ -2725,9 +2726,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 87.8,
+      "latency_ms": 88.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "New York Times",
@@ -2740,8 +2741,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 210.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 147.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Washington Post",
@@ -2753,8 +2754,8 @@
       "region": "international",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "latency_ms": 10147.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 10120.4,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "NBC News",
@@ -2766,9 +2767,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 120.6,
+      "latency_ms": 341.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "ABC News",
@@ -2780,9 +2781,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 256.6,
+      "latency_ms": 472.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "CBS News",
@@ -2794,9 +2795,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 88.8,
+      "latency_ms": 182.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "NPR",
@@ -2808,9 +2809,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 129.3,
+      "latency_ms": 119.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "PBS NewsHour",
@@ -2822,9 +2823,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 389.2,
+      "latency_ms": 814.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Politico",
@@ -2837,8 +2838,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 68.6,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 107.2,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Axios",
@@ -2851,8 +2852,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 122.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 91.7,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "The Hill",
@@ -2865,8 +2866,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 139.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 141.3,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "The Guardian",
@@ -2878,9 +2879,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 94.7,
+      "latency_ms": 219.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "The Telegraph",
@@ -2892,9 +2893,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 403.9,
+      "latency_ms": 506.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "The Times UK",
@@ -2906,9 +2907,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1292.8,
+      "latency_ms": 1234.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Der Spiegel",
@@ -2920,9 +2921,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 748.7,
+      "latency_ms": 724.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Die Zeit",
@@ -2935,8 +2936,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: ",
-      "latency_ms": 216.8,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 276.0,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Le Monde",
@@ -2948,9 +2949,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 381.6,
+      "latency_ms": 297.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Les Echos",
@@ -2963,8 +2964,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 128.0,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 305.9,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "La Tribune",
@@ -2976,9 +2977,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 131.3,
+      "latency_ms": 509.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "El Pais",
@@ -2988,11 +2989,11 @@
       "tier": "B",
       "source_class": "news",
       "region": "international",
-      "status": "ok",
-      "http_status": 200,
-      "latency_ms": 363.6,
-      "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "status": "error",
+      "http_status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "latency_ms": 146.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "TASS",
@@ -3004,9 +3005,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 822.6,
+      "latency_ms": 2346.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "RIA Novosti",
@@ -3018,9 +3019,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 2273.1,
+      "latency_ms": 1941.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Interfax",
@@ -3032,9 +3033,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1039.1,
+      "latency_ms": 1837.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "RT",
@@ -3046,9 +3047,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 3041.0,
+      "latency_ms": 3277.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "The Moscow Times",
@@ -3060,9 +3061,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 319.3,
+      "latency_ms": 1398.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Middle East Eye",
@@ -3074,9 +3075,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 140.8,
+      "latency_ms": 244.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Middle East Monitor",
@@ -3088,9 +3089,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 471.5,
+      "latency_ms": 512.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Asharq Al-Awsat",
@@ -3102,9 +3103,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 198.2,
+      "latency_ms": 866.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Defense News",
@@ -3116,9 +3117,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1011.1,
+      "latency_ms": 129.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Breaking Defense",
@@ -3130,9 +3131,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 116.2,
+      "latency_ms": 562.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Jerusalem Post",
@@ -3144,9 +3145,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 102.2,
+      "latency_ms": 118.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "China Daily",
@@ -3158,9 +3159,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 3316.5,
+      "latency_ms": 861.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Global Times",
@@ -3172,9 +3173,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1397.4,
+      "latency_ms": 1369.5,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Xinhua",
@@ -3186,9 +3187,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1121.1,
+      "latency_ms": 1843.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Japan Times",
@@ -3200,9 +3201,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 351.5,
+      "latency_ms": 424.8,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "NHK World",
@@ -3214,9 +3215,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 362.2,
+      "latency_ms": 500.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Times of India",
@@ -3228,9 +3229,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 454.7,
+      "latency_ms": 533.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Hindustan Times",
@@ -3242,9 +3243,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 102.7,
+      "latency_ms": 471.2,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Indian Express",
@@ -3257,8 +3258,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 77.7,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 58.1,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Economic Times India",
@@ -3270,9 +3271,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 483.8,
+      "latency_ms": 333.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Channel NewsAsia",
@@ -3284,9 +3285,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 161.2,
+      "latency_ms": 216.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Straits Times",
@@ -3298,9 +3299,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 573.8,
+      "latency_ms": 519.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Korea Herald",
@@ -3312,9 +3313,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 997.2,
+      "latency_ms": 1289.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Yonhap",
@@ -3326,9 +3327,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 1138.1,
+      "latency_ms": 934.6,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Africanews",
@@ -3340,9 +3341,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 222.4,
+      "latency_ms": 263.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "News24",
@@ -3354,9 +3355,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 193.2,
+      "latency_ms": 128.0,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Daily Maverick",
@@ -3368,9 +3369,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 127.2,
+      "latency_ms": 139.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "The EastAfrican",
@@ -3383,8 +3384,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 635.3,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 327.1,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Brazil Journal",
@@ -3396,9 +3397,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 477.7,
+      "latency_ms": 551.1,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Folha de S.Paulo",
@@ -3410,9 +3411,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 956.5,
+      "latency_ms": 783.9,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "Clarin",
@@ -3424,9 +3425,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 194.0,
+      "latency_ms": 142.4,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "La Nacion Argentina",
@@ -3438,9 +3439,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 382.6,
+      "latency_ms": 370.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "El Comercio Peru",
@@ -3452,9 +3453,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 338.9,
+      "latency_ms": 286.7,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "El Universal Mexico",
@@ -3466,9 +3467,9 @@
       "region": "international",
       "status": "ok",
       "http_status": 200,
-      "latency_ms": 233.1,
+      "latency_ms": 206.3,
       "bytes_sampled": 512,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     },
     {
       "name": "The Block",
@@ -3481,8 +3482,8 @@
       "status": "error",
       "http_status": 403,
       "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 111.1,
-      "checked_at": "2026-11-19T13:54:21.482547+00:00"
+      "latency_ms": 73.6,
+      "checked_at": "2026-11-19T16:57:47.395247+00:00"
     }
   ]
 }
