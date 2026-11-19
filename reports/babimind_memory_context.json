@@ -1,19 +1,8 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 42,
+  "historical_runs_available": 43,
   "context_runs": 20,
   "recent_runs": [
-    {
-      "timestamp": "2026-11-03T15:46:13.267370+00:00",
-      "provider": "openrouter",
-      "model": "openrouter/free",
-      "regime": null,
-      "scenarios": "Bull / Base / Bear with probabilities:\n- 🟢 Bull: probability 0.45, target price 23,000 rial, time horizon Q2-Q3 1405\n  * Key triggers: global copper supply disruption, higher copper benchmark, higher realized sales price/margins, fund-flow rotation to commodity leaders, technical breakout/continuation, option convexity increases demand for calls\n  * Risk factors: copper price pullback, volume deterioration, broader market risk-off, sales growth rolls over for two consecutive releases, volume falls while revenue supported only by price, copper price breaks down materially and remains weak\n- 🟡 Base: probability 0.4, target price 21,500 rial, time horizon Q2 1405\n  * Key triggers: steady sales growth, maintained market leadership, stable commodity prices\n  * Risk factors: sales growth slowdown, increased competition, currency volatility\n- 🔴 Bear: probability 0.15, target price 18,800 rial, time horizon Q1-Q2 1405\n  * Key triggers: copper price breakdown, volume collapse, real money flow deterioration\n  * Risk factors: global risk-off spread, commodity cycle peak, operational execution issues\n- Probabilities sum to 1.0 (0.45 + 0.4 + 0.15 = 1.0)\n- Confidence: 🟡 medium (insufficient evidence lowers confidence rather than fabricating precision)",
-      "market_implications": null,
-      "confidence": null,
-      "data_gaps": [],
-      "fingerprint": "dd57179bf4f578d4e6e1"
-    },
     {
       "timestamp": "2026-11-03T17:15:23.429334+00:00",
       "provider": "openrouter",
@@ -1184,6 +1173,76 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "67307b05a55649783275"
+    },
+    {
+      "timestamp": "2026-11-18T18:14:28.777251+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "probabilities_sum": 1.0,
+        "bull": {
+          "prob": 0.3,
+          "label": "🟢",
+          "catalysts": [
+            "بازگشت پایدار پول حقیقی ≥۲–۳ جلسه",
+            "تثبیت برنت ≥$۹۰ و کاهش ریسک ژئوپلیتیک",
+            "ادامهٔ تاب‌آوری هم‌وزن و چرخش به فلزات/کالا"
+          ],
+          "confirmation": [
+            "شاخص > ۸٬۵۱۳٬۶۶۹ با حجم",
+            "هم‌وزن سبقت از کل",
+            "breadth > ۴۰۰"
+          ],
+          "invalidation": [
+            "شکست ۸٬۳۵۴٬۰۰۰",
+            "تشدید خروج حقیقی"
+          ],
+          "target": "TEDPIX >۸٬۵۱۴٬۰۰۰"
+        },
+        "base": {
+          "prob": 0.4,
+          "label": "🟡",
+          "catalysts": [
+            "واگرایی ادامه‌دار (کل منفی / هم‌وزن مثبت)",
+            "چرخش صنعتی محدود",
+            "برنت ~$۹۰ و ژئوپلیتیک کنترل‌شده"
+          ],
+          "confirmation": [
+            "نوسان ۸٬۳۵۴٬۰۰۰–۸٬۵۱۳٬۶۶۹",
+            "breadth ۲۵۰–۳۵۰",
+            "خروج حقیقی کاهشی"
+          ],
+          "invalidation": [
+            "شکست ۸٬۱۳۷٬۹۶۴",
+            "جهش با حجم بدون پول حقیقی"
+          ],
+          "target": "TEDPIX ۸٬۳۵۴–۸٬۵۱۴ هزار"
+        },
+        "bear": {
+          "prob": 0.3,
+          "label": "🔴",
+          "catalysts": [
+            "تشدید محاصره/تنش نظامی (کویت/هرمز)",
+            "برنت <$۸۵ و مازاد عرضه",
+            "تشدید خروج حقیقی + شکست ۸٬۳۵۴"
+          ],
+          "confirmation": [
+            "شکست ۸٬۳۵۴٬۰۰۰ با حجم",
+            "هم‌وزن منفی",
+            "breadth < ۲۵۰"
+          ],
+          "invalidation": [
+            "بازگشت > ۸٬۵۱۳٬۶۶۹ با حجم",
+            "بهبود پایدار breadth"
+          ],
+          "target": "TEDPIX <۸٬۳۵۴٬۰۰۰ → ۸٬۱۳۷٬۹۶۴"
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "4a3af60bb00575a67b89"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."
