@@ -3,13 +3,17 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "report_meta": {
-      "agent": "BabiMind Web Research & Decision Agent",
-      "generated_at_utc": "2026-11-19T18:26:31Z",
-      "last_equity_session": "27 Aban 1405 (≈2026-11-18, Wed) — market closed on 28 Aban (≈today)",
-      "data_freshness": "Equity close = 27 Aban (1 session old). Options BRS event_time = 2026-11-19T18:23:35Z. Kamandar crawl = 2026-11-19T18:12–18:16Z.",
-      "environment": "DEGRADED for Iran official sources (TSE gateway timeout, Codal timeout, SCI SSL error, IME/IREnex/Customs/MIMT down). TSETMC CDN OK but 20s+ latency. Kamandar = primary usable market-structure source (secondary — must be cross-checked vs TSE/TSETMC, which were partly unreachable). finpy-tse = all timeouts (no technicals). Global: EIA/FRED/WorldBank/IMF OK; OPEC/LME/Reuters/Bloomberg blocked (403/401).",
-      "confidence_overall": "🟡 medium (55/100) — reduced for source degradation, a breadth data conflict, and stale thesis price levels."
-    }
+    "report_type": "babiMind_market_decision",
+    "generated_at": "2026-11-21T13:06:53+00:00",
+    "confidence_overall": "medium",
+    "decision": "WAIT",
+    "decision_score": 31,
+    "regime": "Transition / Sideways (large-cap weakness, small/mid-cap resilience)",
+    "key_conflicts": [
+      "فملی thesis price 19,950 (pipeline, updated 2026-09-04) vs current Kamandar price 26,170 — thesis is stale",
+      "TEDPIX down -1.54% while equal-weight up +0.42% — large-cap distribution vs broad-market resilience",
+      "Oil news headlines range $83–$115 but all marked pending_extraction — no confirmed commodity price",
+      "Codal and TSE Official Gateway unavailable — fundamental/codal evidence missing"
+    ]
   }
 }
