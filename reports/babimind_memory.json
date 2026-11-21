@@ -3031,7 +3031,85 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "96dec8e217fe4beab92f"
+    },
+    {
+      "timestamp": "2026-11-21T15:48:47.224218+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "probability": 0.45,
+          "label": "🟢 Bull",
+          "target": "TEDPIX >8,500 / فملی 23,000",
+          "catalysts": [
+            "Copper breakout >$4.80/lb (LME inventory draw)",
+            "Hormuz de-escalation / Qatar mediation",
+            "Real-money net buying returns (≥3 sessions)",
+            "Fiscal relief: gasoline subsidy maintained"
+          ],
+          "confirmation": [
+            "فملی closes >20,000 on expanding volume + real-money inflow",
+            "TEDPIX breadth >600 advancers",
+            "Equal-weight leads cap-weighted",
+            "Copper holds >$4.50/lb"
+          ],
+          "invalidation": [
+            "فملی <18,800 on volume",
+            "Copper <$4.00/lb",
+            "Real-money outflow accelerates",
+            "Hormuz closure / US-Iran kinetic conflict"
+          ]
+        },
+        "base": {
+          "probability": 0.4,
+          "label": "🟡 Base",
+          "target": "TEDPIX 7,800-8,200 / فملی 21,500",
+          "catalysts": [
+            "Steady sales growth 100%+ YoY",
+            "Stable copper $4.00-4.50",
+            "Managed FX regime (NIMA ~2.0-2.2M)",
+            "No new sanctions escalation"
+          ],
+          "confirmation": [
+            "فملی trades 19,400-21,500 with moderate volume",
+            "Fundamental growth >100% YoY",
+            "Breadth 450-550"
+          ],
+          "invalidation": [
+            "Sales growth <50% YoY for 2 quarters",
+            "Copper -20%",
+            "USD/IRR >2.3M"
+          ]
+        },
+        "bear": {
+          "probability": 0.15,
+          "label": "🔴 Bear",
+          "target": "TEDPIX <7,500 / فملی 18,800",
+          "catalysts": [
+            "Copper breakdown <$3.50/lb",
+            "Volume collapse + breadth <300",
+            "Real-money outflow accelerates",
+            "US-Iran conflict / Hormuz closure",
+            "Gasoline hike → inflation spiral → rate hike"
+          ],
+          "confirmation": [
+            "فملی breaks <18,800 on expanding volume",
+            "Equal-weight leads down",
+            "Breadth <300"
+          ],
+          "invalidation": [
+            "Price rebounds >20,000 with volume",
+            "Fundamentals re-accelerate",
+            "Geopolitical de-escalation"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "fa5e57ceb2fa2d5ab8a7"
     }
   ],
-  "updated_at": "2026-11-21T13:08:24.475753+00:00"
+  "updated_at": "2026-11-21T15:48:47.229601+00:00"
 }
