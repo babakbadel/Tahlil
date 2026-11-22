@@ -3,9 +3,10 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "report_type": "babimind_full_decision_report",
-    "generated_at": "2026-11-21T16:57:57+00:00",
-    "evidence_base": "repository_snapshot_only",
-    "note": "No live web browsing performed in this turn. All observations are drawn from the provided repository evidence files. Stale or missing data is flagged; missing is not zero."
+    "文体": "clear",
+    "paragraphs": [
+      "I'm reading this as a request to act as the BabiMind agent and produce the required decision report from the supplied repository evidence. Before the report, one thing has to be said plainly, because it changes everything below.",
+      "⚠️ Data-integrity verdict first: the evidence in this repository is NOT sufficient for a high-confidence decision. The primary numeric truth (TSETMC market-watch payloads) is not actually present — only health-check status. The finpy flow layer (real/legal money flow) is fully degraded (every request timed out). Global regime is `pending_upstream_data`. Macro numbers (dollar, gold, inflation) are absent from this snapshot. The one symbol thesis on file (فملی) is stale (price 19,950 from ~1405-06-04 vs ~25,390 now). Per BabiMind's own rules, that forces LOW confidence and a WAIT/NO-TRADE lean. I will not fabricate the missing layers."
+    ]
   }
 }
