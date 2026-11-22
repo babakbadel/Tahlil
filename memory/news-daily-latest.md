@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-22 15:48 UTC
+# Daily Economic News Digest — 2026-11-22 17:19 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **15** · Total stored: **2500**
+> New items this run: **46** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| oil | Oil prices edge higher as Houthi attacks on Riyadh raise supply concerns, Money News - AsiaOne.com | AsiaOne.com | Fri, 20 Nov 2026 02:50 |
-| oil | AI Boom Forces Massive Investment in Power Grids Worldwide - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sun, 22 Nov 2026 00:00 |
-| geopolitics | Iran’s Control of Hormuz Means It’s Exporting More Oil Today Than Before the War - WSJ | WSJ | Tue, 10 Mar 2026 07:00 |
-| geopolitics | U.S. Doubles Down on Hormuz Blockade to Choke Iran's Oil Exports - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 29 Apr 2026 07:00 |
-| geopolitics | Hormuz ship attacks surge: Are increased oil exports sustainable? - Al Jazeera | Al Jazeera | Tue, 06 Oct 2026 07:00 |
-| geopolitics | Iran readies tanker convoy at Kharg Island to test US oil blockade - Euronews | Euronews | Fri, 20 Nov 2026 10:06 |
-| geopolitics | Bahrain says Iran struck industrial site as tankers hit in Hormuz - Yahoo | Yahoo | Sun, 22 Nov 2026 03:21 |
-| geopolitics | Global crude exports hit record high despite Hormuz closure - Nikkei Asia | Nikkei Asia | Sat, 21 Nov 2026 15:25 |
-| geopolitics | What’s behind Iran’s escalation of attacks in the Gulf? - Al Jazeera | Al Jazeera | Sun, 22 Nov 2026 11:49 |
-| geopolitics | Iranian attacks in the Strait of Hormuz are at the highest levels since the conflict began - CNN | CNN | Sun, 22 Nov 2026 15:13 |
-| pezeshkian | Iran’s oil minister resigns as country’s economic crisis worsens - The Guardian | The Guardian | Mon, 05 Oct 2026 07:00 |
-| oil | نفت در‌آستانه سقوط - روزنامه جهان صنعت | روزنامه جهان صنعت | Sat, 21 Nov 2026 08:00 |
-| oil | قیمت نفت برنت زیر فشار تحولات جهانی قرار گرفت │ آیا بازار انرژی دوباره گران می‌شود؟ / سیگنال تازه نفت برای اقتصاد ایران  | نبض قیمت | Sun, 22 Nov 2026 14:48 |
-| macro_monetary | چگونه جلوی دلار ۳۰۰ هزار تومانی و تورم ۳۰۰ درصدی گرفته شد؟ - مشرق نیوز | مشرق نیوز | Sun, 22 Nov 2026 09:42 |
-| macro_monetary | مهار تورم بدون توقف چرخ تولید - ایبِنا | ایبِنا | Sun, 22 Nov 2026 08:29 |
-| oil | Brent crude oil prices are heading for a third consecutive weekly decline amid abundant supply. - Vietnam.vn | Vietnam.vn | Fri, 20 Nov 2026 01:33 |
-| oil | Oil prices settle higher, Brent set for 4% weekly loss - برق الإمارات | برق الإمارات | Sat, 21 Nov 2026 07:17 |
-| oil | India’s crude import bill jumps 88% to $19.5 billion in October - ET EnergyWorld | ET EnergyWorld | Fri, 20 Nov 2026 02:38 |
-| oil | Oil prices gain as Houthi attacks on Riyadh raise supply concerns - The Straits Times | The Straits Times | Fri, 20 Nov 2026 02:38 |
-| oil | Oil Prices Climb as Attacks on Saudi, Hormuz Disruptions Raise Supply Fears - Business Post Nigeria | Business Post Nigeria | Fri, 20 Nov 2026 07:44 |
-| oil | Oil heads for a third weekly loss as Brent slips toward $90 and Hormuz shipments return to about pre-war levels - MLQ.ai | MLQ.ai | Fri, 20 Nov 2026 16:10 |
-| oil | Crude oil prices fell in 2025 amid oversupply - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Mon, 05 Jan 2026 08:00 |
-| oil | Oil prices rise amid Middle East tensions and growing fears of supply disruptions - The New Voice of Ukraine | The New Voice of Ukraine | Fri, 20 Nov 2026 09:24 |
-| oil | Oil slips in Asia led by Murban, Brent, WTI: What to know on Nov. 18, 2026 - Gulf News | Gulf News | Wed, 18 Nov 2026 03:53 |
-| oil | To hedge, or not to hedge, that is the question - Analytic Flying | Analytic Flying | Fri, 20 Nov 2026 00:33 |
-| oil | Brent crude briefly tops $119 per barrel, before receding, and shakes stock markets worldwide - AP News | AP News | Thu, 19 Mar 2026 07:00 |
-| oil | BMI Predicts Brent Crude Will Remain Above $100 for Months - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 12 Oct 2026 07:00 |
-| oil | US shale companies send oil windfall to shareholders as prices jump - Reuters | Reuters | Thu, 19 Nov 2026 13:31 |
-| oil | Goldman is out with its 2027 forecast for Brent oil prices - Investing.com | Investing.com | Sat, 21 Nov 2026 12:24 |
-| oil | Crude Oil Choppy as Strait of Hormuz Flows Fall and Traders Price In Renewed US-Iran Strikes - Benzinga | Benzinga | Sat, 21 Nov 2026 19:45 |
-| oil | WTI And Brent Push Upward, Extending Year-To-Date Gains - Forbes | Forbes | Thu, 19 Nov 2026 14:34 |
-| oil | Thanksgiving Gas Prices Could Break a Record Despite Recent Plunge - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Sat, 21 Nov 2026 19:10 |
-| geopolitics | Iran war: What is the Strait of Hormuz and why does it matter? - BBC | BBC | Mon, 23 Jun 2025 07:00 |
-| geopolitics | Oil exporters scramble for routes beyond Hormuz — but there are no easy options - CNBC | CNBC | Thu, 23 Apr 2026 07:00 |
-| geopolitics | The Strait of Hormuz is facing a blockade. These countries will be most impacted - CNBC | CNBC | Tue, 03 Mar 2026 08:00 |
-| geopolitics | What Is the Strait of Hormuz and Why Does Trump Want to Blockade It? - Time Magazine | Time Magazine | Tue, 17 Mar 2026 07:00 |
-| geopolitics | What the US naval blockade would mean for Iran’s economy - Iran International | Iran International | Mon, 13 Apr 2026 07:00 |
-| geopolitics | Is Iran’s oil storage nearly full – and will it have to cut production? - Al Jazeera | Al Jazeera | Wed, 29 Apr 2026 07:00 |
-| geopolitics | How Iran Blocking the Strait of Hormuz Affects the U.S. - FactCheck.org | FactCheck.org | Fri, 13 Mar 2026 07:00 |
-| geopolitics | Iran Is Using Alternative Routes To Bypass US Naval Blockade - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Wed, 06 May 2026 07:00 |
+| macro_monetary | August Inflation Hits 3.4% as Iran War Gas Prices Push Fed Rate Hike Odds to 90% - The Eastern Herald | The Eastern Herald | Sun, 13 Sep 2026 07:00 |
+| macro_monetary | The State of the Nation: Inflation expected to be contained, but risk lies in a prolonged Iran war - The Edge Malaysia | The Edge Malaysia | Mon, 30 Mar 2026 07:00 |
+| macro_monetary | Iran doubles gasoline price for heavy users amid war, economic strain - Moneycontrol.com | Moneycontrol.com | Tue, 08 Sep 2026 07:00 |
+| macro_monetary | ‘It’s really bad’: record fuel prices drive Filipinos off the road - South China Morning Post | South China Morning Post | Sat, 21 Mar 2026 07:00 |
+| macro_monetary | Gas prices under Trump just hit a benchmark from the Biden inflation era - Fortune | Fortune | Tue, 31 Mar 2026 07:00 |
+| macro_monetary | Iranians warned that petrol prices may rise - Egypt Independent | Egypt Independent | Sun, 26 Jul 2026 07:00 |
+| macro_monetary | The Iran War: Is Southeast Asia Heading Into Its Next Crisis? - The Diplomat – Asia-Pacific Current Affairs Magazine | The Diplomat – Asia-Pacific Current Affairs Magazine | Sat, 28 Mar 2026 07:00 |
+| macro_monetary | US inflation surges to 3.3% as Iran war fuels energy price shock - Euronews.com | Euronews.com | Fri, 10 Apr 2026 07:00 |
+| macro_monetary | Iran crisis bites into Malaysia’s supply chain as fuel subsidy cap falls - South China Morning Post | South China Morning Post | Fri, 27 Mar 2026 07:00 |
+| macro_monetary | South Africa to Raise Gasoline Price by Most Since at Least 2008 - Bloomberg.com | Bloomberg.com | Tue, 31 Mar 2026 07:00 |
+| macro_monetary | Iran war: As oil price balloons, Africa’s fuel-price shield becomes a fiscal test - The Africa Report | The Africa Report | Thu, 30 Apr 2026 07:00 |
+| macro_monetary | From Pakistan to Egypt, Iran war drives up prices in Global South - Al Jazeera | Al Jazeera | Wed, 25 Mar 2026 07:00 |
+| macro_monetary | Record gas price surge fuels sharp rise in U.S. inflation - Honolulu Star-Advertiser | Honolulu Star-Advertiser | Fri, 10 Apr 2026 07:00 |
+| macro_monetary | Diesel Is a Bigger Problem for Consumers Than Gasoline. Here’s Why. - The New York Times | The New York Times | Fri, 27 Mar 2026 07:00 |
+| macro_monetary | Two months into Iran war, economic strain mounts across emerging markets - Reuters | Reuters | Mon, 27 Apr 2026 07:00 |
+| macro_monetary | German petrol stations allowed just one price rise a day in bid to curb Iran war surge - Reuters | Reuters | Thu, 26 Mar 2026 07:00 |
+| macro_monetary | Fuel prices surge in Africa as Iran war hits supply - Reuters | Reuters | Wed, 01 Apr 2026 07:00 |
+| macro_monetary | Iran War Fans Steep Fuel Hikes in Africa, Presidential Pay Cut - Bloomberg.com | Bloomberg.com | Wed, 01 Apr 2026 07:00 |
+| macro_monetary | 'Small price to pay': What has Trump said about oil prices during the Iran war? - ABC News - Breaking News, Latest News  | ABC News - Breaking News, Latest News and Videos | Fri, 11 Sep 2026 07:00 |
+| macro_monetary | Japan core inflation accelerates for 1st time in 5 months as energy worries mount amid Iran war - Anadolu Ajansı | Anadolu Ajansı | Fri, 24 Apr 2026 07:00 |
+| macro_monetary | Oil Prices Rise After U.S. and Iran Trade Strikes - The New York Times | The New York Times | Sun, 06 Sep 2026 07:00 |
+| macro_monetary | How the Iran war is affecting Latin America and the Caribbean’s economic outlook - Atlantic Council | Atlantic Council | Wed, 06 May 2026 07:00 |
+| macro_monetary | U.S. diesel prices hit a record high, pushing up transportation costs for a long list of goods - PBS | PBS | Fri, 04 Sep 2026 07:00 |
+| macro_monetary | Iran says no decision made on fuel price changes, subsidized gasoline quotas - Iran International | Iran International | Thu, 13 Aug 2026 07:00 |
+| macro_monetary | 3 things to know about rising diesel prices and how they affect you - PBS | PBS | Wed, 23 Sep 2026 07:00 |
+| macro_monetary | Americans Pay the Price for Trump’s War While Oil and Gas Companies Get Rich - Center for American Progress | Center for American Progress | Thu, 06 Aug 2026 07:00 |
+| macro_monetary | Inflation in Spain soars to 4.3% due to petrol and diesel price hikes caused by Iran conflict - Olive Press News Spain | Olive Press News Spain | Fri, 28 Aug 2026 07:00 |
+| macro_monetary | Iran Regime Raises Gasoline Price to 10,000 Tomans as Inflationary Pressures Mount - Iran News Update | Iran News Update | Thu, 10 Sep 2026 07:00 |
+| macro_monetary | Iran doubles gasoline price for heavy users amid war and inflation strain - India Today | India Today | Tue, 08 Sep 2026 07:00 |
+| macro_monetary | Iran’s Regime Doubles Gasoline Price as Fuel Crisis Deepens and Fear of Protests Grows - Iran News Update | Iran News Update | Wed, 09 Sep 2026 07:00 |
+| macro_monetary | Iran’s gasoline price hike adds another shock to a deepening cost-of-living crisis / - mojahedin.org | mojahedin.org | Mon, 14 Sep 2026 07:00 |
+| macro_monetary | Nigerian fuel price spike renews worry over inflation and Iran war exposure - Semafor | Semafor | Fri, 18 Sep 2026 07:00 |
+| macro_monetary | Iran’s Fuel-Price Trap Meets 84% Inflation and a Regime Split Over Negotiations - National Council of Resistance of Iran | National Council of Resistance of Iran - NCRI | Fri, 28 Aug 2026 07:00 |
+| oil | Oil Prices End Largely Unchanged as Brent Edges Higher and US Crude Slips - Qatar news agency | Qatar news agency | Thu, 19 Nov 2026 21:56 |
+| oil | Oil prices gain as Houthi attacks on Riyadh raise supply concerns - Investify | Investify | Fri, 20 Nov 2026 05:53 |
+| oil | Oil prices rise on Houthi attacks on Riyadh, supply disruption concerns - Business Standard | Business Standard | Fri, 20 Nov 2026 03:14 |
+| geopolitics | Iran Expands Tanker Blockade Beyond Hormuz - https://houseofsaud.com/ | https://houseofsaud.com/ | Tue, 27 Oct 2026 07:00 |
+| geopolitics | Iran says new air defence system intercepted US Reaper drone over Hormuz - Middle East Eye | Middle East Eye | Sat, 21 Nov 2026 11:39 |
+| geopolitics | Oil gains on Iran war worries and short-covering ahead of Thanksgiving holiday - CNBC | CNBC | Fri, 20 Nov 2026 05:01 |
+| geopolitics | Bahrain accuses Iran of striking industrial site as tankers hit in Hormuz - France 24 | France 24 | Sun, 22 Nov 2026 03:24 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-22 15:48 UTC | 15 new | 2500 total
+NEWS_DIGEST | 2026-11-22 17:19 UTC | 46 new | 2500 total
