@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-23 19:39 UTC
+# Daily Economic News Digest — 2026-11-23 21:28 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **0** · Total stored: **2500**
+> New items this run: **49** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Iran announces non-quota fuel price hike amid tightening sanctions - Rudaw | Rudaw | Sun, 06 Sep 2026 19:32 |
-| oil | Current price of oil as of Oct. 1, 2026 - Fortune | Fortune | Thu, 01 Oct 2026 07:00 |
-| oil | Why WTI Is Suddenly Trading $12 Below Brent - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 25 Sep 2026 07:00 |
-| oil | EIA Boosts Oil Price Forecast by $5 in 2026, $10 in 2027 - Rigzone | Rigzone | Thu, 08 Oct 2026 07:00 |
-| oil | Current price of oil as of September 8, 2026 - Fortune | Fortune | Tue, 08 Sep 2026 07:00 |
-| oil | Brent Crude Oil Prices Rise Above $100/Barrel - Marine News Magazine | Marine News Magazine | Wed, 09 Sep 2026 07:00 |
-| oil | Bond Market Signals Softer RBI Rate Hikes as Crude Retreats and Long-Term Yields Begin to Rally - Kotak Neo | Kotak Neo | Mon, 23 Nov 2026 05:31 |
-| oil | WTI crude oil prices may trend lower - The Business Times | The Business Times | Sun, 22 Nov 2026 23:00 |
-| oil | WTI Outpaces Brent as U.S. Crude Draw Ignites Fresh Buying - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 15 Oct 2026 07:00 |
-| oil | CNBC Daily Open: Brent crude barrels back towards $100 - CNBC | CNBC | Tue, 08 Sep 2026 07:00 |
-| oil | Oil rises to $99 on report Iran launched second undisclosed attack on U.S. Navy ships - CNBC | CNBC | Mon, 07 Sep 2026 07:00 |
-| oil | Crude Oil Futures Rise: MCX Prices Up, Global Benchmarks Mixed - Rediff MoneyWiz | Rediff MoneyWiz | Mon, 23 Nov 2026 07:03 |
-| oil | Brent crude slips as G7 oil reserve release eases supply concerns - Anadolu Ajansı | Anadolu Ajansı | Mon, 05 Oct 2026 07:00 |
-| oil | Crude oil price gain on West Asia tensions - BusinessLine | BusinessLine | Mon, 23 Nov 2026 04:26 |
-| oil | Oil Price in UAE: Brent Near $93 on Gulf Risks - Markets.com | Markets.com | Sun, 22 Nov 2026 16:03 |
-| oil | Oil edges lower as ample supply outweighs Middle East tensions - The Business Times | The Business Times | Mon, 23 Nov 2026 01:03 |
-| oil | EIA sees Brent near $90/bbl in second-half 2026 amid Middle East disruptions - Oil & Gas Journal | Oil & Gas Journal | Thu, 10 Sep 2026 07:00 |
-| oil | How rising crude oil prices could impact the U.S. and global economy - Marketplace.org | Marketplace.org | Thu, 22 Oct 2026 07:00 |
-| oil | Oil prices in 2026: How are WTI crude and Brent crude performing so far this year? Why does it matter for investors? - C | Chase Bank | Wed, 07 Oct 2026 07:00 |
-| oil | Brent Hits $114 as Houthi Attacks Threaten Saudi Energy Infrastructure - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 23 Oct 2026 07:00 |
-| oil | Oil prices fall, Brent at US$92.29 per barrel - Sharjah24 | Sharjah24 | Mon, 23 Nov 2026 11:57 |
-| oil | Crude oil rises marginally as AI selloff weighs on markets, Gulf attacks support prices; Brent at $90, WTI... - Moneycon | Moneycontrol.com | Mon, 23 Nov 2026 04:24 |
-| oil | Global Oil Price Hits $116 a Barrel, Highest Since April - The New York Times | The New York Times | Fri, 23 Oct 2026 07:00 |
-| oil | Brent crude oil price on Nov 9, 2026 at 5:00 PM EST - Robinhood | Robinhood | Mon, 09 Nov 2026 08:00 |
-| oil | What Brent Crude Oil's Widening Premium Over WTI Means for Shell (LSE:SHEL) and BP (LSE:BP.) - kalkine.co.uk | kalkine.co.uk | Mon, 23 Nov 2026 10:28 |
-| oil | Oil Falls Despite Escalating Middle East Fighting: Brent Crude Breaks Below $92 as Oversupply Overshadows Geopolitical R | BigGo Finance | Mon, 23 Nov 2026 02:35 |
-| oil | Crude Oil Falls as Global Selloff Offsets Middle East Risks - HDFC Sky | HDFC Sky | Mon, 23 Nov 2026 04:58 |
-| oil | Oil prices fall as traders hope for diplomatic progress in Middle East - CNBC | CNBC | Tue, 20 Oct 2026 07:00 |
-| oil | Brent crude oil tops $116, a six-month high, as tensions swell in the Middle East - CNBC | CNBC | Fri, 23 Oct 2026 07:00 |
-| oil | Shafaq News..Oil retreats on tech rout and Hormuz tension - شفق نيوز | شفق نيوز | Mon, 23 Nov 2026 05:19 |
-| oil | Middle East supply concerns lift Brent crude prices - Anadolu Ajansı | Anadolu Ajansı | Fri, 20 Nov 2026 07:45 |
-| oil | Oil Futures: Crude moves sideways as ample supply offsets tensions - Quantum Commodity Intelligence | Quantum Commodity Intelligence | Mon, 23 Nov 2026 07:16 |
-| oil | Goldman Sachs: Oil Prices to Ease in 2027 as Gulf Suppliers Adapt - News and Statistics - IndexBox | IndexBox | Mon, 23 Nov 2026 04:20 |
-| oil | WTI and Brent Crude Oil Prices Fall as Bessent Challenges Fed's Hawkish Rate Expectations - FXLeaders | FXLeaders | Mon, 23 Nov 2026 05:19 |
-| oil | Why oil prices are falling: Brent’s third weekly drop as Gulf barrels return despite Hormuz attacks - Oil & Gas Middle E | Oil & Gas Middle East | Mon, 23 Nov 2026 06:19 |
-| oil | Bernstein Warns Oil Market to Flip to Oversupply Within Three Years, Sees Brent Crude Falling to $75 in 2028 - BigGo Fin | BigGo Finance | Mon, 23 Nov 2026 09:56 |
-| oil | Oil Prices Reduce As Supply Risk Eases, Brent Falls Below $90 - MarketForces Africa | MarketForces Africa | Mon, 23 Nov 2026 08:11 |
-| oil | Oil Futures: Crude retreats as ample supply offsets Mideast tensions - Quantum Commodity Intelligence | Quantum Commodity Intelligence | Mon, 23 Nov 2026 11:31 |
-| oil | Brent Crude Nearly Doubles, India Spends an Extra $6 Billion on Oil and Gas Imports in October - BigGo Finance | BigGo Finance | Mon, 23 Nov 2026 06:56 |
-| oil | Oil Markets Are Betting on a Surplus That Hasn't Arrived Yet - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 23 Nov 2026 00:00 |
+| macro_monetary | Mapped: Where Gas Prices Have Surged Over 100% - Visual Capitalist | Visual Capitalist | Sat, 25 Apr 2026 07:00 |
+| oil | Oil Prices Today: Brent Crude Closes Weekly Trading at $91.59 Per Barrel - Arbiterz | Arbiterz | Fri, 20 Nov 2026 18:29 |
+| oil | Oil Prices Today: Brent Crude Slips Below $92 A Barrel As Middle East Attacks Escalate, Crude Flows Hold Up - NDTV Profi | NDTV Profit | Mon, 23 Nov 2026 01:08 |
+| oil | Brent Crude Price $92.57 Before OPEC+ Sets 2027 Quotas - FinanceFeeds | FinanceFeeds | Sun, 22 Nov 2026 06:51 |
+| oil | Brent Crude Price $92.57: 8 Days to OPEC+ 2027 Quota Call - FinanceFeeds | FinanceFeeds | Sat, 21 Nov 2026 06:50 |
+| oil | Crude Oil Has Fallen, But Why Is $91 Still Bad News For India? UBS' Gautam Chhaocharia On The Risks / Profit Exclusive - | NDTV Profit | Sun, 22 Nov 2026 00:30 |
+| oil | Oil Price Today (November 23): Brent crude dips below $93 despite fresh Houthi attacks. What are experts s - The Economi | The Economic Times | Mon, 23 Nov 2026 02:17 |
+| oil | Brent Crude Oil Poised to Break Below a Key Support Level – Analysis –23-11-2026 - Economies.com | Economies.com | Mon, 23 Nov 2026 02:59 |
+| oil | Brent Crude Drops 4.04% to $88.83 as Supply Surplus Weighs While US Futures Rally - JournalArta | JournalArta | Mon, 23 Nov 2026 11:09 |
+| oil | Oil Prices Today: Brent Crude Falls to $91.11, WTI Drops 1.51% to $82.15 - Arbiterz | Arbiterz | Mon, 23 Nov 2026 12:56 |
+| oil | Weekly Europe Brent Spot Price FOB (Dollars per Barrel) - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Thu, 03 May 2018 01:49 |
+| oil | Europe Brent Spot Price FOB (Dollars per Barrel) - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Sun, 29 Apr 2018 01:44 |
+| oil | Brent Oil EuroOIL - eToro | eToro | Fri, 30 Sep 2022 12:46 |
+| oil | Oil prices slip as Iran war, Middle East shipping attacks support Brent crude and WTI despite weekly losses / Hindustan  | Hindustan Times | Mon, 23 Nov 2026 11:24 |
+| oil | Brent Oil Falls 0.5% as Middle East Supply Risks Persist - grafa.com | grafa.com | Mon, 23 Nov 2026 13:51 |
+| oil | Brent crude oil prices averaged $19 per barrel less in 2023 than 2022 - U.S. Energy Information Administration (EIA) (.g | U.S. Energy Information Administration (EIA) (.gov) | Tue, 02 Jan 2024 08:00 |
+| oil | Brent crude oil prices traded in a narrow range in 2024 - U.S. Energy Information Administration (EIA) (.gov) | U.S. Energy Information Administration (EIA) (.gov) | Mon, 06 Jan 2025 08:00 |
+| oil | Rubber market ends lower on lower regional futures, crude oil prices - Borneo Bulletin | Borneo Bulletin | Mon, 23 Nov 2026 21:08 |
+| oil | Oil Price Forecast: Why Goldman Sees $150 Diesel Even As Crude Gets Cheaper - Exchange Rates UK | Exchange Rates UK | Sun, 22 Nov 2026 21:15 |
+| oil | Oil, gas import bill up 60% in Oct as Brent surges, LPG use declines - Business Standard | Business Standard | Sun, 22 Nov 2026 06:23 |
+| oil | Petrol, diesel prices rose just 7% in India in four years versus 50-70% globally, says Hardeep Puri; but - The Times of  | The Times of India | Mon, 23 Nov 2026 10:32 |
+| oil | Oil prices settle higher, Brent set for 4% weekly loss - Sharjah24 | Sharjah24 | Sat, 21 Nov 2026 16:24 |
+| oil | Oil falls on increased Middle Eastern supplies - RTE.ie | RTE.ie | Mon, 23 Nov 2026 12:26 |
+| oil | WTI and Brent Crude Oil Prices Decline as Bessent Challenges Fed's Hawkish Rate Expectations - FXLeaders | FXLeaders | Sun, 22 Nov 2026 23:35 |
+| oil | Oil futures: Crude retreats as ample supply offsets Mideast tensions - Quantum Commodity Intelligence | Quantum Commodity Intelligence | Mon, 23 Nov 2026 14:35 |
+| oil | Oil News: WTI and Brent Hit August Lows as Supply Outlook Pressures Crude - FXEmpire | FXEmpire | Mon, 23 Nov 2026 20:13 |
+| oil | Brent Last Day Financial Overview - CME Group | CME Group | Fri, 20 Nov 2026 08:00 |
+| oil | Oil slumps to 3-month low on increased Middle East flows, Libyan pipeline restart - Reuters | Reuters | Mon, 23 Nov 2026 02:24 |
+| oil | Oil Slides Nearly 4% as Returning Supply Outweighs Gulf Attacks - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 23 Nov 2026 15:51 |
+| oil | Brent oil tops $109 after Houthi militants claim they attacked Saudi airports and Aramco facilities - CNBC | CNBC | Sun, 18 Oct 2026 07:00 |
+| oil | Brent crude oil price tumbles about 5.5% as technical breakdowns reinforce bearish sentiment - Traders Union | Traders Union | Mon, 23 Nov 2026 17:17 |
+| geopolitics | WATCH: How traffic dried up in the Strait of Hormuz since the Iran war began - NPR | NPR | Wed, 04 Mar 2026 08:00 |
+| geopolitics | How Iran's Hormuz Blockade Chokes Global Trade Beyond Oil And Gas - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Wed, 01 Apr 2026 07:00 |
+| geopolitics | The Strait of Hormuz is heating up amid Iran's latest moves. - Vietnam.vn | Vietnam.vn | Mon, 23 Nov 2026 19:43 |
+| geopolitics | Iran's high-stakes gamble: breaking the US naval blockade to force a swift endgame - Ynetnews | Ynetnews | Sun, 22 Nov 2026 10:04 |
+| geopolitics | Iranian attacks on ships near Strait of Hormuz hit highest level since war began, data shows - The Jerusalem Post | The Jerusalem Post | Mon, 23 Nov 2026 10:49 |
+| geopolitics | Trump Says Strikes on Iran Could Resume After New Year - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 23 Nov 2026 12:30 |
+| geopolitics | Trump threatens Iran strikes in new year, says blockade runners will be sunk - Iran International | Iran International | Sun, 22 Nov 2026 20:58 |
+| geopolitics | Ex-Mossad chief: Israel must go to war against Iran ‘as soon as all conditions allow’ - The Times of Israel | The Times of Israel | Mon, 23 Nov 2026 14:59 |
+| geopolitics | Trump admin announces sweeping measure to cut Iran’s ‘last financial lifeline’ - Fox News | Fox News | Mon, 23 Nov 2026 18:08 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-23 19:39 UTC | 0 new | 2500 total
+NEWS_DIGEST | 2026-11-23 21:28 UTC | 49 new | 2500 total

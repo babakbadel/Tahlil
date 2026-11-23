@@ -1,81 +1,8 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 48,
+  "historical_runs_available": 49,
   "context_runs": 20,
   "recent_runs": [
-    {
-      "timestamp": "2026-11-07T14:32:04.366071+00:00",
-      "provider": "openrouter",
-      "model": "openrouter/free",
-      "regime": null,
-      "scenarios": {
-        "bull": {
-          "probability": 0.4,
-          "target": "TEDPIX >8,500 / فملی 23,000",
-          "catalysts": [
-            "copper breakout >$4.80/lb",
-            "Hormuz de-escalation",
-            "real-money inflow returns",
-            "fiscal relief/gasoline subsidy maintained"
-          ],
-          "confirmation": [
-            "فملی >20,000 on expanding volume + real-money inflow ≥3 sessions",
-            "TEDPIX breadth >600 advancers",
-            "equal-weight leads cap-weighted"
-          ],
-          "invalidation": [
-            "فملی <18,800 on volume",
-            "copper <$4.00",
-            "real-money outflow accelerates"
-          ]
-        },
-        "base": {
-          "probability": 0.4,
-          "target": "TEDPIX 7,800-8,200 / فملی 21,500",
-          "catalysts": [
-            "steady sales growth 100%+ YoY",
-            "stable copper $4.00-4.50",
-            "managed FX regime",
-            "no new sanctions"
-          ],
-          "confirmation": [
-            "فملی trades 19,400-21,500 with moderate volume",
-            "fundamental growth >100% YoY",
-            "breadth 450-550"
-          ],
-          "invalidation": [
-            "sales growth <50% YoY for 2 quarters",
-            "copper -20%",
-            "USD/IRR >2.2M"
-          ]
-        },
-        "bear": {
-          "probability": 0.2,
-          "target": "TEDPIX <7,500 / فملی 18,800",
-          "catalysts": [
-            "copper breakdown <$3.50",
-            "volume collapse",
-            "real-money outflow accelerates",
-            "US-Iran conflict / Hormuz closure",
-            "gasoline hike → inflation → rate hike"
-          ],
-          "confirmation": [
-            "فملی breaks <18,800 on expanding volume",
-            "equal-weight leads down",
-            "breadth <300"
-          ],
-          "invalidation": [
-            "price rebounds >20,000 with volume",
-            "fundamentals re-accelerate",
-            "geopolitical de-escalation"
-          ]
-        }
-      },
-      "market_implications": null,
-      "confidence": null,
-      "data_gaps": [],
-      "fingerprint": "65f33e2210aaf092494c"
-    },
     {
       "timestamp": "2026-11-07T15:52:38.548478+00:00",
       "provider": "openrouter",
@@ -1196,6 +1123,81 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "6c55c516b608a3b4444f"
+    },
+    {
+      "timestamp": "2026-11-23T19:42:36.678694+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "probability": 0.4,
+          "target": "TEDPIX >8,800 / فملی 26,000-28,000",
+          "catalysts": [
+            "Copper breakout >$4.80/lb (LME inventory draw)",
+            "Real-money net buying returns ≥3 sessions",
+            "Hormuz de-escalation / Qatar mediation",
+            "Fiscal relief: gasoline subsidy maintained"
+          ],
+          "confirmation": [
+            "فملی closes >26,000 on expanding volume + real-money inflow",
+            "TEDPIX breadth >600 advancers",
+            "Equal-weight leads cap-weighted",
+            "Copper holds >$4.50/lb"
+          ],
+          "invalidation": [
+            "فملی <18,800 on volume",
+            "Copper <$4.00/lb",
+            "Real-money outflow accelerates",
+            "Hormuz closure / kinetic conflict"
+          ]
+        },
+        "base": {
+          "probability": 0.45,
+          "target": "TEDPIX 8,200-8,500 / فملی 23,000-25,000",
+          "catalysts": [
+            "Steady sales growth 100%+ YoY",
+            "Stable copper $4.00-4.50",
+            "Managed FX regime (NIMA ~2.0-2.2M)",
+            "No new sanctions escalation"
+          ],
+          "confirmation": [
+            "فملی trades 23,000-25,000 with moderate volume",
+            "Fundamental growth >100% YoY",
+            "Breadth 450-550"
+          ],
+          "invalidation": [
+            "Sales growth <50% YoY for 2 quarters",
+            "Copper -20%",
+            "USD/IRR >2.3M"
+          ]
+        },
+        "bear": {
+          "probability": 0.15,
+          "target": "TEDPIX <7,500 / فملی 18,800",
+          "catalysts": [
+            "Copper breakdown <$3.50/lb",
+            "Volume collapse + breadth <300",
+            "Real-money outflow accelerates",
+            "US-Iran conflict / Hormuz closure",
+            "Gasoline hike → inflation → rate hike"
+          ],
+          "confirmation": [
+            "فملی breaks <18,800 on expanding volume",
+            "Equal-weight leads down",
+            "Breadth <300"
+          ],
+          "invalidation": [
+            "Price rebounds >20,000 with volume",
+            "Fundamentals re-accelerate",
+            "Geopolitical de-escalation"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "206270a4d76056533a54"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."
