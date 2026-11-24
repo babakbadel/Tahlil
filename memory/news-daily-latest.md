@@ -1,10 +1,20 @@
-# Daily Economic News Digest — 2026-11-24 19:15 UTC
+# Daily Economic News Digest — 2026-11-24 20:21 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **43** · Total stored: **2500**
+> New items this run: **10** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | Iran’s Energy Dilemma: Constraints, Repercussions, and Policy Options - Carnegie Endowment for International Peace | Carnegie Endowment for International Peace | Thu, 26 Jun 2025 07:00 |
+| oil | Can Elevated Oil Prices Drive Equinor's Upstream Profitability Higher? - TradingView | TradingView | Tue, 24 Nov 2026 16:28 |
+| geopolitics | EXCLUSIVE: Iran ships some LPG, jet fuel despite US blockade, data shows - Reuters | Reuters | Fri, 16 Oct 2026 07:00 |
+| geopolitics | Mideast Oil Exports Rebound Even as Prices Remain Elevated - The New York Times | The New York Times | Tue, 29 Sep 2026 07:00 |
+| geopolitics | Tanker incident “involving military forces” reported in Strait of Hormuz - Euronews.com | Euronews.com | Sun, 22 Nov 2026 18:07 |
+| geopolitics | US Treasury report puts Iran war on hold as Trump weighs targeting regime leaders - Israel Hayom | Israel Hayom | Tue, 24 Nov 2026 17:29 |
+| pezeshkian | Hardliners attack Pezeshkian over talks and wartime candor - Iran International | Iran International | Thu, 21 May 2026 07:00 |
+| pezeshkian | Pezeshkian floats ‘new posture’ as Iran economy strains - Iran International | Iran International | Sat, 03 Oct 2026 07:00 |
+| oil | آخرین اخبار - هزینه‌های صادرات نفت - vista.ir | vista.ir | Sun, 22 Nov 2026 21:16 |
+| macro_monetary | تورم امروز، میراث حذف ارز ۲۸۵۰۰ تومانی - vista.ir | vista.ir | Tue, 24 Nov 2026 04:40 |
 | macro_monetary | Japan to roll out gasoline subsidies amid record-high prices - The Japan Times | The Japan Times | Wed, 18 Mar 2026 07:00 |
 | oil | Oil Is Gushing Out of the Gulf. Why Are Prices Still Above $100 a Barrel? - WSJ | WSJ | Thu, 29 Oct 2026 07:00 |
 | oil | Current price of oil as of October 28, 2026 - Fortune | Fortune | Wed, 28 Oct 2026 07:00 |
@@ -35,20 +45,10 @@
 | geopolitics | Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions - CNBC | CNBC | Tue, 24 Nov 2026 05:05 |
 | geopolitics | Iran War Updates: Iran developing chemical weapons, Israeli defense minister says - CBS News | CBS News | Tue, 24 Nov 2026 18:42 |
 | fx | Iran refuses to recognise national currency’s fall in free markets - Euronews.com | Euronews.com | Tue, 27 Feb 2024 08:00 |
-| fx | Iranian rial hits record low after fresh US sanctions target financial network - Middle East Monitor | Middle East Monitor | Tue, 24 Nov 2026 15:51 |
-| bourse | Treasury Sanctions Iranian Exchange Houses, Front Companies - Wisevoter | Wisevoter | Tue, 24 Nov 2026 07:03 |
-| bourse | US Sanctions 30 Iran-Linked Financial Networks - cwibc.co.id | cwibc.co.id | Mon, 23 Nov 2026 21:39 |
-| bourse | U.S. Energy Secretary Wright says Iran nuclear deal may never happen - CNBC | CNBC | Sun, 06 Sep 2026 07:00 |
-| bourse | Most Gulf bourses retreat as regional flare-ups continue - Reuters | Reuters | Sun, 22 Nov 2026 13:16 |
-| oil | یزدی‌خواه: اگر اجازه صادرات نفت را به ما ندهند منطقه را به آ/آفتاب - خبرپو | خبرپو | Sun, 22 Nov 2026 11:30 |
-| oil | قیمت نفت برنت زیر ۸۹ دلار رفت │ افزایش عرضه جهانی و کاهش نگرانی از کمبود نفت، بازار انرژی را تحت فشار قرار داد - نبض قیم | نبض قیمت | Tue, 24 Nov 2026 13:02 |
-| oil | نفت برنت و WTI امروز افت کردند │ فردا ذخایر آمریکا مسیر نفت جهانی را روشن می‌کند؟ - نبض قیمت | نبض قیمت | Tue, 24 Nov 2026 04:37 |
-| oil | نفت برنت به ۸۸ دلار رسید؛ چرا قیمت نفت در حال کاهش است؟/معدن نیوز - خبرپو | خبرپو | Tue, 24 Nov 2026 09:14 |
-| macro_monetary | آزمون ۹ ماهه دولت برای نصف کردن تورم - vista.ir | vista.ir | Sun, 22 Nov 2026 06:28 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-24 19:15 UTC | 43 new | 2500 total
+NEWS_DIGEST | 2026-11-24 20:21 UTC | 10 new | 2500 total
