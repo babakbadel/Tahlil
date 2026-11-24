@@ -3346,7 +3346,18 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "2cf0c859f6d5c837bd16"
+    },
+    {
+      "timestamp": "2026-11-24T19:17:35.562415+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": "Bull / Base / Bear with probabilities:\n- 🟢 Bull: probability 0.45 (across multiple runs), target FMLI 23,000 / TEDPIX >8,500\n  * Key triggers: copper breakout >$4.80/lb, real-money inflow returns ≥3 sessions, Hormuz de-escalation, fiscal relief (gasoline subsidy maintained)\n  * Confirmation: FMLI closes >20,000 with expanding volume + real-money inflow, TEDPIX breadth >600 advancers, equal-weight leads cap-weighted, Copper holds >$4.50/lb\n  * Invalidation: FMLI <18,800 on volume, Copper <$4.00/lb, real-money outflow accelerates, Hormuz closure / US-Iran kinetic conflict\n\n- 🟡 Base: probability 0.40 (across multiple runs), target FMLI 21,500 / TEDPIX 7,800-8,200\n  * Key triggers: steady sales growth 100%+ YoY, stable copper $4.00-4.50, managed FX regime, no new sanctions\n  * Confirmation: FMLI trades 19,400-21,500 moderate volume, fundamental growth >100% YoY, breadth 450-550\n  * Invalidation: sales growth <50% YoY for 2 quarters, Copper -20%, USD/IRR >2.3M\n\n- 🔴 Bear: probability 0.15 (across multiple runs), target FMLI 18,800 / TEDPIX <7,500\n  * Key triggers: copper breakdown <$3.50/lb, volume collapse + breadth <300, real-money outflow accelerates, US-Iran conflict / Hormuz closure, gasoline hike → inflation → rate hike\n  * Confirmation: FMLI breaks <18,800 on expanding volume, equal-weight leads down, breadth <300\n  * Invalidation: price rebounds >20,000 with volume, fundamentals re-accelerate, geopolitical de-escalation\n\n- Probabilities sum to 1.0 across all runs (0.45 + 0.40 + 0.15 = 1.0)\n- Confidence: 🟡 medium (insufficient evidence lowers confidence rather than fabricating precision)",
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "b0ce31d72c9453628831"
     }
   ],
-  "updated_at": "2026-11-24T15:27:57.993623+00:00"
+  "updated_at": "2026-11-24T19:17:35.568210+00:00"
 }
