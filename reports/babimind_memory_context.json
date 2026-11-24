@@ -1,83 +1,8 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 49,
+  "historical_runs_available": 50,
   "context_runs": 20,
   "recent_runs": [
-    {
-      "timestamp": "2026-11-07T15:52:38.548478+00:00",
-      "provider": "openrouter",
-      "model": "openrouter/free",
-      "regime": null,
-      "scenarios": {
-        "bull": {
-          "probability": 0.4,
-          "target": "TEDPIX >8,500 / فملی 33,000",
-          "catalysts": [
-            "Copper breakout >$4.80/lb (LME inventory draw)",
-            "Hormuz de-escalation / Qatari mediation success",
-            "Real-money inflow persists 3+ sessions (Client Type recovery)",
-            "Fiscal relief: gasoline subsidy maintained, no VAT hike"
-          ],
-          "confirmation": [
-            "فملی closes >30,000 with expanding volume + real-money inflow ≥3 sessions",
-            "TEDPIX breadth >600 advancers",
-            "Equal-weight leads cap-weighted",
-            "Copper holds >$4.50/lb"
-          ],
-          "invalidation": [
-            "فملی <27,000 on volume",
-            "Copper <$4.00/lb",
-            "Real-money outflow accelerates",
-            "Hormuz closure / US-Iran kinetic conflict"
-          ]
-        },
-        "base": {
-          "probability": 0.4,
-          "target": "TEDPIX 7,800-8,200 / فملی 30,000",
-          "catalysts": [
-            "Steady sales growth 100%+ YoY",
-            "Stable copper $4.00-4.50",
-            "Managed FX regime (NIMA ~2.0-2.2M)",
-            "No new sanctions escalation"
-          ],
-          "confirmation": [
-            "فملی trades 28,000-30,000 with moderate volume",
-            "Fundamental growth >100% YoY",
-            "Breadth 450-550"
-          ],
-          "invalidation": [
-            "Sales growth <50% YoY for 2 quarters",
-            "Copper -20%",
-            "USD/IRR >2.3M"
-          ]
-        },
-        "bear": {
-          "probability": 0.2,
-          "target": "TEDPIX <7,500 / فملی 27,000",
-          "catalysts": [
-            "Copper breakdown <$3.50/lb",
-            "Volume collapse + breadth <300",
-            "Real-money outflow accelerates",
-            "US-Iran conflict / Hormuz closure",
-            "Gasoline hike → inflation spiral → rate hike"
-          ],
-          "confirmation": [
-            "فملی breaks <27,000 on expanding volume",
-            "Equal-weight leads down",
-            "Breadth <300"
-          ],
-          "invalidation": [
-            "Price rebounds >30,000 with volume",
-            "Fundamentals re-accelerate",
-            "Geopolitical de-escalation"
-          ]
-        }
-      },
-      "market_implications": null,
-      "confidence": null,
-      "data_gaps": [],
-      "fingerprint": "48c4c90a1877da9b230b"
-    },
     {
       "timestamp": "2026-11-08T11:42:05.506658+00:00",
       "provider": "openrouter",
@@ -1198,6 +1123,17 @@
       "confidence": null,
       "data_gaps": [],
       "fingerprint": "206270a4d76056533a54"
+    },
+    {
+      "timestamp": "2026-11-23T21:30:01.410382+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": "Bull / Base / Bear with probabilities:\n- 🟢 Bull: probability 0.45, target FMLI 23,000 / TEDPIX >8,500\n  * Key triggers: copper breakout >$4.80/lb, real-money inflow ≥3 sessions, Hormuz de-escalation\n  * Confirmation: FMLI >20,000 on volume + real-money inflow, TEDPIX breadth >600\n  * Invalidation: FMLI <18,800 on volume, Copper <$4.00/lb, Real-money outflow accelerates\n- 🟡 Base: probability 0.40, target FMLI 21,500 / TEDPIX 7,800-8,200\n  * Key triggers: steady sales growth 100%+ YoY, stable copper $4.00-4.50\n  * Confirmation: FMLI 19,400-21,500 moderate volume, Fundamental growth >100% YoY\n  * Invalidation: Sales growth <50% YoY 2 quarters, Copper -20%, USD/IRR >2.3M\n- 🔴 Bear: probability 0.15, target FMLI 18,800 / TEDPIX <7,500\n  * Key triggers: copper breakdown <$3.50/lb, volume collapse + breadth <300\n  * Confirmation: FMLI <18,800 on expanding volume, Equal-weight leads down\n  * Invalidation: Price rebounds >20,000 with volume, Fundamentals re-accelerate\n- Probabilities sum to 1.0 across all runs",
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "66f3821b7e3ec97a04dd"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."
