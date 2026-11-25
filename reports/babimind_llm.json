@@ -3,91 +3,9 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "id": "babimind_market_analysis_20261125",
-    "timestamp": "2026-11-25T18:22:08.330336+00:00",
-    "pipeline_version": "1.7",
-    "model": "BabiMind",
-    "analysis": {
-      "executive_summary": [
-        "1. Graph Intelligence regime: bullish (score 1.0, confidence 0.75) - highest confidence since May 2026",
-        "2. TEDPIX trend: 8,673,662 (+0.96%) on 2026-11-25, within 2026 range 8,666,908-8,690,244",
-        "3. Copper sensitivity: FMLI sales growth 262% YoY q1 1405, price 19,950 rial on 2026-06-04",
-        "4. Option market: 281 contracts analyzed, top liquidity in Shestā (ضستا6054) call 3250 strike, 108,345,45 volume, 7,074,849 OI",
-        "5. Sector rotation: Technology/AI (+2.99%), Metals/Metals Mining (+2.87%), Energy (+2.42%) leading; Financials (-0.07%), Insurance (-0.07%) lagging",
-        "6. Money flow: Real-money net buying requires ≥3 sessions confirmation; legal-person behavior over 1/5/10/20 sessions under analysis",
-        "7. Source health: 184/274 checked (67.2% ok), 30 unavailable, 60 error - TSETMC CDN Market Watch ok, Codal unavailable",
-        "8. Political-economy: Pezeshkian model as scenario layer only; no certainty claimed; official role vs actual influence distinguished",
-        "9. Global variables: Oil, gas, copper, steel tracked; China demand, US conditions, DXY, inventories, supply geopolitical shipping risks mapped via Economic Graph",
-        "10. Missing data policy: MISSING_IS_NOT_ZERO - gaps explicitly reported rather than filled"
-      ]
-    },
-    "market_regime": "Bull / Transition",
-    "evidence": [
-      {
-        "observation": "Graph Intelligence score 1.0, confidence 0.75, regime bullish",
-        "source": "reports/babimind_graph.json",
-        "timestamp": "2026-11-25T18:21:57.129226+00:00",
-        "confidence": "🟡 medium",
-        "note": "Graph score maximum; confidence medium due to limited evidence lowering precision rather than fabricating"
-      },
-      {
-        "observation": "TEDPIX 8,673,662 (+0.96%), highest 8,690,244, lowest 8,666,908 on 2026-11-25",
-        "source": "kamandar_indices",
-        "timestamp": "2026-11-25T18:10:20.161149+00:00",
-        "confidence": "🟢 high",
-        "note": "Official TSE data via kamandar crawl; within 2026 range 8,666,908-8,690,244"
-      },
-      {
-        "observation": "FMLI q1 1405 sales 663,951,296 million rial, ytd 2,475,226,320 million rial, q1 EPS 691 rial, q1 profit growth YoY 262%, q1 operating revenue growth YoY 183%, q1 gross profit growth YoY 247%",
-        "source": "reports/babimind_pipeline.json",
-        "timestamp": "2026-09-04",
-        "confidence": "🟡 medium",
-        "note": "Last price 19,950 rial on 2026-06-04; sales volume-led expansion thesis"
-      },
-      {
-        "observation": "Option market: 281 records, top liquidity Shestā (ضستا6054) call 3250 strike, last 4.0, volume 10,834,545, OI 7,074,849, bid 4.0, ask 5.0, status OTM",
-        "source": "reports/option_market_watch_summary.json",
-        "timestamp": "2026-11-25T18:21:05.104836+00:00",
-        "confidence": "🟡 medium",
-        "note": "IV/greeks not synchronized; suitable for chain structure, liquidity and OI analysis only"
-      },
-      {
-        "observation": "Sector performance: Technology/AI +2.99%, Metals/Metals Mining +2.87%, Energy +2.42% leading; Financials -0.07%, Insurance -0.07% lagging",
-        "source": "kamandar_indices",
-        "timestamp": "2026-11-25T18:10:20.161149+00:00",
-        "confidence": "🟡 medium",
-        "note": "23 industry indices; weights based on market breadth"
-      },
-      {
-        "observation": "Money flow: Real-money net buying requires ≥3 sessions confirmation; legal-person behavior analyzed over 1/5/10/20 sessions where data exists",
-        "source": "reports/babimind_pipeline.json",
-        "timestamp": "2026-11-25T18:22:08.330336+00:00",
-        "confidence": "🟡 medium",
-        "note": "Real-money flow alone cannot label move as smart money; combine with volume, value, buyer power, persistence"
-      },
-      {
-        "observation": "Source health: 184/274 checked (67.2% ok), 30 unavailable, 60 error; TSETMC CDN Market Watch ok, Codal unavailable, Central Bank of Iran ok",
-        "source": "reports/babimind_source_health.json",
-        "timestamp": "2026-11-25T18:21:06.227761+00:00",
-        "confidence": "🟡 medium",
-        "note": "30 unavailable sources explicitly reported; no data filled as zero"
-      },
-      {
-        "observation": "Pezeshkian model: scenario/layer only, not certainty; official role distinguished from actual influence; time-aware forecasts preserved",
-        "source": "reports/babimind_pipeline.json",
-        "timestamp": "2026-11-25T18:22:08.330336+00:00",
-        "confidence": "🟡 medium",
-        "note": "Distinguish official role from actual influence; preserve time-aware forecasts; model as scenario not certainty"
-      }
-    ],
-    "macro": {
-      "dollar": "USD/IRR not directly observed; NIMA ~2.0-2.2M managed regime referenced in memory scenarios; no direct observation on 2026-11-25",
-      "gold": "No direct gold price observation on 2026-11-25; tracked via global sources (World Gold Council, LBMA) with confidence per source health",
-      "rates": "No direct rate observation; memory scenarios reference NIMA ~2.0-2.2M, gasoline subsidy maintained, no VAT hike as catalysts",
-      "inflation": "No direct inflation observation; memory scenarios reference gasoline subsidy maintained, no VAT hike as catalysts; CBI data ok but no direct figure",
-      "liquidity": "No direct liquidity observation; memory scenarios reference steady sales growth 100%+ YoY, stable copper $4.00-4.50, managed FX regime",
-      "oil": "No direct oil price observation on 2026-11-25; tracked via global sources (IEA, EIA, JODI, Kpler, Vortexa) with confidence per source health; Brent/WTI not observed",
-      "policy": "No direct policy observation; memory scenarios reference fiscal relief: gasoline subsidy maintained, no VAT hike; no new sanctions escalation as catalyst"
-    }
+    "report_type": "BabiMind Web Research & Decision Report",
+    "generated_at": "2026-11-25T19:23Z (pipeline 1.7)",
+    "language": "fa",
+    "integrity_note": "این گزارش تصمیم‌یار است، نه قطعیت. قیمت/آمار/جریان پول/فلو/Greek ساخته نشده؛ دادهٔ نبوده = صفر فرض نشده. شواهد، استنتاج، سناریو و تصمیم از هم جدا شده‌اند."
   }
 }
