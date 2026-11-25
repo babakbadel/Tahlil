@@ -3,401 +3,150 @@
   "provider": "openrouter",
   "model": "openrouter/free",
   "analysis": {
-    "report_metadata": {
-      "agent": "BabiMind Web Research & Decision Agent",
-      "generated_at": "2026-11-24T20:21:41Z",
-      "pipeline_version": "1.7",
-      "evidence_mode": "repository_snapshot_only",
-      "live_web_search_performed": false,
-      "integrity_note": "این گزارش فقط بر پایهٔ شواهد موجود در مخزن (reports/*.json، data/raw/*.json، memory/) تولید شده است. هیچ جست‌وجوی وب زنده‌ای در این اجرا انجام نشده و هیچ عدد، قیمت، جریان پول یا خبری ساخته نشده است. نبودِ داده = صفر تلقی نشده است."
-    },
-    "executive_summary": [
-      "شاخص کل ۸٬۵۹۱٬۴۹۹ واحد با +۲٫۴۰٪ (۳ آذر ۱۴۰۵) — بالاترین روز ۸٬۵۹۷٬۸۴۸ و پایین‌ترین ۸٬۵۵۷٬۰۱۷؛ رژیم صعودیِ بزرگ‌محور (Kamandar indices، 2026-11-24T20:08:55Z، 🟢).",
-      "هم‌وزن ۲٬۵۸۰٬۹۵۵ با +۲٫۰۰٪ — کمتر از شاخص کل؛ یعنی رهبری بازار در دست شرکت‌های بزرگ است، نه عموم نمادها (🟢).",
-      "عرض بازار مثبت: ۵۴۶ مثبت / ۶۶ منفی / ۲ بدون تغییر (مجموع ۶۱۴) در اسنپ‌شات لحظه‌ای؛ صف خرید ۴۰۱ در برابر صف فروش ۹۱ (🟡 به‌دلیل تعارض با گزارش روزانه).",
-      "تعارض عرض بازار: صفحهٔ گزارش روزانه ۷۵۷ مثبت / ۱۰۹ منفی را ثبت کرده و صفحهٔ شاخص‌ها ۵۴۶/۶۶ را؛ هر دو برای ۱۴۰۵-۰۹-۰۳. این تعارض حل‌نشده باقی می‌ماند (🔴).",
-      "ارزش معاملات خرد ۳۱۶٬۱۹۶٬۱۰۰٬۰۰۰٬۰۰۰ ریال برای ۱۴۰۵-۰۹-۰۳ (Kamandar daily report، 🟡) — تأیید نقدینگی بالا، اما بدون سری زمانی ۵/۲۰ روزه.",
-      "تز فملی در مخزن کهنه است: قیمت مرجع ۱۹٬۹۵۰ ریال (۱۴۰۵-۰۶-۰۴) در برابر قیمت فعلی ۲۶٬۱۴۰ ریال (۱۴۰۵-۰۹-۰۳)؛ محدودهٔ accumulation و risk line دیگر معتبر نیستند (🔴).",
-      "جریان پول حقیقی/قانونی در این اجرا قابل استخراج نبود (TSETMC Client Type و Funds در دسترس‌اند اما مقداری در شواهد نیست) ⇒ لایهٔ ۱۰٪ امتیاز عملاً بدون داده است (🔴).",
-      "لایهٔ Forecasting و Decision در model_stage_status هر دو not_connected‌اند ⇒ هیچ خروجی مدل‌سنجیده‌ای وجود ندارد؛ تصمیم زیر تصمیم‌یار است، نه پیش‌بینی (🟡).",
-      "کالای جهانی: برنت بالای ۱۰۰ دلار و ریسک هرمز/محاصره در خبرها، اما global_market_snapshot وضعیت pending_upstream_data دارد ⇒ نگاشت جهانی به صنعت انجام‌نشده (🔴).",
-      "پوشش منبع: ۱۸۶ سالم / ۲۹ ناموجود / ۵۹ خطا از ۲۷۴؛ Codal، TSE Gateway، IME و مرکز آمار ایران ناموجود ⇒ اولویت شواهد رسمی تأمین نشد (🟡)."
+    "report_type": "babiMind_market_report",
+    "generated_at": "2026-11-25T14:59:55+00:00",
+    "model": "BabiMind",
+    "pipeline_version": "1.7",
+    "evidence_base": [
+      "reports/babimind_pipeline.json",
+      "reports/babimind_graph.json",
+      "reports/babimind_memory_context.json",
+      "reports/babimind_source_health.json",
+      "reports/babimind_factor_coverage.json",
+      "reports/babimind_signal_weights.json",
+      "data/raw/kamandar_market_report.json",
+      "data/raw/kamandar_indices.json",
+      "data/raw/kamandar_stocks.json",
+      "data/raw/kamandar_funds.json",
+      "data/raw/kamandar_options.json",
+      "data/raw/kamandar_options_top_put.json",
+      "data/raw/brs_options_snapshot.json",
+      "data/raw/option_market_watch_snapshot.json",
+      "data/raw/tse_option_snapshot.json",
+      "data/raw/finpy_tse_snapshot.json",
+      "artifacts/babimind_global_market_snapshot.json",
+      "artifacts/babimind_daily_economic_news.json",
+      "artifacts/babimind_pezeshkian_news.json",
+      "memory/news-daily-latest.md"
     ],
-    "market_regime": {
-      "label": "Bull (large-cap led) / Transition",
-      "confidence": "🟡 medium",
-      "reasoning": "شاخص کل +۲٫۴۰٪ در برابر هم‌وزن +۲٫۰۰٪، ۳۰ شرکت بزرگ +۲٫۳۴٪ و ۵۰ شرکت فعال +۲٫۴۶٪: صعود واقعی است اما به‌طور نامتوازن در بزرگ‌ها متمرکز شده. هم‌وزن مثبت (نه منفی) مانع از دسته‌بندی Bear است، ولی سبقت نگرفتن آن از کل، نشانهٔ Transition است نه Bull کامل."
-    },
+    "executive_summary": [
+      {
+        "finding": "TEDPIX 8,591,499 (+2.40%), Equal-weight 2,580,955 (+2.00%), Industry 8,459,860 (+2.49%) — broad rally across cap-weighted and equal-weighted indices.",
+        "source": "kamandar_indices.json",
+        "collected_at": "2026-11-25T14:48:36.986498+00:00",
+        "confidence": "🟡 medium"
+      },
+      {
+        "finding": "Market breadth strongly positive: 546 advancers vs 66 decliners, 2 unchanged; net excitement positive.",
+        "source": "kamandar_indices.json raw_text",
+        "collected_at": "2026-11-25T14:48:36+00:00",
+        "confidence": "🟢 high"
+      },
+      {
+        "finding": "Graph Intelligence regime: bullish, graph_score 1.0, graph_confidence 0.75, driven by market-watch, USD/IRR, and intermarket rotation signals.",
+        "source": "reports/babimind_graph.json",
+        "collected_at": "2026-11-25T14:59:53.529290+00:00",
+        "confidence": "🟡 medium"
+      },
+      {
+        "finding": "فملی (FMLI) at 26,140 rial (+2.99%, +760) on Kamandar stocks; copper-linked leader, high retail/legal attention.",
+        "source": "data/raw/kamandar_stocks.json",
+        "collected_at": "2026-11-25T14:49:35.049129+00:00",
+        "confidence": "🟡 medium"
+      },
+      {
+        "finding": "Critical data missing: real/legal money flow (Client Type) quantities, fund portfolio changes, precise FX/gold/coin prices, 5/20-day industry flow series. TSE Official Gateway and Codal unavailable/timed out.",
+        "source": "reports/babimind_source_health.json, reports/babimind_memory_context.json",
+        "collected_at": "2026-11-25T14:59:02+00:00",
+        "confidence": "🔴 low"
+      },
+      {
+        "finding": "Oil price conflicting across news: Brent reported $87.54–$92+ in same digest; supply-glut fears vs Hormuz disruption risk not resolved.",
+        "source": "artifacts/babimind_daily_economic_news.json",
+        "collected_at": "2026-11-25 14:59 UTC",
+        "confidence": "🔴 low"
+      },
+      {
+        "finding": "Pezeshkian political-economy news: economic pressure, sanctions, gasoline subsidy risk, trade down 25–35% per administration statements; treated as scenario layer, not certainty.",
+        "source": "artifacts/babimind_pezeshkian_news.json",
+        "collected_at": "2026-09-09T12:41:06+00:00",
+        "confidence": "🟡 medium"
+      },
+      {
+        "finding": "Options universe: 281 contracts (BRS snapshot), top underlyings خساپا, خودرو, شپنا, فملي, وبملت. Many contracts score 100 but decision is REVIEW_REQUIRED; IV/Greeks partially missing in some sources.",
+        "source": "data/raw/brs_options_snapshot.json, reports/options_babimind_ranked.json",
+        "collected_at": "2026-11-25T14:58:59.237402+00:00",
+        "confidence": "🟡 medium"
+      },
+      {
+        "finding": "Kamandar top puts broadly declining (−13% to −93%), consistent with today's rally; put writers under pressure or long puts being unwound.",
+        "source": "data/raw/kamandar_options_top_put.json",
+        "collected_at": "2026-11-25T14:52:23.554179+00:00",
+        "confidence": "🟡 medium"
+      },
+      {
+        "finding": "Historical memory scenarios (latest run 2026-11-24): Bull 0.40 (FMLI 28,000–30,000 / TEDPIX >8,800), Base 0.45 (FMLI 25,000–27,500 / TEDPIX 8,354–8,597), Bear 0.15 (FMLI <24,000 / TEDPIX <8,354). Probabilities sum to 1.0.",
+        "source": "reports/babimind_memory_context.json",
+        "collected_at": "2026-11-24T20:22:44+00:00",
+        "confidence": "🟡 medium"
+      }
+    ],
+    "market_regime": "Bull (broad participation, equal-weight +2.00%, breadth 546/66); caution: missing real/legal flow and conflicting oil keep it from 'Shock' or high-conviction Bull.",
     "evidence": [
       {
-        "observation": "شاخص کل ۸٬۵۹۱٬۴۹۹ (+۲٫۴۰٪، +۲۰۱٬۶۸۳)",
-        "source": "Kamandar /app/market/indices",
-        "timestamp": "2026-11-24T20:08:55Z (جلسهٔ ۱۴۰۵-۰۹-۰۳)",
-        "confidence": "🟢"
+        "observation": "TEDPIX close 8,591,499, high 8,597,848, low 8,557,017, change +201,683 (+2.40%).",
+        "source": "kamandar_indices.json",
+        "timestamp": "2026-11-25T14:48:36.986498+00:00",
+        "confidence": "🟡 medium"
       },
       {
-        "observation": "هم‌وزن ۲٬۵۸۰٬۹۵۵ (+۲٫۰۰٪) — عقب‌تر از کل",
-        "source": "Kamandar indices",
-        "timestamp": "2026-11-24T20:08:55Z",
-        "confidence": "🟢"
+        "observation": "Equal-weight index 2,580,955 (+2.00%); Value index 1,418,016 (+2.40%); Top-30 index 574,602 (+2.34%).",
+        "source": "kamandar_indices.json",
+        "timestamp": "2026-11-25T14:48:36+00:00",
+        "confidence": "🟡 medium"
       },
       {
-        "observation": "توزیع تغییر قیمت: ۵۴۶ مثبت / ۶۶ منفی / ۲ بدون تغییر",
-        "source": "Kamandar indices (raw_text)",
-        "timestamp": "2026-11-24T20:08:55Z",
-        "confidence": "🟡 (تعارض با ۷۵۷/۱۰۹ در گزارش روزانه)"
+        "observation": "Industry volume leaders: خودرو 16.67B, بانكها 13.575B, فلزات اساسي 7.732B, محصولات شيميايي 2.625B, سرمايه گذاريها 2.256B.",
+        "source": "kamandar_indices.json",
+        "timestamp": "2026-11-25T14:48:36+00:00",
+        "confidence": "🟡 medium"
       },
       {
-        "observation": "صف خرید ۴۰۱ / صف فروش ۹۱؛ ارزش معاملات خرد ۳۱۶٬۱۹۶٬۱۰۰٬۰۰۰٬۰۰۰ ریال",
-        "source": "Kamandar market-report/1405-09-03",
-        "timestamp": "2026-11-24T20:07:14Z",
-        "confidence": "🟡"
+        "observation": "Top industry gainers: محصولات کامپيوتري الكترونيكي +3.00%, خرده فروشي +2.99%, فني مهندسي +2.99%, محصولات چرمي +2.98%, وسايل ارتباطي +2.97%.",
+        "source": "kamandar_indices.json",
+        "timestamp": "2026-11-25T14:48:36+00:00",
+        "confidence": "🟡 medium"
       },
       {
-        "observation": "فملی ۲۶٬۱۴۰ (+۷۶۰، +۲٫۹۹٪)؛ فولاد ۵٬۲۷۰ (+۲٫۹۳٪)؛ وبملت ۱٬۵۴۰ (+۲٫۹۴٪)؛ شپدیس ۱۴٬۶۵۰ (+۴٫۲۷٪)",
-        "source": "Kamandar /app/market/stocks",
-        "timestamp": "2026-11-24T20:10:10Z",
-        "confidence": "🟢"
+        "observation": "فملی 26,140 (+760, +2.99%); وبملت 1,540 (+44, +2.94%); خودرو 786 (+5, +0.64%); شپنا 12,920 (+30, +0.23%); خساپا 685 (+19, +2.85%).",
+        "source": "data/raw/kamandar_stocks.json",
+        "timestamp": "2026-11-25T14:49:35.049129+00:00",
+        "confidence": "🟡 medium"
       },
       {
-        "observation": "آلومینا ۳۴۸٬۷۰۰ (−۲٫۹۸٪)؛ فسوژ ۴۳٬۰۱۰ (−۲٫۹۸٪)؛ غزر ۸٬۱۹۰ (−۲٫۹۶٪)؛ منسوجات شاخص −۲٫۸۰٪",
-        "source": "Kamandar stocks / indices",
-        "timestamp": "2026-11-24T20:10:10Z",
-        "confidence": "🟢"
+        "observation": "TSETMC CDN Market Watch, Index, Funds, Client Type, Market Overview, Messages, Shareholders, Price History all HTTP 200 (latency ~10–20s). TSE Official Gateway, Codal, Statistical Center of Iran unavailable.",
+        "source": "reports/babimind_source_health.json",
+        "timestamp": "2026-11-25T14:59:02.009856+00:00",
+        "confidence": "🟢 high"
       },
       {
-        "observation": "فملی: فروش ماه ۶۶۳٬۹۵۱٬۲۹۶ م.ر، فروش YTD ۲٬۴۷۵٬۲۲۶٬۳۲۰ م.ر، EPS ۶۹۱، رشد سود ۲۶۲٪، رشد درآمد ۱۸۳٪",
-        "source": "reports/babimind_pipeline.json → symbol_theses (Codal-derived, ۱۴۰۵-۰۵)",
-        "timestamp": "updated_at 2026-09-04",
-        "confidence": "🟡 (کهنه؛ Codal در این اجرا ناموجود)"
+        "observation": "Finpy-tse and tse-option GitHub adapters timed out (20s/60s); no fresh TSETMC price history or Greeks from those channels.",
+        "source": "data/raw/finpy_tse_snapshot.json, data/raw/tse_option_snapshot.json",
+        "timestamp": "2026-11-25",
+        "confidence": "🔴 low"
       },
       {
-        "observation": "graph_regime bullish، graph_score 1.0، graph_confidence 0.75، correlation_penalty 0.4074",
-        "source": "reports/babimind_graph.json",
-        "timestamp": "2026-11-24T20:21:29Z",
-        "confidence": "🟡 (ساختاری، نه قیمتی)"
-      },
-      {
-        "observation": "فورکست و دیکشنری not_connected",
-        "source": "reports/babimind_model_stage_status.json",
-        "timestamp": "2026-11-24T20:21:30Z",
-        "confidence": "🟢"
+        "observation": "Global market snapshot status: pending_upstream_data; energy-shock state pending; no fabricated commodity values used.",
+        "source": "artifacts/babimind_global_market_snapshot.json",
+        "timestamp": "2026-11-25T14:59:50.245008+00:00",
+        "confidence": "🔴 low"
       }
     ],
     "macro": {
-      "dollar": "خبرها از رکوردشکنی دلار آزاد (۲٫۰ تا ۲٫۲ میلیون ریال، اوت–سپتامبر ۲۰۲۶) حکایت دارند؛ مقدار لحظه‌ای در شواهد نیست ⇒ missing، نه صفر (🔴).",
-      "gold": "World Gold Council و LBMA سالم‌اند اما عددی در شواهد نیست (🔴).",
-      "rates": "نرخ بین‌بانکی روی ۲۴٪ قفل شده (خبر ۳۱ اکتبر ۲۰۲۶، 🟡)؛ نرخ مصوب بانکی در شواهد نیست.",
-      "inflation": "همتی از تورم ۸۸٪ی و رشد نقدینگی مهر >۵۰٪ (۵۰٫۹٪) سخن گفته (خبر، 🟡)؛ دادهٔ رسمی مرکز آمار ایران ناموجود (SSL).",
-      "liquidity": "رشد نقدینگی >۵۰٪ و ناترازی بانک‌ها به‌عنوان مانع مهار (خبر، 🟡).",
-      "oil": "برنت بالای ۱۰۰ دلار، حمله به نفتکش‌ها در هرمز، محاصرهٔ آمریکا و خالی‌بودن ترمینال‌های ایران — اما در ۲۴ نوامبر «Oil Holds Decline on Signs of Continuing US-Iran Diplomacy» (🟡).",
-      "policy": "سیگنال‌های دیپلماسی آمریکا–ایران در ۲۴ نوامبر (بلومبرگ/فورچون/رویترز) + احتمال افزایش قیمت بنزین (پزشکیان، ۲۸ اوت ۲۰۲۶) ⇒ ریسک تورمی/هزینه‌ای (🟡).",
-      "caveat": "همهٔ موارد بالا خبر-شاهدند، نه دادهٔ رسمی. CBI سالم است اما عددی استخراج نشده؛ IME، بورس انرژی و گمرک ناموجود."
+      "dollar_rial": "Missing precise value. CBI source HTTP 200 but no number extracted; Kamandar does not publish live USD/IRR in crawled indices. News reports rial weakness historically but no current figure.",
+      "confidence": "🔴 low"
     },
-    "industry_rotation": {
-      "1_day": {
-        "leaders": [
-          "محصولات کامپیوتری +۳٫۰۰٪",
-          "خرده‌فروشی +۲٫۹۹٪",
-          "فنی‌مهندسی +۲٫۹۹٪",
-          "چرمی +۲٫۹۸٪",
-          "وسایل ارتباطی +۲٫۹۷٪",
-          "انتشار و چاپ +۲٫۹۷٪",
-          "کانه فلزی +۲٫۹۲٪",
-          "فلزات اساسی +۲٫۸۶٪"
-        ],
-        "laggards": [
-          "منسوجات −۲٫۸۰٪",
-          "محصولات چوبی −۰٫۴۰٪",
-          "سایر مالی −۰٫۲۸٪",
-          "کاشی و سرامیک −۰٫۲۵٪",
-          "فراورده نفتی +۰٫۷۳٪",
-          "بانک‌ها +۱٫۷۵٪"
-        ]
-      },
-      "5_day": "در شواهد موجود نیست (missing، نه صفر).",
-      "20_day": "در شواهد موجود نیست (missing، نه صفر).",
-      "volume_note": "حجم معاملات صنعت: خودرو ۱۶٫۶۷B، بانک‌ها ۱۳٫۵۷۵B، فلزات اساسی ۷٫۷۳۲B، شیمیایی ۲٫۶۲۵B، سرمایه‌گذاری ۲٫۲۵۶B، نفتی ۱٫۹۲۸B (واحد B در منبع مبهم است ⇒ 🟡).",
-      "conflict": "دو ردیف «کاشی و سرامیک» (+۲٫۳۳٪ و −۰٫۲۵٪) و دو ردیف «حمل و نقل» (+۱٫۶۹٪ و ۰٫۰۰٪) در همان صفحه ⇒ تکرار/تعارض منبع (🔴)."
-    },
-    "symbols": {
-      "opportunities": [
-        {
-          "symbol": "فملی",
-          "price": 26140,
-          "chg_pct": 2.99,
-          "evidence": "قیمت + تز بنیادی + رهبری فلزات",
-          "confidence": "🟡"
-        },
-        {
-          "symbol": "وبملت",
-          "price": 1540,
-          "chg_pct": 2.94,
-          "evidence": "بیشترین ارزش معامله + بانک‌ها لگ‌دار (catch-up)",
-          "confidence": "🟡"
-        },
-        {
-          "symbol": "فولاد",
-          "price": 5270,
-          "chg_pct": 2.93,
-          "evidence": "فلزات اساسی +۲٫۸۶٪",
-          "confidence": "🟡"
-        },
-        {
-          "symbol": "شپدیس",
-          "price": 14650,
-          "chg_pct": 4.27,
-          "evidence": "پیشتاز ارزش معامله",
-          "confidence": "🟡"
-        }
-      ],
-      "risks": [
-        {
-          "symbol": "آلومینا",
-          "price": 348700,
-          "chg_pct": -2.98,
-          "evidence": "آلومینیوم + انرژی‌بر بودن + افت بزرگ",
-          "confidence": "🟡"
-        },
-        {
-          "symbol": "فسوژ",
-          "price": 43010,
-          "chg_pct": -2.98,
-          "evidence": "افت سنگین",
-          "confidence": "🟡"
-        },
-        {
-          "symbol": "غزر",
-          "price": 8190,
-          "chg_pct": -2.96,
-          "evidence": "افت سنگین",
-          "confidence": "🟡"
-        },
-        {
-          "symbol": "منسوجات (صنعت)",
-          "chg_pct": -2.8,
-          "evidence": "بدترین صنعت ۱ روزه",
-          "confidence": "🟢"
-        }
-      ],
-      "unresolved": "۳۱۶ نماد در فهرست‌های gainers/losers نیامدند (بدون معامله یا ارزش کمتر از ۵۰٪ نمادهای معامله‌شده) ⇒ missing، نه صفر."
-    },
-    "funds_legal_smart_money": {
-      "verdict": "غیرقابل اتکا در این اجرا",
-      "detail": "TSETMC Client Type، TSETMC Funds و Shareholders همگی status=ok اما هیچ مقدار عددی در شواهد این اجرا نیست. Kamandar فقط زمینه (breadth/queues/retail value) می‌دهد. بر اساس قانون «هرگز حرکت را از جریان حقیقی تنها smart money ننامید»، هیچ برچسب smart money صادر نمی‌شود (🔴).",
-      "retail_context": "ارزش معاملات خرد ۳۱۶٫۲ همت ریال + صف خرید ۴۰۱ در برابر ۹۱ ⇒ فشار تقاضای خرد در تابلو، اما بدون تأیید Client Type."
-    },
-    "options": {
-      "universe_status": "partial — منبع BRS ۱۴۱۷ رکورد/۳۰ underlying (event_time 2026-11-24T20:20:31Z، live)؛ tse-option ingest = error (timeout)؛ ۳ از ۶ provider سالم.",
-      "hard_rule": "قراردادهای منقضی و نزدیک‌به‌انقضا (DTE ≈ 0.15 مثل ضخود9055/9056 و طملی9044/9045) از جهان فعال حذف شدند.",
-      "liquidity_leaders": [
-        "ضستا6054 (شستا 3250، ۴ روز)",
-        "ضخود7138 (خودرو 900، ۳۲ روز)",
-        "ضملت9041 (وبملت 1500، ۱۴ روز)",
-        "ضملی1004 (فملی 24000، ۳۵ روز)"
-      ],
-      "best_risk_reward_liquid": [
-        {
-          "symbol": "ضملی1004",
-          "type": "CALL",
-          "strike": 24000,
-          "price": 4640,
-          "iv": 0.698,
-          "delta": 0.792,
-          "breakeven": 28640,
-          "note": "+۱۰٪ → +۲۹٫۹٪ ROI؛ −۱۰٪ → −۸۷٫۸٪ (تقارن نامطلوب)"
-        },
-        {
-          "symbol": "ضخود1320",
-          "type": "CALL",
-          "strike": 700,
-          "price": 125,
-          "iv": 0.588,
-          "delta": 0.817,
-          "breakeven": 825,
-          "note": "+۱۰٪ → +۳۷٫۵٪ ROI"
-        },
-        {
-          "symbol": "ضملت1021",
-          "type": "CALL",
-          "strike": 1500,
-          "price": 173,
-          "iv": 0.438,
-          "delta": 0.726,
-          "breakeven": 1673,
-          "note": "ارزان‌ترین IV در بین لیکوییدها"
-        }
-      ],
-      "excluded": "رتبه‌های ۱ تا ۳ risk_adjusted (طشنا1311، طسپا1053، طشنا9006) همگی volume=0، OI≈۰ و IV=null دارند ⇒ درجهٔ «data_completeness» است، نه سیگنال معاملاتی؛ از توصیه حذف شدند.",
-      "conflict": "underlying_price فملی در BRS = 27٬295.67 و 27٬906.37 در برابر 26٬140 در Kamandar ⇒ تعارض قیمت پایه حل‌نشده (🔴).",
-      "warning": "این بخش ساختار زنجیره/نقدینگی/OI است؛ رتبه‌بندی نهایی به منبع همگام IV/Greeks نیاز دارد."
-    },
-    "scenarios": {
-      "bull": {
-        "probability": 0.4,
-        "target": "TEDPIX > ۸٬۸۰۰٬۰۰۰ / فملی ۲۸٬۰۰۰–۳۰٬۰۰۰",
-        "catalysts": [
-          "پیشرفت دیپلماسی آمریکا–ایران",
-          "تثبیت برنت > ۱۰۰ دلار",
-          "بازگشت پایدار پول حقیقی ≥ ۳ جلسه",
-          "ادامهٔ رهبری فلزات/شیمیایی"
-        ],
-        "confirmation": [
-          "شاخص > ۸٬۵۹۷٬۸۴۸ با حجم",
-          "breadth > ۶۰۰",
-          "هم‌وزن سبقت بگیرد"
-        ],
-        "invalidation": [
-          "شکست ۸٬۵۵۷٬۰۱۷",
-          "خروج حقیقی تشدید شود"
-        ]
-      },
-      "base": {
-        "probability": 0.45,
-        "target": "TEDPIX ۸٬۳۵۴٬۰۰۰–۸٬۵۹۷٬۰۰۰ / فملی ۲۵٬۰۰۰–۲۷٬۵۰۰",
-        "catalysts": [
-          "نوسان در محدودهٔ فعلی",
-          "چرخش صنعتی محدود",
-          "برنت ~۱۰۰ دلار",
-          "ژئوپلیتیک کنترل‌شده"
-        ],
-        "confirmation": [
-          "حفظ محدوده",
-          "breadth ۴۰۰–۵۵۰"
-        ],
-        "invalidation": [
-          "شکست ۸٬۳۵۴٬۰۰۷",
-          "جهش با حجم بدون پول حقیقی"
-        ]
-      },
-      "bear": {
-        "probability": 0.15,
-        "target": "TEDPIX < ۸٬۳۵۴٬۰۰۰ → ۸٬۱۳۷٬۹۶۴ / فملی < ۲۴٬۰۰۰",
-        "catalysts": [
-          "تشدید هرمز/محاصره",
-          "افت برنت",
-          "تشدید خروج حقیقی",
-          " شوک تورمی/بنزینی"
-        ],
-        "confirmation": [
-          "شکست ۸٬۳۵۴٬۰۰۷ با حجم",
-          "هم‌وزن منفی",
-          "breadth < ۲۵۰"
-        ],
-        "invalidation": [
-          "بازگشت > ۸٬۵۹۷٬۰۰۰ با حجم"
-        ]
-      },
-      "probability_sum": 1.0
-    },
-    "decision": {
-      "regime": "Bull (large-cap led) / Transition",
-      "primary_strategy": "🟢 SCALE-IN BUY",
-      "score": "65/100",
-      "score_breakdown": {
-        "technical": "12/15",
-        "tape_liquidity": "13/15",
-        "real_legal_flow": "4/10 (بدون داده)",
-        "fundamental": "14/20",
-        "industry": "8/10",
-        "macro": "6/10",
-        "commodities": "3/5",
-        "news": "2/5",
-        "political_risk": "1/5",
-        "valuation": "2/5 (بدون داده)"
-      },
-      "risk": "High",
-      "confidence": "55/100",
-      "best_industry": "فلزات اساسی",
-      "best_symbol": "فملی (با ورود پله‌ای، نه تعقیب)",
-      "highest_risk_symbol": "آلومینا",
-      "key_support": "۸٬۵۵۷٬۰۱۷ (کف روز) → ۸٬۵۱۳٬۶۶۹ → ۸٬۳۵۴٬۰۰۷",
-      "key_resistance": "۸٬۵۹۷٬۸۴۸ (سقف روز) → ۸٬۸۰۰٬۰۰۰",
-      "main_catalyst": "سیگنال دیپلماسی آمریکا–ایران + تثبیت برنت > ۱۰۰ دلار + فروش ماهانهٔ فملی",
-      "main_risk": "تشدید هرمز/محاصره و بازگشت خروج پول حقیقی",
-      "entry_trigger": "بسته‌شدن بالای ۸٬۵۹۷٬۸۴۸ با breadth > ۶۰۰ و تأیید جریان حقیقی ≥ ۳ جلسه",
-      "exit_trigger": "بسته‌شدن زیر ۸٬۵۱۳٬۶۶۹ با تشدید خروج",
-      "invalidation": "شکست ۸٬۳۵۴٬۰۰۷"
-    },
-    "actionable_strategy": {
-      "entry_zone": "شاخص ۸٬۵۵۷٬۰۰۰–۸٬۵۹۷٬۰۰۰ برای پلهٔ اول؛ فملی ۲۵٬۵۰۰–۲۶٬۱۴۰ (باز-تنظیم‌شده، تأیید نشده)",
-      "tranches": [
-        "پلهٔ ۱: ۳۰٪ پس از بسته‌شدن بالای مقاومت با حجم",
-        "پلهٔ ۲: ۳۰٪ پس از ۲ جلسهٔ تثبیت + جریان حقیقی مثبت",
-        "پلهٔ ۳: ۴۰٪ فقط پس از سبقت هم‌وزن"
-      ],
-      "stop": "زیر ۸٬۵۱۳٬۶۶۹ با حجم (ساختار بازار) — نه ۱۰٪ ثابت. برای فملی، risk line تز (۱۸٬۸۰۰) دیگر معتبر نیست و باید از ساختار فعلی باز-تنظیم شود.",
-      "targets": {
-        "t1": "۸٬۸۰۰٬۰۰۰ / فملی ۲۸٬۰۰۰",
-        "t2": "۹٬۰۰۰٬۰۰۰ / فملی ۳۰٬۰۰۰",
-        "t3": "بالاتر با تأیید جریان"
-      },
-      "rr": "بدون نقطه ورود قطعی، R/R عددی اعلام نمی‌شود (missing).",
-      "cancel": "شکست ۸٬۳۵۴٬۰۰۷ + خروج حقیقی + ضعف فلزات"
-    },
-    "conditional_playbook": [
-      "IF مقاومت ۸٬۵۹۷٬۸۴۸ بشکند + حجم گسترش یابد + جریان حقیقی ≥ ۳ جلسه مثبت بماند → THEN افزایش اعتماد صعودی و ورود پله‌ای.",
-      "IF هم‌وزن سبقت بگیرد + breadth > ۶۰۰ → THEN تأیید Bull کامل و افزایش تخصیص به فلزات/شیمیایی.",
-      "IF حمایت ۸٬۵۵۷٬۰۱۷ بشکند + خروج حقیقی تشدید شود + فلزات RS خود را از دست بدهد → THEN توقف خرید جدید و کاهش ریسک.",
-      "IF برنت < ۸۵ دلار + تشدید هرمز → THEN خروج از پالایشی‌ها و کاهش کل ریسک بازار.",
-      "IF جریان حقیقی در دسترس قرار گرفت و منفی بود → THEN کل تصمیم به WAIT/REDUCE تغییر کند (لایهٔ ۱۰٪ امتیاز خالی است)."
-    ],
-    "if_i_were_the_investor": {
-      "1_buy_or_wait": "خرید پله‌ای (SCALE-IN) روی تأیید، نه خرید یک‌جا و نه تعقیب کندل سبز طویل. اگر تأیید نیامد → WAIT.",
-      "2_holding": "HOLD با تریلینگ بر پایهٔ ساختار؛ کاهش فقط با شکست ۸٬۵۱۳٬۶۶۹.",
-      "3_priority_industry": "فلزات اساسی (حجم ۷٫۷۳۲B، +۲٫۸۶٪، کانه فلزی +۲٫۹۲٪) و محصولات شیمیایی.",
-      "4_avoid_industry": "منسوجات (−۲٫۸۰٪) و سایر مالی (−۰٫۲۸٪)؛ همچنین آلومینا/آلومینیوم به‌دلیل ریسک انرژی.",
-      "5_best_opportunity": "فملی — با اصلاح تز: قیمت فعلی ۲۶٬۱۴۰ بالای تمام اهداف تز قدیمی است، پس edge به «ادامهٔ روند + جریان» منتقل شده، نه «ارزش‌گذاری».",
-      "6_most_dangerous": "قراردادهای ۱ ریالی با IV=null و OI=0 که در رتبه‌بندی risk_adjusted صدرند؛ و هر پوزیشن متمرکز روی فملی با تز کهنه.",
-      "7_single_reversal_event": "بسته‌شدن شاخص زیر ۸٬۳۵۴٬۰۰۷ با خروج حقیقی (یا تشدید نظامی هرمز) ⇒ کل دیدگاه صعودی باطل می‌شود."
-    },
-    "anti_bias": {
-      "thesis_challenged": "تز فملی در مخزن (Bull 0.45 / Base 0.40 / Bear 0.15)",
-      "for": [
-        "رشد فروش ۱۸۳٪ و سود ۲۶۲٪ YoY",
-        "قیمت ۲۶٬۱۴۰ با +۲٫۹۹٪",
-        "رهبری فلزات اساسی",
-        "graph_regime bullish"
-      ],
-      "against": [
-        "قیمت مرجع تز ۱۹٬۹۵۰ مربوط به ۱۴۰۵-۰۶-۰۴ است و کاملاً کهنه",
-        "تمام اهداف تز (۲۰٬۵۰۰–۲۳٬۰۰۰) محقق شده‌اند ⇒ تز دیگر edge ندارد",
-        "risk line ۱۸٬۸۰۰ حدود ۲۸٪ زیر بازار است و به‌عنوان stop بی‌معنا",
-        "جریان حقیقی تأیید نشده",
-        "Codal در دسترس نیست ⇒ بنیادی تأییدنشده"
-      ],
-      "verdict": "تز را رد نمی‌کنم اما باز-تنظیم می‌کنم: edge فعلی «مومنتوم + جریان» است، نه «ارزش‌گذاری». اگر جریان حقیقی منفی شود، تز باطل است."
-    },
-    "data_gaps": [
-      "جریان حقیقی/قانونی (Client Type) — بدون مقدار",
-      "فهرست صندوق‌ها و پرتفوی آن‌ها — بدون مقدار",
-      "قيمت لحظه‌ای دلار/طلا/سکه — بدون مقدار",
-      "سری ۵ و ۲۰ روزهٔ جریان صنعت — موجود نیست",
-      "Codal، TSE Gateway، IME، مرکز آمار، گمرک — ناموجود",
-      "global_market_snapshot — pending_upstream_data",
-      "Forecasting و Decision engine — not_connected",
-      "تعارض breadth (۵۴۶/۶۶ در برابر ۷۵۷/۱۰۹) و قیمت پایهٔ فملی (۲۶٬۱۴۰ در برابر ۲۷٬۲۹۵/۲۷٬۹۰۶)"
-    ],
-    "source_health": {
-      "checked": 274,
-      "ok": 186,
-      "unavailable": 29,
-      "error": 59,
-      "data_sources": {
-        "total": 65,
-        "ok": 39,
-        "error": 14,
-        "unavailable": 12
-      },
-      "crawl_coverage": {
-        "indices": "۶۰ صفحه، ۰ خطا، depth 1",
-        "stocks": "۲۶ صفحه، ۳۴ خطا (UnicodeEncodeError روی URLهای فارسی)",
-        "funds": "۱۶ صفحه، ۴۴ خطا",
-        "options": "۴۰ صفحه، ۲۰ خطا",
-        "services": "۱۵۰ صفحه (سقف)، ممکن است محتوای JS/blocked را از دست داده باشد"
-      },
-      "implication": "پوشش ناقص است؛ هیچ ادعای «برداشت جامع» نمی‌شود."
-    },
-    "safety": "این خروجی تصمیم‌یار است، نه قطعیت. هیچ بازدهی تضمین نمی‌شود. هر عدد نیامده در شواهد، missing است نه صفر. در صورت inadequate بودن R/R، WAIT/NO TRADE ارجح است."
+    "gold_coin": "Missing precise value. World Gold Council/LBMA sources OK but no price extracted.",
+    "confidence": "🔴 low}, "
   }
 }

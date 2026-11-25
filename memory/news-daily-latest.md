@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-24 20:21 UTC
+# Daily Economic News Digest — 2026-11-25 14:59 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **10** · Total stored: **2500**
+> New items this run: **72** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Iran’s Energy Dilemma: Constraints, Repercussions, and Policy Options - Carnegie Endowment for International Peace | Carnegie Endowment for International Peace | Thu, 26 Jun 2025 07:00 |
-| oil | Can Elevated Oil Prices Drive Equinor's Upstream Profitability Higher? - TradingView | TradingView | Tue, 24 Nov 2026 16:28 |
-| geopolitics | EXCLUSIVE: Iran ships some LPG, jet fuel despite US blockade, data shows - Reuters | Reuters | Fri, 16 Oct 2026 07:00 |
-| geopolitics | Mideast Oil Exports Rebound Even as Prices Remain Elevated - The New York Times | The New York Times | Tue, 29 Sep 2026 07:00 |
-| geopolitics | Tanker incident “involving military forces” reported in Strait of Hormuz - Euronews.com | Euronews.com | Sun, 22 Nov 2026 18:07 |
-| geopolitics | US Treasury report puts Iran war on hold as Trump weighs targeting regime leaders - Israel Hayom | Israel Hayom | Tue, 24 Nov 2026 17:29 |
-| pezeshkian | Hardliners attack Pezeshkian over talks and wartime candor - Iran International | Iran International | Thu, 21 May 2026 07:00 |
-| pezeshkian | Pezeshkian floats ‘new posture’ as Iran economy strains - Iran International | Iran International | Sat, 03 Oct 2026 07:00 |
-| oil | آخرین اخبار - هزینه‌های صادرات نفت - vista.ir | vista.ir | Sun, 22 Nov 2026 21:16 |
-| macro_monetary | تورم امروز، میراث حذف ارز ۲۸۵۰۰ تومانی - vista.ir | vista.ir | Tue, 24 Nov 2026 04:40 |
-| macro_monetary | Japan to roll out gasoline subsidies amid record-high prices - The Japan Times | The Japan Times | Wed, 18 Mar 2026 07:00 |
-| oil | Oil Is Gushing Out of the Gulf. Why Are Prices Still Above $100 a Barrel? - WSJ | WSJ | Thu, 29 Oct 2026 07:00 |
-| oil | Current price of oil as of October 28, 2026 - Fortune | Fortune | Wed, 28 Oct 2026 07:00 |
-| oil | Brent Crude Oil Moves Above $100 for the First Time in 3 Months - Yahoo Finance | Yahoo Finance | Tue, 08 Sep 2026 07:00 |
-| oil | Oil jumps 2%, settles at 6-month highs on fears of escalation in Iran - Reuters | Reuters | Fri, 30 Oct 2026 07:00 |
-| oil | Oil prices jump $3 on Houthi attacks, oil spill, highest settlement since April - Reuters | Reuters | Fri, 23 Oct 2026 07:00 |
-| oil | Crude oil prices and refinery margins generally increased throughout the third quarter - U.S. Energy Information Adminis | U.S. Energy Information Administration (EIA) (.gov) | Mon, 05 Oct 2026 07:00 |
-| oil | Natural Gas and Oil Forecast: Libya Restart Keeps Oil Near Three-Month Low, Can Brent Hold $85.57? - FXEmpire | FXEmpire | Tue, 24 Nov 2026 05:51 |
-| oil | Libya and Iraq Could Be the Next Big Headache for Oil Markets - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 24 Nov 2026 15:21 |
-| oil | Oil prices rise with focus on Iran war diplomacy - Transport Topics | Transport Topics | Tue, 24 Nov 2026 13:19 |
-| oil | Current price of oil as of November 24, 2026 - Fortune | Fortune | Tue, 24 Nov 2026 16:02 |
-| oil | Oil rises $1 on Hormuz ship attacks, surplus supply outlook curbs gains - Reuters | Reuters | Tue, 24 Nov 2026 02:56 |
-| oil | Banks Hike Oil Price Forecasts on Prolonged Gulf Disruptions - EnergyNow.com | EnergyNow.com | Mon, 23 Nov 2026 22:53 |
-| oil | Brent crude oil price on Nov 25, 2026 at 5:00 PM EST - Robinhood | Robinhood | Tue, 24 Nov 2026 13:26 |
-| geopolitics | Gulf crude exports return to pre-war levels, excluding Iran - Euronews.com | Euronews.com | Mon, 05 Oct 2026 07:00 |
-| geopolitics | At Least 50 Iranian Tankers Are Stuck in the Gulf as U.S. Blockade Holds - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 06 Oct 2026 07:00 |
-| geopolitics | Iran’s Main Oil Terminals Remain Empty as US Blockade Bites - gCaptain | gCaptain | Mon, 19 Oct 2026 07:00 |
-| geopolitics | Gulf Oil Exports Rebound to Prewar Levels, Despite Iranian Attacks - The Maritime Executive | The Maritime Executive | Wed, 30 Sep 2026 07:00 |
-| geopolitics | Hormuz Negotiations Between Iran and US Stall as Oil Remains Above $116 - Energi.Media | Energi.Media | Sun, 25 Oct 2026 07:00 |
-| geopolitics | Opinion / The Battle of Hormuz Is Turning - WSJ | WSJ | Thu, 01 Oct 2026 07:00 |
-| geopolitics | Iran’s Main Oil Terminals Remain Empty as US Blockade Bites - Bloomberg | Bloomberg | Mon, 19 Oct 2026 07:00 |
-| geopolitics | Iran Loaded No Oil Onto Tankers Last Month as US Blockade Bites - Bloomberg | Bloomberg | Thu, 01 Oct 2026 07:00 |
-| geopolitics | More Oil Is Now Coming Out of the Persian Gulf Than Before the Iran War - WSJ | WSJ | Tue, 20 Oct 2026 07:00 |
-| geopolitics | Iran Considers Resuming Oil Exports Despite U.S. Expanded Iran Maritime Blockade: 5 outlets compared - NewsCord | NewsCord | Fri, 20 Nov 2026 00:08 |
-| geopolitics | Bypass the Strait of Hormuz? Why That’s Not So Easy - EnergyNow.com | EnergyNow.com | Mon, 23 Nov 2026 15:15 |
-| geopolitics | Oil Holds Decline on Signs of Continuing US-Iran Diplomacy - Bloomberg.com | Bloomberg.com | Tue, 24 Nov 2026 14:30 |
-| geopolitics | Iran war live: Houthi attack on Riyadh tower injures 11 – Saudi authorities - Al Jazeera | Al Jazeera | Tue, 24 Nov 2026 11:07 |
-| geopolitics | Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions - CNBC | CNBC | Tue, 24 Nov 2026 05:05 |
-| geopolitics | Iran War Updates: Iran developing chemical weapons, Israeli defense minister says - CBS News | CBS News | Tue, 24 Nov 2026 18:42 |
-| fx | Iran refuses to recognise national currency’s fall in free markets - Euronews.com | Euronews.com | Tue, 27 Feb 2024 08:00 |
+| oil | Global Oil Prices Continue Downward Trend This Month... Why? - news.sbs.co.kr | news.sbs.co.kr | Wed, 25 Nov 2026 01:05 |
+| oil | West Asia conflict triggered 64% crude oil price surge, compared with 29% during Ukraine war: RBI study - Moneycontrol.c | Moneycontrol.com | Wed, 25 Nov 2026 14:33 |
+| oil | Crude Oil Futures Fall Amid Profit Taking & Weak Global Cues - Rediff MoneyWiz | Rediff MoneyWiz | Wed, 25 Nov 2026 07:09 |
+| oil | Will crude oil drop below $90 a barrel soften India's inflation blow? - India Today | India Today | Wed, 25 Nov 2026 13:03 |
+| oil | IndiGo, BPCL, Asian Paints, other crude-sensitive shares rise up to 4% as Brent eases to $88 - TradingView | TradingView | Wed, 25 Nov 2026 06:47 |
+| oil | Global crude oil prices rise, Brent trades above $92 per barrel - News On AIR | News On AIR | Wed, 25 Nov 2026 14:18 |
+| oil | Oil-sensitive stocks rally up to 5% as Brent slips below $90; CEAT leads - Business Standard | Business Standard | Wed, 25 Nov 2026 06:28 |
+| oil | Oil prices fall, Brent at US$90.97 per barrel - برق الإمارات | برق الإمارات | Wed, 25 Nov 2026 09:36 |
+| oil | Europe & Africa Market Update 25 Nov - www.engine.online | www.engine.online | Wed, 25 Nov 2026 11:36 |
+| oil | Oil Prices Reportedly Rise Over 2% As Brent Settles At $91.40 - Forbes Middle East | Forbes Middle East | Tue, 24 Nov 2026 20:46 |
+| oil | Oil Prices Fall Despite Hormuz Tensions as Supply Glut Fears Overwhelm Geopolitical Risk - BigGo Finance | BigGo Finance | Wed, 25 Nov 2026 01:25 |
+| oil | Brent crude rises as surplus concerns weigh against shipping risks - Traders Union | Traders Union | Tue, 24 Nov 2026 17:28 |
+| oil | Oversupply Expectations Weigh on Market as International Oil Prices Break Key Thresholds; China's Domestic Refined Fuel  | BigGo Finance | Tue, 24 Nov 2026 23:55 |
+| oil | Crude oil prices fall 1.5% as supply glut fears offset Middle East disruption tensions; Brent below $88,... - Moneycontr | Moneycontrol.com | Wed, 25 Nov 2026 03:58 |
+| oil | Oil prices falls to 3-month low due to supply - Inspenet | Inspenet | Tue, 24 Nov 2026 15:31 |
+| oil | Oil prices fall over 1% as concerns mount over excess supply - سانا | سانا | Wed, 25 Nov 2026 07:56 |
+| oil | Oil Prices Today: Brent Crude Falls to $87.54 as Rising Global Supplies Offset Middle East Supply Disruption Fears - Kot | Kotak Neo | Wed, 25 Nov 2026 05:14 |
+| oil | Crude oil futures fall despite attacks on vessels in Strait of Hormuz - BusinessLine | BusinessLine | Wed, 25 Nov 2026 04:24 |
+| oil | Oil Prices Up - 24-11-26 - Armenpress | Armenpress | Wed, 25 Nov 2026 05:42 |
+| oil | China Goes on Oil Buying Spree as Crude Prices Slide - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 05:25 |
+| oil | Brent closed US$2.03 higher on Tuesday after reports of attacks on shipping around the Strait of Hormuz - Nation Thailan | Nation Thailand | Wed, 25 Nov 2026 00:31 |
+| oil | Oil News: Supply Glut Fears Weigh on Crude Despite Saudi Refinery Attack - FXEmpire | FXEmpire | Wed, 25 Nov 2026 11:11 |
+| oil | Oil settles up $2 as traders weigh continued Hormuz ship attacks - Reuters | Reuters | Tue, 24 Nov 2026 02:56 |
+| oil | Favorable Crude Oil Outlook: What Lies Ahead for COP, EOG & FANG? - The Globe and Mail | The Globe and Mail | Wed, 25 Nov 2026 13:42 |
+| oil | Oil Prices Slip as Global Supply Surplus Concerns Offset Middle East Shipping Risks - EnergyNow.com | EnergyNow.com | Wed, 25 Nov 2026 11:30 |
+| oil | Crude Oil Prices WTI & Brent, 25 Nov 2026: Rebound but Soft Balance — CMB News - CMB News | CMB News | Wed, 25 Nov 2026 07:37 |
+| oil | Oil prices fall as supply glut concerns offset Middle East disruption fears - CNBC | CNBC | Wed, 25 Nov 2026 05:05 |
+| oil | Oil Prices Extend Declines as Rising Supply Pressures Brent and WTI Despite Hormuz Tensions - Yahoo Finance | Yahoo Finance | Wed, 25 Nov 2026 09:54 |
+| oil | Current price of oil as of November 25, 2026 - Fortune | Fortune | Wed, 25 Nov 2026 12:57 |
+| oil | Oil rises after alleged Houthi attack on Saudi refinery - Reuters | Reuters | Wed, 25 Nov 2026 01:58 |
+| oil | Is This Tiny Oil Giant The Real Crown Jewel Of Trump's New World Order - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 24 Nov 2026 20:00 |
+| oil | Why Trump's Flagship Lithium Project Now Costs 31% More Than Planned - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 24 Nov 2026 22:00 |
+| oil | Iraq Refuses to Accept OPEC Assessment of its Production Capacity - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 24 Nov 2026 18:30 |
+| oil | US Crude Oil Inventories Inches Up as Gasoline Holds Steady - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 24 Nov 2026 22:00 |
+| oil | Oil Prices Slide Despite Mounting Threats in the Strait of Hormuz - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 05:50 |
+| oil | The Diesel Crunch Isn't Over Yet - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 01:00 |
+| geopolitics | Iran’s Offshore Oil Stockpile Nears Exhaustion as Blockade Chokes New Supply - gCaptain | gCaptain | Tue, 06 Oct 2026 07:00 |
+| geopolitics | Hormuz oil flows rise despite Iran threats against shipping - Iran International | Iran International | Sun, 27 Sep 2026 07:00 |
+| geopolitics | Evolution of Energy Markets in 2026: Supply Bottlenecks and the Search for Problem-Free Barrels - CSIS / Center for Stra | CSIS | Center for Strategic and International Studies | Tue, 24 Nov 2026 21:01 |
+| geopolitics | Iran rations electricity: How deeply are US sanctions, blockade biting? - Al Jazeera | Al Jazeera | Wed, 25 Nov 2026 10:05 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-24 20:21 UTC | 10 new | 2500 total
+NEWS_DIGEST | 2026-11-25 14:59 UTC | 72 new | 2500 total
