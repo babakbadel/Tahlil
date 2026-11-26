@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-25 19:22 UTC
+# Daily Economic News Digest — 2026-11-26 14:23 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **53** · Total stored: **2500**
+> New items this run: **76** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | Rapid inflation, rising poverty: What a ‘worst-case’ fuel scenario looks like in the Philippines - Philstar.com | Philstar.com | Tue, 24 Mar 2026 07:00 |
-| macro_monetary | Can Malaysia afford to keep subsidising fuel amid energy crunch caused by Iran war? - CNA | CNA | Tue, 31 Mar 2026 07:00 |
-| macro_monetary | Canada’s inflation rate jumps to 2.4%, fuelled by gas price shock - Financial Post | Financial Post | Mon, 20 Apr 2026 07:00 |
-| macro_monetary | Which leading economies will pay the biggest price for the Iran war? - Financial Times | Financial Times | Mon, 09 Mar 2026 07:00 |
-| macro_monetary | Fresh Labor Protests Spread as Tehran Doubles Third-Tier Gasoline Price - National Council of Resistance of Iran - NCRI | National Council of Resistance of Iran - NCRI | Mon, 07 Sep 2026 07:00 |
-| macro_monetary | Iranian rial hits record low as US blockade continues - The Jerusalem Post | The Jerusalem Post | Sat, 12 Sep 2026 07:00 |
-| macro_monetary | Inflation 2026: Gas prices drove March numbers up to levels not seen in years - LiveNOW from FOX | LiveNOW from FOX | Tue, 14 Apr 2026 07:00 |
-| macro_monetary | Brazil to Subsidize Gasoline as Lula Ramps Up Election Stimulus - Bloomberg.com | Bloomberg.com | Wed, 13 May 2026 07:00 |
-| macro_monetary | A Record Jump in U.S. Gasoline Prices Is Squeezing Consumers - The New York Times | The New York Times | Fri, 10 Apr 2026 07:00 |
-| oil | Oil prices rise after Houthis say they attacked Saudi refinery - CNBC | CNBC | Wed, 25 Nov 2026 05:05 |
-| oil | Will Oil Prices Decline as Middle East Supply Recovers? - Goldman Sachs | Goldman Sachs | Fri, 16 Oct 2026 07:00 |
-| geopolitics | The battle for Hormuz: America has the blockade, Iran has the geography - Firstpost | Firstpost | Wed, 25 Nov 2026 10:40 |
-| geopolitics | US Blockade Has Succeeded In Stalling Iranian Oil Exports For The Past Seven Weeks - i24NEWS | i24NEWS | Tue, 01 Sep 2026 07:00 |
-| geopolitics | Iran, Qatar hold Hormuz talks as US blockade squeezes Iran oil exports - France 24 | France 24 | Thu, 27 Aug 2026 07:00 |
-| geopolitics | Blockade succeeds where sanctions failed as Iran oil exports stall - Reuters | Reuters | Tue, 01 Sep 2026 07:00 |
-| geopolitics | U.S. Navy blockade slashes Iran oil exports as Trump administration shifts to economic warfare - CNBC | CNBC | Fri, 28 Aug 2026 07:00 |
-| geopolitics | Iran Shipping Update – November 23, 2026 - United Against Nuclear Iran / UANI | United Against Nuclear Iran | UANI | Mon, 23 Nov 2026 22:11 |
-| pezeshkian | Iran Oil Exports Plunge 80 Percent, Tehran's Economy Hit by U.S. Sanctions - VOI.ID | VOI.ID | Sun, 30 Aug 2026 02:37 |
-| pezeshkian | War hits Iran’s economy as food inflation surpasses 115% - IDNFinancials | IDNFinancials | Mon, 11 May 2026 07:00 |
-| pezeshkian | The economic roots of Iran’s unrest - The Japan Times | The Japan Times | Tue, 13 Jan 2026 08:00 |
-| pezeshkian | US President Trump, Iran's Pezeshkian sign deal to end war, open Hormuz strait - Khaleej Times | Khaleej Times | Thu, 18 Jun 2026 07:00 |
-| pezeshkian | Iran’s central bank warns economy may take 12 years to rebuild after war - Iran International | Iran International | Tue, 14 Apr 2026 07:00 |
-| pezeshkian | Iran War Has a “Second Front”—and Tehran Has Already Lost It - The Heritage Foundation | The Heritage Foundation | Tue, 14 Apr 2026 20:31 |
-| pezeshkian | Iran’s president defends US talks as he lays bare economic strain - Iran International | Iran International | Mon, 18 May 2026 07:00 |
-| pezeshkian | Pezeshkian says Iranians must accept inflation as country is in war - Iran International | Iran International | Mon, 18 May 2026 07:00 |
-| pezeshkian | Live Updates: Latest from Israel, Iran, and the Middle East - The Jerusalem Post | The Jerusalem Post | Fri, 21 Aug 2026 07:00 |
-| pezeshkian | Pezeshkian says Iran’s economic problems multiply as oil revenues fall - Saudi Gazette | Saudi Gazette | Sat, 15 Aug 2026 07:00 |
-| pezeshkian | Pezeshkian says Iran’s trade has fallen by 25–35% - UA.NEWS | UA.NEWS | Sat, 29 Aug 2026 07:00 |
-| pezeshkian | Iran's Ghalibaf welcomes China’s rejection of new US sanctions, Pezeshkian says US economic pressure would 'fail' - Gulf | Gulf News | Thu, 27 Aug 2026 07:00 |
-| pezeshkian | 'We will not endure' — Top Iranian leaders signal they are running out of time as economy crumbles ahead of Trump's next | Fortune | Sat, 22 Aug 2026 07:00 |
-| pezeshkian | President's economic reality check fuels Iran's US deal debate - Iran International | Iran International | Thu, 25 Jun 2026 07:00 |
-| pezeshkian | Can Iran retaliate against countries that join US ‘economic war’? - Al Jazeera | Al Jazeera | Sun, 23 Aug 2026 07:00 |
-| pezeshkian | Iran's Pezeshkian admits US sanctions are hurting economy - Middle East Eye | Middle East Eye | Sat, 29 Aug 2026 07:00 |
-| pezeshkian | Iran trade falls as Supreme Leader Khamenei urges less reliance on the U.S. dollar - CNBC | CNBC | Sat, 29 Aug 2026 07:00 |
-| pezeshkian | Shafaq News..Pezeshkian: Iran will raise gasoline prices - شفق نيوز | شفق نيوز | Fri, 28 Aug 2026 07:00 |
-| pezeshkian | Iran’s president admits country faces ‘many problems,’ insists deal is best way forward - The Times of Israel | The Times of Israel | Sun, 23 Aug 2026 07:00 |
-| pezeshkian | Iran President Pezeshkian calls for unity as US ramps up economic pressure - Al Jazeera | Al Jazeera | Sat, 05 Sep 2026 07:00 |
-| pezeshkian | Iran’s economic problems worsened as Israel-US war damaged factories, cut oil sales: Pezeshkian - TRT World | TRT World | Sat, 15 Aug 2026 10:32 |
-| pezeshkian | Oil prices are little changed after Iran's president indicates Tehran wants war to end soon - CNBC | CNBC | Fri, 21 Aug 2026 07:00 |
-| fx | Iranian Currency Slumps on Black Market After US Quits Iran Deal - VOA - Voice of America English News | VOA - Voice of America English News | Thu, 10 May 2018 07:00 |
+| macro_monetary | US petrol prices 50 percent higher than before war on Iran - Al Jazeera | Al Jazeera | Wed, 06 May 2026 07:00 |
+| macro_monetary | Retail price impacts from the Iran war are uneven but add up for US households before midterms - AP News | AP News | Sat, 17 Oct 2026 07:00 |
+| oil | Azeri Light crude oil price rises above $100 - AzerNews | AzerNews | Thu, 26 Nov 2026 06:00 |
+| oil | Fitch forecasts Brent crude at $65 a barrel in 2027 - Report.az | Report.az | Thu, 26 Nov 2026 10:33 |
+| oil | Crude Oil Rises on Fresh Middle East Supply Concerns - Business Post Nigeria | Business Post Nigeria | Thu, 26 Nov 2026 06:38 |
+| oil | Brent oil may be gearing up for its next bull run - CMC Markets | CMC Markets | Wed, 25 Nov 2026 15:33 |
+| oil | INDIA BONDS-India bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks - bfsi.economictimes.indiati | bfsi.economictimes.indiatimes.com | Thu, 26 Nov 2026 05:12 |
+| oil | Crude Oil Prices Fall Despite Strait of Hormuz Mine Strikes and Saudi Refinery Attack / Business News - https://www.busi | https://www.businesstimes-bd.com/ | Thu, 26 Nov 2026 10:54 |
+| oil | Oil Price Today: Brent Rises 3.5% to $94.61 as Gulf Supply Risks Return to Focus - Markets.com | Markets.com | Wed, 25 Nov 2026 16:02 |
+| oil | Oil prices fall as supply concerns linger after Iran claims mine strikes on ships, World News - AsiaOne.com | AsiaOne.com | Thu, 26 Nov 2026 11:56 |
+| oil | Oil prices rise on supply concerns as Iran claims mine strikes on ships - Business Standard | Business Standard | Thu, 26 Nov 2026 03:38 |
+| oil | Oil prices fall as supply concerns linger on Iran claims - RTE.ie | RTE.ie | Thu, 26 Nov 2026 11:05 |
+| oil | Oil traders downplay Persian Gulf supply risks despite rising attacks - Crypto Briefing | Crypto Briefing | Wed, 25 Nov 2026 23:06 |
+| oil | USD INR Rate: Rupee Falls 20 Paise to 92.40 Against US Dollar as Crude Oil Prices Rise and Tariff Concerns Mount - Kotak | Kotak Neo | Thu, 26 Nov 2026 06:52 |
+| oil | Shafaq News..Basrah crude prices rise as global oil climbs - شفق نيوز | شفق نيوز | Thu, 26 Nov 2026 06:36 |
+| oil | Crude Oil Prices Fall as Iran-Linked Attacks Raise Fresh Fears Over Global Crude Supply - APAC Media | APAC Media | Thu, 26 Nov 2026 11:17 |
+| oil | Shafaq News..Oil prices sink ahead of OPEC+ meeting - شفق نيوز | شفق نيوز | Wed, 25 Nov 2026 05:18 |
+| oil | Brent Crude Jumps 3.5% on Middle East Supply Fears; Gold Falls - bloomingbit | bloomingbit | Thu, 26 Nov 2026 01:02 |
+| oil | Oil Jumps Over 2% as Saudi Arabia Downs Drones Over Ras Tanura - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 15:30 |
+| oil | Crude oil prices extend gains as Houthi claims strike on Saudi refinery, tankers hit mines in Hormuz;... - Moneycontrol. | Moneycontrol.com | Thu, 26 Nov 2026 04:09 |
+| oil | Natural Gas, WTI Oil, Brent Oil Forecasts – Oil Rallies As Houthis Attack Saudi Arabia’s Ras Tanura Refinery - FXEmpire | FXEmpire | Thu, 26 Nov 2026 02:33 |
+| oil | Crude Oil Prices Global, 26 Nov 2026: Backwardation and OPEC+ Risk — CMB News - CMB News | CMB News | Thu, 26 Nov 2026 07:32 |
+| oil | Yemen's Houthi Rebels Claim Attack on Saudi Arabia's Largest Refinery; Brent Crude Surges 3.5% - BigGo Finance | BigGo Finance | Thu, 26 Nov 2026 01:25 |
+| oil | Oil prices edge up after mine strikes on ships revive supply concerns - The Globe and Mail | The Globe and Mail | Thu, 26 Nov 2026 10:08 |
+| oil | Oil Inventories Continue to Rise in the US - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 15:42 |
+| oil | Crude oil prices rise as Middle East tensions threaten supply - Crypto Briefing | Crypto Briefing | Thu, 26 Nov 2026 01:43 |
+| oil | Labor Shortages Could Derail Canada's Oil and Gas Growth Momentum - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 26 Nov 2026 01:00 |
+| oil | Why Are Oil Prices Falling to 3-Month Lows? - Yahoo Finance | Yahoo Finance | Tue, 24 Nov 2026 13:33 |
+| oil | Oil prices rise after Houthis claim attack on Saudi refinery - Reuters | Reuters | Wed, 25 Nov 2026 01:58 |
+| oil | Brent up 3.5% on 25 Nov as Houthis claim Saudi refinery attack - Nation Thailand | Nation Thailand | Thu, 26 Nov 2026 00:45 |
+| oil | Brent Crude Oil Prices Near $95 per Barrel Amid Middle East Tensions Ahead of November 29 OPEC+ Meeting - Kotak Neo | Kotak Neo | Thu, 26 Nov 2026 06:27 |
+| oil | Oil rises on supply concerns as Iran claims mine strikes on ships - Yahoo Finance | Yahoo Finance | Thu, 26 Nov 2026 06:54 |
+| oil | Oil Price Forecast: Rebound Faces a Test as OPEC+ Quota Talks Near - FXEmpire | FXEmpire | Thu, 26 Nov 2026 05:50 |
+| oil | Oil Prices Mixed as Middle East Supply Risks Clash With Growing U.S. Inventories Ahead of OPEC+ Meeting - EnergyNow.com | EnergyNow.com | Thu, 26 Nov 2026 11:25 |
+| oil | Oil prices edge up after mine strikes on ships revive supply concerns - Reuters | Reuters | Thu, 26 Nov 2026 03:08 |
+| oil | U.S.-Backed Consortium Signs Deal for Lukoil's International Oil Empire - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 20:30 |
+| oil | Brent crude oil price gains more than 5% after rebound following supply-driven declines - Traders Union | Traders Union | Wed, 25 Nov 2026 19:36 |
+| oil | Oil Traders Ignore Growing Threat to Persian Gulf Supply - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 23:00 |
+| geopolitics | Iran threatens to block all regional oil shipments if its exports halted - Latest news from Azerbaijan | Latest news from Azerbaijan | Thu, 26 Nov 2026 07:41 |
+| geopolitics | $100 oil? Prolonged Hormuz closure could spark a 1970s-style energy shock - CNBC | CNBC | Sun, 01 Mar 2026 08:00 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-25 19:22 UTC | 53 new | 2500 total
+NEWS_DIGEST | 2026-11-26 14:23 UTC | 76 new | 2500 total
