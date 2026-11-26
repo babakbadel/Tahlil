@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-26 14:23 UTC
+# Daily Economic News Digest — 2026-11-26 18:06 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **76** · Total stored: **2500**
+> New items this run: **49** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
-| macro_monetary | US petrol prices 50 percent higher than before war on Iran - Al Jazeera | Al Jazeera | Wed, 06 May 2026 07:00 |
-| macro_monetary | Retail price impacts from the Iran war are uneven but add up for US households before midterms - AP News | AP News | Sat, 17 Oct 2026 07:00 |
-| oil | Azeri Light crude oil price rises above $100 - AzerNews | AzerNews | Thu, 26 Nov 2026 06:00 |
-| oil | Fitch forecasts Brent crude at $65 a barrel in 2027 - Report.az | Report.az | Thu, 26 Nov 2026 10:33 |
-| oil | Crude Oil Rises on Fresh Middle East Supply Concerns - Business Post Nigeria | Business Post Nigeria | Thu, 26 Nov 2026 06:38 |
-| oil | Brent oil may be gearing up for its next bull run - CMC Markets | CMC Markets | Wed, 25 Nov 2026 15:33 |
-| oil | INDIA BONDS-India bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks - bfsi.economictimes.indiati | bfsi.economictimes.indiatimes.com | Thu, 26 Nov 2026 05:12 |
-| oil | Crude Oil Prices Fall Despite Strait of Hormuz Mine Strikes and Saudi Refinery Attack / Business News - https://www.busi | https://www.businesstimes-bd.com/ | Thu, 26 Nov 2026 10:54 |
-| oil | Oil Price Today: Brent Rises 3.5% to $94.61 as Gulf Supply Risks Return to Focus - Markets.com | Markets.com | Wed, 25 Nov 2026 16:02 |
-| oil | Oil prices fall as supply concerns linger after Iran claims mine strikes on ships, World News - AsiaOne.com | AsiaOne.com | Thu, 26 Nov 2026 11:56 |
-| oil | Oil prices rise on supply concerns as Iran claims mine strikes on ships - Business Standard | Business Standard | Thu, 26 Nov 2026 03:38 |
-| oil | Oil prices fall as supply concerns linger on Iran claims - RTE.ie | RTE.ie | Thu, 26 Nov 2026 11:05 |
-| oil | Oil traders downplay Persian Gulf supply risks despite rising attacks - Crypto Briefing | Crypto Briefing | Wed, 25 Nov 2026 23:06 |
-| oil | USD INR Rate: Rupee Falls 20 Paise to 92.40 Against US Dollar as Crude Oil Prices Rise and Tariff Concerns Mount - Kotak | Kotak Neo | Thu, 26 Nov 2026 06:52 |
-| oil | Shafaq News..Basrah crude prices rise as global oil climbs - شفق نيوز | شفق نيوز | Thu, 26 Nov 2026 06:36 |
-| oil | Crude Oil Prices Fall as Iran-Linked Attacks Raise Fresh Fears Over Global Crude Supply - APAC Media | APAC Media | Thu, 26 Nov 2026 11:17 |
-| oil | Shafaq News..Oil prices sink ahead of OPEC+ meeting - شفق نيوز | شفق نيوز | Wed, 25 Nov 2026 05:18 |
-| oil | Brent Crude Jumps 3.5% on Middle East Supply Fears; Gold Falls - bloomingbit | bloomingbit | Thu, 26 Nov 2026 01:02 |
-| oil | Oil Jumps Over 2% as Saudi Arabia Downs Drones Over Ras Tanura - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 15:30 |
-| oil | Crude oil prices extend gains as Houthi claims strike on Saudi refinery, tankers hit mines in Hormuz;... - Moneycontrol. | Moneycontrol.com | Thu, 26 Nov 2026 04:09 |
-| oil | Natural Gas, WTI Oil, Brent Oil Forecasts – Oil Rallies As Houthis Attack Saudi Arabia’s Ras Tanura Refinery - FXEmpire | FXEmpire | Thu, 26 Nov 2026 02:33 |
-| oil | Crude Oil Prices Global, 26 Nov 2026: Backwardation and OPEC+ Risk — CMB News - CMB News | CMB News | Thu, 26 Nov 2026 07:32 |
-| oil | Yemen's Houthi Rebels Claim Attack on Saudi Arabia's Largest Refinery; Brent Crude Surges 3.5% - BigGo Finance | BigGo Finance | Thu, 26 Nov 2026 01:25 |
-| oil | Oil prices edge up after mine strikes on ships revive supply concerns - The Globe and Mail | The Globe and Mail | Thu, 26 Nov 2026 10:08 |
-| oil | Oil Inventories Continue to Rise in the US - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 15:42 |
-| oil | Crude oil prices rise as Middle East tensions threaten supply - Crypto Briefing | Crypto Briefing | Thu, 26 Nov 2026 01:43 |
-| oil | Labor Shortages Could Derail Canada's Oil and Gas Growth Momentum - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 26 Nov 2026 01:00 |
-| oil | Why Are Oil Prices Falling to 3-Month Lows? - Yahoo Finance | Yahoo Finance | Tue, 24 Nov 2026 13:33 |
-| oil | Oil prices rise after Houthis claim attack on Saudi refinery - Reuters | Reuters | Wed, 25 Nov 2026 01:58 |
-| oil | Brent up 3.5% on 25 Nov as Houthis claim Saudi refinery attack - Nation Thailand | Nation Thailand | Thu, 26 Nov 2026 00:45 |
-| oil | Brent Crude Oil Prices Near $95 per Barrel Amid Middle East Tensions Ahead of November 29 OPEC+ Meeting - Kotak Neo | Kotak Neo | Thu, 26 Nov 2026 06:27 |
-| oil | Oil rises on supply concerns as Iran claims mine strikes on ships - Yahoo Finance | Yahoo Finance | Thu, 26 Nov 2026 06:54 |
-| oil | Oil Price Forecast: Rebound Faces a Test as OPEC+ Quota Talks Near - FXEmpire | FXEmpire | Thu, 26 Nov 2026 05:50 |
-| oil | Oil Prices Mixed as Middle East Supply Risks Clash With Growing U.S. Inventories Ahead of OPEC+ Meeting - EnergyNow.com | EnergyNow.com | Thu, 26 Nov 2026 11:25 |
-| oil | Oil prices edge up after mine strikes on ships revive supply concerns - Reuters | Reuters | Thu, 26 Nov 2026 03:08 |
-| oil | U.S.-Backed Consortium Signs Deal for Lukoil's International Oil Empire - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 20:30 |
-| oil | Brent crude oil price gains more than 5% after rebound following supply-driven declines - Traders Union | Traders Union | Wed, 25 Nov 2026 19:36 |
-| oil | Oil Traders Ignore Growing Threat to Persian Gulf Supply - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Wed, 25 Nov 2026 23:00 |
-| geopolitics | Iran threatens to block all regional oil shipments if its exports halted - Latest news from Azerbaijan | Latest news from Azerbaijan | Thu, 26 Nov 2026 07:41 |
-| geopolitics | $100 oil? Prolonged Hormuz closure could spark a 1970s-style energy shock - CNBC | CNBC | Sun, 01 Mar 2026 08:00 |
+| macro_monetary | Higher prices for gas, groceries and flights will outlast Iran war, analysts say - PBS | PBS | Tue, 16 Jun 2026 07:00 |
+| oil | Oil up after mine strikes on ships revive supply concerns - RTE.ie | RTE.ie | Thu, 26 Nov 2026 15:22 |
+| oil | Brent crude rises 1.73% to $96.25 as supply concerns return - Investify | Investify | Thu, 26 Nov 2026 15:00 |
+| oil | Goldman Sachs Raises December Brent Oil Price Forecast to $105 - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Mon, 02 Nov 2026 08:00 |
+| oil | Current price of oil as of November 2, 2026 - Fortune | Fortune | Mon, 02 Nov 2026 08:00 |
+| oil | Oil prices fall as supply concerns linger after Iran claims mine strikes on ships - KELO-AM | KELO-AM | Thu, 26 Nov 2026 07:17 |
+| oil | Oil Price Forecast: Can Brent Crude Reclaim $100 Ahead of OPEC+ Meeting? - Coinpaper | Coinpaper | Thu, 26 Nov 2026 15:10 |
+| oil | Crude Oil Price Forecast: Gulf Tensions Help Oil Prices Find a Floor - FXEmpire | FXEmpire | Thu, 26 Nov 2026 14:47 |
+| oil | Oil prices rise after mine strikes on ships revive supply concerns - Reuters | Reuters | Thu, 26 Nov 2026 03:08 |
+| oil | Oil price falls amid hope of a breakthrough to end Iran war - The Guardian | The Guardian | Mon, 02 Nov 2026 08:00 |
+| oil | Oil Prices Rebound as Middle East Supply Fears Return - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 26 Nov 2026 12:30 |
+| geopolitics | Trump's Strait of Hormuz blockade hits Iran's oil trade - DW.com | DW.com | Mon, 13 Apr 2026 07:00 |
+| geopolitics | How much will US Hormuz blockade hurt Iran, and does Tehran have an escape? - Al Jazeera | Al Jazeera | Tue, 14 Apr 2026 07:00 |
+| geopolitics | US naval blockade squeezes Iran's oil exports, forces crude onto floating storage - Reuters | Reuters | Fri, 01 May 2026 07:00 |
+| geopolitics | How the US naval blockade has bled Iran of nearly $6bn in oil revenues - Al Jazeera | Al Jazeera | Fri, 05 Jun 2026 07:00 |
+| geopolitics | Strait of Hormuz: Iran sends loaded oil tankers past US naval blockade - BBC | BBC | Wed, 17 Jun 2026 07:00 |
+| geopolitics | How the U.S. Navy Is Helping Get Oil Through the Strait of Hormuz - The New York Times | The New York Times | Wed, 19 Aug 2026 07:00 |
+| geopolitics | Iran's Oil Exports Collapse as Hormuz Standoff Drags On - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Tue, 08 Sep 2026 07:00 |
+| geopolitics | Fake Iran Tanker Highlights Uncertainty Around Hormuz Traffic - Bloomberg.com | Bloomberg.com | Mon, 23 Nov 2026 08:09 |
+| geopolitics | Iran dismisses US blockade, warns of broader confrontation - Iran International | Iran International | Wed, 25 Nov 2026 19:08 |
+| pezeshkian | US-Iran War: ‘Not going to bow our heads,’ says Pezeshkian; Iran has not compromised on any MoU clause - Livemint | Livemint | Sun, 23 Aug 2026 07:00 |
+| pezeshkian | Oil Soars as US-Iran Talks Fail to Ease Gulf Tensions - Business Post Nigeria | Business Post Nigeria | Fri, 25 Sep 2026 07:00 |
+| pezeshkian | Pezeshkian says US sanctions aim at Iran’s internal collapse - Roya News English | Roya News English | Mon, 14 Sep 2026 07:00 |
+| pezeshkian | Pezeshkian: Recent agreements have brought significant economic, trade gains to Iran - وكالة سبأ | وكالة سبأ | Wed, 01 Jul 2026 07:00 |
+| pezeshkian | Pezeshkian appoints former oil minister as adviser days after resignation - Iran International | Iran International | Tue, 06 Oct 2026 07:00 |
+| fx | Iranian rial rate in international market and Pakistan - June 17 - ARYnews.tv | ARYnews.tv | Wed, 17 Jun 2026 07:00 |
+| fx | Israel vs Iran Currency: Iranian Rial Crashes to 1.7 Million — Whose Currency is Stronger Against US Dollar, Indian Rupe | The Sunday Guardian | Sun, 01 Mar 2026 08:00 |
+| fx | Iranian rial crashes to 1.63 million per US dollar: How just having $735 now makes you a billionaire in Ir - The Economi | The Economic Times | Thu, 19 Feb 2026 08:00 |
+| fx | The dollar breaks the 192,000 toman barrier: The Iranian currency hits a new record high - صوت الإمارات | صوت الإمارات | Sat, 18 Jul 2026 07:00 |
+| fx | Iran’s currency slides to record low as savers buy dollars - WANA News Agency | WANA News Agency | Sat, 25 Feb 2023 08:00 |
+| fx | Iranian lawmaker accuses government of profiting from currency devaluation - Iran International | Iran International | Wed, 25 Dec 2024 08:00 |
+| fx | How multi-tiered currency rates corrupt Iran's banks - Iran International | Iran International | Fri, 18 Oct 2024 07:00 |
+| fx | Iran’s rial is now 1/10,000th of its value during the monarchy - Iran International | Iran International | Sun, 03 Nov 2024 07:00 |
+| fx | Was it worth it? Iranian currency tanks after failed attack on Israel - Ynetnews | Ynetnews | Tue, 16 Apr 2024 07:00 |
+| fx | US dollar hits record high of 1,060,000 rials in Iran’s market - Iran International | Iran International | Sun, 21 Sep 2025 07:00 |
+| fx | The Worst Currencies in the World - WorldAtlas | WorldAtlas | Fri, 15 May 2026 07:00 |
+| fx | Iranian rial at new low as central bank sells dollars - Free Malaysia Today | Free Malaysia Today | Sun, 04 Oct 2026 07:00 |
+| fx | Shafaq News..Iran’s Toman hits new low as dollar surpasses 128K - شفق نيوز | شفق نيوز | Sun, 14 Dec 2025 08:00 |
+| fx | Iran’s rial plunges to record low of more than 2.2 million per dollar amid renewed US-Iran strikes - Moneycontrol.com | Moneycontrol.com | Thu, 03 Sep 2026 07:00 |
+| fx | Iranian currency Rial hits 1.58 million per US dollar: Economy in freefall after war, civilian sector col - The Times of | The Times of India | Mon, 13 Apr 2026 07:00 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-26 14:23 UTC | 76 new | 2500 total
+NEWS_DIGEST | 2026-11-26 18:06 UTC | 49 new | 2500 total
