@@ -3463,7 +3463,67 @@
         "No Client Type / real-legal flow figures extracted"
       ],
       "fingerprint": "9c99a3cd60ef1660e800"
+    },
+    {
+      "timestamp": "2026-11-28T13:41:24.731752+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "prob": 0.35,
+          "target": "TEDPIX ۹٫۲–۹٫۵M / فملی ۳۰–۳۳ هزار",
+          "catalysts": [
+            "تداوم حملات حوثی/سعودی و برنت >۹۵",
+            "عدم توافق آمریکا–ایران",
+            "بازگشت پایدار پول حقیقی ≥۳ جلسه"
+          ],
+          "invalidation": [
+            "شکست ۸٬۶۷۳٬۶۶۲ با حجم",
+            "خروج حقیقی تشدید"
+          ]
+        },
+        "base": {
+          "prob": 0.45,
+          "target": "TEDPIX ۸٫۷–۹٫۰M / فملی ۲۶–۲۹ هزار",
+          "catalysts": [
+            "نفت نوسانی ۸۸–۹۸",
+            "ریسک ژئوپلیتیک مدیریت‌شده",
+            "چرخش صنعتی محدود"
+          ],
+          "invalidation": [
+            "شکست ۸٬۳۵۴٬۰۰۷",
+            "برنت <$۸۵ پایدار"
+          ]
+        },
+        "bear": {
+          "prob": 0.2,
+          "target": "TEDPIX ۸٫۳–۸٫۵M / فملی <۲۴ هزار",
+          "catalysts": [
+            "توافق آمریکا–ایران → سقوط برنت <$۸۰",
+            "گرانی بنزین → تورم → انقباض نقدینگی",
+            "خروج حقیقی + شکست ۸٬۳۵۴"
+          ],
+          "invalidation": [
+            "بازگشت >۸٬۸۹۹ با حجم",
+            "تداوم تنش انرژی"
+          ]
+        },
+        "sum": 1.0
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [
+        "جریان حقیقی/قانونی (Client Type) — بدون مقدار",
+        "قیمت لحظه‌ای دلار/طلا/سکه و نرخ سود — بدون مقدار",
+        "سری ۵/۲۰ روزهٔ جریان و RS صنعت — موجود نیست",
+        "Codal/TSE Gateway/IME/IFB/مرکز آمار — unavailable",
+        "تعارض قیمت فملی (کماندار ۲۶٬۶۲۰ در برابر آپشن ۲۸–۲۹ هزار)",
+        "breadth ۷ آذر (۵۶۱/۵۶۱) — احتمال خطای parser",
+        "global_market_snapshot و forecasting/decision engine — not_connected"
+      ],
+      "fingerprint": "caf831b732c094df5569"
     }
   ],
-  "updated_at": "2026-11-26T19:11:55.265483+00:00"
+  "updated_at": "2026-11-28T13:41:24.737693+00:00"
 }

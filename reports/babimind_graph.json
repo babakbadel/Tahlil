@@ -1,13 +1,33 @@
 {
   "model": "BabiMind",
   "component": "Graph Intelligence",
-  "generated_at": "2026-11-26T19:11:43.924505+00:00",
+  "generated_at": "2026-11-28T13:40:22.743867+00:00",
   "graph_available": true,
-  "graph_snapshot_id": "20261126T191143Z",
+  "graph_snapshot_id": "20261128T134022Z",
   "graph_score": 1.0,
   "graph_confidence": 0.75,
   "graph_regime": "bullish",
   "graph_top_drivers": [
+    {
+      "source": "github_workflows_tse_market_options_market_options_steps",
+      "target": "github_workflows_tse_market_options_steps_name",
+      "contribution": 0.75
+    },
+    {
+      "source": "github_workflows_tse_market_options_steps_with",
+      "target": "github_workflows_tse_market_options_with_python_version",
+      "contribution": 0.75
+    },
+    {
+      "source": "config_babimind_intermarket_marks_sources",
+      "target": "config_babimind_intermarket_marks_sources_work",
+      "contribution": 0.75
+    },
+    {
+      "source": "realtime_api_websocket_market",
+      "target": "websocket",
+      "contribution": 0.75
+    },
     {
       "source": "app_data_finpy_tse_adapter_get_market_watch",
       "target": "app_data_finpy_tse_adapter_records",
@@ -26,26 +46,6 @@
     {
       "source": "app_intermarket_model_marks_second_level_gate",
       "target": "app_intermarket_model_clamp",
-      "contribution": 0.75
-    },
-    {
-      "source": "app_intermarket_model_rotation_score",
-      "target": "app_intermarket_model_clamp",
-      "contribution": 0.75
-    },
-    {
-      "source": "app_intermarket_model_weighted_signal_score",
-      "target": "app_intermarket_model_clamp",
-      "contribution": 0.75
-    },
-    {
-      "source": "realtime_api_equity_market",
-      "target": "realtime_api_snapshot",
-      "contribution": 0.75
-    },
-    {
-      "source": "realtime_api_options_market",
-      "target": "realtime_api_snapshot",
       "contribution": 0.75
     }
   ],
@@ -91,7 +91,7 @@
       "contribution": 0.0073
     }
   ],
-  "edges_used": 369,
-  "correlation_penalty": 0.4074,
+  "edges_used": 409,
+  "correlation_penalty": 0.4275,
   "missing_data_policy": "MISSING_IS_NOT_ZERO"
 }
