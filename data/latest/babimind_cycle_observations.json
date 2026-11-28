@@ -1,41 +1,84 @@
 {
-  "as_of": "2026-11-26T19:13:20.316072+00:00",
+  "as_of": "2026-11-28T13:42:02.765995+00:00",
   "source": "Federal Reserve Bank of St. Louis FRED public CSV",
   "series": {
     "us_treasury_10y": {
-      "status": "unavailable",
-      "error": "The read operation timed out"
+      "status": "available",
+      "value": 4.85,
+      "observed_at": "2026-11-25",
+      "previous_value": 4.91,
+      "source": "https://fred.stlouisfed.org/series/DGS10"
     },
     "us_treasury_2y": {
-      "status": "unavailable",
-      "error": "The read operation timed out"
+      "status": "available",
+      "value": 4.61,
+      "observed_at": "2026-11-25",
+      "previous_value": 4.63,
+      "source": "https://fred.stlouisfed.org/series/DGS2"
     },
     "us_unemployment": {
-      "status": "unavailable",
-      "error": "The read operation timed out"
+      "status": "available",
+      "value": 4.1,
+      "observed_at": "2026-10-01",
+      "previous_value": 4.2,
+      "source": "https://fred.stlouisfed.org/series/UNRATE"
     },
     "us_policy_upper": {
-      "status": "unavailable",
-      "error": "The read operation timed out"
+      "status": "available",
+      "value": 4.0,
+      "observed_at": "2026-11-28",
+      "previous_value": 4.0,
+      "source": "https://fred.stlouisfed.org/series/DFEDTARU"
     },
     "us_cpi": {
-      "status": "unavailable",
-      "error": "The read operation timed out"
+      "status": "available",
+      "value": 337.476,
+      "observed_at": "2026-10-01",
+      "previous_value": 336.298,
+      "source": "https://fred.stlouisfed.org/series/CPIAUCSL"
     },
     "us_payrolls": {
-      "status": "unavailable",
-      "error": "The read operation timed out"
+      "status": "available",
+      "value": 159293.0,
+      "observed_at": "2026-10-01",
+      "previous_value": 159128.0,
+      "source": "https://fred.stlouisfed.org/series/PAYEMS"
     },
     "us_real_yield_10y": {
-      "status": "unavailable",
-      "error": "The read operation timed out"
+      "status": "available",
+      "value": 2.73,
+      "observed_at": "2026-11-25",
+      "previous_value": 2.79,
+      "source": "https://fred.stlouisfed.org/series/DFII10"
     },
     "us_oil_wti": {
-      "status": "unavailable",
-      "error": "The read operation timed out"
+      "status": "available",
+      "value": 82.24,
+      "observed_at": "2026-11-24",
+      "previous_value": 81.42,
+      "source": "https://fred.stlouisfed.org/series/DCOILWTICO"
     }
   },
-  "indicators": {},
+  "indicators": {
+    "us_unemployment_change": {
+      "signal": -0.10000000000000053,
+      "observed_at": "2026-10-01",
+      "source": "https://fred.stlouisfed.org/series/UNRATE",
+      "method": "last_observation_change_clipped_to_unit_range"
+    },
+    "us_real_yield": {
+      "signal": -0.06000000000000005,
+      "observed_at": "2026-11-25",
+      "source": "https://fred.stlouisfed.org/series/DFII10",
+      "method": "last_observation_change_clipped_to_unit_range"
+    },
+    "us_yield_curve_10y_2y": {
+      "signal": 0.11999999999999966,
+      "observed_at": "2026-11-25",
+      "source": "https://fred.stlouisfed.org/series/DGS10; https://fred.stlouisfed.org/series/DGS2",
+      "method": "spread_percentage_points_divided_by_two_clipped"
+    }
+  },
   "iran_reference": {
     "unemployment_rate": {
       "value": 9.1,
