@@ -1,83 +1,8 @@
 {
   "memory_version": 2,
-  "historical_runs_available": 56,
+  "historical_runs_available": 57,
   "context_runs": 20,
   "recent_runs": [
-    {
-      "timestamp": "2026-11-12T13:18:59.236697+00:00",
-      "provider": "openrouter",
-      "model": "openrouter/free",
-      "regime": null,
-      "scenarios": {
-        "bull": {
-          "probability": 0.4,
-          "target": "TEDPIX >8,800 / FMLI 33,000",
-          "catalysts": [
-            "Copper breakout >$4.80/lb (LME inventory draw)",
-            "Hormuz de-escalation / Qatar mediation success",
-            "Real-money inflow persists 3+ sessions (Client Type recovery)",
-            "Fiscal relief: gasoline subsidy maintained, no VAT hike"
-          ],
-          "confirmation": [
-            "FMLI closes >30,000 with expanding volume + real-money inflow ≥3 sessions",
-            "TEDPIX breadth >600 advancers",
-            "Equal-weight leads cap-weighted",
-            "Copper holds >$4.50/lb"
-          ],
-          "invalidation": [
-            "FMLI <27,000 on volume",
-            "Copper <$4.00/lb",
-            "Real-money outflow accelerates",
-            "Hormuz closure / US-Iran kinetic conflict"
-          ]
-        },
-        "base": {
-          "probability": 0.4,
-          "target": "TEDPIX 7,800-8,200 / FMLI 30,000",
-          "catalysts": [
-            "Steady sales growth 100%+ YoY",
-            "Stable copper $4.00-4.50",
-            "Managed FX regime (NIMA ~2.0-2.2M)",
-            "No new sanctions escalation"
-          ],
-          "confirmation": [
-            "FMLI trades 28,000-30,000 with moderate volume",
-            "Fundamental growth >100% YoY",
-            "Breadth 450-550"
-          ],
-          "invalidation": [
-            "Sales growth <50% YoY for 2 quarters",
-            "Copper -20%",
-            "USD/IRR >2.3M"
-          ]
-        },
-        "bear": {
-          "probability": 0.2,
-          "target": "TEDPIX <7,500 / FMLI 27,000",
-          "catalysts": [
-            "Copper breakdown <$3.50/lb",
-            "Volume collapse + breadth <300",
-            "Real-money outflow accelerates",
-            "US-Iran conflict / Hormuz closure",
-            "Gasoline hike → inflation spiral → rate hike"
-          ],
-          "confirmation": [
-            "FMLI breaks <27,000 on expanding volume",
-            "Equal-weight leads down",
-            "Breadth <300"
-          ],
-          "invalidation": [
-            "Price rebounds >30,000 with volume",
-            "Fundamentals re-accelerate",
-            "Geopolitical de-escalation"
-          ]
-        }
-      },
-      "market_implications": null,
-      "confidence": null,
-      "data_gaps": [],
-      "fingerprint": "f250aab06e21bac215e2"
-    },
     {
       "timestamp": "2026-11-16T19:48:06.400790+00:00",
       "provider": "openrouter",
@@ -1068,6 +993,70 @@
         "global_market_snapshot و forecasting/decision engine — not_connected"
       ],
       "fingerprint": "caf831b732c094df5569"
+    },
+    {
+      "timestamp": "2026-11-28T16:36:27.954845+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "prob": 0.35,
+          "target": "TEDPIX ۹٫۲–۹٫۵M / فملی ۳۰–۳۳ هزار",
+          "catalysts": [
+            "تداوم محاصره/تنش و برنت >۹۵",
+            "عدم توافق آمریکا–ایران",
+            "بازگشت پایدار پول حقیقی ≥۳ جلسه"
+          ],
+          "confirmation": [
+            "شاخص >۸٬۸۹۸٬۵۰۶ با حجم و breadth>۵۰۰",
+            "هم‌وزن سبقت بگیرد",
+            "خالص خرید حقیقی مثبت ≥۳ جلسه"
+          ],
+          "invalidation": [
+            "شکست ۸٬۶۷۳٬۶۶۲ با حجم",
+            "خروج حقیقی تشدید"
+          ]
+        },
+        "base": {
+          "prob": 0.45,
+          "target": "TEDPIX ۸٫۷–۹٫۰M / فملی ۲۶–۲۹ هزار",
+          "catalysts": [
+            "نفت نوسانی ۸۸–۹۸",
+            "ژئوپلیتیک مدیریت‌شده",
+            "چرخش صنعتی محدود"
+          ],
+          "confirmation": [
+            "حفظ محدوده ۸٬۶۷۳–۸٬۸۹۸",
+            "breadth ۴۰۰–۵۵۰"
+          ],
+          "invalidation": [
+            "شکست ۸٬۳۵۴٬۰۰۷",
+            "برنت <$۸۵ پایدار"
+          ]
+        },
+        "bear": {
+          "prob": 0.2,
+          "target": "TEDPIX ۸٫۳–۸٫۵M / فملی <۲۴ هزار",
+          "catalysts": [
+            "توافق آمریکا–ایران → سقوط برنت <$۸۰",
+            "گرانی بنزین → تورم → انقباض",
+            "خروج حقیقی + شکست ۸٬۳۵۴"
+          ],
+          "confirmation": [
+            "شکست ۸٬۳۵۴٬۰۰۷ با حجم",
+            "هم‌وزن منفی",
+            "breadth <۲۵۰"
+          ],
+          "invalidation": [
+            "بازگشت >۸٬۸۹۸ با حجم"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "791b494a46681058d4eb"
     }
   ],
   "instruction": "Historical context only. Never treat memory as current market data. Prefer current source evidence. Use memory for regime changes, recurring errors, calibration and confidence evolution."
