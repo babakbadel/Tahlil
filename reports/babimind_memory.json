@@ -3523,7 +3523,71 @@
         "global_market_snapshot و forecasting/decision engine — not_connected"
       ],
       "fingerprint": "caf831b732c094df5569"
+    },
+    {
+      "timestamp": "2026-11-28T16:36:27.954845+00:00",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "regime": null,
+      "scenarios": {
+        "bull": {
+          "prob": 0.35,
+          "target": "TEDPIX ۹٫۲–۹٫۵M / فملی ۳۰–۳۳ هزار",
+          "catalysts": [
+            "تداوم محاصره/تنش و برنت >۹۵",
+            "عدم توافق آمریکا–ایران",
+            "بازگشت پایدار پول حقیقی ≥۳ جلسه"
+          ],
+          "confirmation": [
+            "شاخص >۸٬۸۹۸٬۵۰۶ با حجم و breadth>۵۰۰",
+            "هم‌وزن سبقت بگیرد",
+            "خالص خرید حقیقی مثبت ≥۳ جلسه"
+          ],
+          "invalidation": [
+            "شکست ۸٬۶۷۳٬۶۶۲ با حجم",
+            "خروج حقیقی تشدید"
+          ]
+        },
+        "base": {
+          "prob": 0.45,
+          "target": "TEDPIX ۸٫۷–۹٫۰M / فملی ۲۶–۲۹ هزار",
+          "catalysts": [
+            "نفت نوسانی ۸۸–۹۸",
+            "ژئوپلیتیک مدیریت‌شده",
+            "چرخش صنعتی محدود"
+          ],
+          "confirmation": [
+            "حفظ محدوده ۸٬۶۷۳–۸٬۸۹۸",
+            "breadth ۴۰۰–۵۵۰"
+          ],
+          "invalidation": [
+            "شکست ۸٬۳۵۴٬۰۰۷",
+            "برنت <$۸۵ پایدار"
+          ]
+        },
+        "bear": {
+          "prob": 0.2,
+          "target": "TEDPIX ۸٫۳–۸٫۵M / فملی <۲۴ هزار",
+          "catalysts": [
+            "توافق آمریکا–ایران → سقوط برنت <$۸۰",
+            "گرانی بنزین → تورم → انقباض",
+            "خروج حقیقی + شکست ۸٬۳۵۴"
+          ],
+          "confirmation": [
+            "شکست ۸٬۳۵۴٬۰۰۷ با حجم",
+            "هم‌وزن منفی",
+            "breadth <۲۵۰"
+          ],
+          "invalidation": [
+            "بازگشت >۸٬۸۹۸ با حجم"
+          ]
+        }
+      },
+      "market_implications": null,
+      "confidence": null,
+      "data_gaps": [],
+      "fingerprint": "791b494a46681058d4eb"
     }
   ],
-  "updated_at": "2026-11-28T13:41:24.737693+00:00"
+  "updated_at": "2026-11-28T16:36:27.958691+00:00"
 }

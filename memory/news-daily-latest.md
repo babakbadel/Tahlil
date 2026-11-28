@@ -1,54 +1,54 @@
-# Daily Economic News Digest — 2026-11-28 13:40 UTC
+# Daily Economic News Digest — 2026-11-28 16:35 UTC
 
 > Evidence only. Not ground truth prices or implemented policy.
-> New items this run: **109** · Total stored: **2500**
+> New items this run: **38** · Total stored: **2500**
 
 | Relevance | Title | Source | Published |
 |-----------|-------|--------|-----------|
+| macro_monetary | Iran war hits home as gasoline prices fuel significant U.S. inflation jump - PBS | PBS | Tue, 12 May 2026 07:00 |
+| macro_monetary | As fuel prices rise again, Iran’s government urges citizens to cut back - Al Jazeera | Al Jazeera | Tue, 08 Sep 2026 07:00 |
+| macro_monetary | Nigeria’s fuel, fertilizer, and food prices feel the strain of the Iran conflict - IFPRI | IFPRI | Mon, 22 Jun 2026 07:00 |
+| macro_monetary | Iran MP says government considering petrol price rise despite war and inflation - Iran International | Iran International | Tue, 21 Jul 2026 07:00 |
+| macro_monetary | Iran’s government signals fuel price hike on eve of new US sanctions - Al Jazeera | Al Jazeera | Sun, 23 Aug 2026 07:00 |
+| macro_monetary | Iran increases gasoline price for its heaviest consumers as economy struggles - NBC News | NBC News | Mon, 07 Sep 2026 07:00 |
+| oil | Brent: Supply risks fuel three-session rally – Commerzbank - www.tmgm.com | www.tmgm.com | Fri, 27 Nov 2026 11:39 |
+| oil | Brent Heads for 1st Weekly Gain in 5 Weeks - Rigzone | Rigzone | Fri, 27 Nov 2026 11:32 |
+| geopolitics | US Blockade Tightens Iran Oil Exports - Wisevoter | Wisevoter | Fri, 27 Nov 2026 05:53 |
+| geopolitics | Why and how is US blockading Iranian ports in Strait of Hormuz? - BBC | BBC | Thu, 30 Apr 2026 07:00 |
+| geopolitics | Iran’s oil sector weathers US pressure from Hormuz blockade - EL PAÍS English | EL PAÍS English | Mon, 18 May 2026 07:00 |
+| geopolitics | US Disables 6th Ship Running Iran Blockade as 158 Others Comply - https://houseofsaud.com/ | https://houseofsaud.com/ | Sat, 28 Nov 2026 01:23 |
+| geopolitics | Iran warns Iraq against siding with Trump as US tightens economic chokehold - New York Post | New York Post | Sat, 28 Nov 2026 14:45 |
+| geopolitics | The Iran war could shatter rising expectations of surplus oil supply in coming months - CNBC | CNBC | Sat, 28 Nov 2026 13:50 |
+| pezeshkian | A flimsy deal will stop the bombing and restart the oil - The Economist | The Economist | Thu, 18 Jun 2026 07:00 |
+| pezeshkian | Iran’s economic problems worsened due to falling oil revenues, factory destruction: President - Anadolu Ajansı | Anadolu Ajansı | Sat, 15 Aug 2026 07:00 |
+| fx | Shafaq News..Iran’s Toman hits new low as dollar surpasses 122K - شفق نيوز | شفق نيوز | Sun, 07 Dec 2025 08:00 |
+| fx | Iran's currency slides to record low as savers buy dollars - Reuters | Reuters | Sat, 25 Feb 2023 08:00 |
+| fx | Iranian currency rallies after US-Iran agreement - Anadolu Ajansı | Anadolu Ajansı | Wed, 17 Jun 2026 07:00 |
+| fx | Iran’s rial drops to new low of 2.2 million to the dollar - Al Arabiya English | Al Arabiya English | Wed, 02 Sep 2026 07:00 |
+| fx | Shafaq News..Iranian toman extends losses against US dollar - شفق نيوز | شفق نيوز | Sat, 28 Nov 2026 12:03 |
+| bourse | TEDPIX goes up 8,400 points on Monday - Tehran Times | Tehran Times | Mon, 19 Jul 2021 07:00 |
+| bourse | Tehran Stock Exchange market capitalization hits $105B - AzerNews | AzerNews | Thu, 30 Oct 2014 07:00 |
+| bourse | Iranian major railway companies to be listed on stock exchange - Tehran Times | Tehran Times | Tue, 22 Sep 2020 07:00 |
+| bourse | IFX ranks 1st among WFE members - Mehr News Agency | Mehr News Agency | Sun, 19 May 2019 07:00 |
+| bourse | Forex, gold coin, stock exchange markets in past week - Tehran Times | Tehran Times | Mon, 09 Nov 2020 08:00 |
+| bourse | Stability in forex market to bring growth to stock market: expert - Tehran Times | Tehran Times | Sat, 10 Jul 2021 07:00 |
+| bourse | Growth returns to stock market - Tehran Times | Tehran Times | Tue, 13 Apr 2021 07:00 |
+| bourse | Free From Sanctions, Khamenei-Linked Company Now Thrives - Radio Free Europe/Radio Liberty | Radio Free Europe/Radio Liberty | Fri, 11 Aug 2017 07:00 |
+| bourse | Tehran Stock Exchange, Borsa Istanbul ink deal / Daily Sabah - Daily Sabah | Daily Sabah | Thu, 29 Oct 2015 07:00 |
+| bourse | What Investors Need to Know About Entering Iran's Stock Market - Bloomberg.com | Bloomberg.com | Sun, 17 Jan 2016 08:00 |
+| bourse | Tehran Stocks Surge by 83,000 Points as Comprehensive Regulatory Package Drives Post-Closure Rally - ISNA News Agency | ISNA News Agency | Sun, 31 May 2026 07:00 |
+| bourse | Iran stock exchange reopens after war forced longest-ever shutdown - Al Arabiya English | Al Arabiya English | Tue, 19 May 2026 07:00 |
+| bourse | Tehran Stock Exchange reopens under tight controls as key firms stay closed - Iran International | Iran International | Wed, 20 May 2026 07:00 |
+| oil | نفت در مسیر نخستین رشد هفتگی پس از سه هفته کاهش/ایران فوری - خبرپو | خبرپو | Fri, 27 Nov 2026 08:11 |
+| oil | نفت برنت در آستانه ثبت نخستین رشد هفتگی طی یک ماه - روز پلاس | روز پلاس | Fri, 27 Nov 2026 07:08 |
+| macro_monetary | پشت‌پرده کاهش تورم در ماه‌های اخیر - صاحب‌خبر | صاحب‌خبر | Thu, 26 Nov 2026 10:09 |
 | macro_monetary | Iran Is Rationing Power and Cutting Bread and Gasoline Subsidies as US Pressure Squeezes its Economy and a Hard Winter L | National Security Journal | Fri, 27 Nov 2026 16:15 |
 | macro_monetary | A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. Blockade - WSJ | WSJ | Thu, 26 Nov 2026 03:00 |
 | oil | Sensex plunges 989 points as surge in crude oil prices triggers sell-off - The Federal | The Federal | Fri, 27 Nov 2026 11:44 |
-| oil | Middle East Tensions Drive Crude Oil Prices Upward - Ratopati | Ratopati | Fri, 27 Nov 2026 16:41 |
-| oil | Energy Industries Bulk Commodity Intelligence (November 27, 2026) - Sunsirs | Sunsirs | Fri, 27 Nov 2026 06:48 |
-| oil | Brent Crude Returns Above $90 in Three-Day Rally as $95 Becomes Key Rebound Resistance - TradingKey | TradingKey | Fri, 27 Nov 2026 01:53 |
-| oil | Crude Oil Futures Marginally Up Amid Positive Global Trends - Rediff MoneyWiz | Rediff MoneyWiz | Thu, 26 Nov 2026 07:18 |
-| oil | Crude Oil Futures Rise on Positive Global Trends - Rediff MoneyWiz | Rediff MoneyWiz | Fri, 27 Nov 2026 06:12 |
-| oil | Wall Street Split on 2027 Oil Outlook as Brent Slips Below $90 - IndexBox | IndexBox | Thu, 26 Nov 2026 21:40 |
-| oil | Crude oil prices fall 1.5% as supply glut fears offset Middle East disruption tensions; Brent below $88, WTI near $81 -  | Moneycontrol.com | Wed, 25 Nov 2026 03:58 |
-| oil | Crude Oil Records First Weekly Gain in November on Supply Fears / - Business Post Nigeria | Business Post Nigeria | Sat, 28 Nov 2026 10:42 |
-| oil | Brent Crude Jumps 4.4% to $96.19 as Hormuz Attacks and Saudi Refinery Strike End Three-Week Losing Streak - HDFC Sky | HDFC Sky | Sat, 28 Nov 2026 05:19 |
-| oil | Oil is rising again before OPEC+ meets — can Saudi attacks overpower surplus fears? - Mitrade | Mitrade | Fri, 27 Nov 2026 06:35 |
-| oil | IT, bank heavyweights drag markets down 1% amid rising crude oil prices - Business Standard | Business Standard | Fri, 27 Nov 2026 18:30 |
-| oil | Houthi Attacks on Saudi Refineries Pile Up. Is Oil's War Premium Back? - BeInCrypto | BeInCrypto | Thu, 26 Nov 2026 20:45 |
-| oil | WTI crude oil prices have risen above $85 following attacks in Saudi Arabia - UkrMedia News | UkrMedia News | Fri, 27 Nov 2026 09:54 |
-| oil | Houthi Claims Strike on Saudi Arabia's Largest Refinery; Brent Crude Settles at $96.57 a Barrel - BigGo Finance | BigGo Finance | Thu, 26 Nov 2026 20:25 |
-| oil | [International Oil Prices] Fall Around 1% ... Brent Crude Rises 3% for the Week - 파이낸셜뉴스 | 파이낸셜뉴스 | Fri, 27 Nov 2026 21:30 |
-| oil | Why Gasoline Prices Are Falling While Diesel Remains Expensive - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Thu, 26 Nov 2026 17:00 |
-| oil | Natural Gas and Oil Forecast: OPEC+ Capacity Fight Looms, Can Brent Clear $95.55? - FXEmpire | FXEmpire | Fri, 27 Nov 2026 06:49 |
-| oil | Oil prices rise 5% as Middle East supply risks grow - grafa.com | grafa.com | Thu, 26 Nov 2026 12:14 |
-| oil | Oil Prices Rise as Supply Concerns and Geopolitical Tensions Mount - India News Network | India News Network | Sat, 28 Nov 2026 07:20 |
-| oil | Crude oil snaps 3-week losing streak: Why Brent is back near $100 as Middle East tensions flare - Moneycontrol.com | Moneycontrol.com | Sat, 28 Nov 2026 05:05 |
-| oil | Brent Crude Rises 8.1% in 4 Days After Houthi Attacks on Saudi Refineries - https://houseofsaud.com/ | https://houseofsaud.com/ | Fri, 27 Nov 2026 16:09 |
-| oil | Crude oil price today: Brent futures fall despite attacks on vessels in Strait of Hormuz - BusinessLine | BusinessLine | Wed, 25 Nov 2026 04:24 |
-| oil | Oil prices rise after tankers hit mines in Strait of Hormuz - Middle East Monitor | Middle East Monitor | Fri, 27 Nov 2026 08:15 |
-| oil | Iraq Delays Up to 30 Million Barrels of Crude Oil Shipments - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 27 Nov 2026 08:30 |
-| oil | Brent Crude Gains 3% In First Weekly Rise In November Ahead Of OPEC+ Meeting - Forbes Middle East | Forbes Middle East | Sat, 28 Nov 2026 10:32 |
-| oil | Brent Crude Rises to $97.18 as Tanker Strikes and OPEC+ Meeting Raise Supply Fears - Around Prague | Around Prague | Sat, 28 Nov 2026 03:56 |
-| oil | Tanker and facility attacks support Brent crude prices as traders assess geopolitical risk - Traders Union | Traders Union | Fri, 27 Nov 2026 19:17 |
-| oil | Oil prices fall amid forecasts of global oversupply - Inspenet | Inspenet | Wed, 25 Nov 2026 19:09 |
-| oil | Brent crude oil price falls - Apa.az | Apa.az | Sat, 28 Nov 2026 05:41 |
-| oil | Oil prices rise after Houthis claim attack on Saudi refinery - Yahoo Finance | Yahoo Finance | Wed, 25 Nov 2026 20:23 |
-| oil | Oil Prices Down - 27-11-26 - Armenpress | Armenpress | Sat, 28 Nov 2026 07:16 |
-| oil | Will Brent crude oil price extend gains amid ongoing buyer support? - Traders Union | Traders Union | Fri, 27 Nov 2026 09:19 |
-| oil | Oil Prices Fall Friday as Markets Await OPEC+ Decision – Brent Posts First Weekly Gain in November, WTI Extends Losing S | EnergyNow.com | Fri, 27 Nov 2026 08:00 |
-| oil | Oil Prices Climb as Middle East Supply Risks Overshadow Glut Fears - Crude Oil Prices Today / OilPrice.com | Crude Oil Prices Today | OilPrice.com | Fri, 27 Nov 2026 05:18 |
-| oil | Oil, gas prices fall as Brent trims weekly gains ahead of OPEC+ meeting - Middle East Monitor | Middle East Monitor | Fri, 27 Nov 2026 19:50 |
-| oil | 2027 oil price forecast: Where BofA thinks Brent is headed next - Investing.com | Investing.com | Fri, 27 Nov 2026 12:24 |
-| oil | Brent Approaches $98 as Refinery Disruptions and Shipping Risks Support Weekly Oil Price Recovery - Yahoo Finance UK | Yahoo Finance UK | Fri, 27 Nov 2026 10:14 |
 
 ## Policy
 - Map events to factors with confidence/freshness before scoring.
 - Cross-check Tier-A sources for market-moving claims.
 - Options: never rank expired contracts from headlines.
 
-NEWS_DIGEST | 2026-11-28 13:40 UTC | 109 new | 2500 total
+NEWS_DIGEST | 2026-11-28 16:35 UTC | 38 new | 2500 total

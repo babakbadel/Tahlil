@@ -1722,17 +1722,6 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `weighted_quantile()` unexpectedly reaches hub `cdf()`"
     },
     {
-      "source": "save_csv()",
-      "target": "f()",
-      "source_files": [
-        "scan_market.py",
-        "scripts/score_options_babimind_scenarios.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "indirect_call",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
-    },
-    {
       "source": "test_csv_keeps_call_and_put_direction()",
       "target": "ingest()",
       "source_files": [
@@ -1755,14 +1744,25 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
     },
     {
-      "source": "BabiMind Research & News Monitor",
-      "target": "Bobby Hosh / Babak Analysis Engine",
+      "source": "save_csv()",
+      "target": "f()",
       "source_files": [
-        "research/research-source-monitor.md",
-        "skills/iran-market-realtime/SKILL.md"
+        "scan_market.py",
+        "scripts/score_options_babimind_scenarios.py"
       ],
       "confidence": "INFERRED",
-      "relation": "shares_data_with",
+      "relation": "indirect_call",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "test_transport_exception_does_not_expose_api_key()",
+      "target": "BrsApiError",
+      "source_files": [
+        "tests/test_realtime.py",
+        "app/data/brsapi/client.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
     }
   ],
